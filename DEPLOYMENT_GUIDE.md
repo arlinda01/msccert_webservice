@@ -52,7 +52,7 @@ git push origin main
    - **Root Directory**: `backend`
    - **Runtime**: `Python 3`
    - **Build Command**: `./build.sh`
-   - **Start Command**: `gunicorn backend.wsgi:application`
+   - **Start Command**: `gunicorn --bind 0.0.0.0:$PORT backend.wsgi:application`
 
 5. Click **"Advanced"** and add environment variables:
 
@@ -215,7 +215,31 @@ After deployment:
 
 ### Common Issues
 
-#### 1. Backend Build Fails on Render
+#### 1. Port Scan Timeout on Render
+
+**Error:** `Timed out: Port scan timeout reached, no open ports detected. Bind your service to at least one port.`
+
+**Solution:**
+The start command must bind to the PORT environment variable that Render provides:
+
+✅ **Correct:**
+```
+gunicorn --bind 0.0.0.0:$PORT backend.wsgi:application
+```
+
+❌ **Wrong:**
+```
+gunicorn backend.wsgi:application
+```
+
+**Fix in Render Dashboard:**
+1. Go to your service → **"Settings"**
+2. Scroll to **"Build & Deploy"** section
+3. Update **Start Command** to: `gunicorn --bind 0.0.0.0:$PORT backend.wsgi:application`
+4. Click **"Save Changes"**
+5. Trigger a manual deploy
+
+#### 2. Backend Build Fails on Render
 
 **Error:** `ModuleNotFoundError: No module named 'X'`
 
@@ -223,7 +247,7 @@ After deployment:
 - Ensure all dependencies are in `backend/requirements.txt`
 - Check Python version matches (3.11.0)
 
-#### 2. Frontend Shows "Failed to fetch certificates"
+#### 3. Frontend Shows "Failed to fetch certificates"
 
 **Possible causes:**
 - Backend not running or CORS not configured
@@ -234,7 +258,7 @@ After deployment:
 2. Verify `CORS_ALLOWED_ORIGINS` includes your Netlify URL
 3. Test API directly: `https://msccert-backend.onrender.com/api/certificates/`
 
-#### 3. QR Codes Not Loading
+#### 4. QR Codes Not Loading
 
 **Error:** 404 on QR code images
 
@@ -243,7 +267,7 @@ After deployment:
 - Check `MEDIA_URL` and `MEDIA_ROOT` in settings.py
 - Regenerate certificates to create new QR codes
 
-#### 4. Static Files Not Loading on Backend
+#### 5. Static Files Not Loading on Backend
 
 **Error:** CSS/JS not loading on Django admin
 
@@ -255,7 +279,7 @@ python manage.py collectstatic --no-input
 
 Or add to `build.sh` (already included).
 
-#### 5. Render Free Tier Sleep Mode
+#### 6. Render Free Tier Sleep Mode
 
 **Issue:** Backend goes to sleep after 15 minutes of inactivity
 
