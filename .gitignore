@@ -222,3 +222,4 @@ frontend/.env.production.local
 # Django media files (uploaded files, QR codes, etc.)
 backend/media/
 backend/staticfiles/
+nul
