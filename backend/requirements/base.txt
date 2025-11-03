@@ -1,8 +1,11 @@
 Django==5.2.7
 djangorestframework
 django-cors-headers
+django-filter
 python-dotenv
 psycopg2-binary
 pillow
 celery
 redis
+qrcode[pil]
+reportlab
