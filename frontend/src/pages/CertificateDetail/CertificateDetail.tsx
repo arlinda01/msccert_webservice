@@ -39,13 +39,6 @@ const CertificateDetail: FC = () => {
     return `status-badge ${statusMap[status] || ''}`;
   };
 
-  const handleDownload = (): void => {
-    if (id) {
-      const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
-      window.open(`${API_BASE_URL}/certificates/${id}/download_pdf/`, '_blank');
-    }
-  };
-
   const getExpiryColor = (days: number | null): string => {
     if (days === null) return '#4caf50';
     if (days < 30) return '#f44336';
@@ -79,30 +72,11 @@ const CertificateDetail: FC = () => {
       <div className="certificate-detail">
         {/* Header */}
         <div className="detail-header">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
-            <div>
-              <h2>{certificate.certificate_number}</h2>
-              <h3>{certificate.company_name}</h3>
-            </div>
-            <button
-              onClick={handleDownload}
-              style={{
-                backgroundColor: '#4a90e2',
-                color: '#fff',
-                border: 'none',
-                padding: '0.7rem 1.5rem',
-                borderRadius: '6px',
-                fontSize: '1rem',
-                cursor: 'pointer',
-                transition: 'background-color 0.3s ease',
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#357abd')}
-              onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#4a90e2')}
-            >
-              📥 Download PDF
-            </button>
-          </div>
           <div>
+            <h2>{certificate.certificate_number}</h2>
+            <h3>{certificate.company_name}</h3>
+          </div>
+          <div style={{ marginTop: '1rem' }}>
             <span className={getStatusClass(certificate.status)}>
               {certificate.status_display}
             </span>

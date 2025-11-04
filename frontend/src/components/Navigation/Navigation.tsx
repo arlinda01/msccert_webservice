@@ -1,6 +1,5 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Navigation.module.css';
 
 const Navigation: FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -21,40 +20,40 @@ const Navigation: FC = () => {
   };
 
   return (
-    <nav className={styles.navigation}>
-      <div className={styles.navContainer}>
-        <div className={styles.logo}>
+    <nav className="navigation">
+      <div className="nav-container">
+        <div className="logo">
           <Link to="/" onClick={closeMenu}>
             <img
               src="/MSC-GROUP-WHITE-LOGO.svg"
               alt="MSC CERTIFICATIONS"
-              className={styles.logoImage}
+              className="logo-image"
             />
           </Link>
         </div>
 
         <button
-          className={styles.hamburger}
+          className="hamburger"
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
         >
-          <span className={isMenuOpen ? styles.active : ''}></span>
-          <span className={isMenuOpen ? styles.active : ''}></span>
-          <span className={isMenuOpen ? styles.active : ''}></span>
+          <span className={isMenuOpen ? 'active' : ''}></span>
+          <span className={isMenuOpen ? 'active' : ''}></span>
+          <span className={isMenuOpen ? 'active' : ''}></span>
         </button>
 
-        <ul className={`${styles.navMenu} ${isMenuOpen ? styles.active : ''}`}>
+        <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
 
-          <li className={`${styles.navDropdown} ${openDropdown === 'about' ? styles.active : ''}`}>
+          <li className={`nav-dropdown ${openDropdown === 'about' ? 'active' : ''}`}>
             <span onClick={() => toggleDropdown('about')}>
               About Us
-              <svg className={styles.dropdownArrow} width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
             </span>
-            <ul className={styles.dropdownMenu}>
+            <ul className="dropdown-menu">
               <li><Link to="/about/mission-vision" onClick={closeMenu}>Mission & Vision</Link></li>
               <li><Link to="/about/quality-policy" onClick={closeMenu}>Quality Policy</Link></li>
               <li><Link to="/about/code-of-ethics" onClick={closeMenu}>Code of Ethics</Link></li>
@@ -63,14 +62,14 @@ const Navigation: FC = () => {
             </ul>
           </li>
 
-          <li className={`${styles.navDropdown} ${openDropdown === 'iso' ? styles.active : ''}`}>
+          <li className={`nav-dropdown ${openDropdown === 'iso' ? 'active' : ''}`}>
             <span onClick={() => toggleDropdown('iso')}>
               ISO Certifications
-              <svg className={styles.dropdownArrow} width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
             </span>
-            <ul className={styles.dropdownMenu}>
+            <ul className="dropdown-menu">
               <li><Link to="/services/iso/iso-9001/quality-management" onClick={closeMenu}>ISO 9001 – Quality Management</Link></li>
               <li><Link to="/services/iso/iso-14001/environmental-management" onClick={closeMenu}>ISO 14001 – Environmental Management</Link></li>
               <li><Link to="/services/iso/iso-22000/food-safety-management" onClick={closeMenu}>ISO 22000 – Food Safety Management</Link></li>
@@ -84,26 +83,26 @@ const Navigation: FC = () => {
             </ul>
           </li>
 
-          <li className={`${styles.navDropdown} ${openDropdown === 'compliance' ? styles.active : ''}`}>
+          <li className={`nav-dropdown ${openDropdown === 'compliance' ? 'active' : ''}`}>
             <span onClick={() => toggleDropdown('compliance')}>
               Compliance & Marking
-              <svg className={styles.dropdownArrow} width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
             </span>
-            <ul className={styles.dropdownMenu}>
+            <ul className="dropdown-menu">
               <li><Link to="/services/compliance/ce-marking" onClick={closeMenu}>CE Marking</Link></li>
             </ul>
           </li>
 
-          <li className={`${styles.navDropdown} ${openDropdown === 'additional' ? styles.active : ''}`}>
+          <li className={`nav-dropdown ${openDropdown === 'additional' ? 'active' : ''}`}>
             <span onClick={() => toggleDropdown('additional')}>
               Additional Services
-              <svg className={styles.dropdownArrow} width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
             </span>
-            <ul className={styles.dropdownMenu}>
+            <ul className="dropdown-menu">
               <li><Link to="/services/additional/energy-efficiency" onClick={closeMenu}>Energy Efficiency Programs</Link></li>
               <li><Link to="/services/additional/staff-training" onClick={closeMenu}>Staff Training</Link></li>
               <li><Link to="/services/additional/professional-cards" onClick={closeMenu}>Professional Cards</Link></li>
@@ -114,9 +113,6 @@ const Navigation: FC = () => {
           </li>
 
           <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
-          {/*<li><Link to="/customer-stories" onClick={closeMenu}>Customer Stories</Link></li>*/}
-          {/*<li><Link to="/faq" onClick={closeMenu}>FAQ</Link></li>*/}
-          {/*<li><Link to="/pricing" onClick={closeMenu}>Pricing</Link></li>*/}
           <li><Link to="/contact" onClick={closeMenu}>Contact Us</Link></li>
         </ul>
       </div>
