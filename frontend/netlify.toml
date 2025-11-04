@@ -1,6 +1,6 @@
 [build]
   # Build command for Create React App
-  command = "npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
 
   # Directory where the build output is placed
   publish = "build"
@@ -8,6 +8,7 @@
   # Node version to use
   [build.environment]
     NODE_VERSION = "18"
+    NPM_FLAGS = "--legacy-peer-deps"
 
 # Redirect all requests to index.html for React Router
 [[redirects]]
