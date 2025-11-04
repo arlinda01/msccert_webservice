@@ -1,32 +1,31 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Footer.module.css';
 
 const Footer: FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footerContainer}>
-        <div className={styles.footerContent}>
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-content">
           {/* Logo and Company Info */}
-          <div className={`${styles.footerSection} ${styles.footerBrand}`}>
+          <div className="footer-section footer-brand">
             <Link to="/">
               <img
                 src="/MSC-GROUP-WHITE-LOGO.svg"
                 alt="MSC CERTIFICATIONS"
-                className={styles.footerLogo}
+                className="footer-logo"
               />
             </Link>
-            <p className={styles.footerDescription}>
+            <p className="footer-description">
               Your trusted partner for ISO certification, compliance, and risk management solutions.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className={styles.footerSection}>
+          <div className="footer-section">
             <h4>Quick Links</h4>
-            <ul className={styles.footerLinks}>
+            <ul className="footer-links">
               <li><Link to="/about/mission-vision">About Us</Link></li>
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/pricing">Pricing</Link></li>
@@ -36,9 +35,9 @@ const Footer: FC = () => {
           </div>
 
           {/* Services */}
-          <div className={styles.footerSection}>
+          <div className="footer-section">
             <h4>Our Services</h4>
-            <ul className={styles.footerLinks}>
+            <ul className="footer-links">
               <li><Link to="/services/iso/iso-9001/quality-management">ISO 9001</Link></li>
               <li><Link to="/services/iso/iso-14001/environmental-management">ISO 14001</Link></li>
               <li><Link to="/services/iso/iso-27001/information-security">ISO 27001</Link></li>
@@ -48,19 +47,19 @@ const Footer: FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className={styles.footerSection}>
+          <div className="footer-section">
             <h4>Contact Us</h4>
-            <ul className={styles.footerContact}>
+            <ul className="footer-contact">
               <li>
-                <span className={styles.contactLabel}>Email:</span>
+                <span className="contact-label">Email:</span>
                 <a href="mailto:info@msccertifications.com">info@msccertifications.com</a>
               </li>
               <li>
-                <span className={styles.contactLabel}>Phone:</span>
+                <span className="contact-label">Phone:</span>
                 <a href="tel:+1234567890">+123 456 7890</a>
               </li>
               <li>
-                <span className={styles.contactLabel}>Address:</span>
+                <span className="contact-label">Address:</span>
                 <span>Your Business Address</span>
               </li>
             </ul>
@@ -68,9 +67,9 @@ const Footer: FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className={styles.footerBottom}>
+        <div className="footer-bottom">
           <p>&copy; {currentYear} MSC CERTIFICATIONS. All rights reserved.</p>
-          <div className={styles.footerBottomLinks}>
+          <div className="footer-bottom-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-of-service">Terms of Service</Link>
           </div>

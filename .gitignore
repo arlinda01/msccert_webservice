@@ -214,12 +214,33 @@ __marimo__/
 # Frontend (React)
 frontend/node_modules/
 frontend/build/
+frontend/.env
 frontend/.env.local
 frontend/.env.development.local
 frontend/.env.test.local
 frontend/.env.production.local
+frontend/.eslintcache
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
 
-# Django media files (uploaded files, QR codes, etc.)
+# Django media files and backend
 backend/media/
 backend/staticfiles/
-nul
+backend/.env
+backend/db.sqlite3
+
+# IDEs
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Documentation/Explanatory files
+DEPLOYMENT_GUIDE.md
+DEPLOY.md
+CERTIFICATE_CHANGES.md
