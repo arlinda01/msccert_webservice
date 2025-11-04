@@ -4,6 +4,9 @@ import './styles/styles.css';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import ISO9001 from './pages/ISO9001/ISO9001';
+import Contact from './pages/Contact/Contact';
 import CertificateList from './pages/CertificateList/CertificateList';
 import CertificateDetail from './pages/CertificateDetail/CertificateDetail';
 
@@ -15,6 +18,9 @@ const App: FC = () => {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services/iso/iso-9001/quality-management" element={<ISO9001 />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/certificates" element={<CertificateList />} />
             <Route path="/certificate/:id" element={<CertificateDetail />} />
           </Routes>

@@ -40,14 +40,14 @@ const Home: FC = () => {
             local partner committed to transforming your management systems into a competitive advantage.
           </p>
           <div className="hero-buttons">
-            <Link to="/contact" className={`$className="btn" $className="btn-primary"`}>Request a Free Consultation</Link>
-            <Link to="/free-online-assessment" className={`$className="btn" $className="btn-secondary"`}>Get a Free Online Assessment</Link>
+            <Link to="/contact" className="btn btn-primary">Request a Free Consultation</Link>
+            <Link to="/free-online-assessment" className="btn btn-secondary">Get a Free Online Assessment</Link>
           </div>
         </div>
       </section>
 
       {/* MSC Difference Section */}
-      <section className={`$className="section" $className="section-white"`}>
+      <section className="section section-white">
         <div className="container">
           <h2 className="section-title">The MSC Difference: Why Choose Our Specialized Audits?</h2>
           <p className="section-intro">
@@ -83,7 +83,7 @@ const Home: FC = () => {
       </section>
 
       {/* Core Certification Portfolio */}
-      <section className={`$className="section" $className="section-gray"`}>
+      <section className="section section-gray">
         <div className="container">
           <h2 className="section-title">Our Core Certification Portfolio: Global Standards, Local Success</h2>
           <p className="section-intro">
@@ -195,7 +195,7 @@ const Home: FC = () => {
       </section>
 
       {/* Specialized Business Solutions */}
-      <section className={`$className="section" $className="section-white"`}>
+      <section className="section section-white">
         <div className="container">
           <h2 className="section-title">Specialized Business Solutions: Beyond Certification</h2>
           <p className="section-intro">
@@ -236,13 +236,13 @@ const Home: FC = () => {
             </div>
           </div>
           <div className="section-cta">
-            <Link to="/services" className={`$className="btn" $className="btn-primary"`}>Explore All Services</Link>
+            <Link to="/services" className="btn btn-primary">Explore All Services</Link>
           </div>
         </div>
       </section>
 
       {/* Industry Focus */}
-      <section className={`$className="section" $className="section-gray"`}>
+      <section className="section section-gray">
         <div className="container">
           <h2 className="section-title">Industry Focus: We Are Your Sector's Trusted Auditor</h2>
           <p className="section-intro">
@@ -275,7 +275,7 @@ const Home: FC = () => {
       </section>
 
       {/* FAQ Section - Interactive Accordion */}
-      <section className={`$className="section" $className="section-white"`}>
+      <section className="section section-white">
         <div className="container">
           <h2 className="section-title">Frequently Asked Questions (FAQ)</h2>
           <p className="section-intro">Answering your most pressing questions about the certification process:</p>
@@ -313,7 +313,7 @@ const Home: FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className={`$className="section" $className="section-cta-final"`}>
+      <section className="section section-cta-final">
         <div className="container">
           <h2>Start Your Journey Towards Quality and Trust</h2>
           <p>
@@ -322,7 +322,7 @@ const Home: FC = () => {
             measurable value and greatest risk reduction for your business.
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className={`$className="btn" $className="btn-primary-large"`}>Request a Detailed Quote and Free Assessment</Link>
+            <Link to="/contact" className="btn btn-primary-large">Request a Detailed Quote and Free Assessment</Link>
           </div>
           <p className="cta-footer">
             All our certifications are backed by internationally accredited bodies, ensuring global recognition.

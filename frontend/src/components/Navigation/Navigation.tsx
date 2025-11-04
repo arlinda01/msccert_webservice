@@ -54,6 +54,7 @@ const Navigation: FC = () => {
               </svg>
             </span>
             <ul className="dropdown-menu">
+              <li><Link to="/about" onClick={closeMenu}>About MSC Certifications</Link></li>
               <li><Link to="/about/mission-vision" onClick={closeMenu}>Mission & Vision</Link></li>
               <li><Link to="/about/quality-policy" onClick={closeMenu}>Quality Policy</Link></li>
               <li><Link to="/about/code-of-ethics" onClick={closeMenu}>Code of Ethics</Link></li>
