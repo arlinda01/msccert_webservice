@@ -82,16 +82,6 @@ const QRCodePage: FC = () => {
             <div className="loading">Generating QR code...</div>
           )}
         </div>
-
-        <div className="instructions">
-          <h3>How to Use</h3>
-          <ol>
-            <li>Click "Download QR Code" to save the QR code image</li>
-            <li>Print the QR code or share it digitally</li>
-            <li>When scanned, the QR code will open the certificate page</li>
-            <li>The certificate page shows all certification details and status</li>
-          </ol>
-        </div>
       </div>
     </div>
   );
