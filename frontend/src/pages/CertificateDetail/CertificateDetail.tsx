@@ -54,7 +54,7 @@ const CertificateDetail: FC = () => {
     return (
       <div className="container">
         <button className="back-button" onClick={() => navigate('/')}>
-          ← Back to List
+          ← Back to Home
         </button>
         <div style={{ textAlign: 'center', padding: '3rem', color: '#888' }}>
           Certificate not found
@@ -66,7 +66,7 @@ const CertificateDetail: FC = () => {
   return (
     <div className="container">
       <button className="back-button" onClick={() => navigate('/')}>
-        ← Back to List
+        ← Back to Home
       </button>
 
       <div className="certificate-detail">
@@ -161,6 +161,21 @@ const CertificateDetail: FC = () => {
             </div>
           </div>
         )}
+
+        {/* CTA Section */}
+        <div className="certificate-cta">
+          <h3>Looking to Get Certified?</h3>
+          <p>
+            Are you looking to get certified, or do you need an online assessment?
+            Reach out to us and let us help you achieve your certification goals!
+          </p>
+          <button
+            className="cta-button"
+            onClick={() => navigate('/#contact')}
+          >
+            Contact Us
+          </button>
+        </div>
 
       </div>
     </div>

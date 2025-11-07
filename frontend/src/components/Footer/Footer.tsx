@@ -38,11 +38,12 @@ const Footer: FC = () => {
           <div className="footer-section">
             <h4>Our Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services/iso/iso-9001/quality-management">ISO 9001</Link></li>
-              <li><Link to="/services/iso/iso-14001/environmental-management">ISO 14001</Link></li>
-              <li><Link to="/services/iso/iso-27001/information-security">ISO 27001</Link></li>
-              <li><Link to="/services/iso/iso-45001/health-and-safety-at-work">ISO 45001</Link></li>
+              <li><Link to="/services/iso/iso-9001/quality-management">ISO Certifications</Link></li>
               <li><Link to="/services/compliance/ce-marking">CE Marking</Link></li>
+              <li><Link to="/services/haccp-certification">HACCP</Link></li>
+              <li><Link to="/services/additional/energy-efficiency">Energy Efficiency</Link></li>
+              <li><Link to="/services/additional/staff-training">Staff Training</Link></li>
+              <li><Link to="/services/additional/professional-cards">Professional Cards</Link></li>
             </ul>
           </div>
 
@@ -52,15 +53,15 @@ const Footer: FC = () => {
             <ul className="footer-contact">
               <li>
                 <span className="contact-label">Email:</span>
-                <a href="mailto:info@msccertifications.com">info@msccertifications.com</a>
+                <a href="mailto:info@msc-cert.com">info@msc-cert.com</a>
               </li>
               <li>
                 <span className="contact-label">Phone:</span>
-                <a href="tel:+1234567890">+123 456 7890</a>
+                <a href="tel:+355672063632">+355 67 206 3632</a>
               </li>
               <li>
                 <span className="contact-label">Address:</span>
-                <span>Your Business Address</span>
+                <span>Str. Ismail Qemali<br/>Tirana, Albania</span>
               </li>
             </ul>
           </div>
