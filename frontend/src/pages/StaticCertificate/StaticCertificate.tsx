@@ -16,11 +16,11 @@ const StaticCertificate: FC = () => {
         <div className="detail-header">
           <div>
             <h2>CERT-2025-A1B2C3D4</h2>
-            <h3>Kompania Shembull Sh.p.k.</h3>
+            <h3>KOMMMPANII</h3>
           </div>
           <div style={{ marginTop: '1rem' }}>
-            <span className="status-badge status-valid">
-              Valid/Active
+            <span className="status-badge status-expired">
+              Expired
             </span>
           </div>
         </div>
