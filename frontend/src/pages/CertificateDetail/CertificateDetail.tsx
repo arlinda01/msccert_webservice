@@ -2,12 +2,14 @@ import { FC, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { certificateService } from '../../services/api';
 import type { Certificate, CertificateStatus } from '../../types';
+import QRCode from 'qrcode';
 
 const CertificateDetail: FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [certificate, setCertificate] = useState<Certificate | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
 
   useEffect(() => {
     if (id) {
@@ -23,10 +25,31 @@ const CertificateDetail: FC = () => {
       const data = await certificateService.getCertificate(id);
       setCertificate(data);
       setLoading(false);
+
+      // Generate QR code for current page URL
+      const currentUrl = window.location.href;
+      const qrUrl = await QRCode.toDataURL(currentUrl, {
+        width: 300,
+        margin: 2,
+        color: {
+          dark: '#000000',
+          light: '#FFFFFF'
+        }
+      });
+      setQrCodeUrl(qrUrl);
     } catch (error) {
       console.error('Error loading certificate:', error);
       setLoading(false);
     }
+  };
+
+  const downloadQRCode = () => {
+    if (!qrCodeUrl) return;
+
+    const link = document.createElement('a');
+    link.download = `certificate-${certificate?.certificate_number}-qr.png`;
+    link.href = qrCodeUrl;
+    link.click();
   };
 
   const getStatusClass = (status: CertificateStatus): string => {
@@ -159,6 +182,37 @@ const CertificateDetail: FC = () => {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* QR Code Section */}
+        {qrCodeUrl && (
+          <div className="detail-section" style={{ textAlign: 'center' }}>
+            <h4>Certificate QR Code</h4>
+            <p style={{ color: '#888', marginBottom: '1rem' }}>
+              Scan this QR code to view this certificate page
+            </p>
+            <div style={{
+              backgroundColor: '#fff',
+              padding: '1.5rem',
+              borderRadius: '8px',
+              display: 'inline-block',
+              marginBottom: '1rem'
+            }}>
+              <img src={qrCodeUrl} alt="Certificate QR Code" style={{ display: 'block' }} />
+            </div>
+            <div>
+              <button
+                className="cta-button"
+                onClick={downloadQRCode}
+                style={{ marginBottom: '1rem' }}
+              >
+                Download QR Code
+              </button>
+            </div>
+            <p style={{ color: '#666', fontSize: '0.85rem' }}>
+              URL: {window.location.href}
+            </p>
           </div>
         )}
 
