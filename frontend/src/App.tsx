@@ -9,6 +9,7 @@ import ISO9001 from './pages/ISO9001/ISO9001';
 import Contact from './pages/Contact/Contact';
 import CertificateList from './pages/CertificateList/CertificateList';
 import CertificateDetail from './pages/CertificateDetail/CertificateDetail';
+import CertificateRegister from './pages/CertificateRegister/CertificateRegister';
 
 const App: FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: FC = () => {
             <Route path="/services/iso/iso-9001/quality-management" element={<ISO9001 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/certificates" element={<CertificateList />} />
+            <Route path="/certificate/register" element={<CertificateRegister />} />
             <Route path="/certificate/:id" element={<CertificateDetail />} />
           </Routes>
         </main>
