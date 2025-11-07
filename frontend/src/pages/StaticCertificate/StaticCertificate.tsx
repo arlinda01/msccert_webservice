@@ -16,31 +16,31 @@ const StaticCertificate: FC = () => {
         <div className="detail-header">
           <div>
             <h2>CERT-2025-A1B2C3D4</h2>
-            <h3>Sample Company Ltd.</h3>
+            <h3>Kompania Shembull Sh.p.k.</h3>
           </div>
           <div style={{ marginTop: '1rem' }}>
             <span className="status-badge status-valid">
-              Valid/Active
+              Aktiv
             </span>
           </div>
         </div>
 
         {/* Basic Information */}
         <div className="detail-section">
-          <h4>Certificate Information</h4>
+          <h4>Informacioni i Çertifikatës</h4>
           <div className="detail-grid">
             <div className="detail-item">
-              <span className="detail-label">Standard</span>
+              <span className="detail-label">Standarti</span>
               <span className="detail-value">ISO 9001:2015</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">IAF Code</span>
+              <span className="detail-label">Kodi IAF</span>
               <span className="detail-value">28</span>
             </div>
             <div className="detail-item detail-full">
-              <span className="detail-label">Scope / Activity</span>
+              <span className="detail-label">Objekti i Veprimtarisë</span>
               <span className="detail-value">
-                Quality management systems for manufacturing and distribution of industrial equipment
+                Prodhimi dhe shpërndarja e pajisjeve industriale
               </span>
             </div>
           </div>
@@ -48,55 +48,55 @@ const StaticCertificate: FC = () => {
 
         {/* Dates */}
         <div className="detail-section">
-          <h4>Important Dates</h4>
+          <h4>Data të Rëndësishme</h4>
           <div className="detail-grid">
             <div className="detail-item">
-              <span className="detail-label">First Issue Date</span>
-              <span className="detail-value">January 15, 2023</span>
+              <span className="detail-label">Data e Lëshimit</span>
+              <span className="detail-value">15 Janar 2023</span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Expiry Date</span>
+              <span className="detail-label">Data e Skadimit</span>
               <span className="detail-value" style={{ color: '#4caf50' }}>
-                January 15, 2026 (365 days left)
+                15 Janar 2026 (365 ditë të mbetura)
               </span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Next Maintenance</span>
+              <span className="detail-label">Mirëmbajtja e Ardhshme</span>
               <span className="detail-value" style={{ color: '#4caf50' }}>
-                January 15, 2025
+                15 Janar 2025
               </span>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Last Maintenance</span>
-              <span className="detail-value">January 15, 2024</span>
+              <span className="detail-label">Mirëmbajtja e Fundit</span>
+              <span className="detail-value">15 Janar 2024</span>
             </div>
           </div>
         </div>
 
         {/* Sites */}
         <div className="detail-section">
-          <h4>Certificate Sites (2)</h4>
+          <h4>Objektet e Çertifikuara (2)</h4>
           <div className="sites-list">
             <div className="site-card">
               <div className="site-header">
-                Site 1: Main Manufacturing Facility
+                Objekti 1: Fabrika Kryesore
               </div>
               <div style={{ color: '#b0b0b0', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-                Manufacturing of industrial equipment and quality control
+                Prodhimi i pajisjeve industriale dhe kontrolli i cilësisë
               </div>
               <div style={{ color: '#888', fontSize: '0.85rem' }}>
-                123 Industrial Park, Manufacturing District, City, Country
+                Rruga Industriale 123, Zona Industriale, Tiranë, Shqipëri
               </div>
             </div>
             <div className="site-card">
               <div className="site-header">
-                Site 2: Distribution Center
+                Objekti 2: Qendra e Shpërndarjes
               </div>
               <div style={{ color: '#b0b0b0', fontSize: '0.9rem', marginBottom: '0.5rem' }}>
-                Storage and distribution of finished products
+                Ruajtja dhe shpërndarja e produkteve të gatshme
               </div>
               <div style={{ color: '#888', fontSize: '0.85rem' }}>
-                456 Logistics Avenue, Distribution Zone, City, Country
+                Bulevardi Logistik 456, Zona Logjistike, Tiranë, Shqipëri
               </div>
             </div>
           </div>
