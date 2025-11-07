@@ -46,22 +46,7 @@ const Navigation: FC = () => {
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
 
-          <li className={`nav-dropdown ${openDropdown === 'about' ? 'active' : ''}`}>
-            <span onClick={() => toggleDropdown('about')}>
-              About Us
-              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                <path d="M6 9L1 4h10z"/>
-              </svg>
-            </span>
-            <ul className="dropdown-menu">
-              <li><Link to="/about" onClick={closeMenu}>About MSC Certifications</Link></li>
-              <li><Link to="/about/mission-vision" onClick={closeMenu}>Mission & Vision</Link></li>
-              <li><Link to="/about/quality-policy" onClick={closeMenu}>Quality Policy</Link></li>
-              <li><Link to="/about/code-of-ethics" onClick={closeMenu}>Code of Ethics</Link></li>
-              <li><Link to="/about/accreditation" onClick={closeMenu}>Accreditation</Link></li>
-              <li><Link to="/about/partnerships" onClick={closeMenu}>Partnerships</Link></li>
-            </ul>
-          </li>
+          <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
 
           <li className={`nav-dropdown ${openDropdown === 'iso' ? 'active' : ''}`}>
             <span onClick={() => toggleDropdown('iso')}>
