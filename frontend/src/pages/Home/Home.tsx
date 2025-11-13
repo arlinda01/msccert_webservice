@@ -1,12 +1,44 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 import type { FAQ } from '../../types';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Home: FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const toggleFAQ = (index: number): void => {
     setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  // Slider settings
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   };
 
   const faqs: FAQ[] = [
@@ -20,7 +52,7 @@ const Home: FC = () => {
     },
     {
       question: "Is the certificate globally recognized?",
-      answer: "Yes. All certificates issued through MSC CERTIFICATIONS are backed by internationally accredited bodies (IAF members). This ensures the certificate is recognized and accepted worldwide, including in the EU and SEE markets."
+      answer: "Yes. All certificates issued through MSC Certifications are backed by internationally accredited bodies (IAF members). This ensures the certificate is recognized and accepted worldwide, including in the EU and SEE markets."
     },
     {
       question: "Do I need to implement multiple ISO standards?",
@@ -35,10 +67,37 @@ const Home: FC = () => {
         <div className="hero-content">
           <h1>Your Partner for ISO Certification, Compliance, and Risk Management</h1>
           <p className="hero-subtitle">
-            Secure your business future. MSC CERTIFICATIONS provides accredited, value-added ISO certification services,
-            helping you minimize risk, increase operational efficiency, and earn market trust. We are your specialized,
-            local partner committed to transforming your management systems into a competitive advantage.
+            Secure your business future. MSC Certifications provides accredited, value-added ISO certification services, helping you minimize risk, increase operational efficiency, and earn market trust.
           </p>
+
+          {/* Hero Feature Icons */}
+          <div className="hero-features">
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                {FaIcons.FaShieldAlt({}) as any}
+              </div>
+              <span>Globally Accredited</span>
+            </div>
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                {FaIcons.FaUsers({}) as any}
+              </div>
+              <span>Expert Auditors</span>
+            </div>
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                {FaIcons.FaCheckCircle({}) as any}
+              </div>
+              <span>Fast Certification</span>
+            </div>
+            <div className="hero-feature-item">
+              <div className="hero-feature-icon">
+                {FaIcons.FaGlobe({}) as any}
+              </div>
+              <span>Local Support</span>
+            </div>
+          </div>
+
           <div className="hero-buttons">
             <Link to="/contact" className="btn btn-primary">Request a Free Consultation</Link>
             <Link to="/free-online-assessment" className="btn btn-secondary">Get a Free Online Assessment</Link>
@@ -53,10 +112,13 @@ const Home: FC = () => {
           <p className="section-intro">
             In the certification market, having a well-known logo isn't enough, you deserve an assessment that drives
             real improvement and profitability. Unlike multinational bodies that rely on generic auditors,
-            MSC CERTIFICATIONS guarantees deep, contextual expertise within your specific industry.
+            MSC Certifications guarantees deep, contextual expertise within your specific industry.
           </p>
           <div className="features-grid">
             <div className="feature-card">
+              <div className="card-icon">
+                {FaIcons.FaUsers({}) as any}
+              </div>
               <h3>Sector-Specific Experts</h3>
               <p>
                 We match your industry. We provide a construction risk expert for building firms or a financial
@@ -65,6 +127,9 @@ const Home: FC = () => {
               </p>
             </div>
             <div className="feature-card">
+              <div className="card-icon">
+                {FaIcons.FaGlobe({}) as any}
+              </div>
               <h3>Local Market Insight</h3>
               <p>
                 We understand the nuances and regulatory pressures of the local and regional markets, making your
@@ -72,6 +137,9 @@ const Home: FC = () => {
               </p>
             </div>
             <div className="feature-card">
+              <div className="card-icon">
+                {FaIcons.FaChartLine({}) as any}
+              </div>
               <h3>Auditing for Value</h3>
               <p>
                 Our process actively identifies genuine cost-saving opportunities and process efficiencies,
@@ -91,106 +159,139 @@ const Home: FC = () => {
             while remaining competitive locally.
           </p>
 
-          {/* Quality, Safety, and Environment */}
-          <div className="certification-category">
-            <h3 className="category-title">Quality, Safety, and Environment</h3>
-            <div className="certification-grid">
-              <div className="certification-card">
-                <h4>ISO 9001 (Quality Management)</h4>
-                <p>
-                  The framework for operational consistency, significantly reducing errors, and qualifying your
-                  business for major contracts and public tenders.
-                </p>
-                <Link to="/services/iso/iso-9001/quality-management" className="card-link">Learn More →</Link>
+          {/* All ISO Certifications in One Slider */}
+          <Slider {...sliderSettings} className="certification-slider">
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaAward({}) as any}
               </div>
-              <div className="certification-card">
-                <h4>ISO 45001 (Occupational Health & Safety)</h4>
-                <p>
-                  The international standard for preventing workplace injuries and illness, protecting your staff,
-                  and mitigating high legal and insurance risks.
-                </p>
-                <Link to="/services/iso/iso-45001/health-and-safety-at-work" className="card-link">Learn More →</Link>
-              </div>
-              <div className="certification-card">
-                <h4>ISO 14001 (Environmental Management)</h4>
-                <p>
-                  Demonstrates corporate social responsibility, secures legal compliance, and reduces long-term
-                  operational costs through better resource management.
-                </p>
-                <Link to="/services/iso/iso-14001/environmental-management" className="card-link">Learn More →</Link>
-              </div>
+              <h4>ISO 9001 (Quality Management)</h4>
+              <p>The framework for operational consistency, significantly reducing errors.</p>
+              <ul className="benefits-list">
+                <li>Global Recognition</li>
+                <li>Improved Efficiency</li>
+                <li>Stronger Customer Loyalty</li>
+              </ul>
+              <Link to="/services/iso/iso-9001/quality-management" className="card-link">Learn more about ISO 9001</Link>
             </div>
-          </div>
-
-          {/* Information, Resilience, and Integrity */}
-          <div className="certification-category">
-            <h3 className="category-title">Information, Resilience, and Integrity</h3>
-            <div className="certification-grid">
-              <div className="certification-card">
-                <h4>ISO/IEC 27001 (Information Security)</h4>
-                <p>
-                  Essential for protecting sensitive data, securing IT infrastructure, and achieving GDPR-level
-                  compliance for client and partner confidence.
-                </p>
-                <Link to="/services/iso/iso-27001/information-security" className="card-link">Learn More →</Link>
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaHardHat({}) as any}
               </div>
-              <div className="certification-card">
-                <h4>ISO 22301 (Business Continuity)</h4>
-                <p>
-                  Focuses on organizational resilience, ensuring rapid recovery (RTO/RPO) after major disruptions
-                  to minimize financial loss and maintain critical services.
-                </p>
-                <Link to="/services/iso/iso-22301/business-continuity" className="card-link">Learn More →</Link>
-              </div>
-              <div className="certification-card">
-                <h4>ISO 37001 (Anti-Bribery)</h4>
-                <p>
-                  Establishes systems for prevention and detection, critical for reducing penal risk and ensuring
-                  a clean reputation, especially in high-exposure public tenders.
-                </p>
-                <Link to="/services/iso/iso-37001/anti-bribery-management" className="card-link">Learn More →</Link>
-              </div>
+              <h4>ISO 45001 (Occupational Health & Safety)</h4>
+              <p>Preventing workplace injuries and protecting your staff.</p>
+              <ul className="benefits-list">
+                <li>Reduce Workplace Accidents</li>
+                <li>Legal Compliance</li>
+                <li>Lower Insurance Costs</li>
+              </ul>
+              <Link to="/services/iso/iso-45001/health-and-safety-at-work" className="card-link">Learn more about ISO 45001</Link>
             </div>
-          </div>
-
-          {/* Specialized Compliance and Sector Focus */}
-          <div className="certification-category">
-            <h3 className="category-title">Specialized Compliance and Sector Focus</h3>
-            <div className="certification-grid">
-              <div className="certification-card">
-                <h4>ISO 22000 (Food Safety)</h4>
-                <p>
-                  Guarantees product integrity and traceability, securing access to regulated markets and meeting
-                  HORECA and retailer requirements.
-                </p>
-                <Link to="/services/iso/iso-22000/food-safety-management" className="card-link">Learn More →</Link>
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaLeaf({}) as any}
+              </div>
+              <h4>ISO 14001 (Environmental Management)</h4>
+              <p>Corporate social responsibility and environmental compliance.</p>
+              <ul className="benefits-list">
+                <li>Reduce Environmental Impact</li>
+                <li>Cost Savings</li>
+                <li>Regulatory Compliance</li>
+              </ul>
+              <Link to="/services/iso/iso-14001/environmental-management" className="card-link">Learn more about ISO 14001</Link>
+            </div>
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaLock({}) as any}
+              </div>
+              <h4>ISO/IEC 27001 (Information Security)</h4>
+              <p>Protecting sensitive data and securing IT infrastructure.</p>
+              <ul className="benefits-list">
+                <li>Data Protection</li>
+                <li>GDPR Compliance</li>
+                <li>Enhanced Cyber Security</li>
+              </ul>
+              <Link to="/services/iso/iso-27001/information-security" className="card-link">Learn more about ISO 27001</Link>
+            </div>
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaShieldAlt({}) as any}
+              </div>
+              <h4>ISO 22301 (Business Continuity)</h4>
+              <p>Ensuring rapid recovery after major disruptions.</p>
+              <ul className="benefits-list">
+                <li>Minimize Downtime</li>
+                <li>Protect Revenue</li>
+                <li>Maintain Critical Operations</li>
+              </ul>
+              <Link to="/services/iso/iso-22301/business-continuity" className="card-link">Learn more about ISO 22301</Link>
+            </div>
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaCertificate({}) as any}
+              </div>
+              <h4>ISO 37001 (Anti-Bribery)</h4>
+              <p>Prevention and detection systems for corruption risk.</p>
+              <ul className="benefits-list">
+                <li>Reduce Legal Risk</li>
+                <li>Clean Reputation</li>
+                <li>Tender Qualification</li>
+              </ul>
+              <Link to="/services/iso/iso-37001/anti-bribery-management" className="card-link">Learn more about ISO 37001</Link>
+            </div>
+            <div className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaUtensils({}) as any}
+              </div>
+              <h4>ISO 22000 (Food Safety)</h4>
+                <p>Product integrity and traceability for regulated markets.</p>
+                <ul className="benefits-list">
+                  <li>HORECA Compliance</li>
+                  <li>Supply Chain Security</li>
+                  <li>Consumer Trust</li>
+                </ul>
+                <Link to="/services/iso/iso-22000/food-safety-management" className="card-link">Learn more about ISO 22000</Link>
               </div>
               <div className="certification-card">
+                <div className="card-icon">
+                  {FaIcons.FaCar({}) as any}
+                </div>
                 <h4>ISO 39001 (Road Traffic Safety - RTS)</h4>
-                <p>
-                  Minimizes accidents and fatalities for companies with large fleets, leading to lower operating
-                  costs, insurance premiums, and better fleet performance.
-                </p>
-                <Link to="/services/iso/iso-39001/road-traffic-safety" className="card-link">Learn More →</Link>
+                <p>Minimizes accidents for companies with large fleets.</p>
+                <ul className="benefits-list">
+                  <li>Reduce Fleet Accidents</li>
+                  <li>Lower Insurance Premiums</li>
+                  <li>Improve Driver Safety</li>
+                </ul>
+                <Link to="/services/iso/iso-39001/road-traffic-safety" className="card-link">Learn more about ISO 39001</Link>
               </div>
               <div className="certification-card">
+                <div className="card-icon">
+                  {FaIcons.FaBolt({}) as any}
+                </div>
                 <h4>ISO 50001 (Energy Management)</h4>
-                <p>
-                  A systematic approach to optimizing energy use, leading to measurable reductions in utility bills
-                  and demonstrating verifiable performance to stakeholders.
-                </p>
-                <Link to="/services/iso/iso-50001/energy-management" className="card-link">Learn More →</Link>
+                <p>Systematic approach to optimizing energy use.</p>
+                <ul className="benefits-list">
+                  <li>Reduce Utility Bills</li>
+                  <li>Measurable Savings</li>
+                  <li>Environmental Performance</li>
+                </ul>
+                <Link to="/services/iso/iso-50001/energy-management" className="card-link">Learn more about ISO 50001</Link>
               </div>
               <div className="certification-card">
+                <div className="card-icon">
+                  {FaIcons.FaCheckCircle({}) as any}
+                </div>
                 <h4>CE Marking (Product Compliance)</h4>
-                <p>
-                  The mandatory legal sign that allows your industrial and consumer products free circulation and
-                  sale within the entire European (EU/SEE) market.
-                </p>
-                <Link to="/services/compliance/ce-marking" className="card-link">Learn More →</Link>
+                <p>Mandatory legal sign for EU/SEE market circulation.</p>
+                <ul className="benefits-list">
+                  <li>EU Market Access</li>
+                  <li>Legal Compliance</li>
+                  <li>Product Certification</li>
+                </ul>
+                <Link to="/services/compliance/ce-marking" className="card-link">Learn more about CE Marking</Link>
               </div>
-            </div>
-          </div>
+          </Slider>
         </div>
       </section>
 
@@ -203,6 +304,9 @@ const Home: FC = () => {
           </p>
           <div className="solutions-grid">
             <div className="solution-card">
+              <div className="card-icon">
+                {FaIcons.FaBolt({}) as any}
+              </div>
               <h4>Energy Efficiency Programs</h4>
               <p>
                 Structured programs focusing on analyzing and reducing energy consumption in commercial buildings
@@ -211,6 +315,9 @@ const Home: FC = () => {
               <Link to="/services/additional/energy-efficiency" className="card-link">Learn More →</Link>
             </div>
             <div className="solution-card">
+              <div className="card-icon">
+                {FaIcons.FaGraduationCap({}) as any}
+              </div>
               <h4>Staff Training</h4>
               <p>
                 Role-based programs aligned with ISO competencies (9001, 45001, etc.) to increase productivity,
@@ -219,6 +326,9 @@ const Home: FC = () => {
               <Link to="/services/additional/staff-training" className="card-link">Learn More →</Link>
             </div>
             <div className="solution-card">
+              <div className="card-icon">
+                {FaIcons.FaIdCard({}) as any}
+              </div>
               <h4>Professional Cards</h4>
               <p>
                 Personal certification used in regulated industries (e.g., HVAC technicians, welders) to instantly
@@ -227,6 +337,9 @@ const Home: FC = () => {
               <Link to="/services/additional/professional-cards" className="card-link">Learn More →</Link>
             </div>
             <div className="solution-card">
+              <div className="card-icon">
+                {FaIcons.FaMicrochip({}) as any}
+              </div>
               <h4>Technology & Equipment Assessment</h4>
               <p>
                 Technical evaluation of industrial machinery, technological lines, and equipment for certification,
@@ -251,22 +364,37 @@ const Home: FC = () => {
           </p>
           <div className="industries-list">
             <div className="industry-item">
+              <div className="card-icon">
+                {FaIcons.FaBuilding({}) as any}
+              </div>
               <h4>Construction & Infrastructure</h4>
               <p>Risk management, quality assurance, and product compliance for major capital projects.</p>
             </div>
             <div className="industry-item">
+              <div className="card-icon">
+                {FaIcons.FaUtensils({}) as any}
+              </div>
               <h4>Food & HORECA</h4>
               <p>Securing the supply chain and ensuring global safety standards are met from production to consumption.</p>
             </div>
             <div className="industry-item">
+              <div className="card-icon">
+                {FaIcons.FaMicrochip({}) as any}
+              </div>
               <h4>IT & Telecommunications</h4>
               <p>Data protection, system integrity, and service continuity in the digital economy.</p>
             </div>
             <div className="industry-item">
+              <div className="card-icon">
+                {FaIcons.FaIndustry({}) as any}
+              </div>
               <h4>Manufacturing & Energy</h4>
               <p>Process optimization, energy cost reduction, and compliance with strict environmental regulations.</p>
             </div>
             <div className="industry-item">
+              <div className="card-icon">
+                {FaIcons.FaAward({}) as any}
+              </div>
               <h4>Public Sector & Tenders</h4>
               <p>Demonstrating critical adherence to quality, integrity, and safety requirements (ISO 9001, ISO 37001).</p>
             </div>

@@ -37,6 +37,7 @@ class CertificateSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'certificate_number',
+            'secure_id',
             'status',
             'status_display',
             'standard',
@@ -58,9 +59,25 @@ class CertificateSerializer(serializers.ModelSerializer):
         read_only_fields = [
             'id',
             'certificate_number',
+            'secure_id',
             'qr_code',
             'created_at',
             'updated_at'
+        ]
+
+
+class CertificateSiteCreateSerializer(serializers.ModelSerializer):
+    """
+    Serializer for creating Certificate Sites (without certificate field)
+    """
+
+    class Meta:
+        model = CertificateSite
+        fields = [
+            'site_number',
+            'name',
+            'scope_activity',
+            'address',
         ]
 
 
@@ -68,7 +85,7 @@ class CertificateCreateSerializer(serializers.ModelSerializer):
     """
     Serializer for creating certificates with nested sites
     """
-    sites = CertificateSiteSerializer(many=True, required=False)
+    sites = CertificateSiteCreateSerializer(many=True, required=False)
 
     class Meta:
         model = Certificate
@@ -92,6 +109,12 @@ class CertificateCreateSerializer(serializers.ModelSerializer):
             CertificateSite.objects.create(certificate=certificate, **site_data)
 
         return certificate
+
+    def to_representation(self, instance):
+        """
+        Use CertificateSerializer for the response to include all fields
+        """
+        return CertificateSerializer(instance, context=self.context).data
 
 
 class CertificateMaintenanceSerializer(serializers.Serializer):

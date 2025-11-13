@@ -1,3 +1,18 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-# Create your models here.
+
+class User(AbstractUser):
+    """
+    Custom User model extending Django's AbstractUser.
+
+    This allows for future customization if needed.
+    Only staff/admin users can access the certificate management system.
+    """
+
+    class Meta:
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
+
+    def __str__(self):
+        return self.username
