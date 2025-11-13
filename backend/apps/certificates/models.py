@@ -6,6 +6,15 @@ from io import BytesIO
 from django.core.files import File
 import uuid
 
+# Constants for QR code generation
+QR_CODE_VERSION = 1
+QR_CODE_BOX_SIZE = 10
+QR_CODE_BORDER = 4
+
+# Constants for expiry checks
+EXPIRING_SOON_DAYS = 90
+MAINTENANCE_INTERVAL_YEARS = 1
+
 
 class Certificate(models.Model):
     """
@@ -38,6 +47,12 @@ class Certificate(models.Model):
         unique=True,
         editable=False,
         help_text="Unique certificate number"
+    )
+    secure_id = models.UUIDField(
+        default=uuid.uuid4,
+        unique=True,
+        editable=False,
+        help_text="Secure UUID for public certificate verification (non-guessable)"
     )
     status = models.CharField(
         max_length=20,
@@ -96,6 +111,26 @@ class Certificate(models.Model):
     def __str__(self):
         return f"{self.certificate_number} - {self.company_name}"
 
+    def clean(self):
+        """
+        Validate certificate data before saving
+        """
+        super().clean()
+
+        # Validate that expiry_date is after first_issue_date
+        if self.first_issue_date and self.expiry_date:
+            if self.expiry_date <= self.first_issue_date:
+                raise ValidationError({
+                    'expiry_date': 'Expiry date must be after first issue date.'
+                })
+
+        # Validate that next_maintenance_date is reasonable
+        if self.first_issue_date and self.next_maintenance_date:
+            if self.next_maintenance_date < self.first_issue_date:
+                raise ValidationError({
+                    'next_maintenance_date': 'Next maintenance date cannot be before first issue date.'
+                })
+
     def save(self, *args, **kwargs):
         # Generate certificate number if not exists
         if not self.certificate_number:
@@ -138,21 +173,21 @@ class Certificate(models.Model):
     def generate_qr_code(self):
         """
         Generate QR code for the certificate
-        QR code contains URL to view live certificate status
+        QR code contains secure URL to view live certificate status using UUID
         """
         from django.conf import settings
 
-        # Create QR code with live URL - will always show current status
+        # Create QR code with secure UUID-based URL (non-guessable)
         # Uses FRONTEND_URL from settings (set via environment variable)
         frontend_url = getattr(settings, 'FRONTEND_URL', 'http://localhost:3000')
-        qr_data = f"{frontend_url}/certificate/{self.id}"
+        qr_data = f"{frontend_url}/certificate/{self.secure_id}"
 
-        # Generate QR code
+        # Generate QR code with configured settings
         qr = qrcode.QRCode(
-            version=1,
+            version=QR_CODE_VERSION,
             error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
+            box_size=QR_CODE_BOX_SIZE,
+            border=QR_CODE_BORDER,
         )
         qr.add_data(qr_data)
         qr.make(fit=True)
