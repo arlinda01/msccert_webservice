@@ -26,6 +26,7 @@ import {
   FaDollarSign,
   FaTachometerAlt
 } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 
 const About: FC = () => {
   const location = useLocation();
