@@ -92,7 +92,7 @@ const Home: FC = () => {
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaGlobe({}) as any}
+                {FaIcons.FaGlobeAmericas({}) as any}
               </div>
               <span>Local Support</span>
             </div>
@@ -128,7 +128,7 @@ const Home: FC = () => {
             </div>
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaGlobe({}) as any}
+                {FaIcons.FaGlobeAmericas({}) as any}
               </div>
               <h3>Local Market Insight</h3>
               <p>

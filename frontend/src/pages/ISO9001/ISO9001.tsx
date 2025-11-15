@@ -1,9 +1,16 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const ISO9001: FC = () => {
   return (
     <div className="iso-page">
+      <Helmet>
+        <title>ISO 9001 Certification | Accredited Quality Management Audits</title>
+        <meta name="description" content="Achieve ISO 9001 with MSC CERTIFICATIONS. Boost global credibility, improve efficiency, and win more tenders. Start your QMS assessment today." />
+        <meta name="keywords" content="ISO 9001 certification, QMS audit, ISO 9001 accredited, quality management system, ISO certification Albania, ISO 9001 benefits, quality auditor, ISO 9001 process, MSC Certifications" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
@@ -13,8 +20,8 @@ const ISO9001: FC = () => {
             improve customer satisfaction, and unlock new market opportunities. This standard is vital for
             demonstrating true quality commitment.
           </p>
-          <div className="iso-hero-buttons">
-            <Link to="/contact" className="btn btn-primary-large">Request a Competitive Quote for ISO 9001</Link>
+          <div className="hero-buttons">
+            <Link to="/contact" className="btn btn-primary">Request a Competitive Quote for ISO 9001</Link>
             <Link to="/online-assessment" className="btn btn-secondary">Start Your Free Readiness Assessment</Link>
           </div>
         </div>
@@ -31,12 +38,9 @@ const ISO9001: FC = () => {
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as the Accredited Auditor:</h3>
+            <h3>Our Role as the Accredited Certification Body</h3>
             <p>
-              We are <strong>MSC CERTIFICATIONS</strong>, the accredited, independent third-party body. We do not
-              consult or implement the system. Our job is to conduct a rigorous audit to verify how effectively
-              your QMS has been implemented. We objectively determine if your system meets the global criteria,
-              leading to your official ISO 9001 certification.
+              We objectively determine if your system meets the global criteria, leading to your official ISO 9001 certification.
             </p>
           </div>
         </div>
@@ -45,35 +49,23 @@ const ISO9001: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Key Benefits: Efficiency, Reliability, and Trust</h2>
-          <p className="section-intro">
-            Implementing and certifying your QMS adds measurable, bottom-line value:
-          </p>
+          <h2 className="section-title">Key Benefits of Certification</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Maximize Market Credibility</h3>
-              <ul>
-                <li>Instantly boosts client trust and global recognition.</li>
-                <li>Ensures automatic qualification for key public and private tenders.</li>
-              </ul>
+              <h3>Global Recognition</h3>
+              <p>Instant credibility with customers, partners, and regulators worldwide.</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Drive Operational Efficiency</h3>
-              <ul>
-                <li>Standardizes processes, eliminating waste and variation.</li>
-                <li>Achieves immediate reduction in errors and product returns.</li>
-              </ul>
+              <h3>Improved Efficiency</h3>
+              <p>Streamlined processes, fewer errors, and reduced waste.</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Secure Customer Loyalty</h3>
-              <ul>
-                <li>Puts the customer at the center of every decision.</li>
-                <li>Leads directly to higher customer retention.</li>
-              </ul>
+              <h3>Stronger Customer Loyalty</h3>
+              <p>Quality-driven operations that put customer satisfaction first.</p>
             </div>
           </div>
         </div>
@@ -84,31 +76,29 @@ const ISO9001: FC = () => {
         <div className="container">
           <h2 className="section-title">Industry Focus: Where Our Expertise Applies</h2>
           <p className="section-intro">
-            ISO 9001 is the only management system applicable to every type of organization, regardless of size or
-            sector. MSC CERTIFICATIONS provides specialized auditors to ensure your QMS is accurately tailored to
-            your specific operating environment, including:
+            MSC CERTIFICATIONS provides specialized auditors for tailored, sector-specific audits:
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
               <h4>Manufacturing</h4>
-              <p>Standardization of production lines, control of raw material quality, reduced scrap.</p>
+              <p>Process consistency, reduced scrap</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Professional Services (IT, Consulting)</h4>
-              <p>Consistency of service delivery, managed contracts, and defined service levels.</p>
+              <h4>Professional Services</h4>
+              <p>Contract clarity, service reliability</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Construction & Engineering</h4>
-              <p>Quality control of works and materials, robust project management.</p>
+              <h4>Construction</h4>
+              <p>Material control, project oversight</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Logistics & Transport</h4>
-              <p>Control of warehousing and distribution processes (supply chain assurance).</p>
+              <h4>Logistics</h4>
+              <p>Warehousing & distribution assurance</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Public Sector/Administration</h4>
-              <p>Improving public service delivery and enhancing organizational transparency.</p>
+              <h4>Public Sector</h4>
+              <p>Transparency and service delivery</p>
             </div>
           </div>
         </div>
@@ -173,14 +163,17 @@ const ISO9001: FC = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section section-cta-final">
+      <section className="section-cta-final">
         <div className="container">
-          <h2>Ready to increase the trustworthiness of your business?</h2>
+          <h2>Let's Get Started</h2>
+          <p>
+            Boost trust. Win tenders. Improve performance.
+          </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary-large">Start Your ISO 9001 Assessment Today</Link>
+            <Link to="/contact" className="btn btn-primary">Start Your ISO 9001 Assessment</Link>
           </div>
           <p className="cta-footer">
-            Our certificates are issued by a fully accredited body and are recognized globally.
+            All certificates issued by MSC CERTIFICATIONS are fully accredited and globally recognized.
           </p>
         </div>
       </section>
