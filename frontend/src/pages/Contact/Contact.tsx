@@ -6,7 +6,7 @@ const Contact: FC = () => {
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
-          <h1>Contact MSC CERTIFICATIONS</h1>
+          <h1>Contact MSC Certifications</h1>
           <p className="contact-subtitle">
             Get in touch with our team of certification experts
           </p>
@@ -20,10 +20,10 @@ const Contact: FC = () => {
             <div className="contact-info">
               <h2>Get In Touch</h2>
               <p className="contact-description">
-                <strong>MSC CERTIFICATIONS</strong> is an internationally accredited, independent certification
+                <strong>MSC Certifications</strong> is an internationally accredited, independent certification
                 body specializing in assessing and validating organizational adherence to internationally accepted
-                ISO standards. Our mission is to empower businesses across all sectors—manufacturing, services,
-                technology, healthcare, and beyond—to achieve compliance, enhance quality, and build stakeholder
+                ISO standards. Our mission is to empower businesses across all sectors,manufacturing, services,
+                technology, healthcare, and beyond, to achieve compliance, enhance quality, and build stakeholder
                 trust through rigorous, transparent, and impartial evaluations.
               </p>
 

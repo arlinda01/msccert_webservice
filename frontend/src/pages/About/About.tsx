@@ -67,24 +67,24 @@ const About: FC = () => {
       {/* Hero Section with Navigation */}
       <section className="about-hero">
         <div className="container">
-          <h1>About MSC CERTIFICATIONS</h1>
+          <h1>About MSC Certifications</h1>
           <p className="about-subtitle">
             Your Trusted Partner in International Standards and Compliance
           </p>
           <div className="about-intro-large">
             <p>
-              In a world where quality, safety, and compliance define business success, MSC CERTIFICATIONS stands as your
+              In a world where quality, safety, and compliance define business success, MSC Certifications stands as your
               reliable partner in achieving internationally recognized standards.
             </p>
             <p>
-              Operating since 2024, MSC CERTIFICATIONS is an accredited certification and assessment body recognized by the
+              Operating since 2024, MSC Certifications is an accredited certification and assessment body recognized by the
               General Directorate of Accreditation (DPA), the national accreditation authority of Albania.
             </p>
           </div>
           <div className="about-intro-small">
             <p>
               The DPA is a full member of the International Accreditation Forum (IAF) and European Accreditation (EA),
-              ensuring that all certificates issued by MSC CERTIFICATIONS are globally recognized and accepted across
+              ensuring that all certificates issued by MSC Certifications are globally recognized and accepted across
               industries and regions.
             </p>
             <p>
@@ -119,7 +119,7 @@ const About: FC = () => {
         <div className="container">
           <h2 className="section-title">Who We Are</h2>
           <p className="about-text">
-            MSC CERTIFICATIONS is an accredited organization specializing in inspection, auditing, and certification
+            MSC Certifications is an accredited organization specializing in inspection, auditing, and certification
             services in accordance with international standards.
           </p>
           <p className="about-text">
@@ -148,7 +148,7 @@ const About: FC = () => {
               </div>
               <h3>Our Mission</h3>
               <p>
-                At MSC CERTIFICATIONS, our mission is to empower organizations to achieve international excellence
+                At MSC Certifications, our mission is to empower organizations to achieve international excellence
                 through accredited certification, inspection, and training services.
               </p>
               <p>
@@ -217,7 +217,7 @@ const About: FC = () => {
           </div>
 
           <p className="about-text centered">
-            At MSC CERTIFICATIONS, quality is not just a standard we assess. It is the foundation of everything we do.
+            At MSC Certifications, quality is not just a standard we assess. It is the foundation of everything we do.
           </p>
 
           <div className="quality-commitments">
@@ -285,7 +285,7 @@ const About: FC = () => {
           </div>
 
           <p className="about-text centered">
-            Ethics and integrity are at the core of how MSC CERTIFICATIONS operates.
+            Ethics and integrity are at the core of how MSC Certifications operates.
           </p>
           <p className="about-text centered">
             Our Code of Ethics defines the standards of behavior expected from all employees, auditors, and
@@ -349,7 +349,7 @@ const About: FC = () => {
 
           <div className="ethics-footer">
             <p>
-              By following these principles, MSC CERTIFICATIONS ensures trust, credibility, and professional
+              By following these principles, MSC Certifications ensures trust, credibility, and professional
               integrity in every project.
             </p>
           </div>
@@ -366,13 +366,13 @@ const About: FC = () => {
 
           <div className="accreditation-intro">
             <p className="about-text centered">
-              MSC CERTIFICATIONS operates under formal accreditation by the <strong>General Directorate of
+              MSC Certifications operates under formal accreditation by the <strong>General Directorate of
               Accreditation (DPA)</strong>, the official national accreditation body of Albania.
             </p>
             <p className="about-text centered">
               The DPA is a full member of the <strong>International Accreditation Forum (IAF)</strong> and the
               <strong> European Cooperation for Accreditation (EA)</strong>. This ensures that all certificates
-              issued by MSC CERTIFICATIONS are globally recognized and accepted under international mutual
+              issued by MSC Certifications are globally recognized and accepted under international mutual
               recognition agreements (MLA/MRA).
             </p>
             <p className="about-text centered">
@@ -433,7 +433,7 @@ const About: FC = () => {
 
           <div className="accreditation-footer">
             <p>
-              At MSC CERTIFICATIONS, we take pride in maintaining our accredited status, your formal assurance of
+              At MSC Certifications, we take pride in maintaining our accredited status, your formal assurance of
               quality, professionalism, and global credibility.
             </p>
           </div>
@@ -450,7 +450,7 @@ const About: FC = () => {
           </div>
 
           <p className="about-text centered">
-            At MSC CERTIFICATIONS, we believe collaboration is the foundation of progress.
+            At MSC Certifications, we believe collaboration is the foundation of progress.
           </p>
           <p className="about-text centered">
             We build strategic partnerships with organizations that share our values of quality, safety,
@@ -535,7 +535,7 @@ const About: FC = () => {
       {/* Why Choose Us */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Why Choose MSC CERTIFICATIONS</h2>
+          <h2 className="section-title">Why Choose MSC Certifications</h2>
           <div className="why-choose-grid">
             <div className="why-choose-card">
               <FaUserTie className="why-icon" />
@@ -566,7 +566,7 @@ const About: FC = () => {
         <div className="container">
           <h2>Our Commitment</h2>
           <p className="commitment-text">
-            Since 2024, MSC CERTIFICATIONS has been helping organizations operate with confidence, quality, and
+            Since 2024, MSC Certifications has been helping organizations operate with confidence, quality, and
             integrity, turning complex standards into clear, measurable results trusted worldwide.
           </p>
           <div className="commitment-cta">

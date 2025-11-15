@@ -445,7 +445,7 @@ const Home: FC = () => {
         <div className="container">
           <h2>Start Your Journey Towards Quality and Trust</h2>
           <p>
-            Join hundreds of businesses across the region that trust MSC CERTIFICATIONS to transform their operations.
+            Join hundreds of businesses across the region that trust MSC Certifications to transform their operations.
             We offer a complimentary, no-obligation assessment to identify the ISO systems that deliver the highest
             measurable value and greatest risk reduction for your business.
           </p>
