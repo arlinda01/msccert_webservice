@@ -33,7 +33,7 @@ const CEMarking: FC = () => {
           <div className="iso-role-box">
             <h3>Our Role as a Certification Partner</h3>
             <p>
-              <strong>MSC CERTIFICATIONS</strong> conducts assessments and audits as part of the CE conformity route, depending on the applicable directive (e.g., Machinery Directive, Medical Device Regulation).
+              <strong>MSC Certifications</strong> conducts assessments and audits as part of the CE conformity route, depending on the applicable directive (e.g., Machinery Directive, Medical Device Regulation).
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ const CEMarking: FC = () => {
         <div className="container">
           <h2>Ensure Your Products Meet Legal Entry Requirements</h2>
           <p>
-            Build trust across the EU market with proper CE Marking certification. Start your compliance journey with MSC CERTIFICATIONS today.
+            Build trust across the EU market with proper CE Marking certification. Start your compliance journey with MSC Certifications today.
           </p>
           <div className="cta-buttons">
             <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>

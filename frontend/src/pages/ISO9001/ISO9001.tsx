@@ -7,7 +7,7 @@ const ISO9001: FC = () => {
     <div className="iso-page">
       <Helmet>
         <title>ISO 9001 Certification | Accredited Quality Management Audits</title>
-        <meta name="description" content="Achieve ISO 9001 with MSC CERTIFICATIONS. Boost global credibility, improve efficiency, and win more tenders. Start your QMS assessment today." />
+        <meta name="description" content="Achieve ISO 9001 with MSC Certifications. Boost global credibility, improve efficiency, and win more tenders. Start your QMS assessment today." />
         <meta name="keywords" content="ISO 9001 certification, QMS audit, ISO 9001 accredited, quality management system, ISO certification Albania, ISO 9001 benefits, quality auditor, ISO 9001 process, MSC Certifications" />
       </Helmet>
 
@@ -76,7 +76,7 @@ const ISO9001: FC = () => {
         <div className="container">
           <h2 className="section-title">Industry Focus: Where Our Expertise Applies</h2>
           <p className="section-intro">
-            MSC CERTIFICATIONS provides specialized auditors for tailored, sector-specific audits:
+            MSC Certifications provides specialized auditors for tailored, sector-specific audits:
           </p>
 
           <div className="industry-focus-list">
@@ -173,7 +173,7 @@ const ISO9001: FC = () => {
             <Link to="/contact" className="btn btn-primary">Start Your ISO 9001 Assessment</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC CERTIFICATIONS are fully accredited and globally recognized.
+            All certificates issued by MSC Certifications are fully accredited and globally recognized.
           </p>
         </div>
       </section>

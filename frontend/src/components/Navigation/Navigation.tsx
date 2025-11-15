@@ -26,7 +26,7 @@ const Navigation: FC = () => {
           <Link to="/" onClick={closeMenu}>
             <img
               src="/MSC-GROUP-WHITE-LOGO.svg"
-              alt="MSC CERTIFICATIONS"
+              alt="MSC Certifications"
               className="logo-image"
             />
           </Link>
@@ -63,12 +63,12 @@ const Navigation: FC = () => {
           </li>
 
           <li className={`nav-dropdown ${openDropdown === 'iso' ? 'active' : ''}`}>
-            <span onClick={() => toggleDropdown('iso')}>
+            <Link to="/services/iso" onClick={closeMenu}>
               ISO Certifications
               <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
-            </span>
+            </Link>
             <ul className="dropdown-menu">
               <li><Link to="/services/iso/iso-9001/quality-management" onClick={closeMenu}>ISO 9001 – Quality Management</Link></li>
               <li><Link to="/services/iso/iso-14001/environmental-management" onClick={closeMenu}>ISO 14001 – Environmental Management</Link></li>
@@ -96,12 +96,12 @@ const Navigation: FC = () => {
           </li>
 
           <li className={`nav-dropdown ${openDropdown === 'additional' ? 'active' : ''}`}>
-            <span onClick={() => toggleDropdown('additional')}>
+            <Link to="/services/additional" onClick={closeMenu}>
               Additional Services
               <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
-            </span>
+            </Link>
             <ul className="dropdown-menu">
               <li><Link to="/services/additional/energy-efficiency" onClick={closeMenu}>Energy Efficiency Programs</Link></li>
               <li><Link to="/services/additional/staff-training" onClick={closeMenu}>Staff Training</Link></li>

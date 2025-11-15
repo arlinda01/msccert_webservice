@@ -13,7 +13,7 @@ const Footer: FC = () => {
             <Link to="/">
               <img
                 src="/MSC-GROUP-WHITE-LOGO.svg"
-                alt="MSC CERTIFICATIONS"
+                alt="MSC Certifications"
                 className="footer-logo"
               />
             </Link>
@@ -69,7 +69,7 @@ const Footer: FC = () => {
 
         {/* Bottom Bar */}
         <div className="footer-bottom">
-          <p>&copy; {currentYear} MSC CERTIFICATIONS. All rights reserved.</p>
+          <p>&copy; {currentYear} MSC Certifications. All rights reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-of-service">Terms of Service</Link>
