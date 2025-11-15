@@ -6,7 +6,7 @@ const ISO9001: FC = () => {
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO 9001 Certification | Accredited Quality Management Audits</title>
+        <title>ISO 9001 Certification - Accredited Quality Management Audits</title>
         <meta name="description" content="Achieve ISO 9001 with MSC Certifications. Boost global credibility, improve efficiency, and win more tenders. Start your QMS assessment today." />
         <meta name="keywords" content="ISO 9001 certification, QMS audit, ISO 9001 accredited, quality management system, ISO certification Albania, ISO 9001 benefits, quality auditor, ISO 9001 process, MSC Certifications" />
       </Helmet>

@@ -7,7 +7,7 @@ const AdditionalServices: FC = () => {
   return (
     <div className="iso-page">
       <Helmet>
-        <title>Additional Services | Expert Consulting & Training Solutions</title>
+        <title>Additional Services - Expert Consulting & Training Solutions</title>
         <meta name="description" content="Comprehensive business solutions from MSC Certifications including energy efficiency, staff training, consulting, and technical assessments." />
         <meta name="keywords" content="energy efficiency, staff training, professional cards, consulting services, technology assessment, MSC Certifications" />
       </Helmet>

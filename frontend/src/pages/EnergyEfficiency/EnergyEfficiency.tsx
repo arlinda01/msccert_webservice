@@ -6,7 +6,7 @@ const EnergyEfficiency: FC = () => {
   return (
     <div className="iso-page">
       <Helmet>
-        <title>Energy Efficiency Audits | Cut Energy Costs & CO₂ Emissions</title>
+        <title>Energy Efficiency Audits - Cut Energy Costs & CO₂ Emissions</title>
         <meta name="description" content="Lower energy use, reduce emissions, and gain stability with MSC Certifications. Start your expert energy efficiency assessment today." />
         <meta name="keywords" content="energy efficiency audit, energy assessment, ISO 50001 certification, reduce energy consumption, CO₂ reduction, sustainable energy performance, energy optimization, MSC Certifications" />
       </Helmet>

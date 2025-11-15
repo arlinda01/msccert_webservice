@@ -7,7 +7,7 @@ const ISOCertifications: FC = () => {
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO Certifications | International Standards for Quality & Compliance</title>
+        <title>ISO Certifications - International Standards for Quality & Compliance</title>
         <meta name="description" content="Achieve internationally recognized ISO certifications with MSC Certifications. From quality management to information security, we offer comprehensive certification services." />
         <meta name="keywords" content="ISO certification, ISO standards, quality management, environmental management, food safety, information security, MSC Certifications" />
       </Helmet>
