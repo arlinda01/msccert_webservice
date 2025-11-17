@@ -127,8 +127,8 @@ body {
 
 .nav-menu > li > a,
 .nav-menu > li > span {
-  color: #ffffff;
-  text-decoration: none;
+  color: #ffffff !important;
+  text-decoration: none !important;
   padding: 1.5rem 0.85rem;
   display: flex;
   align-items: center;
@@ -140,10 +140,16 @@ body {
   white-space: nowrap;
 }
 
+.nav-menu > li > a:visited,
+.nav-menu > li > a:link {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
 .nav-menu > li > a:hover,
 .nav-menu > li > span:hover {
   background-color: #2bbad4;
-  color: #014450;
+  color: #014450 !important;
 }
 
 .nav-dropdown {
@@ -159,6 +165,11 @@ body {
 .dropdown-arrow {
   transition: transform 0.3s ease;
   margin-left: 0.25rem;
+  flex-shrink: 0;
+}
+
+.dropdown-arrow path {
+  fill: currentColor;
 }
 
 .nav-dropdown.active .dropdown-arrow {
