@@ -137,15 +137,11 @@ const About: FC = () => {
       <section id="mission-vision" className="section section-gray">
         <div className="container">
           <div className="section-header">
-            <FaBullseye className="section-header-icon" />
             <h2 className="section-title">Mission & Vision</h2>
           </div>
 
           <div className="mission-vision-grid">
             <div className="mission-card">
-              <div className="card-icon-large">
-                <FaRocket />
-              </div>
               <h3>Our Mission</h3>
               <p>
                 At MSC Certifications, our mission is to empower organizations to achieve international excellence
@@ -162,9 +158,6 @@ const About: FC = () => {
             </div>
 
             <div className="vision-card">
-              <div className="card-icon-large">
-                <FaEye />
-              </div>
               <h3>Our Vision</h3>
               <p>
                 To be recognized as a leading certification and compliance body in the region, known for credibility,
@@ -180,27 +173,22 @@ const About: FC = () => {
           <h3 className="subsection-title-small">Our Core Values</h3>
           <div className="values-grid">
             <div className="value-card">
-              <FaShieldAlt className="value-icon" />
               <h4>Integrity</h4>
               <p>Acting impartially and ethically in every audit and decision.</p>
             </div>
             <div className="value-card">
-              <FaUserGraduate className="value-icon" />
               <h4>Competence</h4>
               <p>Using qualified experts specialized in each industry sector.</p>
             </div>
             <div className="value-card">
-              <FaEye className="value-icon" />
               <h4>Transparency</h4>
               <p>Communicating clearly and honestly with clients.</p>
             </div>
             <div className="value-card">
-              <FaChartLine className="value-icon" />
               <h4>Continuous Improvement</h4>
               <p>Adapting to evolving standards and best practices.</p>
             </div>
             <div className="value-card">
-              <FaUsers className="value-icon" />
               <h4>Customer Focus</h4>
               <p>Providing professional and responsive service.</p>
             </div>
@@ -212,7 +200,6 @@ const About: FC = () => {
       <section id="quality-policy" className="section section-white">
         <div className="container">
           <div className="section-header">
-            <FaClipboardCheck className="section-header-icon" />
             <h2 className="section-title">Quality Policy</h2>
           </div>
 
@@ -280,7 +267,6 @@ const About: FC = () => {
       <section id="code-of-ethics" className="section section-gray">
         <div className="container">
           <div className="section-header">
-            <FaBalanceScale className="section-header-icon" />
             <h2 className="section-title">Code of Ethics</h2>
           </div>
 
@@ -360,7 +346,6 @@ const About: FC = () => {
       <section id="accreditation" className="section section-white">
         <div className="container">
           <div className="section-header">
-            <FaCertificate className="section-header-icon" />
             <h2 className="section-title">Our Accreditation: Your Guarantee of Credibility</h2>
           </div>
 
@@ -444,7 +429,6 @@ const About: FC = () => {
       <section id="partnerships" className="section section-gray">
         <div className="container">
           <div className="section-header">
-            <FaHandshake className="section-header-icon" />
             <h2 className="section-title">Partnerships</h2>
             <p className="section-subtitle">Working Together for Global Compliance and Growth</p>
           </div>

@@ -47,12 +47,18 @@ const Navigation: FC = () => {
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
 
           <li className={`nav-dropdown ${openDropdown === 'about' ? 'active' : ''}`}>
-            <Link to="/about-us/" onClick={closeMenu}>
-              About Us
-              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                <path d="M6 9L1 4h10z"/>
-              </svg>
-            </Link>
+            <div className="nav-dropdown-header">
+              <Link to="/about-us/" onClick={closeMenu}>About Us</Link>
+              <button
+                className="dropdown-toggle"
+                onClick={() => toggleDropdown('about')}
+                aria-label="Toggle About Us menu"
+              >
+                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </button>
+            </div>
             <ul className="dropdown-menu">
               <li><Link to="/about-us/mission-vision/" onClick={closeMenu}>Mission & Vision</Link></li>
               <li><Link to="/about-us/quality-policy/" onClick={closeMenu}>Quality Policy</Link></li>
@@ -63,12 +69,18 @@ const Navigation: FC = () => {
           </li>
 
           <li className={`nav-dropdown ${openDropdown === 'iso' ? 'active' : ''}`}>
-            <Link to="/services/iso" onClick={closeMenu}>
-              ISO Certifications
-              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                <path d="M6 9L1 4h10z"/>
-              </svg>
-            </Link>
+            <div className="nav-dropdown-header">
+              <Link to="/services/iso" onClick={closeMenu}>ISO Certifications</Link>
+              <button
+                className="dropdown-toggle"
+                onClick={() => toggleDropdown('iso')}
+                aria-label="Toggle ISO Certifications menu"
+              >
+                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </button>
+            </div>
             <ul className="dropdown-menu">
               <li><Link to="/services/iso/iso-9001/quality-management" onClick={closeMenu}>ISO 9001 – Quality Management</Link></li>
               <li><Link to="/services/iso/iso-14001/environmental-management" onClick={closeMenu}>ISO 14001 – Environmental Management</Link></li>
@@ -84,24 +96,36 @@ const Navigation: FC = () => {
           </li>
 
           <li className={`nav-dropdown ${openDropdown === 'compliance' ? 'active' : ''}`}>
-            <span onClick={() => toggleDropdown('compliance')}>
-              Compliance & Marking
-              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                <path d="M6 9L1 4h10z"/>
-              </svg>
-            </span>
+            <div className="nav-dropdown-header">
+              <Link to="/services/compliance" onClick={closeMenu}>Compliance & Marking</Link>
+              <button
+                className="dropdown-toggle"
+                onClick={() => toggleDropdown('compliance')}
+                aria-label="Toggle Compliance & Marking menu"
+              >
+                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </button>
+            </div>
             <ul className="dropdown-menu">
               <li><Link to="/services/compliance/ce-marking" onClick={closeMenu}>CE Marking</Link></li>
             </ul>
           </li>
 
           <li className={`nav-dropdown ${openDropdown === 'additional' ? 'active' : ''}`}>
-            <Link to="/services/additional" onClick={closeMenu}>
-              Additional Services
-              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                <path d="M6 9L1 4h10z"/>
-              </svg>
-            </Link>
+            <div className="nav-dropdown-header">
+              <Link to="/services/additional" onClick={closeMenu}>Additional Services</Link>
+              <button
+                className="dropdown-toggle"
+                onClick={() => toggleDropdown('additional')}
+                aria-label="Toggle Additional Services menu"
+              >
+                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </button>
+            </div>
             <ul className="dropdown-menu">
               <li><Link to="/services/additional/energy-efficiency" onClick={closeMenu}>Energy Efficiency Programs</Link></li>
               <li><Link to="/services/additional/staff-training" onClick={closeMenu}>Staff Training</Link></li>

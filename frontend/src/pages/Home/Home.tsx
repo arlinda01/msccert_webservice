@@ -2,43 +2,12 @@ import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import type { FAQ } from '../../types';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const Home: FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const toggleFAQ = (index: number): void => {
     setOpenFAQ(openFAQ === index ? null : index);
-  };
-
-  // Slider settings
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
   };
 
   const faqs: FAQ[] = [
@@ -159,9 +128,9 @@ const Home: FC = () => {
             while remaining competitive locally.
           </p>
 
-          {/* All ISO Certifications in One Slider */}
-          <Slider {...sliderSettings} className="certification-slider">
-            <div className="certification-card">
+          {/* All ISO Certifications Grid */}
+          <div className="certification-grid">
+            <Link to="/services/iso/iso-9001/quality-management" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaAward({}) as any}
               </div>
@@ -172,9 +141,8 @@ const Home: FC = () => {
                 <li>Improved Efficiency</li>
                 <li>Stronger Customer Loyalty</li>
               </ul>
-              <Link to="/services/iso/iso-9001/quality-management" className="card-link">Learn more about ISO 9001</Link>
-            </div>
-            <div className="certification-card">
+            </Link>
+            <Link to="/services/iso/iso-45001/health-and-safety-at-work" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaHardHat({}) as any}
               </div>
@@ -185,9 +153,8 @@ const Home: FC = () => {
                 <li>Legal Compliance</li>
                 <li>Lower Insurance Costs</li>
               </ul>
-              <Link to="/services/iso/iso-45001/health-and-safety-at-work" className="card-link">Learn more about ISO 45001</Link>
-            </div>
-            <div className="certification-card">
+            </Link>
+            <Link to="/services/iso/iso-14001/environmental-management" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaLeaf({}) as any}
               </div>
@@ -198,9 +165,8 @@ const Home: FC = () => {
                 <li>Cost Savings</li>
                 <li>Regulatory Compliance</li>
               </ul>
-              <Link to="/services/iso/iso-14001/environmental-management" className="card-link">Learn more about ISO 14001</Link>
-            </div>
-            <div className="certification-card">
+            </Link>
+            <Link to="/services/iso/iso-27001/information-security" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaLock({}) as any}
               </div>
@@ -211,9 +177,8 @@ const Home: FC = () => {
                 <li>GDPR Compliance</li>
                 <li>Enhanced Cyber Security</li>
               </ul>
-              <Link to="/services/iso/iso-27001/information-security" className="card-link">Learn more about ISO 27001</Link>
-            </div>
-            <div className="certification-card">
+            </Link>
+            <Link to="/services/iso/iso-22301/business-continuity" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaShieldAlt({}) as any}
               </div>
@@ -224,9 +189,8 @@ const Home: FC = () => {
                 <li>Protect Revenue</li>
                 <li>Maintain Critical Operations</li>
               </ul>
-              <Link to="/services/iso/iso-22301/business-continuity" className="card-link">Learn more about ISO 22301</Link>
-            </div>
-            <div className="certification-card">
+            </Link>
+            <Link to="/services/iso/iso-37001/anti-bribery-management" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaCertificate({}) as any}
               </div>
@@ -237,61 +201,56 @@ const Home: FC = () => {
                 <li>Clean Reputation</li>
                 <li>Tender Qualification</li>
               </ul>
-              <Link to="/services/iso/iso-37001/anti-bribery-management" className="card-link">Learn more about ISO 37001</Link>
-            </div>
-            <div className="certification-card">
+            </Link>
+            <Link to="/services/iso/iso-22000/food-safety-management" className="certification-card">
               <div className="card-icon">
                 {FaIcons.FaUtensils({}) as any}
               </div>
               <h4>ISO 22000 (Food Safety)</h4>
-                <p>Product integrity and traceability for regulated markets.</p>
-                <ul className="benefits-list">
-                  <li>HORECA Compliance</li>
-                  <li>Supply Chain Security</li>
-                  <li>Consumer Trust</li>
-                </ul>
-                <Link to="/services/iso/iso-22000/food-safety-management" className="card-link">Learn more about ISO 22000</Link>
+              <p>Product integrity and traceability for regulated markets.</p>
+              <ul className="benefits-list">
+                <li>HORECA Compliance</li>
+                <li>Supply Chain Security</li>
+                <li>Consumer Trust</li>
+              </ul>
+            </Link>
+            <Link to="/services/iso/iso-39001/road-traffic-safety" className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaCar({}) as any}
               </div>
-              <div className="certification-card">
-                <div className="card-icon">
-                  {FaIcons.FaCar({}) as any}
-                </div>
-                <h4>ISO 39001 (Road Traffic Safety - RTS)</h4>
-                <p>Minimizes accidents for companies with large fleets.</p>
-                <ul className="benefits-list">
-                  <li>Reduce Fleet Accidents</li>
-                  <li>Lower Insurance Premiums</li>
-                  <li>Improve Driver Safety</li>
-                </ul>
-                <Link to="/services/iso/iso-39001/road-traffic-safety" className="card-link">Learn more about ISO 39001</Link>
+              <h4>ISO 39001 (Road Traffic Safety - RTS)</h4>
+              <p>Minimizes accidents for companies with large fleets.</p>
+              <ul className="benefits-list">
+                <li>Reduce Fleet Accidents</li>
+                <li>Lower Insurance Premiums</li>
+                <li>Improve Driver Safety</li>
+              </ul>
+            </Link>
+            <Link to="/services/iso/iso-50001/energy-management" className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaBolt({}) as any}
               </div>
-              <div className="certification-card">
-                <div className="card-icon">
-                  {FaIcons.FaBolt({}) as any}
-                </div>
-                <h4>ISO 50001 (Energy Management)</h4>
-                <p>Systematic approach to optimizing energy use.</p>
-                <ul className="benefits-list">
-                  <li>Reduce Utility Bills</li>
-                  <li>Measurable Savings</li>
-                  <li>Environmental Performance</li>
-                </ul>
-                <Link to="/services/iso/iso-50001/energy-management" className="card-link">Learn more about ISO 50001</Link>
+              <h4>ISO 50001 (Energy Management)</h4>
+              <p>Systematic approach to optimizing energy use.</p>
+              <ul className="benefits-list">
+                <li>Reduce Utility Bills</li>
+                <li>Measurable Savings</li>
+                <li>Environmental Performance</li>
+              </ul>
+            </Link>
+            <Link to="/services/compliance/ce-marking" className="certification-card">
+              <div className="card-icon">
+                {FaIcons.FaCheckCircle({}) as any}
               </div>
-              <div className="certification-card">
-                <div className="card-icon">
-                  {FaIcons.FaCheckCircle({}) as any}
-                </div>
-                <h4>CE Marking (Product Compliance)</h4>
-                <p>Mandatory legal sign for EU/SEE market circulation.</p>
-                <ul className="benefits-list">
-                  <li>EU Market Access</li>
-                  <li>Legal Compliance</li>
-                  <li>Product Certification</li>
-                </ul>
-                <Link to="/services/compliance/ce-marking" className="card-link">Learn more about CE Marking</Link>
-              </div>
-          </Slider>
+              <h4>CE Marking (Product Compliance)</h4>
+              <p>Mandatory legal sign for EU/SEE market circulation.</p>
+              <ul className="benefits-list">
+                <li>EU Market Access</li>
+                <li>Legal Compliance</li>
+                <li>Product Certification</li>
+              </ul>
+            </Link>
+          </div>
         </div>
       </section>
 

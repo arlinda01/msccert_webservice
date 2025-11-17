@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/styles.css';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import ISO9001 from './pages/ISO9001/ISO9001';
@@ -18,6 +19,7 @@ import QRCodePage from './pages/QRCodePage/QRCodePage';
 const App: FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navigation />
         <main className="main-content">
