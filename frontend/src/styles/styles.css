@@ -192,8 +192,7 @@ body {
   }
 }
 
-.nav-dropdown:hover .dropdown-menu,
-.nav-dropdown.active .dropdown-menu {
+.nav-dropdown:hover .dropdown-menu {
   display: block;
 }
 
@@ -417,10 +416,11 @@ body {
 
 /* Hero Features */
 .hero-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 3rem;
   margin: 3rem auto;
+  flex-wrap: wrap;
   max-width: 900px;
 }
 
@@ -1440,32 +1440,25 @@ body {
 /* Values Grid */
 .values-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
   margin-top: 3rem;
 }
 
-/* Desktop layout: First 3 items take 2 columns each (3 boxes in row) */
-@media (min-width: 768px) {
-  .values-grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2rem;
-  }
+/* First 3 items take 2 columns each (3 boxes in row) */
+.values-grid .value-card:nth-child(1),
+.values-grid .value-card:nth-child(2),
+.values-grid .value-card:nth-child(3) {
+  grid-column: span 2;
+}
 
-  .values-grid .value-card:nth-child(1),
-  .values-grid .value-card:nth-child(2),
-  .values-grid .value-card:nth-child(3) {
-    grid-column: span 2;
-  }
+/* Last 2 items: centered with offset and span */
+.values-grid .value-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
 
-  /* Last 2 items: centered with offset and span */
-  .values-grid .value-card:nth-child(4) {
-    grid-column: 2 / span 2;
-  }
-
-  .values-grid .value-card:nth-child(5) {
-    grid-column: 4 / span 2;
-  }
+.values-grid .value-card:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .value-card {
@@ -2146,54 +2139,18 @@ body {
     padding: 1.25rem 1.5rem;
     justify-content: space-between;
     white-space: normal;
-    width: 100%;
-    display: flex;
-  }
-
-  .nav-dropdown-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-dropdown-header > a {
-    flex: 1;
-    padding: 1.25rem 1.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .nav-dropdown-header > a:hover {
-    color: #2bbad4;
-  }
-
-  .dropdown-toggle {
-    background: none;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 1.25rem 1.5rem;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-  }
-
-  .dropdown-toggle:hover {
-    color: #2bbad4;
   }
 
   .dropdown-arrow {
-    transition: transform 0.3s ease;
+    margin-left: auto;
   }
 
-  .nav-dropdown.active .dropdown-arrow {
-    transform: rotate(180deg);
+  .dropdown-toggle {
+    padding: 1.25rem 1.5rem;
   }
 
-  .nav-dropdown {
-    flex-direction: column;
-    align-items: stretch;
+  .nav-dropdown > a {
+    flex: 1;
   }
 
   .dropdown-menu {
@@ -2208,12 +2165,16 @@ body {
     transition: max-height 0.4s ease, padding 0.4s ease;
     padding: 0;
     animation: none;
-    display: block;
   }
 
   .nav-dropdown.active .dropdown-menu {
+    display: block;
     max-height: 1000px;
     padding: 0.5rem 0;
+  }
+
+  .nav-dropdown:hover .dropdown-menu {
+    display: none;
   }
 
   .dropdown-menu li a {
@@ -2278,24 +2239,7 @@ body {
   }
 
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero-features {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .solutions-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .industries-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2466,44 +2410,8 @@ body {
     border-left-width: 4px;
   }
 
-  /* Homepage Grids - All 1 column on mobile */
-  .hero-features {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
-  .hero-feature-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.25rem;
-  }
-
-  .hero-feature-item span {
-    font-size: 0.75rem;
-  }
-
   .features-grid {
-    grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .solutions-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .industries-list {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  /* Certification Slider - Force 1 slide on mobile */
-  .certification-slider .slick-slide {
-    width: 100% !important;
-  }
-
-  .certification-slider .slick-track {
-    display: flex !important;
   }
 
   .feature-card,
@@ -2824,12 +2732,12 @@ body {
 }
 
 .section-header-icon {
-  font-size: 4.5rem;
+  font-size: 3rem;
   color: #014450;
   background: linear-gradient(135deg, rgba(43, 186, 212, 0.08) 0%, rgba(1, 68, 80, 0.08) 100%);
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(1, 68, 80, 0.15);
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(1, 68, 80, 0.12);
 }
 
 .section-subtitle {
@@ -2843,15 +2751,15 @@ body {
 .mission-vision-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  gap: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .mission-card,
 .vision-card {
   background: transparent;
-  padding: 2rem;
+  padding: 3rem 2rem 2.5rem;
   transition: all 0.4s ease;
   position: relative;
 }
@@ -2878,17 +2786,17 @@ body {
 }
 
 .card-icon-large {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #014450 0%, #016575 100%);
-  border-radius: 14px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 2.25rem;
   color: #ffffff;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 4px 12px rgba(1, 68, 80, 0.15);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(1, 68, 80, 0.15);
 }
 
 .mission-card h3,
@@ -2939,7 +2847,7 @@ body {
 
 /* Value Cards with Icons */
 .value-icon {
-  font-size: 1.2rem;
+  font-size: 2.25rem;
   color: #014450;
   margin-bottom: 1rem;
 }
@@ -2981,15 +2889,15 @@ body {
 
 .quality-number {
   flex-shrink: 0;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(135deg, #014450 0%, #016575 100%);
   color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(1, 68, 80, 0.3);
 }
@@ -3081,16 +2989,16 @@ body {
 }
 
 .ethics-icon {
-  width: 45px;
-  height: 45px;
+  width: 65px;
+  height: 65px;
   background: linear-gradient(135deg, #014450 0%, #016575 100%);
-  border-radius: 14px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 2rem;
   color: #ffffff;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1.5rem;
   box-shadow: 0 4px 16px rgba(1, 68, 80, 0.15);
 }
 
@@ -3137,16 +3045,17 @@ body {
 }
 
 .accreditation-icon {
-  width: 45px;
-  height: 45px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #014450 0%, #016575 100%);
+  border-radius: 16px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 2rem;
   color: #ffffff;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1.5rem;
   box-shadow: 0 4px 16px rgba(1, 68, 80, 0.3);
 }
 
@@ -3210,16 +3119,16 @@ body {
 }
 
 .partnership-icon {
-  width: 45px;
-  height: 45px;
+  width: 65px;
+  height: 65px;
   background: linear-gradient(135deg, #014450 0%, #016575 100%);
-  border-radius: 14px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 1.85rem;
   color: #ffffff;
-  margin: 0 auto 1.25rem;
+  margin: 0 auto 1.5rem;
   box-shadow: 0 4px 16px rgba(1, 68, 80, 0.15);
   position: relative;
   z-index: 1;
@@ -3272,7 +3181,7 @@ body {
 }
 
 .benefit-icon {
-  font-size: 1.2rem;
+  font-size: 1.75rem;
   color: #014450;
   flex-shrink: 0;
 }
@@ -3286,9 +3195,9 @@ body {
 
 /* Why Icon */
 .why-icon {
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   color: #014450;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Responsive adjustments for About page */

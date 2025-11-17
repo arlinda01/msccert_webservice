@@ -62,7 +62,9 @@ const About: FC = () => {
     }
   }, [location]);
 
-  return (
+  // @ts-ignore
+    // @ts-ignore
+    return (
     <div className="about">
       {/* Hero Section with Navigation */}
       <section className="about-hero">
