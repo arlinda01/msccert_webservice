@@ -38,9 +38,9 @@ const Footer: FC = () => {
           <div className="footer-section">
             <h4>Our Services</h4>
             <ul className="footer-links">
-              <li><Link to="/services/iso/iso-9001/quality-management">ISO Certifications</Link></li>
+              <li><Link to="/services/iso">ISO Certifications</Link></li>
               <li><Link to="/services/compliance/ce-marking">CE Marking</Link></li>
-              <li><Link to="/services/haccp-certification">HACCP</Link></li>
+              <li><Link to="/services/iso/haccp">HACCP</Link></li>
               <li><Link to="/services/additional/energy-efficiency">Energy Efficiency</Link></li>
               <li><Link to="/services/additional/staff-training">Staff Training</Link></li>
               <li><Link to="/services/additional/professional-cards">Professional Cards</Link></li>

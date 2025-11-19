@@ -82,16 +82,15 @@ const Navigation: FC = () => {
               </button>
             </div>
             <ul className="dropdown-menu">
-              <li><Link to="/services/iso/iso-9001/quality-management" onClick={closeMenu}>ISO 9001 – Quality Management</Link></li>
-              <li><Link to="/services/iso/iso-14001/environmental-management" onClick={closeMenu}>ISO 14001 – Environmental Management</Link></li>
-              <li><Link to="/services/iso/iso-22000/food-safety-management" onClick={closeMenu}>ISO 22000 – Food Safety Management</Link></li>
-              <li><Link to="/services/iso/iso-27001/information-security" onClick={closeMenu}>ISO 27001 – Information Security</Link></li>
-              <li><Link to="/services/iso/iso-45001/health-and-safety-at-work" onClick={closeMenu}>ISO 45001 – Health & Safety at Work</Link></li>
-              <li><Link to="/services/iso/iso-22301/business-continuity" onClick={closeMenu}>ISO 22301 – Business Continuity</Link></li>
-              <li><Link to="/services/iso/iso-37001/anti-bribery-management" onClick={closeMenu}>ISO 37001 – Anti-Bribery Management</Link></li>
-              <li><Link to="/services/iso/iso-39001/road-traffic-safety" onClick={closeMenu}>ISO 39001 – Road Traffic Safety</Link></li>
-              <li><Link to="/services/iso/iso-50001/energy-management" onClick={closeMenu}>ISO 50001 – Energy Management</Link></li>
-              <li><Link to="/services/haccp-certification" onClick={closeMenu}>HACCP</Link></li>
+              <li><Link to="/services/iso/iso-9001" onClick={closeMenu}>ISO 9001 – Quality Management</Link></li>
+              <li><Link to="/services/iso/iso-14001" onClick={closeMenu}>ISO 14001 – Environmental Management</Link></li>
+              <li><Link to="/services/iso/iso-22301" onClick={closeMenu}>ISO 22301 – Business Continuity</Link></li>
+              <li><Link to="/services/iso/iso-27001" onClick={closeMenu}>ISO 27001 – Information Security</Link></li>
+              <li><Link to="/services/iso/iso-37001" onClick={closeMenu}>ISO 37001 – Anti-Bribery Management</Link></li>
+              <li><Link to="/services/iso/iso-39001" onClick={closeMenu}>ISO 39001 – Road Traffic Safety</Link></li>
+              <li><Link to="/services/iso/iso-45001" onClick={closeMenu}>ISO 45001 – Health & Safety at Work</Link></li>
+              <li><Link to="/services/iso/iso-50001" onClick={closeMenu}>ISO 50001 – Energy Management</Link></li>
+              <li><Link to="/services/iso/haccp" onClick={closeMenu}>HACCP – Food Safety</Link></li>
             </ul>
           </li>
 
