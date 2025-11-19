@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
 import type { FAQ } from '../../types';
+import ISOSlider from '../../components/ISOSlider/ISOSlider';
 
 const Home: FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -9,6 +10,72 @@ const Home: FC = () => {
   const toggleFAQ = (index: number): void => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
+
+  const isoCards = [
+    {
+      to: "/services/iso/iso-9001",
+      icon: "FaAward" as const,
+      title: "ISO 9001 (Quality Management)",
+      description: "The framework for operational consistency, significantly reducing errors.",
+      benefits: ["Global Recognition", "Improved Efficiency", "Stronger Customer Loyalty"]
+    },
+    {
+      to: "/services/iso/iso-45001",
+      icon: "FaHardHat" as const,
+      title: "ISO 45001 (Occupational Health & Safety)",
+      description: "Preventing workplace injuries and protecting your staff.",
+      benefits: ["Reduce Workplace Accidents", "Legal Compliance", "Lower Insurance Costs"]
+    },
+    {
+      to: "/services/iso/iso-14001",
+      icon: "FaLeaf" as const,
+      title: "ISO 14001 (Environmental Management)",
+      description: "Corporate social responsibility and environmental compliance.",
+      benefits: ["Reduce Environmental Impact", "Cost Savings", "Regulatory Compliance"]
+    },
+    {
+      to: "/services/iso/iso-27001",
+      icon: "FaLock" as const,
+      title: "ISO/IEC 27001 (Information Security)",
+      description: "Protecting sensitive data and securing IT infrastructure.",
+      benefits: ["Data Protection", "GDPR Compliance", "Enhanced Cyber Security"]
+    },
+    {
+      to: "/services/iso/iso-22301",
+      icon: "FaShieldAlt" as const,
+      title: "ISO 22301 (Business Continuity)",
+      description: "Ensuring rapid recovery after major disruptions.",
+      benefits: ["Minimize Downtime", "Protect Revenue", "Maintain Critical Operations"]
+    },
+    {
+      to: "/services/iso/iso-37001",
+      icon: "FaCertificate" as const,
+      title: "ISO 37001 (Anti-Bribery)",
+      description: "Prevention and detection systems for corruption risk.",
+      benefits: ["Reduce Legal Risk", "Clean Reputation", "Tender Qualification"]
+    },
+    {
+      to: "/services/iso/haccp",
+      icon: "FaUtensils" as const,
+      title: "HACCP (Food Safety)",
+      description: "Product integrity and traceability for regulated markets.",
+      benefits: ["HORECA Compliance", "Supply Chain Security", "Consumer Trust"]
+    },
+    {
+      to: "/services/iso/iso-39001",
+      icon: "FaCar" as const,
+      title: "ISO 39001 (Road Traffic Safety - RTS)",
+      description: "Minimizes accidents for companies with large fleets.",
+      benefits: ["Reduce Fleet Accidents", "Lower Insurance Premiums", "Improve Driver Safety"]
+    },
+    {
+      to: "/services/iso/iso-50001",
+      icon: "FaBolt" as const,
+      title: "ISO 50001 (Energy Management)",
+      description: "Systematic approach to optimizing energy use.",
+      benefits: ["Reduce Utility Bills", "Measurable Savings", "Environmental Performance"]
+    }
+  ];
 
   const faqs: FAQ[] = [
     {
@@ -128,129 +195,8 @@ const Home: FC = () => {
             while remaining competitive locally.
           </p>
 
-          {/* All ISO Certifications Grid */}
-          <div className="certification-grid">
-            <Link to="/services/iso/iso-9001/quality-management" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaAward({}) as any}
-              </div>
-              <h4>ISO 9001 (Quality Management)</h4>
-              <p>The framework for operational consistency, significantly reducing errors.</p>
-              <ul className="benefits-list">
-                <li>Global Recognition</li>
-                <li>Improved Efficiency</li>
-                <li>Stronger Customer Loyalty</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-45001/health-and-safety-at-work" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaHardHat({}) as any}
-              </div>
-              <h4>ISO 45001 (Occupational Health & Safety)</h4>
-              <p>Preventing workplace injuries and protecting your staff.</p>
-              <ul className="benefits-list">
-                <li>Reduce Workplace Accidents</li>
-                <li>Legal Compliance</li>
-                <li>Lower Insurance Costs</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-14001/environmental-management" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaLeaf({}) as any}
-              </div>
-              <h4>ISO 14001 (Environmental Management)</h4>
-              <p>Corporate social responsibility and environmental compliance.</p>
-              <ul className="benefits-list">
-                <li>Reduce Environmental Impact</li>
-                <li>Cost Savings</li>
-                <li>Regulatory Compliance</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-27001/information-security" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaLock({}) as any}
-              </div>
-              <h4>ISO/IEC 27001 (Information Security)</h4>
-              <p>Protecting sensitive data and securing IT infrastructure.</p>
-              <ul className="benefits-list">
-                <li>Data Protection</li>
-                <li>GDPR Compliance</li>
-                <li>Enhanced Cyber Security</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-22301/business-continuity" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaShieldAlt({}) as any}
-              </div>
-              <h4>ISO 22301 (Business Continuity)</h4>
-              <p>Ensuring rapid recovery after major disruptions.</p>
-              <ul className="benefits-list">
-                <li>Minimize Downtime</li>
-                <li>Protect Revenue</li>
-                <li>Maintain Critical Operations</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-37001/anti-bribery-management" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaCertificate({}) as any}
-              </div>
-              <h4>ISO 37001 (Anti-Bribery)</h4>
-              <p>Prevention and detection systems for corruption risk.</p>
-              <ul className="benefits-list">
-                <li>Reduce Legal Risk</li>
-                <li>Clean Reputation</li>
-                <li>Tender Qualification</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-22000/food-safety-management" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaUtensils({}) as any}
-              </div>
-              <h4>ISO 22000 (Food Safety)</h4>
-              <p>Product integrity and traceability for regulated markets.</p>
-              <ul className="benefits-list">
-                <li>HORECA Compliance</li>
-                <li>Supply Chain Security</li>
-                <li>Consumer Trust</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-39001/road-traffic-safety" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaCar({}) as any}
-              </div>
-              <h4>ISO 39001 (Road Traffic Safety - RTS)</h4>
-              <p>Minimizes accidents for companies with large fleets.</p>
-              <ul className="benefits-list">
-                <li>Reduce Fleet Accidents</li>
-                <li>Lower Insurance Premiums</li>
-                <li>Improve Driver Safety</li>
-              </ul>
-            </Link>
-            <Link to="/services/iso/iso-50001/energy-management" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaBolt({}) as any}
-              </div>
-              <h4>ISO 50001 (Energy Management)</h4>
-              <p>Systematic approach to optimizing energy use.</p>
-              <ul className="benefits-list">
-                <li>Reduce Utility Bills</li>
-                <li>Measurable Savings</li>
-                <li>Environmental Performance</li>
-              </ul>
-            </Link>
-            <Link to="/services/compliance/ce-marking" className="certification-card">
-              <div className="card-icon">
-                {FaIcons.FaCheckCircle({}) as any}
-              </div>
-              <h4>CE Marking (Product Compliance)</h4>
-              <p>Mandatory legal sign for EU/SEE market circulation.</p>
-              <ul className="benefits-list">
-                <li>EU Market Access</li>
-                <li>Legal Compliance</li>
-                <li>Product Certification</li>
-              </ul>
-            </Link>
-          </div>
+          {/* ISO Certifications Slider */}
+          <ISOSlider cards={isoCards} />
         </div>
       </section>
 
