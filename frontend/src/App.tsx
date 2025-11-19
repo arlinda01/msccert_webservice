@@ -19,6 +19,10 @@ import ISOCertifications from './pages/ISOCertifications/ISOCertifications';
 import CEMarking from './pages/CEMarking/CEMarking';
 import EnergyEfficiency from './pages/EnergyEfficiency/EnergyEfficiency';
 import AdditionalServices from './pages/AdditionalServices/AdditionalServices';
+import StaffTraining from './pages/StaffTraining/StaffTraining';
+import ProfessionalCard from './pages/ProfessionalCard/ProfessionalCard';
+import TechnologicalCard from './pages/TechnologicalCard/TechnologicalCard';
+import EquipmentEvaluation from './pages/EquipmentEvaluation/EquipmentEvaluation';
 import Contact from './pages/Contact/Contact';
 import CertificateList from './pages/CertificateList/CertificateList';
 import StaticCertificate from './pages/StaticCertificate/StaticCertificate';
@@ -52,6 +56,10 @@ const App: FC = () => {
             <Route path="/services/compliance/ce-marking" element={<CEMarking />} />
             <Route path="/services/additional" element={<AdditionalServices />} />
             <Route path="/services/additional/energy-efficiency" element={<EnergyEfficiency />} />
+            <Route path="/services/additional/staff-training" element={<StaffTraining />} />
+            <Route path="/services/additional/professional-card" element={<ProfessionalCard />} />
+            <Route path="/services/additional/technological-card" element={<TechnologicalCard />} />
+            <Route path="/services/additional/equipment-evaluation" element={<EquipmentEvaluation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/certificates" element={<CertificateList />} />
             <Route path="/qr-code" element={<QRCodePage />} />

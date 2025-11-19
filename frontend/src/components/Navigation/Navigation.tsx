@@ -128,10 +128,9 @@ const Navigation: FC = () => {
             <ul className="dropdown-menu">
               <li><Link to="/services/additional/energy-efficiency" onClick={closeMenu}>Energy Efficiency Programs</Link></li>
               <li><Link to="/services/additional/staff-training" onClick={closeMenu}>Staff Training</Link></li>
-              <li><Link to="/services/additional/professional-cards" onClick={closeMenu}>Professional Cards</Link></li>
-              <li><Link to="/evaluation-of-technological-lines-machinery-equipment" onClick={closeMenu}>Technology & Equipment Assessment</Link></li>
-              <li><Link to="/technological-card" onClick={closeMenu}>Technological Card</Link></li>
-              <li><Link to="/services/consulting" onClick={closeMenu}>Consulting</Link></li>
+              <li><Link to="/services/additional/professional-card" onClick={closeMenu}>Professional Cards</Link></li>
+              <li><Link to="/services/additional/technological-card" onClick={closeMenu}>Technological Card</Link></li>
+              <li><Link to="/services/additional/equipment-evaluation" onClick={closeMenu}>Equipment Evaluation</Link></li>
             </ul>
           </li>
 
