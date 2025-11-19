@@ -158,8 +158,48 @@ body {
   align-items: center;
 }
 
-.nav-dropdown > a {
-  flex: 0 0 auto;
+.nav-dropdown-header {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-dropdown-header:hover {
+  background-color: #2bbad4;
+}
+
+.nav-dropdown-header:hover > a,
+.nav-dropdown-header:hover .dropdown-toggle {
+  background-color: transparent;
+  color: #014450 !important;
+}
+
+.nav-dropdown-header > a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 1.5rem 0.5rem 1.5rem 0.85rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 0.85rem 1.5rem 0.25rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
 }
 
 .dropdown-arrow {
@@ -2154,8 +2194,32 @@ body {
     display: flex;
   }
 
+  .nav-dropdown-header {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+    align-items: stretch;
+  }
+
+  .nav-dropdown-header:hover {
+    background-color: #2bbad4;
+  }
+
+  .nav-dropdown-header > a {
+    flex: 1;
+    padding: 1.25rem 0.75rem 1.25rem 1.5rem;
+    white-space: normal;
+  }
+
+  .dropdown-toggle {
+    padding: 1.25rem 1.5rem 1.25rem 0.75rem;
+    flex-shrink: 0;
+    min-width: 60px;
+    justify-content: center;
+  }
+
   .dropdown-arrow {
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .nav-dropdown {
@@ -2183,8 +2247,14 @@ body {
     padding: 0.5rem 0;
   }
 
+  /* Disable hover behavior on mobile - only use click/toggle */
   .nav-dropdown:hover .dropdown-menu {
-    display: none;
+    display: block;
+    max-height: 0;
+  }
+
+  .nav-dropdown.active:hover .dropdown-menu {
+    max-height: 1000px;
   }
 
   .dropdown-menu li a {
@@ -2296,8 +2366,12 @@ body {
   }
 
   /* Reset centering on mobile for values grid */
+  .values-grid .value-card:nth-child(1),
+  .values-grid .value-card:nth-child(2),
+  .values-grid .value-card:nth-child(3),
   .values-grid .value-card:nth-child(4),
   .values-grid .value-card:nth-child(5) {
+    grid-column: span 1;
     margin-left: 0;
     margin-right: 0;
   }
