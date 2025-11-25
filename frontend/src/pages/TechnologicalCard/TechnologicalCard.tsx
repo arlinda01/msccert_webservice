@@ -32,7 +32,7 @@ const TechnologicalCard: FC = () => {
       <section className="section section-white">
         <div className="container">
           <h2 className="section-title">What Is a Technological Card?</h2>
-          <h3 style={{ fontSize: '1.5rem', color: '#014450', marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.5rem', color: '#01434f', marginBottom: '1.5rem' }}>
             The Blueprint of Production
           </h3>
           <p className="iso-text">

@@ -217,7 +217,7 @@ const Home: FC = () => {
                 Structured programs focusing on analyzing and reducing energy consumption in commercial buildings
                 and processes for immediate cost savings.
               </p>
-              <Link to="/services/additional/energy-efficiency" className="card-link">Learn More →</Link>
+              <Link to="/services/additional/energy-efficiency" className="card-btn">Learn More</Link>
             </div>
             <div className="solution-card">
               <div className="card-icon">
@@ -228,7 +228,7 @@ const Home: FC = () => {
                 Role-based programs aligned with ISO competencies (9001, 45001, etc.) to increase productivity,
                 improve quality, and ensure regulatory safety compliance.
               </p>
-              <Link to="/services/additional/staff-training" className="card-link">Learn More →</Link>
+              <Link to="/services/additional/staff-training" className="card-btn">Learn More</Link>
             </div>
             <div className="solution-card">
               <div className="card-icon">
@@ -239,7 +239,7 @@ const Home: FC = () => {
                 Personal certification used in regulated industries (e.g., HVAC technicians, welders) to instantly
                 prove competence, securing access to specific projects and job markets.
               </p>
-              <Link to="/services/additional/professional-cards" className="card-link">Learn More →</Link>
+              <Link to="/services/additional/professional-cards" className="card-btn">Learn More</Link>
             </div>
             <div className="solution-card">
               <div className="card-icon">
@@ -250,12 +250,12 @@ const Home: FC = () => {
                 Technical evaluation of industrial machinery, technological lines, and equipment for certification,
                 safety, and investment planning.
               </p>
-              <Link to="/evaluation-of-technological-lines-machinery-equipment" className="card-link">Learn More →</Link>
+              <Link to="/evaluation-of-technological-lines-machinery-equipment" className="card-btn">Learn More</Link>
             </div>
           </div>
-          <div className="section-cta">
-            <Link to="/services" className="btn btn-primary">Explore All Services</Link>
-          </div>
+          {/*<div className="section-cta">*/}
+          {/*  <Link to="/services" className="btn btn-primary">Explore All Services</Link>*/}
+          {/*</div>*/}
         </div>
       </section>
 
