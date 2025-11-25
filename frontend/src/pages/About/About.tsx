@@ -124,22 +124,29 @@ const About: FC = () => {
             {/* Who We Are */}
             <section className="section section-white">
                 <div className="container">
-                    <h2 className="section-title">Who We Are</h2>
-                    <p className="about-text">
-                        MSC Certifications is an accredited organization specializing in inspection, auditing, and
-                        certification
-                        services in accordance with international standards.
-                    </p>
-                    <p className="about-text">
-                        Our mission is to help organizations meet global compliance requirements, improve operational
-                        efficiency,
-                        and strengthen their competitive position.
-                    </p>
-                    <p className="about-text">
-                        With a team of qualified auditors and technical experts, we combine international expertise with
-                        local
-                        understanding, ensuring reliable, objective, and practical certification outcomes.
-                    </p>
+                    <div className="who-we-are-grid">
+                        <div className="who-we-are-content">
+                            <h2 className="section-title" style={{textAlign: 'left'}}>Who We Are</h2>
+                            <p className="about-text" style={{textAlign: 'left', margin: '0 0 1.5rem 0'}}>
+                                MSC Certifications is an accredited organization specializing in inspection, auditing, and
+                                certification
+                                services in accordance with international standards.
+                            </p>
+                            <p className="about-text" style={{textAlign: 'left', margin: '0 0 1.5rem 0'}}>
+                                Our mission is to help organizations meet global compliance requirements, improve operational
+                                efficiency,
+                                and strengthen their competitive position.
+                            </p>
+                            <p className="about-text" style={{textAlign: 'left', margin: '0'}}>
+                                With a team of qualified auditors and technical experts, we combine international expertise with
+                                local
+                                understanding, ensuring reliable, objective, and practical certification outcomes.
+                            </p>
+                        </div>
+                        <div className="who-we-are-image">
+                            <img src="/logo.svg" alt="MSC Certifications Logo" className="who-we-are-logo" />
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -223,55 +230,85 @@ const About: FC = () => {
                         everything we do.
                     </p>
 
-                    <div className="quality-commitments">
-                        <div className="quality-item">
-                            <div className="quality-number">1</div>
-                            <h4>Client-Centered Service</h4>
-                            <p>
-                                We listen, understand, and deliver certification services that meet client needs while
-                                maintaining
-                                strict impartiality and compliance with ISO/IEC 17021 requirements.
-                            </p>
+                    <div className="quality-zigzag">
+                        <div className="quality-zigzag-item">
+                            <div className="quality-zigzag-content">
+                                <div className="quality-number">1</div>
+                                <div className="quality-zigzag-text">
+                                    <h4>Client-Centered Service</h4>
+                                    <p>
+                                        We listen, understand, and deliver certification services that meet client needs while
+                                        maintaining strict impartiality and compliance with ISO/IEC 17021 requirements.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="quality-zigzag-icon">
+                                <FaUsers />
+                            </div>
                         </div>
 
-                        <div className="quality-item">
-                            <div className="quality-number">2</div>
-                            <h4>Technical Competence</h4>
-                            <p>
-                                Our auditors are carefully selected, trained, and continuously evaluated to ensure
-                                expertise in their
-                                specialized fields and certification standards.
-                            </p>
+                        <div className="quality-zigzag-item reverse">
+                            <div className="quality-zigzag-icon">
+                                <FaUserGraduate />
+                            </div>
+                            <div className="quality-zigzag-content">
+                                <div className="quality-number">2</div>
+                                <div className="quality-zigzag-text">
+                                    <h4>Technical Competence</h4>
+                                    <p>
+                                        Our auditors are carefully selected, trained, and continuously evaluated to ensure
+                                        expertise in their specialized fields and certification standards.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="quality-item">
-                            <div className="quality-number">3</div>
-                            <h4>Impartiality & Independence</h4>
-                            <p>
-                                All certification decisions are made free from commercial, financial, or other pressures
-                                that could
-                                compromise objectivity.
-                            </p>
+                        <div className="quality-zigzag-item">
+                            <div className="quality-zigzag-content">
+                                <div className="quality-number">3</div>
+                                <div className="quality-zigzag-text">
+                                    <h4>Impartiality & Independence</h4>
+                                    <p>
+                                        All certification decisions are made free from commercial, financial, or other pressures
+                                        that could compromise objectivity.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="quality-zigzag-icon">
+                                <FaBalanceScale />
+                            </div>
                         </div>
 
-                        <div className="quality-item">
-                            <div className="quality-number">4</div>
-                            <h4>Regulatory Compliance</h4>
-                            <p>
-                                We operate in full accordance with national and international regulations, accreditation
-                                requirements,
-                                and data protection laws.
-                            </p>
+                        <div className="quality-zigzag-item reverse">
+                            <div className="quality-zigzag-icon">
+                                <FaShieldAlt />
+                            </div>
+                            <div className="quality-zigzag-content">
+                                <div className="quality-number">4</div>
+                                <div className="quality-zigzag-text">
+                                    <h4>Regulatory Compliance</h4>
+                                    <p>
+                                        We operate in full accordance with national and international regulations, accreditation
+                                        requirements, and data protection laws.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="quality-item">
-                            <div className="quality-number">5</div>
-                            <h4>Continuous Improvement</h4>
-                            <p>
-                                We regularly review and improve our processes, respond to feedback, and adapt to changes
-                                in standards,
-                                technology, and market expectations.
-                            </p>
+                        <div className="quality-zigzag-item">
+                            <div className="quality-zigzag-content">
+                                <div className="quality-number">5</div>
+                                <div className="quality-zigzag-text">
+                                    <h4>Continuous Improvement</h4>
+                                    <p>
+                                        We regularly review and improve our processes, respond to feedback, and adapt to changes
+                                        in standards, technology, and market expectations.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="quality-zigzag-icon">
+                                <FaChartLine />
+                            </div>
                         </div>
                     </div>
 

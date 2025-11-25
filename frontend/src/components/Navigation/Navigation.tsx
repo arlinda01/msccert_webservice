@@ -25,7 +25,7 @@ const Navigation: FC = () => {
         <div className="logo">
           <Link to="/" onClick={closeMenu}>
             <img
-              src="/MSC-GROUP-WHITE-LOGO.svg"
+              src="/logo.svg"
               alt="MSC Certifications"
               className="logo-image"
             />
@@ -94,23 +94,6 @@ const Navigation: FC = () => {
             </ul>
           </li>
 
-          <li className={`nav-dropdown ${openDropdown === 'compliance' ? 'active' : ''}`}>
-            <div className="nav-dropdown-header">
-              <Link to="/services/compliance" onClick={closeMenu}>Compliance & Marking</Link>
-              <button
-                className="dropdown-toggle"
-                onClick={() => toggleDropdown('compliance')}
-                aria-label="Toggle Compliance & Marking menu"
-              >
-                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
-                  <path d="M6 9L1 4h10z"/>
-                </svg>
-              </button>
-            </div>
-            <ul className="dropdown-menu">
-              <li><Link to="/services/compliance/ce-marking" onClick={closeMenu}>CE Marking</Link></li>
-            </ul>
-          </li>
 
           <li className={`nav-dropdown ${openDropdown === 'additional' ? 'active' : ''}`}>
             <div className="nav-dropdown-header">
@@ -126,6 +109,7 @@ const Navigation: FC = () => {
               </button>
             </div>
             <ul className="dropdown-menu">
+              <li><Link to="/services/compliance/ce-marking" onClick={closeMenu}>CE Marking</Link></li>
               <li><Link to="/services/additional/energy-efficiency" onClick={closeMenu}>Energy Efficiency Programs</Link></li>
               <li><Link to="/services/additional/staff-training" onClick={closeMenu}>Staff Training</Link></li>
               <li><Link to="/services/additional/professional-card" onClick={closeMenu}>Professional Cards</Link></li>
@@ -136,7 +120,95 @@ const Navigation: FC = () => {
 
           <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact Us</Link></li>
+
+          <li className="mobile-only nav-actions-mobile">
+            <Link to="/free-online-assessment" className="nav-btn nav-btn-secondary" onClick={closeMenu}>
+              Online Assessment
+            </Link>
+          </li>
+          <li className="mobile-only nav-actions-mobile">
+            <Link to="/contact" className="nav-btn nav-btn-primary" onClick={closeMenu}>
+              Get a Quote
+            </Link>
+          </li>
+          <li className="mobile-only nav-actions-mobile">
+            <div className="language-switcher-mobile">
+              <button
+                className="language-dropdown-toggle-mobile"
+                onClick={() => toggleDropdown('language-mobile')}
+                aria-label="Select Language"
+              >
+                <span className="flag-circle flag-uk"></span>
+                <span>Language</span>
+                <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 9L1 4h10z"/>
+                </svg>
+              </button>
+              <ul className={`language-dropdown-menu-mobile ${openDropdown === 'language-mobile' ? 'active' : ''}`}>
+                <li>
+                  <button className="lang-option-mobile" aria-label="English" title="English">
+                    <span className="flag-circle flag-uk"></span>
+                    <span>English</span>
+                  </button>
+                </li>
+                <li>
+                  <button className="lang-option-mobile" aria-label="Albanian" title="Shqip">
+                    <span className="flag-circle flag-al"></span>
+                    <span>Shqip</span>
+                  </button>
+                </li>
+                <li>
+                  <button className="lang-option-mobile" aria-label="Italian" title="Italiano">
+                    <span className="flag-circle flag-it"></span>
+                    <span>Italiano</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
+
+        <div className="nav-actions desktop-only">
+          <Link to="/free-online-assessment" className="nav-btn nav-btn-secondary" onClick={closeMenu}>
+            Online Assessment
+          </Link>
+          <Link to="/contact" className="nav-btn nav-btn-primary" onClick={closeMenu}>
+            Get a Quote
+          </Link>
+
+          <div className="language-switcher">
+            <button
+              className="language-dropdown-toggle"
+              onClick={() => toggleDropdown('language')}
+              aria-label="Select Language"
+            >
+              <span className="flag-circle flag-uk"></span>
+              <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 9L1 4h10z"/>
+              </svg>
+            </button>
+            <ul className={`language-dropdown-menu ${openDropdown === 'language' ? 'active' : ''}`}>
+              <li>
+                <button className="lang-option" aria-label="English" title="English">
+                  <span className="flag-circle flag-uk"></span>
+                  <span>English</span>
+                </button>
+              </li>
+              <li>
+                <button className="lang-option" aria-label="Albanian" title="Shqip">
+                  <span className="flag-circle flag-al"></span>
+                  <span>Shqip</span>
+                </button>
+              </li>
+              <li>
+                <button className="lang-option" aria-label="Italian" title="Italiano">
+                  <span className="flag-circle flag-it"></span>
+                  <span>Italiano</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );
