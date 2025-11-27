@@ -12,10 +12,6 @@ const CEMarking: FC = () => {
             CE Marking is a mandatory conformity mark that enables products to be legally sold in the European Economic Area (EEA).
             By affixing the CE mark, the manufacturer declares that the product complies with all applicable EU safety, health, and environmental protection requirements outlined in relevant directives and regulations.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request CE Marking Support</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Check Your Product's CE Readiness</Link>
-          </div>
         </div>
       </section>
 

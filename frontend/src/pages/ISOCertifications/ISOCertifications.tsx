@@ -86,9 +86,6 @@ const ISOCertifications: FC = () => {
           <p className="iso-subtitle">
             ISO certifications demonstrate your commitment to international best practices in quality, safety, and efficiency. MSC Certifications provides accredited certification services across all major ISO standards, helping your organization gain global recognition and competitive advantage.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Certification Quote</Link>
-          </div>
         </div>
       </section>
 

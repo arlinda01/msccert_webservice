@@ -19,9 +19,6 @@ const AdditionalServices: FC = () => {
           <p className="iso-subtitle">
             MSC Certifications offers a comprehensive range of specialized services designed to support your organization's operational excellence, compliance, and continuous improvement goals. From energy optimization to staff development, we provide expert solutions tailored to your needs.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Explore Our Services</Link>
-          </div>
         </div>
       </section>
 

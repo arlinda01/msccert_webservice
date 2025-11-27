@@ -18,9 +18,6 @@ const EnergyEfficiency: FC = () => {
           <p className="iso-subtitle">
             Energy efficiency is no longer optional - it's a strategic advantage. Our Energy Efficiency Assessment Program is a structured, data-driven approach to measure, analyze, and reduce energy consumption across buildings, processes, and equipment. The goal: lower your costs, minimize environmental impact, and build resilience against fluctuating energy prices.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request an Energy Efficiency Assessment</Link>
-          </div>
         </div>
       </section>
 

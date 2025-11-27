@@ -21,10 +21,6 @@ const StaffTraining: FC = () => {
           <p className="iso-subtitle">
             MSC CERTIFICATIONS provides role-based and competency-focused training programs, designed to meet the specific needs of your industry and aligned with ISO 9001, ISO 14001, and ISO 45001 requirements.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact-us" className="btn btn-primary">Request a Staff Training Proposal</Link>
-            <Link to="/online-audit-page" className="btn btn-secondary">Book a Free Training Needs Assessment</Link>
-          </div>
         </div>
       </section>
 

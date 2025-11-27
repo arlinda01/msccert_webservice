@@ -20,10 +20,6 @@ const ISO14001: FC = () => {
             legal requirements. Accredited ISO 14001 certification is essential for businesses seeking sustainability,
             cost savings, and enhanced corporate responsibility.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Competitive Quote for ISO 14001</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Start Your Free Readiness Assessment</Link>
-          </div>
         </div>
       </section>
 

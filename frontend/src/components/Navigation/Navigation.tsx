@@ -138,7 +138,7 @@ const Navigation: FC = () => {
                 onClick={() => toggleDropdown('language-mobile')}
                 aria-label="Select Language"
               >
-                <span className="flag-circle flag-uk"></span>
+                <img src="/united-kingdom.png" alt="English" className="flag-icon" />
                 <span>Language</span>
                 <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                   <path d="M6 9L1 4h10z"/>
@@ -147,13 +147,13 @@ const Navigation: FC = () => {
               <ul className={`language-dropdown-menu-mobile ${openDropdown === 'language-mobile' ? 'active' : ''}`}>
                 <li>
                   <button className="lang-option-mobile" aria-label="English" title="English">
-                    <span className="flag-circle flag-uk"></span>
+                    <img src="/united-kingdom.png" alt="English" className="flag-icon" />
                     <span>English</span>
                   </button>
                 </li>
                 <li>
                   <button className="lang-option-mobile" aria-label="Albanian" title="Shqip">
-                    <span className="flag-circle flag-al"></span>
+                    <img src="/albania.png" alt="Albanian" className="flag-icon" />
                     <span>Shqip</span>
                   </button>
                 </li>
@@ -182,7 +182,7 @@ const Navigation: FC = () => {
               onClick={() => toggleDropdown('language')}
               aria-label="Select Language"
             >
-              <span className="flag-circle flag-uk"></span>
+              <img src="/united-kingdom.png" alt="English" className="flag-icon" />
               <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M6 9L1 4h10z"/>
               </svg>
@@ -190,13 +190,13 @@ const Navigation: FC = () => {
             <ul className={`language-dropdown-menu ${openDropdown === 'language' ? 'active' : ''}`}>
               <li>
                 <button className="lang-option" aria-label="English" title="English">
-                  <span className="flag-circle flag-uk"></span>
+                  <img src="/united-kingdom.png" alt="English" className="flag-icon" />
                   <span>English</span>
                 </button>
               </li>
               <li>
                 <button className="lang-option" aria-label="Albanian" title="Shqip">
-                  <span className="flag-circle flag-al"></span>
+                  <img src="/albania.png" alt="Albanian" className="flag-icon" />
                   <span>Shqip</span>
                 </button>
               </li>

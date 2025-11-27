@@ -134,10 +134,6 @@ const Home: FC = () => {
             </div>
           </div>
 
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Free Consultation</Link>
-            <Link to="/free-online-assessment" className="btn btn-secondary">Get a Free Online Assessment</Link>
-          </div>
         </div>
       </section>
 
