@@ -20,10 +20,6 @@ const ISO22301: FC = () => {
             downtime, and instill confidence in customers, insurers, and regulators. It's the global standard for
             operational resilience and continuity.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Competitive Quote for ISO 22301</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Start Your Free Readiness Assessment</Link>
-          </div>
         </div>
       </section>
 

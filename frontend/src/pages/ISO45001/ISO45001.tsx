@@ -20,10 +20,6 @@ const ISO45001: FC = () => {
             certification is the global standard for prioritizing employee health and safety, directly lowering insurance
             and liability risks.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Competitive Quote for ISO 45001</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Start Your Free Readiness Assessment</Link>
-          </div>
         </div>
       </section>
 

@@ -20,10 +20,6 @@ const ISO39001: FC = () => {
             safety, and improving operational performance. This international standard is designed for organizations with
             significant road exposure — including transport fleets, logistics networks, and service-based operations.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Get a Quote for ISO 39001 Certification</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Begin Your Road Safety Readiness Check</Link>
-          </div>
         </div>
       </section>
 

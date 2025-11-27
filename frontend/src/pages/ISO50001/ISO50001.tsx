@@ -20,10 +20,6 @@ const ISO50001: FC = () => {
             cut CO₂ emissions, and align with global sustainability expectations. This international standard supports
             continuous improvement in energy use through real-time data, strategic planning, and performance monitoring.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Get a Quote for ISO 50001 Certification</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Assess Your Energy Management Readiness</Link>
-          </div>
         </div>
       </section>
 

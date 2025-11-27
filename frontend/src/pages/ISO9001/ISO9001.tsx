@@ -20,10 +20,6 @@ const ISO9001: FC = () => {
             improve customer satisfaction, and unlock new market opportunities. This standard is vital for
             demonstrating true quality commitment.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Competitive Quote for ISO 9001</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Start Your Free Readiness Assessment</Link>
-          </div>
         </div>
       </section>
 

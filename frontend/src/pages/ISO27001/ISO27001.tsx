@@ -19,10 +19,6 @@ const ISO27001: FC = () => {
             Safeguard your critical information assets against threats and breaches. Accredited ISO/IEC 27001 certification
             is the worldwide standard for security controls. It helps organizations comply with laws like GDPR.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Competitive Quote for ISO 27001</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Start Your Free Readiness Assessment</Link>
-          </div>
         </div>
       </section>
 

@@ -20,10 +20,6 @@ const ISO37001: FC = () => {
             and manage bribery risks. By adopting this standard, you strengthen internal controls and demonstrate a
             proactive commitment to ethical business practices.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a Quote for ISO 37001 Certification</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Take a Free Anti-Bribery Readiness Check</Link>
-          </div>
         </div>
       </section>
 

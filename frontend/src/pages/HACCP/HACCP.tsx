@@ -21,10 +21,6 @@ const HACCP: FC = () => {
             safety hazards throughout production, processing, and distribution. Certification demonstrates your commitment
             to delivering safe, high-quality food products — every time.
           </p>
-          <div className="hero-buttons">
-            <Link to="/contact" className="btn btn-primary">Request a HACCP Certification Quote</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Start Your HACCP Readiness Assessment</Link>
-          </div>
         </div>
       </section>
 

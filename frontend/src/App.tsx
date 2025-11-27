@@ -6,6 +6,11 @@ import Footer from './components/Footer/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import MissionVision from './pages/About/MissionVision';
+import QualityPolicy from './pages/About/QualityPolicy';
+import CodeOfEthics from './pages/About/CodeOfEthics';
+import Accreditation from './pages/About/Accreditation';
+import Partnerships from './pages/About/Partnerships';
 import ISO9001 from './pages/ISO9001/ISO9001';
 import ISO14001 from './pages/ISO14001/ISO14001';
 import ISO22301 from './pages/ISO22301/ISO22301';
@@ -38,11 +43,11 @@ const App: FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us/" element={<About />} />
-            <Route path="/about-us/mission-vision/" element={<About />} />
-            <Route path="/about-us/quality-policy/" element={<About />} />
-            <Route path="/about-us/code-of-ethics/" element={<About />} />
-            <Route path="/about-us/accreditation/" element={<About />} />
-            <Route path="/about-us/partnerships/" element={<About />} />
+            <Route path="/about-us/mission-vision/" element={<MissionVision />} />
+            <Route path="/about-us/quality-policy/" element={<QualityPolicy />} />
+            <Route path="/about-us/code-of-ethics/" element={<CodeOfEthics />} />
+            <Route path="/about-us/accreditation/" element={<Accreditation />} />
+            <Route path="/about-us/partnerships/" element={<Partnerships />} />
             <Route path="/services/iso" element={<ISOCertifications />} />
             <Route path="/services/iso/iso-9001" element={<ISO9001 />} />
             <Route path="/services/iso/iso-14001" element={<ISO14001 />} />
