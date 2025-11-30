@@ -6,6 +6,8 @@ from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser
 from django.contrib.auth import authenticate, get_user_model
 from django.contrib.admin.models import LogEntry, CHANGE
 from django.contrib.contenttypes.models import ContentType
+from axes.helpers import get_client_ip_address
+from axes.handlers.proxy import AxesProxyHandler
 import logging
 from .serializers import (
     UserSerializer,
@@ -23,12 +25,14 @@ logger = logging.getLogger(__name__)
 @permission_classes([AllowAny])
 def login(request):
     """
-    Admin login endpoint
+    Admin login endpoint with brute force protection
 
     POST /api/auth/login/
     Body: { "username": "admin", "password": "password" }
 
     Returns: { "token": "...", "user": {...} }
+
+    Security: After 5 failed attempts, the account is locked for 30 minutes
     """
     serializer = LoginSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
@@ -36,10 +40,24 @@ def login(request):
     username = serializer.validated_data['username']
     password = serializer.validated_data['password']
 
-    # Authenticate user
-    user = authenticate(username=username, password=password)
+    # Check if the user/IP is locked out due to too many failed attempts
+    if AxesProxyHandler.is_locked(request, credentials={'username': username}):
+        logger.warning(f"Locked out login attempt for username: {username} from IP: {get_client_ip_address(request)}")
+        return Response(
+            {
+                'error': 'Too many failed login attempts. Account is temporarily locked.',
+                'locked': True,
+                'lockout_duration': '30 minutes'
+            },
+            status=status.HTTP_403_FORBIDDEN
+        )
+
+    # Authenticate user (axes will automatically track this)
+    user = authenticate(request=request, username=username, password=password)
 
     if user is None:
+        # Log failed attempt
+        logger.warning(f"Failed login attempt for username: {username} from IP: {get_client_ip_address(request)}")
         return Response(
             {'error': 'Invalid credentials'},
             status=status.HTTP_401_UNAUTHORIZED
@@ -47,6 +65,7 @@ def login(request):
 
     # Check if user is admin/staff
     if not user.is_staff:
+        logger.warning(f"Non-staff login attempt for username: {username} from IP: {get_client_ip_address(request)}")
         return Response(
             {'error': 'Access denied. Admin privileges required.'},
             status=status.HTTP_403_FORBIDDEN
@@ -61,6 +80,9 @@ def login(request):
 
     # Get or create token
     token, created = Token.objects.get_or_create(user=user)
+
+    # Log successful login
+    logger.info(f"Successful login for user: {username} from IP: {get_client_ip_address(request)}")
 
     return Response({
         'token': token.key,
