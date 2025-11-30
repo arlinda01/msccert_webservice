@@ -29,3 +29,4 @@ reportlab==4.2.5
 
 # Security & Performance (optional but recommended)
 django-ratelimit==4.1.0
+django-axes==7.0.1

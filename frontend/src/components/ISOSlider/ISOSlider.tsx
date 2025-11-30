@@ -1,12 +1,11 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import * as FaIcons from 'react-icons/fa';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './ISOSlider.css';
 
@@ -26,10 +25,9 @@ const ISOSlider: FC<ISOSliderProps> = ({ cards }) => {
   return (
     <div className="iso-slider-container">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
         autoplay={{
           delay: 5000,

@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  # Token authentication
     'django_filters',
     'corsheaders',
+    'axes',  # Brute force protection
 
     # Local apps
     'apps.certificates',
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'axes.middleware.AxesMiddleware',  # Brute force protection - must be last
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -225,3 +227,61 @@ if not DEBUG:
         'CSRF_TRUSTED_ORIGINS',
         ''
     ).split(',') if os.environ.get('CSRF_TRUSTED_ORIGINS') else []
+
+# Django Axes - Brute Force Protection
+# Authentication backends (required for axes)
+AUTHENTICATION_BACKENDS = [
+    'axes.backends.AxesStandaloneBackend',  # Axes backend for lockout
+    'django.contrib.auth.backends.ModelBackend',  # Default Django backend
+]
+
+# Axes configuration
+AXES_FAILURE_LIMIT = 5  # Lock out after 5 failed attempts
+AXES_COOLOFF_TIME = 0.5  # Lock out for 30 minutes (0.5 hours)
+AXES_RESET_ON_SUCCESS = True  # Reset failed attempts counter on successful login
+AXES_LOCKOUT_CALLABLE = None  # Use default lockout response
+AXES_LOCK_OUT_BY_COMBINATION_USER_AND_IP = True  # Lock by username + IP combination
+AXES_LOCKOUT_PARAMETERS = ['username', 'ip_address']  # Parameters to track
+AXES_ENABLE_ACCESS_FAILURE_LOG = True  # Log failed attempts
+AXES_VERBOSE = True  # Enable verbose logging
+
+# Custom lockout response message
+AXES_LOCKOUT_TEMPLATE = None  # Return JSON for API
+AXES_LOCKOUT_URL = None  # No redirect, return 403
+
+# Logging configuration for security events
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs' / 'security.log',
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'axes': {
+            'handlers': ['file', 'console'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        'django.security': {
+            'handlers': ['file', 'console'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+    },
+}

@@ -924,31 +924,27 @@ body {
 
 .certification-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-/* First 3 items take 2 columns each (3 boxes in first row) */
+/* First 4 items: each spans 2 columns (fills 8 columns = 1 row) */
 .certification-grid .certification-card:nth-child(1),
 .certification-grid .certification-card:nth-child(2),
-.certification-grid .certification-card:nth-child(3) {
-  grid-column: span 2;
-}
-
-/* Next item (4th) also takes 2 columns */
+.certification-grid .certification-card:nth-child(3),
 .certification-grid .certification-card:nth-child(4) {
   grid-column: span 2;
 }
 
-/* Last 2 items: centered with offset and span (like About page) */
+/* Last 2 items: centered in second row (columns 3-4 and 5-6 out of 8) */
 .certification-grid .certification-card:nth-child(5) {
-  grid-column: 2 / span 2;
+  grid-column: 3 / span 2;
 }
 
 .certification-grid .certification-card:nth-child(6) {
-  grid-column: 4 / span 2;
+  grid-column: 5 / span 2;
 }
 
 .certification-card {
@@ -1874,10 +1870,10 @@ body {
   padding-left: 0.5rem;
 }
 
-/* Why Choose Grid */
+/* Why Choose Grid - 4 boxes in 1 row on desktop */
 .why-choose-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -2011,13 +2007,48 @@ body {
   font-size: 1.05rem;
 }
 
-/* Benefits Grid */
+/* Benefits Grid - supports 3, 4, and 6 items */
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
   margin-top: 3rem;
   padding: 1rem;
+}
+
+/* Default: 3-item layout - each spans 4 columns */
+.benefits-grid .benefit-card {
+  grid-column: span 4;
+}
+
+/* 4-item layout: each spans 3 columns (4 in a row) */
+.benefits-grid .benefit-card:nth-child(4):nth-last-child(1) {
+  grid-column: span 3;
+}
+.benefits-grid .benefit-card:nth-child(4):nth-last-child(1) ~ .benefit-card,
+.benefits-grid .benefit-card:has(~ .benefit-card:nth-child(4):nth-last-child(1)) {
+  grid-column: span 3;
+}
+
+/* When exactly 4 items: use 3-column spans */
+.benefits-grid:has(.benefit-card:nth-child(4):nth-last-child(1)) .benefit-card {
+  grid-column: span 3;
+}
+
+/* When exactly 6 items: first 4 span 3 columns, last 2 centered */
+.benefits-grid:has(.benefit-card:nth-child(6):nth-last-child(1)) .benefit-card:nth-child(1),
+.benefits-grid:has(.benefit-card:nth-child(6):nth-last-child(1)) .benefit-card:nth-child(2),
+.benefits-grid:has(.benefit-card:nth-child(6):nth-last-child(1)) .benefit-card:nth-child(3),
+.benefits-grid:has(.benefit-card:nth-child(6):nth-last-child(1)) .benefit-card:nth-child(4) {
+  grid-column: span 3;
+}
+
+.benefits-grid:has(.benefit-card:nth-child(6):nth-last-child(1)) .benefit-card:nth-child(5) {
+  grid-column: 4 / span 3;
+}
+
+.benefits-grid:has(.benefit-card:nth-child(6):nth-last-child(1)) .benefit-card:nth-child(6) {
+  grid-column: 7 / span 3;
 }
 
 .benefit-card {
@@ -2091,14 +2122,47 @@ body {
   flex-shrink: 0;
 }
 
-/* Industry Focus List */
+/* Industry Focus List - supports 4, 5, and 6 items with centered second row */
 .industry-focus-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
 
+/* Default: items span 3 columns each (4 per row) */
+.industry-focus-list > .industry-focus-item {
+  grid-column: span 3;
+}
+
+/* For 5 items: first 3 span 4 cols each, last 2 centered spanning 4 cols each */
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(5),
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(5) ~ .industry-focus-item:nth-child(2),
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(5) ~ .industry-focus-item:nth-child(3) {
+  grid-column: span 4;
+}
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(5) ~ .industry-focus-item:nth-child(4) {
+  grid-column: 3 / span 4;
+}
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(5) ~ .industry-focus-item:nth-child(5) {
+  grid-column: 7 / span 4;
+}
+
+/* For 6 items: first 4 span 3 cols each, last 2 centered spanning 3 cols each */
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(6),
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(6) ~ .industry-focus-item:nth-child(2),
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(6) ~ .industry-focus-item:nth-child(3),
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(6) ~ .industry-focus-item:nth-child(4) {
+  grid-column: span 3;
+}
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(6) ~ .industry-focus-item:nth-child(5) {
+  grid-column: 4 / span 3;
+}
+.industry-focus-list > .industry-focus-item:first-child:nth-last-child(6) ~ .industry-focus-item:nth-child(6) {
+  grid-column: 7 / span 3;
+}
+
+/* Industry Focus Item Base Styles */
 .industry-focus-item {
   background: #ffffff;
   padding: 2rem;
@@ -2128,12 +2192,23 @@ body {
   font-size: 0.95rem;
 }
 
-/* Advantage Cards */
+/* Advantage Cards - supports 3 and 4 items */
 .advantage-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
   margin-top: 3rem;
+}
+
+/* Default: 3 items - each spans 4 columns */
+.advantage-cards > .advantage-card {
+  grid-column: span 4;
+}
+
+/* For 4 items: each spans 3 columns (4 in a row) */
+.advantage-cards > .advantage-card:first-child:nth-last-child(4),
+.advantage-cards > .advantage-card:first-child:nth-last-child(4) ~ .advantage-card {
+  grid-column: span 3;
 }
 
 .advantage-card {
@@ -2204,12 +2279,30 @@ body {
    7.5 CE MARKING PAGE
    ========================================================================== */
 
-/* CE Steps Grid */
+/* CE Steps Grid - supports 5 items with centered second row */
 .ce-steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(12, 1fr);
   gap: 2rem;
   margin-top: 3rem;
+}
+
+/* Default: items span 4 columns each (3 per row) */
+.ce-steps-grid > .ce-step-card {
+  grid-column: span 4;
+}
+
+/* For 5 items: first 3 span 4 cols each, last 2 centered spanning 4 cols each */
+.ce-steps-grid > .ce-step-card:first-child:nth-last-child(5),
+.ce-steps-grid > .ce-step-card:first-child:nth-last-child(5) ~ .ce-step-card:nth-child(2),
+.ce-steps-grid > .ce-step-card:first-child:nth-last-child(5) ~ .ce-step-card:nth-child(3) {
+  grid-column: span 4;
+}
+.ce-steps-grid > .ce-step-card:first-child:nth-last-child(5) ~ .ce-step-card:nth-child(4) {
+  grid-column: 3 / span 4;
+}
+.ce-steps-grid > .ce-step-card:first-child:nth-last-child(5) ~ .ce-step-card:nth-child(5) {
+  grid-column: 7 / span 4;
 }
 
 .ce-step-card {
@@ -2886,6 +2979,26 @@ body {
   .advantage-cards {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  /* Reset centering on mobile for industry-focus-list */
+  .industry-focus-item {
+    grid-column: span 1 !important;
+  }
+
+  /* Reset centering on mobile for benefits-grid */
+  .benefits-grid .benefit-card {
+    grid-column: span 1 !important;
+  }
+
+  /* Reset centering on mobile for advantage-cards */
+  .advantage-cards .advantage-card {
+    grid-column: span 1 !important;
+  }
+
+  /* Reset centering on mobile for ce-steps-grid */
+  .ce-steps-grid .ce-step-card {
+    grid-column: span 1 !important;
   }
 
   .process-timeline {
@@ -3813,10 +3926,10 @@ body {
   margin-bottom: 3rem;
 }
 
-/* Accreditation Grid */
+/* Accreditation Grid - 4 boxes in 1 row on desktop */
 .accreditation-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
