@@ -26,9 +26,8 @@ const Footer: FC = () => {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul className="footer-links">
-              <li><Link to="/about/mission-vision">About Us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/pricing">Pricing</Link></li>
+              <li><Link to="/about-us/">About Us</Link></li>
+              <li><Link to="/services">Our Services</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/faq">FAQ</Link></li>
             </ul>
@@ -39,11 +38,11 @@ const Footer: FC = () => {
             <h4>Our Services</h4>
             <ul className="footer-links">
               <li><Link to="/services/iso">ISO Certifications</Link></li>
-              <li><Link to="/services/compliance/ce-marking">CE Marking</Link></li>
+              <li><Link to="/services/ce-marking">CE Marking</Link></li>
               <li><Link to="/services/iso/haccp">HACCP</Link></li>
               <li><Link to="/services/additional/energy-efficiency">Energy Efficiency</Link></li>
               <li><Link to="/services/additional/staff-training">Staff Training</Link></li>
-              <li><Link to="/services/additional/professional-cards">Professional Cards</Link></li>
+              <li><Link to="/services/additional">Additional Services</Link></li>
             </ul>
           </div>
 
@@ -72,7 +71,7 @@ const Footer: FC = () => {
           <p>&copy; {currentYear} MSC Certifications. All rights reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms-of-service">Terms of Service</Link>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
           </div>
         </div>
       </div>

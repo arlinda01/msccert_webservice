@@ -97,11 +97,11 @@ const Navigation: FC = () => {
 
           <li className={`nav-dropdown ${openDropdown === 'additional' ? 'active' : ''}`}>
             <div className="nav-dropdown-header">
-              <Link to="/services/additional" onClick={closeMenu}>Additional Services</Link>
+              <Link to="/services" onClick={closeMenu}>Our Services</Link>
               <button
                 className="dropdown-toggle"
                 onClick={() => toggleDropdown('additional')}
-                aria-label="Toggle Additional Services menu"
+                aria-label="Toggle Our Services menu"
               >
                 <svg className="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                   <path d="M6 9L1 4h10z"/>
@@ -109,7 +109,7 @@ const Navigation: FC = () => {
               </button>
             </div>
             <ul className="dropdown-menu">
-              <li><Link to="/services/compliance/ce-marking" onClick={closeMenu}>CE Marking</Link></li>
+              <li><Link to="/services/ce-marking" onClick={closeMenu}>CE Marking</Link></li>
               <li><Link to="/services/additional/energy-efficiency" onClick={closeMenu}>Energy Efficiency Programs</Link></li>
               <li><Link to="/services/additional/staff-training" onClick={closeMenu}>Staff Training</Link></li>
               <li><Link to="/services/additional/professional-card" onClick={closeMenu}>Professional Cards</Link></li>

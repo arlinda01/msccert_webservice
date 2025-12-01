@@ -922,6 +922,44 @@ body {
   padding-left: 1.25rem;
 }
 
+/* Service Header with Number Badge */
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.service-number-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  background: linear-gradient(135deg, #2abad4 0%, #13778a 100%);
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .service-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .service-number-badge {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1.1rem;
+  }
+}
+
 .certification-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);

@@ -22,6 +22,9 @@ interface ISOSliderProps {
 }
 
 const ISOSlider: FC<ISOSliderProps> = ({ cards }) => {
+  // Center slides when there are fewer cards than the max slidesPerView
+  const shouldCenter = cards.length <= 4;
+
   return (
     <div className="iso-slider-container">
       <Swiper
@@ -29,25 +32,26 @@ const ISOSlider: FC<ISOSliderProps> = ({ cards }) => {
         spaceBetween={30}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{
+        autoplay={cards.length > 4 ? {
           delay: 5000,
           disableOnInteraction: false,
-        }}
+        } : false}
+        centerInsufficientSlides={shouldCenter}
         breakpoints={{
           640: {
-            slidesPerView: 2,
+            slidesPerView: Math.min(2, cards.length),
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: Math.min(2, cards.length),
             spaceBetween: 25,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: Math.min(3, cards.length),
             spaceBetween: 30,
           },
           1280: {
-            slidesPerView: 4,
+            slidesPerView: Math.min(4, cards.length),
             spaceBetween: 30,
           },
         }}
