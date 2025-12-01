@@ -34,9 +34,6 @@ COPY . .
 RUN mkdir -p media staticfiles logs && \
     chown -R appuser:appuser /app
 
-# Collect static files
-RUN python manage.py collectstatic --no-input --clear
-
 # Switch to non-root user
 USER appuser
 
