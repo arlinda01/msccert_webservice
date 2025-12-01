@@ -54,6 +54,7 @@ services:
     volumes:
       - ./backend/media:/app/media
       - ./backend/staticfiles:/app/staticfiles
+      - ./backend/logs:/app/logs
     ports:
       - "8000:8000"
     depends_on:
@@ -78,7 +79,7 @@ services:
     container_name: msccert_frontend
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "${FRONTEND_PORT:-80}:80"
     depends_on:
       - backend
     healthcheck:

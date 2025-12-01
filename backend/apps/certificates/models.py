@@ -84,7 +84,9 @@ class Certificate(models.Model):
 
     # Maintenance tracking
     next_maintenance_date = models.DateField(
-        help_text="Next scheduled maintenance date (annual)"
+        null=True,
+        blank=True,
+        help_text="Next scheduled maintenance date (annual). Auto-calculated if not provided."
     )
     last_maintenance_date = models.DateField(
         null=True,
@@ -135,6 +137,13 @@ class Certificate(models.Model):
         # Generate certificate number if not exists
         if not self.certificate_number:
             self.certificate_number = self.generate_certificate_number()
+
+        # Auto-calculate next_maintenance_date if not provided
+        if not self.next_maintenance_date and self.first_issue_date:
+            # Set to 1 year from first issue date
+            self.next_maintenance_date = self.first_issue_date.replace(
+                year=self.first_issue_date.year + MAINTENANCE_INTERVAL_YEARS
+            )
 
         # Check and update status based on maintenance and expiry
         self.update_status()
