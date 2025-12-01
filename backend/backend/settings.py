@@ -153,6 +153,8 @@ WHITENOISE_ALLOW_ALL_ORIGINS = True
 # Media files (Uploads - QR codes, PDFs, etc.)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+# Ensure media directory exists
+MEDIA_ROOT.mkdir(exist_ok=True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -250,6 +252,10 @@ AXES_LOCKOUT_TEMPLATE = None  # Return JSON for API
 AXES_LOCKOUT_URL = None  # No redirect, return 403
 
 # Logging configuration for security events
+# Ensure logs directory exists
+LOGS_DIR = BASE_DIR / 'logs'
+LOGS_DIR.mkdir(exist_ok=True)
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -263,7 +269,7 @@ LOGGING = {
         'file': {
             'level': 'WARNING',
             'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs' / 'security.log',
+            'filename': LOGS_DIR / 'security.log',
             'formatter': 'verbose',
         },
         'console': {
