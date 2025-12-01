@@ -210,13 +210,13 @@ SERVER_EMAIL = os.environ.get('SERVER_EMAIL', DEFAULT_FROM_EMAIL)
 
 # Production Security Settings
 if not DEBUG:
-    # HTTPS/SSL settings
-    SECURE_SSL_REDIRECT = os.environ.get('SECURE_SSL_REDIRECT', 'True') == 'True'
+    # HTTPS/SSL settings - disable SSL redirect since nginx handles SSL
+    SECURE_SSL_REDIRECT = False  # Nginx handles SSL termination
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
-    X_FRAME_OPTIONS = 'DENY'
+    X_FRAME_OPTIONS = 'SAMEORIGIN'  # Allow admin to work properly
     SECURE_HSTS_SECONDS = 31536000  # 1 year
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
@@ -224,11 +224,14 @@ if not DEBUG:
     # Proxy SSL header (for Hostinger/reverse proxy setups)
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    # CSRF Trusted Origins (required for POST/PUT/DELETE from frontend)
-    CSRF_TRUSTED_ORIGINS = os.environ.get(
-        'CSRF_TRUSTED_ORIGINS',
-        ''
-    ).split(',') if os.environ.get('CSRF_TRUSTED_ORIGINS') else []
+# CSRF Trusted Origins - ALWAYS set these (required for admin login behind proxy)
+CSRF_TRUSTED_ORIGINS = os.environ.get(
+    'CSRF_TRUSTED_ORIGINS',
+    'https://msc-cert.com,https://www.msc-cert.com'
+).split(',')
+
+# Filter out empty strings from CSRF_TRUSTED_ORIGINS
+CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in CSRF_TRUSTED_ORIGINS if origin.strip()]
 
 # Django Axes - Brute Force Protection
 # Authentication backends (required for axes)
@@ -245,7 +248,9 @@ AXES_LOCKOUT_CALLABLE = None  # Use default lockout response
 AXES_LOCK_OUT_BY_COMBINATION_USER_AND_IP = True  # Lock by username + IP combination
 AXES_LOCKOUT_PARAMETERS = ['username', 'ip_address']  # Parameters to track
 AXES_ENABLE_ACCESS_FAILURE_LOG = True  # Log failed attempts
-AXES_VERBOSE = True  # Enable verbose logging
+AXES_VERBOSE = False  # Reduce logging overhead
+AXES_IPWARE_PROXY_COUNT = 1  # Trust one proxy (nginx)
+AXES_IPWARE_META_PRECEDENCE_ORDER = ['HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR']  # Get real IP behind proxy
 
 # Custom lockout response message
 AXES_LOCKOUT_TEMPLATE = None  # Return JSON for API
