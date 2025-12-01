@@ -2,8 +2,8 @@ import axios, { AxiosInstance } from 'axios';
 import type { Certificate } from '../types';
 
 // Use environment variable for API base URL
-// Falls back to localhost if not set
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://127.0.0.1:8000/api';
+// Falls back to relative /api path for production (nginx proxy)
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api';
 
 const api: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
@@ -11,6 +11,26 @@ const api: AxiosInstance = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
+// Public certificate data (returned by verify endpoint)
+export interface PublicCertificate {
+  certificate_number: string;
+  company_name: string;
+  standard: string;
+  status: string;
+  first_issue_date: string;
+  expiry_date: string;
+  scope_activity: string;
+  iaf_code: string;
+  is_valid: boolean;
+  sites: Array<{
+    id: number;
+    site_number: number;
+    name: string;
+    scope_activity: string;
+    address: string;
+  }>;
+}
 
 interface CertificateListResponse {
   results?: Certificate[];
@@ -70,6 +90,12 @@ export const certificateService = {
   // Get maintenance due
   getMaintenanceDue: async (): Promise<Certificate[]> => {
     const response = await api.get<Certificate[]>('/certificates/maintenance_due/');
+    return response.data;
+  },
+
+  // Public: Verify certificate by secure UUID (no auth required)
+  verifyCertificate: async (secureId: string): Promise<PublicCertificate> => {
+    const response = await api.get<PublicCertificate>(`/certificates/verify/${secureId}/`);
     return response.data;
   },
 };

@@ -87,6 +87,34 @@ class CertificateViewSet(viewsets.ModelViewSet):
                 'error': 'QR code not generated yet'
             }, status=status.HTTP_404_NOT_FOUND)
 
+    @action(detail=True, methods=['get'])
+    def download_qr(self, request, pk=None):
+        """
+        Download QR code image for a certificate
+
+        GET /api/certificates/{id}/download_qr/
+        Headers: Authorization: Token <admin_token>
+        """
+        from django.http import FileResponse
+        certificate = self.get_object()
+
+        if certificate.qr_code and certificate.qr_code.name:
+            try:
+                response = FileResponse(
+                    certificate.qr_code.open('rb'),
+                    content_type='image/png'
+                )
+                response['Content-Disposition'] = f'attachment; filename="QR_{certificate.certificate_number}.png"'
+                return response
+            except Exception as e:
+                return Response({
+                    'error': f'Error downloading QR code: {str(e)}'
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response({
+                'error': 'QR code not generated yet'
+            }, status=status.HTTP_404_NOT_FOUND)
+
     @action(detail=False, methods=['get'], url_path='verify/(?P<secure_id>[^/.]+)', permission_classes=[AllowAny])
     def verify(self, request, secure_id=None):
         """
