@@ -32,6 +32,7 @@ import Contact from './pages/Contact/Contact';
 import CertificateList from './pages/CertificateList/CertificateList';
 import StaticCertificate from './pages/StaticCertificate/StaticCertificate';
 import QRCodePage from './pages/QRCodePage/QRCodePage';
+import CertificateVerify from './pages/CertificateVerify/CertificateVerify';
 
 const App: FC = () => {
   return (
@@ -69,6 +70,7 @@ const App: FC = () => {
             <Route path="/certificates" element={<CertificateList />} />
             <Route path="/qr-code" element={<QRCodePage />} />
             <Route path="/certificate/2" element={<StaticCertificate />} />
+            <Route path="/certificate/:secureId" element={<CertificateVerify />} />
           </Routes>
         </main>
         <Footer />

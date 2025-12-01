@@ -79,14 +79,23 @@ class CertificateAdmin(admin.ModelAdmin):
     actions = ['perform_maintenance_action', 'download_pdf_action', 'regenerate_qr_code_action']
 
     def qr_code_preview(self, obj):
-        """Safely display QR code preview"""
+        """Safely display QR code preview with download link"""
         if obj.qr_code:
             try:
                 # Check if file exists before trying to display
                 if obj.qr_code.name and os.path.exists(obj.qr_code.path):
+                    # Use API endpoint for download to ensure proper content-disposition headers
+                    download_url = f'/api/certificates/{obj.pk}/download_qr/'
                     return format_html(
-                        '<img src="{}" style="max-width: 200px; max-height: 200px;" />',
-                        obj.qr_code.url
+                        '<div>'
+                        '<img src="{}" style="max-width: 200px; max-height: 200px; display: block; margin-bottom: 10px;" />'
+                        '<a href="{}" class="button" '
+                        'style="padding: 8px 12px; background-color: #28a745; color: white; '
+                        'text-decoration: none; border-radius: 4px; display: inline-block;">'
+                        'Download QR Code</a>'
+                        '</div>',
+                        obj.qr_code.url,
+                        download_url
                     )
                 else:
                     return format_html(
