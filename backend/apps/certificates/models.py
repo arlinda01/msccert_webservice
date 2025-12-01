@@ -41,12 +41,11 @@ class Certificate(models.Model):
         ('HACCP', 'HACCP: Hazard Analysis and Critical Control Points'),
     ]
 
-    # Certificate fields (non-editable once created)
+    # Certificate fields
     certificate_number = models.CharField(
-        max_length=50,
+        max_length=100,
         unique=True,
-        editable=False,
-        help_text="Unique certificate number"
+        help_text="Unique certificate number (e.g., MSC/ISO9001/2024/001)"
     )
     secure_id = models.UUIDField(
         default=uuid.uuid4,

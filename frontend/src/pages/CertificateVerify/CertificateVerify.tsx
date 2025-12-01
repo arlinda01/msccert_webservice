@@ -1,10 +1,11 @@
 import { FC, useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { certificateService, PublicCertificate } from '../../services/api';
 import './CertificateVerify.css';
 
 const CertificateVerify: FC = () => {
   const { secureId } = useParams<{ secureId: string }>();
+  const navigate = useNavigate();
   const [certificate, setCertificate] = useState<PublicCertificate | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -162,6 +163,12 @@ const CertificateVerify: FC = () => {
           <p className="verification-note">
             This certificate can be verified at any time by scanning the QR code or visiting this URL.
           </p>
+          <button
+            className="home-button"
+            onClick={() => navigate('/')}
+          >
+            Go To Home
+          </button>
         </div>
       </div>
     </div>

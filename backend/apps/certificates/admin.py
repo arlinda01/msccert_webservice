@@ -28,7 +28,6 @@ class CertificateAdmin(admin.ModelAdmin):
     list_filter = ['status', 'standard', 'created_at']
     search_fields = ['certificate_number', 'company_name', 'scope_activity']
     readonly_fields = [
-        'certificate_number',
         'secure_id',
         'qr_code_preview',
         'is_maintenance_due',
