@@ -77,19 +77,20 @@ class CertificateAdmin(admin.ModelAdmin):
 
     def download_pdf_link(self, obj):
         """Display download link in list view"""
-        url = reverse('certificate-download-pdf', args=[obj.pk])
-        return format_html('<a href="{}" target="_blank" class="button">📥 Download PDF</a>', url)
+        # Use the DRF router generated URL name (api/certificates/{pk}/download_pdf/)
+        url = f'/api/certificates/{obj.pk}/download_pdf/'
+        return format_html('<a href="{}" target="_blank" class="button">Download PDF</a>', url)
     download_pdf_link.short_description = 'PDF'
 
     def download_pdf_button(self, obj):
         """Display download button in detail view"""
         if obj.pk:
-            url = reverse('certificate-download-pdf', args=[obj.pk])
+            url = f'/api/certificates/{obj.pk}/download_pdf/'
             return format_html(
                 '<a href="{}" target="_blank" class="button" '
                 'style="padding: 10px 15px; background-color: #417690; color: white; '
                 'text-decoration: none; border-radius: 4px; display: inline-block;">'
-                '📥 Download Certificate PDF</a>',
+                'Download Certificate PDF</a>',
                 url
             )
         return '-'
@@ -103,7 +104,7 @@ class CertificateAdmin(admin.ModelAdmin):
 
         certificate = queryset.first()
         from django.shortcuts import redirect
-        return redirect('certificate-download-pdf', pk=certificate.pk)
+        return redirect(f'/api/certificates/{certificate.pk}/download_pdf/')
     download_pdf_action.short_description = 'Download PDF for selected certificate'
 
     def perform_maintenance_action(self, request, queryset):
