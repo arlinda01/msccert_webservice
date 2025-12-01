@@ -30,7 +30,10 @@ services:
       dockerfile: Dockerfile
     container_name: msccert_backend
     restart: unless-stopped
-    command: gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 120 backend.wsgi:application
+    command: >
+      sh -c "python manage.py collectstatic --no-input --clear &&
+             python manage.py migrate --no-input &&
+             gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 120 backend.wsgi:application"
     environment:
       - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
       - DEBUG=${DEBUG:-False}
