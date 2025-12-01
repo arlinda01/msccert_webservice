@@ -277,6 +277,12 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose',
         },
+        'error_file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': LOGS_DIR / 'django_errors.log',
+            'formatter': 'verbose',
+        },
     },
     'loggers': {
         'axes': {
@@ -288,6 +294,11 @@ LOGGING = {
             'handlers': ['file', 'console'],
             'level': 'WARNING',
             'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['error_file', 'console'],
+            'level': 'ERROR',
+            'propagate': False,
         },
     },
 }
