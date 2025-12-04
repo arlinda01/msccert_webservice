@@ -116,11 +116,11 @@ const ISO39001: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Stage I Audit – Review of road safety documentation</h4>
+              <h4>Stage I Audit<br /><span className="process-detail">(Review of road safety documentation)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Stage II Audit – Evaluation of implementation and evidence</h4>
+              <h4>Stage II Audit<br /><span className="process-detail">(Evaluation of implementation and evidence)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
@@ -132,7 +132,7 @@ const ISO39001: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">6</div>
-              <h4>Re-certification after three years</h4>
+              <h4>Re-certification<br /><span className="process-detail">(After three years)</span></h4>
             </div>
           </div>
         </div>

@@ -2,12 +2,89 @@
 .iso-slider-container {
   width: 100%;
   position: relative;
-  padding: 2rem 1rem 3.5rem 1rem;
+  padding: 3rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Slider Wrapper with fade edges */
+.iso-slider-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
 }
 
 .iso-swiper {
   width: 100%;
-  padding: 1rem 1rem 3rem 1rem;
+  padding: 60px 20px 80px 20px;
+  overflow: visible;
+}
+
+/* External Navigation Arrows */
+.iso-slider-arrow {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #01434f 0%, #085766 100%);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 8px 20px rgba(1, 68, 80, 0.3),
+    0 12px 30px rgba(1, 68, 80, 0.2);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.iso-slider-arrow svg {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.iso-slider-arrow:hover {
+  background: linear-gradient(135deg, #2abad4 0%, #01434f 100%);
+  transform: scale(1.1);
+  box-shadow:
+    0 12px 28px rgba(42, 186, 212, 0.4),
+    0 16px 40px rgba(42, 186, 212, 0.25);
+}
+
+.iso-slider-arrow:hover svg {
+  transform: scale(1.1);
+}
+
+.iso-slider-arrow:active {
+  transform: scale(0.95);
+}
+
+.iso-slider-arrow.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.iso-slider-arrow.swiper-button-disabled:hover {
+  transform: none;
+  background: linear-gradient(135deg, #01434f 0%, #085766 100%);
 }
 
 /* Swiper Slide */
@@ -26,23 +103,27 @@
   border: none;
   border-radius: 24px;
   padding: 2rem;
+  /* Centered deep 3D shadow effect */
   box-shadow:
-    0 10px 20px rgba(100, 100, 100, 0.25),
-    0 15px 30px rgba(100, 100, 100, 0.15),
-    0 20px 40px rgba(100, 100, 100, 0.1);
-  transition: all 0.3s ease;
+    0 0 30px rgba(0, 0, 0, 0.25),
+    0 0 50px rgba(0, 0, 0, 0.2),
+    0 0 70px rgba(0, 0, 0, 0.15),
+    0 0 90px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
 
 
 .iso-swiper .swiper-slide .certification-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-8px);
   background: linear-gradient(145deg, #2abad4 0%, #13778a 100%);
   box-shadow:
-    0 15px 30px rgba(42, 186, 212, 0.3),
-    0 20px 40px rgba(42, 186, 212, 0.2),
-    0 25px 50px rgba(42, 186, 212, 0.15);
+    0 0 35px rgba(42, 186, 212, 0.4),
+    0 0 55px rgba(42, 186, 212, 0.3),
+    0 0 75px rgba(42, 186, 212, 0.2),
+    0 0 95px rgba(42, 186, 212, 0.1);
 }
 
 .iso-swiper .swiper-slide .certification-card:hover h4,
@@ -118,7 +199,7 @@
 }
 
 .iso-swiper .certification-card .benefits-list li::before {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   left: 0;
   color: #2abad4;
@@ -153,39 +234,6 @@
   color: #01434f;
 }
 
-/* Navigation Arrows */
-.iso-swiper .swiper-button-next,
-.iso-swiper .swiper-button-prev {
-  width: 48px;
-  height: 48px;
-  background: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-.iso-swiper .swiper-button-next:after,
-.iso-swiper .swiper-button-prev:after {
-  font-size: 20px;
-  font-weight: bold;
-  color: #01434f;
-}
-
-.iso-swiper .swiper-button-next:hover,
-.iso-swiper .swiper-button-prev:hover {
-  background: #2abad4;
-  transform: scale(1.1);
-}
-
-.iso-swiper .swiper-button-next:hover:after,
-.iso-swiper .swiper-button-prev:hover:after {
-  color: #ffffff;
-}
-
-.iso-swiper .swiper-button-disabled {
-  opacity: 0.35;
-}
-
 /* Pagination */
 .iso-swiper .swiper-pagination {
   bottom: 0;
@@ -206,10 +254,53 @@
   border-radius: 6px;
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+  .iso-slider-container {
+    padding: 1.5rem 0 3rem;
+  }
+
+  .iso-slider-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .iso-slider-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .iso-slider-container {
     padding: 0.75rem 0 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .iso-slider-wrapper {
+    width: 100%;
+    order: 1;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 3%,
+      black 97%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 3%,
+      black 97%,
+      transparent 100%
+    );
+  }
+
+  /* Hide external arrows on mobile, show below slider */
+  .iso-slider-arrow {
+    display: none;
   }
 
   .iso-swiper {
@@ -218,6 +309,14 @@
 
   .iso-swiper .swiper-slide .certification-card {
     padding: 1.25rem;
+    box-shadow:
+      0 0 25px rgba(0, 0, 0, 0.25),
+      0 0 45px rgba(0, 0, 0, 0.2),
+      0 0 65px rgba(0, 0, 0, 0.1);
+  }
+
+  .iso-swiper {
+    padding: 50px 15px 60px 15px;
   }
 
   .iso-swiper .certification-card .card-icon {
@@ -248,17 +347,6 @@
     padding-left: 1rem;
   }
 
-  .iso-swiper .swiper-button-next,
-  .iso-swiper .swiper-button-prev {
-    width: 36px;
-    height: 36px;
-  }
-
-  .iso-swiper .swiper-button-next:after,
-  .iso-swiper .swiper-button-prev:after {
-    font-size: 14px;
-  }
-
   .iso-swiper .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
@@ -276,12 +364,16 @@
   }
 
   .iso-swiper {
-    padding-bottom: 1.5rem;
+    padding: 40px 10px 50px 10px;
   }
 
   .iso-swiper .swiper-slide .certification-card {
     padding: 1rem;
     border-radius: 16px;
+    box-shadow:
+      0 0 20px rgba(0, 0, 0, 0.25),
+      0 0 35px rgba(0, 0, 0, 0.18),
+      0 0 50px rgba(0, 0, 0, 0.1);
   }
 
   .iso-swiper .certification-card .card-icon {
@@ -316,11 +408,6 @@
   .iso-swiper .certification-card .card-btn {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
-  }
-
-  .iso-swiper .swiper-button-next,
-  .iso-swiper .swiper-button-prev {
-    display: none;
   }
 
   .iso-swiper .swiper-pagination-bullet {

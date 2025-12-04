@@ -64,7 +64,6 @@ const Navigation: FC = () => {
               <li><Link to="/about-us/quality-policy/" onClick={closeMenu}>Quality Policy</Link></li>
               <li><Link to="/about-us/code-of-ethics/" onClick={closeMenu}>Code of Ethics</Link></li>
               <li><Link to="/about-us/accreditation/" onClick={closeMenu}>Accreditation</Link></li>
-              <li><Link to="/about-us/partnerships/" onClick={closeMenu}>Partnerships</Link></li>
             </ul>
           </li>
 

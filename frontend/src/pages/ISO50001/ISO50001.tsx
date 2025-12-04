@@ -114,11 +114,11 @@ const ISO50001: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Stage I Audit – Documentation and system review</h4>
+              <h4>Stage I Audit<br /><span className="process-detail">(Documentation and system review)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Stage II Audit – Evidence and implementation evaluation</h4>
+              <h4>Stage II Audit<br /><span className="process-detail">(Evidence and implementation evaluation)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
@@ -130,7 +130,7 @@ const ISO50001: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">6</div>
-              <h4>Re-certification every 3 years</h4>
+              <h4>Re-certification<br /><span className="process-detail">(Every 3 years)</span></h4>
             </div>
           </div>
         </div>

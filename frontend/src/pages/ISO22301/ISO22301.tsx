@@ -125,11 +125,11 @@ const ISO22301: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Stage I Audit – Documentation review</h4>
+              <h4>Stage I Audit<br /><span className="process-detail">(Documentation review)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Stage II Audit – Implementation assessment</h4>
+              <h4>Stage II Audit<br /><span className="process-detail">(Implementation assessment)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
@@ -141,7 +141,7 @@ const ISO22301: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">6</div>
-              <h4>Re-certification (Year 3)</h4>
+              <h4>Re-certification<br /><span className="process-detail">(Year 3)</span></h4>
             </div>
           </div>
         </div>

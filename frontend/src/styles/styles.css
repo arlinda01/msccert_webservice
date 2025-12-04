@@ -14,7 +14,8 @@
 
 body {
   background-color: #1a1a1a;
-  color: #e0e0e0;
+  color: #000000;
+  font-size: 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -37,7 +38,7 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 /* ==========================================================================
@@ -455,7 +456,7 @@ body {
 }
 
 .footer-logo {
-  height: 50px;
+  height: 70px;
   width: auto;
   margin-bottom: 1rem;
 }
@@ -749,7 +750,7 @@ body {
 
 /* Sections */
 .section {
-  padding: 3.5rem 2rem;
+  padding: 2.5rem 2rem;
 }
 
 .section-white {
@@ -770,10 +771,10 @@ body {
 
 .section-intro {
   font-size: 1rem;
-  color: #333;
+  color: #000000;
   text-align: center;
   max-width: 850px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.5rem;
   line-height: 1.7;
 }
 
@@ -837,9 +838,9 @@ body {
 }
 
 .feature-card p {
-  color: #495057;
+  color: #000000;
   line-height: 1.7;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* Certification Cards */
@@ -991,10 +992,12 @@ body {
   border: none;
   border-radius: 24px;
   box-shadow:
-    0 10px 20px rgba(100, 100, 100, 0.25),
-    0 15px 30px rgba(100, 100, 100, 0.15),
-    0 20px 40px rgba(100, 100, 100, 0.1);
-  transition: all 0.3s ease;
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 30px 60px rgba(0, 0, 0, 0.3),
+    0 40px 80px rgba(0, 0, 0, 0.25),
+    0 50px 100px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   min-height: 100%;
   display: flex;
@@ -1075,10 +1078,10 @@ body {
 }
 
 .certification-card p {
-  color: #555;
+  color: #000000;
   line-height: 1.7;
   margin-bottom: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
   flex-grow: 1;
 }
@@ -1114,8 +1117,8 @@ body {
 }
 
 .certification-card .benefits-list li {
-  color: #555;
-  font-size: 0.825rem;
+  color: #000000;
+  font-size: 1rem;
   padding: 0.25rem 0;
   padding-left: 1.25rem;
   position: relative;
@@ -1195,6 +1198,8 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .solution-card:hover {
@@ -1247,10 +1252,16 @@ body {
 }
 
 .solution-card p {
-  color: #555;
+  color: #000000;
   line-height: 1.7;
   margin-bottom: 1rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.solution-card .card-btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .section-cta {
@@ -1331,9 +1342,9 @@ body {
 }
 
 .industry-item p {
-  color: #555;
+  color: #000000;
   line-height: 1.7;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 /* FAQ Accordion */
@@ -1402,9 +1413,9 @@ body {
 }
 
 .faq-answer p {
-  color: #555;
+  color: #000000;
   line-height: 1.8;
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 0;
   padding-top: 0.5rem;
   border-top: 1px solid #e0e0e0;
@@ -1793,9 +1804,9 @@ body {
 .values-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
 }
 
 /* First 3 items take 2 columns each (3 boxes in row) */
@@ -1816,7 +1827,7 @@ body {
 
 .value-card {
   background: #ffffff;
-  padding: 2rem;
+  padding: 1.5rem;
   border: none;
   border-radius: 24px;
   box-shadow:
@@ -2049,9 +2060,9 @@ body {
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  padding: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
 }
 
 /* Default: 3-item layout - each spans 4 columns */
@@ -2091,7 +2102,7 @@ body {
 
 .benefit-card {
   background: #ffffff;
-  padding: 2rem;
+  padding: 1.5rem;
   border: none;
   border-left: 3px solid #2abad4;
   border-radius: 24px;
@@ -2281,9 +2292,24 @@ body {
 /* Process Timeline */
 .process-timeline {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
   margin-top: 3rem;
+}
+
+/* For pages with 6 steps - force 6 columns on larger screens */
+@media (min-width: 1024px) {
+  .process-timeline {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+/* For pages with 5 steps - use 5 columns */
+@media (min-width: 1024px) {
+  .process-timeline.steps-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .process-step {
@@ -2311,6 +2337,14 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.4;
+}
+
+.process-step h4 .process-detail {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2abad4;
+  margin-top: 0.25rem;
 }
 
 /* ==========================================================================
@@ -3039,8 +3073,75 @@ body {
     grid-column: span 1 !important;
   }
 
+  /* Horizontal slider for certification process on mobile */
   .process-timeline {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 2rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #2abad4 #e0e0e0;
+  }
+
+  .process-timeline::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .process-timeline::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 3px;
+  }
+
+  .process-timeline::-webkit-scrollbar-thumb {
+    background: #2abad4;
+    border-radius: 3px;
+  }
+
+  .process-step {
+    flex: 0 0 auto;
+    min-width: 130px;
+    max-width: 150px;
+    padding: 1rem 0.75rem;
+    position: relative;
+    scroll-snap-align: start;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-right: 0.5rem;
+  }
+
+  .process-step:last-child {
+    margin-right: 1rem;
+  }
+
+  /* Connecting line between steps */
+  .process-step::after {
+    display: none;
+  }
+
+  .process-step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step h4 {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .process-step h4 .process-detail {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
   }
 
   /* Contact Page */
@@ -3391,6 +3492,11 @@ body {
     line-height: 1.3;
   }
 
+  .process-step h4 .process-detail {
+    font-size: 0.65rem;
+    margin-top: 0.15rem;
+  }
+
   /* Contact Page */
   .contact-hero {
     padding: 3rem 1rem 2rem;
@@ -3409,7 +3515,7 @@ body {
   }
 
   .footer-logo {
-    height: 40px;
+    height: 55px;
   }
 
   .footer-section h4 {
@@ -3695,15 +3801,15 @@ body {
 .mission-vision-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 4rem;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .mission-card,
 .vision-card {
   background: transparent;
-  padding: 3rem 2rem 2.5rem;
+  padding: 2rem 1.5rem 1.5rem;
   transition: all 0.4s ease;
   position: relative;
 }
