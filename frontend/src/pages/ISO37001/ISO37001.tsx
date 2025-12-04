@@ -117,11 +117,11 @@ const ISO37001: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Documentation Review (Stage I Audit)</h4>
+              <h4>Documentation Review<br /><span className="process-detail">(Stage I Audit)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Implementation Assessment (Stage II Audit)</h4>
+              <h4>Implementation Assessment<br /><span className="process-detail">(Stage II Audit)</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
@@ -133,7 +133,7 @@ const ISO37001: FC = () => {
             </div>
             <div className="process-step">
               <div className="process-step-number">6</div>
-              <h4>Re-certification every three years</h4>
+              <h4>Re-certification<br /><span className="process-detail">(Every three years)</span></h4>
             </div>
           </div>
         </div>

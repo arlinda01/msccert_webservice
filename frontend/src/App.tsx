@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './styles/styles.css';
 import Navigation from './components/Navigation/Navigation';
 import Footer from './components/Footer/Footer';
@@ -33,6 +33,8 @@ import CertificateList from './pages/CertificateList/CertificateList';
 import StaticCertificate from './pages/StaticCertificate/StaticCertificate';
 import QRCodePage from './pages/QRCodePage/QRCodePage';
 import CertificateVerify from './pages/CertificateVerify/CertificateVerify';
+import FAQ from './pages/FAQ/FAQ';
+import TermsConditions from './pages/TermsConditions/TermsConditions';
 
 const App: FC = () => {
   return (
@@ -59,14 +61,20 @@ const App: FC = () => {
             <Route path="/services/iso/iso-45001" element={<ISO45001 />} />
             <Route path="/services/iso/iso-50001" element={<ISO50001 />} />
             <Route path="/services/iso/haccp" element={<HACCP />} />
+            <Route path="/services/ce-marking" element={<CEMarking />} />
+            {/* Legacy URL redirect - keep old URL working */}
             <Route path="/services/compliance/ce-marking" element={<CEMarking />} />
-            <Route path="/services/additional" element={<AdditionalServices />} />
+            <Route path="/services" element={<AdditionalServices />} />
+            {/* Legacy URL redirect - keep old /services/additional URL working */}
+            <Route path="/services/additional" element={<Navigate to="/services" replace />} />
             <Route path="/services/additional/energy-efficiency" element={<EnergyEfficiency />} />
             <Route path="/services/additional/staff-training" element={<StaffTraining />} />
             <Route path="/services/additional/professional-card" element={<ProfessionalCard />} />
             <Route path="/services/additional/technological-card" element={<TechnologicalCard />} />
             <Route path="/services/additional/equipment-evaluation" element={<EquipmentEvaluation />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/terms-and-conditions" element={<TermsConditions />} />
             <Route path="/certificates" element={<CertificateList />} />
             <Route path="/qr-code" element={<QRCodePage />} />
             <Route path="/certificate/2" element={<StaticCertificate />} />

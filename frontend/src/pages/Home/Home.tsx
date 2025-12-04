@@ -137,8 +137,22 @@ const Home: FC = () => {
         </div>
       </section>
 
-      {/* MSC Difference Section */}
+      {/* Core Certification Portfolio - Right after Hero */}
       <section className="section section-white">
+        <div className="container">
+          <h2 className="section-title">Our Core Certification Portfolio: Global Standards, Local Success</h2>
+          <p className="section-intro">
+            We certify the systems that build trust and resilience, ensuring you meet global best practices
+            while remaining competitive locally.
+          </p>
+
+          {/* ISO Certifications Slider */}
+          <ISOSlider cards={isoCards} />
+        </div>
+      </section>
+
+      {/* MSC Difference Section */}
+      <section className="section section-gray">
         <div className="container">
           <h2 className="section-title">The MSC Difference: Why Choose Our Specialized Audits?</h2>
           <p className="section-intro">
@@ -179,20 +193,6 @@ const Home: FC = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Core Certification Portfolio */}
-      <section className="section section-gray">
-        <div className="container">
-          <h2 className="section-title">Our Core Certification Portfolio: Global Standards, Local Success</h2>
-          <p className="section-intro">
-            We certify the systems that build trust and resilience, ensuring you meet global best practices
-            while remaining competitive locally.
-          </p>
-
-          {/* ISO Certifications Slider */}
-          <ISOSlider cards={isoCards} />
         </div>
       </section>
 
@@ -351,7 +351,7 @@ const Home: FC = () => {
             measurable value and greatest risk reduction for your business.
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary-large">Request a Detailed Quote and Free Assessment</Link>
+            <Link to="/contact" className="btn btn-primary-large">Request a Detailed Quote and Assessment</Link>
           </div>
           <p className="cta-footer">
             All our certifications are backed by internationally accredited bodies, ensuring global recognition.
