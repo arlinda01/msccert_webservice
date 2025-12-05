@@ -1,25 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const HACCP: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>HACCP Certification | Food Safety & Compliance Audits</title>
-        <meta name="description" content="Get HACCP certified with MSC CERTIFICATIONS. Prevent food safety risks, meet legal standards, and build consumer trust. Start your assessment now." />
-        <meta name="keywords" content="HACCP certification, food safety audit, HACCP system, ISO 22000, Codex Alimentarius, EU Regulation 852/2004, food safety compliance, HACCP plan, MSC Certifications, HACCP training" />
+        <title>{t('haccp.meta.title')}</title>
+        <meta name="description" content={t('haccp.meta.description')} />
+        <meta name="keywords" content={t('haccp.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>HACCP: Ensure Food Safety, Compliance, and Consumer Confidence</h1>
+          <h1>{t('haccp.hero.title')}</h1>
           <p className="iso-subtitle">
-            Ready to guarantee the highest level of food safety and regulatory compliance? HACCP (Hazard Analysis and
-            Critical Control Points) is the globally recognized system for identifying, evaluating, and controlling food
-            safety hazards throughout production, processing, and distribution. Certification demonstrates your commitment
-            to delivering safe, high-quality food products — every time.
+            {t('haccp.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -27,23 +29,15 @@ const HACCP: FC = () => {
       {/* What is HACCP */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is HACCP? The Global Standard for Food Safety Management</h2>
+          <h2 className="section-title">{t('haccp.whatIs.title')}</h2>
           <p className="iso-text">
-            HACCP is a preventive approach to food safety that focuses on controlling potential hazards — biological,
-            chemical, or physical — before they occur. Rather than relying on end-product testing, HACCP ensures food
-            safety at every step of the process, from raw material handling to final packaging and distribution.
-          </p>
-          <p className="iso-text">
-            The system is recognized by major international regulations and standards, including the Codex Alimentarius,
-            EU Regulation (EC) No 852/2004, and ISO 22000.
+            {t('haccp.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as the Accredited Certification Partner</h3>
+            <h3>{t('haccp.whatIs.roleBox.title')}</h3>
             <p>
-              We position your company as a trustworthy food supplier by independently confirming that your HACCP system
-              actually protects consumers from risk. Our certification sends a clear signal to retailers, distributors,
-              and authorities that your processes are controlled, traceable, and aligned with recognized food safety.
+              {t('haccp.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -52,28 +46,23 @@ const HACCP: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Key Benefits: Safety, Trust, and Market Access</h2>
+          <h2 className="section-title">{t('haccp.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Ensure Food Safety and Compliance</h3>
-              <p>Prevent contamination risks and meet legal requirements.</p>
+              <h3>{t('haccp.benefits.benefit1.title')}</h3>
+              <p>{t('haccp.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Build Customer and Retailer Confidence</h3>
-              <p>Demonstrate your brand's commitment to high-quality, safe products.</p>
+              <h3>{t('haccp.benefits.benefit2.title')}</h3>
+              <p>{t('haccp.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Access New Markets and Partnerships</h3>
-              <p>Many retailers and distributors require HACCP certification.</p>
-            </div>
-            <div className="benefit-card">
-              <div className="benefit-number">4</div>
-              <h3>Reduce Operational Risks and Losses</h3>
-              <p>Identify critical points and prevent costly recalls or incidents.</p>
+              <h3>{t('haccp.benefits.benefit3.title')}</h3>
+              <p>{t('haccp.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
@@ -82,23 +71,27 @@ const HACCP: FC = () => {
       {/* Industry Focus */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industry Focus: Where HACCP Applies</h2>
+          <h2 className="section-title">{t('haccp.industryFocus.title')}</h2>
+          <p className="section-intro">
+            {t('haccp.industryFocus.subtitle')}
+          </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Food Processing and Manufacturing</h4>
+              <h4>{t('haccp.industryFocus.production.title')}</h4>
+              <p>{t('haccp.industryFocus.production.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Beverage and Dairy Production</h4>
+              <h4>{t('haccp.industryFocus.horeca.title')}</h4>
+              <p>{t('haccp.industryFocus.horeca.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Catering and Hospitality</h4>
+              <h4>{t('haccp.industryFocus.retail.title')}</h4>
+              <p>{t('haccp.industryFocus.retail.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Retail and Food Distribution</h4>
-            </div>
-            <div className="industry-focus-item">
-              <h4>Packaging and Logistics for Food Products</h4>
+              <h4>{t('haccp.industryFocus.logistics.title')}</h4>
+              <p>{t('haccp.industryFocus.logistics.description')}</p>
             </div>
           </div>
         </div>
@@ -107,20 +100,56 @@ const HACCP: FC = () => {
       {/* MSC Advantage */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Why Choose MSC: Trusted Expertise in Food Safety Certification</h2>
+          <h2 className="section-title">{t('haccp.mscAdvantage.title')}</h2>
+          <p className="section-intro">
+            {t('haccp.mscAdvantage.subtitle')}
+          </p>
 
           <div className="advantage-cards">
             <div className="advantage-card">
-              <h3>Accredited Auditors</h3>
-              <p>Specialists with real food industry experience.</p>
+              <h3>{t('haccp.mscAdvantage.specializedAuditors.title')}</h3>
+              <p>{t('haccp.mscAdvantage.specializedAuditors.description')}</p>
             </div>
             <div className="advantage-card">
-              <h3>Transparent Certification</h3>
-              <p>Objective assessment based on evidence.</p>
+              <h3>{t('haccp.mscAdvantage.practicalAudit.title')}</h3>
+              <p>{t('haccp.mscAdvantage.practicalAudit.description')}</p>
             </div>
             <div className="advantage-card">
-              <h3>Integrated Approach</h3>
-              <p>Combine HACCP with ISO 22000, ISO 9001, or GMP for complete compliance.</p>
+              <h3>{t('haccp.mscAdvantage.objectiveCertification.title')}</h3>
+              <p>{t('haccp.mscAdvantage.objectiveCertification.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certification Process */}
+      <section className="section section-white">
+        <div className="container">
+          <h2 className="section-title">{t('haccp.process.title')}</h2>
+          <p className="section-intro">
+            {t('haccp.process.subtitle')}
+          </p>
+
+          <div className="process-timeline">
+            <div className="process-step">
+              <div className="process-step-number">1</div>
+              <h4>{t('haccp.process.step1')}</h4>
+            </div>
+            <div className="process-step">
+              <div className="process-step-number">2</div>
+              <h4>{t('haccp.process.step2')}<br /><span className="process-detail">{t('haccp.process.step2Detail')}</span></h4>
+            </div>
+            <div className="process-step">
+              <div className="process-step-number">3</div>
+              <h4>{t('haccp.process.step3')}</h4>
+            </div>
+            <div className="process-step">
+              <div className="process-step-number">4</div>
+              <h4>{t('haccp.process.step4')}<br /><span className="process-detail">{t('haccp.process.step4Detail')}</span></h4>
+            </div>
+            <div className="process-step">
+              <div className="process-step-number">5</div>
+              <h4>{t('haccp.process.step5')}<br /><span className="process-detail">{t('haccp.process.step5Detail')}</span></h4>
             </div>
           </div>
         </div>
@@ -129,12 +158,15 @@ const HACCP: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Ready to secure your food safety system and earn global trust?</h2>
+          <h2>{t('haccp.cta.title')}</h2>
+          <p>
+            {t('haccp.cta.description')}
+          </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your HACCP Certification Process Today</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('haccp.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC Certifications are fully accredited and globally recognized.
+            {t('haccp.cta.footer')}
           </p>
         </div>
       </section>

@@ -1,24 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const ISO37001: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO 37001 Certification | Anti-Bribery Compliance Audits</title>
-        <meta name="description" content="Prevent bribery risks with ISO 37001 certification. Prove ethical compliance, protect your reputation, and reduce legal exposure. Start your audit today." />
-        <meta name="keywords" content="ISO 37001 certification, anti-bribery audit, ABMS, ethics compliance, anti-corruption management, ISO 37001 audit, MSC CERTIFICATIONS, integrity certification, compliance auditing" />
+        <title>{t('iso37001.meta.title')}</title>
+        <meta name="description" content={t('iso37001.meta.description')} />
+        <meta name="keywords" content={t('iso37001.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>ISO 37001: Build a Culture of Integrity and Prevent Bribery</h1>
+          <h1>{t('iso37001.hero.title')}</h1>
           <p className="iso-subtitle">
-            ISO 37001 certification equips organizations with an internationally recognized framework to prevent, detect,
-            and manage bribery risks. By adopting this standard, you strengthen internal controls and demonstrate a
-            proactive commitment to ethical business practices.
+            {t('iso37001.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -26,19 +29,15 @@ const ISO37001: FC = () => {
       {/* What is ISO 37001 */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Understanding ISO 37001</h2>
+          <h2 className="section-title">{t('iso37001.whatIs.title')}</h2>
           <p className="iso-text">
-            ISO 37001 is the global standard for Anti-Bribery Management Systems (ABMS). It sets out clear requirements for
-            implementing policies, conducting due diligence, ensuring financial oversight, and establishing secure reporting
-            mechanisms to manage bribery-related risks at every level of the organization.
+            {t('iso37001.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as the Certification Body</h3>
+            <h3>{t('iso37001.whatIs.roleBox.title')}</h3>
             <p>
-              As an accredited, independent third-party certifier, MSC CERTIFICATIONS provides impartial audits to evaluate
-              how effectively your ABMS meets ISO 37001 standards. We verify implementation without offering consulting
-              services, ensuring full objectivity.
+              {t('iso37001.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -47,23 +46,23 @@ const ISO37001: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Key Advantages of ISO 37001 Certification</h2>
+          <h2 className="section-title">{t('iso37001.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Lower Legal and Regulatory Exposure</h3>
-              <p>Helps you avoid costly legal actions, fines, and exclusion from public or private contracts.</p>
+              <h3>{t('iso37001.benefits.benefit1.title')}</h3>
+              <p>{t('iso37001.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Strengthen Organizational Reputation</h3>
-              <p>Signals to stakeholders that your company operates with transparency and accountability.</p>
+              <h3>{t('iso37001.benefits.benefit2.title')}</h3>
+              <p>{t('iso37001.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Reinforce Internal Integrity</h3>
-              <p>Develops a documented culture of ethics that withstands external scrutiny and internal audits.</p>
+              <h3>{t('iso37001.benefits.benefit3.title')}</h3>
+              <p>{t('iso37001.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
@@ -72,68 +71,85 @@ const ISO37001: FC = () => {
       {/* Industry Focus */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industries That Benefit Most</h2>
+          <h2 className="section-title">{t('iso37001.industryFocus.title')}</h2>
           <p className="section-intro">
-            Our anti-bribery audits are tailored to the specific risks of:
+            {t('iso37001.industryFocus.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Construction</h4>
-              <p>Safeguard against corruption in contracts and tenders.</p>
+              <h4>{t('iso37001.industryFocus.publicSector.title')}</h4>
+              <p>{t('iso37001.industryFocus.publicSector.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Energy</h4>
-              <p>Ensure compliance in complex, multi-jurisdictional operations.</p>
+              <h4>{t('iso37001.industryFocus.construction.title')}</h4>
+              <p>{t('iso37001.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Public Procurement</h4>
-              <p>Meet transparency standards and eligibility criteria.</p>
+              <h4>{t('iso37001.industryFocus.healthcare.title')}</h4>
+              <p>{t('iso37001.industryFocus.healthcare.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Professional Services</h4>
-              <p>Build client confidence through ethical governance.</p>
+              <h4>{t('iso37001.industryFocus.finance.title')}</h4>
+              <p>{t('iso37001.industryFocus.finance.description')}</p>
             </div>
-            <div className="industry-focus-item">
-              <h4>Pharmaceuticals</h4>
-              <p>Mitigate bribery risks in sales, distribution, and clinical trials.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* MSC Advantage */}
+      <section className="section section-gray">
+        <div className="container">
+          <h2 className="section-title">{t('iso37001.mscAdvantage.title')}</h2>
+          <p className="section-intro">
+            {t('iso37001.mscAdvantage.subtitle')}
+          </p>
+
+          <div className="advantage-cards">
+            <div className="advantage-card">
+              <h3>{t('iso37001.mscAdvantage.specializedAuditors.title')}</h3>
+              <p>{t('iso37001.mscAdvantage.specializedAuditors.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso37001.mscAdvantage.practicalAudit.title')}</h3>
+              <p>{t('iso37001.mscAdvantage.practicalAudit.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso37001.mscAdvantage.objectiveCertification.title')}</h3>
+              <p>{t('iso37001.mscAdvantage.objectiveCertification.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Certification Process */}
-      <section className="section section-gray">
+      <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Certification with Integrity</h2>
+          <h2 className="section-title">{t('iso37001.process.title')}</h2>
           <p className="section-intro">
-            Our process includes:
+            {t('iso37001.process.subtitle')}
           </p>
 
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>Initial Application and Quotation</h4>
+              <h4>{t('iso37001.process.step1')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Documentation Review<br /><span className="process-detail">(Stage I Audit)</span></h4>
+              <h4>{t('iso37001.process.step2')}<br /><span className="process-detail">{t('iso37001.process.step2Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Implementation Assessment<br /><span className="process-detail">(Stage II Audit)</span></h4>
+              <h4>{t('iso37001.process.step3')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>Certification Decision</h4>
+              <h4>{t('iso37001.process.step4')}<br /><span className="process-detail">{t('iso37001.process.step4Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>Ongoing Surveillance Audits</h4>
-            </div>
-            <div className="process-step">
-              <div className="process-step-number">6</div>
-              <h4>Re-certification<br /><span className="process-detail">(Every three years)</span></h4>
+              <h4>{t('iso37001.process.step5')}<br /><span className="process-detail">{t('iso37001.process.step5Detail')}</span></h4>
             </div>
           </div>
         </div>
@@ -142,12 +158,15 @@ const ISO37001: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Take the next step toward verified anti-bribery compliance.</h2>
+          <h2>{t('iso37001.cta.title')}</h2>
+          <p>
+            {t('iso37001.cta.description')}
+          </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your ISO 37001 Certification Journey</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso37001.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            Our certificates are issued by a fully accredited body and are recognized globally.
+            {t('iso37001.cta.footer')}
           </p>
         </div>
       </section>

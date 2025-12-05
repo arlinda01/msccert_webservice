@@ -1,27 +1,32 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import {
     FaUserTie,
     FaDollarSign,
     FaTachometerAlt,
     FaGlobeAmericas
 } from 'react-icons/fa';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const About: FC = () => {
+    const { t, i18n } = useTranslation();
+    const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
     return (
         <div className="about">
             <Helmet>
-                <title>About MSC Certifications - Your Trusted Partner in ISO Certification</title>
-                <meta name="description" content="MSC Certifications is an accredited certification body providing ISO certification, CE marking, and technical evaluation services with global recognition." />
+                <title>{t('meta.about.title')}</title>
+                <meta name="description" content={t('meta.about.description')} />
             </Helmet>
 
             {/* Hero Section */}
             <section className="about-hero">
                 <div className="container">
-                    <h1>About MSC Certifications</h1>
+                    <h1>{t('about.title')}</h1>
                     <p className="about-subtitle">
-                        Your Trusted Partner in International Standards and Compliance
+                        {t('about.subtitle')}
                     </p>
                 </div>
             </section>
@@ -31,24 +36,18 @@ const About: FC = () => {
                 <div className="container">
                     <div className="who-we-are-grid">
                         <div className="who-we-are-content">
-                            <h2 className="section-title" style={{ textAlign: 'left' }}>Who We Are</h2>
+                            <h2 className="section-title" style={{ textAlign: 'left' }}>{t('about.whoWeAre.title')}</h2>
                             <p className="about-text" style={{ textAlign: 'left', margin: '0 0 1.5rem 0' }}>
-                                In a world where quality, safety, and compliance define business success, MSC Certifications
-                                stands as your reliable partner in achieving internationally recognized standards.
+                                {t('about.intro')}
                             </p>
                             <p className="about-text" style={{ textAlign: 'left', margin: '0 0 1.5rem 0' }}>
-                                Operating since 2024, MSC Certifications is an accredited certification and assessment body
-                                recognized by the General Directorate of Accreditation (DPA), the national accreditation
-                                authority of Albania.
+                                {t('about.description1')}
                             </p>
                             <p className="about-text" style={{ textAlign: 'left', margin: '0 0 1.5rem 0' }}>
-                                The DPA is a full member of the International Accreditation Forum (IAF) and European
-                                Accreditation (EA), ensuring that all certificates issued by MSC Certifications are globally
-                                recognized and accepted across industries and regions.
+                                {t('about.description2')}
                             </p>
                             <p className="about-text" style={{ textAlign: 'left', margin: '0' }}>
-                                We provide a complete portfolio of services in ISO certification, CE marking, and technical
-                                evaluation, delivered with professionalism, transparency, and deep local insight.
+                                {t('about.description3')}
                             </p>
                         </div>
                         <div className="who-we-are-image">
@@ -61,27 +60,27 @@ const About: FC = () => {
             {/* Why Choose Us */}
             <section className="section section-gray">
                 <div className="container">
-                    <h2 className="section-title">Why Choose MSC Certifications</h2>
+                    <h2 className="section-title">{t('about.whyChooseUs.title')}</h2>
                     <div className="why-choose-grid">
                         <div className="why-choose-card">
                             <FaUserTie className="why-icon" />
-                            <h3>Sector-Specific Audit Expertise</h3>
-                            <p>Auditors experienced in the exact sectors and standards they evaluate.</p>
+                            <h3>{t('about.missionValues.expertise.title')}</h3>
+                            <p>{t('about.whyChooseUs.reason1')}</p>
                         </div>
                         <div className="why-choose-card">
                             <FaDollarSign className="why-icon" />
-                            <h3>Competitive and Transparent Pricing</h3>
-                            <p>Fair, clear, and cost-effective certification solutions.</p>
+                            <h3>{t('about.missionValues.trust.title')}</h3>
+                            <p>{t('about.whyChooseUs.reason2')}</p>
                         </div>
                         <div className="why-choose-card">
                             <FaTachometerAlt className="why-icon" />
-                            <h3>Efficient and Accredited Audit Processes</h3>
-                            <p>Streamlined timelines following international accreditation standards.</p>
+                            <h3>{t('about.missionValues.improvement.title')}</h3>
+                            <p>{t('about.whyChooseUs.reason3')}</p>
                         </div>
                         <div className="why-choose-card">
                             <FaGlobeAmericas className="why-icon" />
-                            <h3>Globally Recognized Certificates</h3>
-                            <p>Trusted by authorities, clients, and partners worldwide.</p>
+                            <h3>{t('about.missionValues.integrity.title')}</h3>
+                            <p>{t('about.whyChooseUs.reason4')}</p>
                         </div>
                     </div>
                 </div>
@@ -90,13 +89,12 @@ const About: FC = () => {
             {/* Commitment Section */}
             <section className="section section-commitment">
                 <div className="container">
-                    <h2>Our Commitment</h2>
+                    <h2>{t('about.commitment.title')}</h2>
                     <p className="commitment-text">
-                        Since 2024, MSC Certifications has been helping organizations operate with confidence, quality,
-                        and integrity, turning complex standards into clear, measurable results trusted worldwide.
+                        {t('about.commitment.description')}
                     </p>
                     <div className="commitment-cta">
-                        <Link to="/contact" className="btn btn-primary-large">Start Your Certification Journey</Link>
+                        <Link to={routes.contact[currentLang]} className="btn btn-primary-large">{t('nav.contactUs')}</Link>
                     </div>
                 </div>
             </section>

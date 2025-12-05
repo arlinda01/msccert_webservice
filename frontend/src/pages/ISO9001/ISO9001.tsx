@@ -1,24 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const ISO9001: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO 9001 Certification - Accredited Quality Management Audits</title>
-        <meta name="description" content="Achieve ISO 9001 with MSC Certifications. Boost global credibility, improve efficiency, and win more tenders. Start your QMS assessment today." />
-        <meta name="keywords" content="ISO 9001 certification, QMS audit, ISO 9001 accredited, quality management system, ISO certification Albania, ISO 9001 benefits, quality auditor, ISO 9001 process, MSC Certifications" />
+        <title>{t('iso9001.meta.title')}</title>
+        <meta name="description" content={t('iso9001.meta.description')} />
+        <meta name="keywords" content={t('iso9001.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>ISO 9001: Achieve Certified Quality, Trust, and Operational Excellence</h1>
+          <h1>{t('iso9001.hero.title')}</h1>
           <p className="iso-subtitle">
-            Ready to move beyond basic quality? Accredited ISO 9001 certification helps you manage business risk,
-            improve customer satisfaction, and unlock new market opportunities. This standard is vital for
-            demonstrating true quality commitment.
+            {t('iso9001.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -26,17 +29,15 @@ const ISO9001: FC = () => {
       {/* What is ISO 9001 */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What is ISO 9001? The International Language of Quality</h2>
+          <h2 className="section-title">{t('iso9001.whatIs.title')}</h2>
           <p className="iso-text">
-            ISO 9001 is the world's most recognized standard for a Quality Management System (QMS). When certified,
-            your company is instantly speaking the same global language as its international partners, creating
-            shared clarity around quality.
+            {t('iso9001.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as the Accredited Certification Body</h3>
+            <h3>{t('iso9001.whatIs.roleBox.title')}</h3>
             <p>
-              We objectively determine if your system meets the global criteria, leading to your official ISO 9001 certification.
+              {t('iso9001.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -45,23 +46,23 @@ const ISO9001: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Key Benefits of Certification</h2>
+          <h2 className="section-title">{t('iso9001.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Global Recognition</h3>
-              <p>Instant credibility with customers, partners, and regulators worldwide.</p>
+              <h3>{t('iso9001.benefits.benefit1.title')}</h3>
+              <p>{t('iso9001.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Improved Efficiency</h3>
-              <p>Streamlined processes, fewer errors, and reduced waste.</p>
+              <h3>{t('iso9001.benefits.benefit2.title')}</h3>
+              <p>{t('iso9001.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Stronger Customer Loyalty</h3>
-              <p>Quality-driven operations that put customer satisfaction first.</p>
+              <h3>{t('iso9001.benefits.benefit3.title')}</h3>
+              <p>{t('iso9001.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
@@ -70,31 +71,31 @@ const ISO9001: FC = () => {
       {/* Industry Focus */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industry Focus: Where Our Expertise Applies</h2>
+          <h2 className="section-title">{t('iso9001.industryFocus.title')}</h2>
           <p className="section-intro">
-            MSC Certifications provides specialized auditors for tailored, sector-specific audits:
+            {t('iso9001.industryFocus.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Manufacturing</h4>
-              <p>Process consistency, reduced scrap</p>
+              <h4>{t('iso9001.industryFocus.manufacturing.title')}</h4>
+              <p>{t('iso9001.industryFocus.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Professional Services</h4>
-              <p>Contract clarity, service reliability</p>
+              <h4>{t('iso9001.industryFocus.professionalServices.title')}</h4>
+              <p>{t('iso9001.industryFocus.professionalServices.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Construction</h4>
-              <p>Material control, project oversight</p>
+              <h4>{t('iso9001.industryFocus.construction.title')}</h4>
+              <p>{t('iso9001.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Logistics</h4>
-              <p>Warehousing & distribution assurance</p>
+              <h4>{t('iso9001.industryFocus.logistics.title')}</h4>
+              <p>{t('iso9001.industryFocus.logistics.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Public Sector</h4>
-              <p>Transparency and service delivery</p>
+              <h4>{t('iso9001.industryFocus.publicSector.title')}</h4>
+              <p>{t('iso9001.industryFocus.publicSector.description')}</p>
             </div>
           </div>
         </div>
@@ -103,23 +104,23 @@ const ISO9001: FC = () => {
       {/* MSC Advantage */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">The MSC Advantage: Specialized Auditing</h2>
+          <h2 className="section-title">{t('iso9001.mscAdvantage.title')}</h2>
           <p className="section-intro">
-            We compete by offering what large certifiers can't: specialized, local knowledge that adds real value.
+            {t('iso9001.mscAdvantage.subtitle')}
           </p>
 
           <div className="advantage-cards">
             <div className="advantage-card">
-              <h3>Specialized Auditors</h3>
-              <p>Guaranteed specialist with deep experience in your exact industry.</p>
+              <h3>{t('iso9001.mscAdvantage.specializedAuditors.title')}</h3>
+              <p>{t('iso9001.mscAdvantage.specializedAuditors.description')}</p>
             </div>
             <div className="advantage-card">
-              <h3>Practical Audit</h3>
-              <p>Transforms your QMS into a real business tool.</p>
+              <h3>{t('iso9001.mscAdvantage.practicalAudit.title')}</h3>
+              <p>{t('iso9001.mscAdvantage.practicalAudit.description')}</p>
             </div>
             <div className="advantage-card">
-              <h3>Objective Certification</h3>
-              <p>Guaranteed global recognition based on objective, documented evidence.</p>
+              <h3>{t('iso9001.mscAdvantage.objectiveCertification.title')}</h3>
+              <p>{t('iso9001.mscAdvantage.objectiveCertification.description')}</p>
             </div>
           </div>
         </div>
@@ -128,31 +129,31 @@ const ISO9001: FC = () => {
       {/* Certification Process */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Our Certification Process</h2>
+          <h2 className="section-title">{t('iso9001.process.title')}</h2>
           <p className="section-intro">
-            The path to ISO 9001 certification is straightforward, involving five clear stages:
+            {t('iso9001.process.subtitle')}
           </p>
 
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>Application and Contract</h4>
+              <h4>{t('iso9001.process.step1')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Certification Audit<br /><span className="process-detail">(Stage I & II)</span></h4>
+              <h4>{t('iso9001.process.step2')}<br /><span className="process-detail">{t('iso9001.process.step2Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Certificate Issuance</h4>
+              <h4>{t('iso9001.process.step3')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>Surveillance Audits<br /><span className="process-detail">(Year 1st & 2nd)</span></h4>
+              <h4>{t('iso9001.process.step4')}<br /><span className="process-detail">{t('iso9001.process.step4Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>Re-certification<br /><span className="process-detail">(Year 3rd)</span></h4>
+              <h4>{t('iso9001.process.step5')}<br /><span className="process-detail">{t('iso9001.process.step5Detail')}</span></h4>
             </div>
           </div>
         </div>
@@ -161,15 +162,15 @@ const ISO9001: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Let's Get Started</h2>
+          <h2>{t('iso9001.cta.title')}</h2>
           <p>
-            Boost trust. Win tenders. Improve performance.
+            {t('iso9001.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your ISO 9001 Assessment</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso9001.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC Certifications are fully accredited and globally recognized.
+            {t('iso9001.cta.footer')}
           </p>
         </div>
       </section>

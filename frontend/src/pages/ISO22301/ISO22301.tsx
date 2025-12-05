@@ -1,24 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const ISO22301: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO 22301 Certification | Business Continuity Audit Services</title>
-        <meta name="description" content="Get ISO 22301 certified with MSC CERTIFICATIONS. Prove resilience, reduce downtime, and protect your operations. Start your continuity audit now." />
-        <meta name="keywords" content="ISO 22301 certification, business continuity audit, BCMS, operational resilience, disaster recovery, continuity planning, risk assessment, MSC CERTIFICATIONS, accredited certification" />
+        <title>{t('iso22301.meta.title')}</title>
+        <meta name="description" content={t('iso22301.meta.description')} />
+        <meta name="keywords" content={t('iso22301.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>ISO 22301: Safeguard Business Continuity, Reputation, and Compliance</h1>
+          <h1>{t('iso22301.hero.title')}</h1>
           <p className="iso-subtitle">
-            Ready to move beyond basic disaster recovery? ISO 22301 certification helps you anticipate disruption, reduce
-            downtime, and instill confidence in customers, insurers, and regulators. It's the global standard for
-            operational resilience and continuity.
+            {t('iso22301.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -26,20 +29,15 @@ const ISO22301: FC = () => {
       {/* What is ISO 22301 */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is ISO 22301?</h2>
+          <h2 className="section-title">{t('iso22301.whatIs.title')}</h2>
           <p className="iso-text">
-            ISO 22301 is the international standard for Business Continuity Management Systems (BCMS). It defines how to
-            identify critical business operations, assess disruption risks, and implement structured recovery strategies—such
-            as Recovery Time Objective (RTO) and Recovery Point Objective (RPO). Certification proves your ability to
-            maintain operations during unexpected events.
+            {t('iso22301.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as the Accredited Auditor</h3>
+            <h3>{t('iso22301.whatIs.roleBox.title')}</h3>
             <p>
-              MSC CERTIFICATIONS is a fully accredited, independent third-party body. Our role is to audit your Business
-              Continuity Management Systems (BCMS) and determine its compliance with ISO 22301 requirements through
-              objective evidence and structured evaluation.
+              {t('iso22301.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -48,23 +46,23 @@ const ISO22301: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Key Benefits</h2>
+          <h2 className="section-title">{t('iso22301.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Minimize Downtime and Loss</h3>
-              <p>Structured risk analysis and response planning reduce operational and financial impact during crises.</p>
+              <h3>{t('iso22301.benefits.benefit1.title')}</h3>
+              <p>{t('iso22301.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Improve Recovery and Testing</h3>
-              <p>Regularly tested plans ensure your teams respond efficiently when incidents occur.</p>
+              <h3>{t('iso22301.benefits.benefit2.title')}</h3>
+              <p>{t('iso22301.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Build Trust</h3>
-              <p>Prove your resilience to stakeholders, regulators, clients, and insurers.</p>
+              <h3>{t('iso22301.benefits.benefit3.title')}</h3>
+              <p>{t('iso22301.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
@@ -73,31 +71,27 @@ const ISO22301: FC = () => {
       {/* Industry Focus */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industry Focus</h2>
+          <h2 className="section-title">{t('iso22301.industryFocus.title')}</h2>
           <p className="section-intro">
-            Our audits are tailored to your specific industry, including:
+            {t('iso22301.industryFocus.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Finance & Banking</h4>
-              <p>Assure transaction and data availability.</p>
+              <h4>{t('iso22301.industryFocus.finance.title')}</h4>
+              <p>{t('iso22301.industryFocus.finance.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>IT & Hosting</h4>
-              <p>Meet uptime commitments and mitigate cyber risks.</p>
+              <h4>{t('iso22301.industryFocus.healthcare.title')}</h4>
+              <p>{t('iso22301.industryFocus.healthcare.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Telecom</h4>
-              <p>Ensure network reliability and service continuity.</p>
+              <h4>{t('iso22301.industryFocus.it.title')}</h4>
+              <p>{t('iso22301.industryFocus.it.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Logistics</h4>
-              <p>Reduce delivery disruption across your supply chain.</p>
-            </div>
-            <div className="industry-focus-item">
-              <h4>Critical Services</h4>
-              <p>Maintain essential operations under stress.</p>
+              <h4>{t('iso22301.industryFocus.manufacturing.title')}</h4>
+              <p>{t('iso22301.industryFocus.manufacturing.description')}</p>
             </div>
           </div>
         </div>
@@ -106,42 +100,56 @@ const ISO22301: FC = () => {
       {/* MSC Advantage */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Why MSC CERTIFICATIONS?</h2>
+          <h2 className="section-title">{t('iso22301.mscAdvantage.title')}</h2>
           <p className="section-intro">
-            We offer specialist auditors with deep industry expertise. Our audits are practical, business-aligned, and globally recognized.
+            {t('iso22301.mscAdvantage.subtitle')}
           </p>
+
+          <div className="advantage-cards">
+            <div className="advantage-card">
+              <h3>{t('iso22301.mscAdvantage.specializedAuditors.title')}</h3>
+              <p>{t('iso22301.mscAdvantage.specializedAuditors.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso22301.mscAdvantage.practicalAudit.title')}</h3>
+              <p>{t('iso22301.mscAdvantage.practicalAudit.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso22301.mscAdvantage.objectiveCertification.title')}</h3>
+              <p>{t('iso22301.mscAdvantage.objectiveCertification.description')}</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Certification Process */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Certification Process</h2>
+          <h2 className="section-title">{t('iso22301.process.title')}</h2>
+          <p className="section-intro">
+            {t('iso22301.process.subtitle')}
+          </p>
 
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>Application & Quotation</h4>
+              <h4>{t('iso22301.process.step1')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Stage I Audit<br /><span className="process-detail">(Documentation review)</span></h4>
+              <h4>{t('iso22301.process.step2')}<br /><span className="process-detail">{t('iso22301.process.step2Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Stage II Audit<br /><span className="process-detail">(Implementation assessment)</span></h4>
+              <h4>{t('iso22301.process.step3')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>Certification Issuance</h4>
+              <h4>{t('iso22301.process.step4')}<br /><span className="process-detail">{t('iso22301.process.step4Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>Annual Surveillance Audits</h4>
-            </div>
-            <div className="process-step">
-              <div className="process-step-number">6</div>
-              <h4>Re-certification<br /><span className="process-detail">(Year 3)</span></h4>
+              <h4>{t('iso22301.process.step5')}<br /><span className="process-detail">{t('iso22301.process.step5Detail')}</span></h4>
             </div>
           </div>
         </div>
@@ -150,12 +158,15 @@ const ISO22301: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Ready to certify your business continuity?</h2>
+          <h2>{t('iso22301.cta.title')}</h2>
+          <p>
+            {t('iso22301.cta.description')}
+          </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your ISO 22301 Assessment Today</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso22301.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC Certifications are fully accredited and globally recognized.
+            {t('iso22301.cta.footer')}
           </p>
         </div>
       </section>

@@ -1,21 +1,24 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 const MissionVision: FC = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="about">
             <Helmet>
-                <title>Mission & Vision - MSC Certifications</title>
-                <meta name="description" content="Discover the mission and vision of MSC Certifications. We empower organizations to achieve international excellence through accredited certification services." />
+                <title>{t('meta.missionVision.title')}</title>
+                <meta name="description" content={t('meta.missionVision.description')} />
             </Helmet>
 
             {/* Hero Section */}
             <section className="about-hero">
                 <div className="container">
-                    <h1>Mission & Vision</h1>
+                    <h1>{t('missionVision.title')}</h1>
                     <p className="about-subtitle">
-                        Driving Excellence Through International Standards
+                        {t('missionVision.vision.description')}
                     </p>
                 </div>
             </section>
@@ -25,32 +28,15 @@ const MissionVision: FC = () => {
                 <div className="container">
                     <div className="mission-vision-grid">
                         <div className="mission-card">
-                            <h3>Our Mission</h3>
-                            <p>
-                                At MSC Certifications, our mission is to empower organizations to achieve international
-                                excellence through accredited certification, inspection, and training services.
-                            </p>
-                            <p>
-                                We are committed to providing objective, transparent, and technically competent
-                                assessments that strengthen client confidence, improve performance, and promote
-                                sustainable development.
-                            </p>
-                            <p className="highlight-text">
-                                We believe certification is more than a document. It's a tool for continuous improvement
-                                and global recognition.
-                            </p>
+                            <h3>{t('missionVision.mission.title')}</h3>
+                            <p>{t('missionVision.mission.description1')}</p>
+                            <p>{t('missionVision.mission.description2')}</p>
+                            <p className="highlight-text">{t('missionVision.mission.description3')}</p>
                         </div>
 
                         <div className="vision-card">
-                            <h3>Our Vision</h3>
-                            <p>
-                                To be recognized as a leading certification and compliance body in the region, known for
-                                credibility, professionalism, and client trust.
-                            </p>
-                            <p>
-                                We aim to set the benchmark for integrity, expertise, and value-added certification,
-                                helping businesses of all sizes compete confidently in international markets.
-                            </p>
+                            <h3>{t('missionVision.vision.title')}</h3>
+                            <p>{t('missionVision.vision.description')}</p>
                         </div>
                     </div>
                 </div>
@@ -59,27 +45,27 @@ const MissionVision: FC = () => {
             {/* Core Values */}
             <section className="section section-gray">
                 <div className="container">
-                    <h2 className="section-title">Our Core Values</h2>
+                    <h2 className="section-title">{t('missionVision.coreValues.title')}</h2>
                     <div className="values-grid">
                         <div className="value-card">
-                            <h4>Integrity</h4>
-                            <p>Acting impartially and ethically in every audit and decision.</p>
+                            <h4>{t('missionVision.coreValues.integrity.title')}</h4>
+                            <p>{t('missionVision.coreValues.integrity.description')}</p>
                         </div>
                         <div className="value-card">
-                            <h4>Competence</h4>
-                            <p>Using qualified experts specialized in each industry sector.</p>
+                            <h4>{t('missionVision.coreValues.competence.title')}</h4>
+                            <p>{t('missionVision.coreValues.competence.description')}</p>
                         </div>
                         <div className="value-card">
-                            <h4>Transparency</h4>
-                            <p>Communicating clearly and honestly with clients.</p>
+                            <h4>{t('missionVision.coreValues.transparency.title')}</h4>
+                            <p>{t('missionVision.coreValues.transparency.description')}</p>
                         </div>
                         <div className="value-card">
-                            <h4>Continuous Improvement</h4>
-                            <p>Adapting to evolving standards and best practices.</p>
+                            <h4>{t('missionVision.coreValues.continuousImprovement.title')}</h4>
+                            <p>{t('missionVision.coreValues.continuousImprovement.description')}</p>
                         </div>
                         <div className="value-card">
-                            <h4>Customer Focus</h4>
-                            <p>Providing professional and responsive service.</p>
+                            <h4>{t('missionVision.coreValues.clientFocus.title')}</h4>
+                            <p>{t('missionVision.coreValues.clientFocus.description')}</p>
                         </div>
                     </div>
                 </div>
@@ -88,12 +74,10 @@ const MissionVision: FC = () => {
             {/* CTA Section */}
             <section className="section section-cta-final">
                 <div className="container">
-                    <h2>Ready to Start Your Certification Journey?</h2>
-                    <p>
-                        Partner with MSC Certifications and experience our commitment to excellence firsthand.
-                    </p>
+                    <h2>{t('common.contactUs')}</h2>
+                    <p>{t('about.commitment.description')}</p>
                     <div className="cta-buttons">
-                        <Link to="/contact" className="btn btn-primary-large">Contact Us Today</Link>
+                        <Link to="/contact" className="btn btn-primary-large">{t('nav.contactUs')}</Link>
                     </div>
                 </div>
             </section>

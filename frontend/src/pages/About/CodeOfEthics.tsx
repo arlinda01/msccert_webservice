@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import {
     FaBalanceScale,
     FaLock,
@@ -8,21 +9,26 @@ import {
     FaHandshake,
     FaGavel
 } from 'react-icons/fa';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const CodeOfEthics: FC = () => {
+    const { t, i18n } = useTranslation();
+    const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
     return (
         <div className="about">
             <Helmet>
-                <title>Code of Ethics - MSC Certifications</title>
-                <meta name="description" content="Discover MSC Certifications' Code of Ethics. We are committed to impartiality, confidentiality, objectivity, and professional conduct in all our engagements." />
+                <title>{t('meta.codeOfEthics.title')}</title>
+                <meta name="description" content={t('meta.codeOfEthics.description')} />
+                <meta name="keywords" content={t('meta.codeOfEthics.keywords')} />
             </Helmet>
 
             {/* Hero Section */}
             <section className="about-hero">
                 <div className="container">
-                    <h1>Code of Ethics</h1>
+                    <h1>{t('codeOfEthics.title')}</h1>
                     <p className="about-subtitle">
-                        Integrity and Trust in Every Engagement
+                        {t('codeOfEthics.intro.title')}
                     </p>
                 </div>
             </section>
@@ -31,11 +37,7 @@ const CodeOfEthics: FC = () => {
             <section className="section section-white">
                 <div className="container">
                     <p className="about-text centered">
-                        Ethics and integrity are at the core of how MSC Certifications operates.
-                    </p>
-                    <p className="about-text centered">
-                        Our Code of Ethics defines the standards of behavior expected from all employees, auditors, and
-                        representatives, ensuring fairness, confidentiality, and respect in every engagement.
+                        {t('codeOfEthics.intro.description')}
                     </p>
                 </div>
             </section>
@@ -43,16 +45,16 @@ const CodeOfEthics: FC = () => {
             {/* Ethical Commitments */}
             <section className="section section-gray">
                 <div className="container">
-                    <h2 className="section-title">Our Ethical Commitments</h2>
+                    <h2 className="section-title">{t('codeOfEthics.commitments.title')}</h2>
 
                     <div className="ethics-grid">
                         <div className="ethics-card">
                             <div className="ethics-icon">
                                 <FaBalanceScale />
                             </div>
-                            <h4>Impartiality</h4>
+                            <h4>{t('codeOfEthics.commitments.impartiality.title')}</h4>
                             <p>
-                                Certification decisions are made independently of any commercial or personal interest.
+                                {t('codeOfEthics.commitments.impartiality.description')}
                             </p>
                         </div>
 
@@ -60,9 +62,9 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaLock />
                             </div>
-                            <h4>Confidentiality</h4>
+                            <h4>{t('codeOfEthics.commitments.confidentiality.title')}</h4>
                             <p>
-                                All client information is handled securely and used only for legitimate purposes.
+                                {t('codeOfEthics.commitments.confidentiality.description')}
                             </p>
                         </div>
 
@@ -70,9 +72,9 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaSearch />
                             </div>
-                            <h4>Objectivity</h4>
+                            <h4>{t('codeOfEthics.commitments.objectivity.title')}</h4>
                             <p>
-                                Audits and evaluations are evidence-based and transparent.
+                                {t('codeOfEthics.commitments.objectivity.description')}
                             </p>
                         </div>
 
@@ -80,9 +82,9 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaHandshake />
                             </div>
-                            <h4>Respect and Professional Conduct</h4>
+                            <h4>{t('codeOfEthics.commitments.professionalism.title')}</h4>
                             <p>
-                                We treat clients, colleagues, and partners with fairness and courtesy.
+                                {t('codeOfEthics.commitments.professionalism.description')}
                             </p>
                         </div>
 
@@ -90,10 +92,9 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaGavel />
                             </div>
-                            <h4>Compliance with Law</h4>
+                            <h4>{t('codeOfEthics.legalCompliance.title')}</h4>
                             <p>
-                                We operate in accordance with national and international regulations, accreditation
-                                requirements, and data protection laws.
+                                {t('codeOfEthics.legalCompliance.description')}
                             </p>
                         </div>
                     </div>
@@ -105,8 +106,7 @@ const CodeOfEthics: FC = () => {
                 <div className="container">
                     <div className="ethics-footer">
                         <p>
-                            By following these principles, MSC Certifications ensures trust, credibility, and
-                            professional integrity in every project.
+                            {t('codeOfEthics.conclusion')}
                         </p>
                     </div>
                 </div>
@@ -115,12 +115,12 @@ const CodeOfEthics: FC = () => {
             {/* CTA Section */}
             <section className="section section-cta-final">
                 <div className="container">
-                    <h2>Work with a Partner You Can Trust</h2>
+                    <h2>{t('codeOfEthics.cta.title')}</h2>
                     <p>
-                        Experience ethical, transparent, and professional certification services.
+                        {t('codeOfEthics.cta.description')}
                     </p>
                     <div className="cta-buttons">
-                        <Link to="/contact" className="btn btn-primary-large">Contact Us Today</Link>
+                        <Link to={routes.contact[currentLang]} className="btn btn-primary-large">{t('common.contactUs')}</Link>
                     </div>
                 </div>
             </section>

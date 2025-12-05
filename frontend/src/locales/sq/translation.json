@@ -35,6 +35,8 @@
     "quickLinks": "Lidhje të Shpejta",
     "services": "Shërbimet",
     "contact": "Kontakti",
+    "phone": "Telefon",
+    "address": "Adresa",
     "allRightsReserved": "Të gjitha të drejtat e rezervuara.",
     "termsConditions": "Kushtet & Rregullat",
     "privacyPolicy": "Politika e Privatësisë"
@@ -49,6 +51,1433 @@
     "success": "Sukses",
     "back": "Kthehu",
     "next": "Tjetri",
-    "close": "Mbyll"
+    "close": "Mbyll",
+    "requestFreeConsultation": "Kërkoni Konsultim Falas",
+    "getFreeAssessment": "Merrni Vlerësim Online Falas",
+    "viewAllServices": "Shih të Gjitha Shërbimet",
+    "requestQuote": "Kërkoni Ofertë të Detajuar & Vlerësim Falas",
+    "contactUs": "Na Kontaktoni"
+  },
+  "meta": {
+    "home": {
+      "title": "Certifikim ISO & Auditime të Përputhshmërisë | MSC CERTIFICATIONS",
+      "description": "Shërbime të akredituara për certifikim ISO, të përshtatura sipas industrisë suaj. Ulni rreziqet, rrisni efikasitetin dhe fitoni besimin e tregut me MSC CERTIFICATIONS. Filloni me një vlerësim falas.",
+      "keywords": "certifikim ISO, auditim përputhshmërie, certifikim i akredituar, audit ISO Shqipëri, ISO 9001, ISO 45001, ISO 14001, MSC Certifications"
+    },
+    "about": {
+      "title": "Rreth MSC CERTIFICATIONS | Ekspertë të Akredituar nga DPA në Certifikim ISO",
+      "description": "MSC CERTIFICATIONS — trup certifikimi i akredituar nga DPA (anëtare e IAF & EA). Operon që nga viti 2024, me shërbime ISO, CE Marking dhe auditime me njohje globale.",
+      "keywords": "MSC Certifications, DPA Shqipëri, akreditim ndërkombëtar, IAF, EA, certifikim ISO, auditim përputhshmërie, trup certifikimi i akredituar, CE Marking, certifikim Shqipëri"
+    },
+    "missionVision": {
+      "title": "Misioni & Vizioni | MSC CERTIFICATIONS",
+      "description": "Misioni i MSC CERTIFICATIONS është të fuqizojë bizneset për të arritur ekselencë ndërkombëtare përmes certifikimit të akredituar, transparencës dhe profesionalizmit.",
+      "keywords": "misioni MSC Certifications, vizioni MSC Certifications, vlerat e kompanisë, certifikim ISO, akreditim ndërkombëtar, trup certifikimi, integritet profesional, trajnime ISO, përmirësim i vazhdueshëm"
+    },
+    "qualityPolicy": {
+      "title": "Politika e Cilësisë | MSC CERTIFICATIONS",
+      "description": "MSC CERTIFICATIONS garanton cilësi, paanshmëri dhe profesionalizëm në përputhje me ISO/IEC 17021 dhe kërkesat e DPA, IAF dhe EA, me fokus në përmirësim të vazhdueshëm.",
+      "keywords": "politika e cilësisë, ISO/IEC 17021, DPA Shqipëri, akreditim ndërkombëtar, trup certifikimi, audit cilësie, paanshmëri, integritet, përmirësim i vazhdueshëm, menaxhim cilësie"
+    },
+    "codeOfEthics": {
+      "title": "Kodi i Etikës | MSC CERTIFICATIONS",
+      "description": "Kodi i Etikës i MSC CERTIFICATIONS përcakton parimet e integritetit, paanshmërisë dhe profesionalizmit në çdo auditim, certifikim dhe bashkëpunim.",
+      "keywords": "kodi i etikës, etika profesionale, integritet, paanshmëri, konfidencialitet, trup certifikimi, etika në auditim, rregullat e sjelljes, përputhshmëri ligjore, MSC Certifications"
+    },
+    "accreditation": {
+      "title": "Akreditimi | MSC CERTIFICATIONS | DPA, IAF & EA",
+      "description": "MSC CERTIFICATIONS është e akredituar nga DPA (anëtare e IAF & EA). Akreditimi ISO/IEC 17021 garanton certifikim të besueshëm, të paanshëm dhe të njohur globalisht.",
+      "keywords": "akreditim, DPA Shqipëri, IAF, EA, ISO/IEC 17021, trup certifikimi i akredituar, certifikim ndërkombëtar, paanshmëri, besueshmëri, MSC Certifications"
+    },
+    "faq": {
+      "title": "Pyetje të Shpeshta | Certifikim ISO & Përputhshmëri | MSC CERTIFICATIONS",
+      "description": "Pyetje të shpeshta rreth certifikimit ISO, CE Marking dhe auditimeve. Mësoni si funksionon procesi, kostot dhe përfitimet me MSC CERTIFICATIONS.",
+      "keywords": "pyetje të shpeshta, certifikim ISO, auditim ISO, CE Marking, trup certifikimi, akreditim DPA, certifikim ndërkombëtar, auditim përputhshmërie, ISO Shqipëri"
+    },
+    "termsConditions": {
+      "title": "Kushtet dhe Afatet e Përdorimit | MSC Certifications",
+      "description": "Lexoni kushtet dhe afatet që rregullojnë përdorimin e faqes dhe shërbimeve të MSC Certifications me qendër në Tiranë, Shqipëri."
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Partneri Juaj për Certifikim ISO, Përputhshmëri dhe Menaxhim Risku",
+      "subtitle": "Siguroni të ardhmen e biznesit tuaj. MSC CERTIFICATIONS ofron shërbime të akredituara dhe me vlerë të shtuar për certifikim ISO, që ju ndihmojnë të minimizoni rreziqet, të rrisni efikasitetin operativ dhe të fitoni besimin e tregut."
+    },
+    "heroFeatures": {
+      "globallyAccredited": "Akreditim Global",
+      "expertAuditors": "Auditorë Ekspertë",
+      "fastCertification": "Certifikim i Shpejtë",
+      "localSupport": "Mbështetje Lokale"
+    },
+    "mscDifference": {
+      "title": "Dallimi MSC: Pse të Zgjidhni Auditet Tona të Specializuara?",
+      "subtitle": "MSC CERTIFICATIONS garanton ekspertizë të thellë dhe të përshtatur për secilën industri.",
+      "specializedAuditors": {
+        "title": "Auditues të specializuar",
+        "description": "Caktojmë auditues sipas sektorit dhe llojit të certifikimit, në mënyrë që gjetjet të jenë reale dhe të zbatueshme për aktivitetin tuaj."
+      },
+      "regulatoryExpertise": {
+        "title": "Ekspertizë rregullatore",
+        "description": "Vlerësojmë sistemet tuaja në dritën e kërkesave ligjore dhe kërkesave të tregut, veçanërisht në kontekstin e tenderëve dhe prokurimit publik."
+      },
+      "valueAudit": {
+        "title": "Audit që sjell vlerë",
+        "description": "Identifikojmë mundësi për optimizim procesesh dhe kursim kostosh, duke e kthyer auditimin në investim biznesi, jo thjesht në detyrim formal."
+      }
+    },
+    "certificationPortfolio": {
+      "title": "Portofoli Ynë Kryesor i Certifikimeve: Standarde Globale, Sukses Lokal",
+      "subtitle": "Ne certifikojmë sistemet që ndërtojnë besim dhe qëndrueshmëri, duke siguruar që ju të përmbushni praktikat më të mira ndërkombëtare dhe të mbeteni konkurrues në tregun vendas.",
+      "qualitySafetyEnvironment": "Cilësia, Siguria dhe Mjedisi",
+      "informationResilienceIntegrity": "Informacioni, Qëndrueshmëria dhe Integriteti",
+      "specializedCompliance": "Përputhshmëri e Specializuar dhe Fokusi Sektorial",
+      "iso9001": {
+        "title": "ISO 9001 (Menaxhimi i Cilësisë)",
+        "description": "Korniza për funksionim të qëndrueshëm, reduktim gabimesh dhe kualifikim për kontrata të mëdha e tendera publikë."
+      },
+      "iso45001": {
+        "title": "ISO 45001 (Shëndeti & Siguria në Punë)",
+        "description": "Standard ndërkombëtar për parandalimin e aksidenteve dhe mbrojtjen e stafit, duke reduktuar rreziqet ligjore dhe kostot e sigurimit."
+      },
+      "iso14001": {
+        "title": "ISO 14001 (Menaxhimi Mjedisor)",
+        "description": "Tregon përgjegjësi sociale, përputhje ligjore dhe ulje të kostove afatgjata përmes menaxhimit të burimeve."
+      },
+      "iso27001": {
+        "title": "ISO/IEC 27001 (Siguria e Informacionit)",
+        "description": "Mbrojtje e të dhënave dhe e infrastrukturës IT, duke garantuar përputhshmëri me GDPR dhe besim të plotë nga klientët."
+      },
+      "iso22301": {
+        "title": "ISO 22301 (Vazhdimësia e Biznesit)",
+        "description": "Siguron që organizata juaj të rikuperohet shpejt pas ndërprerjeve, duke minimizuar humbjet financiare."
+      },
+      "iso37001": {
+        "title": "ISO 37001 (Anti-Korrupsion)",
+        "description": "Sistem për parandalimin dhe zbulimin e korrupsionit — thelbësor për reputacion të pastër dhe pjesëmarrje në tendera publikë."
+      },
+      "iso22000": {
+        "title": "ISO 22000 (Siguria Ushqimore)",
+        "description": "Garanton gjurmueshmëri dhe cilësi për hyrje në tregje të rregulluara dhe bashkëpunim me HORECA."
+      },
+      "iso39001": {
+        "title": "ISO 39001 (Siguria Rrugore)",
+        "description": "Zvogëlon aksidentet dhe kostot operative për kompani me flota automjetesh."
+      },
+      "iso50001": {
+        "title": "ISO 50001 (Menaxhimi i Energjisë)",
+        "description": "Optimizon konsumin e energjisë dhe ul ndjeshëm faturat, duke treguar performancë të matshme."
+      },
+      "ceMarking": {
+        "title": "CE Marking (Përputhshmëria e Produkteve)",
+        "description": "Shenja ligjore që lejon shitjen dhe qarkullimin e lirë të produkteve në tregun europian."
+      }
+    },
+    "specializedSolutions": {
+      "title": "Zgjidhje të Specializuara për Biznesin: Përtej Certifikimit",
+      "subtitle": "Ne ofrojmë shërbime të integruara që rrisin kompetencën dhe kontrollin operacional:",
+      "energyEfficiency": {
+        "title": "Programet e Efiçencës Energjetike",
+        "description": "Analizë dhe reduktim i konsumit të energjisë në ndërtesa dhe procese industriale, si dhe Krijimi i kartave teknologjike të procesit të prodhimit."
+      },
+      "staffTraining": {
+        "title": "Trajnime Profesionale",
+        "description": "Programe të bazuara në role dhe standarde ISO për rritjen e produktivitetit dhe përputhshmërisë me rregullat e sigurisë."
+      },
+      "professionalCards": {
+        "title": "Kartat Profesionale",
+        "description": "Certifikime personale për sektorë profesional që vërtetojnë menjëherë kompetencën profesionale."
+      },
+      "techAssessment": {
+        "title": "Vlerësim Teknik & Pajisjesh",
+        "description": "Inspektim teknik i makinerive dhe linjave industriale për certifikim, siguri dhe planifikim investimesh."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokus Sektorial: Auditori i Besuar i Industrisë Suaj",
+      "subtitle": "Suksesi në certifikim kërkon njohuri specifike sektoriale. Ne jemi zgjedhja e besuar për liderët në sektorët me risk të lartë dhe rregullime të rrepta:",
+      "construction": {
+        "title": "Ndërtim & Infrastrukturë",
+        "description": "Menaxhim risku, siguri produktesh dhe kontroll cilësie për projekte kapitale."
+      },
+      "foodHoreca": {
+        "title": "Ushqim & HORECA",
+        "description": "Siguri zinxhiri furnizimi nga prodhimi deri te konsumatori."
+      },
+      "itTelecom": {
+        "title": "IT & Telekomunikacion",
+        "description": "Mbrojtje të dhënash dhe vazhdimësi shërbimi në ekonominë digjitale."
+      },
+      "manufacturingEnergy": {
+        "title": "Prodhim & Energjitikë",
+        "description": "Optimizim procesesh, ulje kostosh dhe përputhshmëri me rregulloret mjedisore."
+      },
+      "publicSector": {
+        "title": "Sektor Publik & Tendera",
+        "description": "Demonstrim i cilësisë, integritetit dhe sigurisë (ISO 9001, ISO 37001)."
+      }
+    },
+    "faq": {
+      "title": "Pyetje të Shpeshta (FAQ)",
+      "q1": {
+        "question": "Sa zgjat procesi i certifikimit ISO?",
+        "answer": "Kohëzgjatja e procesit varet nga madhësia e kompanisë (njësitë që do të certifikohen, numri i punonjësve), kompleksiteti i proceseve. Në praktikë, grupit të auditimit i duhen minimalisht disa dite por edhe javë punë."
+      },
+      "q2": {
+        "question": "Sa kushton certifikimi ISO?",
+        "answer": "Çmimi i certifikimit varet nga lloji apo sistemet ISO që kërkoni të integroni (një standard i vetëm apo disa standarde të integruara së bashku). Kompleksiteti i tyre bashkuar me kohëzgjatjen e procesit të auditimit përcaktojnë vlerën monetare të tij."
+      },
+      "q3": {
+        "question": "A ofron MSC CERTIFICATIONS konsulencë për të implementuar ISO?",
+        "answer": "Jo. MSC CERTIFICATIONS, si trup certifikues, nuk ofron konsulencë për implementimin e sistemit të menaxhimit tek klientët e vet, për të ruajtur paanshmërinë dhe përputhjen me kërkesat e ISO/IEC 17021. Ne mund të shpjegojmë kërkesat e standardit dhe gjetjet e auditit, por jo të ndërtojmë sistemin në vendin tuaj."
+      },
+      "q4": {
+        "question": "A ofron MSC CERTIFICATIONS audite të integruara për disa standarde njëkohësisht?",
+        "answer": "Po. Kur është e arsyeshme dhe e mundur, ne kombinojmë auditimin e disa standardeve në një audit të integruar, për të shmangur dublikimet dhe për të ulur ngarkesën operative për klientin."
+      },
+      "q5": {
+        "question": "A mund të transferoj certifikatën nga një trup tjetër certifikues?",
+        "answer": "Po, MSC CERTIFICATIONS mund të pranojë transferimin e certifikatave nga trupa të tjerë të akredituar, nëse plotësohen disa kushte (vlefshmëria e certifikatës ekzistuese, statusi i mospërputhjeve, dokumentacioni i auditit etj.). Procesi i transferimit vlerësohet rast pas rasti."
+      },
+      "q6": {
+        "question": "A mund të kryhet auditi edhe në mënyrë remote (online)?",
+        "answer": "Po, në disa raste dhe sipas rregullave të akreditimit, një pjesë e auditit mund të kryhet remote, veçanërisht për shqyrtim dokumentacioni. Aktivitetet kritike në terren kërkojnë prezencë fizike."
+      }
+    },
+    "cta": {
+      "title": "Filloni Udhëtimin Tuaj Drejt Cilësisë dhe Besimit",
+      "description": "Bashkohuni me dhjetëra kompani në rajon që i besojnë MSC CERTIFICATIONS për të transformuar mënyrën si funksionojnë. Ofronim një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.",
+      "accreditedNote": "Të gjitha certifikatat tona janë të akredituara ndërkombëtarisht, duke garantuar njohje globale."
+    }
+  },
+  "about": {
+    "title": "RRETH MSC CERTIFICATIONS",
+    "subtitle": "Partneri Juaj i Besuar në Standarde Ndërkombëtare dhe Përputhshmëri",
+    "intro": "Në një botë ku cilësia, siguria dhe përputhshmëria përcaktojnë suksesin e çdo biznesi, MSC CERTIFICATIONS qëndron si partneri juaj i besueshëm për arritjen e standardeve të njohura ndërkombëtarisht.",
+    "description1": "MSC CERTIFICATIONS operon që nga viti 2024 dhe është një trup certifikimi dhe vlerësimi i akredituar nga Drejtoria e Përgjithshme e Akreditimit (DPA) — institucioni zyrtar kombëtar i akreditimit në Shqipëri, i cili është anëtar i plotë i IAF (International Accreditation Forum) dhe i European Accreditation (EA).",
+    "description2": "Ky akreditim siguron që të gjitha certifikatat e lëshuara nga MSC CERTIFICATIONS janë të njohura ndërkombëtarisht, në përputhje me standardet globale të cilësisë, paanshmërisë dhe besueshmërisë.",
+    "description3": "Ne ofrojmë një portofol të plotë shërbimesh në certifikim ISO, CE Marking dhe vlerësime teknike, gjithmonë me profesionalizëm, transparencë dhe ekspertizë lokale.",
+    "whoWeAre": {
+      "title": "Kush Jemi Ne",
+      "description1": "MSC CERTIFICATIONS është një organizatë e akredituar që ofron shërbime inspektimi, auditimi dhe certifikimi sipas standardeve ndërkombëtare.",
+      "description2": "Misioni ynë është të ndihmojmë organizatat të përmbushin kërkesat globale të përputhshmërisë, të përmirësojnë efikasitetin operativ dhe të forcojnë pozicionin e tyre konkurrues në treg.",
+      "description3": "Përmes një ekipi auditorësh dhe ekspertësh teknikë të kualifikuar me pervojë shumëvjeçare ndërkombëtare, ne ofrojmë shërbime të besueshme, objektive dhe të aplikueshme në praktikë."
+    },
+    "missionValues": {
+      "title": "Misioni dhe Vlerat Tona",
+      "integrity": {
+        "title": "Integritet & Paanshmëri",
+        "description": "Çdo proces auditimi dhe certifikimi zhvillohet në mënyrë të drejtë, objektive dhe të bazuar në prova."
+      },
+      "expertise": {
+        "title": "Ekspertizë & Profesionalizëm",
+        "description": "Auditorët tanë janë specialistë të certifikuar në sektorët ku operojnë."
+      },
+      "improvement": {
+        "title": "Përmirësim i Vazhdueshëm",
+        "description": "Ne i ndihmojmë klientët tanë të mos kufizohen vetëm te përputhshmëria, por të evoluojnë dhe rriten qëndrueshëm."
+      },
+      "trust": {
+        "title": "Besim & Transparencë",
+        "description": "Marrëdhëniet tona afatgjata ndërtohen mbi besueshmëri dhe qartësi në çdo bashkëpunim."
+      }
+    },
+    "services": {
+      "title": "Shërbimet Tona",
+      "isoCertification": {
+        "title": "Certifikim ISO",
+        "description": "Ne ofrojmë certifikim të akredituar për një gamë të gjerë standardesh ndërkombëtare, përfshirë:"
+      },
+      "additionalServices": {
+        "title": "Shërbime Teknike & Shtesë",
+        "description": "Përtej certifikimit, ne ofrojmë shërbime të specializuara që forcojnë përputhshmërinë dhe kontrollin operacional, si:",
+        "note": "Çdo shërbim është projektuar për të ofruar vlerë të matshme, përmirësim të vazhdueshëm dhe qëndrueshmëri reale për biznesin tuaj."
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pse të Zgjidhni MSC CERTIFICATIONS",
+      "reason1": "Ekspertizë e specializuar sipas sektorit",
+      "reason2": "Çmime të drejta dhe transparente",
+      "reason3": "Procese efikase sipas rregullave ndërkombëtare",
+      "reason4": "Certifikata të njohura globalisht nga autoritete dhe partnerë"
+    },
+    "commitment": {
+      "title": "Angazhimi Ynë",
+      "description": "Që nga viti 2024, MSC CERTIFICATIONS ka ndihmuar kompani dhe institucione të operojnë me besim, cilësi dhe integritet, duke kthyer standardet komplekse në rezultate të qarta dhe të matshme."
+    }
+  },
+  "missionVision": {
+    "title": "Misioni & Vizioni",
+    "mission": {
+      "title": "Misioni Ynë",
+      "description1": "Në MSC CERTIFICATIONS, misioni ynë është të fuqizojmë organizatat për të arritur ekselencë ndërkombëtare përmes certifikimit të akredituar, inspektimeve dhe trajnimeve profesionale.",
+      "description2": "Ne jemi të përkushtuar të ofrojmë vlerësime objektive, transparente dhe teknikisht të besueshme, të cilat forcojnë besimin e klientëve, përmirësojnë performancën organizative dhe nxisin zhvillimin e qëndrueshëm.",
+      "description3": "Besojmë se certifikimi nuk është thjesht një dokument, por një mjet për përmirësim të vazhdueshëm dhe njohje globale."
+    },
+    "vision": {
+      "title": "Vizioni Ynë",
+      "description": "Synimi ynë është të vendosim standardin e integritetit, ekspertizës dhe certifikimit me vlerë të shtuar, duke ndihmuar bizneset e çdo madhësie të konkurojnë me besim në tregjet ndërkombëtare."
+    },
+    "coreValues": {
+      "title": "Vlerat Themelore",
+      "integrity": {
+        "title": "Integritet",
+        "description": "Veprojmë në mënyrë të paanshme dhe etike në çdo audit dhe vendim."
+      },
+      "competence": {
+        "title": "Kompetencë",
+        "description": "Përdorim ekspertë të kualifikuar, të specializuar sipas sektorit të industrisë."
+      },
+      "transparency": {
+        "title": "Transparencë",
+        "description": "Komunikojmë qartë, hapur dhe me ndershmëri me çdo klient."
+      },
+      "continuousImprovement": {
+        "title": "Përmirësim i Vazhdueshëm",
+        "description": "Përshtatemi me zhvillimet e standardeve ndërkombëtare dhe praktikave më të mira."
+      },
+      "clientFocus": {
+        "title": "Fokus te Klienti",
+        "description": "Ofrim profesional dhe reagim të shpejtë ndaj nevojave të klientëve tanë."
+      }
+    }
+  },
+  "qualityPolicy": {
+    "title": "Politika e Cilësisë",
+    "commitment": {
+      "title": "Angazhimi ndaj Cilësisë",
+      "description1": "Në MSC CERTIFICATIONS, jemi të përkushtuar të ofrojmë shërbime të akredituara certifikimi dhe vlerësimi që përmbushin standardet më të larta të cilësisë, paanshmërisë dhe profesionalizmit.",
+      "description2": "Ne besojmë se cilësia nuk është një qëllim, por një proces i vazhdueshëm përmirësimi. Përmes politikës sonë të cilësisë, sigurojmë që çdo shërbim të jetë në përputhje me kërkesat e trupave ndërkombëtarë të akreditimit dhe të ofrojë vlerë të matshme dhe besueshmëri reale për klientët tanë."
+    },
+    "objectives": {
+      "title": "Objektivat e Cilësisë",
+      "compliance": {
+        "title": "1. Përputhshmëri me Standardet Ndërkombëtare",
+        "description": "Të gjitha aktivitetet e certifikimit dhe auditimit zhvillohen në përputhje me ISO/IEC 17021 dhe kërkesat e akreditimit të përcaktuara nga Drejtoria e Përgjithshme e Akreditimit (DPA), IAF dhe EA. Kjo garanton që certifikatat e lëshuara nga MSC CERTIFICATIONS janë të vlefshme dhe të njohura globalisht."
+      },
+      "competence": {
+        "title": "2. Kompetenca e Personelit",
+        "description": "Sigurojmë që të gjithë auditorët, inspektorët dhe ekspertët teknikë të jenë të kualifikuar, trajnuar rregullisht dhe të operojnë sipas praktikave më të mira ndërkombëtare. Përmirësimi i vazhdueshëm i kompetencës është thelbësor për cilësinë e shërbimeve tona."
+      },
+      "satisfaction": {
+        "title": "3. Kënaqësia e Klientëve",
+        "description": "Vlerësojmë besimin e klientëve tanë si treguesin kryesor të cilësisë. Matim performancën përmes feedback-ut të rregullt, analizojmë rezultatet dhe zbatojmë veprime për përmirësim të vazhdueshëm."
+      },
+      "impartiality": {
+        "title": "4. Paanshmëri dhe Integritet",
+        "description": "Vendimet tona merren ekskluzivisht mbi bazën e provave objektive, të pavarura nga çdo interes financiar apo personal. Ruajtja e integritetit profesional është themeli i çdo auditimi dhe certifikimi që kryejmë."
+      }
+    },
+    "continuousImprovement": {
+      "title": "Përmirësim i Vazhdueshëm",
+      "description": "MSC CERTIFICATIONS angazhohet të monitorojë, analizojë dhe përmirësojë vazhdimisht sistemin e menaxhimit të cilësisë, për të siguruar që ai mbetet efektiv, transparent dhe i përputhur me standardet ndërkombëtare më të fundit.",
+      "note": "Ky përkushtim siguron besim, objektivitet dhe vlerë të shtuar për çdo klient dhe partner që zgjedh MSC CERTIFICATIONS."
+    },
+    "cta": {
+      "title": "Përjetoni Angazhimin Tonë ndaj Cilësisë",
+      "description": "Bashkëpunoni me një trup certifikimi që e vendos cilësinë në qendër të çdo gjëje që bën."
+    }
+  },
+  "codeOfEthics": {
+    "title": "Kodi i Etikës",
+    "intro": {
+      "title": "Parimet Etike",
+      "description": "Etika dhe integriteti janë në thelb të mënyrës se si MSC CERTIFICATIONS vepron. Kodi ynë i Etikës përcakton standardet e sjelljes që priten nga të gjithë punonjësit, auditorët dhe përfaqësuesit tanë, duke siguruar paanshmëri, konfidencialitet dhe respekt në çdo bashkëpunim profesional."
+    },
+    "commitments": {
+      "title": "Angazhimet Tona Etike",
+      "impartiality": {
+        "title": "Paanshmëri",
+        "description": "Vendimet për certifikim merren në mënyrë të pavarur nga çdo interes komercial apo personal."
+      },
+      "confidentiality": {
+        "title": "Konfidencialitet",
+        "description": "Të gjitha informacionet e klientëve ruhen me siguri maksimale dhe përdoren vetëm për qëllime legjitime profesionale."
+      },
+      "objectivity": {
+        "title": "Objektivitet",
+        "description": "Auditimet dhe vlerësimet mbështeten në prova të verifikueshme dhe në një proces të dokumentuar e transparent."
+      },
+      "professionalism": {
+        "title": "Profesionalizëm",
+        "description": "Të gjitha marrëdhëniet me klientët, kolegët dhe partnerët zhvillohen me respekt, korrektësi dhe integritet, duke siguruar një klimë bashkëpunimi profesionale dhe të besueshme."
+      }
+    },
+    "legalCompliance": {
+      "title": "Përputhje me Ligjin",
+      "description": "Veprimtaria zhvillohet në përputhje me legjislacionin kombëtar dhe ndërkombëtar në fuqi, kërkesat e akreditimit, standardet përkatëse dhe rregullat për mbrojtjen e të dhënave personale."
+    },
+    "conclusion": "Duke ndjekur këto parime, MSC CERTIFICATIONS garanton besueshmëri, integritet profesional dhe transparencë në çdo projekt, audit dhe certifikim që kryen.",
+    "cta": {
+      "title": "Punoni me një Partner të Besuar",
+      "description": "Përjetoni shërbime certifikimi etike, transparente dhe profesionale."
+    }
+  },
+  "accreditation": {
+    "title": "Akreditimi Ynë — Garancia Juaj për Besueshmëri",
+    "subtitle": "Garancia Juaj për Kredibilitet dhe Njohje Globale",
+    "intro": {
+      "description1": "MSC CERTIFICATIONS operon nën akreditimin zyrtar të Drejtorisë së Përgjithshme të Akreditimit (DPA) — institucioni kombëtar përgjegjës për akreditimin në Shqipëri.",
+      "description2": "DPA është anëtare e plotë e IAF (International Accreditation Forum) dhe e EA (European Cooperation for Accreditation). Kjo do të thotë se të gjitha certifikatat e lëshuara nga MSC CERTIFICATIONS janë të njohura ndërkombëtarisht, në përputhje me marrëveshjet e ndërsjella të njohjes (MLA/MRA).",
+      "description3": "Akreditimi vërteton kompetencën teknike, paanshmërinë dhe përputhjen tonë me kërkesat e ISO/IEC 17021 (Certifikimi i Sistemeve të Menaxhimit) dhe standardeve të tjera ndërkombëtare përkatëse. Ai është garancia juaj për profesionalizëm, transparencë dhe cilësi të certifikuar."
+    },
+    "importance": {
+      "title": "Pse Është i Rëndësishëm Akreditimi",
+      "globalRecognition": {
+        "title": "Njohje Globale",
+        "description": "Certifikatat e lëshuara nën akreditim pranohen në mbarë botën, duke siguruar akses ndërkombëtar dhe pranueshmëri rregullatore."
+      },
+      "trustIntegrity": {
+        "title": "Besim dhe Integritet",
+        "description": "Akreditimi rrit besimin e klientëve, autoriteteve dhe partnerëve, duke garantuar objektivitet dhe ndershmëri në çdo vlerësim."
+      },
+      "guaranteedImpartiality": {
+        "title": "Paanshmëri e Garantuar",
+        "description": "Organet e akreditimit monitorojnë në mënyrë të pavarur performancën tonë, duke garantuar neutralitet dhe konsistencë."
+      },
+      "continuousImprovement": {
+        "title": "Përmirësim i Vazhdueshëm",
+        "description": "Vlerësimet periodike nga organet e akreditimit sigurojnë që sistemet tona të jenë gjithmonë efektive, transparente dhe në përputhje me standardet më të fundit ISO dhe IAF."
+      }
+    },
+    "conclusion": "MSC CERTIFICATIONS është krenare për të ruajtur statusin e saj të akredituar ndërkombëtarisht — garancia juaj për cilësi, profesionalizëm dhe besueshmëri globale.",
+    "cta": {
+      "title": "Merrni Certifikim të Njohur Globalisht",
+      "description": "Bashkëpunoni me një trup certifikimi të akredituar të besuar në mbarë botën."
+    }
+  },
+  "faq": {
+    "title": "Pyetje të Shpeshta (FAQ)",
+    "subtitle": "MSC CERTIFICATIONS — Pyetjet Tuaja të Përgjigjura",
+    "intro": "Në MSC CERTIFICATIONS, besojmë se qartësia krijon besim. Më poshtë do të gjeni përgjigjet për pyetjet më të zakonshme rreth certifikimit ISO, CE Marking dhe shërbimeve të përputhshmërisë që ofrojmë. Nëse nuk gjeni pyetjen tuaj këtu, mos hezitoni të na kontaktoni — ekipi ynë është gjithmonë i gatshëm t'ju ndihmojë.",
+    "sections": {
+      "general": {
+        "title": "Pyetje të Përgjithshme",
+        "q1": {
+          "question": "Çfarë bën MSC CERTIFICATIONS?",
+          "answer": "MSC CERTIFICATIONS është një trup certifikimi dhe vlerësimi i akredituar nga DPA, që ofron certifikim ISO, CE Marking dhe shërbime të specializuara të përputhshmërisë. Ne kryejmë audite, vlerësime dhe inspektime për të siguruar që organizata juaj përmbush standardet ndërkombëtare për cilësi, siguri, mjedis dhe përputhshmëri ligjore."
+        },
+        "q2": {
+          "question": "Cilat industri mbuloni?",
+          "answer": "Ne punojmë me klientë në të gjitha industrinë kryesore, përfshirë: prodhimin, ndërtimin, logjistikën, industrinë ushqimore, hotelerinë (HORECA), kujdesin shëndetësor, IT dhe administratën publike."
+        },
+        "q3": {
+          "question": "Sa zgjat procesi i certifikimit?",
+          "answer": "Kohëzgjatja varet nga madhësia dhe kompleksiteti i organizatës suaj dhe nga standardi që dëshironi të certifikoni."
+        },
+        "q4": {
+          "question": "Cili është ndryshimi midis certifikimit dhe konsulencës?",
+          "answer": "Certifikimi është një vlerësim i pavarur që konfirmon përputhjen tuaj me një standard. Konsulenca përfshin ndërtimin e sistemit dhe përgatitjen për certifikim. MSC CERTIFICATIONS ofron vetëm shërbime auditimi dhe certifikimi, jo konsulencë, për të ruajtur paanshmërinë dhe përputhjen me rregullat ndërkombëtare të akreditimit."
+        },
+        "q5": {
+          "question": "A njihen ndërkombëtarisht certifikatat tuaja?",
+          "answer": "Po. Të gjitha certifikatat e lëshuara nga MSC CERTIFICATIONS janë të akredituara ndërkombëtarisht nga DPA, anëtare e IAF (International Accreditation Forum) dhe EA (European Accreditation), duke siguruar njohje globale nga autoritetet, klientët dhe organet e tenderimit."
+        }
+      },
+      "isoCertification": {
+        "title": "Certifikimi ISO",
+        "q1": {
+          "question": "Cilat standarde ISO ofroni?",
+          "answer": "Ne ofrojmë certifikim të akredituar për: ISO 9001, ISO 14001, ISO 22000, ISO 27001, ISO 45001, ISO 22301, ISO 37001, ISO 39001, ISO 50001 dhe HACCP."
+        },
+        "q2": {
+          "question": "Pse kompania ime duhet të certifikohet me ISO?",
+          "answer": "Certifikimi ISO dëshmon angazhimin tuaj ndaj cilësisë, sigurisë dhe efikasitetit. Ai rrit besimin e klientëve, ndihmon në përputhshmëri ligjore, reduktim të rreziqeve dhe përfshirje në tendera publikë apo privatë."
+        },
+        "q3": {
+          "question": "Çfarë ndodh gjatë një auditi ISO?",
+          "answer": "Auditorët tanë shqyrtojnë proceset, dokumentacionin dhe zbatimin praktik të standardit. Auditi identifikon pikat e forta dhe mundësitë për përmirësim. Nëse përputhshmëria është e plotë, organizata merr certifikatën zyrtare të akreditimit."
+        }
+      },
+      "complianceCE": {
+        "title": "Përputhshmëria dhe CE Marking",
+        "q1": {
+          "question": "Çfarë është CE Marking dhe kush e ka të detyrueshme?",
+          "answer": "CE Marking është e detyrueshme për shumë produkte që shiten brenda Zonës Ekonomike Evropiane (EEA). Ajo tregon se produkti përputhet me rregullat e sigurisë, shëndetit dhe mjedisit të BE-së. Ne ofrojmë audite dhe vlerësime për përputhshmëri, për t'ju ndihmuar të arrini kërkesat ligjore."
+        }
+      },
+      "additionalServices": {
+        "title": "Shërbime Shtesë",
+        "q1": {
+          "question": "Çfarë është Programi i Efiçencës Energjetike?",
+          "answer": "Një qasje e strukturuar për të analizuar dhe ulur konsumin e energjisë në proceset tuaja. Ne kryejmë audite energjetike dhe identifikojmë mundësi për kursim kostosh dhe reduktim të CO₂."
+        },
+        "q2": {
+          "question": "Çfarë është një Kartë Teknologjike?",
+          "answer": "Një dokument teknik që përcakton procesin e prodhimit, materialet dhe pajisjet e nevojshme për kontrollin e cilësisë dhe uniformitetin e prodhimit."
+        },
+        "q3": {
+          "question": "Çfarë është një Kartë Profesionale?",
+          "answer": "Një dokument certifikues i rolit dhe kualifikimeve profesionale, që përcakton formimin, eksperiencën dhe kapacitetin e poseduesit sipas standardeve ligjore dhe te sigurisë dhe shëndetit në punë."
+        },
+        "q4": {
+          "question": "A ofroni trajnime për staf?",
+          "answer": "Po. Ne zhvillojmë trajnime të bazuara në role dhe kompetenca, në përputhje me ISO 9001, ISO 14001 dhe ISO 45001, për të përmirësuar performancën, sigurinë dhe përputhshmërinë."
+        },
+        "q5": {
+          "question": "A kryeni vlerësime të pajisjeve dhe linjave teknologjike?",
+          "answer": "Po. Ne kryejmë inspektime dhe vlerësime teknike të linjave të prodhimit, makinerive dhe pajisjeve për të vlerësuar gjendjen, efikasitetin dhe sigurinë — të domosdoshme për modernizim ose sigurim."
+        }
+      },
+      "processPractices": {
+        "title": "Procesi & Praktikat",
+        "q1": {
+          "question": "Si mund të kërkoj një ofertë për certifikim ose shërbim?",
+          "answer": "Mjafton të plotësoni formularin e kontaktit ose të na telefononi. Ekipi ynë do t'ju përgatisë një ofertë të personalizuar në bazë të madhësisë, fushës dhe standardit të organizatës suaj."
+        },
+        "q2": {
+          "question": "Çfarë ndodh pas marrjes së certifikatës?",
+          "answer": "Ne kryejmë audite mbikëqyrjeje vjetore për të garantuar që përputhshmëria të vazhdojë. Certifikatat janë të vlefshme 3 vjet, pas së cilës kryhet auditimi i ri i rikualifikimit."
+        },
+        "q3": {
+          "question": "A operoni ndërkombëtarisht?",
+          "answer": "Po. Edhe pse jemi të bazuar në Shqipëri, MSC CERTIFICATIONS ofron shërbime në të gjithë rajonin dhe më gjerë, nëpërmjet një rrjeti auditorësh të akredituar ndërkombëtarisht."
+        },
+        "q4": {
+          "question": "Si mund të di cili standard ISO ose shërbim përputhshmërie i nevojitet biznesit tim?",
+          "answer": "Nëse nuk jeni të sigurt, ekipi ynë do të analizojë aktivitetet, risqet dhe objektivat e organizatës suaj dhe do t'ju rekomandojë standardin më të përshtatshëm."
+        }
+      }
+    },
+    "stillHaveQuestions": {
+      "title": "Keni ende pyetje?",
+      "description": "Ne do të ishim të lumtur t'ju ndihmonim. Na kontaktoni sot për të diskutuar rreth certifikimit, përputhshmërisë ose trajnimeve dhe bëni hapin e parë drejt ekselencës së njohur ndërkombëtarisht."
+    }
+  },
+  "termsConditions": {
+    "title": "Kushtet dhe Afatet e Përdorimit",
+    "lastUpdated": "Përditësuar së fundmi: Nëntor 2025",
+    "sections": {
+      "introduction": {
+        "title": "1. Hyrje",
+        "content": "Kjo faqe interneti operohet nga MSC CERTIFICATIONS (\"ne\", \"tona\", \"kompania jonë\"). Duke hyrë dhe përdorur këtë faqe interneti, ju pranoni të respektoni këto Kushte dhe Afate Përdorimi. Nëse nuk pajtoheni me ndonjë pjesë të këtyre kushteve, ju lutemi mos përdorni faqen tonë ose shërbimet tona."
+      },
+      "services": {
+        "title": "2. Shërbimet",
+        "content": "MSC CERTIFICATIONS ofron shërbime të certifikimit ISO, auditimit të përputhshmërisë dhe konsulencës së lidhur. Të gjitha përshkrimet, materialet ose ofertat e publikuara në këtë faqe kanë qëllim informues dhe nuk përbëjnë kontratë ose ofertë të detyrueshme ligjërisht. Ne rezervojmë të drejtën të ndryshojmë, përditësojmë ose heqim përmbajtje në çdo kohë pa paralajmërim."
+      },
+      "intellectualProperty": {
+        "title": "3. Të Drejtat e Pronësisë Intelektuale",
+        "content": "E gjithë përmbajtja në këtë faqe interneti, duke përfshirë tekstin, imazhet, grafikat, videot dhe logot, është pronë e MSC CERTIFICATIONS ose licencuesve tanë. Kopjimi, shpërndarja ose ndryshimi i përmbajtjes pa lejen tonë me shkrim është rreptësisht i ndaluar. Ju mund të shkarkoni ose printoni pjesë të përmbajtjes vetëm për përdorim personal dhe jo-komercial, duke ruajtur njoftimet e autorësisë."
+      },
+      "websiteUsage": {
+        "title": "4. Përdorimi i Faqes Interneti",
+        "content": "Duke përdorur këtë faqe, ju angazhoheni që: Të hyni në të vetëm për qëllime të ligjshme; Të shmangni çdo veprim që mund të dëmtojë ose pengojë funksionimin normal të faqes; Të mos përpiqeni të merrni qasje të paautorizuar në sistemet ose të dhënat tona. Çdo përdorim i pahijshëm ose shkelje e këtyre kushteve mund të rezultojë në kufizim të aksesit ose masa ligjore."
+      },
+      "liability": {
+        "title": "5. Kufizimi i Përgjegjësisë",
+        "content": "MSC CERTIFICATIONS nuk mban përgjegjësi për asnjë dëm të drejtpërdrejtë, të tërthortë, aksidental ose pasues që lind nga: Përdorimi ose pamundësia për të përdorur këtë faqe interneti; Gabime teknike, mungesë informacioni ose ndërprerje të shërbimit; Veprime të bazuara në informacionin e publikuar në këtë faqe. Ne përpiqemi të sigurojmë saktësi, por nuk garantojmë që përmbajtja është gjithmonë e plotë ose e përditësuar."
+      },
+      "externalLinks": {
+        "title": "6. Lidhjet e Jashtme",
+        "content": "Faqja jonë mund të përmbajë lidhje (linke) drejt faqeve të tjera të palëve të treta. Ne nuk kemi kontroll mbi përmbajtjen ose praktikat e këtyre faqeve dhe nuk mbajmë përgjegjësi për ndonjë humbje apo dëm që mund të vijë nga përdorimi i tyre."
+      },
+      "privacy": {
+        "title": "7. Privatësia dhe Mbrojtja e të Dhënave",
+        "content": "Përdorimi i kësaj faqeje rregullohet gjithashtu nga Politika jonë e Privatësisë. Duke dërguar formularë ose duke na kontaktuar nëpërmjet kësaj faqeje, ju pranoni mbledhjen dhe përpunimin e të dhënave tuaja personale në përputhje me ligjin në fuqi për mbrojtjen e të dhënave personale dhe me politikën tonë të privatësisë."
+      },
+      "changes": {
+        "title": "8. Ndryshimet në Kushtet",
+        "content": "Ne rezervojmë të drejtën të ndryshojmë ose përditësojmë këto Kushte dhe Afate Përdorimi në çdo kohë. Çdo ndryshim hyn në fuqi menjëherë pas publikimit në këtë faqe. Përdorimi i vazhdueshëm i faqes pas ndryshimeve konsiderohet si pranim i kushteve të reja."
+      },
+      "jurisdiction": {
+        "title": "9. Ligji dhe Juridiksioni në Fuqi",
+        "content": "Këto Kushte dhe Afate Përdorimi rregullohen nga ligjet e Republikës së Shqipërisë. Çdo mosmarrëveshje që lidhet me përdorimin e kësaj faqeje ose përmbajtjen e saj do të zgjidhet nga gjykatat kompetente në Tiranë, Shqipëri."
+      },
+      "contact": {
+        "title": "10. Kontakt",
+        "content": "Për çdo pyetje lidhur me këto kushte, ju lutemi na kontaktoni:",
+        "email": "info@msc-certifications.com",
+        "address": "Rruga Ismail Qemali, Tiranë, Shqipëri"
+      }
+    },
+    "cta": {
+      "title": "Pyetje Rreth Kushteve Tona?",
+      "description": "Nëse keni nevojë për sqarime rreth ndonjë prej kushteve dhe afateve tona, mos hezitoni të na kontaktoni."
+    }
+  },
+  "iso9001": {
+    "meta": {
+      "title": "Certifikimi ISO 9001 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 9001 të akredituar me MSC Certifications. Përmirësoni kredibilitetin, efikasitetin dhe fitoni më shumë tendera. Filloni vlerësimin e SMC-së tuaj sot.",
+      "keywords": "certifikim ISO 9001, auditim SMC, ISO 9001 i akredituar, sistem menaxhimi cilësie, certifikim ISO Shqipëri, përfitimet e ISO 9001, auditor cilësie, procesi ISO 9001, MSC Certifications"
+    },
+    "hero": {
+      "title": "ISO 9001: Arrini Cilësi të Certifikuar, Besim dhe Ekselencë Operacionale",
+      "subtitle": "Gati për të kaluar përtej cilësisë bazë? Certifikimi i akredituar ISO 9001 ju ndihmon të menaxhoni riskun e biznesit, të përmirësoni kënaqësinë e klientit dhe të zhbllokoni mundësi të reja tregu. Ky standard është jetik për të dëshmuar angazhimin e vërtetë ndaj cilësisë."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 9001? Gjuha Ndërkombëtare e Cilësisë",
+      "description": "ISO 9001 është standardi më i njohur në botë për Sistemin e Menaxhimit të Cilësisë (SMC). Kur certifikoheni, kompania juaj flet menjëherë të njëjtën gjuhë globale me partnerët ndërkombëtarë, duke krijuar qartësi të përbashkët rreth cilësisë.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne përcaktojmë në mënyrë objektive nëse sistemi juaj përmbush kriteret globale, duke çuar në certifikimin tuaj zyrtar ISO 9001."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit",
+      "benefit1": {
+        "title": "Njohje Globale",
+        "description": "Kredibilitet i menjëhershëm me klientët, partnerët dhe rregullatorët në mbarë botën."
+      },
+      "benefit2": {
+        "title": "Efikasitet i Përmirësuar",
+        "description": "Procese të optimizuara, më pak gabime dhe reduktim i humbjeve."
+      },
+      "benefit3": {
+        "title": "Besnikëri më e Fortë e Klientit",
+        "description": "Operacione të drejtuara nga cilësia që vënë kënaqësinë e klientit në plan të parë."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet Ekspertiza Jonë",
+      "subtitle": "MSC Certifications ofron auditorë të specializuar për auditime të përshtatura sipas sektorit:",
+      "manufacturing": {
+        "title": "Prodhim",
+        "description": "Konsistencë procesesh, reduktim mbetjesh"
+      },
+      "professionalServices": {
+        "title": "Shërbime Profesionale",
+        "description": "Qartësi kontratash, besueshmëri shërbimesh"
+      },
+      "construction": {
+        "title": "Ndërtim",
+        "description": "Kontroll materialesh, mbikëqyrje projektesh"
+      },
+      "logistics": {
+        "title": "Logjistikë",
+        "description": "Garanci magazinimi & shpërndarjeje"
+      },
+      "publicSector": {
+        "title": "Sektori Publik",
+        "description": "Transparencë dhe ofrimi shërbimesh"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Specializuar",
+      "subtitle": "Ne konkurrojmë duke ofruar atë që certifikuesit e mëdhenj nuk munden: njohuri të specializuara lokale që sjellin vlerë reale.",
+      "specializedAuditors": {
+        "title": "Auditorë të Specializuar",
+        "description": "Specialist i garantuar me përvojë të thellë në industrinë tuaj specifike."
+      },
+      "practicalAudit": {
+        "title": "Audit Praktik",
+        "description": "Transformon SMC-në tuaj në një mjet të vërtetë biznesi."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim Objektiv",
+        "description": "Njohje globale e garantuar bazuar në prova objektive dhe të dokumentuara."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit",
+      "subtitle": "Rruga drejt certifikimit ISO 9001 është e drejtpërdrejtë, duke përfshirë pesë faza të qarta:",
+      "step1": "Aplikimi dhe Kontrata",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Le të Fillojmë",
+      "description": "Rrisni besimin. Fitoni tendera. Përmirësoni performancën.",
+      "button": "Filloni Vlerësimin ISO 9001",
+      "footer": "Të gjitha certifikatat e lëshuara nga MSC Certifications janë plotësisht të akredituara dhe të njohura globalisht."
+    }
+  },
+  "iso39001": {
+    "meta": {
+      "title": "Certifikimi ISO 39001 | MSC CERTIFICATIONS",
+      "description": "Arrini certifikimin ISO 39001 për menaxhimin e sigurisë së trafikut rrugor. Reduktoni aksidentet, ulni kostot dhe përmirësoni sigurinë e flotës me MSC Certifications.",
+      "keywords": "certifikim ISO 39001, siguria rrugore, menaxhimi i flotës, sistem menaxhimi RTS, ISO 39001 Shqipëri, audit siguria e trafikut"
+    },
+    "hero": {
+      "title": "ISO 39001: Sistemet e Menaxhimit të Sigurisë së Trafikut Rrugor",
+      "subtitle": "Udhëtim më i sigurt, biznes më i fortë. Certifikimi ISO 39001 demonstron angazhimin tuaj për të reduktuar incidentet në rrugë, për të mbrojtur punonjësit dhe për të ulur kostot operative. Një investim strategjik për çdo organizatë me ekspozim ndaj transportit rrugor."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 39001?",
+      "description": "ISO 39001 është standardi ndërkombëtar për Sistemet e Menaxhimit të Sigurisë së Trafikut Rrugor (RTS). Ai ndihmon organizatat të reduktojnë vdekjet dhe lëndimet serioze që rezultojnë nga aksidentet rrugore — qoftë nëpërmjet operacioneve të flotës, lëvizjeve të punonjësve apo zinxhirit të furnizimit.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë në mënyrë të pavarur kontrollet tuaja të sigurisë rrugore, duke verifikuar përputhjen me ISO 39001 dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 39001",
+      "benefit1": {
+        "title": "Reduktim i Aksidenteve",
+        "description": "Sistematizoni parandalimin e incidenteve në të gjithë organizatën."
+      },
+      "benefit2": {
+        "title": "Kursime në Sigurime",
+        "description": "Primi më të ulëta falë praktikave të demonstruara të sigurisë."
+      },
+      "benefit3": {
+        "title": "Mirëqenie e Punonjësve",
+        "description": "Tregoni përkujdesje reale për sigurinë e stafit dhe të shoferëve."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Kush Ka Nevojë për ISO 39001?",
+      "subtitle": "Ky standard është thelbësor për organizatat që menaxhojnë flota automjetesh ose që varen nga lëvizja rrugore për operacionet e tyre:",
+      "logistics": {
+        "title": "Logjistikë & Transport",
+        "description": "Operatorët e flotave, shpërndarësit, kompanitë e transportit të mallrave"
+      },
+      "publicSector": {
+        "title": "Qeverisje & Sektori Publik",
+        "description": "Bashkitë, shërbimet e urgjencës, qendrat shëndetësore"
+      },
+      "construction": {
+        "title": "Ndërtim & Inxhinieri",
+        "description": "Kompani me lëvizje të vazhdueshme të pajisjeve ose ekipeve"
+      },
+      "manufacturing": {
+        "title": "Prodhim & Shpërndarje",
+        "description": "Zinxhirë furnizimi me ekspozim ndaj rrezikut të transportit"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Sigurinë Rrugore",
+      "subtitle": "Auditorët tanë sjellin ekspertizë të kombinuar në operacionet e flotës dhe në kërkesat e sigurisë rrugore.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Sigurisë Rrugore",
+        "description": "Auditorë me përvojë në menaxhimin e flotës dhe të sigurisë."
+      },
+      "practicalAudit": {
+        "title": "Ulje e Matshme e Riskut",
+        "description": "Ne identifikojmë rreziqe specifike dhe rekomandojmë kontrolle praktike."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që siguron besim tek palët e interesuara."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 39001",
+      "subtitle": "Rrugë e qartë drejt menaxhimit të sigurisë së trafikut rrugor:",
+      "step1": "Aplikimi dhe Shqyrtimi Fillestar",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Filloni Udhëtimin Tuaj drejt Sigurisë Rrugore",
+      "description": "Mbroni njerëzit. Reduktoni riskun. Përmbushni standardet ndërkombëtare.",
+      "button": "Kërkoni Vlerësimin ISO 39001",
+      "footer": "Të gjitha certifikatat janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "iso45001": {
+    "meta": {
+      "title": "Certifikimi ISO 45001 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 45001 për shëndetin dhe sigurinë në punë. Reduktoni aksidentet, përmbushni ligjin dhe forconi kulturën e sigurisë me MSC Certifications.",
+      "keywords": "certifikim ISO 45001, siguria në punë, shëndet dhe siguri, OH&S, certifikim akredituar, auditim siguria në punë, MSC Certifications"
+    },
+    "hero": {
+      "title": "ISO 45001: Shëndeti dhe Siguria në Punë",
+      "subtitle": "Mbroni njerëzit, forconi biznesin. ISO 45001 është standardi ndërkombëtar për menaxhimin e shëndetit dhe sigurisë në punë (OH&S). Certifikimi dëshmon angazhimin tuaj për mirëqenien e stafit dhe reduktimin e rreziqeve operacionale."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 45001?",
+      "description": "ISO 45001 përcakton kërkesat për një Sistem të Menaxhimit të Shëndetit dhe Sigurisë në Punë (SMSHSP). Qëllimi: të parandalojë lëndimet dhe sëmundjet profesionale, të ofrojë vende pune të sigurta dhe të shëndetshme.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë sistemet tuaja të OH&S kundrejt standardit ISO 45001, duke lëshuar certifikim të njohur ndërkombëtarisht kur kërkesat përmbushen."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 45001",
+      "benefit1": {
+        "title": "Reduktim i Aksidenteve në Punë",
+        "description": "Parandaloni incidentet përmes kontrolleve të strukturuara dhe monitorimit proaktiv."
+      },
+      "benefit2": {
+        "title": "Përputhshmëri Ligjore",
+        "description": "Përmbushni legjislacionin për shëndetin dhe sigurinë në çdo juridiksion."
+      },
+      "benefit3": {
+        "title": "Kulturë Sigurie e Forcuar",
+        "description": "Ndërtoni ndërgjegjësim dhe angazhim në të gjitha nivelet e organizatës."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 45001",
+      "subtitle": "Auditorët tanë specializohen në sektorë me ekspozim të lartë ndaj rreziqeve të sigurisë:",
+      "construction": {
+        "title": "Ndërtim & Infrastrukturë",
+        "description": "Rreziqe të larta fizike, punë në lartësi, pajisje të rënda"
+      },
+      "manufacturing": {
+        "title": "Prodhim & Industri",
+        "description": "Makineri, procese kimike, ekspozim ndaj zhurmës"
+      },
+      "logistics": {
+        "title": "Logjistikë & Magazina",
+        "description": "Lëvizje mallrash, operacione ngritëse, trafik i brendshëm"
+      },
+      "energy": {
+        "title": "Energjitikë & Shërbime Publike",
+        "description": "Rreziqe elektrike, hapësira të kufizuara, procese me presion të lartë"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Sigurinë",
+      "subtitle": "Auditorët tanë sjellin përvojë praktike në menaxhimin e sigurisë dhe përputhshmërinë ligjore.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Sigurisë në Punë",
+        "description": "Auditorë me përvojë të drejtpërdrejtë në industri me risk të lartë."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim Praktik i Riskut",
+        "description": "Identifikojmë rreziqe reale dhe ofrojmë rekomandime të zbatueshme."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Pavarur",
+        "description": "Verifikim objektiv që siguron besueshmëri tek klientët dhe autoritetet."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 45001",
+      "subtitle": "Pesë faza për sistemin tuaj të menaxhimit të sigurisë:",
+      "step1": "Aplikimi dhe Kontrata",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Vendosni Sigurinë në Themel të Biznesit",
+      "description": "Mbroni punonjësit. Reduktoni kostot. Përmbushni standardet.",
+      "button": "Filloni Vlerësimin ISO 45001",
+      "footer": "Certifikimi ynë është i akredituar ndërkombëtarisht dhe i njohur globalisht."
+    }
+  },
+  "iso27001": {
+    "meta": {
+      "title": "Certifikimi ISO 27001 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 27001 për sigurinë të informacionit. Mbroni të dhënat, përmbushni GDPR dhe forconi besimin e klientëve me MSC Certifications.",
+      "keywords": "certifikim ISO 27001, siguria e informacionit, SMSI, mbrojtje të dhënash, GDPR, certifikim akredituar, kibernetika"
+    },
+    "hero": {
+      "title": "ISO 27001: Sistemet e Menaxhimit të Sigurisë së Informacionit",
+      "subtitle": "Mbroni asetetet tuaja digjitale. ISO 27001 është standardi udhëheqës global për sigurinë e informacionit. Certifikimi demonstron se keni vendosur kontrolle të forta për mbrojtjen e të dhënave, duke ndërtuar besim me klientët dhe partnerët."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 27001?",
+      "description": "ISO/IEC 27001 përcakton kërkesat për vendosjen, zbatimin, mirëmbajtjen dhe përmirësimin e vazhdueshëm të një Sistemi të Menaxhimit të Sigurisë së Informacionit (SMSI). Ai adreson rreziqet ndaj konfidencialitetit, integritetit dhe disponueshmërisë së informacionit.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë SMSI-në tuaj kundrejt standardit ISO 27001, duke verifikuar zbatimin e kontrolleve dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 27001",
+      "benefit1": {
+        "title": "Mbrojtje e të Dhënave",
+        "description": "Parandaloni shkelje dhe aksese të paautorizuara në informacion."
+      },
+      "benefit2": {
+        "title": "Përputhshmëri me GDPR",
+        "description": "Demonstroni kontrolle të forta për mbrojtjen e të dhënave personale."
+      },
+      "benefit3": {
+        "title": "Besim i Forcuar i Klientëve",
+        "description": "Siguroni palët e interesuara që të dhënat e tyre janë të mbrojtura."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 27001",
+      "subtitle": "Auditorët tanë kanë përvojë në sektorë ku siguria e informacionit është kritike:",
+      "it": {
+        "title": "IT & Telekomunikacion",
+        "description": "Ofrues shërbimesh cloud, zhvillues software, operatorë rrjeti"
+      },
+      "finance": {
+        "title": "Shërbime Financiare",
+        "description": "Banka, sigurime, institucione pagesash"
+      },
+      "healthcare": {
+        "title": "Kujdes Shëndetësor",
+        "description": "Të dhëna pacientësh, sisteme elektronike shëndetësore"
+      },
+      "publicSector": {
+        "title": "Sektori Publik",
+        "description": "Agjenci qeveritare, të dhëna qytetarësh, infrastrukturë kritike"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Sigurinë e Informacionit",
+      "subtitle": "Auditorët tanë kombinojnë ekspertizë teknike me njohuri të thellë të standardit.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Sigurisë së Informacionit",
+        "description": "Auditorë me sfond në kibernetikë dhe menaxhimin e riskut IT."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim Praktik i Kontrolleve",
+        "description": "Shqyrtojmë efektivitetin real të kontrolleve tuaja të sigurisë."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që forcon pozitën tuaj në treg."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 27001",
+      "subtitle": "Rruga e qartë drejt sigurisë së informacionit të certifikuar:",
+      "step1": "Aplikimi dhe Planifikimi",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Mbroni të Dhënat — Forconi Besimin",
+      "description": "Siguroni informacionin. Përmbushni rregulloret. Fitoni avantazh konkurrues.",
+      "button": "Filloni Vlerësimin ISO 27001",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të pranuara globalisht."
+    }
+  },
+  "iso50001": {
+    "meta": {
+      "title": "Certifikimi ISO 50001 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 50001 për menaxhimin e energjisë. Ulni kostot, optimizoni konsumin dhe përmirësoni performancën mjedisore me MSC Certifications.",
+      "keywords": "certifikim ISO 50001, menaxhimi i energjisë, efikasitet energjetik, SME, certifikim akredituar, auditim energjie"
+    },
+    "hero": {
+      "title": "ISO 50001: Sistemet e Menaxhimit të Energjisë",
+      "subtitle": "Optimizoni konsumin, reduktoni kostot. ISO 50001 ndihmon organizatat të përmirësojnë sistematikisht performancën energjetike, të ulin shpenzimet dhe të zvogëlojnë ndikimin mjedisor."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 50001?",
+      "description": "ISO 50001 përcakton kërkesat për vendosjen, zbatimin dhe përmirësimin e vazhdueshëm të një Sistemi të Menaxhimit të Energjisë (SME). Standardi ndihmon organizatat të monitorojnë, masin dhe optimizojnë përdorimin e energjisë.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë SME-në tuaj kundrejt standardit ISO 50001, duke verifikuar zbatimin efektiv të kontrolleve dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 50001",
+      "benefit1": {
+        "title": "Reduktim i Kostove të Energjisë",
+        "description": "Identifikoni mundësi kursimi dhe reduktoni faturat e energjisë."
+      },
+      "benefit2": {
+        "title": "Performancë e Përmirësuar Mjedisore",
+        "description": "Ulni emetimet e CO₂ dhe ndikimin mjedisor të operacioneve."
+      },
+      "benefit3": {
+        "title": "Përputhshmëri Rregullatore",
+        "description": "Përmbushni kërkesat ligjore për efikasitetin energjetik."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 50001",
+      "subtitle": "Ky standard është veçanërisht i vlefshëm për organizata me konsum të lartë energjie:",
+      "manufacturing": {
+        "title": "Prodhim Industrial",
+        "description": "Fabrika, linja prodhimi, procese energji-intensive"
+      },
+      "buildings": {
+        "title": "Ndërtesa & Infrastrukturë",
+        "description": "Qendra tregtare, hotele, spitale, zyra"
+      },
+      "utilities": {
+        "title": "Shërbime Publike",
+        "description": "Ujësjellësa, trajtim i ujërave, shërbime bashkiake"
+      },
+      "logistics": {
+        "title": "Transport & Logjistikë",
+        "description": "Flota, magazina, operacione shpërndarjeje"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Energji",
+      "subtitle": "Auditorët tanë kombinojnë ekspertizë teknike energjetike me njohuri të thellë të standardit.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Menaxhimit të Energjisë",
+        "description": "Auditorë me sfond në inxhinieri energjetike dhe efikasitet."
+      },
+      "practicalAudit": {
+        "title": "Identifikim i Mundësive të Kursimit",
+        "description": "Shqyrtojmë performancën energjetike dhe identifikojmë përmirësime."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që forcon kredibilitetin tuaj mjedisor."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 50001",
+      "subtitle": "Rruga drejt menaxhimit të certifikuar të energjisë:",
+      "step1": "Aplikimi dhe Analiza Energjetike",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Reduktoni Kostot — Përmirësoni Performancën",
+      "description": "Optimizoni energjinë. Ulni shpenzimet. Tregoni përgjegjësi mjedisore.",
+      "button": "Filloni Vlerësimin ISO 50001",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "iso37001": {
+    "meta": {
+      "title": "Certifikimi ISO 37001 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 37001 për menaxhimin kundër korrupsionit. Reduktoni riskun ligjor, forconi reputacionin dhe kualifikohuni për tendera me MSC Certifications.",
+      "keywords": "certifikim ISO 37001, anti-korrupsion, menaxhimi i ryshfetit, përputhshmëri, certifikim akredituar, audit anti-korrupsion"
+    },
+    "hero": {
+      "title": "ISO 37001: Sistemet e Menaxhimit Kundër Korrupsionit",
+      "subtitle": "Ndërtoni integritet, fitoni besim. ISO 37001 ndihmon organizatat të parandalojnë, zbulojnë dhe adresojnë korrupsionin. Certifikimi demonstron angazhimin tuaj për praktika etike biznesi."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 37001?",
+      "description": "ISO 37001 përcakton kërkesat për vendosjen, zbatimin dhe përmirësimin e vazhdueshëm të një Sistemi të Menaxhimit Kundër Korrupsionit (SMKK). Standardi adreson korrupsionin në sektorin publik, privat dhe jofitimprurës.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë SMKK-në tuaj kundrejt standardit ISO 37001, duke verifikuar zbatimin e kontrolleve dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 37001",
+      "benefit1": {
+        "title": "Reduktim i Riskut Ligjor",
+        "description": "Parandaloni shkelje dhe përmbushni legjislacionin kundër korrupsionit."
+      },
+      "benefit2": {
+        "title": "Reputacion i Pastër",
+        "description": "Demonstroni angazhimin tuaj për etikë dhe integritet."
+      },
+      "benefit3": {
+        "title": "Kualifikim për Tendera",
+        "description": "Përmbushni kërkesat e përputhshmërisë për prokurime publike."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 37001",
+      "subtitle": "Ky standard është veçanërisht i rëndësishëm për organizatat që operojnë në mjedise me risk korrupsioni:",
+      "publicSector": {
+        "title": "Sektori Publik",
+        "description": "Agjenci qeveritare, ndërmarrje shtetërore, bashki"
+      },
+      "construction": {
+        "title": "Ndërtim & Infrastrukturë",
+        "description": "Kontraktorë, nën-kontraktorë, zhvillues projektesh"
+      },
+      "healthcare": {
+        "title": "Shëndetësi & Farmaceutikë",
+        "description": "Spitale, kompani farmaceutike, furnitorë mjekësorë"
+      },
+      "finance": {
+        "title": "Shërbime Financiare",
+        "description": "Banka, sigurime, institucione investimesh"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Anti-Korrupsion",
+      "subtitle": "Auditorët tanë kanë ekspertizë në përputhshmëri dhe menaxhimin e riskut të korrupsionit.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Përputhshmërisë",
+        "description": "Auditorë me sfond në qeverisje dhe anti-korrupsion."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim i Kontrolleve",
+        "description": "Shqyrtojmë efektivitetin e kontrolleve tuaja kundër korrupsionit."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që forcon kredibilitetin tuaj."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 37001",
+      "subtitle": "Rruga drejt menaxhimit të certifikuar kundër korrupsionit:",
+      "step1": "Aplikimi dhe Vlerësimi i Riskut",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Ndërtoni Integritet — Fitoni Besim",
+      "description": "Parandaloni korrupsionin. Forconi reputacionin. Kualifikohuni për mundësi.",
+      "button": "Filloni Vlerësimin ISO 37001",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "iso22301": {
+    "meta": {
+      "title": "Certifikimi ISO 22301 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 22301 për vazhdimësinë e biznesit. Mbroni operacionet, minimizoni ndërprerjet dhe siguroni rikuperim të shpejtë me MSC Certifications.",
+      "keywords": "certifikim ISO 22301, vazhdimësi biznesi, BCMS, rikuperim nga fatkeqësitë, certifikim akredituar, menaxhimi i krizave"
+    },
+    "hero": {
+      "title": "ISO 22301: Sistemet e Menaxhimit të Vazhdimësisë së Biznesit",
+      "subtitle": "Përgatituni për të papriturën. ISO 22301 ju ndihmon të planifikoni, zbatoni dhe testoni kontrolle që sigurojnë vazhdimësinë e operacioneve kritike gjatë dhe pas ndërprerjeve."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 22301?",
+      "description": "ISO 22301 përcakton kërkesat për vendosjen, zbatimin dhe përmirësimin e vazhdueshëm të një Sistemi të Menaxhimit të Vazhdimësisë së Biznesit (SMVB). Standardi ndihmon organizatat të identifikojnë kërcënimet dhe të zhvillojnë kapacitete për përgjigje efektive.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë SMVB-në tuaj kundrejt standardit ISO 22301, duke verifikuar gatishmërinë dhe kapacitetet tuaja dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 22301",
+      "benefit1": {
+        "title": "Minimizim i Ndërprerjeve",
+        "description": "Reduktoni kohën e joproduktive dhe humbjet financiare gjatë krizave."
+      },
+      "benefit2": {
+        "title": "Mbrojtje e të Ardhurave",
+        "description": "Siguroni vazhdimësinë e shërbimeve kritike dhe marrëdhënieve me klientët."
+      },
+      "benefit3": {
+        "title": "Qëndrueshmëri Organizative",
+        "description": "Ndërtoni kapacitete për përgjigje dhe rikuperim të shpejtë."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 22301",
+      "subtitle": "Ky standard është thelbësor për organizatat ku ndërprerjet kanë pasoja serioze:",
+      "finance": {
+        "title": "Shërbime Financiare",
+        "description": "Banka, sigurime, institucione pagesash"
+      },
+      "healthcare": {
+        "title": "Kujdes Shëndetësor",
+        "description": "Spitale, laboratorë, shërbime emergjence"
+      },
+      "it": {
+        "title": "IT & Telekomunikacion",
+        "description": "Ofrues shërbimesh, qendra të dhënash, infrastrukturë kritike"
+      },
+      "manufacturing": {
+        "title": "Prodhim & Zinxhir Furnizimi",
+        "description": "Fabrika, shpërndarës, operacione logjistike"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Vazhdimësi",
+      "subtitle": "Auditorët tanë kanë përvojë në planifikimin dhe testimin e vazhdimësisë së biznesit.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Vazhdimësisë",
+        "description": "Auditorë me sfond në menaxhimin e krizave dhe rikuperimin."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim i Kapaciteteve",
+        "description": "Testojmë gatishmërinë tuaj përballë skenarëve realistë."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që siguron besim tek palët e interesuara."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 22301",
+      "subtitle": "Rruga drejt vazhdimësisë së certifikuar të biznesit:",
+      "step1": "Aplikimi dhe Analiza e Ndikimit",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Përgatituni për të Papriturën",
+      "description": "Mbroni operacionet. Siguroni vazhdimësinë. Ndërtoni qëndrueshmëri.",
+      "button": "Filloni Vlerësimin ISO 22301",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "iso22000": {
+    "meta": {
+      "title": "Certifikimi ISO 22000 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 22000 për sigurinë ushqimore. Garantoni cilësinë, përmbushni rregulloret dhe hyni në tregjet ndërkombëtare me MSC Certifications.",
+      "keywords": "certifikim ISO 22000, siguria ushqimore, FSMS, HACCP, certifikim akredituar, auditim ushqimor"
+    },
+    "hero": {
+      "title": "ISO 22000: Sistemet e Menaxhimit të Sigurisë Ushqimore",
+      "subtitle": "Siguria ushqimore nga ferma në tavolinë. ISO 22000 ndihmon organizatat e zinxhirit ushqimor të kontrollojnë rreziqet dhe të sigurojnë produkte të sigurta për konsumatorët."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 22000?",
+      "description": "ISO 22000 përcakton kërkesat për vendosjen e një Sistemi të Menaxhimit të Sigurisë Ushqimore (SMSU) që kombinon elementet kyçe të njohura për garantimin e sigurisë ushqimore përgjatë zinxhirit, duke përfshirë parimet HACCP.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë SMSU-në tuaj kundrejt standardit ISO 22000, duke verifikuar zbatimin e kontrolleve dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 22000",
+      "benefit1": {
+        "title": "Garanci për Sigurinë Ushqimore",
+        "description": "Kontrolloni rreziqet dhe parandaloni kontaminimin në çdo fazë."
+      },
+      "benefit2": {
+        "title": "Akses në Tregje Ndërkombëtare",
+        "description": "Përmbushni kërkesat e partnerëve dhe tregjeve të rregulluara."
+      },
+      "benefit3": {
+        "title": "Besim i Konsumatorëve",
+        "description": "Demonstroni angazhimin tuaj për cilësi dhe siguri."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 22000",
+      "subtitle": "Ky standard përfshin të gjithë zinxhirin ushqimor:",
+      "production": {
+        "title": "Prodhim Ushqimor",
+        "description": "Fabrika përpunimi, prodhues, ambalazhues"
+      },
+      "horeca": {
+        "title": "HORECA",
+        "description": "Restorante, hotele, catering, bare"
+      },
+      "retail": {
+        "title": "Shitje me Pakicë",
+        "description": "Supermarkete, dyqane, tregtarë ushqimorë"
+      },
+      "logistics": {
+        "title": "Logjistikë Ushqimore",
+        "description": "Transportues, magazina frigoriferike, shpërndarës"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Sigurinë Ushqimore",
+      "subtitle": "Auditorët tanë kanë përvojë specifike në industrinë ushqimore dhe kërkesat rregullatore.",
+      "specializedAuditors": {
+        "title": "Ekspertë të Sigurisë Ushqimore",
+        "description": "Auditorë me sfond në teknologji ushqimore dhe HACCP."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim i Kontrolleve Kritike",
+        "description": "Shqyrtojmë efektivitetin e pikave kritike të kontrollit."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që hap dyert e tregjeve."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 22000",
+      "subtitle": "Rruga drejt sigurisë së certifikuar ushqimore:",
+      "step1": "Aplikimi dhe Analiza e Rreziqeve",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Garantoni Sigurinë — Fitoni Tregje",
+      "description": "Kontrolloni rreziqet. Përmbushni standardet. Hyni në tregje të reja.",
+      "button": "Filloni Vlerësimin ISO 22000",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "iso14001": {
+    "meta": {
+      "title": "Certifikimi ISO 14001 | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin ISO 14001 për menaxhimin mjedisor. Reduktoni ndikimin mjedisor, përmbushni rregulloret dhe demonstroni përgjegjësi sociale me MSC Certifications.",
+      "keywords": "certifikim ISO 14001, menaxhimi mjedisor, EMS, certifikim akredituar, auditim mjedisor, përputhshmëri mjedisore"
+    },
+    "hero": {
+      "title": "ISO 14001: Sistemet e Menaxhimit Mjedisor",
+      "subtitle": "Përgjegjësi mjedisore, biznes i qëndrueshëm. ISO 14001 ndihmon organizatat të menaxhojnë ndikimin mjedisor të aktiviteteve të tyre, duke kombinuar përputhshmëri ligjore me përmirësim të vazhdueshëm."
+    },
+    "whatIs": {
+      "title": "Çfarë është ISO 14001?",
+      "description": "ISO 14001 përcakton kërkesat për vendosjen, zbatimin dhe përmirësimin e vazhdueshëm të një Sistemi të Menaxhimit Mjedisor (SMM). Standardi ndihmon organizatat të identifikojnë aspektet mjedisore dhe të kontrollojnë ndikimet e tyre.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë SMM-në tuaj kundrejt standardit ISO 14001, duke verifikuar zbatimin e kontrolleve dhe duke lëshuar certifikim të njohur ndërkombëtarisht."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit ISO 14001",
+      "benefit1": {
+        "title": "Reduktim i Ndikimit Mjedisor",
+        "description": "Kontrolloni emetimet, mbetjet dhe përdorimin e burimeve."
+      },
+      "benefit2": {
+        "title": "Përputhshmëri Ligjore",
+        "description": "Përmbushni rregulloret mjedisore dhe shmangni gjobat."
+      },
+      "benefit3": {
+        "title": "Kursime Kostosh",
+        "description": "Optimizoni përdorimin e burimeve dhe reduktoni mbetjet."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet ISO 14001",
+      "subtitle": "Ky standard është i vlefshëm për organizata me ndikim mjedisor:",
+      "manufacturing": {
+        "title": "Prodhim Industrial",
+        "description": "Fabrika, linja prodhimi, procese kimike"
+      },
+      "construction": {
+        "title": "Ndërtim & Infrastrukturë",
+        "description": "Projekte ndërtimi, zhvillim urban"
+      },
+      "energy": {
+        "title": "Energjitikë & Minerare",
+        "description": "Prodhues energjie, operacione nxjerrëse"
+      },
+      "services": {
+        "title": "Shërbime & Administratë",
+        "description": "Zyra, qendra shërbimi, organizata publike"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar në Mjedis",
+      "subtitle": "Auditorët tanë kanë ekspertizë në përputhshmëri mjedisore dhe menaxhimin e ndikimeve.",
+      "specializedAuditors": {
+        "title": "Ekspertë Mjedisorë",
+        "description": "Auditorë me sfond në shkenca mjedisore dhe inxhinieri."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim i Aspekteve Mjedisore",
+        "description": "Identifikojmë ndikimet dhe mundësitë për përmirësim."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që forcon kredibilitetin mjedisor."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit ISO 14001",
+      "subtitle": "Rruga drejt menaxhimit të certifikuar mjedisor:",
+      "step1": "Aplikimi dhe Analiza Mjedisore",
+      "step2": "Auditi i Certifikimit",
+      "step2Detail": "(Faza I & II)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Viti 1 & 2)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Mbroni Mjedisin — Forconi Biznesin",
+      "description": "Kontrolloni ndikimet. Përmbushni rregulloret. Kurseni kosto.",
+      "button": "Filloni Vlerësimin ISO 14001",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "haccp": {
+    "meta": {
+      "title": "Certifikimi HACCP | MSC CERTIFICATIONS",
+      "description": "Merrni certifikimin HACCP për sigurinë ushqimore. Identifikoni dhe kontrolloni rreziqet, përmbushni rregulloret dhe siguroni produkte të sigurta me MSC Certifications.",
+      "keywords": "certifikim HACCP, siguria ushqimore, pikat kritike të kontrollit, analiza e rreziqeve, certifikim akredituar, auditim HACCP"
+    },
+    "hero": {
+      "title": "HACCP: Analiza e Rreziqeve dhe Pikat Kritike të Kontrollit",
+      "subtitle": "Themeli i sigurisë ushqimore. HACCP është sistemi i njohur ndërkombëtarisht për identifikimin, vlerësimin dhe kontrollin e rreziqeve që ndikojnë sigurinë ushqimore."
+    },
+    "whatIs": {
+      "title": "Çfarë është HACCP?",
+      "description": "HACCP (Hazard Analysis and Critical Control Points) është një qasje sistematike për sigurinë ushqimore që identifikon rreziqet biologjike, kimike dhe fizike dhe vendos kontrolle për parandalimin e tyre. Është bazë për të gjitha sistemet moderne të sigurisë ushqimore.",
+      "roleBox": {
+        "title": "Roli Ynë si Trup Certifikues i Akredituar",
+        "description": "Ne auditojmë sistemin tuaj HACCP, duke verifikuar zbatimin e parimeve dhe efektivitetin e pikave kritike të kontrollit."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore të Certifikimit HACCP",
+      "benefit1": {
+        "title": "Kontroll i Rreziqeve",
+        "description": "Identifikoni dhe parandaloni rreziqet para se të ndikojnë produktin."
+      },
+      "benefit2": {
+        "title": "Përputhshmëri Ligjore",
+        "description": "Përmbushni kërkesat ligjore për sigurinë ushqimore."
+      },
+      "benefit3": {
+        "title": "Besim i Konsumatorëve",
+        "description": "Demonstroni angazhimin tuaj për produkte të sigurta."
+      }
+    },
+    "industryFocus": {
+      "title": "Fokusi Sektorial: Ku Aplikohet HACCP",
+      "subtitle": "HACCP është i detyrueshëm ose i rekomanduar për:",
+      "production": {
+        "title": "Prodhim Ushqimor",
+        "description": "Përpunues, ambalazhues, prodhues"
+      },
+      "horeca": {
+        "title": "HORECA",
+        "description": "Restorante, katering, hotele, bare"
+      },
+      "retail": {
+        "title": "Shitje Ushqimore",
+        "description": "Supermarkete, dyqane, tregje"
+      },
+      "logistics": {
+        "title": "Transport Ushqimor",
+        "description": "Transportues, magazina, zinxhir i ftohtë"
+      }
+    },
+    "mscAdvantage": {
+      "title": "Avantazhi MSC: Auditim i Fokusuar HACCP",
+      "subtitle": "Auditorët tanë kanë përvojë specifike në parimet HACCP dhe sigurinë ushqimore.",
+      "specializedAuditors": {
+        "title": "Ekspertë HACCP",
+        "description": "Auditorë me trajnim dhe përvojë në sigurinë ushqimore."
+      },
+      "practicalAudit": {
+        "title": "Vlerësim i Pikave Kritike",
+        "description": "Shqyrtojmë efektivitetin e kontrolleve tuaja kritike."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Besueshëm",
+        "description": "Verifikim i pavarur që hap dyert e tregjeve."
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Certifikimit HACCP",
+      "subtitle": "Rruga drejt sigurisë së certifikuar ushqimore:",
+      "step1": "Aplikimi dhe Shqyrtimi i Planit HACCP",
+      "step2": "Auditi në Vend",
+      "step2Detail": "(Verifikimi i Zbatimit)",
+      "step3": "Lëshimi i Certifikatës",
+      "step4": "Auditet e Mbikëqyrjes",
+      "step4Detail": "(Vjetore)",
+      "step5": "Ri-certifikimi",
+      "step5Detail": "(Çdo 3 vjet)"
+    },
+    "cta": {
+      "title": "Siguroni Produktet — Fitoni Besim",
+      "description": "Kontrolloni rreziqet. Përmbushni ligjin. Hyni në tregje.",
+      "button": "Filloni Vlerësimin HACCP",
+      "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
   }
 }
