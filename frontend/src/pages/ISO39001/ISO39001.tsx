@@ -1,24 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const ISO39001: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO 39001 Certification | Road Safety & Fleet Risk Audits</title>
-        <meta name="description" content="ISO 39001 certification helps reduce traffic risks and improve fleet safety. Get certified with MSC CERTIFICATIONS. Start your RTS assessment today." />
-        <meta name="keywords" content="ISO 39001 certification, road safety audit, RTS management, fleet safety, transport risk, ISO 39001 audit, MSC CERTIFICATIONS, traffic risk management, driver safety" />
+        <title>{t('iso39001.meta.title')}</title>
+        <meta name="description" content={t('iso39001.meta.description')} />
+        <meta name="keywords" content={t('iso39001.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>ISO 39001: Improve Road Safety and Fleet Risk Management</h1>
+          <h1>{t('iso39001.hero.title')}</h1>
           <p className="iso-subtitle">
-            ISO 39001 certification delivers a structured approach to reducing road traffic incidents, enhancing driver
-            safety, and improving operational performance. This international standard is designed for organizations with
-            significant road exposure — including transport fleets, logistics networks, and service-based operations.
+            {t('iso39001.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -26,25 +29,15 @@ const ISO39001: FC = () => {
       {/* What is ISO 39001 */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is ISO 39001?</h2>
+          <h2 className="section-title">{t('iso39001.whatIs.title')}</h2>
           <p className="iso-text">
-            ISO 39001 is the global standard for Road Traffic Safety (RTS) Management Systems. It provides a systematic
-            framework for organizations to identify, assess, and control traffic-related risks. It is especially relevant
-            to companies operating vehicle fleets or managing transportation logistics.
-          </p>
-          <p className="iso-text">
-            The standard integrates safety objectives, driver training programs, in-vehicle telemetry, and accident
-            investigation procedures to establish continuous improvement in road safety performance. It enables high-exposure
-            organizations to minimize risk to employees, contractors, and the public.
+            {t('iso39001.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>How We Certify Your Road Safety System</h3>
+            <h3>{t('iso39001.whatIs.roleBox.title')}</h3>
             <p>
-              We provide independent ISO 39001 certification that proves your organization controls road traffic risk in a
-              serious, evidence-based way. By assessing how you manage vehicles, drivers, routes, and contractors, we turn
-              your road safety performance into verifiable assurance for clients, authorities, and major contractors who
-              need a safe, reliable partner.
+              {t('iso39001.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -53,23 +46,23 @@ const ISO39001: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Benefits of ISO 39001 Certification</h2>
+          <h2 className="section-title">{t('iso39001.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Fewer Accidents and Fatalities</h3>
-              <p>Improves safety outcomes through structured monitoring, training, and corrective actions.</p>
+              <h3>{t('iso39001.benefits.benefit1.title')}</h3>
+              <p>{t('iso39001.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Lower Costs and Insurance Premiums</h3>
-              <p>Reduces accident-related downtime, legal exposure, and operational costs.</p>
+              <h3>{t('iso39001.benefits.benefit2.title')}</h3>
+              <p>{t('iso39001.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Enhanced Fleet Performance and Reputation</h3>
-              <p>Demonstrates public accountability while optimizing driver behavior and vehicle usage.</p>
+              <h3>{t('iso39001.benefits.benefit3.title')}</h3>
+              <p>{t('iso39001.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
@@ -78,61 +71,85 @@ const ISO39001: FC = () => {
       {/* Industry Focus */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Who Should Use ISO 39001?</h2>
+          <h2 className="section-title">{t('iso39001.industryFocus.title')}</h2>
           <p className="section-intro">
-            ISO 39001 is ideal for organizations with road transport responsibilities or significant driving exposure. Common sectors include:
+            {t('iso39001.industryFocus.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Transport & Logistics</h4>
-              <p>Manage freight movement with lower incident rates.</p>
+              <h4>{t('iso39001.industryFocus.logistics.title')}</h4>
+              <p>{t('iso39001.industryFocus.logistics.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Courier Services</h4>
-              <p>Protect drivers and ensure consistent delivery reliability.</p>
+              <h4>{t('iso39001.industryFocus.publicSector.title')}</h4>
+              <p>{t('iso39001.industryFocus.publicSector.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Utilities & Infrastructure</h4>
-              <p>Reduce road risk for mobile field operations.</p>
+              <h4>{t('iso39001.industryFocus.construction.title')}</h4>
+              <p>{t('iso39001.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Fleet Management Companies</h4>
-              <p>Increase control over performance, safety, and compliance.</p>
+              <h4>{t('iso39001.industryFocus.manufacturing.title')}</h4>
+              <p>{t('iso39001.industryFocus.manufacturing.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MSC Advantage */}
+      <section className="section section-gray">
+        <div className="container">
+          <h2 className="section-title">{t('iso39001.mscAdvantage.title')}</h2>
+          <p className="section-intro">
+            {t('iso39001.mscAdvantage.subtitle')}
+          </p>
+
+          <div className="advantage-cards">
+            <div className="advantage-card">
+              <h3>{t('iso39001.mscAdvantage.specializedAuditors.title')}</h3>
+              <p>{t('iso39001.mscAdvantage.specializedAuditors.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso39001.mscAdvantage.practicalAudit.title')}</h3>
+              <p>{t('iso39001.mscAdvantage.practicalAudit.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso39001.mscAdvantage.objectiveCertification.title')}</h3>
+              <p>{t('iso39001.mscAdvantage.objectiveCertification.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Certification Process */}
-      <section className="section section-gray">
+      <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Certification Roadmap</h2>
+          <h2 className="section-title">{t('iso39001.process.title')}</h2>
+          <p className="section-intro">
+            {t('iso39001.process.subtitle')}
+          </p>
 
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>Submit Application and Receive Quotation</h4>
+              <h4>{t('iso39001.process.step1')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Stage I Audit<br /><span className="process-detail">(Review of road safety documentation)</span></h4>
+              <h4>{t('iso39001.process.step2')}<br /><span className="process-detail">{t('iso39001.process.step2Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Stage II Audit<br /><span className="process-detail">(Evaluation of implementation and evidence)</span></h4>
+              <h4>{t('iso39001.process.step3')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>Certification Decision</h4>
+              <h4>{t('iso39001.process.step4')}<br /><span className="process-detail">{t('iso39001.process.step4Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>Annual Surveillance Audits</h4>
-            </div>
-            <div className="process-step">
-              <div className="process-step-number">6</div>
-              <h4>Re-certification<br /><span className="process-detail">(After three years)</span></h4>
+              <h4>{t('iso39001.process.step5')}<br /><span className="process-detail">{t('iso39001.process.step5Detail')}</span></h4>
             </div>
           </div>
         </div>
@@ -141,12 +158,15 @@ const ISO39001: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Take action to reduce traffic risk and demonstrate your commitment to road safety.</h2>
+          <h2>{t('iso39001.cta.title')}</h2>
+          <p>
+            {t('iso39001.cta.description')}
+          </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your ISO 39001 Certification</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso39001.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC Certifications are fully accredited and globally recognized.
+            {t('iso39001.cta.footer')}
           </p>
         </div>
       </section>

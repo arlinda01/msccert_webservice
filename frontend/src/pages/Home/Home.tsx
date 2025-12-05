@@ -1,10 +1,15 @@
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import * as FaIcons from 'react-icons/fa';
 import type { FAQ } from '../../types';
 import ISOSlider from '../../components/ISOSlider/ISOSlider';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const Home: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const toggleFAQ = (index: number): void => {
@@ -13,97 +18,111 @@ const Home: FC = () => {
 
   const isoCards = [
     {
-      to: "/services/iso/iso-9001",
+      to: routes.iso9001[currentLang],
       icon: "FaAward" as const,
-      title: "ISO 9001 (Quality Management)",
-      description: "The framework for operational consistency, significantly reducing errors.",
+      title: t('home.certificationPortfolio.iso9001.title'),
+      description: t('home.certificationPortfolio.iso9001.description'),
       benefits: ["Global Recognition", "Improved Efficiency", "Stronger Customer Loyalty"]
     },
     {
-      to: "/services/iso/iso-45001",
+      to: routes.iso45001[currentLang],
       icon: "FaHardHat" as const,
-      title: "ISO 45001 (Occupational Health & Safety)",
-      description: "Preventing workplace injuries and protecting your staff.",
+      title: t('home.certificationPortfolio.iso45001.title'),
+      description: t('home.certificationPortfolio.iso45001.description'),
       benefits: ["Reduce Workplace Accidents", "Legal Compliance", "Lower Insurance Costs"]
     },
     {
-      to: "/services/iso/iso-14001",
+      to: routes.iso14001[currentLang],
       icon: "FaLeaf" as const,
-      title: "ISO 14001 (Environmental Management)",
-      description: "Corporate social responsibility and environmental compliance.",
+      title: t('home.certificationPortfolio.iso14001.title'),
+      description: t('home.certificationPortfolio.iso14001.description'),
       benefits: ["Reduce Environmental Impact", "Cost Savings", "Regulatory Compliance"]
     },
     {
-      to: "/services/iso/iso-27001",
+      to: routes.iso27001[currentLang],
       icon: "FaLock" as const,
-      title: "ISO/IEC 27001 (Information Security)",
-      description: "Protecting sensitive data and securing IT infrastructure.",
+      title: t('home.certificationPortfolio.iso27001.title'),
+      description: t('home.certificationPortfolio.iso27001.description'),
       benefits: ["Data Protection", "GDPR Compliance", "Enhanced Cyber Security"]
     },
     {
-      to: "/services/iso/iso-22301",
+      to: routes.iso22301[currentLang],
       icon: "FaShieldAlt" as const,
-      title: "ISO 22301 (Business Continuity)",
-      description: "Ensuring rapid recovery after major disruptions.",
+      title: t('home.certificationPortfolio.iso22301.title'),
+      description: t('home.certificationPortfolio.iso22301.description'),
       benefits: ["Minimize Downtime", "Protect Revenue", "Maintain Critical Operations"]
     },
     {
-      to: "/services/iso/iso-37001",
+      to: routes.iso37001[currentLang],
       icon: "FaCertificate" as const,
-      title: "ISO 37001 (Anti-Bribery)",
-      description: "Prevention and detection systems for corruption risk.",
+      title: t('home.certificationPortfolio.iso37001.title'),
+      description: t('home.certificationPortfolio.iso37001.description'),
       benefits: ["Reduce Legal Risk", "Clean Reputation", "Tender Qualification"]
     },
     {
-      to: "/services/iso/haccp",
+      to: routes.haccp[currentLang],
       icon: "FaUtensils" as const,
-      title: "HACCP (Food Safety)",
-      description: "Product integrity and traceability for regulated markets.",
+      title: t('home.certificationPortfolio.iso22000.title'),
+      description: t('home.certificationPortfolio.iso22000.description'),
       benefits: ["HORECA Compliance", "Supply Chain Security", "Consumer Trust"]
     },
     {
-      to: "/services/iso/iso-39001",
+      to: routes.iso39001[currentLang],
       icon: "FaCar" as const,
-      title: "ISO 39001 (Road Traffic Safety - RTS)",
-      description: "Minimizes accidents for companies with large fleets.",
+      title: t('home.certificationPortfolio.iso39001.title'),
+      description: t('home.certificationPortfolio.iso39001.description'),
       benefits: ["Reduce Fleet Accidents", "Lower Insurance Premiums", "Improve Driver Safety"]
     },
     {
-      to: "/services/iso/iso-50001",
+      to: routes.iso50001[currentLang],
       icon: "FaBolt" as const,
-      title: "ISO 50001 (Energy Management)",
-      description: "Systematic approach to optimizing energy use.",
+      title: t('home.certificationPortfolio.iso50001.title'),
+      description: t('home.certificationPortfolio.iso50001.description'),
       benefits: ["Reduce Utility Bills", "Measurable Savings", "Environmental Performance"]
     }
   ];
 
   const faqs: FAQ[] = [
     {
-      question: "How long does the ISO certification process take?",
-      answer: "The duration depends on the size and complexity of your organization, and your existing documentation. A small, well-prepared company might take 3-6 months from initial setup to final audit. Our initial gap analysis provides a clear timeline."
+      question: t('home.faq.q1.question'),
+      answer: t('home.faq.q1.answer')
     },
     {
-      question: "How much does ISO certification cost?",
-      answer: "Costs vary based on the number of employees, the scope of the standard (e.g., ISO 9001 vs. ISO 27001), and the audit days required. We offer competitive and transparent pricing, providing a detailed quote after a free consultation and scope definition."
+      question: t('home.faq.q2.question'),
+      answer: t('home.faq.q2.answer')
     },
     {
-      question: "Is the certificate globally recognized?",
-      answer: "Yes. All certificates issued through MSC Certifications are backed by internationally accredited bodies (IAF members). This ensures the certificate is recognized and accepted worldwide, including in the EU and SEE markets."
+      question: t('home.faq.q3.question'),
+      answer: t('home.faq.q3.answer')
     },
     {
-      question: "Do I need to implement multiple ISO standards?",
-      answer: "Many organizations benefit from an Integrated Management System (IMS), combining standards like ISO 9001, 14001, and 45001. This saves time and resources by unifying documentation and audits. We can advise on the most beneficial combination for your business goals."
+      question: t('home.faq.q4.question'),
+      answer: t('home.faq.q4.answer')
+    },
+    {
+      question: t('home.faq.q5.question'),
+      answer: t('home.faq.q5.answer')
+    },
+    {
+      question: t('home.faq.q6.question'),
+      answer: t('home.faq.q6.answer')
     }
   ];
 
   return (
     <div className="home">
+      <Helmet>
+        <title>{t('meta.home.title')}</title>
+        <meta name="description" content={t('meta.home.description')} />
+        <meta name="keywords" content={t('meta.home.keywords')} />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Your Partner for ISO Certification, Compliance, and Risk Management</h1>
+          <h1>{t('home.hero.title')}</h1>
           <p className="hero-subtitle">
-            Secure your business future. MSC Certifications provides accredited, value-added ISO certification services, helping you minimize risk, increase operational efficiency, and earn market trust.
+            {t('home.hero.subtitle')}
           </p>
 
           {/* Hero Feature Icons */}
@@ -112,25 +131,25 @@ const Home: FC = () => {
               <div className="hero-feature-icon">
                 {FaIcons.FaShieldAlt({}) as any}
               </div>
-              <span>Globally Accredited</span>
+              <span>{t('home.heroFeatures.globallyAccredited')}</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
                 {FaIcons.FaUsers({}) as any}
               </div>
-              <span>Expert Auditors</span>
+              <span>{t('home.heroFeatures.expertAuditors')}</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
                 {FaIcons.FaCheckCircle({}) as any}
               </div>
-              <span>Fast Certification</span>
+              <span>{t('home.heroFeatures.fastCertification')}</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
                 {FaIcons.FaGlobeAmericas({}) as any}
               </div>
-              <span>Local Support</span>
+              <span>{t('home.heroFeatures.localSupport')}</span>
             </div>
           </div>
 
@@ -140,10 +159,9 @@ const Home: FC = () => {
       {/* Core Certification Portfolio - Right after Hero */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Our Core Certification Portfolio: Global Standards, Local Success</h2>
+          <h2 className="section-title">{t('home.certificationPortfolio.title')}</h2>
           <p className="section-intro">
-            We certify the systems that build trust and resilience, ensuring you meet global best practices
-            while remaining competitive locally.
+            {t('home.certificationPortfolio.subtitle')}
           </p>
 
           {/* ISO Certifications Slider */}
@@ -154,42 +172,36 @@ const Home: FC = () => {
       {/* MSC Difference Section */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">The MSC Difference: Why Choose Our Specialized Audits?</h2>
+          <h2 className="section-title">{t('home.mscDifference.title')}</h2>
           <p className="section-intro">
-            In the certification market, having a well-known logo isn't enough, you deserve an assessment that drives
-            real improvement and profitability. Unlike multinational bodies that rely on generic auditors,
-            MSC Certifications guarantees deep, contextual expertise within your specific industry.
+            {t('home.mscDifference.subtitle')}
           </p>
           <div className="features-grid">
             <div className="feature-card">
               <div className="card-icon">
                 {FaIcons.FaUsers({}) as any}
               </div>
-              <h3>Sector-Specific Experts</h3>
+              <h3>{t('home.mscDifference.specializedAuditors.title')}</h3>
               <p>
-                We match your industry. We provide a construction risk expert for building firms or a financial
-                compliance specialist for banks. This ensures your audit is solution-oriented and applicable to
-                your real-world operations.
+                {t('home.mscDifference.specializedAuditors.description')}
               </p>
             </div>
             <div className="feature-card">
               <div className="card-icon">
                 {FaIcons.FaGlobeAmericas({}) as any}
               </div>
-              <h3>Local Market Insight</h3>
+              <h3>{t('home.mscDifference.regulatoryExpertise.title')}</h3>
               <p>
-                We understand the nuances and regulatory pressures of the local and regional markets, making your
-                system more robust against actual operational and legal risks, particularly in public procurement.
+                {t('home.mscDifference.regulatoryExpertise.description')}
               </p>
             </div>
             <div className="feature-card">
               <div className="card-icon">
                 {FaIcons.FaChartLine({}) as any}
               </div>
-              <h3>Auditing for Value</h3>
+              <h3>{t('home.mscDifference.valueAudit.title')}</h3>
               <p>
-                Our process actively identifies genuine cost-saving opportunities and process efficiencies,
-                transforming the audit fee into an investment, not just an expense.
+                {t('home.mscDifference.valueAudit.description')}
               </p>
             </div>
           </div>
@@ -199,105 +211,97 @@ const Home: FC = () => {
       {/* Specialized Business Solutions */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Specialized Business Solutions: Beyond Certification</h2>
+          <h2 className="section-title">{t('home.specializedSolutions.title')}</h2>
           <p className="section-intro">
-            We offer integrated services that enhance competency and operational control:
+            {t('home.specializedSolutions.subtitle')}
           </p>
           <div className="solutions-grid">
             <div className="solution-card">
               <div className="card-icon">
                 {FaIcons.FaBolt({}) as any}
               </div>
-              <h4>Energy Efficiency Programs</h4>
+              <h4>{t('home.specializedSolutions.energyEfficiency.title')}</h4>
               <p>
-                Structured programs focusing on analyzing and reducing energy consumption in commercial buildings
-                and processes for immediate cost savings.
+                {t('home.specializedSolutions.energyEfficiency.description')}
               </p>
-              <Link to="/services/additional/energy-efficiency" className="card-btn">Learn More</Link>
+              <Link to={routes.energyEfficiency[currentLang]} className="card-btn">{t('common.learnMore')}</Link>
             </div>
             <div className="solution-card">
               <div className="card-icon">
                 {FaIcons.FaGraduationCap({}) as any}
               </div>
-              <h4>Staff Training</h4>
+              <h4>{t('home.specializedSolutions.staffTraining.title')}</h4>
               <p>
-                Role-based programs aligned with ISO competencies (9001, 45001, etc.) to increase productivity,
-                improve quality, and ensure regulatory safety compliance.
+                {t('home.specializedSolutions.staffTraining.description')}
               </p>
-              <Link to="/services/additional/staff-training" className="card-btn">Learn More</Link>
+              <Link to={routes.staffTraining[currentLang]} className="card-btn">{t('common.learnMore')}</Link>
             </div>
             <div className="solution-card">
               <div className="card-icon">
                 {FaIcons.FaIdCard({}) as any}
               </div>
-              <h4>Professional Cards</h4>
+              <h4>{t('home.specializedSolutions.professionalCards.title')}</h4>
               <p>
-                Personal certification used in regulated industries (e.g., HVAC technicians, welders) to instantly
-                prove competence, securing access to specific projects and job markets.
+                {t('home.specializedSolutions.professionalCards.description')}
               </p>
-              <Link to="/services/additional/professional-cards" className="card-btn">Learn More</Link>
+              <Link to={routes.professionalCard[currentLang]} className="card-btn">{t('common.learnMore')}</Link>
             </div>
             <div className="solution-card">
               <div className="card-icon">
                 {FaIcons.FaMicrochip({}) as any}
               </div>
-              <h4>Technology & Equipment Assessment</h4>
+              <h4>{t('home.specializedSolutions.techAssessment.title')}</h4>
               <p>
-                Technical evaluation of industrial machinery, technological lines, and equipment for certification,
-                safety, and investment planning.
+                {t('home.specializedSolutions.techAssessment.description')}
               </p>
-              <Link to="/evaluation-of-technological-lines-machinery-equipment" className="card-btn">Learn More</Link>
+              <Link to={routes.equipmentEvaluation[currentLang]} className="card-btn">{t('common.learnMore')}</Link>
             </div>
           </div>
-          {/*<div className="section-cta">*/}
-          {/*  <Link to="/services" className="btn btn-primary">Explore All Services</Link>*/}
-          {/*</div>*/}
         </div>
       </section>
 
       {/* Industry Focus */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Industry Focus: We Are Your Sector's Trusted Auditor</h2>
+          <h2 className="section-title">{t('home.industryFocus.title')}</h2>
           <p className="section-intro">
-            Certification success demands specific sectoral knowledge. We are the trusted choice for leaders in
-            high-risk and highly regulated sectors:
+            {t('home.industryFocus.subtitle')}
           </p>
           <div className="industries-list">
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaBuilding({}) as any}
               </div>
-              <h4>Construction & Infrastructure</h4>
-              <p>Risk management, quality assurance, and product compliance for major capital projects.</p>
+              <h4>{t('home.industryFocus.construction.title')}</h4>
+              <p>{t('home.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaUtensils({}) as any}
               </div>
-              <h4>Food & HORECA</h4>
-              <p>Securing the supply chain and ensuring global safety standards are met from production to consumption.</p>
+              <h4>{t('home.industryFocus.foodHoreca.title')}</h4>
+              <p>{t('home.industryFocus.foodHoreca.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaMicrochip({}) as any}
               </div>
-              <h4>IT & Telecommunications</h4>
-              <p>Data protection, system integrity, and service continuity in the digital economy.</p>
+              <h4>{t('home.industryFocus.itTelecom.title')}</h4>
+              <p>{t('home.industryFocus.itTelecom.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaIndustry({}) as any}
               </div>
-              <h4>Manufacturing & Energy</h4>
-              <p>Process optimization, energy cost reduction, and compliance with strict environmental regulations.</p>
+              <h4>{t('home.industryFocus.manufacturingEnergy.title')}</h4>
+              <p>{t('home.industryFocus.manufacturingEnergy.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaAward({}) as any}
               </div>
-              <h4>Public Sector & Tenders</h4>
-              <p>Demonstrating critical adherence to quality, integrity, and safety requirements (ISO 9001, ISO 37001).</p>
+              <h4>{t('home.industryFocus.publicSector.title')}</h4>
+              <p>{t('home.industryFocus.publicSector.description')}</p>
             </div>
           </div>
         </div>
@@ -306,8 +310,7 @@ const Home: FC = () => {
       {/* FAQ Section - Interactive Accordion */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Frequently Asked Questions (FAQ)</h2>
-          <p className="section-intro">Answering your most pressing questions about the certification process:</p>
+          <h2 className="section-title">{t('home.faq.title')}</h2>
           <div className="faq-accordion">
             {faqs.map((faq, index) => (
               <div
@@ -344,17 +347,15 @@ const Home: FC = () => {
       {/* Final CTA Section */}
       <section className="section section-cta-final">
         <div className="container">
-          <h2>Start Your Journey Towards Quality and Trust</h2>
+          <h2>{t('home.cta.title')}</h2>
           <p>
-            Join hundreds of businesses across the region that trust MSC Certifications to transform their operations.
-            We offer a complimentary, no-obligation assessment to identify the ISO systems that deliver the highest
-            measurable value and greatest risk reduction for your business.
+            {t('home.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary-large">Request a Detailed Quote and Assessment</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary-large">{t('common.requestQuote')}</Link>
           </div>
           <p className="cta-footer">
-            All our certifications are backed by internationally accredited bodies, ensuring global recognition.
+            {t('home.cta.accreditedNote')}
           </p>
         </div>
       </section>

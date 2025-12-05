@@ -1,24 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const ISO50001: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO 50001 Certification | Energy Management System Audits</title>
-        <meta name="description" content="Cut energy costs and CO₂ emissions with ISO 50001 certification. Prove sustainability performance with MSC CERTIFICATIONS. Start your audit today." />
-        <meta name="keywords" content="ISO 50001 certification, ISO 50001 audit, Energy management system certification, Energy management audit, Accredited ISO 50001 certification, ISO 50001 Albania, MSC CERTIFICATIONS" />
+        <title>{t('iso50001.meta.title')}</title>
+        <meta name="description" content={t('iso50001.meta.description')} />
+        <meta name="keywords" content={t('iso50001.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>ISO 50001: Improve Energy Performance and Meet Sustainability Goals</h1>
+          <h1>{t('iso50001.hero.title')}</h1>
           <p className="iso-subtitle">
-            ISO 50001 certification helps you implement a structured energy management system to reduce energy consumption,
-            cut CO₂ emissions, and align with global sustainability expectations. This international standard supports
-            continuous improvement in energy use through real-time data, strategic planning, and performance monitoring.
+            {t('iso50001.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -26,19 +29,15 @@ const ISO50001: FC = () => {
       {/* What is ISO 50001 */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is ISO 50001?</h2>
+          <h2 className="section-title">{t('iso50001.whatIs.title')}</h2>
           <p className="iso-text">
-            ISO 50001 is the international standard for Energy Management Systems (EnMS) that helps organizations
-            systematically control and reduce their energy use. It provides a clear framework to improve energy performance,
-            cut costs, and lower CO₂ emissions in a measurable, verifiable way.
+            {t('iso50001.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Third-Party Certification from MSC Certifications</h3>
+            <h3>{t('iso50001.whatIs.roleBox.title')}</h3>
             <p>
-              Our role in ISO 50001 certification is to recognize and validate organizations that manage energy in a structured,
-              efficient, and responsible way. Through our audits and certification, we give you a trusted mark that your
-              operations are aligned with best practice in energy performance, cost control, and CO₂ reduction.
+              {t('iso50001.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -47,23 +46,23 @@ const ISO50001: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Benefits of ISO 50001 Certification</h2>
+          <h2 className="section-title">{t('iso50001.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Lower Energy Costs and Carbon Emissions</h3>
-              <p>Use metering and performance analysis to cut utility costs and reduce environmental impact.</p>
+              <h3>{t('iso50001.benefits.benefit1.title')}</h3>
+              <p>{t('iso50001.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Verified Energy Efficiency</h3>
-              <p>Demonstrate measurable energy improvement to customers, regulators, and investors.</p>
+              <h3>{t('iso50001.benefits.benefit2.title')}</h3>
+              <p>{t('iso50001.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Compliance and Incentives</h3>
-              <p>Meet environmental regulations and qualify for government or private energy incentives.</p>
+              <h3>{t('iso50001.benefits.benefit3.title')}</h3>
+              <p>{t('iso50001.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
@@ -72,65 +71,85 @@ const ISO50001: FC = () => {
       {/* Industry Focus */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industries That Benefit from ISO 50001</h2>
+          <h2 className="section-title">{t('iso50001.industryFocus.title')}</h2>
           <p className="section-intro">
-            This standard is applicable to all sectors with significant energy usage, including:
+            {t('iso50001.industryFocus.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Manufacturing</h4>
-              <p>Improve machine efficiency and monitor energy-intensive processes.</p>
+              <h4>{t('iso50001.industryFocus.manufacturing.title')}</h4>
+              <p>{t('iso50001.industryFocus.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Commercial Buildings</h4>
-              <p>Track HVAC, lighting, and utilities.</p>
+              <h4>{t('iso50001.industryFocus.buildings.title')}</h4>
+              <p>{t('iso50001.industryFocus.buildings.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Data Centers</h4>
-              <p>Optimize cooling, storage, and server load.</p>
+              <h4>{t('iso50001.industryFocus.utilities.title')}</h4>
+              <p>{t('iso50001.industryFocus.utilities.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Transport</h4>
-              <p>Reduce energy across fleets and logistics.</p>
+              <h4>{t('iso50001.industryFocus.logistics.title')}</h4>
+              <p>{t('iso50001.industryFocus.logistics.description')}</p>
             </div>
-            <div className="industry-focus-item">
-              <h4>Utilities</h4>
-              <p>Support operational transparency and consumption control.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* MSC Advantage */}
+      <section className="section section-gray">
+        <div className="container">
+          <h2 className="section-title">{t('iso50001.mscAdvantage.title')}</h2>
+          <p className="section-intro">
+            {t('iso50001.mscAdvantage.subtitle')}
+          </p>
+
+          <div className="advantage-cards">
+            <div className="advantage-card">
+              <h3>{t('iso50001.mscAdvantage.specializedAuditors.title')}</h3>
+              <p>{t('iso50001.mscAdvantage.specializedAuditors.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso50001.mscAdvantage.practicalAudit.title')}</h3>
+              <p>{t('iso50001.mscAdvantage.practicalAudit.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('iso50001.mscAdvantage.objectiveCertification.title')}</h3>
+              <p>{t('iso50001.mscAdvantage.objectiveCertification.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Certification Process */}
-      <section className="section section-gray">
+      <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">ISO 50001 Certification Process</h2>
+          <h2 className="section-title">{t('iso50001.process.title')}</h2>
+          <p className="section-intro">
+            {t('iso50001.process.subtitle')}
+          </p>
 
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>Submit Application and Receive a Quote</h4>
+              <h4>{t('iso50001.process.step1')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>Stage I Audit<br /><span className="process-detail">(Documentation and system review)</span></h4>
+              <h4>{t('iso50001.process.step2')}<br /><span className="process-detail">{t('iso50001.process.step2Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>Stage II Audit<br /><span className="process-detail">(Evidence and implementation evaluation)</span></h4>
+              <h4>{t('iso50001.process.step3')}</h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>Certification Issued upon Conformity</h4>
+              <h4>{t('iso50001.process.step4')}<br /><span className="process-detail">{t('iso50001.process.step4Detail')}</span></h4>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>Annual Surveillance Audits</h4>
-            </div>
-            <div className="process-step">
-              <div className="process-step-number">6</div>
-              <h4>Re-certification<br /><span className="process-detail">(Every 3 years)</span></h4>
+              <h4>{t('iso50001.process.step5')}<br /><span className="process-detail">{t('iso50001.process.step5Detail')}</span></h4>
             </div>
           </div>
         </div>
@@ -139,12 +158,15 @@ const ISO50001: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Take control of your energy efficiency strategy today.</h2>
+          <h2>{t('iso50001.cta.title')}</h2>
+          <p>
+            {t('iso50001.cta.description')}
+          </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your ISO 50001 Certification</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso50001.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC Certifications are fully accredited and globally recognized.
+            {t('iso50001.cta.footer')}
           </p>
         </div>
       </section>
