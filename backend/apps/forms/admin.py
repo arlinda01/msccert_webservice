@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.utils.html import format_html
-from django.urls import reverse
 from django.db.models import Count
 from .models import (
     FormTemplate, FormSection, FormQuestion,
@@ -8,86 +7,62 @@ from .models import (
 )
 
 
-class FormQuestionInline(admin.TabularInline):
-    """Inline admin for questions within a section"""
-    model = FormQuestion
-    extra = 1
-    ordering = ['order']
-    fields = [
-        'order', 'question_text', 'question_type', 'is_required', 'is_active'
-    ]
-    show_change_link = True
-
-
-class FormSectionInline(admin.TabularInline):
-    """Inline admin for sections within a form template"""
-    model = FormSection
-    extra = 0
-    ordering = ['order']
-    fields = ['order', 'title', 'is_active']
-    show_change_link = True
-
+# ============================================
+# Inline classes (used within other admins)
+# ============================================
 
 class FormAnswerInline(admin.TabularInline):
     """Inline admin for answers within a submission"""
     model = FormAnswer
     extra = 0
-    readonly_fields = ['question', 'answer_text', 'answer_json', 'answer_file', 'display_value']
-    fields = ['question', 'display_value']
+    readonly_fields = ['section_name', 'question_text_display', 'display_value']
+    fields = ['section_name', 'question_text_display', 'display_value']
     can_delete = False
+    verbose_name = "Answer"
+    verbose_name_plural = "Form Responses"
+    ordering = ['question__section__order', 'question__order']
+
+    def section_name(self, obj):
+        return obj.question.section.title
+    section_name.short_description = 'Section'
+
+    def question_text_display(self, obj):
+        return obj.question.question_text
+    question_text_display.short_description = 'Question'
 
     def has_add_permission(self, request, obj=None):
         return False
 
 
-class FormSubmissionLogInline(admin.TabularInline):
-    """Inline admin for submission logs"""
-    model = FormSubmissionLog
-    extra = 0
-    readonly_fields = ['previous_status', 'new_status', 'changed_by', 'notes', 'created_at']
-    can_delete = False
-
-    def has_add_permission(self, request, obj=None):
-        return False
-
+# ============================================
+# Form Templates (read-only overview)
+# ============================================
 
 @admin.register(FormTemplate)
 class FormTemplateAdmin(admin.ModelAdmin):
-    """Admin interface for Form Templates"""
+    """Admin interface for Form Templates - View available forms"""
     list_display = [
-        'name', 'iso_standard', 'form_type', 'is_active', 'is_public',
+        'name', 'iso_standard', 'is_active', 'is_public',
         'questions_count', 'submissions_count', 'created_at'
     ]
-    list_filter = ['iso_standard', 'form_type', 'is_active', 'is_public', 'created_at']
+    list_filter = ['iso_standard', 'is_active', 'is_public']
     search_fields = ['name', 'name_sq', 'description']
-    ordering = ['-created_at']
-    date_hierarchy = 'created_at'
+    ordering = ['iso_standard', 'name']
 
     fieldsets = (
-        ('Basic Information', {
-            'fields': ('name', 'name_sq', 'description', 'description_sq')
-        }),
-        ('Classification', {
-            'fields': ('iso_standard', 'form_type')
+        ('Form Information', {
+            'fields': ('name', 'name_sq', 'description', 'description_sq', 'iso_standard', 'form_type')
         }),
         ('Status', {
             'fields': ('is_active', 'is_public')
         }),
-        ('Settings', {
-            'fields': (
-                'requires_auth', 'allow_multiple_submissions',
-                'send_confirmation_email', 'notification_emails'
-            ),
-            'classes': ('collapse',)
-        }),
-        ('Timestamps', {
-            'fields': ('created_at', 'updated_at'),
+        ('Email Settings', {
+            'fields': ('send_confirmation_email', 'notification_emails'),
             'classes': ('collapse',)
         }),
     )
 
     readonly_fields = ['created_at', 'updated_at']
-    inlines = [FormSectionInline]
 
     def get_queryset(self, request):
         return super().get_queryset(request).annotate(
@@ -102,80 +77,23 @@ class FormTemplateAdmin(admin.ModelAdmin):
 
     def submissions_count(self, obj):
         return obj._submissions_count
-    submissions_count.short_description = 'Submissions'
+    submissions_count.short_description = 'Filled Forms'
     submissions_count.admin_order_field = '_submissions_count'
 
 
-@admin.register(FormSection)
-class FormSectionAdmin(admin.ModelAdmin):
-    """Admin interface for Form Sections"""
-    list_display = ['title', 'form_template', 'order', 'questions_count', 'is_active']
-    list_filter = ['form_template__iso_standard', 'is_active', 'form_template']
-    search_fields = ['title', 'title_sq', 'description']
-    ordering = ['form_template', 'order']
-
-    fieldsets = (
-        ('Basic Information', {
-            'fields': ('form_template', 'title', 'title_sq', 'description', 'description_sq')
-        }),
-        ('Settings', {
-            'fields': ('order', 'is_active')
-        }),
-    )
-
-    inlines = [FormQuestionInline]
-
-    def get_queryset(self, request):
-        return super().get_queryset(request).annotate(
-            _questions_count=Count('questions')
-        )
-
-    def questions_count(self, obj):
-        return obj._questions_count
-    questions_count.short_description = 'Questions'
-    questions_count.admin_order_field = '_questions_count'
-
-
-@admin.register(FormQuestion)
-class FormQuestionAdmin(admin.ModelAdmin):
-    """Admin interface for Form Questions"""
-    list_display = [
-        'short_question', 'section', 'question_type', 'is_required', 'order', 'is_active'
-    ]
-    list_filter = [
-        'question_type', 'is_required', 'is_active',
-        'section__form_template__iso_standard', 'section__form_template'
-    ]
-    search_fields = ['question_text', 'question_text_sq', 'help_text']
-    ordering = ['section__form_template', 'section__order', 'order']
-
-    fieldsets = (
-        ('Question Content', {
-            'fields': ('section', 'question_text', 'question_text_sq', 'help_text', 'help_text_sq')
-        }),
-        ('Question Type & Validation', {
-            'fields': ('question_type', 'is_required', 'options', 'validation_rules')
-        }),
-        ('Display Settings', {
-            'fields': ('order', 'conditional_logic', 'is_active')
-        }),
-    )
-
-    def short_question(self, obj):
-        text = obj.question_text
-        return text[:50] + '...' if len(text) > 50 else text
-    short_question.short_description = 'Question'
-
+# ============================================
+# Form Submissions (main view for filled forms)
+# ============================================
 
 @admin.register(FormSubmission)
 class FormSubmissionAdmin(admin.ModelAdmin):
-    """Admin interface for Form Submissions"""
+    """Admin interface for Form Submissions - View all filled forms"""
     list_display = [
-        'submission_number', 'form_template', 'submitter_name', 'submitter_email',
-        'company_name', 'status_badge', 'language', 'submitted_at'
+        'submission_number', 'form_name_display', 'submitter_name', 'company_name',
+        'answers_count', 'status_badge', 'submitted_at'
     ]
     list_filter = [
-        'status', 'language', 'form_template__iso_standard',
+        'status', 'form_template__iso_standard',
         'form_template', 'submitted_at'
     ]
     search_fields = [
@@ -183,36 +101,49 @@ class FormSubmissionAdmin(admin.ModelAdmin):
     ]
     ordering = ['-submitted_at']
     date_hierarchy = 'submitted_at'
+    list_per_page = 25
 
     fieldsets = (
-        ('Submission Info', {
-            'fields': ('submission_number', 'form_template', 'status')
+        ('Form Submission', {
+            'fields': ('submission_number', 'form_template', 'status'),
+            'description': 'Each submission represents one complete form filled by a user. All answers are shown below.'
         }),
-        ('Submitter Details', {
+        ('Submitter Information', {
             'fields': ('submitter_name', 'submitter_email', 'submitter_phone', 'company_name')
         }),
-        ('Metadata', {
-            'fields': ('language', 'ip_address', 'user_agent'),
-            'classes': ('collapse',)
+        ('Internal Notes', {
+            'fields': ('internal_notes',),
         }),
-        ('Internal', {
-            'fields': ('internal_notes',)
-        }),
-        ('Timestamps', {
-            'fields': ('submitted_at', 'reviewed_at', 'updated_at'),
+        ('Technical Details', {
+            'fields': ('language', 'ip_address', 'submitted_at', 'reviewed_at'),
             'classes': ('collapse',)
         }),
     )
 
     readonly_fields = [
         'submission_number', 'form_template', 'submitter_name', 'submitter_email',
-        'submitter_phone', 'company_name', 'language', 'ip_address', 'user_agent',
-        'submitted_at', 'updated_at'
+        'submitter_phone', 'company_name', 'language', 'ip_address',
+        'submitted_at', 'reviewed_at'
     ]
 
-    inlines = [FormAnswerInline, FormSubmissionLogInline]
+    inlines = [FormAnswerInline]
 
     actions = ['mark_as_under_review', 'mark_as_approved', 'mark_as_rejected', 'mark_as_completed']
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('form_template').annotate(
+            _answers_count=Count('answers')
+        )
+
+    def form_name_display(self, obj):
+        return obj.form_template.name
+    form_name_display.short_description = 'Form'
+    form_name_display.admin_order_field = 'form_template__name'
+
+    def answers_count(self, obj):
+        return format_html('<strong>{}</strong> answers', obj._answers_count)
+    answers_count.short_description = 'Responses'
+    answers_count.admin_order_field = '_answers_count'
 
     def status_badge(self, obj):
         colors = {
@@ -291,55 +222,3 @@ class FormSubmissionAdmin(admin.ModelAdmin):
     @admin.action(description='Mark selected as Completed')
     def mark_as_completed(self, request, queryset):
         self._update_status(request, queryset, 'COMPLETED', 'Bulk action: marked as completed')
-
-
-@admin.register(FormAnswer)
-class FormAnswerAdmin(admin.ModelAdmin):
-    """Admin interface for Form Answers (read-only)"""
-    list_display = ['submission', 'question_short', 'display_value_short']
-    list_filter = ['submission__form_template', 'question__question_type']
-    search_fields = ['submission__submission_number', 'answer_text']
-    ordering = ['-submission__submitted_at']
-
-    readonly_fields = [
-        'submission', 'question', 'answer_text', 'answer_json', 'answer_file', 'display_value'
-    ]
-
-    def has_add_permission(self, request):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def question_short(self, obj):
-        text = obj.question.question_text
-        return text[:40] + '...' if len(text) > 40 else text
-    question_short.short_description = 'Question'
-
-    def display_value_short(self, obj):
-        value = obj.display_value
-        return value[:50] + '...' if len(value) > 50 else value
-    display_value_short.short_description = 'Answer'
-
-
-@admin.register(FormSubmissionLog)
-class FormSubmissionLogAdmin(admin.ModelAdmin):
-    """Admin interface for Submission Logs (read-only)"""
-    list_display = ['submission', 'previous_status', 'new_status', 'changed_by', 'created_at']
-    list_filter = ['new_status', 'created_at']
-    search_fields = ['submission__submission_number', 'changed_by', 'notes']
-    ordering = ['-created_at']
-    date_hierarchy = 'created_at'
-
-    readonly_fields = [
-        'submission', 'previous_status', 'new_status', 'changed_by', 'notes', 'created_at'
-    ]
-
-    def has_add_permission(self, request):
-        return False
-
-    def has_change_permission(self, request, obj=None):
-        return False
-
-    def has_delete_permission(self, request, obj=None):
-        return False
