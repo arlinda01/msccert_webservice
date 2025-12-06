@@ -250,7 +250,6 @@ const AdditionalServices: FC = () => {
           </p>
           <div className="cta-buttons">
             <Link to="/contact" className="btn btn-primary">Request a Free Consultation</Link>
-            <Link to="/free-online-assessment" className="btn btn-outline">Get a Free Online Assessment</Link>
           </div>
         </div>
       </section>

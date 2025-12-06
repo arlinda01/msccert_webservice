@@ -43,7 +43,11 @@ const MissionVision: FC = () => {
             </section>
 
             {/* Core Values */}
-            <section className="section section-gray">
+            <section className="section section-gray mission-vision-values-section">
+                {/* Decorative shapes */}
+                <div className="decorative-shape decorative-shape-1"></div>
+                <div className="decorative-shape decorative-shape-2"></div>
+                <div className="decorative-shape decorative-shape-3"></div>
                 <div className="container">
                     <h2 className="section-title">{t('missionVision.coreValues.title')}</h2>
                     <div className="values-grid">

@@ -3819,6 +3819,75 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Mission & Vision Section with Decorative Background */
+.mission-vision-values-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-vision-values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(42, 186, 212, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.mission-vision-values-section::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(1, 68, 80, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.mission-vision-values-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative geometric shapes */
+.mission-vision-values-section .decorative-shape {
+  position: absolute;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.mission-vision-values-section .decorative-shape-1 {
+  top: 20%;
+  right: 5%;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #01434f;
+  transform: rotate(45deg);
+}
+
+.mission-vision-values-section .decorative-shape-2 {
+  bottom: 30%;
+  left: 3%;
+  width: 60px;
+  height: 60px;
+  background: #2abad4;
+  border-radius: 50%;
+}
+
+.mission-vision-values-section .decorative-shape-3 {
+  top: 40%;
+  left: 8%;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #01434f, transparent);
+  transform: rotate(-30deg);
+}
+
 /* Mission & Vision Grid - Natural flowing design */
 .mission-vision-grid {
   display: grid;

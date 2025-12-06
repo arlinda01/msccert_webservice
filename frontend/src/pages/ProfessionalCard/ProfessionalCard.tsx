@@ -33,7 +33,7 @@ const ProfessionalCard: FC = () => {
         </div>
       </section>
 
-      {/* What Is Professional Card Section */}
+      {/* What Is IDCP Section */}
       <section className="section section-white">
         <div className="container">
           <h2 className="section-title">{t('professionalCard.whatIs.title')}</h2>
@@ -55,6 +55,54 @@ const ProfessionalCard: FC = () => {
             <p>
               {t('professionalCard.whatIs.roleBox.description')}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="section section-gray">
+        <div className="container">
+          <h2 className="section-title">{t('professionalCard.howItWorks.title')}</h2>
+          <div className="ce-steps-grid">
+            <div className="ce-step-card">
+              <div className="ce-step-number">1</div>
+              <h3>{t('professionalCard.howItWorks.step1.title')}</h3>
+              <p>{t('professionalCard.howItWorks.step1.description')}</p>
+            </div>
+            <div className="ce-step-card">
+              <div className="ce-step-number">2</div>
+              <h3>{t('professionalCard.howItWorks.step2.title')}</h3>
+              <p>{t('professionalCard.howItWorks.step2.description')}</p>
+            </div>
+            <div className="ce-step-card">
+              <div className="ce-step-number">3</div>
+              <h3>{t('professionalCard.howItWorks.step3.title')}</h3>
+              <p>{t('professionalCard.howItWorks.step3.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Card Contains Section */}
+      <section className="section section-white">
+        <div className="container">
+          <h2 className="section-title">{t('professionalCard.cardContains.title')}</h2>
+          <div className="card-contains-list" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+                <li key={num} style={{
+                  padding: '1rem 1.5rem',
+                  marginBottom: '0.75rem',
+                  background: '#f8f9fa',
+                  borderRadius: '8px',
+                  borderLeft: '4px solid #2abad4',
+                  color: '#333',
+                  fontSize: '1.05rem'
+                }}>
+                  {t(`professionalCard.cardContains.item${num}`)}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -102,12 +150,12 @@ const ProfessionalCard: FC = () => {
           <h2 className="section-title">{t('professionalCard.industries.title')}</h2>
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.manufacturing.title')}</h4>
-              <p>{t('professionalCard.industries.manufacturing.description')}</p>
-            </div>
-            <div className="industry-focus-item">
               <h4>{t('professionalCard.industries.construction.title')}</h4>
               <p>{t('professionalCard.industries.construction.description')}</p>
+            </div>
+            <div className="industry-focus-item">
+              <h4>{t('professionalCard.industries.manufacturing.title')}</h4>
+              <p>{t('professionalCard.industries.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
               <h4>{t('professionalCard.industries.energy.title')}</h4>
@@ -118,14 +166,14 @@ const ProfessionalCard: FC = () => {
               <p>{t('professionalCard.industries.transport.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.public.title')}</h4>
-              <p>{t('professionalCard.industries.public.description')}</p>
+              <h4>{t('professionalCard.industries.horeca.title')}</h4>
+              <p>{t('professionalCard.industries.horeca.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* MSC Advantage Section */}
+      {/* Why Choose MSC Section */}
       <section className="section section-gray">
         <div className="container">
           <h2 className="section-title">{t('professionalCard.whyChoose.title')}</h2>

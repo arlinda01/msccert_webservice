@@ -153,11 +153,6 @@ const Navigation: FC = () => {
           <li><Link to={getPath('contact')} onClick={closeMenu}>{t('nav.contactUs')}</Link></li>
 
           <li className="mobile-only nav-actions-mobile">
-            <Link to={getPath('contact')} className="nav-btn nav-btn-secondary" onClick={closeMenu}>
-              {t('nav.onlineAssessment')}
-            </Link>
-          </li>
-          <li className="mobile-only nav-actions-mobile">
             <Link to={getPath('contact')} className="nav-btn nav-btn-primary" onClick={closeMenu}>
               {t('nav.getQuote')}
             </Link>
@@ -200,9 +195,6 @@ const Navigation: FC = () => {
         </ul>
 
         <div className="nav-actions desktop-only">
-          <Link to={getPath('contact')} className="nav-btn nav-btn-secondary" onClick={closeMenu}>
-            {t('nav.onlineAssessment')}
-          </Link>
           <Link to={getPath('contact')} className="nav-btn nav-btn-primary" onClick={closeMenu}>
             {t('nav.getQuote')}
           </Link>

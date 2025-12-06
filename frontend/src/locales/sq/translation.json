@@ -21,7 +21,7 @@
     "ceMarking": "Markimi CE",
     "energyEfficiency": "Programet e Efiçencës Energjetike",
     "staffTraining": "Trajnimi i Stafit",
-    "professionalCards": "Kartat Profesionale",
+    "professionalCards": "IDCP ID Card Professional",
     "technologicalCard": "Karta Teknologjike",
     "equipmentEvaluation": "Vlerësimi i Pajisjeve",
     "blog": "Blog",
@@ -1891,90 +1891,115 @@
   },
   "professionalCard": {
     "meta": {
-      "title": "Shërbimet e Kartës Profesionale | Përcaktim Rolesh & Konformitet i Fuqisë Punëtore - MSC CERTIFICATIONS",
-      "description": "Standardizo rolet e punës dhe siguro konformitetin e punës me MSC CERTIFICATIONS. Përcakto përgjegjësitë, përmirëso trajnimin dhe rrit qartësinë operacionale.",
-      "keywords": "karta profesionale, konformitet i fuqisë punëtore, përcaktim rolesh, dokumentacion HR, kompetencë profesionale, ISO 45001 workforce, kartë përgjegjësie pune"
+      "title": "IDCP ID Card Professional | Vertetim i Aftësive Profesionale - MSC CERTIFICATIONS",
+      "description": "Certifiko aftësitë profesionale të stafit me IDCP ID Card Professional nga MSC CERTIFICATIONS. Dëshmo kompetencën dhe përputhshmërinë me standardet ligjore dhe të sigurisë.",
+      "keywords": "IDCP, ID Card Professional, kartë identiteti profesionale, vertetim aftësish, certifikim punonjësi, kompetencë profesionale, siguri në punë, MSC CERTIFICATIONS"
     },
     "hero": {
-      "title": "Karta Profesionale: Përcakto Rolet, Siguro Kompetencën dhe Forco Konformitetin",
-      "subtitle1": "Gati të formalizosh strukturën e fuqisë punëtore dhe të demonstrosh kompetencë profesionale në të gjithë organizatën?",
-      "subtitle2": "Karta Profesionale përcakton qartë detyrat, përgjegjësitë, kualifikimet dhe kërkesat e sigurisë për çdo pozicion — duke siguruar konformitet, qëndrueshmëri dhe ekselencë operacionale.",
-      "cta1": "Kërko Ofertë për Shërbimin e Kartës Profesionale",
-      "cta2": "Fillo Rishikimin e Konformitetit të Fuqisë Punëtore"
+      "title": "IDCP ID Card Professional: Vërteto Aftësitë dhe Kompetencën Profesionale",
+      "subtitle1": "Dëshmo formimin, përvojën dhe aftësitë specifike të çdo punonjësi.",
+      "subtitle2": "IDCP ID Card Professional është certifikata personale që verteton pozicionin, kompetencën dhe autorizimin e punonjësit për kryerjen e detyrave specifike — duke ndihmuar organizatat të përmbushin kërkesat ligjore, standardet ISO dhe rregullat e sigurisë në punë.",
+      "cta1": "Kërko Ofertë për IDCP ID Card Professional",
+      "cta2": "Fillo Vlerësimin Falas të Kompetencës së Stafit"
     },
     "whatIs": {
-      "title": "Çfarë është Karta Profesionale?",
-      "subtitle": "Korniza për Standardizimin e Fuqisë Punëtore",
-      "description1": "Karta Profesionale është një dokument zyrtar që përshkruan një rol specifik pune ose profesion brenda organizatës suaj.",
-      "description2": "Përshkruan aftësitë e kërkuara, edukimin, përgjegjësitë, mjetet e përdorura dhe kushtet e punës për atë rol. Ky dokumentacion formon bazën për menaxhimin HR, konformitetin e punës, trajnimin dhe sigurimin e sigurisë.",
-      "description3": "Çdo Kartë Profesionale siguron që funksioni i çdo punonjësi të jetë i përcaktuar qartë — duke reduktuar ambiguitetin, duke përmirësuar përgjegjshmërinë dhe duke siguruar përafrimin rregullator.",
+      "title": "Çfarë është IDCP ID Card Professional?",
+      "subtitle": "Certifikim Personal i Kompetencës Profesionale",
+      "description1": "IDCP ID Card Professional është një dokument zyrtar i certifikuar që përcakton identitetin profesional të një punonjësi brenda një organizate.",
+      "description2": "Ajo përmban të dhëna mbi pozicionin, kualifikimet, trajnimet, lejet ose autorizimet specifike dhe përputhshmërinë me kërkesat ligjore dhe standardet e sigurisë dhe shëndetit në punë.",
+      "description3": "Karta krijon një profil të qartë dhe të besueshëm për çdo punonjës — duke e ndihmuar organizatën të menaxhojë resurset njerëzore në mënyrë efektive dhe të përmbushë detyrimet ndaj inspektimeve, tenderave dhe klientëve.",
       "roleBox": {
-        "title": "Roli Ynë si Verifikues të Pavarur",
-        "description": "Ne ndihmojmë kompanitë të zhvillojnë dhe verifikojnë Karta Profesionale që plotësojnë si standardet kombëtare të punës ashtu edhe praktikat më të mira ndërkombëtare (si ISO 9001 dhe ISO 45001)."
+        "title": "Roli Ynë si Lëshues i Akredituar",
+        "description": "MSC CERTIFICATIONS lëshon IDCP ID Card Professional mbi bazën e një procesi të strukturuar verifikimi — duke vërtetuar përputhshmërinë me kërkesat e industrisë dhe legjislacionit në fuqi."
       }
     },
+    "howItWorks": {
+      "title": "Si Funksionon IDCP ID Card Professional",
+      "step1": {
+        "title": "Aplikimi dhe Mbledhja e të Dhënave",
+        "description": "Plotësohet formulari me të dhënat e punonjësit, pozicionin, trajnimet, certifikatat dhe lejet ekzistuese."
+      },
+      "step2": {
+        "title": "Verifikimi i Dokumentacionit",
+        "description": "MSC CERTIFICATIONS verifikon përputhshmërinë e të dhënave me kërkesat ligjore dhe standardet e aplikueshme."
+      },
+      "step3": {
+        "title": "Lëshimi i Kartës",
+        "description": "Pas verifikimit, lëshohet IDCP ID Card Professional me të gjitha të dhënat e certifikuara."
+      }
+    },
+    "cardContains": {
+      "title": "Çfarë Përmban IDCP ID Card Professional",
+      "item1": "Emri dhe të dhënat e identifikimit të punonjësit",
+      "item2": "Pozicioni i punës dhe sektori i kompanisë",
+      "item3": "Kualifikimet dhe certifikatat profesionale",
+      "item4": "Trajnimet e kryera dhe datat",
+      "item5": "Lejet/autorizimet specifike (p.sh. punë në lartësi, saldim, etj.)",
+      "item6": "Statusi i përputhshmërisë me sigurinë në punë",
+      "item7": "Data e vlefshmërisë dhe kodi unik i verifikimit"
+    },
     "benefits": {
-      "title": "Përfitimet Kryesore: Strukturë, Konformitet dhe Transparencë",
+      "title": "Përfitimet Kryesore të IDCP ID Card Professional",
       "benefit1": {
-        "title": "Qartësi në Përgjegjësi",
-        "description": "Përcakto detyra dhe pritshmëri të qarta për çdo pozicion, duke eliminuar konfuzionin dhe mbivendosjen e roleve."
+        "title": "Dëshmi e Menjëhershme e Kompetencës",
+        "description": "Karta shërben si vërtetim i shpejtë dhe zyrtar i aftësive të punonjësit për punëdhënësit, inspektorët dhe klientët."
       },
       "benefit2": {
-        "title": "Konformitet me Standardet e Punës",
-        "description": "Plotëso kërkesat ligjore, shëndetësore dhe të sigurisë së dokumentacionit, duke siguruar përafrim të plotë rregullator."
+        "title": "Përputhshmëri me Ligjin dhe ISO",
+        "description": "Plotëson kërkesat e Kodit të Punës, standardeve të sigurisë (ISO 45001) dhe rregulloreve sektoriale."
       },
       "benefit3": {
-        "title": "Trajnim dhe Vlerësim i Përmirësuar",
-        "description": "Ndërto plane trajnimi të synuara dhe rishikime të drejta performancë bazuar në përcaktime të qarta rolesh."
+        "title": "Avantazh në Tendera dhe Kontrata",
+        "description": "Shumë tendera kërkojnë provë të kompetencës profesionale — IDCP ID Card e plotëson këtë kusht formalisht."
       },
       "benefit4": {
-        "title": "Efikasitet Organizativ",
-        "description": "Shmangu mbivendosjen e roleve dhe përmirëso koordinimin e fuqisë punëtore në të gjitha departamentet."
+        "title": "Menaxhim i Thjeshtuar i Stafit",
+        "description": "Organizata ka akses në një profil të qartë dhe të përditësuar për çdo punonjës — i vlefshëm për trajnime, inspektime dhe vendime menaxheriale."
       }
     },
     "industries": {
-      "title": "Fokusi Sektorial: Ku Kartat Profesionale Shtojnë Vlerë",
-      "manufacturing": {
-        "title": "Operacione Prodhuese dhe Industriale",
-        "description": "Role prodhimi, pozicione teknike, funksione kritike sigurie"
-      },
+      "title": "Kush Ka Nevojë për IDCP ID Card Professional?",
       "construction": {
-        "title": "Ndërtim dhe Inxhinieri",
-        "description": "Menaxherë kantieri, inxhinierë, profesionistë të specializuar"
+        "title": "Ndërtim dhe Infrastrukturë",
+        "description": "Punëtorë kantieri, operatorë makinerie, mbikëqyrës sigurie"
+      },
+      "manufacturing": {
+        "title": "Prodhim dhe Industri",
+        "description": "Operatorë linjash, teknikë mirëmbajtjeje, punonjës procesesh të rrezikshme"
       },
       "energy": {
-        "title": "Energji dhe Utilities",
-        "description": "Operatorë teknikë, staf mirëmbajtjeje, oficerë sigurie"
+        "title": "Energji dhe Shërbime Publike",
+        "description": "Elektricistë, teknikë të sistemeve, inxhinierë mirëmbajtjeje"
       },
       "transport": {
         "title": "Transport dhe Logjistikë",
-        "description": "Shoferë, dispeçerë, mbikëqyrës magazine"
+        "description": "Shoferë profesionistë, operatorë magazine, koordinatorë logjistike"
       },
-      "public": {
-        "title": "Administratë Publike dhe Shërbime",
-        "description": "Pozicione administrative, role shërbimi publik"
+      "horeca": {
+        "title": "HORECA dhe Shërbime",
+        "description": "Punonjës kuzhine, teknikë frigoriferësh, staf higjienik"
       }
     },
     "whyChoose": {
-      "title": "Ndërto Integritetin e Fuqisë Punëtore me MSC CERTIFICATIONS",
+      "title": "Pse MSC CERTIFICATIONS për IDCP ID Card?",
       "experts": {
-        "title": "Specialistë Ekspertë Dokumentacioni",
-        "description": "Njohuri të thella rregullatore dhe përvojë në industri dhe standarde të shumta."
+        "title": "Proces i Strukturuar Verifikimi",
+        "description": "Vlerësojmë me profesionalizëm dhe sigurojmë saktësi në çdo kartë të lëshuar."
       },
       "templates": {
-        "title": "Modele Plotësisht Konforme",
-        "description": "Të përshtatura me standardet tuaja kombëtare dhe sektoriale, duke siguruar konformitet të plotë."
+        "title": "Format Profesional dhe i Standartizuar",
+        "description": "Karta është në përputhje me praktikat ndërkombëtare dhe kërkesat e tregut lokal."
       },
       "verification": {
-        "title": "Verifikim i Pavarur",
-        "description": "Vlerësim objektiv që siguron objektivitet dhe besueshmëri për të gjitha palët e interesuara."
+        "title": "Besueshmëri dhe Njohje",
+        "description": "Lëshuar nga një organ i akredituar me njohje nga autoritetet dhe partnerët."
       }
     },
     "cta": {
-      "title": "Gati të formalizosh dhe dokumentosh strukturën e fuqisë punëtore me precizion?",
-      "description": "Bashkëpuno me MSC CERTIFICATIONS për të krijuar Karta Profesionale që vendosin qartësi, konformitet dhe besim në të gjithë organizatën.",
-      "button": "Fillo Projektin Tënd të Kartës Profesionale Sot",
-      "footer": "Dokumentacion profesional për organizata profesionale."
+      "title": "Dëshmo Aftësitë Profesionale të Stafit Tuaj",
+      "description": "Merr IDCP ID Card Professional për çdo punonjës dhe siguro përputhshmëri, besim dhe avantazh konkurrues.",
+      "button": "Kërko IDCP ID Card Tani",
+      "footer": "Certifikim i besueshëm. Kompetencë e dëshmuar."
     }
   },
   "equipmentEvaluation": {
@@ -2096,103 +2121,92 @@
   },
   "energyEfficiency": {
     "meta": {
-      "title": "Audite Efikasiteti Energjetik | Ul Kostot dhe Emetimet CO₂ - MSC CERTIFICATIONS",
-      "description": "Identifiko mundësitë e kursimit, optimizo konsumin e energjisë dhe ul kostot operacionale me audite profesionale të efikasitetit energjetik nga MSC Certifications.",
-      "keywords": "efikasitet energjetik, audit energjie, reduktim energjie, emetimet CO₂, menaxhim energjie, audit energjie ndërtesash, audit energjie industriale, kursime energjie"
+      "title": "Auditime të Efiçencës së Energjisë | Ulni Kostot dhe Emetimet e CO₂",
+      "description": "Ulni konsumin e energjisë, reduktoni emetimet dhe përmirësoni qëndrueshmërinë me MSC CERTIFICATIONS. Filloni vlerësimin tuaj energjetik sot.",
+      "keywords": "auditim energjetik, efiçencë energjie, certifikim ISO 50001, kursim energjie, reduktim CO₂, performancë energjetike, auditim i ndërtesave, energji e qëndrueshme, MSC CERTIFICATIONS"
     },
     "hero": {
-      "title": "Shërbimet e Efikasitetit Energjetik",
-      "subtitle": "Mat. Analizo. Kurse. Shërbimet tona të efikasitetit energjetik ndihmojnë organizatat të identifikojnë mundësitë e kursimit, të optimizojnë konsumin e energjisë dhe të ulin kostot operacionale."
+      "title": "Efiçenca e Energjisë: Ulni Kostot, Emetimet dhe Rreziqet Energjetike",
+      "subtitle": "Efiçenca e energjisë nuk është më opsion — është një avantazh strategjik për çdo biznes. Programi ynë i Vlerësimit të Efiçencës së Energjisë ofron një qasje të strukturuar dhe të bazuar në të dhëna për të matur, analizuar dhe reduktuar konsumin e energjisë në ndërtesa, procese dhe pajisje industriale. Qëllimi: të ulni kostot, të minimizoni ndikimin mjedisor dhe të rrisni qëndrueshmërinë ndaj ndryshimeve të çmimeve të energjisë.",
+      "cta1": "Kërko Ofertë për Auditim Energjetik",
+      "cta2": "Fillo Vlerësimin Falas të Energjisë"
     },
     "whatIs": {
-      "title": "Çfarë është një Audit Efikasiteti Energjetik?",
-      "description": "Një audit efikasiteti energjetik është një rishikim sistematik i konsumit të energjisë së organizatës suaj për të identifikuar mundësi kursimi kostosh dhe reduktim të ndikimit mjedisor.",
+      "title": "Çfarë Është Efiçenca e Energjisë?",
+      "description": "Eficienca energjetike ka të bëjë me përdorimin më inteligjent të energjisë: i njëjti volum prodhimi ose komfort pune, me më pak kWh të konsumuar, më pak humbje dhe më pak kosto.",
       "businessImportance": {
-        "title": "Pse Efikasiteti Energjetik është i Rëndësishëm për Biznesin",
-        "point1": "Ul kostot operacionale përmes faturave më të ulëta të energjisë.",
-        "point2": "Demonstron përgjegjësi sociale dhe mjedisore.",
-        "point3": "Përmirëson konkurrueshmërinë në tregjet që prioritizojnë qëndrueshmërinë.",
-        "point4": "Ndihmon të plotësosh kërkesat ligjore dhe rregullatore.",
-        "point5": "Kontribuon në arritjen e objektivave klimatike dhe të emetimeve."
+        "title": "Rëndësia për biznesin",
+        "point1": "Ul drejtpërdrejt kostot operative (faturat e energjisë)",
+        "point2": "Rrit performancën dhe besueshmërinë e pajisjeve dhe linjave",
+        "point3": "Përmirëson imazhin e kompanisë ndaj klientëve dhe palëve të interesuara",
+        "point4": "Mbështet objektivat mjedisore dhe përgatit terrenin për ISO 50001 ose ISO 14001"
       },
       "keyFunctions": {
-        "title": "Funksionet Kryesore të Auditimit Energjetik",
-        "point1": "Analiza dhe matja e konsumit të energjisë",
-        "point2": "Identifikimi i humbjeve energjetike",
-        "point3": "Rekomandimet për kursim energjie",
-        "point4": "Plani i përmirësimit të performancës energjetike"
+        "title": "Funksionet kryesore të shërbimit",
+        "point1": "Analizë e konsumit energjetik sipas zonave, linjave dhe pajisjeve kryesore",
+        "point2": "Identifikim i pikave kritike dhe humbjeve energjetike",
+        "point3": "Propozim masash organizative dhe teknike (vendosje orareve, rregullim parametrash, zëvendësim pajisjesh joefikase, etj.)",
+        "point4": "Hartim plani veprimi dhe, kur kërkohet, përafrim me kërkesat e ISO 50001"
       }
     },
     "whyChooseUs": {
-      "title": "Pse të Zgjedhësh Shërbimet Tona",
-      "subtitle": "Ne ofrojmë vlerësime gjithëpërfshirëse energjetike të përshtatura me nevojat tuaja specifike.",
-      "expertise": {
-        "title": "Ekspertizë e Thellë",
-        "description": "Ekipi ynë ka përvojë të gjerë në auditim energjetik në industri të ndryshme."
-      },
-      "practical": {
-        "title": "Zgjidhje Praktike",
-        "description": "Ne ofrojmë rekomandime të zbatueshme që japin rezultate të matshme."
-      },
-      "comprehensive": {
-        "title": "Qasje Gjithëpërfshirëse",
-        "description": "Mbulojmë të gjitha aspektet e konsumit energjetik, nga ndërtesat deri te proceset."
-      }
+      "title": "Pse të na zgjidhni për eficiencën energjetike",
+      "point1": "Kombinojmë qasjen teknike me njohjen e standardeve të menaxhimit të energjisë dhe mjedisit",
+      "point2": "Fokusohemi në masa të përballueshme, me kthim të matshëm të investimit (ROI)",
+      "point3": "Flasim në gjuhën e biznesit: shndërrojmë kWh në kosto konkrete dhe kursime reale",
+      "point4": "Ofrojmë mbështetje të vazhdueshme në zbatimin dhe monitorimin e masave të propozuara"
     },
     "benefits": {
-      "title": "Përfitimet Kryesore",
+      "title": "Pse të Investoni në Efiçencën e Energjisë?",
       "benefit1": {
-        "title": "Reduktim Kostosh",
-        "description": "Ul faturat e energjisë duke identifikuar dhe eliminuar humbjet."
+        "title": "Ulje e Menjëhershme e Kostove",
+        "description": "Reduktoni faturat e energjisë elektrike, gazit dhe karburantit përmes përmirësimeve të matshme — shpesh me kthim investimi brenda disa muajve."
       },
       "benefit2": {
-        "title": "Qëndrueshmëri Mjedisore",
-        "description": "Ul gjurmën tuaj të karbonit dhe demonstro përkushtim mjedisor."
+        "title": "Ulje e Emetimeve të CO₂",
+        "description": "Kursimi i energjisë ndihmon në uljen e gjurmës së karbonit, duke përmbushur objektivat e qëndrueshmërisë dhe raportimit ESG."
       },
       "benefit3": {
-        "title": "Konkurrueshmëri e Përmirësuar",
-        "description": "Operacionet më efikase përkthehen në përparësi konkurruese."
+        "title": "Mbrojtje nga Paqëndrueshmëria e Çmimeve të Energjisë",
+        "description": "Operacionet efikase janë më të qëndrueshme ndaj rritjeve apo luhatjeve të tregut të energjisë, duke siguruar stabilitet afatgjatë."
       }
     },
     "whoBenefits": {
-      "title": "Kush Përfiton",
-      "subtitle": "Shërbimet tona të efikasitetit energjetik janë ideale për:",
+      "title": "Kush Përfiton nga Programi i Efiçencës së Energjisë",
+      "subtitle": "Programi është krijuar për organizata në sektorë të ndryshëm me konsum të lartë energjie:",
       "manufacturing": {
-        "title": "Fabrika Prodhimi",
-        "description": "Fabrika dhe operacione industriale me konsum të lartë energjie"
+        "title": "Fabrika dhe Impiante Industriale",
+        "description": "Optimizoni proceset e prodhimit dhe reduktoni kostot operative të energjisë"
       },
-      "buildings": {
-        "title": "Ndërtesa Komerciale",
-        "description": "Zyra, qendra tregtare dhe komplekse shumëkatëshe"
+      "commercial": {
+        "title": "Ndërtesa Komerciale dhe Zyrtare",
+        "description": "Përmirësoni efikasitetin e sistemeve HVAC dhe ndriçimit"
       },
-      "publicSector": {
-        "title": "Sektori Publik",
-        "description": "Shkolla, spitale dhe ndërtesa qeveritare"
+      "horeca": {
+        "title": "Hotele, Restorante dhe HORECA",
+        "description": "Reduktoni konsumin e energjisë në mjedise me përdorim të lartë"
       },
       "retail": {
-        "title": "Biznese me Pakicë",
-        "description": "Dyqane, supermarkete dhe zinxhirë restorantësh"
+        "title": "Rrjete Tregtare dhe Qendra Tregtare",
+        "description": "Ulni kostot e energjisë elektrike në shumë lokacione"
       },
-      "logistics": {
-        "title": "Transport & Logjistikë",
-        "description": "Magazine, qendra shpërndarjeje dhe flota transporti"
+      "datacenters": {
+        "title": "Qendra të të Dhënave dhe Infrastrukturë IT",
+        "description": "Optimizoni sistemet e ftohjes dhe shpërndarjes së energjisë"
       },
-      "agriculture": {
-        "title": "Bujqësi & Përpunim Ushqimi",
-        "description": "Ferma, impiantet e përpunimit dhe magazinimet e ftohura"
+      "utilities": {
+        "title": "Transport, Energji dhe Shërbime Publike",
+        "description": "Përmirësoni efikasitetin operacional dhe qëndrueshmërinë"
       }
     },
     "partner": {
-      "title": "Partneri Juaj për Efikasitet Energjetik",
-      "description": "Ne bashkëpunojmë ngushtë me ju për të zhvilluar dhe implementuar strategji kursimi energjie që përshtaten me objektivat tuaja të biznesit.",
-      "feature1": "Vlerësim i personalizuar bazuar në nevojat tuaja",
-      "feature2": "Rekomandime të qarta dhe të zbatueshme",
-      "feature3": "Mbështetje e vazhdueshme për implementim"
+      "title": "Partneri Juaj për Performancë të Qëndrueshme",
+      "description": "Në MSC CERTIFICATIONS, ne kombinojmë ekspertizën inxhinierike me praktikat më të mira ndërkombëtare, për të ofruar zgjidhje të matshme dhe praktike për kursim energjie. Qasja jonë siguron kursime të qëndrueshme, përputhshmëri ligjore dhe përmirësim të imazhit mjedisor të kompanisë suaj."
     },
     "cta": {
-      "title": "Gati të Përmirësosh Efikasitetin Tënd Energjetik?",
-      "description": "Kontaktoni sot për një konsultim fillestar pa pagesë dhe zbuloni se si mund të ulni kostot tuaja energjetike.",
-      "button": "Fillo Auditin Tënd Energjetik"
+      "title": "Filloni Programin Tuaj të Efiçencës së Energjisë Sot",
+      "description": "Reduktoni kostot, ulni emetimet dhe ndërtoni qëndrueshmëri ndaj luhatjeve të çmimeve të energjisë.",
+      "button": "Kërkoni një Vlerësim të Efiçencës së Energjisë"
     }
   }
 }
