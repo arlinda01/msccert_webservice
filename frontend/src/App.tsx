@@ -36,6 +36,7 @@ import QRCodePage from './pages/QRCodePage/QRCodePage';
 import CertificateVerify from './pages/CertificateVerify/CertificateVerify';
 import FAQ from './pages/FAQ/FAQ';
 import TermsConditions from './pages/TermsConditions/TermsConditions';
+import QuoteForm from './pages/QuoteForm/QuoteForm';
 import { detectLanguageFromPath } from './config/routes';
 
 // Component to sync language from URL
@@ -96,6 +97,7 @@ const App: FC = () => {
             <Route path="/qr-code" element={<QRCodePage />} />
             <Route path="/certificate/2" element={<StaticCertificate />} />
             <Route path="/certificate/:secureId" element={<CertificateVerify />} />
+            <Route path="/quote/:isoCode" element={<QuoteForm />} />
 
             {/* Albanian Routes */}
             <Route path="/sq/" element={<Home />} />
@@ -127,6 +129,7 @@ const App: FC = () => {
             <Route path="/sq/kushtet-dhe-afatet" element={<TermsConditions />} />
             <Route path="/sq/certifikatat" element={<CertificateList />} />
             <Route path="/sq/certifikata/:secureId" element={<CertificateVerify />} />
+            <Route path="/sq/kerkese-oferte/:isoCode" element={<QuoteForm />} />
 
             {/* Italian Routes */}
             <Route path="/it/" element={<Home />} />
@@ -158,6 +161,7 @@ const App: FC = () => {
             <Route path="/it/termini-e-condizioni" element={<TermsConditions />} />
             <Route path="/it/certificati" element={<CertificateList />} />
             <Route path="/it/certificato/:secureId" element={<CertificateVerify />} />
+            <Route path="/it/richiesta-preventivo/:isoCode" element={<QuoteForm />} />
           </Routes>
         </main>
         <Footer />

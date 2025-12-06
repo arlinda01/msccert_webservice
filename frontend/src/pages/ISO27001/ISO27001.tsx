@@ -23,6 +23,12 @@ const ISO27001: FC = () => {
           <p className="iso-subtitle">
             {t('iso27001.hero.subtitle')}
           </p>
+          <Link
+            to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-27001')}
+            className="btn btn-primary btn-quote"
+          >
+            {t('common.getIsoQuote', { isoCode: 'ISO 27001' })}
+          </Link>
         </div>
       </section>
 

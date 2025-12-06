@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     # Local apps
     'apps.certificates',
     'apps.accounts',
+    'apps.forms',
 ]
 
 MIDDLEWARE = [

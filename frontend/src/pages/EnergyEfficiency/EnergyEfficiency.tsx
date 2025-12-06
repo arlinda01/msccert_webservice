@@ -1,22 +1,27 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const EnergyEfficiency: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>Energy Efficiency Audits - Cut Energy Costs & CO₂ Emissions</title>
-        <meta name="description" content="Lower energy use, reduce emissions, and gain stability with MSC Certifications. Start your expert energy efficiency assessment today." />
-        <meta name="keywords" content="energy efficiency audit, energy assessment, ISO 50001 certification, reduce energy consumption, CO₂ reduction, sustainable energy performance, energy optimization, MSC Certifications" />
+        <title>{t('energyEfficiency.meta.title')}</title>
+        <meta name="description" content={t('energyEfficiency.meta.description')} />
+        <meta name="keywords" content={t('energyEfficiency.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>Energy Efficiency: Reduce Costs, Emissions, and Energy Risks</h1>
+          <h1>{t('energyEfficiency.hero.title')}</h1>
           <p className="iso-subtitle">
-            Energy efficiency is no longer optional - it's a strategic advantage. Our Energy Efficiency Assessment Program is a structured, data-driven approach to measure, analyze, and reduce energy consumption across buildings, processes, and equipment. The goal: lower your costs, minimize environmental impact, and build resilience against fluctuating energy prices.
+            {t('energyEfficiency.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -24,114 +29,145 @@ const EnergyEfficiency: FC = () => {
       {/* What is Energy Efficiency */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is Energy Efficiency?</h2>
+          <h2 className="section-title">{t('energyEfficiency.whatIs.title')}</h2>
           <p className="iso-text">
-            Energy efficiency is about achieving the same or higher productivity with less energy input. Through advanced monitoring and analysis, we identify where, how, and why energy is being wasted - and provide a clear roadmap for improvement.
+            {t('energyEfficiency.whatIs.description')}
           </p>
 
           <div className="iso-role-box">
-            <h3>This structured program includes:</h3>
+            <h3>{t('energyEfficiency.whatIs.businessImportance.title')}</h3>
             <ul className="services-list">
-              <li>Measurement and verification of energy use</li>
-              <li>Analysis of operational efficiency</li>
-              <li>Identification of technical and behavioral savings opportunities</li>
-              <li>Implementation and monitoring support</li>
+              <li>{t('energyEfficiency.whatIs.businessImportance.point1')}</li>
+              <li>{t('energyEfficiency.whatIs.businessImportance.point2')}</li>
+              <li>{t('energyEfficiency.whatIs.businessImportance.point3')}</li>
+              <li>{t('energyEfficiency.whatIs.businessImportance.point4')}</li>
+              <li>{t('energyEfficiency.whatIs.businessImportance.point5')}</li>
             </ul>
           </div>
 
-          <p className="iso-text" style={{ marginTop: '2rem' }}>
-            The process aligns with international standards such as <strong>ISO 50001: Energy Management Systems</strong> and supports both compliance and sustainability goals.
-          </p>
+          <div className="iso-role-box" style={{ marginTop: '2rem' }}>
+            <h3>{t('energyEfficiency.whatIs.keyFunctions.title')}</h3>
+            <ul className="services-list">
+              <li>{t('energyEfficiency.whatIs.keyFunctions.point1')}</li>
+              <li>{t('energyEfficiency.whatIs.keyFunctions.point2')}</li>
+              <li>{t('energyEfficiency.whatIs.keyFunctions.point3')}</li>
+              <li>{t('energyEfficiency.whatIs.keyFunctions.point4')}</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* Why Invest */}
+      {/* Why Choose Us */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Why Invest in Energy Efficiency?</h2>
+          <h2 className="section-title">{t('energyEfficiency.whyChooseUs.title')}</h2>
+          <p className="section-intro">{t('energyEfficiency.whyChooseUs.subtitle')}</p>
+
+          <div className="advantage-cards">
+            <div className="advantage-card">
+              <h3>{t('energyEfficiency.whyChooseUs.expertise.title')}</h3>
+              <p>{t('energyEfficiency.whyChooseUs.expertise.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('energyEfficiency.whyChooseUs.practical.title')}</h3>
+              <p>{t('energyEfficiency.whyChooseUs.practical.description')}</p>
+            </div>
+            <div className="advantage-card">
+              <h3>{t('energyEfficiency.whyChooseUs.comprehensive.title')}</h3>
+              <p>{t('energyEfficiency.whyChooseUs.comprehensive.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits */}
+      <section className="section section-white">
+        <div className="container">
+          <h2 className="section-title">{t('energyEfficiency.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Immediate Cost Reduction</h3>
-              <p>
-                Cut electricity, gas, and fuel bills through measurable efficiency gains - often achieving payback within months.
-              </p>
+              <h3>{t('energyEfficiency.benefits.benefit1.title')}</h3>
+              <p>{t('energyEfficiency.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Lower Carbon Footprint</h3>
-              <p>
-                Reducing energy waste directly decreases CO₂ emissions, helping meet corporate sustainability targets and ESG reporting requirements.
-              </p>
+              <h3>{t('energyEfficiency.benefits.benefit2.title')}</h3>
+              <p>{t('energyEfficiency.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Protection Against Energy Price Volatility</h3>
-              <p>
-                Efficient operations are less affected by rising or unstable energy markets, increasing long-term business resilience.
-              </p>
+              <h3>{t('energyEfficiency.benefits.benefit3.title')}</h3>
+              <p>{t('energyEfficiency.benefits.benefit3.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Who Benefits */}
-      <section className="section section-white">
+      <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Who Benefits</h2>
+          <h2 className="section-title">{t('energyEfficiency.whoBenefits.title')}</h2>
           <p className="section-intro">
-            Our program is designed for organizations across multiple sectors:
+            {t('energyEfficiency.whoBenefits.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Manufacturing and Industrial Plants</h4>
-              <p>Optimize production processes and reduce operational energy costs</p>
+              <h4>{t('energyEfficiency.whoBenefits.manufacturing.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Commercial and Office Buildings</h4>
-              <p>Improve HVAC efficiency and lighting systems</p>
+              <h4>{t('energyEfficiency.whoBenefits.buildings.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.buildings.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Hotels, Restaurants, and Catering (HORECA)</h4>
-              <p>Reduce energy consumption in high-usage environments</p>
+              <h4>{t('energyEfficiency.whoBenefits.publicSector.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.publicSector.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Retail Chains and Shopping Centers</h4>
-              <p>Lower electricity costs across multiple locations</p>
+              <h4>{t('energyEfficiency.whoBenefits.retail.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.retail.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Data Centers and IT Facilities</h4>
-              <p>Optimize cooling and power distribution systems</p>
+              <h4>{t('energyEfficiency.whoBenefits.logistics.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.logistics.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Transportation, Energy, and Utility Providers</h4>
-              <p>Enhance operational efficiency and sustainability</p>
+              <h4>{t('energyEfficiency.whoBenefits.agriculture.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.agriculture.description')}</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Partner Section */}
-      <section className="section section-gray">
+      <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Your Partner in Sustainable Performance</h2>
+          <h2 className="section-title">{t('energyEfficiency.partner.title')}</h2>
           <p className="section-intro" style={{ maxWidth: '800px', margin: '0 auto 2rem' }}>
-            At MSC Certifications, we combine engineering expertise with international best practices to deliver practical, data-backed energy solutions. Our approach drives measurable savings, ensures compliance, and enhances your environmental reputation.
+            {t('energyEfficiency.partner.description')}
           </p>
+          <div className="iso-role-box">
+            <ul className="services-list">
+              <li>{t('energyEfficiency.partner.feature1')}</li>
+              <li>{t('energyEfficiency.partner.feature2')}</li>
+              <li>{t('energyEfficiency.partner.feature3')}</li>
+            </ul>
+          </div>
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Start Your Energy Efficiency Program Today</h2>
+          <h2>{t('energyEfficiency.cta.title')}</h2>
           <p>
-            Reduce costs, lower emissions, and build resilience against energy price volatility.
+            {t('energyEfficiency.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Request an Assessment</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('energyEfficiency.cta.button')}</Link>
           </div>
         </div>
       </section>

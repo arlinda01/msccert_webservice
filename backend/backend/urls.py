@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('apps.accounts.urls')),
     path('api/', include('apps.certificates.urls')),
+    path('api/forms/', include('apps.forms.urls')),
 ]
 
 # Serve media files - in production, use re_path for media serving
