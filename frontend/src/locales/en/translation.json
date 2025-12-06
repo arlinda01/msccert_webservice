@@ -56,7 +56,8 @@
     "getFreeAssessment": "Get Free Online Assessment",
     "viewAllServices": "View All Services",
     "requestQuote": "Request a Detailed Quote & Free Assessment",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "getIsoQuote": "Get a {{isoCode}} Quote"
   },
   "meta": {
     "home": {
@@ -1466,6 +1467,222 @@
       "description": "Control hazards. Meet the law. Enter markets.",
       "button": "Start HACCP Assessment",
       "footer": "Our certificates are internationally accredited and globally recognized."
+    }
+  },
+  "energyEfficiency": {
+    "meta": {
+      "title": "Energy Efficiency Audits | Reduce Costs and CO₂ Emissions",
+      "description": "Identify savings opportunities, optimize energy consumption and reduce operational costs with professional energy efficiency audits from MSC Certifications.",
+      "keywords": "energy efficiency, energy audit, energy reduction, CO₂ emissions, energy management, building energy audit, industrial energy audit, energy savings"
+    },
+    "hero": {
+      "title": "Energy Efficiency Services",
+      "subtitle": "Measure. Analyze. Save. Our energy efficiency services help organizations identify savings opportunities, optimize energy consumption and reduce operational costs."
+    },
+    "whatIs": {
+      "title": "What is an Energy Efficiency Audit?",
+      "description": "An energy efficiency audit is a systematic review of your organization's energy consumption to identify opportunities for saving costs and reducing environmental impact.",
+      "businessImportance": {
+        "title": "Why Energy Efficiency is Important for Business",
+        "point1": "Reduces operational costs through lower energy bills.",
+        "point2": "Demonstrates social and environmental responsibility.",
+        "point3": "Improves competitiveness in markets that prioritize sustainability.",
+        "point4": "Helps meet legal and regulatory requirements.",
+        "point5": "Contributes to achieving climate and emissions objectives."
+      },
+      "keyFunctions": {
+        "title": "Key Functions of Energy Auditing",
+        "point1": "Energy consumption analysis and metering",
+        "point2": "Energy waste identification",
+        "point3": "Energy saving recommendations",
+        "point4": "Energy performance improvement plan"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose MSC Certifications?",
+      "subtitle": "We offer complete energy efficiency services with a practical and results-oriented approach:",
+      "expertise": {
+        "title": "Energy Expertise",
+        "description": "Our team has experience in energy management and optimization in various sectors."
+      },
+      "practical": {
+        "title": "Practical Approach",
+        "description": "We focus on realistic recommendations that yield measurable results."
+      },
+      "comprehensive": {
+        "title": "Comprehensive Analysis",
+        "description": "We analyze all energy aspects, from buildings to industrial processes."
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits",
+      "benefit1": {
+        "title": "Cost Reduction",
+        "description": "Identify and eliminate energy waste to reduce operational costs."
+      },
+      "benefit2": {
+        "title": "Improved Efficiency",
+        "description": "Optimize energy consumption and improve operational performance."
+      },
+      "benefit3": {
+        "title": "Sustainability",
+        "description": "Reduce CO₂ emissions and contribute to environmental sustainability."
+      }
+    },
+    "whoBenefits": {
+      "title": "Who Benefits from Energy Efficiency Services?",
+      "subtitle": "Our services are designed for organizations that want to optimize energy consumption:",
+      "manufacturing": {
+        "title": "Manufacturing",
+        "description": "Industries with high energy consumption and intensive production processes."
+      },
+      "buildings": {
+        "title": "Commercial Buildings",
+        "description": "Offices, shopping centers, hotels, hospitals."
+      },
+      "publicSector": {
+        "title": "Public Sector",
+        "description": "Schools, hospitals, government buildings."
+      },
+      "retail": {
+        "title": "Retail",
+        "description": "Stores and retail chains with significant energy costs."
+      },
+      "logistics": {
+        "title": "Logistics",
+        "description": "Warehouses and distribution centers with significant energy requirements."
+      },
+      "agriculture": {
+        "title": "Agriculture",
+        "description": "Farms and processing facilities with energy equipment."
+      }
+    },
+    "partner": {
+      "title": "Partner with MSC Certifications",
+      "description": "Our energy efficiency team helps you identify and implement savings opportunities that reduce costs and improve environmental performance.",
+      "feature1": "Systematic approach based on international standards",
+      "feature2": "Measurable and practical recommendations",
+      "feature3": "Continuous support throughout the energy improvement journey"
+    },
+    "cta": {
+      "title": "Start Saving Energy Today",
+      "description": "Contact us for a free consultation on how energy efficiency services can help your organization.",
+      "button": "Request Energy Efficiency Assessment"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us | MSC Certifications",
+      "description": "Get in touch with MSC Certifications for ISO certification, CE Marking and compliance services. We're here to help.",
+      "keywords": "contact MSC Certifications, ISO certification contact, certification inquiry, compliance services"
+    },
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "We're here to help. Get in touch with our team for certification inquiries, quotes or any questions about our services."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "company": "Company Name",
+      "companyPlaceholder": "Enter your company name",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select or enter subject",
+      "subjects": {
+        "certification": "ISO Certification Inquiry",
+        "ceMarking": "CE Marking Services",
+        "training": "Training Programs",
+        "quote": "Request a Quote",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent Successfully!",
+      "successMessage": "Thank you for contacting us. Our team will get back to you within 24-48 hours.",
+      "errorTitle": "Failed to Send Message",
+      "errorMessage": "Please try again or contact us directly at info@msc-certifications.com"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Reach out to us through any of the following channels:",
+      "address": {
+        "title": "Address",
+        "line1": "Ismail Qemali Street",
+        "line2": "Tirana, Albania"
+      },
+      "phone": {
+        "title": "Phone",
+        "number": "+355 69 XXX XXXX"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@msc-certifications.com"
+      },
+      "hours": {
+        "title": "Working Hours",
+        "weekdays": "Monday - Friday: 09:00 - 18:00",
+        "weekend": "Saturday - Sunday: Closed"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "How long does it take to get certified?",
+        "answer": "The duration depends on the size and complexity of your organization and the standard. Typically 2-8 weeks from application to certification."
+      },
+      "q2": {
+        "question": "Do you offer remote audits?",
+        "answer": "Yes, part of the audit can be conducted remotely according to accreditation rules. Critical activities require on-site presence."
+      },
+      "q3": {
+        "question": "What areas do you serve?",
+        "answer": "We serve clients throughout Albania, Kosovo, North Macedonia and the wider Balkans region."
+      }
+    }
+  },
+  "quoteForm": {
+    "title": "Quote Request",
+    "step": "Step",
+    "of": "of",
+    "steps": {
+      "contact": "Contact Info",
+      "assessment": "Assessment",
+      "review": "Review"
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "description": "Please provide your contact details so we can get back to you with a personalized quote.",
+      "companyName": "Company Name",
+      "contactPerson": "Contact Person",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "address": "Address"
+    },
+    "assessment": {
+      "title": "Self-Assessment Questionnaire",
+      "description": "Answer the following questions to help us understand your current management system status. This will allow us to provide a more accurate quote.",
+      "additionalNotes": "Additional Notes",
+      "additionalNotesPlaceholder": "Any additional information or specific requirements..."
+    },
+    "review": {
+      "title": "Review & Submit",
+      "description": "Please review your information before submitting.",
+      "responseSummary": "Response Summary",
+      "summaryNote": "Your responses will be reviewed by our experts.",
+      "questionsAnswered": "questions answered",
+      "noAnswers": "No questions answered yet"
+    },
+    "success": {
+      "title": "Thank You!",
+      "message": "Your quote request has been submitted successfully.",
+      "note": "Our team will review your submission and get back to you within 1-2 business days.",
+      "goHome": "Go to Home"
     }
   }
 }

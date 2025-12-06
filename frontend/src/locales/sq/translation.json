@@ -56,7 +56,8 @@
     "getFreeAssessment": "Merrni Vlerësim Online Falas",
     "viewAllServices": "Shih të Gjitha Shërbimet",
     "requestQuote": "Kërkoni Ofertë të Detajuar & Vlerësim Falas",
-    "contactUs": "Na Kontaktoni"
+    "contactUs": "Na Kontaktoni",
+    "getIsoQuote": "Kërkoni Ofertë {{isoCode}}"
   },
   "meta": {
     "home": {
@@ -1478,6 +1479,209 @@
       "description": "Kontrolloni rreziqet. Përmbushni ligjin. Hyni në tregje.",
       "button": "Filloni Vlerësimin HACCP",
       "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
+    }
+  },
+  "energyEfficiency": {
+    "meta": {
+      "title": "Auditime të Efiçencës së Energjisë | Ulni Kostot dhe Emetimet e CO₂",
+      "description": "Ulni konsumin e energjisë, reduktoni emetimet dhe përmirësoni qëndrueshmërinë me MSC CERTIFICATIONS. Filloni vlerësimin tuaj energjetik sot.",
+      "keywords": "auditim energjetik, efiçencë energjie, certifikim ISO 50001, kursim energjie, reduktim CO₂, performancë energjetike, auditim i ndërtesave, energji e qëndrueshme, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Efiçenca e Energjisë: Ulni Kostot, Emetimet dhe Rreziqet Energjetike",
+      "subtitle": "Efiçenca e energjisë nuk është më opsion — është një avantazh strategjik për çdo biznes. Programi ynë i Vlerësimit të Efiçencës së Energjisë ofron një qasje të strukturuar dhe të bazuar në të dhëna për të matur, analizuar dhe reduktuar konsumin e energjisë në ndërtesa, procese dhe pajisje industriale. Qëllimi: të ulni kostot, të minimizoni ndikimin mjedisor dhe të rrisni qëndrueshmërinë ndaj ndryshimeve të çmimeve të energjisë."
+    },
+    "whatIs": {
+      "title": "Çfarë Është Efiçenca e Energjisë?",
+      "description": "Eficienca energjetike ka të bëjë me përdorimin më inteligjent të energjisë: i njëjti volum prodhimi ose komfort pune, me më pak kWh të konsumuar, më pak humbje dhe më pak kosto.",
+      "businessImportance": {
+        "title": "Rëndësia për biznesin",
+        "point1": "Ul drejtpërdrejt kostot operative (faturat e energjisë)",
+        "point2": "Rrit performancën dhe besueshmërinë e pajisjeve dhe linjave",
+        "point3": "Përmirëson imazhin e kompanisë ndaj klientëve dhe palëve të interesuara",
+        "point4": "Mbështet objektivat mjedisore dhe përgatit terrenin për ISO 50001 ose ISO 14001"
+      },
+      "keyFunctions": {
+        "title": "Funksionet kryesore të shërbimit",
+        "point1": "Analizë e konsumit energjetik sipas zonave, linjave dhe pajisjeve kryesore",
+        "point2": "Identifikim i pikave kritike dhe humbjeve energjetike",
+        "point3": "Propozim masash organizative dhe teknike (vendosje orareve, rregullim parametrash, zëvendësim pajisjesh joefikase, etj.)",
+        "point4": "Hartim plani veprimi dhe, kur kërkohet, përafrim me kërkesat e ISO 50001"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pse të na zgjidhni për eficiencën energjetike",
+      "point1": "Kombinojmë qasjen teknike me njohjen e standardeve të menaxhimit të energjisë dhe mjedisit",
+      "point2": "Fokusohemi në masa të përballueshme, me kthim të matshëm të investimit (ROI)",
+      "point3": "Flasim në gjuhën e biznesit: shndërrojmë kWh në kosto konkrete dhe kursime reale",
+      "point4": "Ofrojmë mbështetje të vazhdueshme në zbatimin dhe monitorimin e masave të propozuara"
+    },
+    "benefits": {
+      "title": "Pse të Investoni në Efiçencën e Energjisë?",
+      "benefit1": {
+        "title": "Ulje e Menjëhershme e Kostove",
+        "description": "Reduktoni faturat e energjisë elektrike, gazit dhe karburantit përmes përmirësimeve të matshme — shpesh me kthim investimi brenda disa muajve."
+      },
+      "benefit2": {
+        "title": "Ulje e Emetimeve të CO₂",
+        "description": "Kursimi i energjisë ndihmon në uljen e gjurmës së karbonit, duke përmbushur objektivat e qëndrueshmërisë dhe raportimit ESG."
+      },
+      "benefit3": {
+        "title": "Mbrojtje nga Paqëndrueshmëria e Çmimeve të Energjisë",
+        "description": "Operacionet efikase janë më të qëndrueshme ndaj rritjeve apo luhatjeve të tregut të energjisë, duke siguruar stabilitet afatgjatë."
+      }
+    },
+    "whoBenefits": {
+      "title": "Kush Përfiton nga Programi i Efiçencës së Energjisë",
+      "subtitle": "Programi është krijuar për organizata në sektorë të ndryshëm me konsum të lartë energjie:",
+      "manufacturing": {
+        "title": "Fabrika dhe Impiante Industriale",
+        "description": "Optimizoni proceset e prodhimit dhe reduktoni kostot operative të energjisë"
+      },
+      "commercial": {
+        "title": "Ndërtesa Komerciale dhe Zyrtare",
+        "description": "Përmirësoni efikasitetin e sistemeve HVAC dhe ndriçimit"
+      },
+      "horeca": {
+        "title": "Hotele, Restorante dhe HORECA",
+        "description": "Reduktoni konsumin e energjisë në mjedise me përdorim të lartë"
+      },
+      "retail": {
+        "title": "Rrjete Tregtare dhe Qendra Tregtare",
+        "description": "Ulni kostot e energjisë elektrike në shumë lokacione"
+      },
+      "datacenters": {
+        "title": "Qendra të të Dhënave dhe Infrastrukturë IT",
+        "description": "Optimizoni sistemet e ftohjes dhe shpërndarjes së energjisë"
+      },
+      "utilities": {
+        "title": "Transport, Energji dhe Shërbime Publike",
+        "description": "Përmirësoni efikasitetin operacional dhe qëndrueshmërinë"
+      }
+    },
+    "partner": {
+      "title": "Partneri Juaj për Performancë të Qëndrueshme",
+      "description": "Në MSC CERTIFICATIONS, ne kombinojmë ekspertizën inxhinierike me praktikat më të mira ndërkombëtare, për të ofruar zgjidhje të matshme dhe praktike për kursim energjie. Qasja jonë siguron kursime të qëndrueshme, përputhshmëri ligjore dhe përmirësim të imazhit mjedisor të kompanisë suaj."
+    },
+    "cta": {
+      "title": "Filloni Programin Tuaj të Efiçencës së Energjisë Sot",
+      "description": "Reduktoni kostot, ulni emetimet dhe ndërtoni qëndrueshmëri ndaj luhatjeve të çmimeve të energjisë.",
+      "button": "Kërkoni një Vlerësim të Efiçencës së Energjisë"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Na Kontaktoni | MSC CERTIFICATIONS",
+      "description": "Kontaktoni ekipin tonë të ekspertëve të certifikimit. Jemi këtu për t'ju ndihmuar me certifikimet ISO, markimin CE dhe shërbimet e tjera profesionale.",
+      "keywords": "kontakt MSC, certifikim ISO kontakt, konsultim certifikimi, ofertë certifikimi"
+    },
+    "hero": {
+      "title": "Na Kontaktoni",
+      "subtitle": "Jemi këtu për t'ju ndihmuar. Lidhuni me ekipin tonë për pyetje rreth certifikimit, oferta ose çdo pyetje rreth shërbimeve tona."
+    },
+    "form": {
+      "title": "Na Dërgoni një Mesazh",
+      "name": "Emri i Plotë",
+      "namePlaceholder": "Shkruani emrin tuaj të plotë",
+      "email": "Adresa Email",
+      "emailPlaceholder": "Shkruani adresën tuaj email",
+      "phone": "Numri i Telefonit",
+      "phonePlaceholder": "Shkruani numrin tuaj të telefonit",
+      "company": "Emri i Kompanisë",
+      "companyPlaceholder": "Shkruani emrin e kompanisë",
+      "subject": "Subjekti",
+      "subjectPlaceholder": "Zgjidhni ose shkruani subjektin",
+      "subjects": {
+        "certification": "Pyetje për Certifikim ISO",
+        "ceMarking": "Shërbime të Markimit CE",
+        "training": "Programe Trajnimi",
+        "quote": "Kërkesë për Ofertë",
+        "other": "Tjetër"
+      },
+      "message": "Mesazhi",
+      "messagePlaceholder": "Si mund t'ju ndihmojmë?",
+      "submit": "Dërgo Mesazhin",
+      "sending": "Duke dërguar...",
+      "successTitle": "Mesazhi u Dërgua me Sukses!",
+      "successMessage": "Faleminderit që na kontaktuat. Ekipi ynë do t'ju kthehet brenda 24-48 orëve.",
+      "errorTitle": "Dërgimi i Mesazhit Dështoi",
+      "errorMessage": "Ju lutem provoni përsëri ose na kontaktoni drejtpërdrejt në info@msc-certifications.com"
+    },
+    "info": {
+      "title": "Informacioni i Kontaktit",
+      "description": "Na kontaktoni përmes ndonjërit prej kanaleve të mëposhtme:",
+      "address": {
+        "title": "Adresa",
+        "line1": "Rruga Ismail Qemali",
+        "line2": "Tiranë, Shqipëri"
+      },
+      "phone": {
+        "title": "Telefon",
+        "number": "+355 67 206 3632"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@msc-certifications.com"
+      },
+      "hours": {
+        "title": "Orari i Punës",
+        "weekdays": "E Hënë - E Premte: 09:00 - 18:00",
+        "weekend": "E Shtunë - E Diel: Mbyllur"
+      }
+    },
+    "faq": {
+      "title": "Pyetje të Shpeshta",
+      "q1": {
+        "question": "Sa kohë zgjat procesi i certifikimit?",
+        "answer": "Kohëzgjatja varet nga madhësia dhe kompleksiteti i organizatës suaj dhe standardi. Zakonisht 2-8 javë nga aplikimi deri në certifikim."
+      },
+      "q2": {
+        "question": "A ofroni auditime në distancë?",
+        "answer": "Po, një pjesë e auditimit mund të kryhet në distancë sipas rregullave të akreditimit. Aktivitetet kritike kërkojnë praninë fizike."
+      },
+      "q3": {
+        "question": "Cilat zona i mbuloni?",
+        "answer": "Ne u shërbejmë klientëve në të gjithë Shqipërinë, Kosovën, Maqedoninë e Veriut dhe rajonin më të gjerë të Ballkanit."
+      }
+    }
+  },
+  "quoteForm": {
+    "title": "Kërkesë Oferte",
+    "step": "Hapi",
+    "of": "nga",
+    "steps": {
+      "contact": "Kontakt",
+      "assessment": "Vlerësim",
+      "review": "Rishikim"
+    },
+    "contactInfo": {
+      "title": "Informacioni i Kontaktit",
+      "description": "Ju lutem jepni të dhënat tuaja të kontaktit që të mund t'ju kthejmë me një ofertë të personalizuar.",
+      "companyName": "Emri i Kompanisë",
+      "contactPerson": "Personi i Kontaktit",
+      "email": "Adresa Email",
+      "phone": "Numri i Telefonit",
+      "address": "Adresa"
+    },
+    "assessment": {
+      "title": "Pyetësori i Vetëvlerësimit",
+      "description": "Përgjigjuni pyetjeve të mëposhtme për të na ndihmuar të kuptojmë statusin aktual të sistemit tuaj të manaxhimit. Kjo do të na lejojë të ofrojmë një ofertë më të saktë.",
+      "additionalNotes": "Shënime Shtesë",
+      "additionalNotesPlaceholder": "Çdo informacion shtesë ose kërkesa specifike..."
+    },
+    "review": {
+      "title": "Rishiko & Dërgo",
+      "description": "Ju lutem rishikoni informacionin tuaj para se ta dërgoni.",
+      "responseSummary": "Përmbledhja e Përgjigjeve",
+      "summaryNote": "Përgjigjet tuaja do të rishikohen nga ekspertët tanë.",
+      "questionsAnswered": "pyetje të përgjigura",
+      "noAnswers": "Nuk ka pyetje të përgjigura ende"
+    },
+    "success": {
+      "title": "Faleminderit!",
+      "message": "Kërkesa juaj për ofertë u dërgua me sukses.",
+      "note": "Ekipi ynë do të rishikojë dorëzimin tuaj dhe do t'ju kthehet brenda 1-2 ditëve pune.",
+      "goHome": "Shko në Kryefaqe"
     }
   }
 }

@@ -51,6 +51,51 @@
     "success": "Successo",
     "back": "Indietro",
     "next": "Avanti",
-    "close": "Chiudi"
+    "close": "Chiudi",
+    "requestFreeConsultation": "Richiedi Consulenza Gratuita",
+    "getFreeAssessment": "Ottieni Valutazione Online Gratuita",
+    "viewAllServices": "Visualizza Tutti i Servizi",
+    "requestQuote": "Richiedi un Preventivo Dettagliato e Valutazione Gratuita",
+    "contactUs": "Contattaci",
+    "getIsoQuote": "Richiedi Preventivo {{isoCode}}"
+  },
+  "quoteForm": {
+    "title": "Richiesta Preventivo",
+    "step": "Passo",
+    "of": "di",
+    "steps": {
+      "contact": "Informazioni di Contatto",
+      "assessment": "Valutazione",
+      "review": "Revisione"
+    },
+    "contactInfo": {
+      "title": "Informazioni di Contatto",
+      "description": "Fornisci i tuoi dati di contatto per ricevere un preventivo personalizzato.",
+      "companyName": "Nome Azienda",
+      "contactPerson": "Persona di Contatto",
+      "email": "Indirizzo Email",
+      "phone": "Numero di Telefono",
+      "address": "Indirizzo"
+    },
+    "assessment": {
+      "title": "Questionario di Autovalutazione",
+      "description": "Rispondi alle seguenti domande per aiutarci a comprendere lo stato attuale del tuo sistema di gestione. Questo ci permetterà di fornirti un preventivo più accurato.",
+      "additionalNotes": "Note Aggiuntive",
+      "additionalNotesPlaceholder": "Eventuali informazioni aggiuntive o requisiti specifici..."
+    },
+    "review": {
+      "title": "Rivedi e Invia",
+      "description": "Controlla le tue informazioni prima di inviarle.",
+      "responseSummary": "Riepilogo Risposte",
+      "summaryNote": "Le tue risposte saranno esaminate dai nostri esperti.",
+      "questionsAnswered": "domande risposte",
+      "noAnswers": "Nessuna risposta fornita"
+    },
+    "success": {
+      "title": "Grazie!",
+      "message": "La tua richiesta di preventivo è stata inviata con successo.",
+      "note": "Il nostro team esaminerà la tua richiesta e ti risponderà entro 1-2 giorni lavorativi.",
+      "goHome": "Vai alla Home"
+    }
   }
 }

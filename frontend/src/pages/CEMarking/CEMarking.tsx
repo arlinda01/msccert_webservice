@@ -1,7 +1,12 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const CEMarking: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       {/* Hero Section */}
@@ -12,6 +17,12 @@ const CEMarking: FC = () => {
             CE Marking is a mandatory conformity mark that enables products to be legally sold in the European Economic Area (EEA).
             By affixing the CE mark, the manufacturer declares that the product complies with all applicable EU safety, health, and environmental protection requirements outlined in relevant directives and regulations.
           </p>
+          <Link
+            to={routes.quoteForm[currentLang].replace(':isoCode', 'ce-marking')}
+            className="btn btn-primary btn-quote"
+          >
+            {t('common.getIsoQuote', { isoCode: 'CE Marking' })}
+          </Link>
         </div>
       </section>
 

@@ -1,14 +1,24 @@
 import { FC } from 'react';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 const Contact: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>{t('contact.meta.title')}</title>
+        <meta name="description" content={t('contact.meta.description')} />
+        <meta name="keywords" content={t('contact.meta.keywords')} />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
-          <h1>Contact MSC Certifications</h1>
+          <h1>{t('contact.hero.title')}</h1>
           <p className="contact-subtitle">
-            Get in touch with our team of certification experts
+            {t('contact.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -18,13 +28,9 @@ const Contact: FC = () => {
         <div className="container">
           <div className="contact-content">
             <div className="contact-info">
-              <h2>Get In Touch</h2>
+              <h2>{t('contact.info.title')}</h2>
               <p className="contact-description">
-                <strong>MSC Certifications</strong> is an internationally accredited, independent certification
-                body specializing in assessing and validating organizational adherence to internationally accepted
-                ISO standards. Our mission is to empower businesses across all sectors,manufacturing, services,
-                technology, healthcare, and beyond, to achieve compliance, enhance quality, and build stakeholder
-                trust through rigorous, transparent, and impartial evaluations.
+                {t('contact.info.description')}
               </p>
 
               <div className="contact-details">
@@ -36,8 +42,8 @@ const Contact: FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3>Address</h3>
-                    <p>Str. Ismail Qemali<br/>Tirana, Albania</p>
+                    <h3>{t('contact.info.address.title')}</h3>
+                    <p>{t('contact.info.address.line1')}<br/>{t('contact.info.address.line2')}</p>
                   </div>
                 </div>
 
@@ -49,8 +55,8 @@ const Contact: FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:info@msc-cert.com">info@msc-cert.com</a></p>
+                    <h3>{t('contact.info.email.title')}</h3>
+                    <p><a href={`mailto:${t('contact.info.email.address')}`}>{t('contact.info.email.address')}</a></p>
                   </div>
                 </div>
 
@@ -61,56 +67,67 @@ const Contact: FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+355672063632">+355 67 206 3632</a></p>
+                    <h3>{t('contact.info.phone.title')}</h3>
+                    <p><a href="tel:+355672063632">{t('contact.info.phone.number')}</a></p>
+                  </div>
+                </div>
+
+                <div className="contact-detail-item">
+                  <div className="contact-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3>{t('contact.info.hours.title')}</h3>
+                    <p>{t('contact.info.hours.weekdays')}<br/>{t('contact.info.hours.weekend')}</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="contact-form-section">
-              <h2>Send Us a Message</h2>
+              <h2>{t('contact.form.title')}</h2>
               <form className="contact-form">
                 <div className="form-group">
-                  <label htmlFor="name">Full Name *</label>
-                  <input type="text" id="name" name="name" required />
+                  <label htmlFor="name">{t('contact.form.name')} *</label>
+                  <input type="text" id="name" name="name" placeholder={t('contact.form.namePlaceholder')} required />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">Email Address *</label>
-                  <input type="email" id="email" name="email" required />
+                  <label htmlFor="email">{t('contact.form.email')} *</label>
+                  <input type="email" id="email" name="email" placeholder={t('contact.form.emailPlaceholder')} required />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" />
+                  <label htmlFor="phone">{t('contact.form.phone')}</label>
+                  <input type="tel" id="phone" name="phone" placeholder={t('contact.form.phonePlaceholder')} />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="company">Company Name</label>
-                  <input type="text" id="company" name="company" />
+                  <label htmlFor="company">{t('contact.form.company')}</label>
+                  <input type="text" id="company" name="company" placeholder={t('contact.form.companyPlaceholder')} />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="service">Service Interest</label>
+                  <label htmlFor="service">{t('contact.form.subject')}</label>
                   <select id="service" name="service">
-                    <option value="">Select a service...</option>
-                    <option value="iso-9001">ISO 9001 - Quality Management</option>
-                    <option value="iso-14001">ISO 14001 - Environmental Management</option>
-                    <option value="iso-45001">ISO 45001 - Health & Safety</option>
-                    <option value="iso-27001">ISO 27001 - Information Security</option>
-                    <option value="iso-22000">ISO 22000 - Food Safety</option>
-                    <option value="other">Other ISO Standards</option>
-                    <option value="general">General Inquiry</option>
+                    <option value="">{t('contact.form.subjectPlaceholder')}</option>
+                    <option value="certification">{t('contact.form.subjects.certification')}</option>
+                    <option value="ce-marking">{t('contact.form.subjects.ceMarking')}</option>
+                    <option value="training">{t('contact.form.subjects.training')}</option>
+                    <option value="quote">{t('contact.form.subjects.quote')}</option>
+                    <option value="other">{t('contact.form.subjects.other')}</option>
                   </select>
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="message">Message *</label>
-                  <textarea id="message" name="message" rows={6} required></textarea>
+                  <label htmlFor="message">{t('contact.form.message')} *</label>
+                  <textarea id="message" name="message" rows={6} placeholder={t('contact.form.messagePlaceholder')} required></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary-large">Send Message</button>
+                <button type="submit" className="btn btn-primary-large">{t('contact.form.submit')}</button>
               </form>
             </div>
           </div>
