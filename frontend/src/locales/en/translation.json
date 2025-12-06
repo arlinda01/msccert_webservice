@@ -25,6 +25,7 @@
     "technologicalCard": "Technological Card",
     "equipmentEvaluation": "Equipment Evaluation",
     "blog": "Blog",
+    "faq": "FAQ",
     "contactUs": "Contact Us",
     "onlineAssessment": "Online Assessment",
     "getQuote": "Get a Quote",
@@ -1618,7 +1619,7 @@
       },
       "phone": {
         "title": "Phone",
-        "number": "+355 69 XXX XXXX"
+        "number": "+355 672063632"
       },
       "email": {
         "title": "Email",
@@ -1683,6 +1684,415 @@
       "message": "Your quote request has been submitted successfully.",
       "note": "Our team will review your submission and get back to you within 1-2 business days.",
       "goHome": "Go to Home"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest news, insights and updates from MSC Certifications",
+    "allPosts": "All Posts",
+    "noPosts": "No posts yet",
+    "noPostsDescription": "Check back soon for new content.",
+    "postNotFound": "Post Not Found",
+    "postNotFoundDescription": "The blog post you're looking for doesn't exist or has been removed.",
+    "backToBlog": "Back to Blog",
+    "views": "views",
+    "tags": "Tags",
+    "readMore": "Read More"
+  },
+  "technologicalCard": {
+    "meta": {
+      "title": "Technological Card Services | Standardize & Control Production - MSC CERTIFICATIONS",
+      "description": "Define and optimize your production process with MSC CERTIFICATIONS. Create standardized, audit-ready Technological Cards for quality and efficiency.",
+      "keywords": "technological card, process card, production documentation, manufacturing process control, standardize production, industrial efficiency, quality documentation, ISO audit preparation, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Technological Card: Define, Standardize, and Optimize Your Production Process",
+      "subtitle1": "Ready to make your production process fully transparent, efficient, and compliant?",
+      "subtitle2": "A Technological Card is the foundation for consistent quality and controlled manufacturing. It details every operation step, resource, and parameter — ensuring that every product is made the right way, every time.",
+      "cta1": "Request a Technological Card Service Quote",
+      "cta2": "Start Your Free Process Assessment"
+    },
+    "whatIs": {
+      "title": "What Is a Technological Card?",
+      "subtitle": "The Blueprint of Production",
+      "description1": "A Technological Card (also known as a Process Card or Operation Sheet) is a structured document that defines the method, sequence, and technical conditions required to produce or assemble a specific product.",
+      "description2": "It specifies materials, equipment, labor norms, and quality controls, serving as a clear guideline for operators and engineers.",
+      "description3": "Each card becomes an integral part of your production documentation system — ensuring process repeatability, traceability, and compliance with quality and safety standards.",
+      "roleBox": {
+        "title": "Our Role as Your Industrial Documentation Partner",
+        "description": "We assist manufacturers in preparing, reviewing, and verifying Technological Cards that meet industry, safety, and regulatory standards."
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits: Precision, Compliance, and Control",
+      "benefit1": {
+        "title": "Standardize Operations",
+        "description": "Ensure all personnel follow identical, approved production steps, eliminating variability and errors."
+      },
+      "benefit2": {
+        "title": "Improve Efficiency",
+        "description": "Reduce waste, downtime, and rework through clearly defined parameters and optimized workflows."
+      },
+      "benefit3": {
+        "title": "Enhance Quality and Safety",
+        "description": "Maintain consistent product quality and safe working practices across all production runs."
+      },
+      "benefit4": {
+        "title": "Support Certification and Audits",
+        "description": "Demonstrate process control during ISO and regulatory inspections with comprehensive documentation."
+      }
+    },
+    "industries": {
+      "title": "Industry Focus: Where Technological Cards Add Value",
+      "manufacturing": {
+        "title": "Manufacturing and Assembly Plants",
+        "description": "Production lines, assembly operations, quality checkpoints"
+      },
+      "foodChemical": {
+        "title": "Food and Chemical Processing",
+        "description": "Recipe control, batch processing, safety-critical operations"
+      },
+      "construction": {
+        "title": "Construction and Fabrication Works",
+        "description": "Fabrication procedures, welding specifications, material handling"
+      },
+      "automotive": {
+        "title": "Automotive and Aerospace Production",
+        "description": "Precision assembly, testing protocols, traceability requirements"
+      },
+      "maintenance": {
+        "title": "Maintenance and Repair Operations",
+        "description": "Service procedures, part replacement, calibration processes"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose MSC CERTIFICATIONS?",
+      "engineers": {
+        "title": "Experienced Engineers",
+        "description": "Deep process knowledge in your sector with proven expertise across industries."
+      },
+      "documentation": {
+        "title": "Accurate Documentation",
+        "description": "Based on real operational data and industry best practices for maximum reliability."
+      },
+      "compliance": {
+        "title": "Compliance Assurance",
+        "description": "Ready for audits, certifications, and client reviews with complete confidence."
+      }
+    },
+    "cta": {
+      "title": "Ready to document your process with precision and unlock production efficiency?",
+      "description": "Partner with MSC CERTIFICATIONS to develop Technological Cards that deliver control, quality, and confidence.",
+      "button": "Start Your Technological Card Project Today",
+      "footer": "Precision documentation for precision manufacturing."
+    }
+  },
+  "staffTraining": {
+    "meta": {
+      "title": "Staff Training Programs | ISO-Aligned Workforce Development - MSC CERTIFICATIONS",
+      "description": "Boost staff performance, safety, and compliance with ISO-based training by MSC CERTIFICATIONS. Tailored programs for every industry. Start today.",
+      "keywords": "ISO staff training, workforce development, ISO 9001 training, ISO 45001 training, employee competence, compliance training, safety training, corporate training programs, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Staff Training: Build Competence, Safety, and Performance",
+      "subtitle1": "Empower your team with the skills and awareness to perform safely, efficiently, and in full compliance with international standards.",
+      "subtitle2": "MSC CERTIFICATIONS provides role-based and competency-focused training programs, designed to meet the specific needs of your industry and aligned with ISO 9001, ISO 14001, and ISO 45001 requirements.",
+      "cta1": "Request a Training Proposal",
+      "cta2": "Book Your Free Training Needs Assessment"
+    },
+    "whatIs": {
+      "title": "What Is Staff Training?",
+      "description1": "Our Staff Training Program is a structured learning system developed to strengthen the skills, knowledge, and awareness of your workforce.",
+      "description2": "Each course is tailored to the employee's role, level of responsibility, and industry, ensuring practical competence and measurable improvement.",
+      "modules": {
+        "title": "Training modules can include:",
+        "quality": {
+          "title": "Quality Management (ISO 9001)",
+          "description": "process control, documentation, customer focus"
+        },
+        "environment": {
+          "title": "Environmental Management (ISO 14001)",
+          "description": "sustainability, waste reduction, environmental impact"
+        },
+        "safety": {
+          "title": "Occupational Health & Safety (ISO 45001)",
+          "description": "risk prevention, emergency response, safe working behavior"
+        }
+      },
+      "delivery": "All programs are developed according to adult learning principles and can be delivered on-site, online, or in hybrid format."
+    },
+    "benefits": {
+      "title": "Key Benefits: Performance, Compliance, and Retention",
+      "benefit1": {
+        "title": "Increase Productivity and Quality",
+        "description": "Well-trained employees perform with greater accuracy, consistency, and efficiency — directly improving product and service quality."
+      },
+      "benefit2": {
+        "title": "Strengthen Compliance and Safety",
+        "description": "Ensure full adherence to internal policies, legal requirements, and ISO standards. Reduce accidents and enhance safety culture."
+      },
+      "benefit3": {
+        "title": "Reduce Errors and Staff Turnover",
+        "description": "Competent, confident employees make fewer mistakes and are more engaged, leading to stronger retention and lower training costs."
+      }
+    },
+    "industries": {
+      "title": "Who We Train",
+      "subtitle": "We deliver customized programs across all industries:",
+      "manufacturing": {
+        "title": "Manufacturing and Industrial Operations",
+        "description": "Production teams, quality control, safety officers"
+      },
+      "construction": {
+        "title": "Construction and Engineering",
+        "description": "Site supervisors, project managers, safety coordinators"
+      },
+      "transport": {
+        "title": "Transport and Logistics",
+        "description": "Drivers, warehouse staff, operations managers"
+      },
+      "horeca": {
+        "title": "Hospitality (HORECA)",
+        "description": "Front-line staff, kitchen teams, management"
+      },
+      "services": {
+        "title": "Service and Call Centers",
+        "description": "Customer service representatives, team leads"
+      },
+      "public": {
+        "title": "Public Administration and Healthcare",
+        "description": "Administrative staff, healthcare providers, compliance officers"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose MSC CERTIFICATIONS",
+      "trainers": {
+        "title": "Certified Trainers and Auditors",
+        "description": "Experts with real industry experience and proven track records in their fields."
+      },
+      "programs": {
+        "title": "Standards-Aligned Programs",
+        "description": "Fully compliant with ISO frameworks and international best practices."
+      },
+      "flexible": {
+        "title": "Flexible Delivery",
+        "description": "On-site or remote training adapted to your schedule and operational needs."
+      },
+      "results": {
+        "title": "Measured Results",
+        "description": "Post-training evaluations and performance tracking to ensure lasting impact."
+      }
+    },
+    "cta": {
+      "title": "Investing in your people is investing in your performance.",
+      "description": "Partner with MSC CERTIFICATIONS to develop skilled, compliant, and motivated teams that drive excellence every day.",
+      "button": "Start Your Staff Training Program Today",
+      "footer": "Professional training that delivers real results."
+    }
+  },
+  "professionalCard": {
+    "meta": {
+      "title": "Professional Card Services | Role Definition & Workforce Compliance - MSC CERTIFICATIONS",
+      "description": "Standardize job roles and ensure labor compliance with MSC CERTIFICATIONS. Define responsibilities, improve training, and boost operational clarity.",
+      "keywords": "professional card, workforce compliance, role definition, HR documentation, ISO 45001 workforce, occupational competence, job responsibility card"
+    },
+    "hero": {
+      "title": "Professional Card: Define Roles, Ensure Competence, and Strengthen Compliance",
+      "subtitle1": "Ready to formalize your workforce structure and demonstrate professional competence across your organization?",
+      "subtitle2": "A Professional Card clearly defines the duties, responsibilities, qualifications, and safety requirements for each position — ensuring compliance, consistency, and operational excellence.",
+      "cta1": "Request a Professional Card Service Quote",
+      "cta2": "Start Your Workforce Compliance Review"
+    },
+    "whatIs": {
+      "title": "What Is a Professional Card?",
+      "subtitle": "The Framework for Workforce Standardization",
+      "description1": "A Professional Card is an official document that describes a specific job role or occupation within your organization.",
+      "description2": "It outlines the required skills, education, responsibilities, tools used, and working conditions for that role. This documentation forms the foundation for HR management, labor compliance, training, and safety assurance.",
+      "description3": "Each Professional Card ensures that every employee's function is clearly defined — reducing ambiguity, improving accountability, and ensuring regulatory alignment.",
+      "roleBox": {
+        "title": "Our Role as Independent Verifiers",
+        "description": "We help companies develop and verify Professional Cards that meet both national labor standards and international best practices (such as ISO 9001 and ISO 45001)."
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits: Structure, Compliance, and Transparency",
+      "benefit1": {
+        "title": "Clarity in Responsibilities",
+        "description": "Define clear duties and expectations for every position, eliminating role confusion and overlap."
+      },
+      "benefit2": {
+        "title": "Compliance with Labor Standards",
+        "description": "Meet legal, health, and safety documentation requirements, ensuring full regulatory alignment."
+      },
+      "benefit3": {
+        "title": "Improved Training and Evaluation",
+        "description": "Build targeted training plans and fair performance reviews based on clear role definitions."
+      },
+      "benefit4": {
+        "title": "Organizational Efficiency",
+        "description": "Avoid role overlap and improve workforce coordination across all departments."
+      }
+    },
+    "industries": {
+      "title": "Industry Focus: Where Professional Cards Add Value",
+      "manufacturing": {
+        "title": "Manufacturing and Industrial Operations",
+        "description": "Production roles, technical positions, safety-critical functions"
+      },
+      "construction": {
+        "title": "Construction and Engineering",
+        "description": "Site managers, engineers, specialized tradespeople"
+      },
+      "energy": {
+        "title": "Energy and Utilities",
+        "description": "Technical operators, maintenance staff, safety officers"
+      },
+      "transport": {
+        "title": "Transport and Logistics",
+        "description": "Drivers, dispatchers, warehouse supervisors"
+      },
+      "public": {
+        "title": "Public Administration and Services",
+        "description": "Administrative positions, public service roles"
+      }
+    },
+    "whyChoose": {
+      "title": "Building Workforce Integrity with MSC CERTIFICATIONS",
+      "experts": {
+        "title": "Expert Documentation Specialists",
+        "description": "Deep regulatory knowledge and experience across multiple industries and standards."
+      },
+      "templates": {
+        "title": "Fully Compliant Templates",
+        "description": "Tailored to your national and industry standards, ensuring complete compliance."
+      },
+      "verification": {
+        "title": "Independent Verification",
+        "description": "Objective assessment ensuring objectivity and credibility for all stakeholders."
+      }
+    },
+    "cta": {
+      "title": "Ready to formalize and document your workforce structure with precision?",
+      "description": "Partner with MSC CERTIFICATIONS to create Professional Cards that establish clarity, compliance, and confidence across your organization.",
+      "button": "Start Your Professional Card Project Today",
+      "footer": "Professional documentation for professional organizations."
+    }
+  },
+  "equipmentEvaluation": {
+    "meta": {
+      "title": "Machinery & Equipment Evaluation | Industrial Performance Audits - MSC CERTIFICATIONS",
+      "description": "Maximize asset performance and value with MSC CERTIFICATIONS. Get objective equipment evaluations for compliance, ROI, and operational efficiency.",
+      "keywords": "equipment evaluation, machinery audit, industrial performance audit, asset valuation, technology line assessment, operational efficiency, technical inspection, ROI evaluation, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Evaluation of Technological Lines, Machinery and Equipment",
+      "subtitle1": "Ready to maximize productivity and extend the life of your industrial assets?",
+      "subtitle2": "Professional evaluation of technological lines, machinery, and equipment helps you verify operational performance, identify modernization needs, and understand the true market value of your equipment. It's the foundation for smart investment, safe operation, and sustainable growth.",
+      "cta1": "Request a Competitive Evaluation Quote",
+      "cta2": "Schedule Your Free Technical Readiness Check"
+    },
+    "whatIs": {
+      "title": "What Is Equipment Evaluation?",
+      "subtitle": "The Science Behind Industrial Efficiency",
+      "description1": "Equipment and technological line evaluation is the structured assessment of industrial machinery and systems to determine their technical condition, operational efficiency, and financial worth.",
+      "description2": "Through inspections, diagnostics, and performance analysis, the process reveals how effectively your assets operate — and whether upgrading, maintaining, or replacing them offers the best return on investment.",
+      "roleBox": {
+        "title": "Our Role as Independent Evaluators",
+        "description": "We are MSC CERTIFICATIONS, a fully independent, accredited inspection and certification body. We don't sell or service equipment — our responsibility is to provide objective, data-driven evaluations that ensure transparency and confidence.",
+        "servicesTitle": "Our experts conduct:",
+        "service1": "On-site technical inspections and diagnostics",
+        "service2": "Performance and energy-efficiency assessments",
+        "service3": "Safety and environmental compliance checks",
+        "service4": "Market and residual value analysis",
+        "result": "The result: a certified evaluation report trusted by manufacturers, investors, and regulators."
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits: Clarity, Performance, and Value",
+      "benefit1": {
+        "title": "Optimize Production Efficiency",
+        "description": "Identify bottlenecks, improve throughput, and reduce downtime with data-driven insights."
+      },
+      "benefit2": {
+        "title": "Support Investment Decisions",
+        "description": "Make confident choices about modernization or equipment replacement based on real data."
+      },
+      "benefit3": {
+        "title": "Ensure Compliance and Safety",
+        "description": "Meet regulatory, environmental, and occupational safety standards with verified assessments."
+      },
+      "benefit4": {
+        "title": "Establish Accurate Asset Value",
+        "description": "Reliable data for accounting, insurance, and strategic planning purposes."
+      }
+    },
+    "industries": {
+      "title": "Industry Focus: Where Our Expertise Applies",
+      "subtitle": "We assess machinery and technological systems in:",
+      "manufacturing": {
+        "title": "Manufacturing and Processing Plants",
+        "description": "Production machinery, assembly lines, quality control systems"
+      },
+      "energy": {
+        "title": "Energy, Utilities, and Heavy Industry",
+        "description": "Power generation equipment, industrial boilers, heavy machinery"
+      },
+      "construction": {
+        "title": "Construction and Engineering",
+        "description": "Construction equipment, fabrication machinery, lifting systems"
+      },
+      "automotive": {
+        "title": "Automotive, Chemical, and Food Production",
+        "description": "Specialized production lines, processing equipment, automation systems"
+      },
+      "pharma": {
+        "title": "Pharmaceutical and Packaging Operations",
+        "description": "Clean room equipment, packaging lines, quality testing instruments"
+      }
+    },
+    "process": {
+      "title": "Our Evaluation Process",
+      "step1": {
+        "title": "Application and Data Review",
+        "description": "Initial consultation and documentation gathering"
+      },
+      "step2": {
+        "title": "On-Site Inspection and Diagnostics",
+        "description": "Comprehensive technical assessment and testing"
+      },
+      "step3": {
+        "title": "Technical and Economic Analysis",
+        "description": "Performance evaluation and value determination"
+      },
+      "step4": {
+        "title": "Evaluation Report Issuance",
+        "description": "Detailed findings and recommendations"
+      },
+      "step5": {
+        "title": "Periodic Reassessment or Re-evaluation",
+        "description": "Ongoing monitoring and updates as needed"
+      }
+    },
+    "whyChoose": {
+      "title": "The MSC Advantage: Objective, Expert, Reliable",
+      "engineers": {
+        "title": "Specialized Engineers",
+        "description": "Deep expertise in your industrial sector with proven technical knowledge."
+      },
+      "transparent": {
+        "title": "Transparent Results",
+        "description": "Fully evidence-based evaluations with complete objectivity and integrity."
+      },
+      "actionable": {
+        "title": "Actionable Insights",
+        "description": "Practical recommendations to enhance performance and maximize ROI."
+      }
+    },
+    "cta": {
+      "title": "Ready to discover the true potential and value of your equipment?",
+      "description": "Partner with MSC CERTIFICATIONS for a professional evaluation that drives efficiency and confidence.",
+      "button": "Start Your Equipment Evaluation Today",
+      "footer": "Independent evaluation for informed decisions."
     }
   }
 }

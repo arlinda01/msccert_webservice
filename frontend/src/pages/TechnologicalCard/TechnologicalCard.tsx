@@ -1,29 +1,34 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const TechnologicalCard: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   return (
     <div className="iso-page">
       <Helmet>
-        <title>Technological Card Services | Standardize & Control Production - MSC CERTIFICATIONS</title>
-        <meta name="description" content="Define and optimize your production process with MSC CERTIFICATIONS. Create standardized, audit-ready Technological Cards for quality and efficiency." />
-        <meta name="keywords" content="technological card, process card, production documentation, manufacturing process control, standardize production, industrial efficiency, quality documentation, ISO audit preparation, MSC CERTIFICATIONS" />
+        <title>{t('technologicalCard.meta.title')}</title>
+        <meta name="description" content={t('technologicalCard.meta.description')} />
+        <meta name="keywords" content={t('technologicalCard.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>Technological Card: Define, Standardize, and Optimize Your Production Process</h1>
+          <h1>{t('technologicalCard.hero.title')}</h1>
           <p className="iso-subtitle">
-            Ready to make your production process fully transparent, efficient, and compliant?
+            {t('technologicalCard.hero.subtitle1')}
           </p>
           <p className="iso-subtitle">
-            A Technological Card is the foundation for consistent quality and controlled manufacturing. It details every operation step, resource, and parameter — ensuring that every product is made the right way, every time.
+            {t('technologicalCard.hero.subtitle2')}
           </p>
           <div className="hero-buttons">
-            <Link to="/contact-us" className="btn btn-primary">Request a Technological Card Service Quote</Link>
-            <Link to="/online-audit-page" className="btn btn-secondary">Start Your Free Process Assessment</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('technologicalCard.hero.cta1')}</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-secondary">{t('technologicalCard.hero.cta2')}</Link>
           </div>
         </div>
       </section>
@@ -31,24 +36,24 @@ const TechnologicalCard: FC = () => {
       {/* What Is Technological Card Section */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is a Technological Card?</h2>
+          <h2 className="section-title">{t('technologicalCard.whatIs.title')}</h2>
           <h3 style={{ fontSize: '1.5rem', color: '#01434f', marginBottom: '1.5rem' }}>
-            The Blueprint of Production
+            {t('technologicalCard.whatIs.subtitle')}
           </h3>
           <p className="iso-text">
-            A Technological Card (also known as a Process Card or Operation Sheet) is a structured document that defines the method, sequence, and technical conditions required to produce or assemble a specific product.
+            {t('technologicalCard.whatIs.description1')}
           </p>
           <p className="iso-text">
-            It specifies materials, equipment, labor norms, and quality controls, serving as a clear guideline for operators and engineers.
+            {t('technologicalCard.whatIs.description2')}
           </p>
           <p className="iso-text">
-            Each card becomes an integral part of your production documentation system — ensuring process repeatability, traceability, and compliance with quality and safety standards.
+            {t('technologicalCard.whatIs.description3')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as Your Industrial Documentation Partner</h3>
+            <h3>{t('technologicalCard.whatIs.roleBox.title')}</h3>
             <p>
-              We assist manufacturers in preparing, reviewing, and verifying Technological Cards that meet industry, safety, and regulatory standards.
+              {t('technologicalCard.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -57,34 +62,34 @@ const TechnologicalCard: FC = () => {
       {/* Key Benefits Section */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Key Benefits: Precision, Compliance, and Control</h2>
+          <h2 className="section-title">{t('technologicalCard.benefits.title')}</h2>
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Standardize Operations</h3>
+              <h3>{t('technologicalCard.benefits.benefit1.title')}</h3>
               <p>
-                Ensure all personnel follow identical, approved production steps, eliminating variability and errors.
+                {t('technologicalCard.benefits.benefit1.description')}
               </p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Improve Efficiency</h3>
+              <h3>{t('technologicalCard.benefits.benefit2.title')}</h3>
               <p>
-                Reduce waste, downtime, and rework through clearly defined parameters and optimized workflows.
+                {t('technologicalCard.benefits.benefit2.description')}
               </p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Enhance Quality and Safety</h3>
+              <h3>{t('technologicalCard.benefits.benefit3.title')}</h3>
               <p>
-                Maintain consistent product quality and safe working practices across all production runs.
+                {t('technologicalCard.benefits.benefit3.description')}
               </p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">4</div>
-              <h3>Support Certification and Audits</h3>
+              <h3>{t('technologicalCard.benefits.benefit4.title')}</h3>
               <p>
-                Demonstrate process control during ISO and regulatory inspections with comprehensive documentation.
+                {t('technologicalCard.benefits.benefit4.description')}
               </p>
             </div>
           </div>
@@ -94,27 +99,27 @@ const TechnologicalCard: FC = () => {
       {/* Industry Focus Section */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industry Focus: Where Technological Cards Add Value</h2>
+          <h2 className="section-title">{t('technologicalCard.industries.title')}</h2>
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Manufacturing and Assembly Plants</h4>
-              <p>Production lines, assembly operations, quality checkpoints</p>
+              <h4>{t('technologicalCard.industries.manufacturing.title')}</h4>
+              <p>{t('technologicalCard.industries.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Food and Chemical Processing</h4>
-              <p>Recipe control, batch processing, safety-critical operations</p>
+              <h4>{t('technologicalCard.industries.foodChemical.title')}</h4>
+              <p>{t('technologicalCard.industries.foodChemical.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Construction and Fabrication Works</h4>
-              <p>Fabrication procedures, welding specifications, material handling</p>
+              <h4>{t('technologicalCard.industries.construction.title')}</h4>
+              <p>{t('technologicalCard.industries.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Automotive and Aerospace Production</h4>
-              <p>Precision assembly, testing protocols, traceability requirements</p>
+              <h4>{t('technologicalCard.industries.automotive.title')}</h4>
+              <p>{t('technologicalCard.industries.automotive.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Maintenance and Repair Operations</h4>
-              <p>Service procedures, part replacement, calibration processes</p>
+              <h4>{t('technologicalCard.industries.maintenance.title')}</h4>
+              <p>{t('technologicalCard.industries.maintenance.description')}</p>
             </div>
           </div>
         </div>
@@ -123,19 +128,19 @@ const TechnologicalCard: FC = () => {
       {/* MSC Advantage Section */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Why Choose MSC CERTIFICATIONS?</h2>
+          <h2 className="section-title">{t('technologicalCard.whyChoose.title')}</h2>
           <div className="advantage-cards">
             <div className="advantage-card">
-              <h3>Experienced Engineers</h3>
-              <p>Deep process knowledge in your sector with proven expertise across industries.</p>
+              <h3>{t('technologicalCard.whyChoose.engineers.title')}</h3>
+              <p>{t('technologicalCard.whyChoose.engineers.description')}</p>
             </div>
             <div className="advantage-card">
-              <h3>Accurate Documentation</h3>
-              <p>Based on real operational data and industry best practices for maximum reliability.</p>
+              <h3>{t('technologicalCard.whyChoose.documentation.title')}</h3>
+              <p>{t('technologicalCard.whyChoose.documentation.description')}</p>
             </div>
             <div className="advantage-card">
-              <h3>Compliance Assurance</h3>
-              <p>Ready for audits, certifications, and client reviews with complete confidence.</p>
+              <h3>{t('technologicalCard.whyChoose.compliance.title')}</h3>
+              <p>{t('technologicalCard.whyChoose.compliance.description')}</p>
             </div>
           </div>
         </div>
@@ -144,14 +149,14 @@ const TechnologicalCard: FC = () => {
       {/* Final CTA Section */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Ready to document your process with precision and unlock production efficiency?</h2>
+          <h2>{t('technologicalCard.cta.title')}</h2>
           <p>
-            Partner with MSC CERTIFICATIONS to develop Technological Cards that deliver control, quality, and confidence.
+            {t('technologicalCard.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to="/contact-us" className="btn btn-primary">Start Your Technological Card Project Today</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('technologicalCard.cta.button')}</Link>
           </div>
-          <p className="cta-footer">Precision documentation for precision manufacturing.</p>
+          <p className="cta-footer">{t('technologicalCard.cta.footer')}</p>
         </div>
       </section>
     </div>

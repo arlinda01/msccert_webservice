@@ -25,6 +25,7 @@ urlpatterns = [
     path('api/auth/', include('apps.accounts.urls')),
     path('api/', include('apps.certificates.urls')),
     path('api/forms/', include('apps.forms.urls')),
+    path('api/blog/', include('apps.blog.urls')),
 ]
 
 # Serve media files - in production, use re_path for media serving
