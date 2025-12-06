@@ -95,6 +95,7 @@ const Navigation: FC = () => {
               <li><Link to={getPath('qualityPolicy')} onClick={closeMenu}>{t('nav.qualityPolicy')}</Link></li>
               <li><Link to={getPath('codeOfEthics')} onClick={closeMenu}>{t('nav.codeOfEthics')}</Link></li>
               <li><Link to={getPath('accreditation')} onClick={closeMenu}>{t('nav.accreditation')}</Link></li>
+              <li><Link to={getPath('faq')} onClick={closeMenu}>{t('nav.faq')}</Link></li>
             </ul>
           </li>
 
@@ -148,7 +149,7 @@ const Navigation: FC = () => {
             </ul>
           </li>
 
-          <li><Link to={getPath('faq')} onClick={closeMenu}>{t('nav.blog')}</Link></li>
+          <li><Link to={getPath('blog')} onClick={closeMenu}>{t('nav.blog')}</Link></li>
           <li><Link to={getPath('contact')} onClick={closeMenu}>{t('nav.contactUs')}</Link></li>
 
           <li className="mobile-only nav-actions-mobile">

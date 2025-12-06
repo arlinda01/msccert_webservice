@@ -31,7 +31,9 @@ export type RouteKey =
   | 'termsConditions'
   | 'certificates'
   | 'certificateVerify'
-  | 'quoteForm';
+  | 'quoteForm'
+  | 'blog'
+  | 'blogPost';
 
 export type SupportedLanguage = 'en' | 'sq' | 'it';
 
@@ -185,6 +187,16 @@ export const routes: Record<RouteKey, Record<SupportedLanguage, string>> = {
     en: '/quote/:isoCode',
     sq: '/sq/kerkese-oferte/:isoCode',
     it: '/it/richiesta-preventivo/:isoCode'
+  },
+  blog: {
+    en: '/blog',
+    sq: '/sq/blog',
+    it: '/it/blog'
+  },
+  blogPost: {
+    en: '/blog/:slug',
+    sq: '/sq/blog/:slug',
+    it: '/it/blog/:slug'
   }
 };
 

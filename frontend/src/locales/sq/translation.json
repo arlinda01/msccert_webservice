@@ -25,6 +25,7 @@
     "technologicalCard": "Karta Teknologjike",
     "equipmentEvaluation": "Vlerësimi i Pajisjeve",
     "blog": "Blog",
+    "faq": "Pyetje të Shpeshta",
     "contactUs": "Na Kontaktoni",
     "onlineAssessment": "Vlerësimi Online",
     "getQuote": "Merr Ofertë",
@@ -1617,7 +1618,7 @@
       },
       "phone": {
         "title": "Telefon",
-        "number": "+355 67 206 3632"
+        "number": "+355 672063632"
       },
       "email": {
         "title": "Email",
@@ -1682,6 +1683,516 @@
       "message": "Kërkesa juaj për ofertë u dërgua me sukses.",
       "note": "Ekipi ynë do të rishikojë dorëzimin tuaj dhe do t'ju kthehet brenda 1-2 ditëve pune.",
       "goHome": "Shko në Kryefaqe"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Lajmet e fundit, njohuri dhe përditësime nga MSC Certifications",
+    "allPosts": "Të Gjitha Postimet",
+    "noPosts": "Nuk ka postime ende",
+    "noPostsDescription": "Kthehuni së shpejti për përmbajtje të reja.",
+    "postNotFound": "Postimi Nuk u Gjet",
+    "postNotFoundDescription": "Postimi i blogut që po kërkoni nuk ekziston ose është hequr.",
+    "backToBlog": "Kthehu te Blogu",
+    "views": "shikime",
+    "tags": "Etiketat",
+    "readMore": "Lexo Më Shumë"
+  },
+  "technologicalCard": {
+    "meta": {
+      "title": "Shërbimet e Kartës Teknologjike | Standardizo & Kontrollo Prodhimin - MSC CERTIFICATIONS",
+      "description": "Përcakto dhe optimizo procesin tënd të prodhimit me MSC CERTIFICATIONS. Krijo Karta Teknologjike të standardizuara, të gatshme për auditim për cilësi dhe efikasitet.",
+      "keywords": "karta teknologjike, karta procesi, dokumentacioni i prodhimit, kontrolli i procesit të prodhimit, standardizimi i prodhimit, efikasiteti industrial, dokumentacioni i cilësisë, përgatitja për auditim ISO, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Karta Teknologjike: Përcakto, Standardizo dhe Optimizo Procesin Tënd të Prodhimit",
+      "subtitle1": "Gati të bësh procesin tënd të prodhimit plotësisht transparent, efikas dhe konform?",
+      "subtitle2": "Karta Teknologjike është baza për cilësi të qëndrueshme dhe prodhim të kontrolluar. Detajon çdo hap operacional, burim dhe parametër — duke siguruar që çdo produkt të bëhet në mënyrën e duhur, çdo herë.",
+      "cta1": "Kërko Ofertë për Shërbimin e Kartës Teknologjike",
+      "cta2": "Fillo Vlerësimin Falas të Procesit"
+    },
+    "whatIs": {
+      "title": "Çfarë është Karta Teknologjike?",
+      "subtitle": "Blueprint i Prodhimit",
+      "description1": "Karta Teknologjike (e njohur gjithashtu si Karta e Procesit ose Fletë Operacionesh) është një dokument i strukturuar që përcakton metodën, sekuencën dhe kushtet teknike të kërkuara për të prodhuar ose montuar një produkt specifik.",
+      "description2": "Specifikon materialet, pajisjet, normat e punës dhe kontrollet e cilësisë, duke shërbyer si udhëzues i qartë për operatorët dhe inxhinierët.",
+      "description3": "Çdo kartë bëhet pjesë integrale e sistemit tuaj të dokumentacionit të prodhimit — duke siguruar përsëritshmëri të procesit, gjurmueshmëri dhe konformitet me standardet e cilësisë dhe sigurisë.",
+      "roleBox": {
+        "title": "Roli Ynë si Partner i Dokumentacionit Industrial",
+        "description": "Ne ndihmojmë prodhuesit në përgatitjen, rishikimin dhe verifikimin e Kartave Teknologjike që plotësojnë standardet e industrisë, sigurisë dhe rregullatore."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore: Precizion, Konformitet dhe Kontroll",
+      "benefit1": {
+        "title": "Standardizo Operacionet",
+        "description": "Siguro që i gjithë personeli ndjek hapa identikë dhe të miratuar prodhimi, duke eliminuar variabilitetin dhe gabimet."
+      },
+      "benefit2": {
+        "title": "Përmirëso Efikasitetin",
+        "description": "Ul humbjet, kohën e ndërprerjes dhe ripunimin përmes parametrave të qartë dhe flukseve të optimizuara të punës."
+      },
+      "benefit3": {
+        "title": "Përmirëso Cilësinë dhe Sigurinë",
+        "description": "Ruaj cilësi të qëndrueshme të produktit dhe praktika të sigurta pune në të gjitha ciklet e prodhimit."
+      },
+      "benefit4": {
+        "title": "Mbështet Certifikimin dhe Auditet",
+        "description": "Demonstro kontrollin e procesit gjatë inspektimeve ISO dhe rregullatore me dokumentacion gjithëpërfshirës."
+      }
+    },
+    "industries": {
+      "title": "Fokusi Sektorial: Ku Kartat Teknologjike Shtojnë Vlerë",
+      "manufacturing": {
+        "title": "Fabrika Prodhimi dhe Montimi",
+        "description": "Linja prodhimi, operacione montimi, pika kontrolli cilësie"
+      },
+      "foodChemical": {
+        "title": "Përpunim Ushqimor dhe Kimik",
+        "description": "Kontroll recetash, përpunim batch, operacione kritike sigurie"
+      },
+      "construction": {
+        "title": "Punime Ndërtimi dhe Fabrikimi",
+        "description": "Procedura fabrikimi, specifikime saldimi, trajtim materialesh"
+      },
+      "automotive": {
+        "title": "Prodhim Automobilistik dhe Aeronautik",
+        "description": "Montim preciz, protokolle testimi, kërkesa gjurmueshmërie"
+      },
+      "maintenance": {
+        "title": "Operacione Mirëmbajtjeje dhe Riparimi",
+        "description": "Procedura shërbimi, zëvendësim pjesësh, procese kalibrimi"
+      }
+    },
+    "whyChoose": {
+      "title": "Pse të Zgjedhësh MSC CERTIFICATIONS?",
+      "engineers": {
+        "title": "Inxhinierë me Përvojë",
+        "description": "Njohuri të thella procesi në sektorin tuaj me ekspertizë të provuar në industri."
+      },
+      "documentation": {
+        "title": "Dokumentacion i Saktë",
+        "description": "Bazuar në të dhëna operacionale reale dhe praktikat më të mira të industrisë për besueshmëri maksimale."
+      },
+      "compliance": {
+        "title": "Siguri Konformiteti",
+        "description": "I gatshëm për audite, certifikime dhe rishikime klientësh me besim të plotë."
+      }
+    },
+    "cta": {
+      "title": "Gati të dokumentosh procesin tënd me precizion dhe të zhbllokosh efikasitetin e prodhimit?",
+      "description": "Bashkëpuno me MSC CERTIFICATIONS për të zhvilluar Karta Teknologjike që ofrojnë kontroll, cilësi dhe besim.",
+      "button": "Fillo Projektin Tënd të Kartës Teknologjike Sot",
+      "footer": "Dokumentacion preciz për prodhim preciz."
+    }
+  },
+  "staffTraining": {
+    "meta": {
+      "title": "Programet e Trajnimit të Stafit | Zhvillim i Fuqisë Punëtore i Lidhur me ISO - MSC CERTIFICATIONS",
+      "description": "Rrit performancën, sigurinë dhe konformitetin e stafit me trajnim bazuar në ISO nga MSC CERTIFICATIONS. Programe të personalizuara për çdo industri. Fillo sot.",
+      "keywords": "trajnim stafi ISO, zhvillim i fuqisë punëtore, trajnim ISO 9001, trajnim ISO 45001, kompetenca e punonjësve, trajnim konformiteti, trajnim sigurie, programe trajnimi korporative, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Trajnimi i Stafit: Ndërto Kompetencë, Siguri dhe Performancë",
+      "subtitle1": "Fuqizo ekipin tënd me aftësitë dhe ndërgjegjësimin për të performuar në mënyrë të sigurt, efikase dhe në konformitet të plotë me standardet ndërkombëtare.",
+      "subtitle2": "MSC CERTIFICATIONS ofron programe trajnimi bazuar në role dhe kompetenca, të dizajnuara për të plotësuar nevojat specifike të industrisë suaj dhe të lidhura me kërkesat e ISO 9001, ISO 14001 dhe ISO 45001.",
+      "cta1": "Kërko Propozim Trajnimi",
+      "cta2": "Rezervo Vlerësimin Falas të Nevojave të Trajnimit"
+    },
+    "whatIs": {
+      "title": "Çfarë është Trajnimi i Stafit?",
+      "description1": "Programi ynë i Trajnimit të Stafit është një sistem mësimi i strukturuar i zhvilluar për të forcuar aftësitë, njohuritë dhe ndërgjegjësimin e fuqisë suaj punëtore.",
+      "description2": "Çdo kurs është përshtatur sipas rolit të punonjësit, nivelit të përgjegjësisë dhe industrisë, duke siguruar kompetencë praktike dhe përmirësim të matshëm.",
+      "modules": {
+        "title": "Modulet e trajnimit mund të përfshijnë:",
+        "quality": {
+          "title": "Menaxhim Cilësie (ISO 9001)",
+          "description": "kontroll procesi, dokumentacion, fokus te klienti"
+        },
+        "environment": {
+          "title": "Menaxhim Mjedisor (ISO 14001)",
+          "description": "qëndrueshmëri, reduktim humbje, ndikim mjedisor"
+        },
+        "safety": {
+          "title": "Shëndet & Siguri në Punë (ISO 45001)",
+          "description": "parandalim rreziku, përgjigje emergjence, sjellje e sigurt në punë"
+        }
+      },
+      "delivery": "Të gjitha programet zhvillohen sipas parimeve të mësimit për të rritur dhe mund të ofrohen në vend, online, ose në format hibrid."
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore: Performancë, Konformitet dhe Mbajtje",
+      "benefit1": {
+        "title": "Rrit Produktivitetin dhe Cilësinë",
+        "description": "Punonjësit e trajnuar mirë performojnë me saktësi, qëndrueshmëri dhe efikasitet më të madh — duke përmirësuar drejtpërdrejt cilësinë e produktit dhe shërbimit."
+      },
+      "benefit2": {
+        "title": "Forco Konformitetin dhe Sigurinë",
+        "description": "Siguro respektim të plotë të politikave të brendshme, kërkesave ligjore dhe standardeve ISO. Ul aksidentet dhe forco kulturën e sigurisë."
+      },
+      "benefit3": {
+        "title": "Ul Gabimet dhe Qarkullimin e Stafit",
+        "description": "Punonjësit kompetentë dhe të sigurt bëjnë më pak gabime dhe janë më të angazhuar, duke sjellë mbajtje më të fortë dhe kosto më të ulëta trajnimi."
+      }
+    },
+    "industries": {
+      "title": "Kë Trajnojmë",
+      "subtitle": "Ofrojmë programe të personalizuara në të gjitha industritë:",
+      "manufacturing": {
+        "title": "Operacione Prodhuese dhe Industriale",
+        "description": "Ekipe prodhimi, kontroll cilësie, oficerë sigurie"
+      },
+      "construction": {
+        "title": "Ndërtim dhe Inxhinieri",
+        "description": "Mbikëqyrës kantieri, menaxherë projektesh, koordinatorë sigurie"
+      },
+      "transport": {
+        "title": "Transport dhe Logjistikë",
+        "description": "Shoferë, staf magazine, menaxherë operacionesh"
+      },
+      "horeca": {
+        "title": "Hoteleri (HORECA)",
+        "description": "Staf i vijës së parë, ekipe kuzhine, menaxhment"
+      },
+      "services": {
+        "title": "Shërbime dhe Call Center",
+        "description": "Përfaqësues shërbimi klienti, drejtues ekipi"
+      },
+      "public": {
+        "title": "Administratë Publike dhe Shëndetësi",
+        "description": "Staf administrativ, ofrues shëndetësor, oficerë konformiteti"
+      }
+    },
+    "whyChoose": {
+      "title": "Pse të Zgjedhësh MSC CERTIFICATIONS",
+      "trainers": {
+        "title": "Trajnerë dhe Auditorë të Certifikuar",
+        "description": "Ekspertë me përvojë reale industrie dhe rekorde të provuara në fushat e tyre."
+      },
+      "programs": {
+        "title": "Programe të Lidhura me Standardet",
+        "description": "Plotësisht në përputhje me kornizat ISO dhe praktikat më të mira ndërkombëtare."
+      },
+      "flexible": {
+        "title": "Ofrimi Fleksibël",
+        "description": "Trajnim në vend ose në distancë i përshtatur me orarin dhe nevojat tuaja operacionale."
+      },
+      "results": {
+        "title": "Rezultate të Matura",
+        "description": "Vlerësime pas-trajnimi dhe ndjekje e performancës për të siguruar ndikim të qëndrueshëm."
+      }
+    },
+    "cta": {
+      "title": "Investimi te njerëzit tuaj është investim në performancën tuaj.",
+      "description": "Bashkëpuno me MSC CERTIFICATIONS për të zhvilluar ekipe të aftë, konforme dhe të motivuara që drejtojnë ekselencën çdo ditë.",
+      "button": "Fillo Programin Tënd të Trajnimit të Stafit Sot",
+      "footer": "Trajnim profesional që jep rezultate reale."
+    }
+  },
+  "professionalCard": {
+    "meta": {
+      "title": "Shërbimet e Kartës Profesionale | Përcaktim Rolesh & Konformitet i Fuqisë Punëtore - MSC CERTIFICATIONS",
+      "description": "Standardizo rolet e punës dhe siguro konformitetin e punës me MSC CERTIFICATIONS. Përcakto përgjegjësitë, përmirëso trajnimin dhe rrit qartësinë operacionale.",
+      "keywords": "karta profesionale, konformitet i fuqisë punëtore, përcaktim rolesh, dokumentacion HR, kompetencë profesionale, ISO 45001 workforce, kartë përgjegjësie pune"
+    },
+    "hero": {
+      "title": "Karta Profesionale: Përcakto Rolet, Siguro Kompetencën dhe Forco Konformitetin",
+      "subtitle1": "Gati të formalizosh strukturën e fuqisë punëtore dhe të demonstrosh kompetencë profesionale në të gjithë organizatën?",
+      "subtitle2": "Karta Profesionale përcakton qartë detyrat, përgjegjësitë, kualifikimet dhe kërkesat e sigurisë për çdo pozicion — duke siguruar konformitet, qëndrueshmëri dhe ekselencë operacionale.",
+      "cta1": "Kërko Ofertë për Shërbimin e Kartës Profesionale",
+      "cta2": "Fillo Rishikimin e Konformitetit të Fuqisë Punëtore"
+    },
+    "whatIs": {
+      "title": "Çfarë është Karta Profesionale?",
+      "subtitle": "Korniza për Standardizimin e Fuqisë Punëtore",
+      "description1": "Karta Profesionale është një dokument zyrtar që përshkruan një rol specifik pune ose profesion brenda organizatës suaj.",
+      "description2": "Përshkruan aftësitë e kërkuara, edukimin, përgjegjësitë, mjetet e përdorura dhe kushtet e punës për atë rol. Ky dokumentacion formon bazën për menaxhimin HR, konformitetin e punës, trajnimin dhe sigurimin e sigurisë.",
+      "description3": "Çdo Kartë Profesionale siguron që funksioni i çdo punonjësi të jetë i përcaktuar qartë — duke reduktuar ambiguitetin, duke përmirësuar përgjegjshmërinë dhe duke siguruar përafrimin rregullator.",
+      "roleBox": {
+        "title": "Roli Ynë si Verifikues të Pavarur",
+        "description": "Ne ndihmojmë kompanitë të zhvillojnë dhe verifikojnë Karta Profesionale që plotësojnë si standardet kombëtare të punës ashtu edhe praktikat më të mira ndërkombëtare (si ISO 9001 dhe ISO 45001)."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore: Strukturë, Konformitet dhe Transparencë",
+      "benefit1": {
+        "title": "Qartësi në Përgjegjësi",
+        "description": "Përcakto detyra dhe pritshmëri të qarta për çdo pozicion, duke eliminuar konfuzionin dhe mbivendosjen e roleve."
+      },
+      "benefit2": {
+        "title": "Konformitet me Standardet e Punës",
+        "description": "Plotëso kërkesat ligjore, shëndetësore dhe të sigurisë së dokumentacionit, duke siguruar përafrim të plotë rregullator."
+      },
+      "benefit3": {
+        "title": "Trajnim dhe Vlerësim i Përmirësuar",
+        "description": "Ndërto plane trajnimi të synuara dhe rishikime të drejta performancë bazuar në përcaktime të qarta rolesh."
+      },
+      "benefit4": {
+        "title": "Efikasitet Organizativ",
+        "description": "Shmangu mbivendosjen e roleve dhe përmirëso koordinimin e fuqisë punëtore në të gjitha departamentet."
+      }
+    },
+    "industries": {
+      "title": "Fokusi Sektorial: Ku Kartat Profesionale Shtojnë Vlerë",
+      "manufacturing": {
+        "title": "Operacione Prodhuese dhe Industriale",
+        "description": "Role prodhimi, pozicione teknike, funksione kritike sigurie"
+      },
+      "construction": {
+        "title": "Ndërtim dhe Inxhinieri",
+        "description": "Menaxherë kantieri, inxhinierë, profesionistë të specializuar"
+      },
+      "energy": {
+        "title": "Energji dhe Utilities",
+        "description": "Operatorë teknikë, staf mirëmbajtjeje, oficerë sigurie"
+      },
+      "transport": {
+        "title": "Transport dhe Logjistikë",
+        "description": "Shoferë, dispeçerë, mbikëqyrës magazine"
+      },
+      "public": {
+        "title": "Administratë Publike dhe Shërbime",
+        "description": "Pozicione administrative, role shërbimi publik"
+      }
+    },
+    "whyChoose": {
+      "title": "Ndërto Integritetin e Fuqisë Punëtore me MSC CERTIFICATIONS",
+      "experts": {
+        "title": "Specialistë Ekspertë Dokumentacioni",
+        "description": "Njohuri të thella rregullatore dhe përvojë në industri dhe standarde të shumta."
+      },
+      "templates": {
+        "title": "Modele Plotësisht Konforme",
+        "description": "Të përshtatura me standardet tuaja kombëtare dhe sektoriale, duke siguruar konformitet të plotë."
+      },
+      "verification": {
+        "title": "Verifikim i Pavarur",
+        "description": "Vlerësim objektiv që siguron objektivitet dhe besueshmëri për të gjitha palët e interesuara."
+      }
+    },
+    "cta": {
+      "title": "Gati të formalizosh dhe dokumentosh strukturën e fuqisë punëtore me precizion?",
+      "description": "Bashkëpuno me MSC CERTIFICATIONS për të krijuar Karta Profesionale që vendosin qartësi, konformitet dhe besim në të gjithë organizatën.",
+      "button": "Fillo Projektin Tënd të Kartës Profesionale Sot",
+      "footer": "Dokumentacion profesional për organizata profesionale."
+    }
+  },
+  "equipmentEvaluation": {
+    "meta": {
+      "title": "Vlerësimi i Makinerisë & Pajisjeve | Audite Performancë Industriale - MSC CERTIFICATIONS",
+      "description": "Maksimizo performancën dhe vlerën e aseteve me MSC CERTIFICATIONS. Merr vlerësime objektive të pajisjeve për konformitet, ROI dhe efikasitet operacional.",
+      "keywords": "vlerësim pajisjesh, audit makinerie, audit performancë industriale, vlerësim aseti, vlerësim linja teknologjike, efikasitet operacional, inspektim teknik, vlerësim ROI, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Vlerësimi i Linjave Teknologjike, Makinerisë dhe Pajisjeve",
+      "subtitle1": "Gati të maksimizosh produktivitetin dhe të zgjasësh jetën e aseteve tuaja industriale?",
+      "subtitle2": "Vlerësimi profesional i linjave teknologjike, makinerisë dhe pajisjeve të ndihmon të verifikosh performancën operacionale, të identifikosh nevojat për modernizim dhe të kuptosh vlerën e vërtetë të tregut të pajisjeve. Është baza për investim të zgjuar, operacion të sigurt dhe rritje të qëndrueshme.",
+      "cta1": "Kërko Ofertë Konkurruese Vlerësimi",
+      "cta2": "Planifiko Verifikimin Falas të Gatishmërisë Teknike"
+    },
+    "whatIs": {
+      "title": "Çfarë është Vlerësimi i Pajisjeve?",
+      "subtitle": "Shkenca Pas Efikasitetit Industrial",
+      "description1": "Vlerësimi i pajisjeve dhe linjave teknologjike është vlerësimi i strukturuar i makinerisë dhe sistemeve industriale për të përcaktuar gjendjen teknike, efikasitetin operacional dhe vlerën financiare.",
+      "description2": "Përmes inspektimeve, diagnostikimeve dhe analizës së performancës, procesi zbulon sa efektivisht operojnë asetet — dhe nëse përmirësimi, mirëmbajtja ose zëvendësimi i tyre ofron kthimin më të mirë të investimit.",
+      "roleBox": {
+        "title": "Roli Ynë si Vlerësues të Pavarur",
+        "description": "Ne jemi MSC CERTIFICATIONS, një organ inspektimi dhe certifikimi plotësisht i pavarur dhe i akredituar. Nuk shesim dhe nuk shërbejmë pajisje — përgjegjësia jonë është të ofrojmë vlerësime objektive, të bazuara në të dhëna që sigurojnë transparencë dhe besim.",
+        "servicesTitle": "Ekspertët tanë kryejnë:",
+        "service1": "Inspektime teknike në vend dhe diagnostikim",
+        "service2": "Vlerësime performancë dhe efikasiteti energjetik",
+        "service3": "Kontrolle konformiteti sigurie dhe mjedisore",
+        "service4": "Analiza vlere tregu dhe vlere mbetëse",
+        "result": "Rezultati: një raport vlerësimi i certifikuar i besuar nga prodhuesit, investitorët dhe rregullatorët."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore: Qartësi, Performancë dhe Vlerë",
+      "benefit1": {
+        "title": "Optimizo Efikasitetin e Prodhimit",
+        "description": "Identifiko ngushticat, përmirëso throughput-in dhe ul kohën e ndërprerjes me njohuri të bazuara në të dhëna."
+      },
+      "benefit2": {
+        "title": "Mbështet Vendimet e Investimit",
+        "description": "Bëj zgjedhje të sigurta për modernizim ose zëvendësim të pajisjeve bazuar në të dhëna reale."
+      },
+      "benefit3": {
+        "title": "Siguro Konformitetin dhe Sigurinë",
+        "description": "Plotëso standardet rregullatore, mjedisore dhe të sigurisë në punë me vlerësime të verifikuara."
+      },
+      "benefit4": {
+        "title": "Përcakto Vlerën e Saktë të Asetit",
+        "description": "Të dhëna të besueshme për kontabilitet, sigurim dhe qëllime planifikimi strategjik."
+      }
+    },
+    "industries": {
+      "title": "Fokusi Sektorial: Ku Aplikohet Ekspertiza Jonë",
+      "subtitle": "Vlerësojmë makinerinë dhe sistemet teknologjike në:",
+      "manufacturing": {
+        "title": "Fabrika Prodhimi dhe Përpunimi",
+        "description": "Makineri prodhimi, linja montimi, sisteme kontrolli cilësie"
+      },
+      "energy": {
+        "title": "Energji, Utilities dhe Industri e Rëndë",
+        "description": "Pajisje gjenerimi energjie, kaldaja industriale, makineri e rëndë"
+      },
+      "construction": {
+        "title": "Ndërtim dhe Inxhinieri",
+        "description": "Pajisje ndërtimi, makineri fabrikimi, sisteme ngritëse"
+      },
+      "automotive": {
+        "title": "Prodhim Automobilistik, Kimik dhe Ushqimor",
+        "description": "Linja prodhimi të specializuara, pajisje përpunimi, sisteme automatizimi"
+      },
+      "pharma": {
+        "title": "Operacione Farmaceutike dhe Paketimi",
+        "description": "Pajisje dhome të pastërta, linja paketimi, instrumente testimi cilësie"
+      }
+    },
+    "process": {
+      "title": "Procesi Ynë i Vlerësimit",
+      "step1": {
+        "title": "Aplikimi dhe Rishikimi i të Dhënave",
+        "description": "Konsultim fillestar dhe mbledhje dokumentacioni"
+      },
+      "step2": {
+        "title": "Inspektim në Vend dhe Diagnostikim",
+        "description": "Vlerësim teknik gjithëpërfshirës dhe testim"
+      },
+      "step3": {
+        "title": "Analizë Teknike dhe Ekonomike",
+        "description": "Vlerësim performancë dhe përcaktim vlere"
+      },
+      "step4": {
+        "title": "Lëshimi i Raportit të Vlerësimit",
+        "description": "Gjetje të detajuara dhe rekomandime"
+      },
+      "step5": {
+        "title": "Rivlerësim Periodik ose Ri-vlerësim",
+        "description": "Monitorim i vazhdueshëm dhe përditësime sipas nevojës"
+      }
+    },
+    "whyChoose": {
+      "title": "Avantazhi MSC: Objektiv, Ekspert, i Besueshëm",
+      "engineers": {
+        "title": "Inxhinierë të Specializuar",
+        "description": "Ekspertizë e thellë në sektorin tuaj industrial me njohuri teknike të provuara."
+      },
+      "transparent": {
+        "title": "Rezultate Transparente",
+        "description": "Vlerësime plotësisht të bazuara në evidencë me objektivitet dhe integritet të plotë."
+      },
+      "actionable": {
+        "title": "Njohuri të Zbatueshme",
+        "description": "Rekomandime praktike për të përmirësuar performancën dhe maksimizuar ROI."
+      }
+    },
+    "cta": {
+      "title": "Gati të zbulosh potencialin dhe vlerën e vërtetë të pajisjeve tuaja?",
+      "description": "Bashkëpuno me MSC CERTIFICATIONS për një vlerësim profesional që drejton efikasitetin dhe besimin.",
+      "button": "Fillo Vlerësimin e Pajisjeve Sot",
+      "footer": "Vlerësim i pavarur për vendime të informuara."
+    }
+  },
+  "energyEfficiency": {
+    "meta": {
+      "title": "Audite Efikasiteti Energjetik | Ul Kostot dhe Emetimet CO₂ - MSC CERTIFICATIONS",
+      "description": "Identifiko mundësitë e kursimit, optimizo konsumin e energjisë dhe ul kostot operacionale me audite profesionale të efikasitetit energjetik nga MSC Certifications.",
+      "keywords": "efikasitet energjetik, audit energjie, reduktim energjie, emetimet CO₂, menaxhim energjie, audit energjie ndërtesash, audit energjie industriale, kursime energjie"
+    },
+    "hero": {
+      "title": "Shërbimet e Efikasitetit Energjetik",
+      "subtitle": "Mat. Analizo. Kurse. Shërbimet tona të efikasitetit energjetik ndihmojnë organizatat të identifikojnë mundësitë e kursimit, të optimizojnë konsumin e energjisë dhe të ulin kostot operacionale."
+    },
+    "whatIs": {
+      "title": "Çfarë është një Audit Efikasiteti Energjetik?",
+      "description": "Një audit efikasiteti energjetik është një rishikim sistematik i konsumit të energjisë së organizatës suaj për të identifikuar mundësi kursimi kostosh dhe reduktim të ndikimit mjedisor.",
+      "businessImportance": {
+        "title": "Pse Efikasiteti Energjetik është i Rëndësishëm për Biznesin",
+        "point1": "Ul kostot operacionale përmes faturave më të ulëta të energjisë.",
+        "point2": "Demonstron përgjegjësi sociale dhe mjedisore.",
+        "point3": "Përmirëson konkurrueshmërinë në tregjet që prioritizojnë qëndrueshmërinë.",
+        "point4": "Ndihmon të plotësosh kërkesat ligjore dhe rregullatore.",
+        "point5": "Kontribuon në arritjen e objektivave klimatike dhe të emetimeve."
+      },
+      "keyFunctions": {
+        "title": "Funksionet Kryesore të Auditimit Energjetik",
+        "point1": "Analiza dhe matja e konsumit të energjisë",
+        "point2": "Identifikimi i humbjeve energjetike",
+        "point3": "Rekomandimet për kursim energjie",
+        "point4": "Plani i përmirësimit të performancës energjetike"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pse të Zgjedhësh Shërbimet Tona",
+      "subtitle": "Ne ofrojmë vlerësime gjithëpërfshirëse energjetike të përshtatura me nevojat tuaja specifike.",
+      "expertise": {
+        "title": "Ekspertizë e Thellë",
+        "description": "Ekipi ynë ka përvojë të gjerë në auditim energjetik në industri të ndryshme."
+      },
+      "practical": {
+        "title": "Zgjidhje Praktike",
+        "description": "Ne ofrojmë rekomandime të zbatueshme që japin rezultate të matshme."
+      },
+      "comprehensive": {
+        "title": "Qasje Gjithëpërfshirëse",
+        "description": "Mbulojmë të gjitha aspektet e konsumit energjetik, nga ndërtesat deri te proceset."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore",
+      "benefit1": {
+        "title": "Reduktim Kostosh",
+        "description": "Ul faturat e energjisë duke identifikuar dhe eliminuar humbjet."
+      },
+      "benefit2": {
+        "title": "Qëndrueshmëri Mjedisore",
+        "description": "Ul gjurmën tuaj të karbonit dhe demonstro përkushtim mjedisor."
+      },
+      "benefit3": {
+        "title": "Konkurrueshmëri e Përmirësuar",
+        "description": "Operacionet më efikase përkthehen në përparësi konkurruese."
+      }
+    },
+    "whoBenefits": {
+      "title": "Kush Përfiton",
+      "subtitle": "Shërbimet tona të efikasitetit energjetik janë ideale për:",
+      "manufacturing": {
+        "title": "Fabrika Prodhimi",
+        "description": "Fabrika dhe operacione industriale me konsum të lartë energjie"
+      },
+      "buildings": {
+        "title": "Ndërtesa Komerciale",
+        "description": "Zyra, qendra tregtare dhe komplekse shumëkatëshe"
+      },
+      "publicSector": {
+        "title": "Sektori Publik",
+        "description": "Shkolla, spitale dhe ndërtesa qeveritare"
+      },
+      "retail": {
+        "title": "Biznese me Pakicë",
+        "description": "Dyqane, supermarkete dhe zinxhirë restorantësh"
+      },
+      "logistics": {
+        "title": "Transport & Logjistikë",
+        "description": "Magazine, qendra shpërndarjeje dhe flota transporti"
+      },
+      "agriculture": {
+        "title": "Bujqësi & Përpunim Ushqimi",
+        "description": "Ferma, impiantet e përpunimit dhe magazinimet e ftohura"
+      }
+    },
+    "partner": {
+      "title": "Partneri Juaj për Efikasitet Energjetik",
+      "description": "Ne bashkëpunojmë ngushtë me ju për të zhvilluar dhe implementuar strategji kursimi energjie që përshtaten me objektivat tuaja të biznesit.",
+      "feature1": "Vlerësim i personalizuar bazuar në nevojat tuaja",
+      "feature2": "Rekomandime të qarta dhe të zbatueshme",
+      "feature3": "Mbështetje e vazhdueshme për implementim"
+    },
+    "cta": {
+      "title": "Gati të Përmirësosh Efikasitetin Tënd Energjetik?",
+      "description": "Kontaktoni sot për një konsultim fillestar pa pagesë dhe zbuloni se si mund të ulni kostot tuaja energjetike.",
+      "button": "Fillo Auditin Tënd Energjetik"
     }
   }
 }

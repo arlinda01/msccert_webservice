@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'apps.certificates',
     'apps.accounts',
     'apps.forms',
+    'apps.blog',
 ]
 
 MIDDLEWARE = [
