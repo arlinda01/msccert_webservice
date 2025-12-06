@@ -21,7 +21,7 @@
     "ceMarking": "CE Marking",
     "energyEfficiency": "Energy Efficiency Programs",
     "staffTraining": "Staff Training",
-    "professionalCards": "Professional Cards",
+    "professionalCards": "IDCP ID Card Professional",
     "technologicalCard": "Technological Card",
     "equipmentEvaluation": "Equipment Evaluation",
     "blog": "Blog",
@@ -1892,90 +1892,115 @@
   },
   "professionalCard": {
     "meta": {
-      "title": "Professional Card Services | Role Definition & Workforce Compliance - MSC CERTIFICATIONS",
-      "description": "Standardize job roles and ensure labor compliance with MSC CERTIFICATIONS. Define responsibilities, improve training, and boost operational clarity.",
-      "keywords": "professional card, workforce compliance, role definition, HR documentation, ISO 45001 workforce, occupational competence, job responsibility card"
+      "title": "IDCP ID Card Professional | Professional Skills Verification - MSC CERTIFICATIONS",
+      "description": "Certify your staff's professional skills with IDCP ID Card Professional from MSC CERTIFICATIONS. Demonstrate competence and compliance with legal and safety standards.",
+      "keywords": "IDCP, ID Card Professional, professional identity card, skills verification, employee certification, professional competence, workplace safety, MSC CERTIFICATIONS"
     },
     "hero": {
-      "title": "Professional Card: Define Roles, Ensure Competence, and Strengthen Compliance",
-      "subtitle1": "Ready to formalize your workforce structure and demonstrate professional competence across your organization?",
-      "subtitle2": "A Professional Card clearly defines the duties, responsibilities, qualifications, and safety requirements for each position — ensuring compliance, consistency, and operational excellence.",
-      "cta1": "Request a Professional Card Service Quote",
-      "cta2": "Start Your Workforce Compliance Review"
+      "title": "IDCP ID Card Professional: Verify Skills and Professional Competence",
+      "subtitle1": "Demonstrate the training, experience, and specific skills of each employee.",
+      "subtitle2": "IDCP ID Card Professional is the personal certificate that verifies the employee's position, competence, and authorization to perform specific duties — helping organizations meet legal requirements, ISO standards, and occupational safety regulations.",
+      "cta1": "Request a Quote for IDCP ID Card Professional",
+      "cta2": "Start Free Staff Competence Assessment"
     },
     "whatIs": {
-      "title": "What Is a Professional Card?",
-      "subtitle": "The Framework for Workforce Standardization",
-      "description1": "A Professional Card is an official document that describes a specific job role or occupation within your organization.",
-      "description2": "It outlines the required skills, education, responsibilities, tools used, and working conditions for that role. This documentation forms the foundation for HR management, labor compliance, training, and safety assurance.",
-      "description3": "Each Professional Card ensures that every employee's function is clearly defined — reducing ambiguity, improving accountability, and ensuring regulatory alignment.",
+      "title": "What is IDCP ID Card Professional?",
+      "subtitle": "Personal Certification of Professional Competence",
+      "description1": "IDCP ID Card Professional is an official certified document that defines the professional identity of an employee within an organization.",
+      "description2": "It contains data on position, qualifications, training, specific permits or authorizations, and compliance with legal requirements and occupational health and safety standards.",
+      "description3": "The card creates a clear and reliable profile for each employee — helping the organization manage human resources effectively and meet obligations towards inspections, tenders, and clients.",
       "roleBox": {
-        "title": "Our Role as Independent Verifiers",
-        "description": "We help companies develop and verify Professional Cards that meet both national labor standards and international best practices (such as ISO 9001 and ISO 45001)."
+        "title": "Our Role as Accredited Issuer",
+        "description": "MSC CERTIFICATIONS issues IDCP ID Card Professional based on a structured verification process — certifying compliance with industry requirements and applicable legislation."
       }
     },
+    "howItWorks": {
+      "title": "How IDCP ID Card Professional Works",
+      "step1": {
+        "title": "Application and Data Collection",
+        "description": "The form is completed with employee data, position, training, certificates, and existing permits."
+      },
+      "step2": {
+        "title": "Documentation Verification",
+        "description": "MSC CERTIFICATIONS verifies data compliance with legal requirements and applicable standards."
+      },
+      "step3": {
+        "title": "Card Issuance",
+        "description": "After verification, IDCP ID Card Professional is issued with all certified data."
+      }
+    },
+    "cardContains": {
+      "title": "What IDCP ID Card Professional Contains",
+      "item1": "Employee name and identification data",
+      "item2": "Job position and company sector",
+      "item3": "Professional qualifications and certificates",
+      "item4": "Training completed and dates",
+      "item5": "Specific permits/authorizations (e.g., working at heights, welding, etc.)",
+      "item6": "Occupational safety compliance status",
+      "item7": "Validity date and unique verification code"
+    },
     "benefits": {
-      "title": "Key Benefits: Structure, Compliance, and Transparency",
+      "title": "Key Benefits of IDCP ID Card Professional",
       "benefit1": {
-        "title": "Clarity in Responsibilities",
-        "description": "Define clear duties and expectations for every position, eliminating role confusion and overlap."
+        "title": "Instant Proof of Competence",
+        "description": "The card serves as quick and official verification of employee skills for employers, inspectors, and clients."
       },
       "benefit2": {
-        "title": "Compliance with Labor Standards",
-        "description": "Meet legal, health, and safety documentation requirements, ensuring full regulatory alignment."
+        "title": "Compliance with Law and ISO",
+        "description": "Meets Labor Code requirements, safety standards (ISO 45001), and sector regulations."
       },
       "benefit3": {
-        "title": "Improved Training and Evaluation",
-        "description": "Build targeted training plans and fair performance reviews based on clear role definitions."
+        "title": "Advantage in Tenders and Contracts",
+        "description": "Many tenders require proof of professional competence — IDCP ID Card formally fulfills this requirement."
       },
       "benefit4": {
-        "title": "Organizational Efficiency",
-        "description": "Avoid role overlap and improve workforce coordination across all departments."
+        "title": "Simplified Staff Management",
+        "description": "The organization has access to a clear and updated profile for each employee — useful for training, inspections, and management decisions."
       }
     },
     "industries": {
-      "title": "Industry Focus: Where Professional Cards Add Value",
-      "manufacturing": {
-        "title": "Manufacturing and Industrial Operations",
-        "description": "Production roles, technical positions, safety-critical functions"
-      },
+      "title": "Who Needs IDCP ID Card Professional?",
       "construction": {
-        "title": "Construction and Engineering",
-        "description": "Site managers, engineers, specialized tradespeople"
+        "title": "Construction and Infrastructure",
+        "description": "Site workers, machinery operators, safety supervisors"
+      },
+      "manufacturing": {
+        "title": "Manufacturing and Industry",
+        "description": "Line operators, maintenance technicians, hazardous process workers"
       },
       "energy": {
-        "title": "Energy and Utilities",
-        "description": "Technical operators, maintenance staff, safety officers"
+        "title": "Energy and Public Services",
+        "description": "Electricians, system technicians, maintenance engineers"
       },
       "transport": {
         "title": "Transport and Logistics",
-        "description": "Drivers, dispatchers, warehouse supervisors"
+        "description": "Professional drivers, warehouse operators, logistics coordinators"
       },
-      "public": {
-        "title": "Public Administration and Services",
-        "description": "Administrative positions, public service roles"
+      "horeca": {
+        "title": "HORECA and Services",
+        "description": "Kitchen workers, refrigeration technicians, hygiene staff"
       }
     },
     "whyChoose": {
-      "title": "Building Workforce Integrity with MSC CERTIFICATIONS",
+      "title": "Why MSC CERTIFICATIONS for IDCP ID Card?",
       "experts": {
-        "title": "Expert Documentation Specialists",
-        "description": "Deep regulatory knowledge and experience across multiple industries and standards."
+        "title": "Structured Verification Process",
+        "description": "We evaluate with professionalism and ensure accuracy in every card issued."
       },
       "templates": {
-        "title": "Fully Compliant Templates",
-        "description": "Tailored to your national and industry standards, ensuring complete compliance."
+        "title": "Professional and Standardized Format",
+        "description": "The card is in accordance with international practices and local market requirements."
       },
       "verification": {
-        "title": "Independent Verification",
-        "description": "Objective assessment ensuring objectivity and credibility for all stakeholders."
+        "title": "Reliability and Recognition",
+        "description": "Issued by an accredited body with recognition from authorities and partners."
       }
     },
     "cta": {
-      "title": "Ready to formalize and document your workforce structure with precision?",
-      "description": "Partner with MSC CERTIFICATIONS to create Professional Cards that establish clarity, compliance, and confidence across your organization.",
-      "button": "Start Your Professional Card Project Today",
-      "footer": "Professional documentation for professional organizations."
+      "title": "Demonstrate Your Staff's Professional Skills",
+      "description": "Get IDCP ID Card Professional for each employee and ensure compliance, trust, and competitive advantage.",
+      "button": "Request IDCP ID Card Now",
+      "footer": "Reliable certification. Proven competence."
     }
   },
   "equipmentEvaluation": {

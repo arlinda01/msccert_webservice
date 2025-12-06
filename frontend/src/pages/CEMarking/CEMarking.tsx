@@ -165,7 +165,6 @@ const CEMarking: FC = () => {
           </p>
           <div className="cta-buttons">
             <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
-            <Link to="/online-assessment" className="btn btn-secondary">Assessment</Link>
           </div>
         </div>
       </section>

@@ -21,7 +21,7 @@
     "ceMarking": "Marcatura CE",
     "energyEfficiency": "Programmi di Efficienza Energetica",
     "staffTraining": "Formazione del Personale",
-    "professionalCards": "Tessere Professionali",
+    "professionalCards": "IDCP ID Card Professional",
     "technologicalCard": "Tessera Tecnologica",
     "equipmentEvaluation": "Valutazione delle Attrezzature",
     "blog": "Blog",
@@ -1459,90 +1459,115 @@
   },
   "professionalCard": {
     "meta": {
-      "title": "Professional Card - Definizione Ruoli & Conformità del Personale",
-      "description": "Standardizza i ruoli e garantisci la conformità del personale con MSC CERTIFICATIONS. Definisci responsabilità, migliora la formazione e aumenta la chiarezza operativa.",
-      "keywords": "professional card, conformità del personale, definizione ruoli, documentazione HR, competenza professionale, ISO 45001 workforce, scheda mansione, responsabilità lavorative"
+      "title": "IDCP ID Card Professional | Verifica delle Competenze Professionali - MSC CERTIFICATIONS",
+      "description": "Certifica le competenze professionali del tuo staff con IDCP ID Card Professional di MSC CERTIFICATIONS. Dimostra competenza e conformità con gli standard legali e di sicurezza.",
+      "keywords": "IDCP, ID Card Professional, tessera identità professionale, verifica competenze, certificazione dipendenti, competenza professionale, sicurezza sul lavoro, MSC CERTIFICATIONS"
     },
     "hero": {
-      "title": "Professional Card: Definisci i Ruoli, Garantisci le Competenze e Rafforza la Conformità",
-      "subtitle1": "Vuoi formalizzare la struttura organizzativa e dimostrare competenza professionale in tutta la tua azienda?",
-      "subtitle2": "La Professional Card definisce in modo chiaro mansioni, responsabilità, qualifiche e requisiti di sicurezza per ogni posizione — garantendo conformità, coerenza operativa ed eccellenza nelle performance.",
-      "cta1": "Richiedi un Preventivo per il Servizio Professional Card",
-      "cta2": "Avvia la Verifica di Conformità del Personale"
+      "title": "IDCP ID Card Professional: Verifica Competenze e Qualifiche Professionali",
+      "subtitle1": "Dimostra la formazione, l'esperienza e le competenze specifiche di ogni dipendente.",
+      "subtitle2": "IDCP ID Card Professional è il certificato personale che attesta la posizione, la competenza e l'autorizzazione del dipendente a svolgere mansioni specifiche — aiutando le organizzazioni a soddisfare i requisiti legali, gli standard ISO e le normative sulla sicurezza sul lavoro.",
+      "cta1": "Richiedi un Preventivo per IDCP ID Card Professional",
+      "cta2": "Avvia la Valutazione Gratuita delle Competenze del Personale"
     },
     "whatIs": {
-      "title": "Che cos'è una Professional Card?",
-      "subtitle": "Il Modello per la Standardizzazione dei Ruoli",
-      "description1": "La Professional Card è un documento ufficiale che descrive un ruolo lavorativo o una mansione specifica all'interno dell'organizzazione.",
-      "description2": "Include: competenze e qualifiche richieste, formazione obbligatoria, responsabilità e attività principali, strumenti utilizzati e condizioni di lavoro, requisiti di salute e sicurezza (HSE). Questa documentazione è la base per: gestione HR, conformità normativa e ispettiva, percorsi di formazione, valutazioni delle prestazioni.",
-      "description3": "Ogni Professional Card assicura che il ruolo di ciascun dipendente sia chiaramente definito, riducendo ambiguità, aumentando la responsabilità e garantendo allineamento con normative e standard.",
+      "title": "Che cos'è IDCP ID Card Professional?",
+      "subtitle": "Certificazione Personale della Competenza Professionale",
+      "description1": "IDCP ID Card Professional è un documento ufficiale certificato che definisce l'identità professionale di un dipendente all'interno di un'organizzazione.",
+      "description2": "Contiene dati su posizione, qualifiche, formazione, permessi o autorizzazioni specifiche e conformità con i requisiti legali e gli standard di salute e sicurezza sul lavoro.",
+      "description3": "La tessera crea un profilo chiaro e affidabile per ogni dipendente — aiutando l'organizzazione a gestire le risorse umane in modo efficace e a rispettare gli obblighi verso ispezioni, gare d'appalto e clienti.",
       "roleBox": {
-        "title": "Il nostro ruolo come Verificatori Indipendenti",
-        "description": "MSC CERTIFICATIONS supporta le aziende nello sviluppo e nella verifica di Professional Card conformi: agli standard nazionali sul lavoro, alle migliori pratiche internazionali (ISO 9001, ISO 45001, standard HSE). Garantiamo documentazione chiara, completa e verificabile, basata su criteri normativi aggiornati."
+        "title": "Il Nostro Ruolo come Emittente Accreditato",
+        "description": "MSC CERTIFICATIONS emette IDCP ID Card Professional sulla base di un processo di verifica strutturato — certificando la conformità ai requisiti del settore e alla legislazione applicabile."
       }
     },
+    "howItWorks": {
+      "title": "Come Funziona IDCP ID Card Professional",
+      "step1": {
+        "title": "Domanda e Raccolta Dati",
+        "description": "Il modulo viene compilato con i dati del dipendente, posizione, formazione, certificati e permessi esistenti."
+      },
+      "step2": {
+        "title": "Verifica della Documentazione",
+        "description": "MSC CERTIFICATIONS verifica la conformità dei dati con i requisiti legali e gli standard applicabili."
+      },
+      "step3": {
+        "title": "Emissione della Tessera",
+        "description": "Dopo la verifica, viene emessa la IDCP ID Card Professional con tutti i dati certificati."
+      }
+    },
+    "cardContains": {
+      "title": "Cosa Contiene IDCP ID Card Professional",
+      "item1": "Nome e dati identificativi del dipendente",
+      "item2": "Posizione lavorativa e settore aziendale",
+      "item3": "Qualifiche e certificati professionali",
+      "item4": "Formazione completata e date",
+      "item5": "Permessi/autorizzazioni specifiche (es. lavori in quota, saldatura, ecc.)",
+      "item6": "Stato di conformità alla sicurezza sul lavoro",
+      "item7": "Data di validità e codice univoco di verifica"
+    },
     "benefits": {
-      "title": "Benefici Chiave: Struttura, Conformità e Trasparenza",
+      "title": "Benefici Chiave di IDCP ID Card Professional",
       "benefit1": {
-        "title": "Chiarezza nelle Responsabilità",
-        "description": "Definisce compiti, attività e aspettative per ogni posizione."
+        "title": "Prova Immediata delle Competenze",
+        "description": "La tessera funge da verifica rapida e ufficiale delle competenze del dipendente per datori di lavoro, ispettori e clienti."
       },
       "benefit2": {
-        "title": "Conformità alle Normative sul Lavoro e Sicurezza",
-        "description": "Supporta requisiti legali, HSE e documentazione obbligatoria."
+        "title": "Conformità con Legge e ISO",
+        "description": "Soddisfa i requisiti del Codice del Lavoro, gli standard di sicurezza (ISO 45001) e le normative di settore."
       },
       "benefit3": {
-        "title": "Migliore Formazione e Valutazione",
-        "description": "Permette piani formativi mirati e valutazioni delle performance eque e trasparenti."
+        "title": "Vantaggio in Gare e Contratti",
+        "description": "Molte gare richiedono prova di competenza professionale — IDCP ID Card soddisfa formalmente questo requisito."
       },
       "benefit4": {
-        "title": "Efficienza Organizzativa",
-        "description": "Previene sovrapposizioni di ruolo e migliora il coordinamento del personale."
+        "title": "Gestione Semplificata del Personale",
+        "description": "L'organizzazione ha accesso a un profilo chiaro e aggiornato per ogni dipendente — utile per formazione, ispezioni e decisioni gestionali."
       }
     },
     "industries": {
-      "title": "Settori in cui le Professional Card creano valore",
-      "manufacturing": {
-        "title": "Manifatturiero e stabilimenti industriali",
-        "description": "Ruoli produttivi, posizioni tecniche, funzioni critiche per la sicurezza"
-      },
+      "title": "Chi Ha Bisogno di IDCP ID Card Professional?",
       "construction": {
-        "title": "Costruzioni e ingegneria",
-        "description": "Responsabili di cantiere, ingegneri, specialisti di settore"
+        "title": "Costruzioni e Infrastrutture",
+        "description": "Operai di cantiere, operatori di macchinari, supervisori della sicurezza"
+      },
+      "manufacturing": {
+        "title": "Manifatturiero e Industria",
+        "description": "Operatori di linea, tecnici di manutenzione, lavoratori in processi pericolosi"
       },
       "energy": {
-        "title": "Energia e utility",
-        "description": "Operatori tecnici, personale di manutenzione, responsabili sicurezza"
+        "title": "Energia e Servizi Pubblici",
+        "description": "Elettricisti, tecnici di sistema, ingegneri di manutenzione"
       },
       "transport": {
-        "title": "Trasporti e logistica",
-        "description": "Autisti, dispatcher, supervisori di magazzino"
+        "title": "Trasporti e Logistica",
+        "description": "Autisti professionisti, operatori di magazzino, coordinatori logistici"
       },
-      "public": {
-        "title": "Pubblica Amministrazione e servizi",
-        "description": "Posizioni amministrative, ruoli di servizio pubblico"
+      "horeca": {
+        "title": "HORECA e Servizi",
+        "description": "Lavoratori di cucina, tecnici di refrigerazione, personale igienico"
       }
     },
     "whyChoose": {
-      "title": "Costruisci l'Integrità del Personale con MSC CERTIFICATIONS",
+      "title": "Perché MSC CERTIFICATIONS per IDCP ID Card?",
       "experts": {
-        "title": "Specialisti della Documentazione",
-        "description": "Esperti con profonda conoscenza delle normative del lavoro e degli standard di sicurezza."
+        "title": "Processo di Verifica Strutturato",
+        "description": "Valutiamo con professionalità e garantiamo accuratezza in ogni tessera emessa."
       },
       "templates": {
-        "title": "Template Completamente Conformi",
-        "description": "Schede mansione adattate alle normative nazionali e settoriali."
+        "title": "Formato Professionale e Standardizzato",
+        "description": "La tessera è conforme alle pratiche internazionali e ai requisiti del mercato locale."
       },
       "verification": {
-        "title": "Verifica Indipendente",
-        "description": "Oggettività, rigore e credibilità a supporto della tua organizzazione."
+        "title": "Affidabilità e Riconoscimento",
+        "description": "Emessa da un organismo accreditato con riconoscimento da autorità e partner."
       }
     },
     "cta": {
-      "title": "Pronto a formalizzare e documentare la struttura del personale con precisione e conformità?",
-      "description": "Collabora con MSC CERTIFICATIONS per creare Professional Card che stabiliscono chiarezza, conformità e fiducia in tutta l'organizzazione.",
-      "button": "Avvia oggi il tuo Progetto Professional Card",
-      "footer": "Documentazione professionale per organizzazioni professionali."
+      "title": "Dimostra le Competenze Professionali del Tuo Staff",
+      "description": "Ottieni IDCP ID Card Professional per ogni dipendente e assicura conformità, fiducia e vantaggio competitivo.",
+      "button": "Richiedi IDCP ID Card Ora",
+      "footer": "Certificazione affidabile. Competenza dimostrata."
     }
   },
   "equipmentEvaluation": {

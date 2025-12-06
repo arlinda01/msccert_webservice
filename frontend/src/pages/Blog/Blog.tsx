@@ -153,11 +153,7 @@ const Blog: FC = () => {
                       <img src={post.featured_image_url} alt={post.featured_image_alt || getPostTitle(post)} />
                     ) : (
                       <div className="blog-card-placeholder">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                          <path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2z" />
-                          <circle cx="8.5" cy="8.5" r="1.5" />
-                          <path d="M21 15l-5-5L5 21" />
-                        </svg>
+                        <img src="/logo.svg" alt="MSC Certifications" className="blog-card-logo" />
                       </div>
                     )}
                   </Link>

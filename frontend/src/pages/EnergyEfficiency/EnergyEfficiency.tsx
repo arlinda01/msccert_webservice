@@ -23,6 +23,10 @@ const EnergyEfficiency: FC = () => {
           <p className="iso-subtitle">
             {t('energyEfficiency.hero.subtitle')}
           </p>
+          <div className="hero-buttons">
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('energyEfficiency.hero.cta1')}</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-secondary">{t('energyEfficiency.hero.cta2')}</Link>
+          </div>
         </div>
       </section>
 
@@ -41,7 +45,6 @@ const EnergyEfficiency: FC = () => {
               <li>{t('energyEfficiency.whatIs.businessImportance.point2')}</li>
               <li>{t('energyEfficiency.whatIs.businessImportance.point3')}</li>
               <li>{t('energyEfficiency.whatIs.businessImportance.point4')}</li>
-              <li>{t('energyEfficiency.whatIs.businessImportance.point5')}</li>
             </ul>
           </div>
 
@@ -61,21 +64,13 @@ const EnergyEfficiency: FC = () => {
       <section className="section section-gray">
         <div className="container">
           <h2 className="section-title">{t('energyEfficiency.whyChooseUs.title')}</h2>
-          <p className="section-intro">{t('energyEfficiency.whyChooseUs.subtitle')}</p>
-
-          <div className="advantage-cards">
-            <div className="advantage-card">
-              <h3>{t('energyEfficiency.whyChooseUs.expertise.title')}</h3>
-              <p>{t('energyEfficiency.whyChooseUs.expertise.description')}</p>
-            </div>
-            <div className="advantage-card">
-              <h3>{t('energyEfficiency.whyChooseUs.practical.title')}</h3>
-              <p>{t('energyEfficiency.whyChooseUs.practical.description')}</p>
-            </div>
-            <div className="advantage-card">
-              <h3>{t('energyEfficiency.whyChooseUs.comprehensive.title')}</h3>
-              <p>{t('energyEfficiency.whyChooseUs.comprehensive.description')}</p>
-            </div>
+          <div className="iso-role-box" style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <ul className="services-list">
+              <li>{t('energyEfficiency.whyChooseUs.point1')}</li>
+              <li>{t('energyEfficiency.whyChooseUs.point2')}</li>
+              <li>{t('energyEfficiency.whyChooseUs.point3')}</li>
+              <li>{t('energyEfficiency.whyChooseUs.point4')}</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -119,24 +114,24 @@ const EnergyEfficiency: FC = () => {
               <p>{t('energyEfficiency.whoBenefits.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.buildings.title')}</h4>
-              <p>{t('energyEfficiency.whoBenefits.buildings.description')}</p>
+              <h4>{t('energyEfficiency.whoBenefits.commercial.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.commercial.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.publicSector.title')}</h4>
-              <p>{t('energyEfficiency.whoBenefits.publicSector.description')}</p>
+              <h4>{t('energyEfficiency.whoBenefits.horeca.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.horeca.description')}</p>
             </div>
             <div className="industry-focus-item">
               <h4>{t('energyEfficiency.whoBenefits.retail.title')}</h4>
               <p>{t('energyEfficiency.whoBenefits.retail.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.logistics.title')}</h4>
-              <p>{t('energyEfficiency.whoBenefits.logistics.description')}</p>
+              <h4>{t('energyEfficiency.whoBenefits.datacenters.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.datacenters.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.agriculture.title')}</h4>
-              <p>{t('energyEfficiency.whoBenefits.agriculture.description')}</p>
+              <h4>{t('energyEfficiency.whoBenefits.utilities.title')}</h4>
+              <p>{t('energyEfficiency.whoBenefits.utilities.description')}</p>
             </div>
           </div>
         </div>
@@ -149,13 +144,6 @@ const EnergyEfficiency: FC = () => {
           <p className="section-intro" style={{ maxWidth: '800px', margin: '0 auto 2rem' }}>
             {t('energyEfficiency.partner.description')}
           </p>
-          <div className="iso-role-box">
-            <ul className="services-list">
-              <li>{t('energyEfficiency.partner.feature1')}</li>
-              <li>{t('energyEfficiency.partner.feature2')}</li>
-              <li>{t('energyEfficiency.partner.feature3')}</li>
-            </ul>
-          </div>
         </div>
       </section>
 

@@ -220,8 +220,7 @@ const CertificateDetail: FC = () => {
         <div className="certificate-cta">
           <h3>Looking to Get Certified?</h3>
           <p>
-            Are you looking to get certified, or do you need an online assessment?
-            Reach out to us and let us help you achieve your certification goals!
+            Are you looking to get certified? Reach out to us and let us help you achieve your certification goals!
           </p>
           <button
             className="cta-button"
