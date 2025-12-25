@@ -1391,7 +1391,7 @@ class Command(BaseCommand):
 <p>Whether you're starting your quality journey or looking to improve an existing system, MSC Certifications can guide you through every step. Contact us to discuss your ISO 9001 certification needs.</p>''',
 
             # Albanian
-            'title_sq': 'ISO 9001: Udheziesi Perfundimtar per Sistemet e Menaxhimit te Cilesise',
+            'title_sq': 'ISO 9001: Udhezuesi Perfundimtar per Sistemet e Menaxhimit te Cilesise',
             'excerpt_sq': 'Gjithcka qe duhet te dini per certifikimin ISO 9001 - nga te kuptuarit e kerkesave deri tek zbatimi i nje Sistemi te suksesshem te Menaxhimit te Cilesise.',
             'content_sq': '''<h2>Cfare eshte ISO 9001?</h2>
 <p>ISO 9001 eshte standardi me i njohur i menaxhimit te cilesise ne bote. Ai ofron nje kornize per organizatat qe te sigurojne qe plotesojne vazhdimisht kerkesat e klienteve dhe permiresojne vazhdimisht operacionet e tyre.</p>
