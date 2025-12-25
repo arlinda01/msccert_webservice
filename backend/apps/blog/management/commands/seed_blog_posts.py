@@ -26,7 +26,7 @@ class Command(BaseCommand):
             },
             'sustainability': {
                 'name': 'Sustainability',
-                'name_sq': 'Qendrueshmerial',
+                'name_sq': 'Qendrueshmeria',
                 'name_it': 'Sostenibilita',
             },
             'quality-management': {
@@ -891,7 +891,7 @@ class Command(BaseCommand):
             'title_sq': 'Fitimi i Qendrueshem: Si Praktikat ESG Ulin Kostot Operative',
             'excerpt_sq': 'Zbuloni si iniciativat mjedisore, sociale dhe te qeverisjes (ESG) mund te ulin ndjshem kostot operative duke permiresuar kredencialet e qendrueshmerise.',
             'content_sq': '''<h2>Hyrje</h2>
-<p>Qendrueshmerial nuk eshte vetem per te bere mire - eshte per te ecur mire. Organizatat qe perqafojne praktikat mjedisore, sociale dhe te qeverisjes (ESG) po zbulojne nje te vertete bindesel: operacionet e qendrueshme shpesh cojne ne ulje te konsiderueshme te kostove.</p>
+<p>Qendrueshmeria nuk eshte vetem per te bere mire - eshte per te ecur mire. Organizatat qe perqafojne praktikat mjedisore, sociale dhe te qeverisjes (ESG) po zbulojne nje te vertete bindesel: operacionet e qendrueshme shpesh cojne ne ulje te konsiderueshme te kostove.</p>
 
 <p>Le te eksplorojme kater shtyllat kryesore ku iniciativat ESG japin perfitimeve te matshme financiare.</p>
 
