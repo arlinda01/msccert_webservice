@@ -52,7 +52,7 @@ const EquipmentEvaluation: FC = () => {
             <p>
               {t('equipmentEvaluation.whatIs.roleBox.description')}
             </p>
-            <h4 style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>{t('equipmentEvaluation.whatIs.roleBox.servicesTitle')}</h4>
+            <h3 style={{ marginTop: '1.5rem', marginBottom: '1rem', fontSize: '1.1rem' }}>{t('equipmentEvaluation.whatIs.roleBox.servicesTitle')}</h3>
             <ul className="services-list">
               <li>{t('equipmentEvaluation.whatIs.roleBox.service1')}</li>
               <li>{t('equipmentEvaluation.whatIs.roleBox.service2')}</li>
@@ -112,23 +112,23 @@ const EquipmentEvaluation: FC = () => {
           </p>
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('equipmentEvaluation.industries.manufacturing.title')}</h4>
+              <h3>{t('equipmentEvaluation.industries.manufacturing.title')}</h3>
               <p>{t('equipmentEvaluation.industries.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('equipmentEvaluation.industries.energy.title')}</h4>
+              <h3>{t('equipmentEvaluation.industries.energy.title')}</h3>
               <p>{t('equipmentEvaluation.industries.energy.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('equipmentEvaluation.industries.construction.title')}</h4>
+              <h3>{t('equipmentEvaluation.industries.construction.title')}</h3>
               <p>{t('equipmentEvaluation.industries.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('equipmentEvaluation.industries.automotive.title')}</h4>
+              <h3>{t('equipmentEvaluation.industries.automotive.title')}</h3>
               <p>{t('equipmentEvaluation.industries.automotive.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('equipmentEvaluation.industries.pharma.title')}</h4>
+              <h3>{t('equipmentEvaluation.industries.pharma.title')}</h3>
               <p>{t('equipmentEvaluation.industries.pharma.description')}</p>
             </div>
           </div>
@@ -142,27 +142,27 @@ const EquipmentEvaluation: FC = () => {
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>{t('equipmentEvaluation.process.step1.title')}</h4>
+              <h3>{t('equipmentEvaluation.process.step1.title')}</h3>
               <p>{t('equipmentEvaluation.process.step1.description')}</p>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>{t('equipmentEvaluation.process.step2.title')}</h4>
+              <h3>{t('equipmentEvaluation.process.step2.title')}</h3>
               <p>{t('equipmentEvaluation.process.step2.description')}</p>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>{t('equipmentEvaluation.process.step3.title')}</h4>
+              <h3>{t('equipmentEvaluation.process.step3.title')}</h3>
               <p>{t('equipmentEvaluation.process.step3.description')}</p>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>{t('equipmentEvaluation.process.step4.title')}</h4>
+              <h3>{t('equipmentEvaluation.process.step4.title')}</h3>
               <p>{t('equipmentEvaluation.process.step4.description')}</p>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>{t('equipmentEvaluation.process.step5.title')}</h4>
+              <h3>{t('equipmentEvaluation.process.step5.title')}</h3>
               <p>{t('equipmentEvaluation.process.step5.description')}</p>
             </div>
           </div>

@@ -36,6 +36,7 @@ const CodeOfEthics: FC = () => {
             {/* Intro */}
             <section className="section section-white">
                 <div className="container">
+                    <h2 className="visually-hidden">Our Ethical Foundation</h2>
                     <p className="about-text centered">
                         {t('codeOfEthics.intro.description')}
                     </p>
@@ -52,7 +53,7 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaBalanceScale />
                             </div>
-                            <h4>{t('codeOfEthics.commitments.impartiality.title')}</h4>
+                            <h3>{t('codeOfEthics.commitments.impartiality.title')}</h3>
                             <p>
                                 {t('codeOfEthics.commitments.impartiality.description')}
                             </p>
@@ -62,7 +63,7 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaLock />
                             </div>
-                            <h4>{t('codeOfEthics.commitments.confidentiality.title')}</h4>
+                            <h3>{t('codeOfEthics.commitments.confidentiality.title')}</h3>
                             <p>
                                 {t('codeOfEthics.commitments.confidentiality.description')}
                             </p>
@@ -72,7 +73,7 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaSearch />
                             </div>
-                            <h4>{t('codeOfEthics.commitments.objectivity.title')}</h4>
+                            <h3>{t('codeOfEthics.commitments.objectivity.title')}</h3>
                             <p>
                                 {t('codeOfEthics.commitments.objectivity.description')}
                             </p>
@@ -82,7 +83,7 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaHandshake />
                             </div>
-                            <h4>{t('codeOfEthics.commitments.professionalism.title')}</h4>
+                            <h3>{t('codeOfEthics.commitments.professionalism.title')}</h3>
                             <p>
                                 {t('codeOfEthics.commitments.professionalism.description')}
                             </p>
@@ -92,7 +93,7 @@ const CodeOfEthics: FC = () => {
                             <div className="ethics-icon">
                                 <FaGavel />
                             </div>
-                            <h4>{t('codeOfEthics.legalCompliance.title')}</h4>
+                            <h3>{t('codeOfEthics.legalCompliance.title')}</h3>
                             <p>
                                 {t('codeOfEthics.legalCompliance.description')}
                             </p>

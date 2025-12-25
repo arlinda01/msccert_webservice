@@ -74,7 +74,7 @@ const ISOSlider: FC<ISOSliderProps> = ({ cards }) => {
                   <div className="card-icon">
                     {IconComponent && <IconComponent />}
                   </div>
-                  <h4>{card.title}</h4>
+                  <h3>{card.title}</h3>
                   <p>{card.description}</p>
                   <ul className="benefits-list">
                     {card.benefits.map((benefit, idx) => (

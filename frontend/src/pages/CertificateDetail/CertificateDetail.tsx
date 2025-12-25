@@ -96,8 +96,8 @@ const CertificateDetail: FC = () => {
         {/* Header */}
         <div className="detail-header">
           <div>
-            <h2>{certificate.certificate_number}</h2>
-            <h3>{certificate.company_name}</h3>
+            <h1>{certificate.certificate_number}</h1>
+            <h2>{certificate.company_name}</h2>
           </div>
           <div style={{ marginTop: '1rem' }}>
             <span className={getStatusClass(certificate.status)}>
@@ -108,7 +108,7 @@ const CertificateDetail: FC = () => {
 
         {/* Basic Information */}
         <div className="detail-section">
-          <h4>Certificate Information</h4>
+          <h3>Certificate Information</h3>
           <div className="detail-grid">
             <div className="detail-item">
               <span className="detail-label">Standard</span>
@@ -127,7 +127,7 @@ const CertificateDetail: FC = () => {
 
         {/* Dates */}
         <div className="detail-section">
-          <h4>Important Dates</h4>
+          <h3>Important Dates</h3>
           <div className="detail-grid">
             <div className="detail-item">
               <span className="detail-label">First Issue Date</span>
@@ -166,7 +166,7 @@ const CertificateDetail: FC = () => {
         {/* Sites */}
         {certificate.sites && certificate.sites.length > 0 && (
           <div className="detail-section">
-            <h4>Certificate Sites ({certificate.sites.length})</h4>
+            <h3>Certificate Sites ({certificate.sites.length})</h3>
             <div className="sites-list">
               {certificate.sites.map((site) => (
                 <div key={site.id} className="site-card">
@@ -188,7 +188,7 @@ const CertificateDetail: FC = () => {
         {/* QR Code Section */}
         {qrCodeUrl && (
           <div className="detail-section" style={{ textAlign: 'center' }}>
-            <h4>Certificate QR Code</h4>
+            <h3>Certificate QR Code</h3>
             <p style={{ color: '#888', marginBottom: '1rem' }}>
               Scan this QR code to view this certificate page
             </p>

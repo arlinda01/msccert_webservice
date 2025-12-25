@@ -56,7 +56,7 @@
     "requestFreeConsultation": "Richiedi Consulenza Gratuita",
     "getFreeAssessment": "Ottieni Valutazione Online Gratuita",
     "viewAllServices": "Visualizza Tutti i Servizi",
-    "requestQuote": "Richiedi un Preventivo Dettagliato e Valutazione Gratuita",
+    "requestQuote": "Richiedi Preventivo",
     "contactUs": "Contattaci",
     "getIsoQuote": "Richiedi Preventivo {{isoCode}}"
   },
@@ -1218,6 +1218,9 @@
     "title": "Richiesta Preventivo",
     "step": "Passo",
     "of": "di",
+    "progress": {
+      "step": "Passo"
+    },
     "steps": {
       "contact": "Informazioni di Contatto",
       "assessment": "Valutazione",
@@ -1244,13 +1247,47 @@
       "responseSummary": "Riepilogo Risposte",
       "summaryNote": "Le tue risposte saranno esaminate dai nostri esperti.",
       "questionsAnswered": "domande risposte",
-      "noAnswers": "Nessuna risposta fornita"
+      "noAnswers": "Nessuna risposta fornita",
+      "responses": "Le Tue Risposte"
     },
     "success": {
       "title": "Grazie!",
       "message": "La tua richiesta di preventivo è stata inviata con successo.",
       "note": "Il nostro team esaminerà la tua richiesta e ti risponderà entro 1-2 giorni lavorativi.",
-      "goHome": "Vai alla Home"
+      "goHome": "Vai alla Home",
+      "backHome": "Torna alla Home"
+    },
+    "loading": "Caricamento modulo...",
+    "submitting": "Invio in corso...",
+    "submit": "Invia Richiesta",
+    "errors": {
+      "loadFailed": "Impossibile caricare il modulo. Riprova.",
+      "submitFailed": "Impossibile inviare la richiesta. Riprova."
+    }
+  },
+  "generalQuote": {
+    "meta": {
+      "title": "Richiedi Preventivo | MSC CERTIFICATIONS",
+      "description": "Richiedi un preventivo personalizzato per la certificazione ISO. Seleziona lo standard preferito e compila il modulo di valutazione."
+    },
+    "hero": {
+      "title": "Richiedi un Preventivo Personalizzato",
+      "subtitle": "Seleziona la certificazione di tuo interesse, compila la valutazione e ricevi un preventivo su misura dal nostro team."
+    },
+    "steps": {
+      "selectIso": "Seleziona Certificazione"
+    },
+    "selectIso": {
+      "title": "Quale Certificazione Ti Interessa?",
+      "description": "Seleziona lo standard ISO o la certificazione per cui desideri un preventivo. Ti porremo domande pertinenti per fornirti una valutazione accurata."
+    },
+    "contactInfo": {
+      "message": "Messaggio (Opzionale)",
+      "messagePlaceholder": "Raccontaci le tue esigenze specifiche, domande o informazioni aggiuntive..."
+    },
+    "review": {
+      "selectedIso": "Certificazione Selezionata",
+      "certification": "Certificazione"
     }
   },
   "blog": {
@@ -1786,6 +1823,98 @@
       "title": "Pronto a migliorare la tua performance energetica?",
       "description": "Collabora con MSC CERTIFICATIONS per un programma di efficienza energetica che riduce costi e impatto ambientale.",
       "button": "Avvia il tuo Programma di Efficienza Energetica"
+    }
+  },
+  "ceMarking": {
+    "meta": {
+      "title": "Marcatura CE | MSC CERTIFICATIONS",
+      "description": "Ottieni la Marcatura CE per il mercato UE con MSC Certifications. Dimostra la conformità del prodotto, accedi ai mercati UE/SEE e costruisci la fiducia dei consumatori. Inizia la tua valutazione oggi.",
+      "keywords": "Marcatura CE, certificazione CE, conformità UE, conformità prodotto, direttive UE, marchio CE, accesso mercato europeo, MSC Certifications"
+    },
+    "hero": {
+      "title": "Marcatura CE: Dimostra la Conformità del Prodotto per il Mercato UE",
+      "subtitle": "La Marcatura CE è un marchio di conformità obbligatorio che consente la vendita legale dei prodotti nello Spazio Economico Europeo (SEE). Apponendo il marchio CE, il fabbricante dichiara che il prodotto è conforme a tutti i requisiti di sicurezza, salute e protezione ambientale dell'UE previsti dalle direttive e dai regolamenti applicabili."
+    },
+    "whatIs": {
+      "title": "Cos'è la Marcatura CE?",
+      "description1": "La Marcatura CE (Conformité Européenne) è una dichiarazione legale del fabbricante che attesta che un prodotto soddisfa i requisiti essenziali di tutta la legislazione UE applicabile. Non è un marchio di qualità, ma un requisito di conformità normativa.",
+      "description2": "La Marcatura CE consente la libera circolazione dei prodotti all'interno dell'UE e del SEE e dimostra che il prodotto ha superato le procedure di valutazione della conformità appropriate.",
+      "roleBox": {
+        "title": "Il Nostro Ruolo come Partner di Certificazione",
+        "description": "MSC Certifications effettua valutazioni e audit nell'ambito del percorso di conformità CE, a seconda della direttiva applicabile (es. Direttiva Macchine, Regolamento Dispositivi Medici)."
+      }
+    },
+    "benefits": {
+      "title": "Vantaggi della Marcatura CE per i Produttori",
+      "benefit1": {
+        "title": "Accesso Legale ai Mercati UE/SEE",
+        "description": "La Marcatura CE è obbligatoria per molti prodotti regolamentati. Senza di essa, la vendita o distribuzione legale nell'UE/SEE non è consentita."
+      },
+      "benefit2": {
+        "title": "Fiducia da Consumatori e Autorità",
+        "description": "Il marchio CE garantisce ad acquirenti e autorità che il prodotto soddisfa i criteri essenziali di sicurezza e prestazione."
+      },
+      "benefit3": {
+        "title": "Audit Semplificati tramite Standard Armonizzati",
+        "description": "I prodotti conformi agli standard europei armonizzati beneficiano di valutazioni di conformità e audit di sorveglianza del mercato più semplici."
+      }
+    },
+    "industries": {
+      "title": "Settori che Richiedono la Marcatura CE",
+      "subtitle": "La Marcatura CE si applica a un'ampia gamma di prodotti venduti nell'UE. I settori principali includono:",
+      "electrical": {
+        "title": "Apparecchiature Elettriche ed Elettroniche",
+        "description": "Conformità LVD, EMC, RoHS"
+      },
+      "machinery": {
+        "title": "Macchinari",
+        "description": "Sicurezza delle parti mobili, automazione e sistemi di controllo"
+      },
+      "toys": {
+        "title": "Giocattoli",
+        "description": "Sicurezza meccanica e chimica secondo la Direttiva Sicurezza Giocattoli"
+      },
+      "medical": {
+        "title": "Dispositivi Medici",
+        "description": "Conformità MDR con dati clinici e post-market"
+      },
+      "construction": {
+        "title": "Prodotti da Costruzione",
+        "description": "CE secondo il Regolamento Prodotti da Costruzione (CPR)"
+      },
+      "ppe": {
+        "title": "Dispositivi di Protezione Individuale (DPI)",
+        "description": "Categorizzazione del rischio e test"
+      }
+    },
+    "process": {
+      "title": "Passaggi per Ottenere la Marcatura CE",
+      "subtitle": "Segui questo processo strutturato per garantire che i tuoi prodotti soddisfino i requisiti di conformità UE",
+      "step1": {
+        "title": "Identifica le Direttive UE Applicabili",
+        "description": "Conferma i requisiti essenziali specifici del prodotto e le normative"
+      },
+      "step2": {
+        "title": "Seleziona la Valutazione di Conformità",
+        "description": "Determina il percorso appropriato in base alla categoria del prodotto e alla classificazione del rischio"
+      },
+      "step3": {
+        "title": "Compila la Documentazione Tecnica",
+        "description": "Prepara fascicoli tecnici completi che dimostrino la conformità ai requisiti essenziali"
+      },
+      "step4": {
+        "title": "Apponi il Marchio CE",
+        "description": "Una volta verificata la conformità, apponi il marchio CE sul tuo prodotto"
+      },
+      "step5": {
+        "title": "Emetti la Dichiarazione UE",
+        "description": "Prepara e firma la dichiarazione che attesta la conformità a tutte le direttive applicabili"
+      }
+    },
+    "cta": {
+      "title": "Assicura che i Tuoi Prodotti Soddisfino i Requisiti Legali",
+      "description": "Costruisci fiducia nel mercato UE con una corretta certificazione di Marcatura CE. Inizia oggi il tuo percorso di conformità con MSC Certifications.",
+      "button": "Contattaci Oggi"
     }
   }
 }

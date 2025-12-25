@@ -151,7 +151,7 @@ class FormQuestion(models.Model):
         choices=QuestionType.choices,
         default=QuestionType.TEXT
     )
-    is_required = models.BooleanField(default=False, help_text="Whether this question must be answered")
+    is_required = models.BooleanField(default=True, help_text="Whether this question must be answered")
 
     # For SELECT, RADIO, CHECKBOX types - JSON array of options
     # Format: [{"value": "opt1", "label": "Option 1", "label_sq": "Opsioni 1"}, ...]

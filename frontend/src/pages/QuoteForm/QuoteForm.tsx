@@ -95,8 +95,9 @@ const QuoteForm: FC = () => {
     additional_notes: '',
   });
 
-  // Current step: 'contact', section index (0, 1, 2...), 'review', 'success'
-  const [currentStep, setCurrentStep] = useState<'contact' | number | 'review' | 'success'>('contact');
+  // Current step: section index (0, 1, 2...), 'contact', 'review', 'success'
+  // Flow: sections first, then contact info, then review
+  const [currentStep, setCurrentStep] = useState<number | 'contact' | 'review' | 'success'>(0);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
@@ -160,34 +161,34 @@ const QuoteForm: FC = () => {
   };
 
   const goToNextStep = () => {
-    if (currentStep === 'contact') {
-      setCurrentStep(0);
-    } else if (typeof currentStep === 'number') {
+    if (typeof currentStep === 'number') {
       if (currentStep < totalSections - 1) {
         setCurrentStep(currentStep + 1);
       } else {
-        setCurrentStep('review');
+        setCurrentStep('contact');
       }
+    } else if (currentStep === 'contact') {
+      setCurrentStep('review');
     }
     window.scrollTo(0, 0);
   };
 
   const goToPreviousStep = () => {
     if (currentStep === 'review') {
+      setCurrentStep('contact');
+    } else if (currentStep === 'contact') {
       setCurrentStep(totalSections - 1);
     } else if (typeof currentStep === 'number') {
       if (currentStep > 0) {
         setCurrentStep(currentStep - 1);
-      } else {
-        setCurrentStep('contact');
       }
     }
     window.scrollTo(0, 0);
   };
 
   const getCurrentStepNumber = (): number => {
-    if (currentStep === 'contact') return 1;
-    if (typeof currentStep === 'number') return currentStep + 2;
+    if (typeof currentStep === 'number') return currentStep + 1;
+    if (currentStep === 'contact') return totalSections + 1;
     if (currentStep === 'review') return totalSteps;
     return 1;
   };
@@ -298,8 +299,8 @@ const QuoteForm: FC = () => {
                 ></div>
               </div>
               <div className="progress-label">
-                {currentStep === 'contact' && t('quoteForm.steps.contact')}
                 {typeof currentStep === 'number' && getLocalizedText(currentSection?.title || '', currentSection?.title_sq || '')}
+                {currentStep === 'contact' && t('quoteForm.steps.contact')}
                 {currentStep === 'review' && t('quoteForm.steps.review')}
               </div>
             </div>
@@ -310,7 +311,64 @@ const QuoteForm: FC = () => {
       {/* Form Content */}
       <section className="form-section">
         <div className="container">
-          {/* Contact Information Step */}
+          {/* Section Steps (Questions first) */}
+          {typeof currentStep === 'number' && currentSection && (
+            <div className="form-step section-step">
+              <h2>{getLocalizedText(currentSection.title, currentSection.title_sq)}</h2>
+              {currentSection.description && (
+                <p className="step-description">
+                  {getLocalizedText(currentSection.description, currentSection.description_sq || '')}
+                </p>
+              )}
+
+              <div className="questions-list">
+                {currentSection.questions.map((question, qIndex) => (
+                  <div key={question.id} className="question-item">
+                    <div className="question-number">{qIndex + 1}</div>
+                    <div className="question-content">
+                      <p className="question-text">
+                        {getLocalizedText(question.question_text, question.question_text_sq)}
+                        {question.is_required && <span className="required">*</span>}
+                      </p>
+                      <div className="answer-options">
+                        {question.options.map((option) => (
+                          <label key={option.value} className={`radio-option ${answers[question.id] === option.value ? 'selected' : ''}`}>
+                            <input
+                              type="radio"
+                              name={question.id}
+                              value={option.value}
+                              checked={answers[question.id] === option.value}
+                              onChange={(e) => handleAnswerChange(question.id, e.target.value)}
+                            />
+                            <span className="radio-label">{getOptionLabel(option)}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="form-actions">
+                {currentStep > 0 && (
+                  <button
+                    className="btn btn-secondary"
+                    onClick={goToPreviousStep}
+                  >
+                    {t('common.back')}
+                  </button>
+                )}
+                <button
+                  className="btn btn-primary"
+                  onClick={goToNextStep}
+                >
+                  {t('common.next')}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Contact Information Step (after questions) */}
           {currentStep === 'contact' && (
             <div className="form-step contact-step">
               <h2>{t('quoteForm.contactInfo.title')}</h2>
@@ -370,56 +428,6 @@ const QuoteForm: FC = () => {
 
               <div className="form-actions">
                 <button
-                  className="btn btn-primary"
-                  onClick={goToNextStep}
-                  disabled={!validateContact()}
-                >
-                  {t('common.next')}
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* Section Steps */}
-          {typeof currentStep === 'number' && currentSection && (
-            <div className="form-step section-step">
-              <h2>{getLocalizedText(currentSection.title, currentSection.title_sq)}</h2>
-              {currentSection.description && (
-                <p className="step-description">
-                  {getLocalizedText(currentSection.description, currentSection.description_sq || '')}
-                </p>
-              )}
-
-              <div className="questions-list">
-                {currentSection.questions.map((question, qIndex) => (
-                  <div key={question.id} className="question-item">
-                    <div className="question-number">{qIndex + 1}</div>
-                    <div className="question-content">
-                      <p className="question-text">
-                        {getLocalizedText(question.question_text, question.question_text_sq)}
-                        {question.is_required && <span className="required">*</span>}
-                      </p>
-                      <div className="answer-options">
-                        {question.options.map((option) => (
-                          <label key={option.value} className={`radio-option ${answers[question.id] === option.value ? 'selected' : ''}`}>
-                            <input
-                              type="radio"
-                              name={question.id}
-                              value={option.value}
-                              checked={answers[question.id] === option.value}
-                              onChange={(e) => handleAnswerChange(question.id, e.target.value)}
-                            />
-                            <span className="radio-label">{getOptionLabel(option)}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="form-actions">
-                <button
                   className="btn btn-secondary"
                   onClick={goToPreviousStep}
                 >
@@ -428,6 +436,7 @@ const QuoteForm: FC = () => {
                 <button
                   className="btn btn-primary"
                   onClick={goToNextStep}
+                  disabled={!validateContact()}
                 >
                   {t('common.next')}
                 </button>

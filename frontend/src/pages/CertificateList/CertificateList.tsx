@@ -53,9 +53,9 @@ const CertificateList: FC = () => {
 
   return (
     <div className="container">
-      <h2 style={{ color: '#ffffff', marginBottom: '1rem' }}>
+      <h1 style={{ color: '#ffffff', marginBottom: '1rem' }}>
         ISO Certificates ({certificates.length})
-      </h2>
+      </h1>
 
       {certificates.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '3rem', color: '#888' }}>

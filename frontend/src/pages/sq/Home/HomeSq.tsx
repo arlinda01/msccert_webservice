@@ -216,7 +216,7 @@ const HomeSq: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaBolt({}) as any}
               </div>
-              <h4>Programet e Efiçencës Energjetike</h4>
+              <h3>Programet e Efiçencës Energjetike</h3>
               <p>
                 Analizë dhe reduktim i konsumit të energjisë në ndërtesa dhe procese industriale, si dhe krijimi i kartave teknologjike të procesit të prodhimit.
               </p>
@@ -226,7 +226,7 @@ const HomeSq: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaGraduationCap({}) as any}
               </div>
-              <h4>Trajnime Profesionale</h4>
+              <h3>Trajnime Profesionale</h3>
               <p>
                 Programe të bazuara në role dhe standarde ISO për rritjen e produktivitetit dhe përputhshmërisë me rregullat e sigurisë.
               </p>
@@ -236,7 +236,7 @@ const HomeSq: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaIdCard({}) as any}
               </div>
-              <h4>Kartat Profesionale</h4>
+              <h3>Kartat Profesionale</h3>
               <p>
                 Certifikime personale për sektorë profesional që vërtetojnë menjëherë kompetencën profesionale.
               </p>
@@ -246,7 +246,7 @@ const HomeSq: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaMicrochip({}) as any}
               </div>
-              <h4>Vlerësim Teknik & Pajisjesh</h4>
+              <h3>Vlerësim Teknik & Pajisjesh</h3>
               <p>
                 Inspektim teknik i makinerive dhe linjave industriale për certifikim, siguri dhe planifikim investimesh.
               </p>
@@ -268,35 +268,35 @@ const HomeSq: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaBuilding({}) as any}
               </div>
-              <h4>Ndërtim & Infrastrukturë</h4>
+              <h3>Ndërtim & Infrastrukturë</h3>
               <p>Menaxhim risku, siguri produktesh dhe kontroll cilësie për projekte kapitale.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaUtensils({}) as any}
               </div>
-              <h4>Ushqim & HORECA</h4>
+              <h3>Ushqim & HORECA</h3>
               <p>Siguri zinxhiri furnizimi nga prodhimi deri te konsumatori.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaMicrochip({}) as any}
               </div>
-              <h4>IT & Telekomunikacion</h4>
+              <h3>IT & Telekomunikacion</h3>
               <p>Mbrojtje të dhënash dhe vazhdimësi shërbimi në ekonominë digjitale.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaIndustry({}) as any}
               </div>
-              <h4>Prodhim & Energjitikë</h4>
+              <h3>Prodhim & Energjitikë</h3>
               <p>Optimizim procesesh, ulje kostosh dhe përputhshmëri me rregulloret mjedisore.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaAward({}) as any}
               </div>
-              <h4>Sektor Publik & Tendera</h4>
+              <h3>Sektor Publik & Tendera</h3>
               <p>Demonstrim i cilësisë, integritetit dhe sigurisë (ISO 9001, ISO 37001).</p>
             </div>
           </div>
@@ -319,7 +319,7 @@ const HomeSq: FC = () => {
                 onKeyPress={(e) => e.key === 'Enter' && toggleFAQ(index)}
               >
                 <div className="faq-question">
-                  <h4>{faq.question}</h4>
+                  <h3>{faq.question}</h3>
                   <svg
                     className="faq-icon"
                     width="24"
@@ -349,7 +349,7 @@ const HomeSq: FC = () => {
             Bashkohuni me dhjetëra kompani në rajon që i besojnë MSC CERTIFICATIONS për të transformuar mënyrën si funksionojnë. Ofrojmë një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.
           </p>
           <div className="cta-buttons">
-            <Link to="/sq/kontakt" className="btn btn-primary-large">Kërkoni Ofertë të Detajuar & Vlerësim Falas</Link>
+            <Link to="/sq/kontakt" className="btn btn-primary-large">Merr Ofertë Falas</Link>
           </div>
           <p className="cta-footer">
             Të gjitha certifikatat tona janë të akredituara ndërkombëtarisht, duke garantuar njohje globale.

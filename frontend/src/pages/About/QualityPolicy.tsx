@@ -36,6 +36,7 @@ const QualityPolicy: FC = () => {
             {/* Intro */}
             <section className="section section-white">
                 <div className="container">
+                    <h2 className="visually-hidden">Our Quality Commitment</h2>
                     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                         <p className="about-text centered" style={{ fontSize: '1.15rem', lineHeight: '1.9', marginBottom: '1.5rem' }}>
                             {t('qualityPolicy.commitment.description1')}
@@ -57,7 +58,7 @@ const QualityPolicy: FC = () => {
                             <div className="quality-zigzag-content">
                                 <div className="quality-number">1</div>
                                 <div className="quality-zigzag-text">
-                                    <h4>{t('qualityPolicy.objectives.compliance.title')}</h4>
+                                    <h3>{t('qualityPolicy.objectives.compliance.title')}</h3>
                                     <p>
                                         {t('qualityPolicy.objectives.compliance.description')}
                                     </p>
@@ -75,7 +76,7 @@ const QualityPolicy: FC = () => {
                             <div className="quality-zigzag-content">
                                 <div className="quality-number">2</div>
                                 <div className="quality-zigzag-text">
-                                    <h4>{t('qualityPolicy.objectives.competence.title')}</h4>
+                                    <h3>{t('qualityPolicy.objectives.competence.title')}</h3>
                                     <p>
                                         {t('qualityPolicy.objectives.competence.description')}
                                     </p>
@@ -87,7 +88,7 @@ const QualityPolicy: FC = () => {
                             <div className="quality-zigzag-content">
                                 <div className="quality-number">3</div>
                                 <div className="quality-zigzag-text">
-                                    <h4>{t('qualityPolicy.objectives.satisfaction.title')}</h4>
+                                    <h3>{t('qualityPolicy.objectives.satisfaction.title')}</h3>
                                     <p>
                                         {t('qualityPolicy.objectives.satisfaction.description')}
                                     </p>
@@ -105,7 +106,7 @@ const QualityPolicy: FC = () => {
                             <div className="quality-zigzag-content">
                                 <div className="quality-number">4</div>
                                 <div className="quality-zigzag-text">
-                                    <h4>{t('qualityPolicy.objectives.impartiality.title')}</h4>
+                                    <h3>{t('qualityPolicy.objectives.impartiality.title')}</h3>
                                     <p>
                                         {t('qualityPolicy.objectives.impartiality.description')}
                                     </p>

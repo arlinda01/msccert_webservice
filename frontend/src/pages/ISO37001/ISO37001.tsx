@@ -84,19 +84,19 @@ const ISO37001: FC = () => {
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('iso37001.industryFocus.publicSector.title')}</h4>
+              <h3>{t('iso37001.industryFocus.publicSector.title')}</h3>
               <p>{t('iso37001.industryFocus.publicSector.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('iso37001.industryFocus.construction.title')}</h4>
+              <h3>{t('iso37001.industryFocus.construction.title')}</h3>
               <p>{t('iso37001.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('iso37001.industryFocus.healthcare.title')}</h4>
+              <h3>{t('iso37001.industryFocus.healthcare.title')}</h3>
               <p>{t('iso37001.industryFocus.healthcare.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('iso37001.industryFocus.finance.title')}</h4>
+              <h3>{t('iso37001.industryFocus.finance.title')}</h3>
               <p>{t('iso37001.industryFocus.finance.description')}</p>
             </div>
           </div>
@@ -139,23 +139,23 @@ const ISO37001: FC = () => {
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>{t('iso37001.process.step1')}</h4>
+              <h3>{t('iso37001.process.step1')}</h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>{t('iso37001.process.step2')}<br /><span className="process-detail">{t('iso37001.process.step2Detail')}</span></h4>
+              <h3>{t('iso37001.process.step2')}<br /><span className="process-detail">{t('iso37001.process.step2Detail')}</span></h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>{t('iso37001.process.step3')}</h4>
+              <h3>{t('iso37001.process.step3')}</h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>{t('iso37001.process.step4')}<br /><span className="process-detail">{t('iso37001.process.step4Detail')}</span></h4>
+              <h3>{t('iso37001.process.step4')}<br /><span className="process-detail">{t('iso37001.process.step4Detail')}</span></h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>{t('iso37001.process.step5')}<br /><span className="process-detail">{t('iso37001.process.step5Detail')}</span></h4>
+              <h3>{t('iso37001.process.step5')}<br /><span className="process-detail">{t('iso37001.process.step5Detail')}</span></h3>
             </div>
           </div>
         </div>

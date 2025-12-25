@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
 
@@ -9,13 +10,18 @@ const CEMarking: FC = () => {
 
   return (
     <div className="iso-page">
+      <Helmet>
+        <title>{t('ceMarking.meta.title')}</title>
+        <meta name="description" content={t('ceMarking.meta.description')} />
+        <meta name="keywords" content={t('ceMarking.meta.keywords')} />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>CE Marking: Demonstrate Product Compliance for the EU Market</h1>
+          <h1>{t('ceMarking.hero.title')}</h1>
           <p className="iso-subtitle">
-            CE Marking is a mandatory conformity mark that enables products to be legally sold in the European Economic Area (EEA).
-            By affixing the CE mark, the manufacturer declares that the product complies with all applicable EU safety, health, and environmental protection requirements outlined in relevant directives and regulations.
+            {t('ceMarking.hero.subtitle')}
           </p>
           <Link
             to={routes.quoteForm[currentLang].replace(':isoCode', 'ce-marking')}
@@ -29,18 +35,18 @@ const CEMarking: FC = () => {
       {/* What is CE Marking */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Is CE Marking?</h2>
+          <h2 className="section-title">{t('ceMarking.whatIs.title')}</h2>
           <p className="iso-text">
-            CE (Conformité Européenne) Marking is a legal declaration by the manufacturer that a product meets the essential requirements of all applicable EU legislation. It is not a quality mark but a regulatory compliance requirement.
+            {t('ceMarking.whatIs.description1')}
           </p>
           <p className="iso-text">
-            CE Marking allows for the free movement of products within the EU and EEA and demonstrates that a product has undergone appropriate conformity assessment procedures.
+            {t('ceMarking.whatIs.description2')}
           </p>
 
           <div className="iso-role-box">
-            <h3>Our Role as a Certification Partner</h3>
+            <h3>{t('ceMarking.whatIs.roleBox.title')}</h3>
             <p>
-              <strong>MSC Certifications</strong> conducts assessments and audits as part of the CE conformity route, depending on the applicable directive (e.g., Machinery Directive, Medical Device Regulation).
+              {t('ceMarking.whatIs.roleBox.description')}
             </p>
           </div>
         </div>
@@ -49,28 +55,28 @@ const CEMarking: FC = () => {
       {/* Key Benefits */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Benefits of CE Marking for Manufacturers</h2>
+          <h2 className="section-title">{t('ceMarking.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Legal Access to EU/EEA Markets</h3>
+              <h3>{t('ceMarking.benefits.benefit1.title')}</h3>
               <p>
-                CE Marking is mandatory for many regulated products. Without it, legal sale or distribution within the EU/EEA is not permitted.
+                {t('ceMarking.benefits.benefit1.description')}
               </p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Confidence from Consumers and Authorities</h3>
+              <h3>{t('ceMarking.benefits.benefit2.title')}</h3>
               <p>
-                The CE mark assures buyers and regulators that the product meets essential safety and performance criteria.
+                {t('ceMarking.benefits.benefit2.description')}
               </p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Simplified Audits Through Harmonized Standards</h3>
+              <h3>{t('ceMarking.benefits.benefit3.title')}</h3>
               <p>
-                Products compliant with harmonized European standards benefit from easier conformity assessments and market surveillance audits.
+                {t('ceMarking.benefits.benefit3.description')}
               </p>
             </div>
           </div>
@@ -80,35 +86,35 @@ const CEMarking: FC = () => {
       {/* Industries Requiring CE Marking */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Industries Requiring CE Marking</h2>
+          <h2 className="section-title">{t('ceMarking.industries.title')}</h2>
           <p className="section-intro">
-            CE Marking applies to a broad range of products sold in the EU. Common industries include:
+            {t('ceMarking.industries.subtitle')}
           </p>
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>Electrical and Electronic Equipment</h4>
-              <p>LVD, EMC, RoHS compliance</p>
+              <h3>{t('ceMarking.industries.electrical.title')}</h3>
+              <p>{t('ceMarking.industries.electrical.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Machinery</h4>
-              <p>Safety of moving parts, automation, and control systems</p>
+              <h3>{t('ceMarking.industries.machinery.title')}</h3>
+              <p>{t('ceMarking.industries.machinery.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Toys</h4>
-              <p>Mechanical and chemical safety per Toy Safety Directive</p>
+              <h3>{t('ceMarking.industries.toys.title')}</h3>
+              <p>{t('ceMarking.industries.toys.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Medical Devices</h4>
-              <p>MDR compliance with clinical and post-market data</p>
+              <h3>{t('ceMarking.industries.medical.title')}</h3>
+              <p>{t('ceMarking.industries.medical.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Construction Products</h4>
-              <p>CE under the Construction Products Regulation (CPR)</p>
+              <h3>{t('ceMarking.industries.construction.title')}</h3>
+              <p>{t('ceMarking.industries.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>Personal Protective Equipment (PPE)</h4>
-              <p>Risk categorization and testing</p>
+              <h3>{t('ceMarking.industries.ppe.title')}</h3>
+              <p>{t('ceMarking.industries.ppe.description')}</p>
             </div>
           </div>
         </div>
@@ -117,40 +123,40 @@ const CEMarking: FC = () => {
       {/* Steps to Achieve CE Marking */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Steps to Achieve CE Marking</h2>
+          <h2 className="section-title">{t('ceMarking.process.title')}</h2>
           <p className="section-intro">
-            Follow this structured process to ensure your products meet EU compliance requirements
+            {t('ceMarking.process.subtitle')}
           </p>
 
           <div className="ce-steps-grid">
             <div className="ce-step-card">
               <div className="ce-step-number">1</div>
-              <h3>Identify Applicable EU Directives</h3>
-              <p>Confirm product-specific essential requirements and regulations</p>
+              <h3>{t('ceMarking.process.step1.title')}</h3>
+              <p>{t('ceMarking.process.step1.description')}</p>
             </div>
 
             <div className="ce-step-card">
               <div className="ce-step-number">2</div>
-              <h3>Select Conformity Assessment</h3>
-              <p>Determine the appropriate route based on your product category and risk classification</p>
+              <h3>{t('ceMarking.process.step2.title')}</h3>
+              <p>{t('ceMarking.process.step2.description')}</p>
             </div>
 
             <div className="ce-step-card">
               <div className="ce-step-number">3</div>
-              <h3>Compile Technical Documentation</h3>
-              <p>Prepare comprehensive technical files demonstrating compliance with essential requirements</p>
+              <h3>{t('ceMarking.process.step3.title')}</h3>
+              <p>{t('ceMarking.process.step3.description')}</p>
             </div>
 
             <div className="ce-step-card">
               <div className="ce-step-number">4</div>
-              <h3>Affix the CE Mark</h3>
-              <p>Once conformity is verified, affix the CE mark to your product</p>
+              <h3>{t('ceMarking.process.step4.title')}</h3>
+              <p>{t('ceMarking.process.step4.description')}</p>
             </div>
 
             <div className="ce-step-card">
               <div className="ce-step-number">5</div>
-              <h3>Issue EU Declaration</h3>
-              <p>Prepare and sign the declaration stating compliance with all applicable directives</p>
+              <h3>{t('ceMarking.process.step5.title')}</h3>
+              <p>{t('ceMarking.process.step5.description')}</p>
             </div>
           </div>
         </div>
@@ -159,12 +165,12 @@ const CEMarking: FC = () => {
       {/* CTA Section */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Ensure Your Products Meet Legal Entry Requirements</h2>
+          <h2>{t('ceMarking.cta.title')}</h2>
           <p>
-            Build trust across the EU market with proper CE Marking certification. Start your compliance journey with MSC Certifications today.
+            {t('ceMarking.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('ceMarking.cta.button')}</Link>
           </div>
         </div>
       </section>

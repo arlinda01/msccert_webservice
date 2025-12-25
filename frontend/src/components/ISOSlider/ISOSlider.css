@@ -126,7 +126,7 @@
     0 0 95px rgba(42, 186, 212, 0.1);
 }
 
-.iso-swiper .swiper-slide .certification-card:hover h4,
+.iso-swiper .swiper-slide .certification-card:hover h3,
 .iso-swiper .swiper-slide .certification-card:hover p,
 .iso-swiper .swiper-slide .certification-card:hover .benefits-list li {
   color: #ffffff;
@@ -162,7 +162,7 @@
   color: #ffffff;
 }
 
-.iso-swiper .certification-card h4 {
+.iso-swiper .certification-card h3 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #01434f;
@@ -331,7 +331,7 @@
     height: 24px;
   }
 
-  .iso-swiper .certification-card h4 {
+  .iso-swiper .certification-card h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
   }
@@ -388,7 +388,7 @@
     height: 20px;
   }
 
-  .iso-swiper .certification-card h4 {
+  .iso-swiper .certification-card h3 {
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
   }

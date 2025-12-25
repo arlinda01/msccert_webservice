@@ -150,23 +150,23 @@ const ProfessionalCard: FC = () => {
           <h2 className="section-title">{t('professionalCard.industries.title')}</h2>
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.construction.title')}</h4>
+              <h3>{t('professionalCard.industries.construction.title')}</h3>
               <p>{t('professionalCard.industries.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.manufacturing.title')}</h4>
+              <h3>{t('professionalCard.industries.manufacturing.title')}</h3>
               <p>{t('professionalCard.industries.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.energy.title')}</h4>
+              <h3>{t('professionalCard.industries.energy.title')}</h3>
               <p>{t('professionalCard.industries.energy.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.transport.title')}</h4>
+              <h3>{t('professionalCard.industries.transport.title')}</h3>
               <p>{t('professionalCard.industries.transport.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('professionalCard.industries.horeca.title')}</h4>
+              <h3>{t('professionalCard.industries.horeca.title')}</h3>
               <p>{t('professionalCard.industries.horeca.description')}</p>
             </div>
           </div>

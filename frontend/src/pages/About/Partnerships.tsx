@@ -54,7 +54,7 @@ const Partnerships: FC = () => {
                             <div className="partnership-icon">
                                 <FaIndustry />
                             </div>
-                            <h4>Industry Associations</h4>
+                            <h3>Industry Associations</h3>
                             <p>
                                 We cooperate with industry associations that promote best practices, technical
                                 innovation, and continuous improvement.
@@ -65,7 +65,7 @@ const Partnerships: FC = () => {
                             <div className="partnership-icon">
                                 <FaGraduationCap />
                             </div>
-                            <h4>Training Providers</h4>
+                            <h3>Training Providers</h3>
                             <p>
                                 Delivering professional education and capacity-building aligned with ISO frameworks.
                             </p>
@@ -75,7 +75,7 @@ const Partnerships: FC = () => {
                             <div className="partnership-icon">
                                 <FaLandmark />
                             </div>
-                            <h4>Regulatory and Accreditation Bodies</h4>
+                            <h3>Regulatory and Accreditation Bodies</h3>
                             <p>
                                 Ensuring compliance, transparency, and global recognition.
                             </p>
@@ -85,7 +85,7 @@ const Partnerships: FC = () => {
                             <div className="partnership-icon">
                                 <FaMicroscope />
                             </div>
-                            <h4>Technical Experts and Laboratories</h4>
+                            <h3>Technical Experts and Laboratories</h3>
                             <p>
                                 Supporting product testing, validation, and conformity assessments.
                             </p>

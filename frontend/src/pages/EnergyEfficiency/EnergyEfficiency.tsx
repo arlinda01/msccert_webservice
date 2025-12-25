@@ -110,27 +110,27 @@ const EnergyEfficiency: FC = () => {
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.manufacturing.title')}</h4>
+              <h3>{t('energyEfficiency.whoBenefits.manufacturing.title')}</h3>
               <p>{t('energyEfficiency.whoBenefits.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.commercial.title')}</h4>
+              <h3>{t('energyEfficiency.whoBenefits.commercial.title')}</h3>
               <p>{t('energyEfficiency.whoBenefits.commercial.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.horeca.title')}</h4>
+              <h3>{t('energyEfficiency.whoBenefits.horeca.title')}</h3>
               <p>{t('energyEfficiency.whoBenefits.horeca.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.retail.title')}</h4>
+              <h3>{t('energyEfficiency.whoBenefits.retail.title')}</h3>
               <p>{t('energyEfficiency.whoBenefits.retail.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.datacenters.title')}</h4>
+              <h3>{t('energyEfficiency.whoBenefits.datacenters.title')}</h3>
               <p>{t('energyEfficiency.whoBenefits.datacenters.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('energyEfficiency.whoBenefits.utilities.title')}</h4>
+              <h3>{t('energyEfficiency.whoBenefits.utilities.title')}</h3>
               <p>{t('energyEfficiency.whoBenefits.utilities.description')}</p>
             </div>
           </div>

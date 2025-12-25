@@ -26,7 +26,7 @@ const Footer: FC = () => {
 
           {/* Quick Links */}
           <div className="footer-section">
-            <h4>{t('footer.quickLinks')}</h4>
+            <h3>{t('footer.quickLinks')}</h3>
             <ul className="footer-links">
               <li><Link to="/about-us/">{t('nav.aboutUs')}</Link></li>
               <li><Link to="/services">{t('nav.ourServices')}</Link></li>
@@ -37,7 +37,7 @@ const Footer: FC = () => {
 
           {/* Services */}
           <div className="footer-section">
-            <h4>{t('footer.services')}</h4>
+            <h3>{t('footer.services')}</h3>
             <ul className="footer-links">
               <li><Link to="/services/iso">{t('nav.isoCertifications')}</Link></li>
               <li><Link to="/services/ce-marking">{t('nav.ceMarking')}</Link></li>
@@ -49,7 +49,7 @@ const Footer: FC = () => {
 
           {/* Contact Info */}
           <div className="footer-section">
-            <h4>{t('nav.contactUs')}</h4>
+            <h3>{t('nav.contactUs')}</h3>
             <ul className="footer-contact">
               <li>
                 <span className="contact-label">Email:</span>

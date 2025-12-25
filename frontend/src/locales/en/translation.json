@@ -56,7 +56,7 @@
     "requestFreeConsultation": "Request Free Consultation",
     "getFreeAssessment": "Get Free Online Assessment",
     "viewAllServices": "View All Services",
-    "requestQuote": "Request a Detailed Quote & Free Assessment",
+    "requestQuote": "Get a Free Quote",
     "contactUs": "Contact Us",
     "getIsoQuote": "Get a {{isoCode}} Quote"
   },
@@ -1651,6 +1651,9 @@
     "title": "Quote Request",
     "step": "Step",
     "of": "of",
+    "progress": {
+      "step": "Step"
+    },
     "steps": {
       "contact": "Contact Info",
       "assessment": "Assessment",
@@ -1677,13 +1680,47 @@
       "responseSummary": "Response Summary",
       "summaryNote": "Your responses will be reviewed by our experts.",
       "questionsAnswered": "questions answered",
-      "noAnswers": "No questions answered yet"
+      "noAnswers": "No questions answered yet",
+      "responses": "Your Responses"
     },
     "success": {
       "title": "Thank You!",
       "message": "Your quote request has been submitted successfully.",
       "note": "Our team will review your submission and get back to you within 1-2 business days.",
-      "goHome": "Go to Home"
+      "goHome": "Go to Home",
+      "backHome": "Back to Home"
+    },
+    "loading": "Loading form...",
+    "submitting": "Submitting...",
+    "submit": "Submit Request",
+    "errors": {
+      "loadFailed": "Failed to load the form. Please try again.",
+      "submitFailed": "Failed to submit your request. Please try again."
+    }
+  },
+  "generalQuote": {
+    "meta": {
+      "title": "Get a Quote | MSC CERTIFICATIONS",
+      "description": "Request a personalized quote for ISO certification. Select your preferred standard and fill out the assessment form."
+    },
+    "hero": {
+      "title": "Get a Personalized Quote",
+      "subtitle": "Select the certification you're interested in, fill out the assessment, and receive a customized quote from our team."
+    },
+    "steps": {
+      "selectIso": "Select Certification"
+    },
+    "selectIso": {
+      "title": "Which Certification Are You Interested In?",
+      "description": "Select the ISO standard or certification you would like to get a quote for. We'll then ask you relevant questions to provide an accurate assessment."
+    },
+    "contactInfo": {
+      "message": "Message (Optional)",
+      "messagePlaceholder": "Tell us about your specific needs, questions, or any additional information..."
+    },
+    "review": {
+      "selectedIso": "Selected Certification",
+      "certification": "Certification"
     }
   },
   "blog": {
@@ -2118,6 +2155,98 @@
       "description": "Partner with MSC CERTIFICATIONS for a professional evaluation that drives efficiency and confidence.",
       "button": "Start Your Equipment Evaluation Today",
       "footer": "Independent evaluation for informed decisions."
+    }
+  },
+  "ceMarking": {
+    "meta": {
+      "title": "CE Marking Certification | MSC CERTIFICATIONS",
+      "description": "Achieve CE Marking compliance for the EU market with MSC Certifications. Demonstrate product safety, access EU/EEA markets, and build consumer trust. Start your assessment today.",
+      "keywords": "CE Marking, CE certification, EU compliance, product conformity, EU directives, CE mark, European market access, MSC Certifications"
+    },
+    "hero": {
+      "title": "CE Marking: Demonstrate Product Compliance for the EU Market",
+      "subtitle": "CE Marking is a mandatory conformity mark that enables products to be legally sold in the European Economic Area (EEA). By affixing the CE mark, the manufacturer declares that the product complies with all applicable EU safety, health, and environmental protection requirements outlined in relevant directives and regulations."
+    },
+    "whatIs": {
+      "title": "What Is CE Marking?",
+      "description1": "CE (Conformité Européenne) Marking is a legal declaration by the manufacturer that a product meets the essential requirements of all applicable EU legislation. It is not a quality mark but a regulatory compliance requirement.",
+      "description2": "CE Marking allows for the free movement of products within the EU and EEA and demonstrates that a product has undergone appropriate conformity assessment procedures.",
+      "roleBox": {
+        "title": "Our Role as a Certification Partner",
+        "description": "MSC Certifications conducts assessments and audits as part of the CE conformity route, depending on the applicable directive (e.g., Machinery Directive, Medical Device Regulation)."
+      }
+    },
+    "benefits": {
+      "title": "Benefits of CE Marking for Manufacturers",
+      "benefit1": {
+        "title": "Legal Access to EU/EEA Markets",
+        "description": "CE Marking is mandatory for many regulated products. Without it, legal sale or distribution within the EU/EEA is not permitted."
+      },
+      "benefit2": {
+        "title": "Confidence from Consumers and Authorities",
+        "description": "The CE mark assures buyers and regulators that the product meets essential safety and performance criteria."
+      },
+      "benefit3": {
+        "title": "Simplified Audits Through Harmonized Standards",
+        "description": "Products compliant with harmonized European standards benefit from easier conformity assessments and market surveillance audits."
+      }
+    },
+    "industries": {
+      "title": "Industries Requiring CE Marking",
+      "subtitle": "CE Marking applies to a broad range of products sold in the EU. Common industries include:",
+      "electrical": {
+        "title": "Electrical and Electronic Equipment",
+        "description": "LVD, EMC, RoHS compliance"
+      },
+      "machinery": {
+        "title": "Machinery",
+        "description": "Safety of moving parts, automation, and control systems"
+      },
+      "toys": {
+        "title": "Toys",
+        "description": "Mechanical and chemical safety per Toy Safety Directive"
+      },
+      "medical": {
+        "title": "Medical Devices",
+        "description": "MDR compliance with clinical and post-market data"
+      },
+      "construction": {
+        "title": "Construction Products",
+        "description": "CE under the Construction Products Regulation (CPR)"
+      },
+      "ppe": {
+        "title": "Personal Protective Equipment (PPE)",
+        "description": "Risk categorization and testing"
+      }
+    },
+    "process": {
+      "title": "Steps to Achieve CE Marking",
+      "subtitle": "Follow this structured process to ensure your products meet EU compliance requirements",
+      "step1": {
+        "title": "Identify Applicable EU Directives",
+        "description": "Confirm product-specific essential requirements and regulations"
+      },
+      "step2": {
+        "title": "Select Conformity Assessment",
+        "description": "Determine the appropriate route based on your product category and risk classification"
+      },
+      "step3": {
+        "title": "Compile Technical Documentation",
+        "description": "Prepare comprehensive technical files demonstrating compliance with essential requirements"
+      },
+      "step4": {
+        "title": "Affix the CE Mark",
+        "description": "Once conformity is verified, affix the CE mark to your product"
+      },
+      "step5": {
+        "title": "Issue EU Declaration",
+        "description": "Prepare and sign the declaration stating compliance with all applicable directives"
+      }
+    },
+    "cta": {
+      "title": "Ensure Your Products Meet Legal Entry Requirements",
+      "description": "Build trust across the EU market with proper CE Marking certification. Start your compliance journey with MSC Certifications today.",
+      "button": "Contact Us Today"
     }
   }
 }

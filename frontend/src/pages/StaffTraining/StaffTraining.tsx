@@ -98,27 +98,27 @@ const StaffTraining: FC = () => {
           </p>
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('staffTraining.industries.manufacturing.title')}</h4>
+              <h3>{t('staffTraining.industries.manufacturing.title')}</h3>
               <p>{t('staffTraining.industries.manufacturing.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('staffTraining.industries.construction.title')}</h4>
+              <h3>{t('staffTraining.industries.construction.title')}</h3>
               <p>{t('staffTraining.industries.construction.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('staffTraining.industries.transport.title')}</h4>
+              <h3>{t('staffTraining.industries.transport.title')}</h3>
               <p>{t('staffTraining.industries.transport.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('staffTraining.industries.horeca.title')}</h4>
+              <h3>{t('staffTraining.industries.horeca.title')}</h3>
               <p>{t('staffTraining.industries.horeca.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('staffTraining.industries.services.title')}</h4>
+              <h3>{t('staffTraining.industries.services.title')}</h3>
               <p>{t('staffTraining.industries.services.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('staffTraining.industries.public.title')}</h4>
+              <h3>{t('staffTraining.industries.public.title')}</h3>
               <p>{t('staffTraining.industries.public.description')}</p>
             </div>
           </div>

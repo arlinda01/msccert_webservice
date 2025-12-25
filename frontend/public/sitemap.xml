@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://msc-certifications.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ABOUT US -->
+  <url>
+    <loc>https://msc-certifications.com/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/rreth-nesh/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/chi-siamo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/rreth-nesh/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/chi-siamo/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- MISSION & VISION -->
+  <url>
+    <loc>https://msc-certifications.com/about-us/mission-vision/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/about-us/mission-vision/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/rreth-nesh/misioni-vizioni/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/chi-siamo/missione-visione/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/rreth-nesh/misioni-vizioni/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/chi-siamo/missione-visione/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- QUALITY POLICY -->
+  <url>
+    <loc>https://msc-certifications.com/about-us/quality-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/about-us/quality-policy/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/rreth-nesh/politika-cilesise/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/chi-siamo/politica-qualita/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/rreth-nesh/politika-cilesise/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/chi-siamo/politica-qualita/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CODE OF ETHICS -->
+  <url>
+    <loc>https://msc-certifications.com/about-us/code-of-ethics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/about-us/code-of-ethics/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/rreth-nesh/kodi-etikes/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/chi-siamo/codice-etico/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/rreth-nesh/kodi-etikes/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/chi-siamo/codice-etico/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ACCREDITATION -->
+  <url>
+    <loc>https://msc-certifications.com/about-us/accreditation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/about-us/accreditation/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/rreth-nesh/akreditimi/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/chi-siamo/accreditamento/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/rreth-nesh/akreditimi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/chi-siamo/accreditamento/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://msc-certifications.com/about-us/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/about-us/faq/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/rreth-nesh/pyetje-te-shpeshta/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/chi-siamo/domande-frequenti/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/rreth-nesh/pyetje-te-shpeshta/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/chi-siamo/domande-frequenti/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ISO SERVICES MAIN -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 9001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-9001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-9001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-9001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-9001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-9001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-9001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 14001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-14001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-14001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-14001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-14001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-14001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-14001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 22301 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-22301/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-22301/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-22301/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-22301/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-22301/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-22301/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 27001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-27001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-27001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-27001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-27001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-27001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-27001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 37001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-37001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-37001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-37001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-37001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-37001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-37001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 39001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-39001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-39001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-39001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-39001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-39001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-39001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 45001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-45001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-45001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-45001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-45001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-45001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-45001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ISO 50001 -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/iso-50001/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/iso-50001/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/iso-50001/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/iso-50001/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/iso-50001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/iso-50001/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- HACCP -->
+  <url>
+    <loc>https://msc-certifications.com/services/iso/haccp/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/iso/haccp/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/iso/haccp/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/iso/haccp/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/iso/haccp/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/iso/haccp/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ADDITIONAL SERVICES MAIN -->
+  <url>
+    <loc>https://msc-certifications.com/services/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- CE MARKING -->
+  <url>
+    <loc>https://msc-certifications.com/services/ce-marking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/ce-marking/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/markimi-ce/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/marcatura-ce/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/markimi-ce/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/marcatura-ce/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ENERGY EFFICIENCY -->
+  <url>
+    <loc>https://msc-certifications.com/services/additional/energy-efficiency/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/additional/energy-efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/shtese/efikasiteti-energjetik/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/aggiuntivi/efficienza-energetica/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/shtese/efikasiteti-energjetik/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/aggiuntivi/efficienza-energetica/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- STAFF TRAINING -->
+  <url>
+    <loc>https://msc-certifications.com/services/additional/staff-training/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/additional/staff-training/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/shtese/trajnimi-stafit/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/aggiuntivi/formazione-personale/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/shtese/trajnimi-stafit/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/aggiuntivi/formazione-personale/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- PROFESSIONAL CARD (IDCP) -->
+  <url>
+    <loc>https://msc-certifications.com/services/additional/professional-card/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/additional/professional-card/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/shtese/karta-profesionale/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/aggiuntivi/tessera-professionale/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/shtese/karta-profesionale/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/aggiuntivi/tessera-professionale/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- TECHNOLOGICAL CARD -->
+  <url>
+    <loc>https://msc-certifications.com/services/additional/technological-card/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/additional/technological-card/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/shtese/karta-teknologjike/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/aggiuntivi/tessera-tecnologica/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/shtese/karta-teknologjike/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/aggiuntivi/tessera-tecnologica/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- EQUIPMENT EVALUATION -->
+  <url>
+    <loc>https://msc-certifications.com/services/additional/equipment-evaluation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/services/additional/equipment-evaluation/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/sherbimet/shtese/vleresimi-pajisjeve/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/servizi/aggiuntivi/valutazione-attrezzature/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/sherbimet/shtese/vleresimi-pajisjeve/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/servizi/aggiuntivi/valutazione-attrezzature/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BLOG -->
+  <url>
+    <loc>https://msc-certifications.com/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/blog/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/blog/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CERTIFICATES -->
+  <url>
+    <loc>https://msc-certifications.com/certificates/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/certificates/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/certifikatat/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/certificati/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/certifikatat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/certificati/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- VERIFY CERTIFICATE -->
+  <url>
+    <loc>https://msc-certifications.com/verify/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/verify/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/verifiko/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/verifica/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/verifiko/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/verifica/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://msc-certifications.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/contatti/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/kontakt/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/contatti/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- TERMS & CONDITIONS -->
+  <url>
+    <loc>https://msc-certifications.com/terms-conditions/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://msc-certifications.com/terms-conditions/"/>
+    <xhtml:link rel="alternate" hreflang="sq" href="https://msc-certifications.com/sq/kushtet-pergjithshme/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://msc-certifications.com/it/termini-condizioni/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/sq/kushtet-pergjithshme/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://msc-certifications.com/it/termini-condizioni/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

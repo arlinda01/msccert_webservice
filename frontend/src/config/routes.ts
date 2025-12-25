@@ -32,6 +32,7 @@ export type RouteKey =
   | 'certificates'
   | 'certificateVerify'
   | 'quoteForm'
+  | 'generalQuote'
   | 'blog'
   | 'blogPost';
 
@@ -187,6 +188,11 @@ export const routes: Record<RouteKey, Record<SupportedLanguage, string>> = {
     en: '/quote/:isoCode',
     sq: '/sq/kerkese-oferte/:isoCode',
     it: '/it/richiesta-preventivo/:isoCode'
+  },
+  generalQuote: {
+    en: '/get-quote',
+    sq: '/sq/merr-oferte',
+    it: '/it/richiedi-preventivo'
   },
   blog: {
     en: '/blog',

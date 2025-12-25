@@ -56,7 +56,7 @@
     "requestFreeConsultation": "Kërkoni Konsultim Falas",
     "getFreeAssessment": "Merrni Vlerësim Online Falas",
     "viewAllServices": "Shih të Gjitha Shërbimet",
-    "requestQuote": "Kërkoni Ofertë të Detajuar & Vlerësim Falas",
+    "requestQuote": "Merr Ofertë Falas",
     "contactUs": "Na Kontaktoni",
     "getIsoQuote": "Kërkoni Ofertë {{isoCode}}"
   },
@@ -1650,6 +1650,9 @@
     "title": "Kërkesë Oferte",
     "step": "Hapi",
     "of": "nga",
+    "progress": {
+      "step": "Hapi"
+    },
     "steps": {
       "contact": "Kontakt",
       "assessment": "Vlerësim",
@@ -1676,13 +1679,47 @@
       "responseSummary": "Përmbledhja e Përgjigjeve",
       "summaryNote": "Përgjigjet tuaja do të rishikohen nga ekspertët tanë.",
       "questionsAnswered": "pyetje të përgjigura",
-      "noAnswers": "Nuk ka pyetje të përgjigura ende"
+      "noAnswers": "Nuk ka pyetje të përgjigura ende",
+      "responses": "Përgjigjet Tuaja"
     },
     "success": {
       "title": "Faleminderit!",
       "message": "Kërkesa juaj për ofertë u dërgua me sukses.",
       "note": "Ekipi ynë do të rishikojë dorëzimin tuaj dhe do t'ju kthehet brenda 1-2 ditëve pune.",
-      "goHome": "Shko në Kryefaqe"
+      "goHome": "Shko në Kryefaqe",
+      "backHome": "Kthehu në Kryefaqe"
+    },
+    "loading": "Duke ngarkuar formularin...",
+    "submitting": "Duke dërguar...",
+    "submit": "Dërgo Kërkesën",
+    "errors": {
+      "loadFailed": "Nuk u arrit të ngarkohej formulari. Provo përsëri.",
+      "submitFailed": "Nuk u arrit të dërgohej kërkesa. Provo përsëri."
+    }
+  },
+  "generalQuote": {
+    "meta": {
+      "title": "Merr Ofertë | MSC CERTIFICATIONS",
+      "description": "Kërko një ofertë të personalizuar për certifikimin ISO. Zgjidh standardin e preferuar dhe plotëso formularin e vlerësimit."
+    },
+    "hero": {
+      "title": "Merr një Ofertë të Personalizuar",
+      "subtitle": "Zgjidh certifikimin që të intereson, plotëso vlerësimin dhe merr një ofertë të personalizuar nga ekipi ynë."
+    },
+    "steps": {
+      "selectIso": "Zgjidh Certifikimin"
+    },
+    "selectIso": {
+      "title": "Cili Certifikim Të Intereson?",
+      "description": "Zgjidh standardin ISO ose certifikimin për të cilin dëshiron një ofertë. Do të të bëjmë pyetje përkatëse për të të ofruar një vlerësim të saktë."
+    },
+    "contactInfo": {
+      "message": "Mesazh (Opsional)",
+      "messagePlaceholder": "Na trego për nevojat e tua specifike, pyetje ose informacione shtesë..."
+    },
+    "review": {
+      "selectedIso": "Certifikimi i Zgjedhur",
+      "certification": "Certifikimi"
     }
   },
   "blog": {
@@ -2207,6 +2244,98 @@
       "title": "Filloni Programin Tuaj të Efiçencës së Energjisë Sot",
       "description": "Reduktoni kostot, ulni emetimet dhe ndërtoni qëndrueshmëri ndaj luhatjeve të çmimeve të energjisë.",
       "button": "Kërkoni një Vlerësim të Efiçencës së Energjisë"
+    }
+  },
+  "ceMarking": {
+    "meta": {
+      "title": "Markimi CE | MSC CERTIFICATIONS",
+      "description": "Arrini përputhshmërinë e Markimit CE për tregun e BE-së me MSC Certifications. Demonstroni sigurinë e produktit, aksesoni tregjet BE/EEA dhe ndërtoni besimin e konsumatorëve. Filloni vlerësimin tuaj sot.",
+      "keywords": "Markim CE, certifikim CE, përputhshmëri BE, konformitet produkti, direktiva BE, shenja CE, akses tregu europian, MSC Certifications"
+    },
+    "hero": {
+      "title": "Markimi CE: Demonstroni Përputhshmërinë e Produktit për Tregun e BE-së",
+      "subtitle": "Markimi CE është një shenjë konformiteti e detyrueshme që mundëson shitjen ligjore të produkteve në Zonën Ekonomike Europiane (EEA). Duke vendosur shenjën CE, prodhuesi deklaron që produkti përputhet me të gjitha kërkesat e sigurisë, shëndetit dhe mbrojtjes mjedisore të BE-së të parashikuara në direktivat dhe rregulloret përkatëse."
+    },
+    "whatIs": {
+      "title": "Çfarë është Markimi CE?",
+      "description1": "Markimi CE (Conformité Européenne) është një deklaratë ligjore e prodhuesit që produkti përmbush kërkesat thelbësore të të gjithë legjislacionit të zbatueshëm të BE-së. Nuk është një shenjë cilësie, por një kërkesë e përputhshmërisë rregullatore.",
+      "description2": "Markimi CE mundëson lëvizjen e lirë të produkteve brenda BE-së dhe EEA-së dhe demonstron që produkti ka kaluar procedurat e duhura të vlerësimit të konformitetit.",
+      "roleBox": {
+        "title": "Roli Ynë si Partner Certifikimi",
+        "description": "MSC Certifications kryen vlerësime dhe auditime si pjesë e rrugës së konformitetit CE, në varësi të direktivës së zbatueshme (p.sh. Direktiva e Makinerive, Rregullorja e Pajisjeve Mjekësore)."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet e Markimit CE për Prodhuesit",
+      "benefit1": {
+        "title": "Akses Ligjor në Tregjet BE/EEA",
+        "description": "Markimi CE është i detyrueshëm për shumë produkte të rregulluara. Pa të, shitja ose shpërndarja ligjore brenda BE/EEA nuk lejohet."
+      },
+      "benefit2": {
+        "title": "Besim nga Konsumatorët dhe Autoritetet",
+        "description": "Shenja CE siguron blerësit dhe rregullatorët që produkti përmbush kriteret thelbësore të sigurisë dhe performancës."
+      },
+      "benefit3": {
+        "title": "Auditime të Thjeshtuara përmes Standardeve të Harmonizuara",
+        "description": "Produktet në përputhje me standardet europiane të harmonizuara përfitojnë nga vlerësime konformiteti dhe auditime mbikëqyrjeje tregu më të lehta."
+      }
+    },
+    "industries": {
+      "title": "Industritë që Kërkojnë Markim CE",
+      "subtitle": "Markimi CE aplikohet për një gamë të gjerë produktesh të shitura në BE. Industritë e zakonshme përfshijnë:",
+      "electrical": {
+        "title": "Pajisje Elektrike dhe Elektronike",
+        "description": "Përputhshmëri LVD, EMC, RoHS"
+      },
+      "machinery": {
+        "title": "Makineri",
+        "description": "Siguria e pjesëve lëvizëse, automatizimi dhe sistemet e kontrollit"
+      },
+      "toys": {
+        "title": "Lodra",
+        "description": "Siguria mekanike dhe kimike sipas Direktivës së Sigurisë së Lodrave"
+      },
+      "medical": {
+        "title": "Pajisje Mjekësore",
+        "description": "Përputhshmëri MDR me të dhëna klinike dhe pas-tregtare"
+      },
+      "construction": {
+        "title": "Produkte Ndërtimi",
+        "description": "CE sipas Rregullores së Produkteve të Ndërtimit (CPR)"
+      },
+      "ppe": {
+        "title": "Pajisje Mbrojtëse Personale (PPE)",
+        "description": "Kategorizimi i rrezikut dhe testimi"
+      }
+    },
+    "process": {
+      "title": "Hapat për të Arritur Markimin CE",
+      "subtitle": "Ndiqni këtë proces të strukturuar për të siguruar që produktet tuaja përmbushin kërkesat e përputhshmërisë së BE-së",
+      "step1": {
+        "title": "Identifikoni Direktivat e Zbatueshme të BE-së",
+        "description": "Konfirmoni kërkesat thelbësore specifike të produktit dhe rregulloret"
+      },
+      "step2": {
+        "title": "Zgjidhni Vlerësimin e Konformitetit",
+        "description": "Përcaktoni rrugën e duhur bazuar në kategorinë e produktit dhe klasifikimin e rrezikut"
+      },
+      "step3": {
+        "title": "Përgatitni Dokumentacionin Teknik",
+        "description": "Përgatitni dosje teknike gjithëpërfshirëse që demonstrojnë përputhshmërinë me kërkesat thelbësore"
+      },
+      "step4": {
+        "title": "Vendosni Shenjën CE",
+        "description": "Pasi konformiteti të verifikohet, vendosni shenjën CE në produktin tuaj"
+      },
+      "step5": {
+        "title": "Lëshoni Deklaratën e BE-së",
+        "description": "Përgatitni dhe nënshkruani deklaratën që vërteton përputhshmërinë me të gjitha direktivat e zbatueshme"
+      }
+    },
+    "cta": {
+      "title": "Sigurohuni që Produktet Tuaja Përmbushin Kërkesat Ligjore",
+      "description": "Ndërtoni besim në tregun e BE-së me certifikim të duhur të Markimit CE. Filloni sot udhëtimin tuaj të përputhshmërisë me MSC Certifications.",
+      "button": "Na Kontaktoni Sot"
     }
   }
 }

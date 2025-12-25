@@ -15,8 +15,8 @@ const StaticCertificate: FC = () => {
         {/* Header */}
         <div className="detail-header">
           <div>
-            <h2>CERT-2025-A1B2C3D4</h2>
-            <h3>KOMMMPANII</h3>
+            <h1>CERT-2025-A1B2C3D4</h1>
+            <h2>KOMMMPANII</h2>
           </div>
           <div style={{ marginTop: '1rem' }}>
             <span className="status-badge status-expired">
@@ -27,7 +27,7 @@ const StaticCertificate: FC = () => {
 
         {/* Basic Information */}
         <div className="detail-section">
-          <h4>Certificate Information</h4>
+          <h3>Certificate Information</h3>
           <div className="detail-grid">
             <div className="detail-item">
               <span className="detail-label">Standard</span>
@@ -48,7 +48,7 @@ const StaticCertificate: FC = () => {
 
         {/* Dates */}
         <div className="detail-section">
-          <h4>Important Dates</h4>
+          <h3>Important Dates</h3>
           <div className="detail-grid">
             <div className="detail-item">
               <span className="detail-label">First Issue Date</span>
@@ -65,7 +65,7 @@ const StaticCertificate: FC = () => {
 
         {/* Sites */}
         <div className="detail-section">
-          <h4>Certificate Sites (2)</h4>
+          <h3>Certificate Sites (2)</h3>
           <div className="sites-list">
             <div className="site-card">
               <div className="site-header">

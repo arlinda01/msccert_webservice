@@ -35,6 +35,7 @@ const Accreditation: FC = () => {
             {/* Intro */}
             <section className="section section-white">
                 <div className="container">
+                    <h2 className="visually-hidden">About Our Accreditation</h2>
                     <div className="accreditation-intro">
                         <p className="about-text centered">
                             {t('accreditation.intro.description1')}
@@ -59,7 +60,7 @@ const Accreditation: FC = () => {
                             <div className="accreditation-icon">
                                 <FaGlobeAmericas />
                             </div>
-                            <h4>{t('accreditation.importance.globalRecognition.title')}</h4>
+                            <h3>{t('accreditation.importance.globalRecognition.title')}</h3>
                             <p>
                                 {t('accreditation.importance.globalRecognition.description')}
                             </p>
@@ -69,7 +70,7 @@ const Accreditation: FC = () => {
                             <div className="accreditation-icon">
                                 <FaHandsHelping />
                             </div>
-                            <h4>{t('accreditation.importance.trustIntegrity.title')}</h4>
+                            <h3>{t('accreditation.importance.trustIntegrity.title')}</h3>
                             <p>
                                 {t('accreditation.importance.trustIntegrity.description')}
                             </p>
@@ -79,7 +80,7 @@ const Accreditation: FC = () => {
                             <div className="accreditation-icon">
                                 <FaBalanceScale />
                             </div>
-                            <h4>{t('accreditation.importance.guaranteedImpartiality.title')}</h4>
+                            <h3>{t('accreditation.importance.guaranteedImpartiality.title')}</h3>
                             <p>
                                 {t('accreditation.importance.guaranteedImpartiality.description')}
                             </p>
@@ -89,7 +90,7 @@ const Accreditation: FC = () => {
                             <div className="accreditation-icon">
                                 <FaChartLine />
                             </div>
-                            <h4>{t('accreditation.importance.continuousImprovement.title')}</h4>
+                            <h3>{t('accreditation.importance.continuousImprovement.title')}</h3>
                             <p>
                                 {t('accreditation.importance.continuousImprovement.description')}
                             </p>

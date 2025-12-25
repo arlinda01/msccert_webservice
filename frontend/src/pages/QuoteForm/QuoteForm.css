@@ -427,6 +427,103 @@
   }
 }
 
+/* ISO Selection Grid */
+.quote-form-page .iso-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quote-form-page .iso-option-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quote-form-page .iso-option-card:hover {
+  border-color: #01434f;
+  background: #f8fafa;
+}
+
+.quote-form-page .iso-option-card.selected {
+  border-color: #01434f;
+  background: #e8f4f6;
+  box-shadow: 0 0 0 3px rgba(1, 67, 79, 0.1);
+}
+
+.quote-form-page .iso-option-card input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #01434f;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.quote-form-page .iso-option-label {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.quote-form-page .loading-indicator {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}
+
+/* Review Answers Section */
+.quote-form-page .review-answers-section {
+  margin-bottom: 1.5rem;
+}
+
+.quote-form-page .review-answers-section:last-child {
+  margin-bottom: 0;
+}
+
+.quote-form-page .review-answers-section h4 {
+  font-size: 1rem;
+  color: #01434f;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.quote-form-page .review-answer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.quote-form-page .review-answer-item:last-child {
+  border-bottom: none;
+}
+
+.quote-form-page .review-answer-item .question {
+  flex: 1;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.quote-form-page .review-answer-item .answer {
+  font-weight: 600;
+  color: #01434f;
+  font-size: 0.9rem;
+  text-align: right;
+  min-width: 100px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .quote-form-page .quote-hero {

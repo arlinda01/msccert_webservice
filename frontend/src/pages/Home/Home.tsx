@@ -220,7 +220,7 @@ const Home: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaBolt({}) as any}
               </div>
-              <h4>{t('home.specializedSolutions.energyEfficiency.title')}</h4>
+              <h3>{t('home.specializedSolutions.energyEfficiency.title')}</h3>
               <p>
                 {t('home.specializedSolutions.energyEfficiency.description')}
               </p>
@@ -230,7 +230,7 @@ const Home: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaGraduationCap({}) as any}
               </div>
-              <h4>{t('home.specializedSolutions.staffTraining.title')}</h4>
+              <h3>{t('home.specializedSolutions.staffTraining.title')}</h3>
               <p>
                 {t('home.specializedSolutions.staffTraining.description')}
               </p>
@@ -240,7 +240,7 @@ const Home: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaIdCard({}) as any}
               </div>
-              <h4>{t('home.specializedSolutions.professionalCards.title')}</h4>
+              <h3>{t('home.specializedSolutions.professionalCards.title')}</h3>
               <p>
                 {t('home.specializedSolutions.professionalCards.description')}
               </p>
@@ -250,7 +250,7 @@ const Home: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaMicrochip({}) as any}
               </div>
-              <h4>{t('home.specializedSolutions.techAssessment.title')}</h4>
+              <h3>{t('home.specializedSolutions.techAssessment.title')}</h3>
               <p>
                 {t('home.specializedSolutions.techAssessment.description')}
               </p>
@@ -272,35 +272,35 @@ const Home: FC = () => {
               <div className="card-icon">
                 {FaIcons.FaBuilding({}) as any}
               </div>
-              <h4>{t('home.industryFocus.construction.title')}</h4>
+              <h3>{t('home.industryFocus.construction.title')}</h3>
               <p>{t('home.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaUtensils({}) as any}
               </div>
-              <h4>{t('home.industryFocus.foodHoreca.title')}</h4>
+              <h3>{t('home.industryFocus.foodHoreca.title')}</h3>
               <p>{t('home.industryFocus.foodHoreca.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaMicrochip({}) as any}
               </div>
-              <h4>{t('home.industryFocus.itTelecom.title')}</h4>
+              <h3>{t('home.industryFocus.itTelecom.title')}</h3>
               <p>{t('home.industryFocus.itTelecom.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaIndustry({}) as any}
               </div>
-              <h4>{t('home.industryFocus.manufacturingEnergy.title')}</h4>
+              <h3>{t('home.industryFocus.manufacturingEnergy.title')}</h3>
               <p>{t('home.industryFocus.manufacturingEnergy.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
                 {FaIcons.FaAward({}) as any}
               </div>
-              <h4>{t('home.industryFocus.publicSector.title')}</h4>
+              <h3>{t('home.industryFocus.publicSector.title')}</h3>
               <p>{t('home.industryFocus.publicSector.description')}</p>
             </div>
           </div>
@@ -322,7 +322,7 @@ const Home: FC = () => {
                 onKeyPress={(e) => e.key === 'Enter' && toggleFAQ(index)}
               >
                 <div className="faq-question">
-                  <h4>{faq.question}</h4>
+                  <h3>{faq.question}</h3>
                   <svg
                     className="faq-icon"
                     width="24"

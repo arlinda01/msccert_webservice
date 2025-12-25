@@ -84,19 +84,19 @@ const HACCP: FC = () => {
 
           <div className="industry-focus-list">
             <div className="industry-focus-item">
-              <h4>{t('haccp.industryFocus.production.title')}</h4>
+              <h3>{t('haccp.industryFocus.production.title')}</h3>
               <p>{t('haccp.industryFocus.production.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('haccp.industryFocus.horeca.title')}</h4>
+              <h3>{t('haccp.industryFocus.horeca.title')}</h3>
               <p>{t('haccp.industryFocus.horeca.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('haccp.industryFocus.retail.title')}</h4>
+              <h3>{t('haccp.industryFocus.retail.title')}</h3>
               <p>{t('haccp.industryFocus.retail.description')}</p>
             </div>
             <div className="industry-focus-item">
-              <h4>{t('haccp.industryFocus.logistics.title')}</h4>
+              <h3>{t('haccp.industryFocus.logistics.title')}</h3>
               <p>{t('haccp.industryFocus.logistics.description')}</p>
             </div>
           </div>
@@ -139,23 +139,23 @@ const HACCP: FC = () => {
           <div className="process-timeline">
             <div className="process-step">
               <div className="process-step-number">1</div>
-              <h4>{t('haccp.process.step1')}</h4>
+              <h3>{t('haccp.process.step1')}</h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">2</div>
-              <h4>{t('haccp.process.step2')}<br /><span className="process-detail">{t('haccp.process.step2Detail')}</span></h4>
+              <h3>{t('haccp.process.step2')}<br /><span className="process-detail">{t('haccp.process.step2Detail')}</span></h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">3</div>
-              <h4>{t('haccp.process.step3')}</h4>
+              <h3>{t('haccp.process.step3')}</h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">4</div>
-              <h4>{t('haccp.process.step4')}<br /><span className="process-detail">{t('haccp.process.step4Detail')}</span></h4>
+              <h3>{t('haccp.process.step4')}<br /><span className="process-detail">{t('haccp.process.step4Detail')}</span></h3>
             </div>
             <div className="process-step">
               <div className="process-step-number">5</div>
-              <h4>{t('haccp.process.step5')}<br /><span className="process-detail">{t('haccp.process.step5Detail')}</span></h4>
+              <h3>{t('haccp.process.step5')}<br /><span className="process-detail">{t('haccp.process.step5Detail')}</span></h3>
             </div>
           </div>
         </div>

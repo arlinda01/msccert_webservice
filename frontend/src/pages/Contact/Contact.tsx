@@ -111,8 +111,8 @@ const Contact: FC = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="service">{t('contact.form.subject')}</label>
-                  <select id="service" name="service">
+                  <label htmlFor="service">{t('contact.form.subject')} *</label>
+                  <select id="service" name="service" required>
                     <option value="">{t('contact.form.subjectPlaceholder')}</option>
                     <option value="certification">{t('contact.form.subjects.certification')}</option>
                     <option value="ce-marking">{t('contact.form.subjects.ceMarking')}</option>
