@@ -125,25 +125,25 @@ const HomeSq: FC = () => {
           <div className="hero-features">
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaShieldAlt({}) as any}
+                <FaIcons.FaShieldAlt />
               </div>
               <span>Akreditim Global</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaUsers({}) as any}
+                <FaIcons.FaUsers />
               </div>
               <span>Auditorë Ekspertë</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaCheckCircle({}) as any}
+                <FaIcons.FaCheckCircle />
               </div>
               <span>Certifikim i Shpejtë</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaGlobeAmericas({}) as any}
+                <FaIcons.FaGlobeAmericas />
               </div>
               <span>Mbështetje Lokale</span>
             </div>
@@ -162,7 +162,7 @@ const HomeSq: FC = () => {
           <div className="features-grid">
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaUsers({}) as any}
+                <FaIcons.FaUsers />
               </div>
               <h3>Auditues të Specializuar</h3>
               <p>
@@ -171,7 +171,7 @@ const HomeSq: FC = () => {
             </div>
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaGlobeAmericas({}) as any}
+                <FaIcons.FaGlobeAmericas />
               </div>
               <h3>Ekspertizë Rregullatore</h3>
               <p>
@@ -180,7 +180,7 @@ const HomeSq: FC = () => {
             </div>
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaChartLine({}) as any}
+                <FaIcons.FaChartLine />
               </div>
               <h3>Audit që Sjell Vlerë</h3>
               <p>
@@ -214,7 +214,7 @@ const HomeSq: FC = () => {
           <div className="solutions-grid">
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaBolt({}) as any}
+                <FaIcons.FaBolt />
               </div>
               <h3>Programet e Efiçencës Energjetike</h3>
               <p>
@@ -224,7 +224,7 @@ const HomeSq: FC = () => {
             </div>
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaGraduationCap({}) as any}
+                <FaIcons.FaGraduationCap />
               </div>
               <h3>Trajnime Profesionale</h3>
               <p>
@@ -234,7 +234,7 @@ const HomeSq: FC = () => {
             </div>
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaIdCard({}) as any}
+                <FaIcons.FaIdCard />
               </div>
               <h3>Kartat Profesionale</h3>
               <p>
@@ -244,7 +244,7 @@ const HomeSq: FC = () => {
             </div>
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaMicrochip({}) as any}
+                <FaIcons.FaMicrochip />
               </div>
               <h3>Vlerësim Teknik & Pajisjesh</h3>
               <p>
@@ -266,35 +266,35 @@ const HomeSq: FC = () => {
           <div className="industries-list">
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaBuilding({}) as any}
+                <FaIcons.FaBuilding />
               </div>
               <h3>Ndërtim & Infrastrukturë</h3>
               <p>Menaxhim risku, siguri produktesh dhe kontroll cilësie për projekte kapitale.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaUtensils({}) as any}
+                <FaIcons.FaUtensils />
               </div>
               <h3>Ushqim & HORECA</h3>
               <p>Siguri zinxhiri furnizimi nga prodhimi deri te konsumatori.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaMicrochip({}) as any}
+                <FaIcons.FaMicrochip />
               </div>
               <h3>IT & Telekomunikacion</h3>
               <p>Mbrojtje të dhënash dhe vazhdimësi shërbimi në ekonominë digjitale.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaIndustry({}) as any}
+                <FaIcons.FaIndustry />
               </div>
               <h3>Prodhim & Energjitikë</h3>
               <p>Optimizim procesesh, ulje kostosh dhe përputhshmëri me rregulloret mjedisore.</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaAward({}) as any}
+                <FaIcons.FaAward />
               </div>
               <h3>Sektor Publik & Tendera</h3>
               <p>Demonstrim i cilësisë, integritetit dhe sigurisë (ISO 9001, ISO 37001).</p>

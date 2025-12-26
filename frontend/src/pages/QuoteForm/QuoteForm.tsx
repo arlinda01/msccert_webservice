@@ -249,6 +249,56 @@ const QuoteForm: FC = () => {
     );
   }
 
+  // If no ISO code provided, show selection page
+  if (!isoCode) {
+    const availableServices = [
+      { code: 'iso-9001', name: 'ISO 9001:2015', desc: t('nav.iso9001') },
+      { code: 'iso-14001', name: 'ISO 14001:2015', desc: t('nav.iso14001') },
+      { code: 'iso-22301', name: 'ISO 22301:2019', desc: t('nav.iso22301') },
+      { code: 'iso-27001', name: 'ISO 27001:2022', desc: t('nav.iso27001') },
+      { code: 'iso-37001', name: 'ISO 37001:2016', desc: t('nav.iso37001') },
+      { code: 'iso-39001', name: 'ISO 39001:2012', desc: t('nav.iso39001') },
+      { code: 'iso-45001', name: 'ISO 45001:2018', desc: t('nav.iso45001') },
+      { code: 'iso-50001', name: 'ISO 50001:2018', desc: t('nav.iso50001') },
+      { code: 'haccp', name: 'HACCP', desc: t('nav.haccp') },
+      { code: 'ce-marking', name: 'CE Marking', desc: t('nav.ceMarking') },
+    ];
+
+    return (
+      <div className="quote-form-page">
+        <Helmet>
+          <title>{t('quoteForm.title')} | MSC Certifications</title>
+        </Helmet>
+
+        <section className="quote-hero">
+          <div className="container">
+            <h1>{t('quoteForm.selectService.title') || 'Select a Service'}</h1>
+            <p className="quote-subtitle">
+              {t('quoteForm.selectService.subtitle') || 'Choose the certification or service you are interested in:'}
+            </p>
+          </div>
+        </section>
+
+        <section className="section section-white">
+          <div className="container">
+            <div className="service-selection-grid">
+              {availableServices.map((service) => (
+                <Link
+                  key={service.code}
+                  to={routes.quoteForm[currentLang].replace(':isoCode', service.code)}
+                  className="service-selection-card"
+                >
+                  <h3>{service.name}</h3>
+                  <p>{service.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
   if (error || !form) {
     return (
       <div className="quote-form-page">

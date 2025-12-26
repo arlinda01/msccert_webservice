@@ -1478,7 +1478,9 @@
     },
     "hero": {
       "title": "Energy Efficiency Services",
-      "subtitle": "Measure. Analyze. Save. Our energy efficiency services help organizations identify savings opportunities, optimize energy consumption and reduce operational costs."
+      "subtitle": "Measure. Analyze. Save. Our energy efficiency services help organizations identify savings opportunities, optimize energy consumption and reduce operational costs.",
+      "cta1": "Request a Quote",
+      "cta2": "Start Your Free Assessment"
     },
     "whatIs": {
       "title": "What is an Energy Efficiency Audit?",
@@ -1502,18 +1504,10 @@
     "whyChooseUs": {
       "title": "Why Choose MSC Certifications?",
       "subtitle": "We offer complete energy efficiency services with a practical and results-oriented approach:",
-      "expertise": {
-        "title": "Energy Expertise",
-        "description": "Our team has experience in energy management and optimization in various sectors."
-      },
-      "practical": {
-        "title": "Practical Approach",
-        "description": "We focus on realistic recommendations that yield measurable results."
-      },
-      "comprehensive": {
-        "title": "Comprehensive Analysis",
-        "description": "We analyze all energy aspects, from buildings to industrial processes."
-      }
+      "point1": "We combine technical expertise with energy management and environmental standards knowledge",
+      "point2": "We focus on affordable measures with measurable return on investment (ROI)",
+      "point3": "We speak the language of business: translating kWh into concrete costs and real savings",
+      "point4": "We provide continuous support in implementing and monitoring proposed measures"
     },
     "benefits": {
       "title": "Key Benefits",
@@ -1537,25 +1531,25 @@
         "title": "Manufacturing",
         "description": "Industries with high energy consumption and intensive production processes."
       },
-      "buildings": {
+      "commercial": {
         "title": "Commercial Buildings",
-        "description": "Offices, shopping centers, hotels, hospitals."
+        "description": "Offices, shopping centers, and commercial complexes with significant energy usage."
       },
-      "publicSector": {
-        "title": "Public Sector",
-        "description": "Schools, hospitals, government buildings."
+      "horeca": {
+        "title": "Hotels & Restaurants",
+        "description": "Hospitality businesses including hotels, restaurants, and catering services."
       },
       "retail": {
         "title": "Retail",
         "description": "Stores and retail chains with significant energy costs."
       },
-      "logistics": {
-        "title": "Logistics",
-        "description": "Warehouses and distribution centers with significant energy requirements."
+      "datacenters": {
+        "title": "Data Centers",
+        "description": "Facilities with high-density computing and cooling requirements."
       },
-      "agriculture": {
-        "title": "Agriculture",
-        "description": "Farms and processing facilities with energy equipment."
+      "utilities": {
+        "title": "Utilities & Energy",
+        "description": "Energy providers and utility companies seeking operational efficiency."
       }
     },
     "partner": {
@@ -1649,6 +1643,10 @@
   },
   "quoteForm": {
     "title": "Quote Request",
+    "selectService": {
+      "title": "Select a Service",
+      "subtitle": "Choose the certification or service you are interested in:"
+    },
     "step": "Step",
     "of": "of",
     "progress": {

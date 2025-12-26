@@ -427,6 +427,46 @@
   }
 }
 
+/* Service Selection Grid */
+.quote-form-page .service-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.quote-form-page .service-selection-card {
+  display: block;
+  padding: 1.5rem;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.quote-form-page .service-selection-card:hover {
+  border-color: #01434f;
+  background: #f8fafa;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(1, 67, 79, 0.15);
+}
+
+.quote-form-page .service-selection-card h3 {
+  font-size: 1.1rem;
+  color: #01434f;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.quote-form-page .service-selection-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
 /* ISO Selection Grid */
 .quote-form-page .iso-selection-grid {
   display: grid;

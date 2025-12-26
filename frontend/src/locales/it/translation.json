@@ -69,6 +69,11 @@
       "title": "Chi è MSC CERTIFICATIONS - Organismo Accreditato DPA",
       "description": "MSC CERTIFICATIONS è accreditato da DPA, membro IAF ed EA. Dal 2024 offriamo certificazioni ISO, marcatura CE e audit di conformità riconosciuti a livello globale."
     },
+    "missionVision": {
+      "title": "Missione e Visione | MSC CERTIFICATIONS",
+      "description": "La missione di MSC CERTIFICATIONS è aiutare le aziende a raggiungere l'eccellenza internazionale attraverso certificazioni accreditate, trasparenza e professionalità.",
+      "keywords": "MSC Certifications missione, MSC Certifications visione, valori aziendali, certificazione ISO, accreditamento internazionale, organismo di certificazione, integrità professionale, formazione ISO, miglioramento continuo"
+    },
     "codeOfEthics": {
       "title": "Codice Etico | MSC CERTIFICATIONS",
       "description": "Il Codice Etico di MSC CERTIFICATIONS definisce principi di integrità, imparzialità e riservatezza che guidano ogni audit, decisione di certificazione e rapporto con i clienti."
@@ -257,46 +262,62 @@
       "note": "Tutte le nostre certificazioni sono supportate da organismi accreditati, garantendo riconoscimento globale."
     }
   },
+  "missionVision": {
+    "title": "Missione e Visione",
+    "mission": {
+      "title": "La Nostra Missione",
+      "description1": "In MSC Certifications, la nostra missione è aiutare le organizzazioni a raggiungere l'eccellenza internazionale attraverso servizi accreditati di certificazione, ispezione e formazione.",
+      "description2": "Siamo impegnati a fornire valutazioni obiettive, trasparenti e tecnicamente competenti che rafforzano la fiducia dei clienti, migliorano le prestazioni e promuovono lo sviluppo sostenibile.",
+      "description3": "Crediamo che la certificazione sia più di un documento. È uno strumento per il miglioramento continuo e il riconoscimento globale."
+    },
+    "vision": {
+      "title": "La Nostra Visione",
+      "description": "Essere riconosciuti come un organismo leader di certificazione e conformità nella regione, noto per credibilità, professionalità e fiducia dei clienti. Il nostro obiettivo è stabilire il punto di riferimento per integrità, competenza e certificazione a valore aggiunto, aiutando aziende di tutte le dimensioni a competere con fiducia nei mercati internazionali."
+    },
+    "coreValues": {
+      "title": "I Nostri Valori Fondamentali",
+      "integrity": {
+        "title": "Integrità",
+        "description": "Agire in modo imparziale ed etico in ogni audit e decisione."
+      },
+      "competence": {
+        "title": "Competenza",
+        "description": "Utilizzare esperti qualificati specializzati in ogni settore industriale."
+      },
+      "transparency": {
+        "title": "Trasparenza",
+        "description": "Comunicare in modo chiaro e onesto con i clienti."
+      },
+      "continuousImprovement": {
+        "title": "Miglioramento Continuo",
+        "description": "Adattarsi agli standard e alle migliori pratiche in evoluzione."
+      },
+      "clientFocus": {
+        "title": "Focus sul Cliente",
+        "description": "Fornire un servizio professionale e reattivo."
+      }
+    }
+  },
   "about": {
-    "hero": {
-      "title": "Chi è MSC CERTIFICATIONS",
-      "subtitle": "Il tuo partner affidabile per standard internazionali e conformità"
-    },
-    "intro": {
-      "paragraph1": "In un mercato dove qualità, sicurezza e conformità determinano il successo, MSC CERTIFICATIONS è il partner di fiducia per ottenere standard riconosciuti a livello globale.",
-      "paragraph2": "Dal 2024 operiamo come organismo di certificazione e valutazione accreditato dalla Direzione Generale di Accreditamento (DPA), l'autorità nazionale di accreditamento dell'Albania.",
-      "iafMember": "La DPA è membro a pieno titolo di:",
-      "iaf": "IAF – International Accreditation Forum",
-      "ea": "EA – European Accreditation",
-      "paragraph3": "Questo garantisce che tutti i certificati rilasciati da MSC CERTIFICATIONS siano riconosciuti e validi a livello internazionale."
-    },
-    "services": {
-      "title": "Offriamo un portafoglio completo di servizi in:",
-      "iso": "certificazione ISO",
-      "ce": "marcatura CE",
-      "technical": "valutazioni tecniche e ispezioni",
-      "energy": "servizi di efficienza energetica e formazione",
-      "conclusion": "Tutto svolto con professionalità, trasparenza e profonda conoscenza del contesto locale e internazionale."
-    },
+    "title": "CHI È MSC CERTIFICATIONS",
+    "subtitle": "Il tuo partner affidabile per standard internazionali e conformità",
+    "intro": "In un mercato dove qualità, sicurezza e conformità determinano il successo, MSC CERTIFICATIONS è il partner di fiducia per ottenere standard riconosciuti a livello globale.",
+    "description1": "Dal 2024 operiamo come organismo di certificazione e valutazione accreditato dalla Direzione Generale di Accreditamento (DPA), l'autorità nazionale di accreditamento dell'Albania, membro a pieno titolo di IAF (International Accreditation Forum) e EA (European Accreditation).",
+    "description2": "Questo garantisce che tutti i certificati rilasciati da MSC CERTIFICATIONS siano riconosciuti e validi a livello internazionale, in conformità con gli standard globali di qualità, imparzialità e affidabilità.",
+    "description3": "Offriamo un portafoglio completo di servizi in certificazione ISO, marcatura CE e valutazioni tecniche, sempre con professionalità, trasparenza e profonda conoscenza del contesto locale.",
     "whoWeAre": {
       "title": "Chi Siamo",
-      "description": "MSC CERTIFICATIONS è un organismo accreditato specializzato in servizi di ispezione, audit e certificazione conformi agli standard internazionali.",
-      "mission": "La nostra missione è aiutare le organizzazioni a:",
-      "goals": {
-        "compliance": "soddisfare requisiti globali di conformità",
-        "efficiency": "migliorare l'efficienza operativa",
-        "competitiveness": "rafforzare la competitività",
-        "trust": "costruire fiducia verso clienti e partner"
-      },
-      "team": "Il nostro team è composto da auditor qualificati e specialisti tecnici che uniscono esperienza internazionale con una comprensione solida della realtà locale."
+      "description1": "MSC CERTIFICATIONS è un organismo accreditato specializzato in servizi di ispezione, audit e certificazione conformi agli standard internazionali.",
+      "description2": "La nostra missione è aiutare le organizzazioni a soddisfare requisiti globali di conformità, migliorare l'efficienza operativa e rafforzare la competitività nel mercato.",
+      "description3": "Il nostro team è composto da auditor qualificati e specialisti tecnici che uniscono esperienza internazionale con una comprensione solida della realtà locale."
     },
-    "values": {
+    "missionValues": {
       "title": "Missione e Valori",
       "integrity": {
         "title": "Integrità e Imparzialità",
         "description": "Ogni audit è condotto in modo oggettivo, equo e basato su evidenze."
       },
-      "competence": {
+      "expertise": {
         "title": "Competenza e Professionalità",
         "description": "I nostri auditor sono esperti nei settori che valutano."
       },
@@ -309,27 +330,16 @@
         "description": "Costruiamo relazioni durature basate su credibilità e chiarezza."
       }
     },
-    "ourServices": {
-      "title": "I Nostri Servizi",
-      "isoCertification": {
-        "title": "Certificazione ISO (Accreditata)",
-        "description": "Offriamo certificazione valida a livello globale per:",
-        "standards": ["ISO 9001 – Qualità", "ISO 14001 – Ambiente", "ISO 22000 – Sicurezza Alimentare", "ISO 27001 – Sicurezza delle Informazioni", "ISO 45001 – Salute e Sicurezza sul Lavoro", "ISO 22301 – Continuità Operativa", "ISO 37001 – Anti-Corruzione", "ISO 39001 – Sicurezza Stradale", "ISO 50001 – Energia", "HACCP", "Marcatura CE"]
-      },
-      "additionalServices": {
-        "title": "Servizi Aggiuntivi e Tecnici",
-        "services": ["Programmi di Efficienza Energetica", "Formazione del Personale", "Schede Professionali (Professional Cards)", "Valutazione di Linee Tecnologiche e Macchinari", "Schede Tecnologiche"]
-      }
-    },
     "whyChooseUs": {
       "title": "Perché Scegliere MSC CERTIFICATIONS",
-      "reasons": ["Auditor con competenze specifiche per settore", "Prezzi competitivi e trasparenti", "Processi di audit accreditati ed efficienti", "Certificati riconosciuti a livello internazionale"]
+      "reason1": "Auditor con competenze specifiche per settore",
+      "reason2": "Prezzi competitivi e trasparenti",
+      "reason3": "Processi di audit accreditati ed efficienti",
+      "reason4": "Certificati riconosciuti a livello internazionale"
     },
     "commitment": {
       "title": "Il Nostro Impegno",
-      "description": "Dal 2024, MSC CERTIFICATIONS aiuta le organizzazioni a operare con:",
-      "values": ["fiducia", "qualità", "integrità"],
-      "conclusion": "Trasformiamo standard complessi in risultati chiari, misurabili e apprezzati in tutto il mondo."
+      "description": "Dal 2024, MSC CERTIFICATIONS aiuta le organizzazioni a operare con fiducia, qualità e integrità, trasformando standard complessi in risultati chiari, misurabili e apprezzati in tutto il mondo."
     }
   },
   "codeOfEthics": {
@@ -1216,6 +1226,10 @@
   },
   "quoteForm": {
     "title": "Richiesta Preventivo",
+    "selectService": {
+      "title": "Seleziona un Servizio",
+      "subtitle": "Scegli la certificazione o il servizio che ti interessa:"
+    },
     "step": "Passo",
     "of": "di",
     "progress": {
@@ -1732,7 +1746,9 @@
     },
     "hero": {
       "title": "Efficienza Energetica: Riduci i Costi, le Emissioni e i Rischi Energetici",
-      "subtitle": "L'efficienza energetica non è più un'opzione — è un vero vantaggio competitivo. Il nostro Programma di Valutazione dell'Efficienza Energetica offre un approccio strutturato e basato sui dati per misurare, analizzare e ridurre i consumi energetici in edifici, processi e impianti produttivi. Obiettivo: ridurre i costi operativi, minimizzare l'impatto ambientale e aumentare la resilienza aziendale di fronte alla volatilità dei prezzi dell'energia."
+      "subtitle": "L'efficienza energetica non è più un'opzione — è un vero vantaggio competitivo. Il nostro Programma di Valutazione dell'Efficienza Energetica offre un approccio strutturato e basato sui dati per misurare, analizzare e ridurre i consumi energetici in edifici, processi e impianti produttivi. Obiettivo: ridurre i costi operativi, minimizzare l'impatto ambientale e aumentare la resilienza aziendale di fronte alla volatilità dei prezzi dell'energia.",
+      "cta1": "Richiedi un Preventivo per l'Audit Energetico",
+      "cta2": "Inizia la Tua Valutazione Energetica Gratuita"
     },
     "whatIs": {
       "title": "Che cos'è l'Efficienza Energetica?",
@@ -1756,18 +1772,10 @@
     "whyChooseUs": {
       "title": "Il tuo Partner per Prestazioni Energetiche Sostenibili",
       "subtitle": "In MSC CERTIFICATIONS uniamo competenze ingegneristiche con le migliori pratiche internazionali per offrire soluzioni energetiche concrete e misurabili.",
-      "expertise": {
-        "title": "Genera risparmi reali",
-        "description": "Risultati controllabili e misurabili per la tua organizzazione."
-      },
-      "practical": {
-        "title": "Supporta la conformità",
-        "description": "Normativa e volontaria, inclusa ISO 50001."
-      },
-      "comprehensive": {
-        "title": "Migliora la reputazione",
-        "description": "Ambientale dell'organizzazione verso stakeholder e mercato."
-      }
+      "point1": "Genera risparmi reali — risultati controllabili e misurabili per la tua organizzazione.",
+      "point2": "Supporta la conformità normativa e volontaria, inclusa ISO 50001.",
+      "point3": "Migliora la reputazione ambientale dell'organizzazione verso stakeholder e mercato.",
+      "point4": "Forniamo supporto continuo nell'implementazione e nel monitoraggio delle performance energetiche."
     },
     "benefits": {
       "title": "Perché Investire nell'Efficienza Energetica?",
@@ -1791,11 +1799,11 @@
         "title": "Impianti Manifatturieri e Industriali",
         "description": "Stabilimenti di produzione, linee di processo"
       },
-      "buildings": {
+      "commercial": {
         "title": "Edifici Commerciali e Uffici",
         "description": "Centri direzionali, complessi commerciali"
       },
-      "publicSector": {
+      "horeca": {
         "title": "Hotel, Ristoranti e Strutture HORECA",
         "description": "Hospitality e ristorazione"
       },
@@ -1803,11 +1811,11 @@
         "title": "Catene Retail e Centri Commerciali",
         "description": "Punti vendita, shopping center"
       },
-      "logistics": {
+      "datacenters": {
         "title": "Data Center e Strutture IT",
         "description": "Infrastrutture tecnologiche"
       },
-      "agriculture": {
+      "utilities": {
         "title": "Trasporti, Energia e Utility",
         "description": "Flotte, produzione e distribuzione energia"
       }

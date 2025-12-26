@@ -37,7 +37,7 @@ const EquipmentEvaluation: FC = () => {
       <section className="section section-white">
         <div className="container">
           <h2 className="section-title">{t('equipmentEvaluation.whatIs.title')}</h2>
-          <h3 style={{ fontSize: '1.5rem', color: '#01434f', marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.5rem', color: '#01434f', marginBottom: '1.5rem', textAlign: 'center' }}>
             {t('equipmentEvaluation.whatIs.subtitle')}
           </h3>
           <p className="iso-text">

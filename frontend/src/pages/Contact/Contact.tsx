@@ -1,9 +1,96 @@
-import { FC } from 'react';
+import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  subject: string;
+  message: string;
+}
+
+interface FormStatus {
+  submitting: boolean;
+  submitted: boolean;
+  success: boolean;
+  message: string;
+}
+
 const Contact: FC = () => {
   const { t } = useTranslation();
+
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+
+  const [status, setStatus] = useState<FormStatus>({
+    submitting: false,
+    submitted: false,
+    success: false,
+    message: ''
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus({ submitting: true, submitted: false, success: false, message: '' });
+
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const response = await fetch(`${apiUrl}/api/forms/contact/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus({
+          submitting: false,
+          submitted: true,
+          success: true,
+          message: t('contact.form.successMessage') || data.message
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setStatus({
+          submitting: false,
+          submitted: true,
+          success: false,
+          message: data.message || t('contact.form.errorMessage') || 'Failed to send message. Please try again.'
+        });
+      }
+    } catch {
+      setStatus({
+        submitting: false,
+        submitted: true,
+        success: false,
+        message: t('contact.form.errorMessage') || 'Failed to send message. Please try again or contact us directly.'
+      });
+    }
+  };
 
   return (
     <div className="contact-page">
@@ -89,30 +176,78 @@ const Contact: FC = () => {
 
             <div className="contact-form-section">
               <h2>{t('contact.form.title')}</h2>
-              <form className="contact-form">
+
+              {status.submitted && (
+                <div className={`form-message ${status.success ? 'form-message-success' : 'form-message-error'}`}>
+                  {status.message}
+                </div>
+              )}
+
+              <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="name">{t('contact.form.name')} *</label>
-                  <input type="text" id="name" name="name" placeholder={t('contact.form.namePlaceholder')} required />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder={t('contact.form.namePlaceholder')}
+                    required
+                    disabled={status.submitting}
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="email">{t('contact.form.email')} *</label>
-                  <input type="email" id="email" name="email" placeholder={t('contact.form.emailPlaceholder')} required />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder={t('contact.form.emailPlaceholder')}
+                    required
+                    disabled={status.submitting}
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="phone">{t('contact.form.phone')}</label>
-                  <input type="tel" id="phone" name="phone" placeholder={t('contact.form.phonePlaceholder')} />
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder={t('contact.form.phonePlaceholder')}
+                    disabled={status.submitting}
+                  />
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="company">{t('contact.form.company')}</label>
-                  <input type="text" id="company" name="company" placeholder={t('contact.form.companyPlaceholder')} />
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder={t('contact.form.companyPlaceholder')}
+                    disabled={status.submitting}
+                  />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="service">{t('contact.form.subject')} *</label>
-                  <select id="service" name="service" required>
+                  <label htmlFor="subject">{t('contact.form.subject')} *</label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                    disabled={status.submitting}
+                  >
                     <option value="">{t('contact.form.subjectPlaceholder')}</option>
                     <option value="certification">{t('contact.form.subjects.certification')}</option>
                     <option value="ce-marking">{t('contact.form.subjects.ceMarking')}</option>
@@ -124,10 +259,25 @@ const Contact: FC = () => {
 
                 <div className="form-group">
                   <label htmlFor="message">{t('contact.form.message')} *</label>
-                  <textarea id="message" name="message" rows={6} placeholder={t('contact.form.messagePlaceholder')} required></textarea>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder={t('contact.form.messagePlaceholder')}
+                    required
+                    disabled={status.submitting}
+                  ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary-large">{t('contact.form.submit')}</button>
+                <button
+                  type="submit"
+                  className="btn btn-primary-large"
+                  disabled={status.submitting}
+                >
+                  {status.submitting ? t('contact.form.submitting') || 'Sending...' : t('contact.form.submit')}
+                </button>
               </form>
             </div>
           </div>

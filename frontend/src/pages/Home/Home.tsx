@@ -129,25 +129,25 @@ const Home: FC = () => {
           <div className="hero-features">
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaShieldAlt({}) as any}
+                <FaIcons.FaShieldAlt />
               </div>
               <span>{t('home.heroFeatures.globallyAccredited')}</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaUsers({}) as any}
+                <FaIcons.FaUsers />
               </div>
               <span>{t('home.heroFeatures.expertAuditors')}</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaCheckCircle({}) as any}
+                <FaIcons.FaCheckCircle />
               </div>
               <span>{t('home.heroFeatures.fastCertification')}</span>
             </div>
             <div className="hero-feature-item">
               <div className="hero-feature-icon">
-                {FaIcons.FaGlobeAmericas({}) as any}
+                <FaIcons.FaGlobeAmericas />
               </div>
               <span>{t('home.heroFeatures.localSupport')}</span>
             </div>
@@ -179,7 +179,7 @@ const Home: FC = () => {
           <div className="features-grid">
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaUsers({}) as any}
+                <FaIcons.FaUsers />
               </div>
               <h3>{t('home.mscDifference.specializedAuditors.title')}</h3>
               <p>
@@ -188,7 +188,7 @@ const Home: FC = () => {
             </div>
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaGlobeAmericas({}) as any}
+                <FaIcons.FaGlobeAmericas />
               </div>
               <h3>{t('home.mscDifference.regulatoryExpertise.title')}</h3>
               <p>
@@ -197,7 +197,7 @@ const Home: FC = () => {
             </div>
             <div className="feature-card">
               <div className="card-icon">
-                {FaIcons.FaChartLine({}) as any}
+                <FaIcons.FaChartLine />
               </div>
               <h3>{t('home.mscDifference.valueAudit.title')}</h3>
               <p>
@@ -218,7 +218,7 @@ const Home: FC = () => {
           <div className="solutions-grid">
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaBolt({}) as any}
+                <FaIcons.FaBolt />
               </div>
               <h3>{t('home.specializedSolutions.energyEfficiency.title')}</h3>
               <p>
@@ -228,7 +228,7 @@ const Home: FC = () => {
             </div>
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaGraduationCap({}) as any}
+                <FaIcons.FaGraduationCap />
               </div>
               <h3>{t('home.specializedSolutions.staffTraining.title')}</h3>
               <p>
@@ -238,7 +238,7 @@ const Home: FC = () => {
             </div>
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaIdCard({}) as any}
+                <FaIcons.FaIdCard />
               </div>
               <h3>{t('home.specializedSolutions.professionalCards.title')}</h3>
               <p>
@@ -248,7 +248,7 @@ const Home: FC = () => {
             </div>
             <div className="solution-card">
               <div className="card-icon">
-                {FaIcons.FaMicrochip({}) as any}
+                <FaIcons.FaMicrochip />
               </div>
               <h3>{t('home.specializedSolutions.techAssessment.title')}</h3>
               <p>
@@ -270,35 +270,35 @@ const Home: FC = () => {
           <div className="industries-list">
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaBuilding({}) as any}
+                <FaIcons.FaBuilding />
               </div>
               <h3>{t('home.industryFocus.construction.title')}</h3>
               <p>{t('home.industryFocus.construction.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaUtensils({}) as any}
+                <FaIcons.FaUtensils />
               </div>
               <h3>{t('home.industryFocus.foodHoreca.title')}</h3>
               <p>{t('home.industryFocus.foodHoreca.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaMicrochip({}) as any}
+                <FaIcons.FaMicrochip />
               </div>
               <h3>{t('home.industryFocus.itTelecom.title')}</h3>
               <p>{t('home.industryFocus.itTelecom.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaIndustry({}) as any}
+                <FaIcons.FaIndustry />
               </div>
               <h3>{t('home.industryFocus.manufacturingEnergy.title')}</h3>
               <p>{t('home.industryFocus.manufacturingEnergy.description')}</p>
             </div>
             <div className="industry-item">
               <div className="card-icon">
-                {FaIcons.FaAward({}) as any}
+                <FaIcons.FaAward />
               </div>
               <h3>{t('home.industryFocus.publicSector.title')}</h3>
               <p>{t('home.industryFocus.publicSector.description')}</p>

@@ -20,4 +20,7 @@ urlpatterns = [
 
     # Public endpoints: /api/forms/public/...
     path('public/', include(public_router.urls)),
+
+    # Contact form endpoint: /api/forms/contact/
+    path('contact/', views.ContactFormView.as_view(), name='contact-form'),
 ]

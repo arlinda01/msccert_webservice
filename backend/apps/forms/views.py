@@ -3,6 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser, AllowAny
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
+from rest_framework.views import APIView
 from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models import Count, Prefetch
 from django.core.mail import send_mail
@@ -460,3 +461,125 @@ Please log in to the admin panel to review this submission.
             logger.info(f"Admin notification sent for submission {submission.submission_number}")
         except Exception as e:
             logger.error(f"Failed to send admin notification: {str(e)}")
+
+
+class ContactFormView(APIView):
+    """
+    Simple contact form submission endpoint.
+    No authentication required.
+    """
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        """
+        Submit a contact form message.
+        """
+        name = request.data.get('name', '').strip()
+        email = request.data.get('email', '').strip()
+        phone = request.data.get('phone', '').strip()
+        company = request.data.get('company', '').strip()
+        subject = request.data.get('subject', '').strip()
+        message = request.data.get('message', '').strip()
+
+        # Validate required fields
+        errors = {}
+        if not name:
+            errors['name'] = 'Name is required'
+        if not email:
+            errors['email'] = 'Email is required'
+        if not subject:
+            errors['subject'] = 'Subject is required'
+        if not message:
+            errors['message'] = 'Message is required'
+
+        if errors:
+            return Response({
+                'success': False,
+                'errors': errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        # Subject line mapping
+        subject_labels = {
+            'certification': 'ISO Certification Inquiry',
+            'ce-marking': 'CE Marking Inquiry',
+            'training': 'Training Inquiry',
+            'quote': 'Quote Request',
+            'other': 'General Inquiry'
+        }
+        subject_label = subject_labels.get(subject, subject)
+
+        try:
+            # Send email to admin
+            admin_subject = f"New Contact Form Submission: {subject_label}"
+            admin_message = f"""
+New contact form submission received:
+
+Subject: {subject_label}
+
+Contact Details:
+- Name: {name}
+- Email: {email}
+- Phone: {phone or 'N/A'}
+- Company: {company or 'N/A'}
+
+Message:
+{message}
+
+---
+This message was sent from the MSC Certifications website contact form.
+            """
+
+            admin_emails = getattr(settings, 'CONTACT_FORM_EMAILS', ['info@msc-certifications.com'])
+            if isinstance(admin_emails, str):
+                admin_emails = [admin_emails]
+
+            send_mail(
+                subject=admin_subject,
+                message=admin_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=admin_emails,
+                fail_silently=False
+            )
+
+            # Send confirmation to user
+            user_subject = "Thank you for contacting MSC Certifications"
+            user_message = f"""
+Dear {name},
+
+Thank you for contacting MSC Certifications. We have received your message regarding "{subject_label}".
+
+Our team will review your inquiry and get back to you within 1-2 business days.
+
+Your message:
+{message}
+
+Best regards,
+MSC Certifications Team
+
+---
+MSC Certifications
+Email: info@msc-certifications.com
+Phone: +355 67 206 3632
+            """
+
+            send_mail(
+                subject=user_subject,
+                message=user_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[email],
+                fail_silently=True
+            )
+
+            logger.info(f"Contact form submitted by {email}")
+
+            return Response({
+                'success': True,
+                'message': 'Your message has been sent successfully. We will get back to you soon.'
+            }, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            logger.error(f"Failed to send contact form email: {str(e)}")
+            return Response({
+                'success': False,
+                'message': 'Failed to send message. Please try again or contact us directly at info@msc-certifications.com'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
