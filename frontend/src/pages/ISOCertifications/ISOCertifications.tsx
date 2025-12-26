@@ -1,90 +1,131 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import * as FaIcons from 'react-icons/fa';
 import ISOSlider from '../../components/ISOSlider/ISOSlider';
+import { routes, SupportedLanguage } from '../../config/routes';
 
 const ISOCertifications: FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+
   const isoCards = [
     {
-      to: "/services/iso/iso-9001",
+      to: routes.iso9001[currentLang],
       icon: "FaAward" as const,
-      title: "ISO 9001 - Quality Management",
-      description: "The world's most recognized standard for quality management systems, ensuring consistent product and service delivery.",
-      benefits: ["Global Recognition", "Improved Efficiency", "Stronger Customer Loyalty"]
+      title: t('isoCertifications.cards.iso9001.title'),
+      description: t('isoCertifications.cards.iso9001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso9001.benefits.0'),
+        t('isoCertifications.cards.iso9001.benefits.1'),
+        t('isoCertifications.cards.iso9001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-14001",
+      to: routes.iso14001[currentLang],
       icon: "FaLeaf" as const,
-      title: "ISO 14001 - Environmental Management",
-      description: "Reduce environmental impact, improve sustainability, and demonstrate environmental responsibility.",
-      benefits: ["Reduce Environmental Impact", "Cost Savings", "Regulatory Compliance"]
+      title: t('isoCertifications.cards.iso14001.title'),
+      description: t('isoCertifications.cards.iso14001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso14001.benefits.0'),
+        t('isoCertifications.cards.iso14001.benefits.1'),
+        t('isoCertifications.cards.iso14001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-22301",
+      to: routes.iso22301[currentLang],
       icon: "FaShieldAlt" as const,
-      title: "ISO 22301 - Business Continuity",
-      description: "Prepare for disruptions and ensure business resilience in the face of unexpected events.",
-      benefits: ["Minimize Downtime", "Protect Revenue", "Maintain Critical Operations"]
+      title: t('isoCertifications.cards.iso22301.title'),
+      description: t('isoCertifications.cards.iso22301.description'),
+      benefits: [
+        t('isoCertifications.cards.iso22301.benefits.0'),
+        t('isoCertifications.cards.iso22301.benefits.1'),
+        t('isoCertifications.cards.iso22301.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-27001",
+      to: routes.iso27001[currentLang],
       icon: "FaLock" as const,
-      title: "ISO 27001 - Information Security",
-      description: "Protect sensitive information and demonstrate robust information security management.",
-      benefits: ["Data Protection", "GDPR Compliance", "Enhanced Cyber Security"]
+      title: t('isoCertifications.cards.iso27001.title'),
+      description: t('isoCertifications.cards.iso27001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso27001.benefits.0'),
+        t('isoCertifications.cards.iso27001.benefits.1'),
+        t('isoCertifications.cards.iso27001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-37001",
+      to: routes.iso37001[currentLang],
       icon: "FaCertificate" as const,
-      title: "ISO 37001 - Anti-Bribery Management",
-      description: "Implement controls to prevent, detect, and address bribery and corruption risks.",
-      benefits: ["Reduce Legal Risk", "Clean Reputation", "Tender Qualification"]
+      title: t('isoCertifications.cards.iso37001.title'),
+      description: t('isoCertifications.cards.iso37001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso37001.benefits.0'),
+        t('isoCertifications.cards.iso37001.benefits.1'),
+        t('isoCertifications.cards.iso37001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-39001",
+      to: routes.iso39001[currentLang],
       icon: "FaCar" as const,
-      title: "ISO 39001 - Road Traffic Safety",
-      description: "Reduce road traffic deaths and serious injuries related to your organization's operations.",
-      benefits: ["Reduce Fleet Accidents", "Lower Insurance Premiums", "Improve Driver Safety"]
+      title: t('isoCertifications.cards.iso39001.title'),
+      description: t('isoCertifications.cards.iso39001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso39001.benefits.0'),
+        t('isoCertifications.cards.iso39001.benefits.1'),
+        t('isoCertifications.cards.iso39001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-45001",
+      to: routes.iso45001[currentLang],
       icon: "FaHardHat" as const,
-      title: "ISO 45001 - Health & Safety at Work",
-      description: "Create safer workplaces, reduce workplace injuries, and improve employee well-being.",
-      benefits: ["Reduce Workplace Accidents", "Legal Compliance", "Lower Insurance Costs"]
+      title: t('isoCertifications.cards.iso45001.title'),
+      description: t('isoCertifications.cards.iso45001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso45001.benefits.0'),
+        t('isoCertifications.cards.iso45001.benefits.1'),
+        t('isoCertifications.cards.iso45001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/iso-50001",
+      to: routes.iso50001[currentLang],
       icon: "FaBolt" as const,
-      title: "ISO 50001 - Energy Management",
-      description: "Optimize energy use, reduce costs, and minimize environmental impact through systematic energy management.",
-      benefits: ["Reduce Utility Bills", "Measurable Savings", "Environmental Performance"]
+      title: t('isoCertifications.cards.iso50001.title'),
+      description: t('isoCertifications.cards.iso50001.description'),
+      benefits: [
+        t('isoCertifications.cards.iso50001.benefits.0'),
+        t('isoCertifications.cards.iso50001.benefits.1'),
+        t('isoCertifications.cards.iso50001.benefits.2')
+      ]
     },
     {
-      to: "/services/iso/haccp",
+      to: routes.haccp[currentLang],
       icon: "FaUtensils" as const,
-      title: "HACCP - Food Safety",
-      description: "Critical food safety management system focused on preventing hazards in food production.",
-      benefits: ["HORECA Compliance", "Supply Chain Security", "Consumer Trust"]
+      title: t('isoCertifications.cards.haccp.title'),
+      description: t('isoCertifications.cards.haccp.description'),
+      benefits: [
+        t('isoCertifications.cards.haccp.benefits.0'),
+        t('isoCertifications.cards.haccp.benefits.1'),
+        t('isoCertifications.cards.haccp.benefits.2')
+      ]
     }
   ];
 
   return (
     <div className="iso-page">
       <Helmet>
-        <title>ISO Certifications - International Standards for Quality & Compliance</title>
-        <meta name="description" content="Achieve internationally recognized ISO certifications with MSC Certifications. From quality management to information security, we offer comprehensive certification services." />
-        <meta name="keywords" content="ISO certification, ISO standards, quality management, environmental management, food safety, information security, MSC Certifications" />
+        <title>{t('isoCertifications.meta.title')}</title>
+        <meta name="description" content={t('isoCertifications.meta.description')} />
+        <meta name="keywords" content={t('isoCertifications.meta.keywords')} />
       </Helmet>
 
       {/* Hero Section */}
       <section className="iso-hero">
         <div className="container">
-          <h1>ISO Certifications: Global Standards for Excellence</h1>
+          <h1>{t('isoCertifications.hero.title')}</h1>
           <p className="iso-subtitle">
-            ISO certifications demonstrate your commitment to international best practices in quality, safety, and efficiency. MSC Certifications provides accredited certification services across all major ISO standards, helping your organization gain global recognition and competitive advantage.
+            {t('isoCertifications.hero.subtitle')}
           </p>
         </div>
       </section>
@@ -92,12 +133,12 @@ const ISOCertifications: FC = () => {
       {/* What are ISO Standards */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">What Are ISO Standards?</h2>
+          <h2 className="section-title">{t('isoCertifications.whatIs.title')}</h2>
           <p className="iso-text">
-            ISO (International Organization for Standardization) standards are globally recognized frameworks that help organizations implement best practices across various aspects of their operations. These standards ensure consistency, quality, and reliability - making them essential for businesses operating in competitive and regulated markets.
+            {t('isoCertifications.whatIs.description1')}
           </p>
           <p className="iso-text">
-            Achieving ISO certification demonstrates to customers, partners, and regulators that your organization meets rigorous international requirements.
+            {t('isoCertifications.whatIs.description2')}
           </p>
         </div>
       </section>
@@ -105,9 +146,9 @@ const ISOCertifications: FC = () => {
       {/* Our ISO Certification Services */}
       <section className="section section-gray">
         <div className="container">
-          <h2 className="section-title">Our ISO Certification Services</h2>
+          <h2 className="section-title">{t('isoCertifications.ourServices.title')}</h2>
           <p className="section-intro">
-            MSC Certifications offers accredited certification for the following ISO standards:
+            {t('isoCertifications.ourServices.subtitle')}
           </p>
 
           <ISOSlider cards={isoCards} />
@@ -117,38 +158,38 @@ const ISOCertifications: FC = () => {
       {/* Benefits */}
       <section className="section section-white">
         <div className="container">
-          <h2 className="section-title">Why Choose ISO Certification?</h2>
+          <h2 className="section-title">{t('isoCertifications.benefits.title')}</h2>
 
           <div className="benefits-grid">
             <div className="benefit-card">
               <div className="benefit-number">1</div>
-              <h3>Global Recognition</h3>
-              <p>ISO certifications are recognized worldwide, opening doors to international markets and partnerships.</p>
+              <h3>{t('isoCertifications.benefits.benefit1.title')}</h3>
+              <p>{t('isoCertifications.benefits.benefit1.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">2</div>
-              <h3>Competitive Advantage</h3>
-              <p>Demonstrate your commitment to quality and excellence, setting you apart from competitors.</p>
+              <h3>{t('isoCertifications.benefits.benefit2.title')}</h3>
+              <p>{t('isoCertifications.benefits.benefit2.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">3</div>
-              <h3>Operational Excellence</h3>
-              <p>Streamline processes, reduce waste, and improve efficiency across your organization.</p>
+              <h3>{t('isoCertifications.benefits.benefit3.title')}</h3>
+              <p>{t('isoCertifications.benefits.benefit3.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">4</div>
-              <h3>Customer Confidence</h3>
-              <p>Build trust with customers and stakeholders through verified compliance with international standards.</p>
+              <h3>{t('isoCertifications.benefits.benefit4.title')}</h3>
+              <p>{t('isoCertifications.benefits.benefit4.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">5</div>
-              <h3>Risk Management</h3>
-              <p>Identify and mitigate risks systematically, protecting your organization and stakeholders.</p>
+              <h3>{t('isoCertifications.benefits.benefit5.title')}</h3>
+              <p>{t('isoCertifications.benefits.benefit5.description')}</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-number">6</div>
-              <h3>Tender Requirements</h3>
-              <p>Meet mandatory certification requirements for public and private sector tenders.</p>
+              <h3>{t('isoCertifications.benefits.benefit6.title')}</h3>
+              <p>{t('isoCertifications.benefits.benefit6.description')}</p>
             </div>
           </div>
         </div>
@@ -157,15 +198,15 @@ const ISOCertifications: FC = () => {
       {/* Final CTA */}
       <section className="section-cta-final">
         <div className="container">
-          <h2>Ready to Achieve ISO Certification?</h2>
+          <h2>{t('isoCertifications.cta.title')}</h2>
           <p>
-            Partner with MSC Certifications for accredited, globally recognized ISO certification services.
+            {t('isoCertifications.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Start Your Certification Journey</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('isoCertifications.cta.button')}</Link>
           </div>
           <p className="cta-footer">
-            All certificates issued by MSC Certifications are fully accredited and internationally recognized.
+            {t('isoCertifications.cta.footer')}
           </p>
         </div>
       </section>

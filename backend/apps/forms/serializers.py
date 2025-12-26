@@ -16,7 +16,8 @@ class FormQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormQuestion
         fields = [
-            'id', 'question_text', 'question_text_sq', 'help_text', 'help_text_sq',
+            'id', 'question_text', 'question_text_sq', 'question_text_it',
+            'help_text', 'help_text_sq', 'help_text_it',
             'question_type', 'is_required', 'options', 'validation_rules',
             'conditional_logic', 'order', 'is_active'
         ]
@@ -30,7 +31,8 @@ class FormSectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormSection
         fields = [
-            'id', 'title', 'title_sq', 'description', 'description_sq',
+            'id', 'title', 'title_sq', 'title_it',
+            'description', 'description_sq', 'description_it',
             'order', 'is_active', 'questions'
         ]
         read_only_fields = ['id']
@@ -45,7 +47,8 @@ class FormTemplateListSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormTemplate
         fields = [
-            'id', 'name', 'name_sq', 'description', 'description_sq',
+            'id', 'name', 'name_sq', 'name_it',
+            'description', 'description_sq', 'description_it',
             'iso_standard', 'iso_standard_display', 'form_type',
             'is_active', 'is_public', 'total_questions', 'total_submissions',
             'created_at', 'updated_at'
@@ -62,7 +65,8 @@ class FormTemplateDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormTemplate
         fields = [
-            'id', 'name', 'name_sq', 'description', 'description_sq',
+            'id', 'name', 'name_sq', 'name_it',
+            'description', 'description_sq', 'description_it',
             'iso_standard', 'iso_standard_display', 'form_type',
             'is_active', 'is_public', 'requires_auth', 'allow_multiple_submissions',
             'send_confirmation_email', 'notification_emails',
@@ -429,7 +433,8 @@ class PublicFormQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormQuestion
         fields = [
-            'id', 'question_text', 'question_text_sq', 'help_text', 'help_text_sq',
+            'id', 'question_text', 'question_text_sq', 'question_text_it',
+            'help_text', 'help_text_sq', 'help_text_it',
             'question_type', 'is_required', 'options', 'validation_rules',
             'conditional_logic', 'order'
         ]
@@ -442,7 +447,8 @@ class PublicFormSectionSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormSection
         fields = [
-            'id', 'title', 'title_sq', 'description', 'description_sq',
+            'id', 'title', 'title_sq', 'title_it',
+            'description', 'description_sq', 'description_it',
             'order', 'questions'
         ]
 
@@ -461,7 +467,8 @@ class PublicFormTemplateSerializer(serializers.ModelSerializer):
     class Meta:
         model = FormTemplate
         fields = [
-            'id', 'name', 'name_sq', 'description', 'description_sq',
+            'id', 'name', 'name_sq', 'name_it',
+            'description', 'description_sq', 'description_it',
             'iso_standard', 'iso_standard_display', 'form_type',
             'requires_auth', 'sections'
         ]

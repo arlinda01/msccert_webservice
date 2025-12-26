@@ -55,8 +55,10 @@ class Command(BaseCommand):
         form = FormTemplate.objects.create(
             name=form_data['name'],
             name_sq=form_data['name_sq'],
+            name_it=form_data.get('name_it', form_data['name']),
             description=form_data['description'],
             description_sq=form_data['description_sq'],
+            description_it=form_data.get('description_it', form_data['description']),
             iso_standard=iso_code,
             form_type='assessment',
             is_active=True,
@@ -71,6 +73,7 @@ class Command(BaseCommand):
                 form_template=form,
                 title=section_data['title'],
                 title_sq=section_data['title_sq'],
+                title_it=section_data.get('title_it', section_data['title']),
                 order=section_order
             )
 
@@ -79,6 +82,7 @@ class Command(BaseCommand):
                     section=section,
                     question_text=q_data['q'],
                     question_text_sq=q_data['q_sq'],
+                    question_text_it=q_data.get('q_it', q_data['q']),
                     question_type=QuestionType.RADIO,
                     is_required=True,
                     options=ANSWER_OPTIONS,

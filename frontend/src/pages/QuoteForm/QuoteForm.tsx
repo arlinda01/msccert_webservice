@@ -10,12 +10,14 @@ interface FormQuestion {
   id: string;
   question_text: string;
   question_text_sq: string;
+  question_text_it: string;
   question_type: string;
   is_required: boolean;
   options: Array<{
     value: string;
     label: string;
     label_sq: string;
+    label_it: string;
   }>;
   order: number;
 }
@@ -24,8 +26,10 @@ interface FormSection {
   id: string;
   title: string;
   title_sq: string;
+  title_it: string;
   description?: string;
   description_sq?: string;
+  description_it?: string;
   order: number;
   questions: FormQuestion[];
 }
@@ -34,8 +38,10 @@ interface FormTemplate {
   id: string;
   name: string;
   name_sq: string;
+  name_it: string;
   description: string;
   description_sq: string;
+  description_it: string;
   iso_standard: string;
   sections: FormSection[];
 }
@@ -225,14 +231,15 @@ const QuoteForm: FC = () => {
     }
   };
 
-  const getLocalizedText = (en: string, sq: string): string => {
+  const getLocalizedText = (en: string, sq: string, it?: string): string => {
     if (currentLang === 'sq') return sq || en;
-    if (currentLang === 'it') return en; // Italian uses English for now until translations added to backend
+    if (currentLang === 'it') return it || en;
     return en;
   };
 
-  const getOptionLabel = (option: { label: string; label_sq: string }): string => {
+  const getOptionLabel = (option: { label: string; label_sq: string; label_it?: string }): string => {
     if (currentLang === 'sq') return option.label_sq || option.label;
+    if (currentLang === 'it') return option.label_it || option.label;
     return option.label;
   };
 
@@ -321,7 +328,7 @@ const QuoteForm: FC = () => {
     <div className="quote-form-page">
       <Helmet>
         <title>{displayName} {t('quoteForm.title')} | MSC Certifications</title>
-        <meta name="description" content={getLocalizedText(form.description, form.description_sq)} />
+        <meta name="description" content={getLocalizedText(form.description, form.description_sq, form.description_it)} />
       </Helmet>
 
       {/* Hero Section */}
@@ -329,7 +336,7 @@ const QuoteForm: FC = () => {
         <div className="container">
           <h1>{displayName} {t('quoteForm.title')}</h1>
           <p className="quote-subtitle">
-            {getLocalizedText(form.description, form.description_sq)}
+            {getLocalizedText(form.description, form.description_sq, form.description_it)}
           </p>
         </div>
       </section>
@@ -349,7 +356,7 @@ const QuoteForm: FC = () => {
                 ></div>
               </div>
               <div className="progress-label">
-                {typeof currentStep === 'number' && getLocalizedText(currentSection?.title || '', currentSection?.title_sq || '')}
+                {typeof currentStep === 'number' && getLocalizedText(currentSection?.title || '', currentSection?.title_sq || '', currentSection?.title_it || '')}
                 {currentStep === 'contact' && t('quoteForm.steps.contact')}
                 {currentStep === 'review' && t('quoteForm.steps.review')}
               </div>
@@ -364,10 +371,10 @@ const QuoteForm: FC = () => {
           {/* Section Steps (Questions first) */}
           {typeof currentStep === 'number' && currentSection && (
             <div className="form-step section-step">
-              <h2>{getLocalizedText(currentSection.title, currentSection.title_sq)}</h2>
+              <h2>{getLocalizedText(currentSection.title, currentSection.title_sq, currentSection.title_it)}</h2>
               {currentSection.description && (
                 <p className="step-description">
-                  {getLocalizedText(currentSection.description, currentSection.description_sq || '')}
+                  {getLocalizedText(currentSection.description, currentSection.description_sq || '', currentSection.description_it || '')}
                 </p>
               )}
 
@@ -377,7 +384,7 @@ const QuoteForm: FC = () => {
                     <div className="question-number">{qIndex + 1}</div>
                     <div className="question-content">
                       <p className="question-text">
-                        {getLocalizedText(question.question_text, question.question_text_sq)}
+                        {getLocalizedText(question.question_text, question.question_text_sq, question.question_text_it)}
                         {question.is_required && <span className="required">*</span>}
                       </p>
                       <div className="answer-options">

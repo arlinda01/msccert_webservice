@@ -44,8 +44,10 @@ class FormTemplate(models.Model):
     # Basic info
     name = models.CharField(max_length=255, help_text="Form name (e.g., 'ISO 9001 Initial Assessment')")
     name_sq = models.CharField(max_length=255, blank=True, help_text="Form name in Albanian")
+    name_it = models.CharField(max_length=255, blank=True, help_text="Form name in Italian")
     description = models.TextField(blank=True, help_text="Form description")
     description_sq = models.TextField(blank=True, help_text="Form description in Albanian")
+    description_it = models.TextField(blank=True, help_text="Form description in Italian")
 
     # Classification
     iso_standard = models.CharField(
@@ -110,8 +112,10 @@ class FormSection(models.Model):
     # Section info
     title = models.CharField(max_length=255, help_text="Section title")
     title_sq = models.CharField(max_length=255, blank=True, help_text="Section title in Albanian")
+    title_it = models.CharField(max_length=255, blank=True, help_text="Section title in Italian")
     description = models.TextField(blank=True, help_text="Section description/instructions")
     description_sq = models.TextField(blank=True, help_text="Section description in Albanian")
+    description_it = models.TextField(blank=True, help_text="Section description in Italian")
 
     # Ordering
     order = models.PositiveIntegerField(default=0, help_text="Display order (lower = first)")
@@ -142,8 +146,10 @@ class FormQuestion(models.Model):
     # Question content
     question_text = models.TextField(help_text="The question text")
     question_text_sq = models.TextField(blank=True, help_text="Question text in Albanian")
+    question_text_it = models.TextField(blank=True, help_text="Question text in Italian")
     help_text = models.TextField(blank=True, help_text="Additional help/instructions for the question")
     help_text_sq = models.TextField(blank=True, help_text="Help text in Albanian")
+    help_text_it = models.TextField(blank=True, help_text="Help text in Italian")
 
     # Question type and validation
     question_type = models.CharField(

@@ -2246,6 +2246,254 @@
       "button": "Kërkoni një Vlerësim të Efiçencës së Energjisë"
     }
   },
+  "services": {
+    "meta": {
+      "title": "Shërbime Certifikimi, Përputhshmërie & Trajnimi | MSC CERTIFICATIONS",
+      "description": "Eksploroni shërbimet e certifikimit ISO të akredituar, përputhshmërisë dhe trajnimit teknik nga MSC CERTIFICATIONS. Ndërtoni besim, efikasitet dhe rritje të qëndrueshme.",
+      "keywords": "shërbime certifikimi ISO, auditime përputhshmërie, trajnim stafi, vlerësim produktesh, markim CE, auditor ISO, kompetencë e fuqisë punëtore, certifikim i akredituar, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "Shërbimet Tona",
+      "subtitle": "Certifikim i Akredituar, Përputhshmëri dhe Trajnim për Çdo Industri. Në MSC CERTIFICATIONS, ne ofrojmë një portofol të plotë shërbimesh të akredituara ndërkombëtarisht të dizajnuara për të forcuar besimin, sigurinë dhe performancën e organizatës suaj."
+    },
+    "whatWeOffer": {
+      "title": "Çfarë Ofrojmë",
+      "description1": "MSC CERTIFICATIONS ofron një gamë të gjerë shërbimesh certifikimi, inspektimi dhe trajnimi të akredituara ndërkombëtarisht. Qasja jonë kombinon ekspertizë teknike, njohuri të tregut lokal dhe kredibilitet të akredituar — duke e kthyer përputhshmërinë në një motor për avantazh konkurrues.",
+      "description2": "Pavarësisht nëse keni nevojë për certifikim ISO, markim CE, zhvillim të fuqisë punëtore ose auditim përputhshmërie, ekipi ynë i profesionistëve me përvojë është gati të mbështesë rritjen dhe suksesin e organizatës suaj."
+    },
+    "isoSection": {
+      "title": "Shërbime Certifikimi ISO",
+      "subtitle": "Ndërtoni kredibilitet, reduktoni rrezikun dhe arrini njohje ndërkombëtare me shërbimet tona të akredituara të certifikimit ISO:",
+      "viewAll": "Shiko të Gjitha Certifikimet ISO"
+    },
+    "complianceSection": {
+      "title": "Shërbime Produkti & Përputhshmërie",
+      "subtitle": "Sigurohuni që produktet dhe operacionet tuaja përmbushin kërkesat ligjore dhe të aksesit në treg:"
+    },
+    "workforceSection": {
+      "title": "Kompetenca & Zhvillimi i Fuqisë Punëtore",
+      "subtitle": "Ndërtoni një ekip të kualifikuar, të përputhshëm dhe të motivuar me shërbimet tona të zhvillimit profesional:"
+    },
+    "isoCards": {
+      "iso9001": {
+        "title": "ISO 9001 - Menaxhimi i Cilësisë",
+        "description": "Standardi më i njohur në botë për sistemet e menaxhimit të cilësisë.",
+        "benefits": ["Njohje Globale", "Efikasitet i Përmirësuar", "Besnikëri Klientësh"]
+      },
+      "iso14001": {
+        "title": "ISO 14001 - Mjedisor",
+        "description": "Reduktoni ndikimin mjedisor dhe demonstroni qëndrueshmëri.",
+        "benefits": ["Reduktoni Ndikimin", "Kursime Kostosh", "Përputhshmëri"]
+      },
+      "iso45001": {
+        "title": "ISO 45001 - Shëndet & Siguri",
+        "description": "Krijoni vende pune më të sigurta dhe përmirësoni mirëqenien e punonjësve.",
+        "benefits": ["Reduktoni Aksidentet", "Përputhshmëri Ligjore", "Sigurim më i Ulët"]
+      },
+      "haccp": {
+        "title": "ISO 22000 / HACCP",
+        "description": "Menaxhim i sigurisë ushqimore për të gjithë zinxhirin ushqimor.",
+        "benefits": ["Përputhshmëri HORECA", "Besim Konsumatori", "Siguri Furnizimi"]
+      },
+      "iso27001": {
+        "title": "ISO 27001 - Siguria e Informacionit",
+        "description": "Mbroni informacionin e ndjeshëm dhe menaxhoni rreziqet kibernetike.",
+        "benefits": ["Mbrojtje të Dhënash", "Përputhshmëri GDPR", "Siguri Kibernetike"]
+      },
+      "iso22301": {
+        "title": "ISO 22301 - Vazhdimësia e Biznesit",
+        "description": "Përgatituni për ndërprerje dhe siguroni qëndrueshmërinë e biznesit.",
+        "benefits": ["Minimizoni Ndërprerjet", "Mbroni të Ardhurat", "Operacione Kritike"]
+      },
+      "iso37001": {
+        "title": "ISO 37001 - Anti-Korrupsion",
+        "description": "Parandaloni, zbuloni dhe adresoni rreziqet e ryshfetit dhe korrupsionit.",
+        "benefits": ["Reduktoni Rrezikun Ligjor", "Reputacion i Pastër", "Kualifikim për Tenderë"]
+      },
+      "iso39001": {
+        "title": "ISO 39001 - Siguria Rrugore",
+        "description": "Reduktoni vdekjet dhe lëndimet e rënda në trafikun rrugor.",
+        "benefits": ["Siguri Flote", "Sigurim më i Ulët", "Mbrojtje Drejtuesish"]
+      },
+      "iso50001": {
+        "title": "ISO 50001 - Menaxhimi i Energjisë",
+        "description": "Optimizoni përdorimin e energjisë dhe reduktoni kostot sistematikisht.",
+        "benefits": ["Fatura më të Ulëta", "Kursime të Matshme", "Performancë e Gjelbër"]
+      }
+    },
+    "complianceCards": {
+      "ceMarking": {
+        "title": "Markimi CE",
+        "description": "Vlerësimi i konformitetit të produktit BE për akses në tregun e Zonës Ekonomike Europiane.",
+        "benefits": ["Akses në Tregun BE", "Siguri Produkti", "Përputhshmëri Ligjore"]
+      },
+      "energyEfficiency": {
+        "title": "Auditime të Efikasitetit Energjetik",
+        "description": "Reduktoni kostot dhe emetimet e CO2 përmes analizës dhe optimizimit të energjisë.",
+        "benefits": ["Reduktim Kostosh", "Reduktim CO2", "Qëndrueshmëri"]
+      },
+      "equipmentEvaluation": {
+        "title": "Vlerësimi i Makinerive & Pajisjeve",
+        "description": "Vlerësime teknike për të optimizuar performancën dhe siguruar përputhshmërinë.",
+        "benefits": ["Auditim Performance", "Kontroll Përputhshmërie", "Vlerësim Vlere"]
+      }
+    },
+    "workforceCards": {
+      "staffTraining": {
+        "title": "Trajnimi i Stafit",
+        "description": "Programe trajnimi të përputhshme me ISO për kompetenca cilësie, sigurie dhe mjedisore.",
+        "benefits": ["Zhvillim Aftësish", "Përputhje ISO", "Performancë Ekipi"]
+      },
+      "professionalCard": {
+        "title": "Karta Profesionale",
+        "description": "Përcaktimi i rolit të punës duke siguruar përgjegjësi dhe kualifikime të qarta.",
+        "benefits": ["Qartësi Roli", "Dokumente Përputhshmërie", "Provë Kualifikimi"]
+      },
+      "technologicalCard": {
+        "title": "Karta Teknologjike",
+        "description": "Dokumentacion i kontrollit të procesit për konsistencë në prodhim.",
+        "benefits": ["Kontroll Procesi", "Siguri Cilësie", "Dokumente Prodhimi"]
+      }
+    },
+    "industries": {
+      "title": "Industritë që Shërbejmë",
+      "subtitle": "Auditime certifikimi dhe përputhshmërie të përshtatura për industri me rrezik të lartë dhe të rregulluara:",
+      "construction": {
+        "title": "Ndërtim & Infrastrukturë",
+        "description": "Sisteme sigurie, menaxhim cilësie dhe përputhshmëri projekti."
+      },
+      "food": {
+        "title": "Ushqim & HORECA",
+        "description": "Siguri ushqimore, HACCP dhe përputhshmëri higjiene."
+      },
+      "it": {
+        "title": "IT & Telekomunikacion",
+        "description": "Siguri informacioni dhe mbrojtje të dhënash."
+      },
+      "manufacturing": {
+        "title": "Prodhim & Energji",
+        "description": "Sisteme cilësie dhe menaxhim energjie."
+      },
+      "publicSector": {
+        "title": "Sektori Publik & Tenderë",
+        "description": "Përputhshmëri anti-korrupsion dhe qeverisje."
+      },
+      "logistics": {
+        "title": "Logjistikë & Transport",
+        "description": "Siguri rrugore dhe menaxhim flote."
+      }
+    },
+    "accreditation": {
+      "title": "Akreditim & Integritet",
+      "description": "Të gjitha shërbimet ofrohen nën akreditim ndërkombëtar dhe në përputhje me ISO/IEC 17021. Puna jonë udhëhiqet nga paanshmëria, transparenca dhe ekselenca teknike, duke siguruar që certifikimi juaj të jetë i njohur dhe i besuar globalisht.",
+      "button": "Mësoni për Akreditimin Tonë"
+    },
+    "cta": {
+      "title": "Filloni Projektin Tuaj të Certifikimit ose Përputhshmërisë",
+      "description": "Bashkëpunoni me MSC CERTIFICATIONS për të ndërtuar sistemet, kompetencën dhe kredibilitetin që biznesi juaj ka nevojë për të konkurruar globalisht.",
+      "button": "Kërkoni një Konsultim Falas"
+    }
+  },
+  "isoCertifications": {
+    "meta": {
+      "title": "Certifikime ISO - Standarde Ndërkombëtare për Cilësi & Përputhshmëri",
+      "description": "Arrini certifikime ISO të njohura ndërkombëtarisht me MSC Certifications. Nga menaxhimi i cilësisë deri te siguria e informacionit, ne ofrojmë shërbime gjithëpërfshirëse certifikimi.",
+      "keywords": "certifikim ISO, standarde ISO, menaxhim cilësie, menaxhim mjedisor, siguri ushqimore, siguri informacioni, MSC Certifications"
+    },
+    "hero": {
+      "title": "Certifikime ISO: Standarde Globale për Ekselencë",
+      "subtitle": "Certifikimet ISO demonstrojnë angazhimin tuaj ndaj praktikave më të mira ndërkombëtare në cilësi, siguri dhe efikasitet. MSC Certifications ofron shërbime të akredituara certifikimi për të gjitha standardet kryesore ISO, duke ndihmuar organizatën tuaj të fitojë njohje globale dhe avantazh konkurrues."
+    },
+    "whatIs": {
+      "title": "Çfarë Janë Standardet ISO?",
+      "description1": "Standardet ISO (International Organization for Standardization) janë korniza të njohura globalisht që ndihmojnë organizatat të zbatojnë praktikat më të mira në aspekte të ndryshme të operacioneve të tyre. Këto standarde sigurojnë konsistencë, cilësi dhe besueshmëri - duke i bërë thelbësore për bizneset që operojnë në tregje konkurruese dhe të rregulluara.",
+      "description2": "Arritja e certifikimit ISO demonstron për klientët, partnerët dhe rregullatorët që organizata juaj përmbush kërkesa rigoroze ndërkombëtare."
+    },
+    "ourServices": {
+      "title": "Shërbimet Tona të Certifikimit ISO",
+      "subtitle": "MSC Certifications ofron certifikim të akredituar për standardet e mëposhtme ISO:"
+    },
+    "cards": {
+      "iso9001": {
+        "title": "ISO 9001 - Menaxhimi i Cilësisë",
+        "description": "Standardi më i njohur në botë për sistemet e menaxhimit të cilësisë, duke siguruar ofrimin konsistent të produkteve dhe shërbimeve.",
+        "benefits": ["Njohje Globale", "Efikasitet i Përmirësuar", "Besnikëri më e Fortë e Klientëve"]
+      },
+      "iso14001": {
+        "title": "ISO 14001 - Menaxhimi Mjedisor",
+        "description": "Reduktoni ndikimin mjedisor, përmirësoni qëndrueshmërinë dhe demonstroni përgjegjësi mjedisore.",
+        "benefits": ["Reduktoni Ndikimin Mjedisor", "Kursime Kostosh", "Përputhshmëri Rregullatore"]
+      },
+      "iso22301": {
+        "title": "ISO 22301 - Vazhdimësia e Biznesit",
+        "description": "Përgatituni për ndërprerje dhe siguroni qëndrueshmërinë e biznesit përballë ngjarjeve të papritura.",
+        "benefits": ["Minimizoni Kohën e Ndërprerjes", "Mbroni të Ardhurat", "Ruani Operacionet Kritike"]
+      },
+      "iso27001": {
+        "title": "ISO 27001 - Siguria e Informacionit",
+        "description": "Mbroni informacionin e ndjeshëm dhe demonstroni menaxhim të fuqishëm të sigurisë së informacionit.",
+        "benefits": ["Mbrojtje e të Dhënave", "Përputhshmëri GDPR", "Siguri Kibernetike e Përmirësuar"]
+      },
+      "iso37001": {
+        "title": "ISO 37001 - Menaxhimi Anti-Korrupsion",
+        "description": "Zbatoni kontrolle për të parandaluar, zbuluar dhe adresuar rreziqet e ryshfetit dhe korrupsionit.",
+        "benefits": ["Reduktoni Rrezikun Ligjor", "Reputacion i Pastër", "Kualifikim për Tenderë"]
+      },
+      "iso39001": {
+        "title": "ISO 39001 - Siguria Rrugore",
+        "description": "Reduktoni vdekjet dhe lëndimet e rënda në trafik që lidhen me operacionet e organizatës suaj.",
+        "benefits": ["Reduktoni Aksidentet e Flotës", "Prime më të Ulëta Sigurimi", "Përmirësoni Sigurinë e Drejtuesve"]
+      },
+      "iso45001": {
+        "title": "ISO 45001 - Shëndeti & Siguria në Punë",
+        "description": "Krijoni vende pune më të sigurta, reduktoni lëndimet në punë dhe përmirësoni mirëqenien e punonjësve.",
+        "benefits": ["Reduktoni Aksidentet në Punë", "Përputhshmëri Ligjore", "Kosto më të Ulëta Sigurimi"]
+      },
+      "iso50001": {
+        "title": "ISO 50001 - Menaxhimi i Energjisë",
+        "description": "Optimizoni përdorimin e energjisë, reduktoni kostot dhe minimizoni ndikimin mjedisor përmes menaxhimit sistematik të energjisë.",
+        "benefits": ["Reduktoni Faturat e Energjisë", "Kursime të Matshme", "Performancë Mjedisore"]
+      },
+      "haccp": {
+        "title": "HACCP - Siguria Ushqimore",
+        "description": "Sistem kritik i menaxhimit të sigurisë ushqimore i fokusuar në parandalimin e rreziqeve në prodhimin e ushqimit.",
+        "benefits": ["Përputhshmëri HORECA", "Siguri e Zinxhirit të Furnizimit", "Besim i Konsumatorëve"]
+      }
+    },
+    "benefits": {
+      "title": "Pse të Zgjidhni Certifikimin ISO?",
+      "benefit1": {
+        "title": "Njohje Globale",
+        "description": "Certifikimet ISO njihen në mbarë botën, duke hapur dyert për tregje dhe partneritete ndërkombëtare."
+      },
+      "benefit2": {
+        "title": "Avantazh Konkurrues",
+        "description": "Demonstroni angazhimin tuaj ndaj cilësisë dhe ekselencës, duke u dalluar nga konkurrentët."
+      },
+      "benefit3": {
+        "title": "Ekselencë Operacionale",
+        "description": "Thjeshtoni proceset, reduktoni humbjet dhe përmirësoni efikasitetin në të gjithë organizatën."
+      },
+      "benefit4": {
+        "title": "Besim i Klientëve",
+        "description": "Ndërtoni besim me klientët dhe palët e interesit përmes përputhshmërisë së verifikuar me standardet ndërkombëtare."
+      },
+      "benefit5": {
+        "title": "Menaxhimi i Rrezikut",
+        "description": "Identifikoni dhe zbutni rreziqet sistematikisht, duke mbrojtur organizatën dhe palët e interesit."
+      },
+      "benefit6": {
+        "title": "Kërkesa për Tenderë",
+        "description": "Përmbushni kërkesat e detyrueshme të certifikimit për tenderët e sektorit publik dhe privat."
+      }
+    },
+    "cta": {
+      "title": "Gati të Arrini Certifikimin ISO?",
+      "description": "Bashkëpunoni me MSC Certifications për shërbime certifikimi të akredituara dhe të njohura globalisht.",
+      "button": "Filloni Udhëtimin Tuaj të Certifikimit",
+      "footer": "Të gjitha certifikatat e lëshuara nga MSC Certifications janë plotësisht të akredituara dhe të njohura ndërkombëtarisht."
+    }
+  },
   "ceMarking": {
     "meta": {
       "title": "Markimi CE | MSC CERTIFICATIONS",
