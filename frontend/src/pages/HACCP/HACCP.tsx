@@ -23,12 +23,6 @@ const HACCP: FC = () => {
           <p className="iso-subtitle">
             {t('haccp.hero.subtitle')}
           </p>
-          <Link
-            to={routes.quoteForm[currentLang].replace(':isoCode', 'haccp')}
-            className="btn btn-primary btn-quote"
-          >
-            {t('common.getIsoQuote', { isoCode: 'HACCP' })}
-          </Link>
         </div>
       </section>
 

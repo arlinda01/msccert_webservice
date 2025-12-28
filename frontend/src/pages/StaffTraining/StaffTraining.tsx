@@ -26,10 +26,6 @@ const StaffTraining: FC = () => {
           <p className="iso-subtitle">
             {t('staffTraining.hero.subtitle2')}
           </p>
-          <div className="hero-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('staffTraining.hero.cta1')}</Link>
-            <Link to={routes.contact[currentLang]} className="btn btn-secondary">{t('staffTraining.hero.cta2')}</Link>
-          </div>
         </div>
       </section>
 
@@ -47,9 +43,9 @@ const StaffTraining: FC = () => {
           <div className="iso-role-box">
             <h3>{t('staffTraining.whatIs.modules.title')}</h3>
             <ul className="services-list">
-              <li><strong>{t('staffTraining.whatIs.modules.quality.title')}</strong> — {t('staffTraining.whatIs.modules.quality.description')}</li>
-              <li><strong>{t('staffTraining.whatIs.modules.environment.title')}</strong> — {t('staffTraining.whatIs.modules.environment.description')}</li>
-              <li><strong>{t('staffTraining.whatIs.modules.safety.title')}</strong> — {t('staffTraining.whatIs.modules.safety.description')}</li>
+              <li><strong>{t('staffTraining.whatIs.modules.quality.title')}</strong>: {t('staffTraining.whatIs.modules.quality.description')}</li>
+              <li><strong>{t('staffTraining.whatIs.modules.environment.title')}</strong>: {t('staffTraining.whatIs.modules.environment.description')}</li>
+              <li><strong>{t('staffTraining.whatIs.modules.safety.title')}</strong>: {t('staffTraining.whatIs.modules.safety.description')}</li>
             </ul>
           </div>
 

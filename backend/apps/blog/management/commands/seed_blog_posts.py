@@ -55,6 +55,8 @@ class Command(BaseCommand):
         # Blog Post 1: ISO 27001 vs SOC 2
         post1_data = {
             'slug': 'iso-27001-vs-soc-2-choosing-right-security-framework',
+            'slug_sq': 'iso-27001-vs-soc-2-zgjedhja-e-kornizes-se-sigurise',
+            'slug_it': 'iso-27001-vs-soc-2-scegliere-framework-sicurezza',
             'category': category_objects['information-security'],
             'tags': 'ISO 27001, SOC 2, Information Security, Compliance, Certification',
             'author': 'MSC Certifications',
@@ -296,6 +298,8 @@ class Command(BaseCommand):
         # Blog Post 2: GDPR Compliance Checklist
         post2_data = {
             'slug': 'gdpr-compliance-checklist-7-steps',
+            'slug_sq': 'lista-kontrolluese-gdpr-7-hapa-mbrojtja-te-dhenave',
+            'slug_it': 'checklist-conformita-gdpr-7-passaggi-protezione-dati',
             'category': category_objects['compliance'],
             'tags': 'GDPR, Data Protection, Privacy, Compliance, Checklist',
             'author': 'MSC Certifications',
@@ -729,6 +733,8 @@ class Command(BaseCommand):
         # Blog Post 3: Sustainable Bottom Line
         post3_data = {
             'slug': 'sustainable-bottom-line-esg-operating-costs',
+            'slug_sq': 'biznesi-i-qendrueshem-si-praktikat-esg-ulin-kostot',
+            'slug_it': 'sostenibilita-aziendale-pratiche-esg-riducono-costi',
             'category': category_objects['sustainability'],
             'tags': 'ESG, Sustainability, ISO 14001, Energy Efficiency, Cost Reduction',
             'author': 'MSC Certifications',
@@ -1198,6 +1204,8 @@ class Command(BaseCommand):
         # Blog Post 4: ISO 9001 Guide
         post4_data = {
             'slug': 'iso-9001-definitive-guide-quality-management',
+            'slug_sq': 'iso-9001-guida-perfundimtare-menaxhimit-te-cilesise',
+            'slug_it': 'iso-9001-guida-definitiva-gestione-qualita',
             'category': category_objects['quality-management'],
             'tags': 'ISO 9001, Quality Management, QMS, Certification, Business Excellence',
             'author': 'MSC Certifications',

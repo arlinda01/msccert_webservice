@@ -196,13 +196,13 @@ export const routes: Record<RouteKey, Record<SupportedLanguage, string>> = {
   },
   blog: {
     en: '/blog',
-    sq: '/sq/blog',
-    it: '/it/blog'
+    sq: '/sq/artikuj',
+    it: '/it/articoli'
   },
   blogPost: {
     en: '/blog/:slug',
-    sq: '/sq/blog/:slug',
-    it: '/it/blog/:slug'
+    sq: '/sq/artikuj/:slug',
+    it: '/it/articoli/:slug'
   }
 };
 

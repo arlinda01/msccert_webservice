@@ -3,7 +3,8 @@ from rest_framework.permissions import AllowAny
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
-from django.db.models import F
+from django.db.models import F, Q
+from django.shortcuts import get_object_or_404
 
 from .models import BlogCategory, BlogPost
 from .serializers import (
@@ -45,6 +46,22 @@ class BlogPostViewSet(viewsets.ReadOnlyModelViewSet):
         if self.action == 'retrieve':
             return BlogPostDetailSerializer
         return BlogPostListSerializer
+
+    def get_object(self):
+        """Override to support lookup by any language slug (en, sq, it)"""
+        queryset = self.get_queryset()
+        slug = self.kwargs.get('slug')
+
+        # Try to find by any of the three slug fields
+        obj = queryset.filter(
+            Q(slug=slug) | Q(slug_sq=slug) | Q(slug_it=slug)
+        ).first()
+
+        if obj is None:
+            from rest_framework.exceptions import NotFound
+            raise NotFound('Blog post not found')
+
+        return obj
 
     def retrieve(self, request, *args, **kwargs):
         """Get post detail and increment view count"""

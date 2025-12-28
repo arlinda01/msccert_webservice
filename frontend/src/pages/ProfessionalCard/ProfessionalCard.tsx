@@ -26,10 +26,6 @@ const ProfessionalCard: FC = () => {
           <p className="iso-subtitle">
             {t('professionalCard.hero.subtitle2')}
           </p>
-          <div className="hero-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('professionalCard.hero.cta1')}</Link>
-            <Link to={routes.contact[currentLang]} className="btn btn-secondary">{t('professionalCard.hero.cta2')}</Link>
-          </div>
         </div>
       </section>
 
@@ -37,7 +33,7 @@ const ProfessionalCard: FC = () => {
       <section className="section section-white">
         <div className="container">
           <h2 className="section-title">{t('professionalCard.whatIs.title')}</h2>
-          <h3 style={{ fontSize: '1.5rem', color: '#01434f', marginBottom: '1.5rem', textAlign: 'center' }}>
+          <h3 style={{ fontSize: '1.25rem', color: '#01434f', marginBottom: '1.5rem', textAlign: 'center' }}>
             {t('professionalCard.whatIs.subtitle')}
           </h3>
           <p className="iso-text">

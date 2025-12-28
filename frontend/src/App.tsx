@@ -136,8 +136,8 @@ const App: FC = () => {
             <Route path="/sq/certifikata/:secureId" element={<CertificateVerify />} />
             <Route path="/sq/kerkese-oferte/:isoCode" element={<QuoteForm />} />
             <Route path="/sq/merr-oferte" element={<QuoteForm />} />
-            <Route path="/sq/blog" element={<Blog />} />
-            <Route path="/sq/blog/:slug" element={<BlogPost />} />
+            <Route path="/sq/artikuj" element={<Blog />} />
+            <Route path="/sq/artikuj/:slug" element={<BlogPost />} />
 
             {/* Italian Routes */}
             <Route path="/it/" element={<Home />} />
@@ -171,8 +171,8 @@ const App: FC = () => {
             <Route path="/it/certificato/:secureId" element={<CertificateVerify />} />
             <Route path="/it/richiesta-preventivo/:isoCode" element={<QuoteForm />} />
             <Route path="/it/richiedi-preventivo" element={<QuoteForm />} />
-            <Route path="/it/blog" element={<Blog />} />
-            <Route path="/it/blog/:slug" element={<BlogPost />} />
+            <Route path="/it/articoli" element={<Blog />} />
+            <Route path="/it/articoli/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

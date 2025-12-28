@@ -1,10 +1,16 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
 import api from '../../services/api';
 import './Blog.css';
+
+interface TocItem {
+  id: string;
+  text: string;
+  level: number;
+}
 
 interface BlogCategory {
   id: string;
@@ -20,6 +26,8 @@ interface BlogPostData {
   title_sq: string;
   title_it: string;
   slug: string;
+  slug_sq: string;
+  slug_it: string;
   excerpt: string;
   excerpt_sq: string;
   excerpt_it: string;
@@ -38,12 +46,29 @@ interface BlogPostData {
   view_count: number;
 }
 
+interface RelatedPost {
+  id: string;
+  title: string;
+  title_sq: string;
+  title_it: string;
+  slug: string;
+  slug_sq: string;
+  slug_it: string;
+  excerpt: string;
+  excerpt_sq: string;
+  excerpt_it: string;
+  featured_image_url: string | null;
+  category: BlogCategory | null;
+  published_at: string;
+}
+
 const BlogPost: FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, i18n } = useTranslation();
   const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
 
   const [post, setPost] = useState<BlogPostData | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<RelatedPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -58,6 +83,13 @@ const BlogPost: FC = () => {
       try {
         const response = await api.get(`/blog/posts/${slug}/`);
         setPost(response.data);
+
+        // Fetch related posts
+        const relatedRes = await api.get('/blog/posts/', {
+          params: { limit: 3 }
+        });
+        const allPosts = relatedRes.data.results || relatedRes.data || [];
+        setRelatedPosts(allPosts.filter((p: RelatedPost) => p.slug !== slug).slice(0, 3));
       } catch (err) {
         console.error('Error fetching post:', err);
         setError('Post not found');
@@ -83,6 +115,85 @@ const BlogPost: FC = () => {
       day: 'numeric'
     });
   };
+
+  const getRelatedPostSlug = (relPost: RelatedPost): string => {
+    if (currentLang === 'sq') return relPost.slug_sq || relPost.slug;
+    if (currentLang === 'it') return relPost.slug_it || relPost.slug;
+    return relPost.slug;
+  };
+
+  const getBlogPostUrl = (relPost: RelatedPost): string => {
+    return routes.blogPost[currentLang].replace(':slug', getRelatedPostSlug(relPost));
+  };
+
+  // Calculate reading time
+  const readingTime = useMemo(() => {
+    if (!post) return 0;
+    const content = getLocalizedText(post.content, post.content_sq, post.content_it);
+    const text = content.replace(/<[^>]*>/g, '');
+    const wordCount = text.split(/\s+/).filter(word => word.length > 0).length;
+    return Math.max(1, Math.ceil(wordCount / 200));
+  }, [post, currentLang]);
+
+  // Extract table of contents from content (only h2 main headers)
+  const tableOfContents = useMemo((): TocItem[] => {
+    if (!post) return [];
+    const content = getLocalizedText(post.content, post.content_sq, post.content_it);
+    const headingRegex = /<h2[^>]*>([^<]+)<\/h2>/gi;
+    const toc: TocItem[] = [];
+    let match;
+    let index = 0;
+
+    while ((match = headingRegex.exec(content)) !== null) {
+      const text = match[1].trim();
+      const id = `heading-${index}`;
+      toc.push({ id, text, level: 2 });
+      index++;
+    }
+
+    return toc;
+  }, [post, currentLang]);
+
+  // Process content to add IDs to headings and insert CTA
+  const processedContent = useMemo(() => {
+    if (!post) return '';
+    let content = getLocalizedText(post.content, post.content_sq, post.content_it);
+    let index = 0;
+
+    // Add IDs only to h2 headings for ToC navigation
+    content = content.replace(/<h2([^>]*)>([^<]+)<\/h2>/gi, (match, attrs, text) => {
+      const id = `heading-${index}`;
+      index++;
+      return `<h2 id="${id}"${attrs}>${text}</h2>`;
+    });
+
+    // Insert CTA box after the second h2
+    const ctaBox = `
+      <div class="blog-cta-box">
+        <h4>${currentLang === 'it' ? 'Hai bisogno di certificazione?' : currentLang === 'sq' ? 'Keni nevojë për certifikim?' : 'Need Certification?'}</h4>
+        <p>${currentLang === 'it' ? 'Contattaci per una consulenza gratuita sui tuoi requisiti di certificazione.' : currentLang === 'sq' ? 'Na kontaktoni për një konsultë falas mbi kërkesat tuaja të certifikimit.' : 'Contact us for a free consultation on your certification requirements.'}</p>
+        <a href="${routes.contact[currentLang]}" class="blog-cta-btn">${currentLang === 'it' ? 'Richiedi Preventivo' : currentLang === 'sq' ? 'Kërko Ofertë' : 'Get a Quote'}</a>
+      </div>
+    `;
+
+    // Count total h2s first
+    const h2Matches = content.match(/<h2/gi);
+    const totalH2s = h2Matches ? h2Matches.length : 0;
+
+    // Insert CTA before the last h2 (usually "Conclusion")
+    if (totalH2s > 1) {
+      let h2Count = 0;
+      content = content.replace(/<h2/gi, (match) => {
+        h2Count++;
+        if (h2Count === totalH2s) {
+          return ctaBox + match;
+        }
+        return match;
+      });
+    }
+
+    return content;
+  }, [post, currentLang]);
 
   if (loading) {
     return (
@@ -114,10 +225,13 @@ const BlogPost: FC = () => {
   }
 
   const title = getLocalizedText(post.title, post.title_sq, post.title_it);
-  const content = getLocalizedText(post.content, post.content_sq, post.content_it);
   const categoryName = post.category
     ? getLocalizedText(post.category.name, post.category.name_sq, post.category.name_it)
     : null;
+
+  const readingTimeLabel = currentLang === 'it' ? 'min di lettura' : currentLang === 'sq' ? 'min lexim' : 'min read';
+  const tocTitle = currentLang === 'it' ? 'Indice' : currentLang === 'sq' ? 'Përmbajtja' : 'Table of Contents';
+  const relatedTitle = currentLang === 'it' ? 'Articoli Correlati' : currentLang === 'sq' ? 'Artikuj të Ngjashëm' : 'Related Articles';
 
   return (
     <div className="blog-page blog-post-page">
@@ -127,7 +241,12 @@ const BlogPost: FC = () => {
       </Helmet>
 
       {/* Post Header */}
-      <header className="blog-post-header">
+      <header
+        className="blog-post-header"
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(1, 67, 79, 0.92) 0%, rgba(8, 87, 102, 0.92) 100%), url('/Images/iso-certifications.jpg')`
+        }}
+      >
         <div className="container">
           <div className="blog-post-breadcrumb">
             <Link to={routes.blog[currentLang]}>{t('blog.title')}</Link>
@@ -138,7 +257,7 @@ const BlogPost: FC = () => {
           <div className="blog-post-meta">
             <span className="blog-post-author">{post.author}</span>
             <span className="blog-post-date">{formatDate(post.published_at)}</span>
-            <span className="blog-post-views">{post.view_count} {t('blog.views')}</span>
+            <span className="blog-post-reading-time">⏱ {readingTime} {readingTimeLabel}</span>
           </div>
         </div>
       </header>
@@ -152,18 +271,62 @@ const BlogPost: FC = () => {
         </div>
       )}
 
-      {/* Post Content */}
+      {/* Post Content with Sidebar */}
       <article className="blog-post-content">
         <div className="container">
-          <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: content }} />
+          <div className={`blog-post-layout ${tableOfContents.length > 2 ? 'has-toc' : ''}`}>
+            {/* Main Content */}
+            <div className="blog-post-main">
+              <div className="blog-post-body" dangerouslySetInnerHTML={{ __html: processedContent }} />
 
-          {/* Tags */}
-          {post.tags_list.length > 0 && (
-            <div className="blog-post-tags">
-              <span className="tags-label">{t('blog.tags')}:</span>
-              {post.tags_list.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
-              ))}
+              {/* Tags */}
+              {post.tags_list.length > 0 && (
+                <div className="blog-post-tags">
+                  <span className="tags-label">{t('blog.tags')}:</span>
+                  {post.tags_list.map((tag, index) => (
+                    <span key={index} className="tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Table of Contents Sidebar - Right Side */}
+            {tableOfContents.length > 2 && (
+              <aside className="blog-toc">
+                <h4>{tocTitle}</h4>
+                <nav>
+                  <ul>
+                    {tableOfContents.map((item) => (
+                      <li key={item.id}>
+                        <a href={`#${item.id}`}>{item.text}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </aside>
+            )}
+          </div>
+
+          {/* Related Posts */}
+          {relatedPosts.length > 0 && (
+            <div className="blog-related">
+              <h3>{relatedTitle}</h3>
+              <div className="blog-related-grid">
+                {relatedPosts.map((relPost) => (
+                  <Link key={relPost.id} to={getBlogPostUrl(relPost)} className="blog-related-card">
+                    <div className="blog-related-image">
+                      {relPost.featured_image_url ? (
+                        <img src={relPost.featured_image_url} alt={getLocalizedText(relPost.title, relPost.title_sq, relPost.title_it)} />
+                      ) : (
+                        <div className="blog-card-placeholder">
+                          <img src="/logo.svg" alt="MSC" className="blog-card-logo" />
+                        </div>
+                      )}
+                    </div>
+                    <h4>{getLocalizedText(relPost.title, relPost.title_sq, relPost.title_it)}</h4>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
 

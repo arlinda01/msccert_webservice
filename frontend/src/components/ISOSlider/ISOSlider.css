@@ -2,7 +2,7 @@
 .iso-slider-container {
   width: 100%;
   position: relative;
-  padding: 3rem 1rem;
+  padding: 0.5rem 1rem 3rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -257,7 +257,7 @@
 /* Tablet */
 @media (max-width: 992px) {
   .iso-slider-container {
-    padding: 1.5rem 0 3rem;
+    padding: 0.5rem 0 3rem;
   }
 
   .iso-slider-arrow {
@@ -274,7 +274,7 @@
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .iso-slider-container {
-    padding: 0.75rem 0 2rem;
+    padding: 0.25rem 0 2rem;
     flex-direction: column;
     gap: 1.5rem;
   }
@@ -360,7 +360,7 @@
 /* Very small mobile devices */
 @media (max-width: 480px) {
   .iso-slider-container {
-    padding: 0.5rem 0 1.5rem;
+    padding: 0.25rem 0 1.5rem;
   }
 
   .iso-swiper {

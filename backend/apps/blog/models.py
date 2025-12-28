@@ -48,11 +48,13 @@ class BlogPost(models.Model):
 
     # Albanian content
     title_sq = models.CharField(max_length=255, blank=True, help_text="Title in Albanian")
+    slug_sq = models.SlugField(max_length=255, blank=True, help_text="URL slug in Albanian")
     excerpt_sq = models.TextField(max_length=500, blank=True, help_text="Excerpt in Albanian")
     content_sq = models.TextField(blank=True, help_text="Content in Albanian")
 
     # Italian content
     title_it = models.CharField(max_length=255, blank=True, help_text="Title in Italian")
+    slug_it = models.SlugField(max_length=255, blank=True, help_text="URL slug in Italian")
     excerpt_it = models.TextField(max_length=500, blank=True, help_text="Excerpt in Italian")
     content_it = models.TextField(blank=True, help_text="Content in Italian")
 

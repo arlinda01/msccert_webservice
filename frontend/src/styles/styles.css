@@ -1,5 +1,5 @@
 /* ==================================
-   MSC CERTIFICATIONS - MAIN STYLES
+   MSC Certifications - MAIN STYLES
    ================================== */
 
 /* ==========================================================================
@@ -1395,7 +1395,8 @@ body {
   gap: 1.5rem;
 }
 
-.faq-question h4 {
+.faq-question h4,
+.faq-question h3 {
   color: #01434f;
   font-size: 1.15rem;
   font-weight: 700;
@@ -3346,8 +3347,9 @@ body {
     gap: 0.75rem;
   }
 
-  .faq-question h4 {
-    font-size: 1.05rem;
+  .faq-question h4,
+  .faq-question h3 {
+    font-size: 1rem;
   }
 
   .faq-answer {
@@ -3427,10 +3429,11 @@ body {
     display: block;
   }
 
-  .faq-question h4 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .faq-question h4,
+  .faq-question h3 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .section-cta-final h2 {
@@ -3736,8 +3739,9 @@ body {
     gap: 1rem;
   }
 
-  .faq-question h4 {
-    font-size: 1rem;
+  .faq-question h4,
+  .faq-question h3 {
+    font-size: 0.95rem;
   }
 
   .faq-icon {
@@ -3754,7 +3758,7 @@ body {
   }
 
   .faq-answer p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     line-height: 1.7;
   }
 
@@ -4750,5 +4754,192 @@ body {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+  }
+}
+
+/* ==========================================================================
+   MOBILE LAYOUT FIXES - CE Steps, Process Timeline, Headers
+   ========================================================================== */
+
+/* Mobile: Convert ce-steps-grid to single column (vertical rows) */
+@media (max-width: 768px) {
+  .ce-steps-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .ce-steps-grid > .ce-step-card {
+    width: 100%;
+  }
+
+  .ce-step-card {
+    padding: 1.5rem;
+  }
+
+  .ce-step-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ce-step-card p {
+    font-size: 0.9rem;
+  }
+
+  .ce-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+  }
+
+  /* Mobile: Convert process-timeline to single column (vertical rows) */
+  .process-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .process-step {
+    flex: none;
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+    margin-right: 0;
+  }
+
+  .process-step:last-child {
+    margin-right: 0;
+  }
+
+  .process-step h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .process-step h4 {
+    font-size: 1rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .process-step p {
+    font-size: 0.9rem;
+  }
+
+  .process-step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Fix section headers on mobile */
+  .section-title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  /* Fix inline h3 subtitle on service pages */
+  .section-white h3[style*="font-size: 1.5rem"],
+  .section-gray h3[style*="font-size: 1.5rem"] {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Fix h3 in benefit cards, step cards, etc */
+  .benefit-card h3,
+  .advantage-card h3,
+  .industry-focus-item h3 {
+    font-size: 1rem;
+  }
+
+  /* Fix footer CTA button */
+  .section-cta-final .btn-primary-large,
+  .cta-buttons .btn-primary-large {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-primary-large {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ce-steps-grid {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .ce-step-card {
+    padding: 1.25rem;
+  }
+
+  .ce-step-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .ce-step-card p {
+    font-size: 0.85rem;
+  }
+
+  .ce-step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+
+  .process-timeline {
+    gap: 1rem;
+  }
+
+  .process-step {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .process-step h3,
+  .process-step h4 {
+    font-size: 0.95rem;
+  }
+
+  .process-step p {
+    font-size: 0.85rem;
+  }
+
+  .process-step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+  }
+
+  .benefit-card h3,
+  .advantage-card h3,
+  .industry-focus-item h3 {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary-large {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.95rem;
   }
 }

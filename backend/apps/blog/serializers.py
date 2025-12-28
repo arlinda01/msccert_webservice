@@ -20,7 +20,8 @@ class BlogPostListSerializer(serializers.ModelSerializer):
         model = BlogPost
         fields = [
             'id', 'title', 'title_sq', 'title_it',
-            'slug', 'excerpt', 'excerpt_sq', 'excerpt_it',
+            'slug', 'slug_sq', 'slug_it',
+            'excerpt', 'excerpt_sq', 'excerpt_it',
             'featured_image_url', 'featured_image_alt',
             'category', 'tags_list', 'author',
             'published_at', 'view_count'
@@ -48,7 +49,8 @@ class BlogPostDetailSerializer(serializers.ModelSerializer):
         model = BlogPost
         fields = [
             'id', 'title', 'title_sq', 'title_it',
-            'slug', 'excerpt', 'excerpt_sq', 'excerpt_it',
+            'slug', 'slug_sq', 'slug_it',
+            'excerpt', 'excerpt_sq', 'excerpt_it',
             'content', 'content_sq', 'content_it',
             'featured_image_url', 'featured_image_alt',
             'category', 'tags_list', 'author',

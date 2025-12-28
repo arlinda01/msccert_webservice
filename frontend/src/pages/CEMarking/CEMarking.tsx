@@ -23,12 +23,6 @@ const CEMarking: FC = () => {
           <p className="iso-subtitle">
             {t('ceMarking.hero.subtitle')}
           </p>
-          <Link
-            to={routes.quoteForm[currentLang].replace(':isoCode', 'ce-marking')}
-            className="btn btn-primary btn-quote"
-          >
-            {t('common.getIsoQuote', { isoCode: 'CE Marking' })}
-          </Link>
         </div>
       </section>
 

@@ -26,10 +26,6 @@ const TechnologicalCard: FC = () => {
           <p className="iso-subtitle">
             {t('technologicalCard.hero.subtitle2')}
           </p>
-          <div className="hero-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('technologicalCard.hero.cta1')}</Link>
-            <Link to={routes.contact[currentLang]} className="btn btn-secondary">{t('technologicalCard.hero.cta2')}</Link>
-          </div>
         </div>
       </section>
 
@@ -37,7 +33,7 @@ const TechnologicalCard: FC = () => {
       <section className="section section-white">
         <div className="container">
           <h2 className="section-title">{t('technologicalCard.whatIs.title')}</h2>
-          <h3 style={{ fontSize: '1.5rem', color: '#01434f', marginBottom: '1.5rem' }}>
+          <h3 style={{ fontSize: '1.25rem', color: '#01434f', marginBottom: '1.5rem', textAlign: 'center' }}>
             {t('technologicalCard.whatIs.subtitle')}
           </h3>
           <p className="iso-text">

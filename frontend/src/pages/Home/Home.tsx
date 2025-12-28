@@ -22,63 +22,63 @@ const Home: FC = () => {
       icon: "FaAward" as const,
       title: t('home.certificationPortfolio.iso9001.title'),
       description: t('home.certificationPortfolio.iso9001.description'),
-      benefits: ["Global Recognition", "Improved Efficiency", "Stronger Customer Loyalty"]
+      benefits: [t('home.certificationPortfolio.iso9001.benefit1'), t('home.certificationPortfolio.iso9001.benefit2'), t('home.certificationPortfolio.iso9001.benefit3')]
     },
     {
       to: routes.iso45001[currentLang],
       icon: "FaHardHat" as const,
       title: t('home.certificationPortfolio.iso45001.title'),
       description: t('home.certificationPortfolio.iso45001.description'),
-      benefits: ["Reduce Workplace Accidents", "Legal Compliance", "Lower Insurance Costs"]
+      benefits: [t('home.certificationPortfolio.iso45001.benefit1'), t('home.certificationPortfolio.iso45001.benefit2'), t('home.certificationPortfolio.iso45001.benefit3')]
     },
     {
       to: routes.iso14001[currentLang],
       icon: "FaLeaf" as const,
       title: t('home.certificationPortfolio.iso14001.title'),
       description: t('home.certificationPortfolio.iso14001.description'),
-      benefits: ["Reduce Environmental Impact", "Cost Savings", "Regulatory Compliance"]
+      benefits: [t('home.certificationPortfolio.iso14001.benefit1'), t('home.certificationPortfolio.iso14001.benefit2'), t('home.certificationPortfolio.iso14001.benefit3')]
     },
     {
       to: routes.iso27001[currentLang],
       icon: "FaLock" as const,
       title: t('home.certificationPortfolio.iso27001.title'),
       description: t('home.certificationPortfolio.iso27001.description'),
-      benefits: ["Data Protection", "GDPR Compliance", "Enhanced Cyber Security"]
+      benefits: [t('home.certificationPortfolio.iso27001.benefit1'), t('home.certificationPortfolio.iso27001.benefit2'), t('home.certificationPortfolio.iso27001.benefit3')]
     },
     {
       to: routes.iso22301[currentLang],
       icon: "FaShieldAlt" as const,
       title: t('home.certificationPortfolio.iso22301.title'),
       description: t('home.certificationPortfolio.iso22301.description'),
-      benefits: ["Minimize Downtime", "Protect Revenue", "Maintain Critical Operations"]
+      benefits: [t('home.certificationPortfolio.iso22301.benefit1'), t('home.certificationPortfolio.iso22301.benefit2'), t('home.certificationPortfolio.iso22301.benefit3')]
     },
     {
       to: routes.iso37001[currentLang],
       icon: "FaCertificate" as const,
       title: t('home.certificationPortfolio.iso37001.title'),
       description: t('home.certificationPortfolio.iso37001.description'),
-      benefits: ["Reduce Legal Risk", "Clean Reputation", "Tender Qualification"]
+      benefits: [t('home.certificationPortfolio.iso37001.benefit1'), t('home.certificationPortfolio.iso37001.benefit2'), t('home.certificationPortfolio.iso37001.benefit3')]
     },
     {
       to: routes.haccp[currentLang],
       icon: "FaUtensils" as const,
       title: t('home.certificationPortfolio.iso22000.title'),
       description: t('home.certificationPortfolio.iso22000.description'),
-      benefits: ["HORECA Compliance", "Supply Chain Security", "Consumer Trust"]
+      benefits: [t('home.certificationPortfolio.iso22000.benefit1'), t('home.certificationPortfolio.iso22000.benefit2'), t('home.certificationPortfolio.iso22000.benefit3')]
     },
     {
       to: routes.iso39001[currentLang],
       icon: "FaCar" as const,
       title: t('home.certificationPortfolio.iso39001.title'),
       description: t('home.certificationPortfolio.iso39001.description'),
-      benefits: ["Reduce Fleet Accidents", "Lower Insurance Premiums", "Improve Driver Safety"]
+      benefits: [t('home.certificationPortfolio.iso39001.benefit1'), t('home.certificationPortfolio.iso39001.benefit2'), t('home.certificationPortfolio.iso39001.benefit3')]
     },
     {
       to: routes.iso50001[currentLang],
       icon: "FaBolt" as const,
       title: t('home.certificationPortfolio.iso50001.title'),
       description: t('home.certificationPortfolio.iso50001.description'),
-      benefits: ["Reduce Utility Bills", "Measurable Savings", "Environmental Performance"]
+      benefits: [t('home.certificationPortfolio.iso50001.benefit1'), t('home.certificationPortfolio.iso50001.benefit2'), t('home.certificationPortfolio.iso50001.benefit3')]
     }
   ];
 
@@ -145,12 +145,12 @@ const Home: FC = () => {
               </div>
               <span>{t('home.heroFeatures.fastCertification')}</span>
             </div>
-            <div className="hero-feature-item">
-              <div className="hero-feature-icon">
-                <FaIcons.FaGlobeAmericas />
-              </div>
-              <span>{t('home.heroFeatures.localSupport')}</span>
-            </div>
+            {/*<div className="hero-feature-item">*/}
+            {/*  <div className="hero-feature-icon">*/}
+            {/*    <FaIcons.FaGlobeAmericas />*/}
+            {/*  </div>*/}
+            {/*  <span>{t('home.heroFeatures.localSupport')}</span>*/}
+            {/*</div>*/}
           </div>
 
         </div>

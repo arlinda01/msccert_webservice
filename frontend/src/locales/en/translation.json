@@ -21,7 +21,7 @@
     "ceMarking": "CE Marking",
     "energyEfficiency": "Energy Efficiency Programs",
     "staffTraining": "Staff Training",
-    "professionalCards": "IDCP ID Card Professional",
+    "professionalCards": "IDCP Professional Card",
     "technologicalCard": "Technological Card",
     "equipmentEvaluation": "Equipment Evaluation",
     "blog": "Blog",
@@ -62,38 +62,38 @@
   },
   "meta": {
     "home": {
-      "title": "ISO Certification & Compliance Audits | MSC CERTIFICATIONS",
-      "description": "Accredited ISO certification services tailored to your industry. Reduce risks, increase efficiency and earn market trust with MSC CERTIFICATIONS. Start with a free assessment.",
+      "title": "ISO Certification & Compliance Audits | MSC Certifications",
+      "description": "Accredited ISO certification services tailored to your industry. Reduce risks, increase efficiency and earn market trust with MSC Certifications. Start with a free assessment.",
       "keywords": "ISO certification, compliance audit, accredited certification, ISO audit Albania, ISO 9001, ISO 45001, ISO 14001, MSC Certifications"
     },
     "about": {
-      "title": "About MSC CERTIFICATIONS | DPA Accredited ISO Certification Experts",
-      "description": "MSC CERTIFICATIONS — a DPA accredited certification body (IAF & EA member). Operating since 2024, with ISO services, CE Marking and globally recognized audits.",
+      "title": "About MSC Certifications | DPA Accredited ISO Certification Experts",
+      "description": "MSC Certifications, a DPA accredited certification body (IAF & EA member). Operating since 2024, with ISO services, CE Marking and globally recognized audits.",
       "keywords": "MSC Certifications, DPA Albania, international accreditation, IAF, EA, ISO certification, compliance audit, accredited certification body, CE Marking, Albania certification"
     },
     "missionVision": {
-      "title": "Mission & Vision | MSC CERTIFICATIONS",
-      "description": "MSC CERTIFICATIONS mission is to empower businesses to achieve international excellence through accredited certification, transparency and professionalism.",
+      "title": "Mission & Vision | MSC Certifications",
+      "description": "MSC Certifications mission is to empower businesses to achieve international excellence through accredited certification, transparency and professionalism.",
       "keywords": "MSC Certifications mission, MSC Certifications vision, company values, ISO certification, international accreditation, certification body, professional integrity, ISO training, continuous improvement"
     },
     "codeOfEthics": {
-      "title": "Code of Ethics | MSC CERTIFICATIONS",
-      "description": "MSC CERTIFICATIONS Code of Ethics defines the principles of integrity, impartiality and professionalism in every audit, certification and collaboration.",
+      "title": "Code of Ethics | MSC Certifications",
+      "description": "MSC Certifications Code of Ethics defines the principles of integrity, impartiality and professionalism in every audit, certification and collaboration.",
       "keywords": "code of ethics, professional ethics, integrity, impartiality, confidentiality, certification body, audit ethics, conduct rules, legal compliance, MSC Certifications"
     },
     "qualityPolicy": {
-      "title": "Quality Policy | MSC CERTIFICATIONS",
-      "description": "MSC CERTIFICATIONS guarantees quality, impartiality and professionalism in compliance with ISO/IEC 17021 and DPA, IAF and EA requirements, with focus on continuous improvement.",
+      "title": "Quality Policy | MSC Certifications",
+      "description": "MSC Certifications guarantees quality, impartiality and professionalism in compliance with ISO/IEC 17021 and DPA, IAF and EA requirements, with focus on continuous improvement.",
       "keywords": "quality policy, ISO/IEC 17021, DPA Albania, international accreditation, certification body, quality audit, impartiality, integrity, continuous improvement, quality management"
     },
     "accreditation": {
-      "title": "Accreditation | MSC CERTIFICATIONS | DPA, IAF & EA",
-      "description": "MSC CERTIFICATIONS is accredited by DPA (IAF & EA member). ISO/IEC 17021 accreditation guarantees reliable, impartial and globally recognized certification.",
+      "title": "Accreditation | MSC Certifications | DPA, IAF & EA",
+      "description": "MSC Certifications is accredited by DPA (IAF & EA member). ISO/IEC 17021 accreditation guarantees reliable, impartial and globally recognized certification.",
       "keywords": "accreditation, DPA Albania, IAF, EA, ISO/IEC 17021, accredited certification body, international certification, impartiality, reliability, MSC Certifications"
     },
     "faq": {
-      "title": "Frequently Asked Questions | ISO Certification & Compliance | MSC CERTIFICATIONS",
-      "description": "Frequently asked questions about ISO certification, CE Marking and audits. Learn how the process works, costs and benefits with MSC CERTIFICATIONS.",
+      "title": "Frequently Asked Questions | ISO Certification & Compliance | MSC Certifications",
+      "description": "Frequently asked questions about ISO certification, CE Marking and audits. Learn how the process works, costs and benefits with MSC Certifications.",
       "keywords": "FAQ, ISO certification, ISO audit, CE Marking, certification body, DPA accreditation, international certification, compliance audit, ISO Albania"
     },
     "termsConditions": {
@@ -104,7 +104,7 @@
   "home": {
     "hero": {
       "title": "Your Partner for ISO Certification, Compliance, and Risk Management",
-      "subtitle": "Secure your business future. MSC CERTIFICATIONS provides accredited, value-added ISO certification services, helping you minimize risk, increase operational efficiency, and earn market trust."
+      "subtitle": "Secure your business future. MSC Certifications provides accredited, value-added ISO certification services, helping you minimize risk, increase operational efficiency, and earn market trust."
     },
     "heroFeatures": {
       "globallyAccredited": "Globally Accredited",
@@ -114,7 +114,7 @@
     },
     "mscDifference": {
       "title": "The MSC Difference: Why Choose Our Specialized Audits?",
-      "subtitle": "MSC CERTIFICATIONS guarantees deep, contextual expertise within your specific industry.",
+      "subtitle": "MSC Certifications guarantees deep, contextual expertise within your specific industry.",
       "specializedAuditors": {
         "title": "Specialized Auditors",
         "description": "We assign auditors by sector and certification type, ensuring findings are real and applicable to your operations."
@@ -136,39 +136,66 @@
       "specializedCompliance": "Specialized Compliance and Sector Focus",
       "iso9001": {
         "title": "ISO 9001 (Quality Management)",
-        "description": "The framework for consistent operations, error reduction and qualification for major contracts and public tenders."
+        "description": "The framework for consistent operations, error reduction and qualification for major contracts and public tenders.",
+        "benefit1": "Global Recognition",
+        "benefit2": "Improved Efficiency",
+        "benefit3": "Stronger Customer Loyalty"
       },
       "iso45001": {
         "title": "ISO 45001 (Occupational Health & Safety)",
-        "description": "International standard for accident prevention and staff protection, reducing legal risks and insurance costs."
+        "description": "International standard for accident prevention and staff protection, reducing legal risks and insurance costs.",
+        "benefit1": "Reduce Workplace Accidents",
+        "benefit2": "Legal Compliance",
+        "benefit3": "Lower Insurance Costs"
       },
       "iso14001": {
         "title": "ISO 14001 (Environmental Management)",
-        "description": "Demonstrates social responsibility, legal compliance and long-term cost reduction through resource management."
+        "description": "Demonstrates social responsibility, legal compliance and long-term cost reduction through resource management.",
+        "benefit1": "Reduce Environmental Impact",
+        "benefit2": "Cost Savings",
+        "benefit3": "Regulatory Compliance"
       },
       "iso27001": {
         "title": "ISO/IEC 27001 (Information Security)",
-        "description": "Data and IT infrastructure protection, ensuring GDPR compliance and full client trust."
+        "description": "Data and IT infrastructure protection, ensuring GDPR compliance and full client trust.",
+        "benefit1": "Data Protection",
+        "benefit2": "GDPR Compliance",
+        "benefit3": "Enhanced Cyber Security"
       },
       "iso22301": {
         "title": "ISO 22301 (Business Continuity)",
-        "description": "Ensures your organization recovers quickly after disruptions, minimizing financial losses."
+        "description": "Ensures your organization recovers quickly after disruptions, minimizing financial losses.",
+        "benefit1": "Minimize Downtime",
+        "benefit2": "Protect Revenue",
+        "benefit3": "Maintain Critical Operations"
       },
       "iso37001": {
         "title": "ISO 37001 (Anti-Bribery)",
-        "description": "System for preventing and detecting corruption — essential for clean reputation and public tender participation."
+        "description": "System for preventing and detecting corruption, essential for clean reputation and public tender participation.",
+        "benefit1": "Reduce Legal Risk",
+        "benefit2": "Clean Reputation",
+        "benefit3": "Tender Qualification"
       },
       "iso22000": {
         "title": "ISO 22000 (Food Safety)",
-        "description": "Ensures traceability and quality for entry into regulated markets and HORECA collaboration."
+        "description": "Ensures traceability and quality for entry into regulated markets and HORECA collaboration.",
+        "benefit1": "HORECA Compliance",
+        "benefit2": "Supply Chain Security",
+        "benefit3": "Consumer Trust"
       },
       "iso39001": {
         "title": "ISO 39001 (Road Traffic Safety)",
-        "description": "Reduces accidents and operating costs for companies with vehicle fleets."
+        "description": "Reduces accidents and operating costs for companies with vehicle fleets.",
+        "benefit1": "Reduce Fleet Accidents",
+        "benefit2": "Lower Insurance Premiums",
+        "benefit3": "Improve Driver Safety"
       },
       "iso50001": {
         "title": "ISO 50001 (Energy Management)",
-        "description": "Optimizes energy consumption and significantly reduces bills, demonstrating measurable performance."
+        "description": "Optimizes energy consumption and significantly reduces bills, demonstrating measurable performance.",
+        "benefit1": "Reduce Utility Bills",
+        "benefit2": "Measurable Savings",
+        "benefit3": "Environmental Performance"
       },
       "ceMarking": {
         "title": "CE Marking (Product Compliance)",
@@ -230,16 +257,16 @@
         "answer": "The certification price depends on the type or ISO systems you want to integrate (a single standard or several integrated standards together). Their complexity combined with the duration of the audit process determines the monetary value."
       },
       "q3": {
-        "question": "Does MSC CERTIFICATIONS offer consultancy to implement ISO?",
-        "answer": "No. MSC CERTIFICATIONS, as a certification body, does not offer consultancy for implementing management systems for its clients, to maintain impartiality and compliance with ISO/IEC 17021 requirements. We can explain standard requirements and audit findings, but not build the system for you."
+        "question": "Does MSC Certifications offer consultancy to implement ISO?",
+        "answer": "No. MSC Certifications, as a certification body, does not offer consultancy for implementing management systems for its clients, to maintain impartiality and compliance with ISO/IEC 17021 requirements. We can explain standard requirements and audit findings, but not build the system for you."
       },
       "q4": {
-        "question": "Does MSC CERTIFICATIONS offer integrated audits for multiple standards simultaneously?",
+        "question": "Does MSC Certifications offer integrated audits for multiple standards simultaneously?",
         "answer": "Yes. When reasonable and possible, we combine auditing of multiple standards into an integrated audit, to avoid duplication and reduce the operational burden for the client."
       },
       "q5": {
         "question": "Can I transfer my certificate from another certification body?",
-        "answer": "Yes, MSC CERTIFICATIONS can accept certificate transfers from other accredited bodies, if certain conditions are met (validity of existing certificate, nonconformity status, audit documentation, etc.). The transfer process is evaluated case by case."
+        "answer": "Yes, MSC Certifications can accept certificate transfers from other accredited bodies, if certain conditions are met (validity of existing certificate, nonconformity status, audit documentation, etc.). The transfer process is evaluated case by case."
       },
       "q6": {
         "question": "Can the audit be conducted remotely (online)?",
@@ -248,7 +275,7 @@
     },
     "cta": {
       "title": "Start Your Journey Towards Quality and Trust",
-      "description": "Join dozens of companies in the region that trust MSC CERTIFICATIONS to transform the way they operate. We offer a free, no-obligation assessment to identify the ISO systems that deliver the highest value and reduce the most risk for your business.",
+      "description": "Join dozens of companies in the region that trust MSC Certifications to transform the way they operate. We offer a free, no-obligation assessment to identify the ISO systems that deliver the highest value and reduce the most risk for your business.",
       "accreditedNote": "All our certificates are internationally accredited, ensuring global recognition."
     }
   },
@@ -289,15 +316,15 @@
     }
   },
   "about": {
-    "title": "ABOUT MSC CERTIFICATIONS",
+    "title": "ABOUT MSC Certifications",
     "subtitle": "Your Trusted Partner in International Standards and Compliance",
-    "intro": "In a world where quality, safety, and compliance define business success, MSC CERTIFICATIONS stands as your reliable partner in achieving internationally recognized standards.",
-    "description1": "MSC CERTIFICATIONS has been operating since 2024 and is an accredited certification and assessment body by the General Directorate of Accreditation (DPA) — the official national accreditation institution in Albania, which is a full member of IAF (International Accreditation Forum) and European Accreditation (EA).",
-    "description2": "This accreditation ensures that all certificates issued by MSC CERTIFICATIONS are internationally recognized, in compliance with global standards of quality, impartiality and reliability.",
+    "intro": "In a world where quality, safety, and compliance define business success, MSC Certifications stands as your reliable partner in achieving internationally recognized standards.",
+    "description1": "MSC Certifications has been operating since 2024 and is an accredited certification and assessment body by the General Directorate of Accreditation (DPA), the official national accreditation institution in Albania, which is a full member of IAF (International Accreditation Forum) and European Accreditation (EA).",
+    "description2": "This accreditation ensures that all certificates issued by MSC Certifications are internationally recognized, in compliance with global standards of quality, impartiality and reliability.",
     "description3": "We offer a complete portfolio of services in ISO certification, CE Marking and technical assessments, always with professionalism, transparency and local expertise.",
     "whoWeAre": {
       "title": "Who We Are",
-      "description1": "MSC CERTIFICATIONS is an accredited organization that provides inspection, audit and certification services according to international standards.",
+      "description1": "MSC Certifications is an accredited organization that provides inspection, audit and certification services according to international standards.",
       "description2": "Our mission is to help organizations meet global compliance requirements, improve operational efficiency and strengthen their competitive position in the market.",
       "description3": "Through a team of qualified auditors and technical experts with many years of international experience, we provide reliable, objective and practically applicable services."
     },
@@ -321,7 +348,7 @@
       }
     },
     "whyChooseUs": {
-      "title": "Why Choose MSC CERTIFICATIONS",
+      "title": "Why Choose MSC Certifications",
       "reason1": "Sector-specific specialized expertise",
       "reason2": "Fair and transparent pricing",
       "reason3": "Efficient processes according to international rules",
@@ -329,14 +356,14 @@
     },
     "commitment": {
       "title": "Our Commitment",
-      "description": "Since 2024, MSC CERTIFICATIONS has helped companies and institutions operate with confidence, quality and integrity, turning complex standards into clear and measurable results."
+      "description": "Since 2024, MSC Certifications has helped companies and institutions operate with confidence, quality and integrity, turning complex standards into clear and measurable results."
     }
   },
   "codeOfEthics": {
     "title": "Code of Ethics",
     "intro": {
       "title": "Ethical Principles",
-      "description": "Ethics and integrity are at the core of how MSC CERTIFICATIONS operates. Our Code of Ethics defines the standards of conduct expected from all employees, auditors and representatives, ensuring impartiality, confidentiality and respect in every professional collaboration."
+      "description": "Ethics and integrity are at the core of how MSC Certifications operates. Our Code of Ethics defines the standards of conduct expected from all employees, auditors and representatives, ensuring impartiality, confidentiality and respect in every professional collaboration."
     },
     "commitments": {
       "title": "Our Ethical Commitments",
@@ -361,7 +388,7 @@
       "title": "Legal Compliance",
       "description": "Activity is conducted in compliance with national and international legislation in force, accreditation requirements, relevant standards and rules for personal data protection."
     },
-    "conclusion": "By following these principles, MSC CERTIFICATIONS guarantees reliability, professional integrity and transparency in every project, audit and certification it performs.",
+    "conclusion": "By following these principles, MSC Certifications guarantees reliability, professional integrity and transparency in every project, audit and certification it performs.",
     "cta": {
       "title": "Work with a Partner You Can Trust",
       "description": "Experience ethical, transparent, and professional certification services."
@@ -371,14 +398,14 @@
     "title": "Quality Policy",
     "commitment": {
       "title": "Commitment to Quality",
-      "description1": "At MSC CERTIFICATIONS, we are committed to providing accredited certification and assessment services that meet the highest standards of quality, impartiality and professionalism.",
+      "description1": "At MSC Certifications, we are committed to providing accredited certification and assessment services that meet the highest standards of quality, impartiality and professionalism.",
       "description2": "We believe that quality is not a goal, but a continuous improvement process. Through our quality policy, we ensure that every service is in compliance with the requirements of international accreditation bodies and offers measurable value and real reliability for our clients."
     },
     "objectives": {
       "title": "Quality Objectives",
       "compliance": {
         "title": "1. Compliance with International Standards",
-        "description": "All certification and audit activities are conducted in compliance with ISO/IEC 17021 and the accreditation requirements set by the General Directorate of Accreditation (DPA), IAF and EA. This guarantees that certificates issued by MSC CERTIFICATIONS are valid and globally recognized."
+        "description": "All certification and audit activities are conducted in compliance with ISO/IEC 17021 and the accreditation requirements set by the General Directorate of Accreditation (DPA), IAF and EA. This guarantees that certificates issued by MSC Certifications are valid and globally recognized."
       },
       "competence": {
         "title": "2. Personnel Competence",
@@ -395,8 +422,8 @@
     },
     "continuousImprovement": {
       "title": "Continuous Improvement",
-      "description": "MSC CERTIFICATIONS commits to continuously monitor, analyze and improve the quality management system, to ensure it remains effective, transparent and compliant with the latest international standards.",
-      "note": "This commitment ensures trust, objectivity and added value for every client and partner who chooses MSC CERTIFICATIONS."
+      "description": "MSC Certifications commits to continuously monitor, analyze and improve the quality management system, to ensure it remains effective, transparent and compliant with the latest international standards.",
+      "note": "This commitment ensures trust, objectivity and added value for every client and partner who chooses MSC Certifications."
     },
     "cta": {
       "title": "Experience Our Quality Commitment",
@@ -404,11 +431,11 @@
     }
   },
   "accreditation": {
-    "title": "Our Accreditation — Your Guarantee of Reliability",
+    "title": "Our Accreditation, Your Guarantee of Reliability",
     "subtitle": "Your Guarantee of Credibility and Global Recognition",
     "intro": {
-      "description1": "MSC CERTIFICATIONS operates under the official accreditation of the General Directorate of Accreditation (DPA) — the national institution responsible for accreditation in Albania.",
-      "description2": "DPA is a full member of IAF (International Accreditation Forum) and EA (European Cooperation for Accreditation). This means that all certificates issued by MSC CERTIFICATIONS are internationally recognized, in compliance with mutual recognition agreements (MLA/MRA).",
+      "description1": "MSC Certifications operates under the official accreditation of the General Directorate of Accreditation (DPA), the national institution responsible for accreditation in Albania.",
+      "description2": "DPA is a full member of IAF (International Accreditation Forum) and EA (European Cooperation for Accreditation). This means that all certificates issued by MSC Certifications are internationally recognized, in compliance with mutual recognition agreements (MLA/MRA).",
       "description3": "Accreditation verifies our technical competence, impartiality and compliance with ISO/IEC 17021 requirements (Management System Certification) and other relevant international standards. It is your guarantee for professionalism, transparency and certified quality."
     },
     "importance": {
@@ -430,7 +457,7 @@
         "description": "Periodic assessments by accreditation bodies ensure our systems are always effective, transparent and compliant with the latest ISO and IAF standards."
       }
     },
-    "conclusion": "MSC CERTIFICATIONS is proud to maintain its internationally accredited status — your guarantee for quality, professionalism and global reliability.",
+    "conclusion": "MSC Certifications is proud to maintain its internationally accredited status, your guarantee for quality, professionalism and global reliability.",
     "cta": {
       "title": "Get Globally Recognized Certification",
       "description": "Partner with an accredited certification body trusted worldwide."
@@ -438,14 +465,14 @@
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",
-    "subtitle": "MSC CERTIFICATIONS — Your Questions Answered",
-    "intro": "At MSC CERTIFICATIONS, we believe clarity builds trust. Below you will find answers to the most common questions about ISO certification, CE Marking and compliance services we offer. If you don't find your question here, don't hesitate to contact us — our team is always ready to help.",
+    "subtitle": "MSC Certifications, Your Questions Answered",
+    "intro": "At MSC Certifications, we believe clarity builds trust. Below you will find answers to the most common questions about ISO certification, CE Marking and compliance services we offer. If you don't find your question here, don't hesitate to contact us, our team is always ready to help.",
     "sections": {
       "general": {
         "title": "General Questions",
         "q1": {
-          "question": "1. What does MSC CERTIFICATIONS do?",
-          "answer": "MSC CERTIFICATIONS is an accredited certification and assessment body by DPA, offering ISO certification, CE Marking and specialized compliance services. We conduct audits, assessments and inspections to ensure your organization meets international standards for quality, safety, environment and legal compliance."
+          "question": "1. What does MSC Certifications do?",
+          "answer": "MSC Certifications is an accredited certification and assessment body by DPA, offering ISO certification, CE Marking and specialized compliance services. We conduct audits, assessments and inspections to ensure your organization meets international standards for quality, safety, environment and legal compliance."
         },
         "q2": {
           "question": "2. What industries do you cover?",
@@ -457,11 +484,11 @@
         },
         "q4": {
           "question": "4. What is the difference between certification and consultancy?",
-          "answer": "Certification is an independent assessment that confirms your compliance with a standard. Consultancy involves building the system and preparing for certification. MSC CERTIFICATIONS offers only auditing and certification services, not consultancy, to maintain impartiality and compliance with international accreditation rules."
+          "answer": "Certification is an independent assessment that confirms your compliance with a standard. Consultancy involves building the system and preparing for certification. MSC Certifications offers only auditing and certification services, not consultancy, to maintain impartiality and compliance with international accreditation rules."
         },
         "q5": {
           "question": "5. Are your certificates internationally recognized?",
-          "answer": "Yes. All certificates issued by MSC CERTIFICATIONS are internationally accredited by DPA, member of IAF (International Accreditation Forum) and EA (European Accreditation), ensuring global recognition by authorities, clients and tendering bodies."
+          "answer": "Yes. All certificates issued by MSC Certifications are internationally accredited by DPA, member of IAF (International Accreditation Forum) and EA (European Accreditation), ensuring global recognition by authorities, clients and tendering bodies."
         }
       },
       "isoCertification": {
@@ -506,7 +533,7 @@
         },
         "q5": {
           "question": "14. Do you perform equipment and technological line assessments?",
-          "answer": "Yes. We conduct inspections and technical assessments of production lines, machinery and equipment to assess condition, efficiency and safety — essential for modernization or insurance."
+          "answer": "Yes. We conduct inspections and technical assessments of production lines, machinery and equipment to assess condition, efficiency and safety, essential for modernization or insurance."
         }
       },
       "processPractices": {
@@ -521,7 +548,7 @@
         },
         "q3": {
           "question": "17. Do you operate internationally?",
-          "answer": "Yes. Although based in Albania, MSC CERTIFICATIONS offers services throughout the region and beyond, through a network of internationally accredited auditors."
+          "answer": "Yes. Although based in Albania, MSC Certifications offers services throughout the region and beyond, through a network of internationally accredited auditors."
         },
         "q4": {
           "question": "18. How can I know which ISO standard or compliance service my business needs?",
@@ -540,15 +567,15 @@
     "sections": {
       "introduction": {
         "title": "1. Introduction",
-        "content": "This website is operated by MSC CERTIFICATIONS (\"we\", \"our\", \"our company\"). By accessing and using this website, you agree to respect these Terms and Conditions of Use. If you do not agree with any part of these terms, please do not use our website or our services."
+        "content": "This website is operated by MSC Certifications (\"we\", \"our\", \"our company\"). By accessing and using this website, you agree to respect these Terms and Conditions of Use. If you do not agree with any part of these terms, please do not use our website or our services."
       },
       "services": {
         "title": "2. Services",
-        "content": "MSC CERTIFICATIONS offers ISO certification, compliance auditing and related consulting services. All descriptions, materials or offers published on this website are for informational purposes and do not constitute a legally binding contract or offer. We reserve the right to change, update or remove content at any time without notice."
+        "content": "MSC Certifications offers ISO certification, compliance auditing and related consulting services. All descriptions, materials or offers published on this website are for informational purposes and do not constitute a legally binding contract or offer. We reserve the right to change, update or remove content at any time without notice."
       },
       "intellectualProperty": {
         "title": "3. Intellectual Property Rights",
-        "content": "All content on this website, including text, images, graphics, videos and logos, is the property of MSC CERTIFICATIONS or our licensors. Copying, distributing or modifying content without our written permission is strictly prohibited. You may download or print parts of the content only for personal and non-commercial use, preserving copyright notices."
+        "content": "All content on this website, including text, images, graphics, videos and logos, is the property of MSC Certifications or our licensors. Copying, distributing or modifying content without our written permission is strictly prohibited. You may download or print parts of the content only for personal and non-commercial use, preserving copyright notices."
       },
       "websiteUsage": {
         "title": "4. Website Usage",
@@ -556,7 +583,7 @@
       },
       "liability": {
         "title": "5. Limitation of Liability",
-        "content": "MSC CERTIFICATIONS is not responsible for any direct, indirect, accidental or consequential damages arising from: Use or inability to use this website; Technical errors, lack of information or service interruption; Actions based on information published on this website. We strive to ensure accuracy, but do not guarantee that content is always complete or up to date."
+        "content": "MSC Certifications is not responsible for any direct, indirect, accidental or consequential damages arising from: Use or inability to use this website; Technical errors, lack of information or service interruption; Actions based on information published on this website. We strive to ensure accuracy, but do not guarantee that content is always complete or up to date."
       },
       "externalLinks": {
         "title": "6. External Links",
@@ -588,7 +615,7 @@
   },
   "iso9001": {
     "meta": {
-      "title": "ISO 9001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 9001 Certification | MSC Certifications",
       "description": "Achieve ISO 9001 with MSC Certifications. Boost global credibility, improve efficiency, and win more tenders. Start your QMS assessment today.",
       "keywords": "ISO 9001 certification, QMS audit, ISO 9001 accredited, quality management system, ISO certification Albania, ISO 9001 benefits, quality auditor, ISO 9001 process, MSC Certifications"
     },
@@ -680,7 +707,7 @@
   },
   "iso39001": {
     "meta": {
-      "title": "ISO 39001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 39001 Certification | MSC Certifications",
       "description": "Achieve ISO 39001 certification for road traffic safety management. Reduce accidents, lower costs and improve fleet safety with MSC Certifications.",
       "keywords": "ISO 39001 certification, road safety, fleet management, RTS management system, ISO 39001 Albania, traffic safety audit"
     },
@@ -690,7 +717,7 @@
     },
     "whatIs": {
       "title": "What is ISO 39001?",
-      "description": "ISO 39001 is the international standard for Road Traffic Safety Management Systems (RTS). It helps organizations reduce deaths and serious injuries resulting from road accidents — whether through fleet operations, employee movements or the supply chain.",
+      "description": "ISO 39001 is the international standard for Road Traffic Safety Management Systems (RTS). It helps organizations reduce deaths and serious injuries resulting from road accidents, whether through fleet operations, employee movements or the supply chain.",
       "roleBox": {
         "title": "Our Role as the Accredited Certification Body",
         "description": "We independently audit your road safety controls, verifying compliance with ISO 39001 and issuing internationally recognized certification."
@@ -768,7 +795,7 @@
   },
   "iso45001": {
     "meta": {
-      "title": "ISO 45001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 45001 Certification | MSC Certifications",
       "description": "Get ISO 45001 certification for occupational health and safety. Reduce accidents, meet legal requirements and strengthen safety culture with MSC Certifications.",
       "keywords": "ISO 45001 certification, workplace safety, health and safety, OH&S, accredited certification, workplace safety audit, MSC Certifications"
     },
@@ -856,7 +883,7 @@
   },
   "iso27001": {
     "meta": {
-      "title": "ISO 27001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 27001 Certification | MSC Certifications",
       "description": "Get ISO 27001 certification for information security. Protect data, meet GDPR and strengthen client trust with MSC Certifications.",
       "keywords": "ISO 27001 certification, information security, ISMS, data protection, GDPR, accredited certification, cybersecurity"
     },
@@ -936,7 +963,7 @@
       "step5Detail": "(Year 3rd)"
     },
     "cta": {
-      "title": "Protect Data — Strengthen Trust",
+      "title": "Protect Data, Strengthen Trust",
       "description": "Secure information. Meet regulations. Gain competitive advantage.",
       "button": "Start ISO 27001 Assessment",
       "footer": "Our certificates are internationally accredited and globally accepted."
@@ -944,7 +971,7 @@
   },
   "iso50001": {
     "meta": {
-      "title": "ISO 50001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 50001 Certification | MSC Certifications",
       "description": "Get ISO 50001 certification for energy management. Lower costs, optimize consumption and improve environmental performance with MSC Certifications.",
       "keywords": "ISO 50001 certification, energy management, energy efficiency, EnMS, accredited certification, energy audit"
     },
@@ -1024,7 +1051,7 @@
       "step5Detail": "(Year 3rd)"
     },
     "cta": {
-      "title": "Reduce Costs — Improve Performance",
+      "title": "Reduce Costs, Improve Performance",
       "description": "Optimize energy. Lower expenses. Show environmental responsibility.",
       "button": "Start ISO 50001 Assessment",
       "footer": "Our certificates are internationally accredited and globally recognized."
@@ -1032,7 +1059,7 @@
   },
   "iso37001": {
     "meta": {
-      "title": "ISO 37001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 37001 Certification | MSC Certifications",
       "description": "Get ISO 37001 certification for anti-bribery management. Reduce legal risk, strengthen reputation and qualify for tenders with MSC Certifications.",
       "keywords": "ISO 37001 certification, anti-bribery, bribery management, compliance, accredited certification, anti-corruption audit"
     },
@@ -1112,7 +1139,7 @@
       "step5Detail": "(Year 3rd)"
     },
     "cta": {
-      "title": "Build Integrity — Earn Trust",
+      "title": "Build Integrity, Earn Trust",
       "description": "Prevent bribery. Strengthen reputation. Qualify for opportunities.",
       "button": "Start ISO 37001 Assessment",
       "footer": "Our certificates are internationally accredited and globally recognized."
@@ -1120,7 +1147,7 @@
   },
   "iso22301": {
     "meta": {
-      "title": "ISO 22301 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 22301 Certification | MSC Certifications",
       "description": "Get ISO 22301 certification for business continuity. Protect operations, minimize disruptions and ensure fast recovery with MSC Certifications.",
       "keywords": "ISO 22301 certification, business continuity, BCMS, disaster recovery, accredited certification, crisis management"
     },
@@ -1208,7 +1235,7 @@
   },
   "iso22000": {
     "meta": {
-      "title": "ISO 22000 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 22000 Certification | MSC Certifications",
       "description": "Get ISO 22000 certification for food safety. Ensure quality, meet regulations and access international markets with MSC Certifications.",
       "keywords": "ISO 22000 certification, food safety, FSMS, HACCP, accredited certification, food audit"
     },
@@ -1288,7 +1315,7 @@
       "step5Detail": "(Year 3rd)"
     },
     "cta": {
-      "title": "Ensure Safety — Win Markets",
+      "title": "Ensure Safety, Win Markets",
       "description": "Control hazards. Meet standards. Enter new markets.",
       "button": "Start ISO 22000 Assessment",
       "footer": "Our certificates are internationally accredited and globally recognized."
@@ -1296,7 +1323,7 @@
   },
   "iso14001": {
     "meta": {
-      "title": "ISO 14001 Certification | MSC CERTIFICATIONS",
+      "title": "ISO 14001 Certification | MSC Certifications",
       "description": "Get ISO 14001 certification for environmental management. Reduce environmental impact, meet regulations and demonstrate social responsibility with MSC Certifications.",
       "keywords": "ISO 14001 certification, environmental management, EMS, accredited certification, environmental audit, environmental compliance"
     },
@@ -1376,7 +1403,7 @@
       "step5Detail": "(Year 3rd)"
     },
     "cta": {
-      "title": "Protect Environment — Strengthen Business",
+      "title": "Protect Environment, Strengthen Business",
       "description": "Control impacts. Meet regulations. Save costs.",
       "button": "Start ISO 14001 Assessment",
       "footer": "Our certificates are internationally accredited and globally recognized."
@@ -1384,7 +1411,7 @@
   },
   "haccp": {
     "meta": {
-      "title": "HACCP Certification | MSC CERTIFICATIONS",
+      "title": "HACCP Certification | MSC Certifications",
       "description": "Get HACCP certification for food safety. Identify and control hazards, meet regulations and ensure safe products with MSC Certifications.",
       "keywords": "HACCP certification, food safety, critical control points, hazard analysis, accredited certification, HACCP audit"
     },
@@ -1464,7 +1491,7 @@
       "step5Detail": "(Every 3 years)"
     },
     "cta": {
-      "title": "Secure Products — Win Trust",
+      "title": "Secure Products, Win Trust",
       "description": "Control hazards. Meet the law. Enter markets.",
       "button": "Start HACCP Assessment",
       "footer": "Our certificates are internationally accredited and globally recognized."
@@ -1698,7 +1725,7 @@
   },
   "generalQuote": {
     "meta": {
-      "title": "Get a Quote | MSC CERTIFICATIONS",
+      "title": "Get a Quote | MSC Certifications",
       "description": "Request a personalized quote for ISO certification. Select your preferred standard and fill out the assessment form."
     },
     "hero": {
@@ -1736,14 +1763,14 @@
   },
   "technologicalCard": {
     "meta": {
-      "title": "Technological Card Services | Standardize & Control Production - MSC CERTIFICATIONS",
-      "description": "Define and optimize your production process with MSC CERTIFICATIONS. Create standardized, audit-ready Technological Cards for quality and efficiency.",
-      "keywords": "technological card, process card, production documentation, manufacturing process control, standardize production, industrial efficiency, quality documentation, ISO audit preparation, MSC CERTIFICATIONS"
+      "title": "Technological Card Services | Standardize & Control Production - MSC Certifications",
+      "description": "Define and optimize your production process with MSC Certifications. Create standardized, audit-ready Technological Cards for quality and efficiency.",
+      "keywords": "technological card, process card, production documentation, manufacturing process control, standardize production, industrial efficiency, quality documentation, ISO audit preparation, MSC Certifications"
     },
     "hero": {
       "title": "Technological Card: Define, Standardize, and Optimize Your Production Process",
       "subtitle1": "Ready to make your production process fully transparent, efficient, and compliant?",
-      "subtitle2": "A Technological Card is the foundation for consistent quality and controlled manufacturing. It details every operation step, resource, and parameter — ensuring that every product is made the right way, every time.",
+      "subtitle2": "A Technological Card is the foundation for consistent quality and controlled manufacturing. It details every operation step, resource, and parameter, ensuring that every product is made the right way, every time.",
       "cta1": "Request a Technological Card Service Quote",
       "cta2": "Start Your Free Process Assessment"
     },
@@ -1752,7 +1779,7 @@
       "subtitle": "The Blueprint of Production",
       "description1": "A Technological Card (also known as a Process Card or Operation Sheet) is a structured document that defines the method, sequence, and technical conditions required to produce or assemble a specific product.",
       "description2": "It specifies materials, equipment, labor norms, and quality controls, serving as a clear guideline for operators and engineers.",
-      "description3": "Each card becomes an integral part of your production documentation system — ensuring process repeatability, traceability, and compliance with quality and safety standards.",
+      "description3": "Each card becomes an integral part of your production documentation system, ensuring process repeatability, traceability, and compliance with quality and safety standards.",
       "roleBox": {
         "title": "Our Role as Your Industrial Documentation Partner",
         "description": "We assist manufacturers in preparing, reviewing, and verifying Technological Cards that meet industry, safety, and regulatory standards."
@@ -1801,7 +1828,7 @@
       }
     },
     "whyChoose": {
-      "title": "Why Choose MSC CERTIFICATIONS?",
+      "title": "Why Choose MSC Certifications?",
       "engineers": {
         "title": "Experienced Engineers",
         "description": "Deep process knowledge in your sector with proven expertise across industries."
@@ -1817,21 +1844,21 @@
     },
     "cta": {
       "title": "Ready to document your process with precision and unlock production efficiency?",
-      "description": "Partner with MSC CERTIFICATIONS to develop Technological Cards that deliver control, quality, and confidence.",
+      "description": "Partner with MSC Certifications to develop Technological Cards that deliver control, quality, and confidence.",
       "button": "Start Your Technological Card Project Today",
       "footer": "Precision documentation for precision manufacturing."
     }
   },
   "staffTraining": {
     "meta": {
-      "title": "Staff Training Programs | ISO-Aligned Workforce Development - MSC CERTIFICATIONS",
-      "description": "Boost staff performance, safety, and compliance with ISO-based training by MSC CERTIFICATIONS. Tailored programs for every industry. Start today.",
-      "keywords": "ISO staff training, workforce development, ISO 9001 training, ISO 45001 training, employee competence, compliance training, safety training, corporate training programs, MSC CERTIFICATIONS"
+      "title": "Staff Training Programs | ISO-Aligned Workforce Development - MSC Certifications",
+      "description": "Boost staff performance, safety, and compliance with ISO-based training by MSC Certifications. Tailored programs for every industry. Start today.",
+      "keywords": "ISO staff training, workforce development, ISO 9001 training, ISO 45001 training, employee competence, compliance training, safety training, corporate training programs, MSC Certifications"
     },
     "hero": {
       "title": "Staff Training: Build Competence, Safety, and Performance",
       "subtitle1": "Empower your team with the skills and awareness to perform safely, efficiently, and in full compliance with international standards.",
-      "subtitle2": "MSC CERTIFICATIONS provides role-based and competency-focused training programs, designed to meet the specific needs of your industry and aligned with ISO 9001, ISO 14001, and ISO 45001 requirements.",
+      "subtitle2": "MSC Certifications provides role-based and competency-focused training programs, designed to meet the specific needs of your industry and aligned with ISO 9001, ISO 14001, and ISO 45001 requirements.",
       "cta1": "Request a Training Proposal",
       "cta2": "Book Your Free Training Needs Assessment"
     },
@@ -1860,7 +1887,7 @@
       "title": "Key Benefits: Performance, Compliance, and Retention",
       "benefit1": {
         "title": "Increase Productivity and Quality",
-        "description": "Well-trained employees perform with greater accuracy, consistency, and efficiency — directly improving product and service quality."
+        "description": "Well-trained employees perform with greater accuracy, consistency, and efficiency, directly improving product and service quality."
       },
       "benefit2": {
         "title": "Strengthen Compliance and Safety",
@@ -1900,7 +1927,7 @@
       }
     },
     "whyChoose": {
-      "title": "Why Choose MSC CERTIFICATIONS",
+      "title": "Why Choose MSC Certifications",
       "trainers": {
         "title": "Certified Trainers and Auditors",
         "description": "Experts with real industry experience and proven track records in their fields."
@@ -1920,21 +1947,21 @@
     },
     "cta": {
       "title": "Investing in your people is investing in your performance.",
-      "description": "Partner with MSC CERTIFICATIONS to develop skilled, compliant, and motivated teams that drive excellence every day.",
+      "description": "Partner with MSC Certifications to develop skilled, compliant, and motivated teams that drive excellence every day.",
       "button": "Start Your Staff Training Program Today",
       "footer": "Professional training that delivers real results."
     }
   },
   "professionalCard": {
     "meta": {
-      "title": "IDCP ID Card Professional | Professional Skills Verification - MSC CERTIFICATIONS",
-      "description": "Certify your staff's professional skills with IDCP ID Card Professional from MSC CERTIFICATIONS. Demonstrate competence and compliance with legal and safety standards.",
-      "keywords": "IDCP, ID Card Professional, professional identity card, skills verification, employee certification, professional competence, workplace safety, MSC CERTIFICATIONS"
+      "title": "IDCP ID Card Professional | Professional Skills Verification - MSC Certifications",
+      "description": "Certify your staff's professional skills with IDCP ID Card Professional from MSC Certifications. Demonstrate competence and compliance with legal and safety standards.",
+      "keywords": "IDCP, ID Card Professional, professional identity card, skills verification, employee certification, professional competence, workplace safety, MSC Certifications"
     },
     "hero": {
       "title": "IDCP ID Card Professional: Verify Skills and Professional Competence",
       "subtitle1": "Demonstrate the training, experience, and specific skills of each employee.",
-      "subtitle2": "IDCP ID Card Professional is the personal certificate that verifies the employee's position, competence, and authorization to perform specific duties — helping organizations meet legal requirements, ISO standards, and occupational safety regulations.",
+      "subtitle2": "IDCP ID Card Professional is the personal certificate that verifies the employee's position, competence, and authorization to perform specific duties, helping organizations meet legal requirements, ISO standards, and occupational safety regulations.",
       "cta1": "Request a Quote for IDCP ID Card Professional",
       "cta2": "Start Free Staff Competence Assessment"
     },
@@ -1943,10 +1970,10 @@
       "subtitle": "Personal Certification of Professional Competence",
       "description1": "IDCP ID Card Professional is an official certified document that defines the professional identity of an employee within an organization.",
       "description2": "It contains data on position, qualifications, training, specific permits or authorizations, and compliance with legal requirements and occupational health and safety standards.",
-      "description3": "The card creates a clear and reliable profile for each employee — helping the organization manage human resources effectively and meet obligations towards inspections, tenders, and clients.",
+      "description3": "The card creates a clear and reliable profile for each employee, helping the organization manage human resources effectively and meet obligations towards inspections, tenders, and clients.",
       "roleBox": {
         "title": "Our Role as Accredited Issuer",
-        "description": "MSC CERTIFICATIONS issues IDCP ID Card Professional based on a structured verification process — certifying compliance with industry requirements and applicable legislation."
+        "description": "MSC Certifications issues IDCP ID Card Professional based on a structured verification process, certifying compliance with industry requirements and applicable legislation."
       }
     },
     "howItWorks": {
@@ -1957,7 +1984,7 @@
       },
       "step2": {
         "title": "Documentation Verification",
-        "description": "MSC CERTIFICATIONS verifies data compliance with legal requirements and applicable standards."
+        "description": "MSC Certifications verifies data compliance with legal requirements and applicable standards."
       },
       "step3": {
         "title": "Card Issuance",
@@ -1986,11 +2013,11 @@
       },
       "benefit3": {
         "title": "Advantage in Tenders and Contracts",
-        "description": "Many tenders require proof of professional competence — IDCP ID Card formally fulfills this requirement."
+        "description": "Many tenders require proof of professional competence, IDCP ID Card formally fulfills this requirement."
       },
       "benefit4": {
         "title": "Simplified Staff Management",
-        "description": "The organization has access to a clear and updated profile for each employee — useful for training, inspections, and management decisions."
+        "description": "The organization has access to a clear and updated profile for each employee, useful for training, inspections, and management decisions."
       }
     },
     "industries": {
@@ -2017,7 +2044,7 @@
       }
     },
     "whyChoose": {
-      "title": "Why MSC CERTIFICATIONS for IDCP ID Card?",
+      "title": "Why MSC Certifications for IDCP ID Card?",
       "experts": {
         "title": "Structured Verification Process",
         "description": "We evaluate with professionalism and ensure accuracy in every card issued."
@@ -2040,9 +2067,9 @@
   },
   "equipmentEvaluation": {
     "meta": {
-      "title": "Machinery & Equipment Evaluation | Industrial Performance Audits - MSC CERTIFICATIONS",
-      "description": "Maximize asset performance and value with MSC CERTIFICATIONS. Get objective equipment evaluations for compliance, ROI, and operational efficiency.",
-      "keywords": "equipment evaluation, machinery audit, industrial performance audit, asset valuation, technology line assessment, operational efficiency, technical inspection, ROI evaluation, MSC CERTIFICATIONS"
+      "title": "Machinery & Equipment Evaluation | Industrial Performance Audits - MSC Certifications",
+      "description": "Maximize asset performance and value with MSC Certifications. Get objective equipment evaluations for compliance, ROI, and operational efficiency.",
+      "keywords": "equipment evaluation, machinery audit, industrial performance audit, asset valuation, technology line assessment, operational efficiency, technical inspection, ROI evaluation, MSC Certifications"
     },
     "hero": {
       "title": "Evaluation of Technological Lines, Machinery and Equipment",
@@ -2055,10 +2082,10 @@
       "title": "What Is Equipment Evaluation?",
       "subtitle": "The Science Behind Industrial Efficiency",
       "description1": "Equipment and technological line evaluation is the structured assessment of industrial machinery and systems to determine their technical condition, operational efficiency, and financial worth.",
-      "description2": "Through inspections, diagnostics, and performance analysis, the process reveals how effectively your assets operate — and whether upgrading, maintaining, or replacing them offers the best return on investment.",
+      "description2": "Through inspections, diagnostics, and performance analysis, the process reveals how effectively your assets operate, and whether upgrading, maintaining, or replacing them offers the best return on investment.",
       "roleBox": {
         "title": "Our Role as Independent Evaluators",
-        "description": "We are MSC CERTIFICATIONS, a fully independent, accredited inspection and certification body. We don't sell or service equipment — our responsibility is to provide objective, data-driven evaluations that ensure transparency and confidence.",
+        "description": "We are MSC Certifications, a fully independent, accredited inspection and certification body. We don't sell or service equipment, our responsibility is to provide objective, data-driven evaluations that ensure transparency and confidence.",
         "servicesTitle": "Our experts conduct:",
         "service1": "On-site technical inspections and diagnostics",
         "service2": "Performance and energy-efficiency assessments",
@@ -2150,24 +2177,24 @@
     },
     "cta": {
       "title": "Ready to discover the true potential and value of your equipment?",
-      "description": "Partner with MSC CERTIFICATIONS for a professional evaluation that drives efficiency and confidence.",
+      "description": "Partner with MSC Certifications for a professional evaluation that drives efficiency and confidence.",
       "button": "Start Your Equipment Evaluation Today",
       "footer": "Independent evaluation for informed decisions."
     }
   },
   "services": {
     "meta": {
-      "title": "Certification, Compliance & Training Services | MSC CERTIFICATIONS",
-      "description": "Explore accredited ISO certification, compliance, and technical training services from MSC CERTIFICATIONS. Build trust, efficiency, and sustainable growth.",
-      "keywords": "ISO certification services, compliance audits, staff training, product evaluation, CE marking, ISO auditor, workforce competence, accredited certification, MSC CERTIFICATIONS"
+      "title": "Certification, Compliance & Training Services | MSC Certifications",
+      "description": "Explore accredited ISO certification, compliance, and technical training services from MSC Certifications. Build trust, efficiency, and sustainable growth.",
+      "keywords": "ISO certification services, compliance audits, staff training, product evaluation, CE marking, ISO auditor, workforce competence, accredited certification, MSC Certifications"
     },
     "hero": {
       "title": "Our Services",
-      "subtitle": "Accredited Certification, Compliance, and Training for Every Industry. At MSC CERTIFICATIONS, we provide a complete portfolio of internationally accredited services designed to strengthen your organization's trust, safety, and performance."
+      "subtitle": "Accredited Certification, Compliance, and Training for Every Industry. At MSC Certifications, we provide a complete portfolio of internationally accredited services designed to strengthen your organization's trust, safety, and performance."
     },
     "whatWeOffer": {
       "title": "What We Offer",
-      "description1": "MSC CERTIFICATIONS provides a comprehensive range of internationally accredited certification, inspection, and training services. Our approach combines technical expertise, local market insight, and accredited credibility — turning compliance into a driver for competitive advantage.",
+      "description1": "MSC Certifications provides a comprehensive range of internationally accredited certification, inspection, and training services. Our approach combines technical expertise, local market insight, and accredited credibility, turning compliance into a driver for competitive advantage.",
       "description2": "Whether you need ISO certification, CE marking, workforce development, or compliance auditing, our team of experienced professionals is ready to support your organization's growth and success."
     },
     "isoSection": {
@@ -2299,7 +2326,7 @@
     },
     "cta": {
       "title": "Start Your Certification or Compliance Project",
-      "description": "Partner with MSC CERTIFICATIONS to build the systems, competence, and credibility your business needs to compete globally.",
+      "description": "Partner with MSC Certifications to build the systems, competence, and credibility your business needs to compete globally.",
       "button": "Request a Free Consultation"
     }
   },
@@ -2405,7 +2432,7 @@
   },
   "ceMarking": {
     "meta": {
-      "title": "CE Marking Certification | MSC CERTIFICATIONS",
+      "title": "CE Marking Certification | MSC Certifications",
       "description": "Achieve CE Marking compliance for the EU market with MSC Certifications. Demonstrate product safety, access EU/EEA markets, and build consumer trust. Start your assessment today.",
       "keywords": "CE Marking, CE certification, EU compliance, product conformity, EU directives, CE mark, European market access, MSC Certifications"
     },

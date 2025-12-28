@@ -20,6 +20,8 @@ interface BlogPost {
   title_sq: string;
   title_it: string;
   slug: string;
+  slug_sq: string;
+  slug_it: string;
   excerpt: string;
   excerpt_sq: string;
   excerpt_it: string;
@@ -31,6 +33,18 @@ interface BlogPost {
   published_at: string;
   view_count: number;
 }
+
+const defaultImages = [
+  '/Images/quality-check.jpg',
+  '/Images/document-audit.jpg',
+  '/Images/compliance-checklist.jpg',
+  '/Images/contract-signing.jpg',
+  '/Images/certification-documentation.jpg',
+];
+
+const getDefaultImage = (index: number): string => {
+  return defaultImages[index % defaultImages.length];
+};
 
 const Blog: FC = () => {
   const { t, i18n } = useTranslation();
@@ -88,8 +102,14 @@ const Blog: FC = () => {
     });
   };
 
-  const getBlogPostUrl = (slug: string): string => {
-    return routes.blogPost[currentLang].replace(':slug', slug);
+  const getPostSlug = (post: BlogPost): string => {
+    if (currentLang === 'sq') return post.slug_sq || post.slug;
+    if (currentLang === 'it') return post.slug_it || post.slug;
+    return post.slug;
+  };
+
+  const getBlogPostUrl = (post: BlogPost): string => {
+    return routes.blogPost[currentLang].replace(':slug', getPostSlug(post));
   };
 
   const filteredPosts = selectedCategory
@@ -104,7 +124,12 @@ const Blog: FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="blog-hero">
+      <section
+        className="blog-hero"
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(1, 67, 79, 0.92) 0%, rgba(8, 87, 102, 0.92) 100%), url('/Images/certification-documentation.jpg')`
+        }}
+      >
         <div className="container">
           <h1>{t('blog.title')}</h1>
           <p className="blog-subtitle">{t('blog.subtitle')}</p>
@@ -143,26 +168,51 @@ const Blog: FC = () => {
             </div>
           )}
 
-          {/* Posts Grid */}
+          {/* Featured Post Hero */}
           {!loading && filteredPosts.length > 0 && (
+            <article className="blog-featured">
+              <Link to={getBlogPostUrl(filteredPosts[0])} className="blog-featured-image">
+                <img
+                  src={filteredPosts[0].featured_image_url || '/Images/iso-certifications.jpg'}
+                  alt={filteredPosts[0].featured_image_alt || getPostTitle(filteredPosts[0])}
+                />
+              </Link>
+              <div className="blog-featured-content">
+                {filteredPosts[0].category && (
+                  <span className="blog-card-category">{getCategoryName(filteredPosts[0].category)}</span>
+                )}
+                <h2 className="blog-featured-title">
+                  <Link to={getBlogPostUrl(filteredPosts[0])}>{getPostTitle(filteredPosts[0])}</Link>
+                </h2>
+                <p className="blog-featured-excerpt">{getPostExcerpt(filteredPosts[0])}</p>
+                <div className="blog-card-meta">
+                  <span className="blog-card-date">{formatDate(filteredPosts[0].published_at)}</span>
+                  <span className="blog-card-author">{filteredPosts[0].author}</span>
+                </div>
+                <Link to={getBlogPostUrl(filteredPosts[0])} className="blog-featured-btn">
+                  {t('common.readMore')} →
+                </Link>
+              </div>
+            </article>
+          )}
+
+          {/* Posts Grid */}
+          {!loading && filteredPosts.length > 1 && (
             <div className="blog-grid">
-              {filteredPosts.map(post => (
+              {filteredPosts.slice(1).map((post, index) => (
                 <article key={post.id} className="blog-card">
-                  <Link to={getBlogPostUrl(post.slug)} className="blog-card-image">
-                    {post.featured_image_url ? (
-                      <img src={post.featured_image_url} alt={post.featured_image_alt || getPostTitle(post)} />
-                    ) : (
-                      <div className="blog-card-placeholder">
-                        <img src="/logo.svg" alt="MSC Certifications" className="blog-card-logo" />
-                      </div>
-                    )}
+                  <Link to={getBlogPostUrl(post)} className="blog-card-image">
+                    <img
+                      src={post.featured_image_url || getDefaultImage(index)}
+                      alt={post.featured_image_alt || getPostTitle(post)}
+                    />
                   </Link>
                   <div className="blog-card-content">
                     {post.category && (
                       <span className="blog-card-category">{getCategoryName(post.category)}</span>
                     )}
                     <h2 className="blog-card-title">
-                      <Link to={getBlogPostUrl(post.slug)}>{getPostTitle(post)}</Link>
+                      <Link to={getBlogPostUrl(post)}>{getPostTitle(post)}</Link>
                     </h2>
                     <p className="blog-card-excerpt">{getPostExcerpt(post)}</p>
                     <div className="blog-card-meta">

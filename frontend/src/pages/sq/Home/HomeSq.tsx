@@ -88,16 +88,16 @@ const HomeSq: FC = () => {
       answer: "Çmimi i certifikimit varet nga lloji apo sistemet ISO që kërkoni të integroni (një standard i vetëm apo disa standarde të integruara së bashku). Kompleksiteti i tyre bashkuar me kohëzgjatjen e procesit të auditimit përcaktojnë vlerën monetare të tij."
     },
     {
-      question: "A ofron MSC CERTIFICATIONS konsulencë për të implementuar ISO?",
-      answer: "Jo. MSC CERTIFICATIONS, si trup certifikues, nuk ofron konsulencë për implementimin e sistemit të menaxhimit tek klientët e vet, për të ruajtur paanshmërinë dhe përputhjen me kërkesat e ISO/IEC 17021. Ne mund të shpjegojmë kërkesat e standardit dhe gjetjet e auditit, por jo të ndërtojmë sistemin në vendin tuaj."
+      question: "A ofron MSC Certifications konsulencë për të implementuar ISO?",
+      answer: "Jo. MSC Certifications, si trup certifikues, nuk ofron konsulencë për implementimin e sistemit të menaxhimit tek klientët e vet, për të ruajtur paanshmërinë dhe përputhjen me kërkesat e ISO/IEC 17021. Ne mund të shpjegojmë kërkesat e standardit dhe gjetjet e auditit, por jo të ndërtojmë sistemin në vendin tuaj."
     },
     {
-      question: "A ofron MSC CERTIFICATIONS audite të integruara për disa standarde njëkohësisht?",
+      question: "A ofron MSC Certifications audite të integruara për disa standarde njëkohësisht?",
       answer: "Po. Kur është e arsyeshme dhe e mundur, ne kombinojmë auditimin e disa standardeve në një audit të integruar, për të shmangur dublikimet dhe për të ulur ngarkesën operative për klientin."
     },
     {
       question: "A mund të transferoj certifikatën nga një trup tjetër certifikues?",
-      answer: "Po, MSC CERTIFICATIONS mund të pranojë transferimin e certifikatave nga trupa të tjerë të akredituar, nëse plotësohen disa kushte (vlefshmëria e certifikatës ekzistuese, statusi i mospërputhjeve, dokumentacioni i auditit etj.). Procesi i transferimit vlerësohet rast pas rasti."
+      answer: "Po, MSC Certifications mund të pranojë transferimin e certifikatave nga trupa të tjerë të akredituar, nëse plotësohen disa kushte (vlefshmëria e certifikatës ekzistuese, statusi i mospërputhjeve, dokumentacioni i auditit etj.). Procesi i transferimit vlerësohet rast pas rasti."
     },
     {
       question: "A mund të kryhet auditi edhe në mënyrë remote (online)?",
@@ -108,8 +108,8 @@ const HomeSq: FC = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>Certifikim ISO & Auditime të Përputhshmërisë | MSC CERTIFICATIONS</title>
-        <meta name="description" content="Shërbime të akredituara për certifikim ISO, të përshtatura sipas industrisë suaj. Ulni rreziqet, rrisni efikasitetin dhe fitoni besimin e tregut me MSC CERTIFICATIONS. Filloni me një vlerësim falas." />
+        <title>Certifikim ISO & Auditime të Përputhshmërisë | MSC Certifications</title>
+        <meta name="description" content="Shërbime të akredituara për certifikim ISO, të përshtatura sipas industrisë suaj. Ulni rreziqet, rrisni efikasitetin dhe fitoni besimin e tregut me MSC Certifications. Filloni me një vlerësim falas." />
         <meta name="keywords" content="certifikim ISO, auditim përputhshmërie, certifikim i akredituar, audit ISO Shqipëri, ISO 9001, ISO 45001, ISO 14001, MSC Certifications" />
       </Helmet>
 
@@ -118,7 +118,7 @@ const HomeSq: FC = () => {
         <div className="hero-content">
           <h1>Partneri Juaj për Certifikim ISO, Përputhshmëri dhe Menaxhim Risku</h1>
           <p className="hero-subtitle">
-            Siguroni të ardhmen e biznesit tuaj. MSC CERTIFICATIONS ofron shërbime të akredituara dhe me vlerë të shtuar për certifikim ISO, që ju ndihmojnë të minimizoni rreziqet, të rrisni efikasitetin operativ dhe të fitoni besimin e tregut.
+            Siguroni të ardhmen e biznesit tuaj. MSC Certifications ofron shërbime të akredituara dhe me vlerë të shtuar për certifikim ISO, që ju ndihmojnë të minimizoni rreziqet, të rrisni efikasitetin operativ dhe të fitoni besimin e tregut.
           </p>
 
           {/* Hero Feature Icons */}
@@ -157,7 +157,7 @@ const HomeSq: FC = () => {
         <div className="container">
           <h2 className="section-title">Dallimi MSC: Pse të Zgjidhni Auditet Tona të Specializuara?</h2>
           <p className="section-intro">
-            MSC CERTIFICATIONS garanton ekspertizë të thellë dhe të përshtatur për secilën industri.
+            MSC Certifications garanton ekspertizë të thellë dhe të përshtatur për secilën industri.
           </p>
           <div className="features-grid">
             <div className="feature-card">
@@ -346,7 +346,7 @@ const HomeSq: FC = () => {
         <div className="container">
           <h2>Filloni Udhëtimin Tuaj Drejt Cilësisë dhe Besimit</h2>
           <p>
-            Bashkohuni me dhjetëra kompani në rajon që i besojnë MSC CERTIFICATIONS për të transformuar mënyrën si funksionojnë. Ofrojmë një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.
+            Bashkohuni me dhjetëra kompani në rajon që i besojnë MSC Certifications për të transformuar mënyrën si funksionojnë. Ofrojmë një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.
           </p>
           <div className="cta-buttons">
             <Link to="/sq/kontakt" className="btn btn-primary-large">Merr Ofertë Falas</Link>

@@ -23,10 +23,6 @@ const EnergyEfficiency: FC = () => {
           <p className="iso-subtitle">
             {t('energyEfficiency.hero.subtitle')}
           </p>
-          <div className="hero-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('energyEfficiency.hero.cta1')}</Link>
-            <Link to={routes.contact[currentLang]} className="btn btn-secondary">{t('energyEfficiency.hero.cta2')}</Link>
-          </div>
         </div>
       </section>
 
