@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import {
     FaIndustry,
     FaGraduationCap,
@@ -10,6 +11,7 @@ import {
 } from 'react-icons/fa';
 
 const Partnerships: FC = () => {
+    const { t } = useTranslation();
     return (
         <div className="about">
             <Helmet>
@@ -131,7 +133,7 @@ const Partnerships: FC = () => {
                         Join our network of trusted partners committed to excellence and global standards.
                     </p>
                     <div className="cta-buttons">
-                        <Link to="/contact" className="btn btn-primary-large">Contact Us Today</Link>
+                        <Link to="/contact" className="btn btn-primary-large">{t('common.contactUs')}</Link>
                     </div>
                 </div>
             </section>

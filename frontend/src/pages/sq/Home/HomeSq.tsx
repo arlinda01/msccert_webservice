@@ -349,7 +349,7 @@ const HomeSq: FC = () => {
             Bashkohuni me dhjetëra kompani në rajon që i besojnë MSC Certifications për të transformuar mënyrën si funksionojnë. Ofrojmë një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.
           </p>
           <div className="cta-buttons">
-            <Link to="/sq/kontakt" className="btn btn-primary-large">Merr Ofertë Falas</Link>
+            <Link to="/sq/kontakt" className="btn btn-primary-large">Na Kontaktoni</Link>
           </div>
           <p className="cta-footer">
             Të gjitha certifikatat tona janë të akredituara ndërkombëtarisht, duke garantuar njohje globale.

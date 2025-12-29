@@ -149,7 +149,7 @@ const Home: FC = () => {
             {/*  <div className="hero-feature-icon">*/}
             {/*    <FaIcons.FaGlobeAmericas />*/}
             {/*  </div>*/}
-            {/*  <span>{t('home.heroFeatures.localSupport')}</span>*/}
+            {/*  <span>{t('homeclaude.heroFeatures.localSupport')}</span>*/}
             {/*</div>*/}
           </div>
 
@@ -352,7 +352,7 @@ const Home: FC = () => {
             {t('home.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary-large">{t('common.requestQuote')}</Link>
+            <Link to={routes.contact[currentLang]} className="btn btn-primary-large">{t('common.contactUs')}</Link>
           </div>
           <p className="cta-footer">
             {t('home.cta.accreditedNote')}

@@ -1,5 +1,5 @@
-import { FC, useState, useEffect, useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { FC, useState, useEffect, useMemo, useRef } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
@@ -65,7 +65,9 @@ interface RelatedPost {
 const BlogPost: FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
   const currentLang = (i18n.language?.substring(0, 2) || 'en') as SupportedLanguage;
+  const prevLangRef = useRef<string>(currentLang);
 
   const [post, setPost] = useState<BlogPostData | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<RelatedPost[]>([]);
@@ -100,6 +102,27 @@ const BlogPost: FC = () => {
 
     fetchPost();
   }, [slug]);
+
+  // Helper to get the correct slug for a given language
+  const getPostSlugForLang = (postData: BlogPostData, lang: SupportedLanguage): string => {
+    if (lang === 'sq') return postData.slug_sq || postData.slug;
+    if (lang === 'it') return postData.slug_it || postData.slug;
+    return postData.slug;
+  };
+
+  // Redirect to correct localized URL when language changes
+  useEffect(() => {
+    if (post && prevLangRef.current !== currentLang) {
+      const correctSlug = getPostSlugForLang(post, currentLang);
+      const currentSlug = slug;
+
+      if (correctSlug !== currentSlug) {
+        const newUrl = routes.blogPost[currentLang].replace(':slug', correctSlug);
+        navigate(newUrl, { replace: true });
+      }
+    }
+    prevLangRef.current = currentLang;
+  }, [currentLang, post, slug, navigate]);
 
   const getLocalizedText = (en: string, sq: string, it: string): string => {
     if (currentLang === 'sq') return sq || en;

@@ -18,7 +18,7 @@ const MissionVision: FC = () => {
                 <div className="container">
                     <h1>{t('missionVision.title')}</h1>
                     <p className="about-subtitle">
-                        {t('missionVision.vision.description')}
+                        {t('missionVision.subtitle')}
                     </p>
                 </div>
             </section>
