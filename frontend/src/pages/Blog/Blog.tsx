@@ -35,11 +35,11 @@ interface BlogPost {
 }
 
 const defaultImages = [
-  '/Images/quality-check.jpg',
-  '/Images/document-audit.jpg',
-  '/Images/compliance-checklist.jpg',
-  '/Images/contract-signing.jpg',
-  '/Images/certification-documentation.jpg',
+  '/images/quality-check.jpg',
+  '/images/document-audit.jpg',
+  '/images/compliance-checklist.jpg',
+  '/images/contract-signing.jpg',
+  '/images/certification-documentation.jpg',
 ];
 
 const getDefaultImage = (index: number): string => {
@@ -127,7 +127,7 @@ const Blog: FC = () => {
       <section
         className="blog-hero"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(1, 67, 79, 0.92) 0%, rgba(8, 87, 102, 0.92) 100%), url('/Images/certification-documentation.jpg')`
+          backgroundImage: `linear-gradient(135deg, rgba(1, 67, 79, 0.92) 0%, rgba(8, 87, 102, 0.92) 100%), url('/images/certification-documentation.jpg')`
         }}
       >
         <div className="container">
@@ -173,7 +173,7 @@ const Blog: FC = () => {
             <article className="blog-featured">
               <Link to={getBlogPostUrl(filteredPosts[0])} className="blog-featured-image">
                 <img
-                  src={filteredPosts[0].featured_image_url || '/Images/iso-certifications.jpg'}
+                  src={filteredPosts[0].featured_image_url || '/images/iso-certifications.jpg'}
                   alt={filteredPosts[0].featured_image_alt || getPostTitle(filteredPosts[0])}
                 />
               </Link>

@@ -244,7 +244,7 @@ const BlogPost: FC = () => {
       <header
         className="blog-post-header"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(1, 67, 79, 0.92) 0%, rgba(8, 87, 102, 0.92) 100%), url('/Images/iso-certifications.jpg')`
+          backgroundImage: `linear-gradient(135deg, rgba(1, 67, 79, 0.92) 0%, rgba(8, 87, 102, 0.92) 100%), url('/images/iso-certifications.jpg')`
         }}
       >
         <div className="container">
