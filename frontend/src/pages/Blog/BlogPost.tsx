@@ -154,7 +154,7 @@ const BlogPost: FC = () => {
     return toc;
   }, [post, currentLang]);
 
-  // Process content to add IDs to headings and insert CTA
+  // Process content to add IDs to headings, insert featured image and CTA
   const processedContent = useMemo(() => {
     if (!post) return '';
     let content = getLocalizedText(post.content, post.content_sq, post.content_it);
@@ -167,7 +167,14 @@ const BlogPost: FC = () => {
       return `<h2 id="${id}"${attrs}>${text}</h2>`;
     });
 
-    // Insert CTA box after the second h2
+    // Featured image box to insert after first section
+    const featuredImageBox = post.featured_image_url ? `
+      <figure class="blog-featured-figure">
+        <img src="${post.featured_image_url}" alt="${post.featured_image_alt || title}" />
+      </figure>
+    ` : '';
+
+    // Insert CTA box
     const ctaBox = `
       <div class="blog-cta-box">
         <h4>${currentLang === 'it' ? 'Hai bisogno di certificazione?' : currentLang === 'sq' ? 'Keni nevojë për certifikim?' : 'Need Certification?'}</h4>
@@ -180,16 +187,24 @@ const BlogPost: FC = () => {
     const h2Matches = content.match(/<h2/gi);
     const totalH2s = h2Matches ? h2Matches.length : 0;
 
-    // Insert CTA before the last h2 (usually "Conclusion")
+    // Insert featured image after first h2 section, and CTA before last h2
     if (totalH2s > 1) {
       let h2Count = 0;
       content = content.replace(/<h2/gi, (match) => {
         h2Count++;
+        if (h2Count === 2 && featuredImageBox) {
+          // Insert featured image before second h2 (after intro section)
+          return featuredImageBox + match;
+        }
         if (h2Count === totalH2s) {
+          // Insert CTA before last h2 (conclusion)
           return ctaBox + match;
         }
         return match;
       });
+    } else if (featuredImageBox) {
+      // If only one or no h2, append image at the end
+      content += featuredImageBox;
     }
 
     return content;
@@ -261,15 +276,6 @@ const BlogPost: FC = () => {
           </div>
         </div>
       </header>
-
-      {/* Featured Image */}
-      {post.featured_image_url && (
-        <div className="blog-post-image">
-          <div className="container">
-            <img src={post.featured_image_url} alt={post.featured_image_alt || title} />
-          </div>
-        </div>
-      )}
 
       {/* Post Content with Sidebar */}
       <article className="blog-post-content">

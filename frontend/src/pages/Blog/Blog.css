@@ -523,6 +523,28 @@
   color: #2abad4;
 }
 
+/* Featured Image Figure in Content */
+.blog-post-page .blog-featured-figure {
+  margin: 2.5rem 0;
+  padding: 0;
+  text-align: center;
+}
+
+.blog-post-page .blog-featured-figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.blog-post-page .blog-featured-figure figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
 /* CTA Box in Content */
 .blog-post-page .blog-cta-box {
   background: linear-gradient(135deg, #e0f4f7 0%, #f0f9fa 100%);

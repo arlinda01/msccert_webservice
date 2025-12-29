@@ -65,6 +65,11 @@ class BlogPost(models.Model):
         blank=True,
         help_text="Featured image for the post"
     )
+    featured_image_static = models.CharField(
+        max_length=255,
+        blank=True,
+        help_text="Static image path (e.g., /images/blog.jpeg) for seeded content"
+    )
     featured_image_alt = models.CharField(max_length=255, blank=True, help_text="Alt text for image")
 
     # Categorization

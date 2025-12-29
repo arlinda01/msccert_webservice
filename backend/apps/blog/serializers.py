@@ -36,6 +36,9 @@ class BlogPostListSerializer(serializers.ModelSerializer):
             if request:
                 return request.build_absolute_uri(obj.featured_image.url)
             return obj.featured_image.url
+        # Fallback to static image path if set
+        if obj.featured_image_static:
+            return obj.featured_image_static
         return None
 
 
@@ -67,4 +70,7 @@ class BlogPostDetailSerializer(serializers.ModelSerializer):
             if request:
                 return request.build_absolute_uri(obj.featured_image.url)
             return obj.featured_image.url
+        # Fallback to static image path if set
+        if obj.featured_image_static:
+            return obj.featured_image_static
         return None
