@@ -171,6 +171,20 @@ const QuoteForm: FC = () => {
     );
   };
 
+  const validateCurrentSection = (): boolean => {
+    if (typeof currentStep !== 'number' || !form) return true;
+    const section = form.sections[currentStep];
+    if (!section) return true;
+
+    // All questions are required - check that each has an answer
+    for (const question of section.questions) {
+      if (!answers[question.id] || answers[question.id].trim() === '') {
+        return false;
+      }
+    }
+    return true;
+  };
+
   const goToNextStep = () => {
     if (typeof currentStep === 'number') {
       if (currentStep < totalSections - 1) {
@@ -390,7 +404,7 @@ const QuoteForm: FC = () => {
                     <div className="question-content">
                       <p className="question-text">
                         {getLocalizedText(question.question_text, question.question_text_sq, question.question_text_it)}
-                        {question.is_required && <span className="required">*</span>}
+                        <span className="required">*</span>
                       </p>
                       <div className="answer-options">
                         {question.options.map((option) => (
@@ -423,6 +437,7 @@ const QuoteForm: FC = () => {
                 <button
                   className="btn btn-primary"
                   onClick={goToNextStep}
+                  disabled={!validateCurrentSection()}
                 >
                   {t('common.next')}
                 </button>
