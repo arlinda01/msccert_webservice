@@ -28,7 +28,7 @@
     "faq": "FAQ",
     "contactUs": "Contact Us",
     "onlineAssessment": "Online Assessment",
-    "getQuote": "Get a Quote",
+    "getQuote": "Start Assessment",
     "language": "Language"
   },
   "footer": {
@@ -1725,11 +1725,11 @@
   },
   "generalQuote": {
     "meta": {
-      "title": "Get a Quote | MSC Certifications",
+      "title": "Start Assessment | MSC Certifications",
       "description": "Request a personalized quote for ISO certification. Select your preferred standard and fill out the assessment form."
     },
     "hero": {
-      "title": "Get a Personalized Quote",
+      "title": "Start Your Assessment",
       "subtitle": "Select the certification you're interested in, fill out the assessment, and receive a customized quote from our team."
     },
     "steps": {

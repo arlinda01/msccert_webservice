@@ -21,14 +21,14 @@
     "ceMarking": "Markimi CE",
     "energyEfficiency": "Programet e Efiçencës Energjetike",
     "staffTraining": "Trajnimi i Stafit",
-    "professionalCards": "ID Karta Profesionale (IDCP)",
+    "professionalCards": "Karta Profesionale ID (IDCP)",
     "technologicalCard": "Karta Teknologjike",
     "equipmentEvaluation": "Vlerësimi i Pajisjeve",
     "blog": "Blog",
     "faq": "Pyetje të Shpeshta",
     "contactUs": "Na Kontaktoni",
     "onlineAssessment": "Vlerësimi Online",
-    "getQuote": "Merr Ofertë",
+    "getQuote": "Fillo Vlerësimin",
     "language": "Gjuha"
   },
   "footer": {
@@ -1726,11 +1726,11 @@
   },
   "generalQuote": {
     "meta": {
-      "title": "Merr Ofertë | MSC Certifications",
+      "title": "Fillo Vlerësimin | MSC Certifications",
       "description": "Kërko një ofertë të personalizuar për certifikimin ISO. Zgjidh standardin e preferuar dhe plotëso formularin e vlerësimit."
     },
     "hero": {
-      "title": "Merr një Ofertë të Personalizuar",
+      "title": "Fillo Vlerësimin Tënd",
       "subtitle": "Zgjidh certifikimin që të intereson, plotëso vlerësimin dhe merr një ofertë të personalizuar nga ekipi ynë."
     },
     "steps": {
@@ -1955,30 +1955,30 @@
   },
   "professionalCard": {
     "meta": {
-      "title": "ID Karta Profesionale (IDCP) | Vertetim i Aftësive Profesionale - MSC Certifications",
-      "description": "Certifiko aftësitë profesionale të stafit me ID Karta Profesionale (IDCP) nga MSC Certifications. Dëshmo kompetencën dhe përputhshmërinë me standardet ligjore dhe të sigurisë.",
+      "title": "Karta Profesionale ID (IDCP) | Vertetim i Aftësive Profesionale - MSC Certifications",
+      "description": "Certifiko aftësitë profesionale të stafit me Karta Profesionale ID (IDCP) nga MSC Certifications. Dëshmo kompetencën dhe përputhshmërinë me standardet ligjore dhe të sigurisë.",
       "keywords": "IDCP, ID Card Professional, kartë identiteti profesionale, vertetim aftësish, certifikim punonjësi, kompetencë profesionale, siguri në punë, MSC Certifications"
     },
     "hero": {
-      "title": "ID Karta Profesionale (IDCP): Vërteto Aftësitë dhe Kompetencën Profesionale",
+      "title": "Karta Profesionale ID (IDCP): Vërteto Aftësitë dhe Kompetencën Profesionale",
       "subtitle1": "Dëshmo formimin, përvojën dhe aftësitë specifike të çdo punonjësi.",
-      "subtitle2": "ID Karta Profesionale (IDCP) është certifikata personale që verteton pozicionin, kompetencën dhe autorizimin e punonjësit për kryerjen e detyrave specifike, duke ndihmuar organizatat të përmbushin kërkesat ligjore, standardet ISO dhe rregullat e sigurisë në punë.",
-      "cta1": "Kërko Ofertë për ID Karta Profesionale (IDCP)",
+      "subtitle2": "Karta Profesionale ID (IDCP) është certifikata personale që verteton pozicionin, kompetencën dhe autorizimin e punonjësit për kryerjen e detyrave specifike, duke ndihmuar organizatat të përmbushin kërkesat ligjore, standardet ISO dhe rregullat e sigurisë në punë.",
+      "cta1": "Kërko Ofertë për Karta Profesionale ID (IDCP)",
       "cta2": "Fillo Vlerësimin Falas të Kompetencës së Stafit"
     },
     "whatIs": {
-      "title": "Çfarë është ID Karta Profesionale (IDCP)?",
+      "title": "Çfarë është Karta Profesionale ID (IDCP)?",
       "subtitle": "Certifikim Personal i Kompetencës Profesionale",
-      "description1": "ID Karta Profesionale (IDCP) është një dokument zyrtar i certifikuar që përcakton identitetin profesional të një punonjësi brenda një organizate.",
+      "description1": "Karta Profesionale ID (IDCP) është një dokument zyrtar i certifikuar që përcakton identitetin profesional të një punonjësi brenda një organizate.",
       "description2": "Ajo përmban të dhëna mbi pozicionin, kualifikimet, trajnimet, lejet ose autorizimet specifike dhe përputhshmërinë me kërkesat ligjore dhe standardet e sigurisë dhe shëndetit në punë.",
       "description3": "Karta krijon një profil të qartë dhe të besueshëm për çdo punonjës, duke e ndihmuar organizatën të menaxhojë resurset njerëzore në mënyrë efektive dhe të përmbushë detyrimet ndaj inspektimeve, tenderave dhe klientëve.",
       "roleBox": {
         "title": "Roli Ynë si Lëshues i Akredituar",
-        "description": "MSC Certifications lëshon ID Karta Profesionale (IDCP) mbi bazën e një procesi të strukturuar verifikimi, duke vërtetuar përputhshmërinë me kërkesat e industrisë dhe legjislacionit në fuqi."
+        "description": "MSC Certifications lëshon Karta Profesionale ID (IDCP) mbi bazën e një procesi të strukturuar verifikimi, duke vërtetuar përputhshmërinë me kërkesat e industrisë dhe legjislacionit në fuqi."
       }
     },
     "howItWorks": {
-      "title": "Si Funksionon ID Karta Profesionale (IDCP)",
+      "title": "Si Funksionon Karta Profesionale ID (IDCP)",
       "step1": {
         "title": "Aplikimi dhe Mbledhja e të Dhënave",
         "description": "Plotësohet formulari me të dhënat e punonjësit, pozicionin, trajnimet, certifikatat dhe lejet ekzistuese."
@@ -1989,11 +1989,11 @@
       },
       "step3": {
         "title": "Lëshimi i Kartës",
-        "description": "Pas verifikimit, lëshohet ID Karta Profesionale (IDCP) me të gjitha të dhënat e certifikuara."
+        "description": "Pas verifikimit, lëshohet Karta Profesionale ID (IDCP) me të gjitha të dhënat e certifikuara."
       }
     },
     "cardContains": {
-      "title": "Çfarë Përmban ID Karta Profesionale (IDCP)",
+      "title": "Çfarë Përmban Karta Profesionale ID (IDCP)",
       "item1": "Emri dhe të dhënat e identifikimit të punonjësit",
       "item2": "Pozicioni i punës dhe sektori i kompanisë",
       "item3": "Kualifikimet dhe certifikatat profesionale",
@@ -2003,7 +2003,7 @@
       "item7": "Data e vlefshmërisë dhe kodi unik i verifikimit"
     },
     "benefits": {
-      "title": "Përfitimet Kryesore të ID Karta Profesionale (IDCP)",
+      "title": "Përfitimet Kryesore të Karta Profesionale ID (IDCP)",
       "benefit1": {
         "title": "Dëshmi e Menjëhershme e Kompetencës",
         "description": "Karta shërben si vërtetim i shpejtë dhe zyrtar i aftësive të punonjësit për punëdhënësit, inspektorët dhe klientët."
@@ -2014,7 +2014,7 @@
       },
       "benefit3": {
         "title": "Avantazh në Tendera dhe Kontrata",
-        "description": "Shumë tendera kërkojnë provë të kompetencës profesionale, ID Karta Profesionale (IDCP) e plotëson këtë kusht formalisht."
+        "description": "Shumë tendera kërkojnë provë të kompetencës profesionale, Karta Profesionale ID (IDCP) e plotëson këtë kusht formalisht."
       },
       "benefit4": {
         "title": "Menaxhim i Thjeshtuar i Stafit",
@@ -2022,7 +2022,7 @@
       }
     },
     "industries": {
-      "title": "Kush Ka Nevojë për ID Karta Profesionale (IDCP)?",
+      "title": "Kush Ka Nevojë për Karta Profesionale ID (IDCP)?",
       "construction": {
         "title": "Ndërtim dhe Infrastrukturë",
         "description": "Punëtorë kantieri, operatorë makinerie, mbikëqyrës sigurie"
@@ -2061,7 +2061,7 @@
     },
     "cta": {
       "title": "Dëshmo Aftësitë Profesionale të Stafit Tuaj",
-      "description": "Merr ID Karta Profesionale (IDCP) për çdo punonjës dhe siguro përputhshmëri, besim dhe avantazh konkurrues.",
+      "description": "Merr Karta Profesionale ID (IDCP) për çdo punonjës dhe siguro përputhshmëri, besim dhe avantazh konkurrues.",
       "button": "Kërko ID Kartën Profesionale (IDCP) Tani",
       "footer": "Certifikim i besueshëm. Kompetencë e dëshmuar."
     }
