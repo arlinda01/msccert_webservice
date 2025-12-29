@@ -114,6 +114,11 @@ const QuoteForm: FC = () => {
   const totalSteps = totalSections + 2; // contact + sections + review
 
   useEffect(() => {
+    // Reset states when ISO code changes
+    setError(null);
+    setLoading(true);
+    setForm(null);
+
     const fetchForm = async () => {
       if (!backendIsoCode) {
         setError('Invalid ISO code');

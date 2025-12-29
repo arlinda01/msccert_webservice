@@ -21,7 +21,7 @@
     "ceMarking": "Marcatura CE",
     "energyEfficiency": "Programmi di Efficienza Energetica",
     "staffTraining": "Formazione del Personale",
-    "professionalCards": "Tessera Professionale IDCP",
+    "professionalCards": "ID Tessera Professionale (IDCP)",
     "technologicalCard": "Tessera Tecnologica",
     "equipmentEvaluation": "Valutazione delle Attrezzature",
     "blog": "Blog",
@@ -2151,30 +2151,30 @@
   },
   "professionalCard": {
     "meta": {
-      "title": "IDCP ID Card Professional | Verifica delle Competenze Professionali - MSC Certifications",
-      "description": "Certifica le competenze professionali del tuo staff con IDCP ID Card Professional di MSC Certifications. Dimostra competenza e conformità con gli standard legali e di sicurezza.",
+      "title": "ID Tessera Professionale (IDCP) | Verifica delle Competenze Professionali - MSC Certifications",
+      "description": "Certifica le competenze professionali del tuo staff con ID Tessera Professionale (IDCP) di MSC Certifications. Dimostra competenza e conformità con gli standard legali e di sicurezza.",
       "keywords": "IDCP, ID Card Professional, tessera identità professionale, verifica competenze, certificazione dipendenti, competenza professionale, sicurezza sul lavoro, MSC Certifications"
     },
     "hero": {
-      "title": "IDCP ID Card Professional: Verifica Competenze e Qualifiche Professionali",
+      "title": "ID Tessera Professionale (IDCP): Verifica Competenze e Qualifiche Professionali",
       "subtitle1": "Dimostra la formazione, l'esperienza e le competenze specifiche di ogni dipendente.",
-      "subtitle2": "IDCP ID Card Professional è il certificato personale che attesta la posizione, la competenza e l'autorizzazione del dipendente a svolgere mansioni specifiche, aiutando le organizzazioni a soddisfare i requisiti legali, gli standard ISO e le normative sulla sicurezza sul lavoro.",
-      "cta1": "Richiedi un Preventivo per IDCP ID Card Professional",
+      "subtitle2": "ID Tessera Professionale (IDCP) è il certificato personale che attesta la posizione, la competenza e l'autorizzazione del dipendente a svolgere mansioni specifiche, aiutando le organizzazioni a soddisfare i requisiti legali, gli standard ISO e le normative sulla sicurezza sul lavoro.",
+      "cta1": "Richiedi un Preventivo per ID Tessera Professionale (IDCP)",
       "cta2": "Avvia la Valutazione Gratuita delle Competenze del Personale"
     },
     "whatIs": {
-      "title": "Che cos'è IDCP ID Card Professional?",
+      "title": "Che cos'è ID Tessera Professionale (IDCP)?",
       "subtitle": "Certificazione Personale della Competenza Professionale",
-      "description1": "IDCP ID Card Professional è un documento ufficiale certificato che definisce l'identità professionale di un dipendente all'interno di un'organizzazione.",
+      "description1": "ID Tessera Professionale (IDCP) è un documento ufficiale certificato che definisce l'identità professionale di un dipendente all'interno di un'organizzazione.",
       "description2": "Contiene dati su posizione, qualifiche, formazione, permessi o autorizzazioni specifiche e conformità con i requisiti legali e gli standard di salute e sicurezza sul lavoro.",
       "description3": "La tessera crea un profilo chiaro e affidabile per ogni dipendente, aiutando l'organizzazione a gestire le risorse umane in modo efficace e a rispettare gli obblighi verso ispezioni, gare d'appalto e clienti.",
       "roleBox": {
         "title": "Il Nostro Ruolo come Emittente Accreditato",
-        "description": "MSC Certifications emette IDCP ID Card Professional sulla base di un processo di verifica strutturato, certificando la conformità ai requisiti del settore e alla legislazione applicabile."
+        "description": "MSC Certifications emette ID Tessera Professionale (IDCP) sulla base di un processo di verifica strutturato, certificando la conformità ai requisiti del settore e alla legislazione applicabile."
       }
     },
     "howItWorks": {
-      "title": "Come Funziona IDCP ID Card Professional",
+      "title": "Come Funziona ID Tessera Professionale (IDCP)",
       "step1": {
         "title": "Domanda e Raccolta Dati",
         "description": "Il modulo viene compilato con i dati del dipendente, posizione, formazione, certificati e permessi esistenti."
@@ -2185,11 +2185,11 @@
       },
       "step3": {
         "title": "Emissione della Tessera",
-        "description": "Dopo la verifica, viene emessa la IDCP ID Card Professional con tutti i dati certificati."
+        "description": "Dopo la verifica, viene emessa la ID Tessera Professionale (IDCP) con tutti i dati certificati."
       }
     },
     "cardContains": {
-      "title": "Cosa Contiene IDCP ID Card Professional",
+      "title": "Cosa Contiene ID Tessera Professionale (IDCP)",
       "item1": "Nome e dati identificativi del dipendente",
       "item2": "Posizione lavorativa e settore aziendale",
       "item3": "Qualifiche e certificati professionali",
@@ -2199,7 +2199,7 @@
       "item7": "Data di validità e codice univoco di verifica"
     },
     "benefits": {
-      "title": "Benefici Chiave di IDCP ID Card Professional",
+      "title": "Benefici Chiave di ID Tessera Professionale (IDCP)",
       "benefit1": {
         "title": "Prova Immediata delle Competenze",
         "description": "La tessera funge da verifica rapida e ufficiale delle competenze del dipendente per datori di lavoro, ispettori e clienti."
@@ -2210,7 +2210,7 @@
       },
       "benefit3": {
         "title": "Vantaggio in Gare e Contratti",
-        "description": "Molte gare richiedono prova di competenza professionale, IDCP ID Card soddisfa formalmente questo requisito."
+        "description": "Molte gare richiedono prova di competenza professionale, la ID Tessera Professionale (IDCP) soddisfa formalmente questo requisito."
       },
       "benefit4": {
         "title": "Gestione Semplificata del Personale",
@@ -2218,7 +2218,7 @@
       }
     },
     "industries": {
-      "title": "Chi Ha Bisogno di IDCP ID Card Professional?",
+      "title": "Chi Ha Bisogno di ID Tessera Professionale (IDCP)?",
       "construction": {
         "title": "Costruzioni e Infrastrutture",
         "description": "Operai di cantiere, operatori di macchinari, supervisori della sicurezza"
@@ -2241,7 +2241,7 @@
       }
     },
     "whyChoose": {
-      "title": "Perché MSC Certifications per IDCP ID Card?",
+      "title": "Perché MSC Certifications per la ID Tessera Professionale (IDCP)?",
       "experts": {
         "title": "Processo di Verifica Strutturato",
         "description": "Valutiamo con professionalità e garantiamo accuratezza in ogni tessera emessa."
@@ -2257,8 +2257,8 @@
     },
     "cta": {
       "title": "Dimostra le Competenze Professionali del Tuo Staff",
-      "description": "Ottieni IDCP ID Card Professional per ogni dipendente e assicura conformità, fiducia e vantaggio competitivo.",
-      "button": "Richiedi IDCP ID Card Ora",
+      "description": "Ottieni ID Tessera Professionale (IDCP) per ogni dipendente e assicura conformità, fiducia e vantaggio competitivo.",
+      "button": "Richiedi la ID Tessera Professionale (IDCP) Ora",
       "footer": "Certificazione affidabile. Competenza dimostrata."
     }
   },

@@ -21,7 +21,7 @@
     "ceMarking": "CE Marking",
     "energyEfficiency": "Energy Efficiency Programs",
     "staffTraining": "Staff Training",
-    "professionalCards": "IDCP Professional Card",
+    "professionalCards": "ID Card Professional (IDCP)",
     "technologicalCard": "Technological Card",
     "equipmentEvaluation": "Equipment Evaluation",
     "blog": "Blog",
@@ -1954,30 +1954,30 @@
   },
   "professionalCard": {
     "meta": {
-      "title": "IDCP ID Card Professional | Professional Skills Verification - MSC Certifications",
-      "description": "Certify your staff's professional skills with IDCP ID Card Professional from MSC Certifications. Demonstrate competence and compliance with legal and safety standards.",
+      "title": "ID Card Professional (IDCP) | Professional Skills Verification - MSC Certifications",
+      "description": "Certify your staff's professional skills with ID Card Professional (IDCP) from MSC Certifications. Demonstrate competence and compliance with legal and safety standards.",
       "keywords": "IDCP, ID Card Professional, professional identity card, skills verification, employee certification, professional competence, workplace safety, MSC Certifications"
     },
     "hero": {
-      "title": "IDCP ID Card Professional: Verify Skills and Professional Competence",
+      "title": "ID Card Professional (IDCP): Verify Skills and Professional Competence",
       "subtitle1": "Demonstrate the training, experience, and specific skills of each employee.",
-      "subtitle2": "IDCP ID Card Professional is the personal certificate that verifies the employee's position, competence, and authorization to perform specific duties, helping organizations meet legal requirements, ISO standards, and occupational safety regulations.",
-      "cta1": "Request a Quote for IDCP ID Card Professional",
+      "subtitle2": "ID Card Professional (IDCP) is the personal certificate that verifies the employee's position, competence, and authorization to perform specific duties, helping organizations meet legal requirements, ISO standards, and occupational safety regulations.",
+      "cta1": "Request a Quote for ID Card Professional (IDCP)",
       "cta2": "Start Free Staff Competence Assessment"
     },
     "whatIs": {
-      "title": "What is IDCP ID Card Professional?",
+      "title": "What is ID Card Professional (IDCP)?",
       "subtitle": "Personal Certification of Professional Competence",
-      "description1": "IDCP ID Card Professional is an official certified document that defines the professional identity of an employee within an organization.",
+      "description1": "ID Card Professional (IDCP) is an official certified document that defines the professional identity of an employee within an organization.",
       "description2": "It contains data on position, qualifications, training, specific permits or authorizations, and compliance with legal requirements and occupational health and safety standards.",
       "description3": "The card creates a clear and reliable profile for each employee, helping the organization manage human resources effectively and meet obligations towards inspections, tenders, and clients.",
       "roleBox": {
         "title": "Our Role as Accredited Issuer",
-        "description": "MSC Certifications issues IDCP ID Card Professional based on a structured verification process, certifying compliance with industry requirements and applicable legislation."
+        "description": "MSC Certifications issues ID Card Professional (IDCP) based on a structured verification process, certifying compliance with industry requirements and applicable legislation."
       }
     },
     "howItWorks": {
-      "title": "How IDCP ID Card Professional Works",
+      "title": "How ID Card Professional (IDCP) Works",
       "step1": {
         "title": "Application and Data Collection",
         "description": "The form is completed with employee data, position, training, certificates, and existing permits."
@@ -1988,11 +1988,11 @@
       },
       "step3": {
         "title": "Card Issuance",
-        "description": "After verification, IDCP ID Card Professional is issued with all certified data."
+        "description": "After verification, ID Card Professional (IDCP) is issued with all certified data."
       }
     },
     "cardContains": {
-      "title": "What IDCP ID Card Professional Contains",
+      "title": "What ID Card Professional (IDCP) Contains",
       "item1": "Employee name and identification data",
       "item2": "Job position and company sector",
       "item3": "Professional qualifications and certificates",
@@ -2002,7 +2002,7 @@
       "item7": "Validity date and unique verification code"
     },
     "benefits": {
-      "title": "Key Benefits of IDCP ID Card Professional",
+      "title": "Key Benefits of ID Card Professional (IDCP)",
       "benefit1": {
         "title": "Instant Proof of Competence",
         "description": "The card serves as quick and official verification of employee skills for employers, inspectors, and clients."
@@ -2013,7 +2013,7 @@
       },
       "benefit3": {
         "title": "Advantage in Tenders and Contracts",
-        "description": "Many tenders require proof of professional competence, IDCP ID Card formally fulfills this requirement."
+        "description": "Many tenders require proof of professional competence, ID Card Professional (IDCP) formally fulfills this requirement."
       },
       "benefit4": {
         "title": "Simplified Staff Management",
@@ -2021,7 +2021,7 @@
       }
     },
     "industries": {
-      "title": "Who Needs IDCP ID Card Professional?",
+      "title": "Who Needs ID Card Professional (IDCP)?",
       "construction": {
         "title": "Construction and Infrastructure",
         "description": "Site workers, machinery operators, safety supervisors"
@@ -2044,7 +2044,7 @@
       }
     },
     "whyChoose": {
-      "title": "Why MSC Certifications for IDCP ID Card?",
+      "title": "Why MSC Certifications for ID Card Professional (IDCP)?",
       "experts": {
         "title": "Structured Verification Process",
         "description": "We evaluate with professionalism and ensure accuracy in every card issued."
@@ -2060,8 +2060,8 @@
     },
     "cta": {
       "title": "Demonstrate Your Staff's Professional Skills",
-      "description": "Get IDCP ID Card Professional for each employee and ensure compliance, trust, and competitive advantage.",
-      "button": "Request IDCP ID Card Now",
+      "description": "Get ID Card Professional (IDCP) for each employee and ensure compliance, trust, and competitive advantage.",
+      "button": "Request ID Card Professional (IDCP) Now",
       "footer": "Reliable certification. Proven competence."
     }
   },
