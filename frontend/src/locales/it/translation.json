@@ -429,9 +429,8 @@
     },
     "cta": {
       "title": "Inizia il Tuo Percorso verso Qualità e Fiducia",
-      "subtitle": "Unisciti alle aziende che hanno trasformato la loro operatività con MSC Certifications. Offriamo una valutazione gratuita per identificare gli standard ISO che generano il maggior valore per la tua organizzazione.",
-      "button": "Richiedi un Preventivo Dettagliato e una Valutazione Gratuita",
-      "note": "Tutte le nostre certificazioni sono supportate da organismi accreditati, garantendo riconoscimento globale."
+      "description": "Unisciti alle decine di aziende nella regione che si affidano a MSC Certifications per trasformare il modo in cui operano. Offriamo una valutazione gratuita e senza impegno per identificare i sistemi ISO che offrono il massimo valore e riducono il massimo rischio per la tua azienda.",
+      "accreditedNote": "Tutti i nostri certificati sono accreditati a livello internazionale, garantendo il riconoscimento globale."
     }
   },
   "missionVision": {
