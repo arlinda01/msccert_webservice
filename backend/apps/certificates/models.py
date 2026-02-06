@@ -34,10 +34,12 @@ class Certificate(models.Model):
         ('ISO_9001_2015', 'ISO 9001:2015'),
         ('ISO_14001_2015', 'ISO 14001:2015'),
         ('ISO_22000_2018', 'ISO 22000:2018'),
+        ('ISO_22301_2019', 'ISO 22301:2019'),
         ('ISO_27001_2022', 'ISO 27001:2022'),
         ('ISO_37001_2025', 'ISO 37001:2025'),
         ('ISO_39001_2012', 'ISO 39001:2012'),
         ('ISO_45001_2023', 'ISO 45001:2023'),
+        ('ISO_50001_2018', 'ISO 50001:2018'),
         ('HACCP', 'HACCP: Hazard Analysis and Critical Control Points'),
     ]
 
