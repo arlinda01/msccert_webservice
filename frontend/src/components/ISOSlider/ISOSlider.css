@@ -79,12 +79,7 @@
 
 .iso-slider-arrow.swiper-button-disabled {
   opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.iso-slider-arrow.swiper-button-disabled:hover {
-  transform: none;
-  background: linear-gradient(135deg, #01434f 0%, #085766 100%);
+  cursor: default;
 }
 
 /* Swiper Slide */

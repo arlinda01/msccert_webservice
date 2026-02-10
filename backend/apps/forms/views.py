@@ -402,7 +402,7 @@ Your submission reference number is: {submission.submission_number}
 
 Our team will review your submission and get back to you within 2-3 business days.
 
-If you have any questions, please reply to this email or contact us at info@msc-certifications.com.
+If you have any questions, please reply to this email or contact us at info@msc-cert.com.
 
 Best regards,
 MSC Certifications Team
@@ -529,7 +529,7 @@ Message:
 This message was sent from the MSC Certifications website contact form.
             """
 
-            admin_emails = getattr(settings, 'CONTACT_FORM_EMAILS', ['info@msc-certifications.com'])
+            admin_emails = getattr(settings, 'CONTACT_FORM_EMAILS', ['info@msc-cert.com'])
             if isinstance(admin_emails, str):
                 admin_emails = [admin_emails]
 
@@ -558,7 +558,7 @@ MSC Certifications Team
 
 ---
 MSC Certifications
-Email: info@msc-certifications.com
+Email: info@msc-cert.com
 Phone: +355 67 206 3632
             """
 
@@ -581,5 +581,5 @@ Phone: +355 67 206 3632
             logger.error(f"Failed to send contact form email: {str(e)}")
             return Response({
                 'success': False,
-                'message': 'Failed to send message. Please try again or contact us directly at info@msc-certifications.com'
+                'message': 'Failed to send message. Please try again or contact us directly at info@msc-cert.com'
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

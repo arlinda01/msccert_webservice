@@ -20,6 +20,7 @@ import ISO37001 from './pages/ISO37001/ISO37001';
 import ISO39001 from './pages/ISO39001/ISO39001';
 import ISO45001 from './pages/ISO45001/ISO45001';
 import ISO50001 from './pages/ISO50001/ISO50001';
+import ISO22000 from './pages/ISO22000/ISO22000';
 import HACCP from './pages/HACCP/HACCP';
 import ISOCertifications from './pages/ISOCertifications/ISOCertifications';
 import CEMarking from './pages/CEMarking/CEMarking';
@@ -39,6 +40,10 @@ import TermsConditions from './pages/TermsConditions/TermsConditions';
 import QuoteForm from './pages/QuoteForm/QuoteForm';
 import Blog from './pages/Blog/Blog';
 import BlogPost from './pages/Blog/BlogPost';
+import ApplyOnline from './pages/ApplyOnline/ApplyOnline';
+import SearchCertificate from './pages/SearchCertificate/SearchCertificate';
+import CookieConsent from './components/CookieConsent/CookieConsent';
+import WhatsAppWidget from './components/WhatsAppWidget/WhatsAppWidget';
 import { detectLanguageFromPath } from './config/routes';
 
 // Component to sync language from URL
@@ -82,6 +87,7 @@ const App: FC = () => {
             <Route path="/services/iso/iso-39001" element={<ISO39001 />} />
             <Route path="/services/iso/iso-45001" element={<ISO45001 />} />
             <Route path="/services/iso/iso-50001" element={<ISO50001 />} />
+            <Route path="/services/iso/iso-22000" element={<ISO22000 />} />
             <Route path="/services/iso/haccp" element={<HACCP />} />
             <Route path="/services/ce-marking" element={<CEMarking />} />
             <Route path="/services/compliance/ce-marking" element={<CEMarking />} />
@@ -101,6 +107,8 @@ const App: FC = () => {
             <Route path="/certificate/:secureId" element={<CertificateVerify />} />
             <Route path="/quote/:isoCode" element={<QuoteForm />} />
             <Route path="/get-quote" element={<QuoteForm />} />
+            <Route path="/apply-online" element={<ApplyOnline />} />
+            <Route path="/search-certificate" element={<SearchCertificate />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
 
@@ -121,6 +129,7 @@ const App: FC = () => {
             <Route path="/sq/sherbimet/iso/iso-39001" element={<ISO39001 />} />
             <Route path="/sq/sherbimet/iso/iso-45001" element={<ISO45001 />} />
             <Route path="/sq/sherbimet/iso/iso-50001" element={<ISO50001 />} />
+            <Route path="/sq/sherbimet/iso/iso-22000" element={<ISO22000 />} />
             <Route path="/sq/sherbimet/iso/haccp" element={<HACCP />} />
             <Route path="/sq/sherbimet/markimi-ce" element={<CEMarking />} />
             <Route path="/sq/sherbimet" element={<AdditionalServices />} />
@@ -136,6 +145,8 @@ const App: FC = () => {
             <Route path="/sq/certifikata/:secureId" element={<CertificateVerify />} />
             <Route path="/sq/kerkese-oferte/:isoCode" element={<QuoteForm />} />
             <Route path="/sq/merr-oferte" element={<QuoteForm />} />
+            <Route path="/sq/apliko-online" element={<ApplyOnline />} />
+            <Route path="/sq/kerko-certifikate" element={<SearchCertificate />} />
             <Route path="/sq/artikuj" element={<Blog />} />
             <Route path="/sq/artikuj/:slug" element={<BlogPost />} />
 
@@ -156,6 +167,7 @@ const App: FC = () => {
             <Route path="/it/servizi/iso/iso-39001" element={<ISO39001 />} />
             <Route path="/it/servizi/iso/iso-45001" element={<ISO45001 />} />
             <Route path="/it/servizi/iso/iso-50001" element={<ISO50001 />} />
+            <Route path="/it/servizi/iso/iso-22000" element={<ISO22000 />} />
             <Route path="/it/servizi/iso/haccp" element={<HACCP />} />
             <Route path="/it/servizi/marcatura-ce" element={<CEMarking />} />
             <Route path="/it/servizi" element={<AdditionalServices />} />
@@ -171,11 +183,15 @@ const App: FC = () => {
             <Route path="/it/certificato/:secureId" element={<CertificateVerify />} />
             <Route path="/it/richiesta-preventivo/:isoCode" element={<QuoteForm />} />
             <Route path="/it/richiedi-preventivo" element={<QuoteForm />} />
+            <Route path="/it/richiesta-online" element={<ApplyOnline />} />
+            <Route path="/it/cerca-certificato" element={<SearchCertificate />} />
             <Route path="/it/articoli" element={<Blog />} />
             <Route path="/it/articoli/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
+        <WhatsAppWidget />
       </div>
     </Router>
   );

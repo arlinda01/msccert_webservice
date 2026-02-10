@@ -41,6 +41,7 @@ const ISOSlider: FC<ISOSliderProps> = ({ cards }) => {
             prevEl: '.iso-slider-arrow-prev',
             nextEl: '.iso-slider-arrow-next',
           }}
+          loop={cards.length > 4}
           autoplay={cards.length > 4 ? {
             delay: 5000,
             disableOnInteraction: false,

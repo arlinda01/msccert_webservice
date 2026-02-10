@@ -82,6 +82,15 @@ class Certificate(models.Model):
         max_length=50,
         help_text="IAF (International Accreditation Forum) code"
     )
+    address = models.TextField(
+        blank=True,
+        help_text="Company address shown on certificate"
+    )
+    modification_date = models.DateField(
+        null=True,
+        blank=True,
+        help_text="Data e Modifikimit - modification date shown on certificate"
+    )
 
     # Maintenance tracking
     next_maintenance_date = models.DateField(

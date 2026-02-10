@@ -65,6 +65,7 @@ const isoCodeMap: Record<string, string> = {
   'iso-39001': 'ISO_39001',
   'iso-45001': 'ISO_45001',
   'iso-50001': 'ISO_50001',
+  'iso-22000': 'ISO_22000',
   'haccp': 'HACCP',
   'ce-marking': 'GENERAL',
 };
@@ -79,8 +80,13 @@ const isoDisplayNames: Record<string, string> = {
   'iso-39001': 'ISO 39001:2012',
   'iso-45001': 'ISO 45001:2018',
   'iso-50001': 'ISO 50001:2018',
+  'iso-22000': 'ISO 22000:2018',
   'haccp': 'HACCP',
   'ce-marking': 'CE Marking',
+};
+
+const isValidEmail = (email: string): boolean => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 };
 
 const QuoteForm: FC = () => {
@@ -100,21 +106,26 @@ const QuoteForm: FC = () => {
     address: '',
     additional_notes: '',
   });
+  const [emailError, setEmailError] = useState<string | null>(null);
+  const [acceptTerms, setAcceptTerms] = useState(false);
 
-  // Current step: section index (0, 1, 2...), 'contact', 'review', 'success'
-  // Flow: sections first, then contact info, then review
-  const [currentStep, setCurrentStep] = useState<number | 'contact' | 'review' | 'success'>(0);
+  // Flow: contact (step 0) -> sections (step 1..N) -> review (last step)
+  const [currentStep, setCurrentStep] = useState<number | 'review' | 'success'>('contact' as any);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  // Step types: 'contact', 0, 1, 2... (section indices), 'review'
+  type StepType = 'contact' | number | 'review' | 'success';
+  const currentStepTyped = currentStep as StepType;
 
   const backendIsoCode = isoCode ? isoCodeMap[isoCode] : null;
   const displayName = isoCode ? isoDisplayNames[isoCode] : '';
 
   const totalSections = form?.sections?.length || 0;
-  const totalSteps = totalSections + 2; // contact + sections + review
+  // contact + sections + review
+  const totalSteps = 1 + totalSections + 1;
 
   useEffect(() => {
-    // Reset states when ISO code changes
     setError(null);
     setLoading(true);
     setForm(null);
@@ -160,6 +171,9 @@ const QuoteForm: FC = () => {
       ...prev,
       [field]: value,
     }));
+    if (field === 'email') {
+      setEmailError(null);
+    }
   };
 
   const validateContact = (): boolean => {
@@ -167,16 +181,16 @@ const QuoteForm: FC = () => {
       contactInfo.company_name.trim() &&
       contactInfo.contact_person.trim() &&
       contactInfo.email.trim() &&
+      isValidEmail(contactInfo.email) &&
       contactInfo.phone.trim()
     );
   };
 
   const validateCurrentSection = (): boolean => {
-    if (typeof currentStep !== 'number' || !form) return true;
-    const section = form.sections[currentStep];
+    if (typeof currentStepTyped !== 'number' || !form) return true;
+    const section = form.sections[currentStepTyped];
     if (!section) return true;
 
-    // All questions are required - check that each has an answer
     for (const question of section.questions) {
       if (!answers[question.id] || answers[question.id].trim() === '') {
         return false;
@@ -185,37 +199,108 @@ const QuoteForm: FC = () => {
     return true;
   };
 
-  const goToNextStep = () => {
-    if (typeof currentStep === 'number') {
-      if (currentStep < totalSections - 1) {
-        setCurrentStep(currentStep + 1);
-      } else {
-        setCurrentStep('contact');
+  const getCurrentStepNumber = (): number => {
+    if (currentStepTyped === 'contact') return 1;
+    if (typeof currentStepTyped === 'number') return currentStepTyped + 2;
+    if (currentStepTyped === 'review') return totalSteps;
+    return 1;
+  };
+
+  const getStepLabel = (stepIndex: number): string => {
+    if (stepIndex === 0) return t('quoteForm.steps.contact');
+    if (stepIndex <= totalSections) {
+      const section = form?.sections[stepIndex - 1];
+      if (section) return getLocalizedText(section.title, section.title_sq, section.title_it);
+      return '';
+    }
+    return t('quoteForm.steps.review');
+  };
+
+  const canNavigateToStep = (stepIndex: number): boolean => {
+    // Can always go back to contact (step 0)
+    if (stepIndex === 0) return true;
+    // Can go to section steps if contact is valid
+    if (stepIndex <= totalSections) {
+      if (!validateContact()) return false;
+      // Check all previous sections are complete
+      for (let i = 0; i < stepIndex - 1; i++) {
+        const section = form?.sections[i];
+        if (section) {
+          for (const question of section.questions) {
+            if (!answers[question.id] || answers[question.id].trim() === '') {
+              return false;
+            }
+          }
+        }
       }
-    } else if (currentStep === 'contact') {
-      setCurrentStep('review');
+      return true;
+    }
+    // Review step: all must be valid
+    if (stepIndex === totalSteps - 1) {
+      if (!validateContact()) return false;
+      for (let i = 0; i < totalSections; i++) {
+        const section = form?.sections[i];
+        if (section) {
+          for (const question of section.questions) {
+            if (!answers[question.id] || answers[question.id].trim() === '') {
+              return false;
+            }
+          }
+        }
+      }
+      return true;
+    }
+    return false;
+  };
+
+  const navigateToStep = (stepIndex: number) => {
+    if (!canNavigateToStep(stepIndex)) return;
+    if (stepIndex === 0) {
+      setCurrentStep('contact' as any);
+    } else if (stepIndex <= totalSections) {
+      setCurrentStep(stepIndex - 1);
+    } else {
+      setCurrentStep('review' as any);
+    }
+    window.scrollTo(0, 0);
+  };
+
+  const goToNextStep = () => {
+    if (currentStepTyped === 'contact') {
+      if (!isValidEmail(contactInfo.email)) {
+        setEmailError(t('quoteForm.errors.invalidEmail') || 'Please enter a valid email address');
+        return;
+      }
+      if (totalSections > 0) {
+        setCurrentStep(0);
+      } else {
+        setCurrentStep('review' as any);
+      }
+    } else if (typeof currentStepTyped === 'number') {
+      if (currentStepTyped < totalSections - 1) {
+        setCurrentStep(currentStepTyped + 1);
+      } else {
+        setCurrentStep('review' as any);
+      }
     }
     window.scrollTo(0, 0);
   };
 
   const goToPreviousStep = () => {
-    if (currentStep === 'review') {
-      setCurrentStep('contact');
-    } else if (currentStep === 'contact') {
-      setCurrentStep(totalSections - 1);
-    } else if (typeof currentStep === 'number') {
-      if (currentStep > 0) {
-        setCurrentStep(currentStep - 1);
+    if (currentStepTyped === 'review') {
+      if (totalSections > 0) {
+        setCurrentStep(totalSections - 1);
+      } else {
+        setCurrentStep('contact' as any);
+      }
+    } else if (typeof currentStepTyped === 'number') {
+      if (currentStepTyped > 0) {
+        setCurrentStep(currentStepTyped - 1);
+      } else {
+        setCurrentStep('contact' as any);
       }
     }
     window.scrollTo(0, 0);
-  };
-
-  const getCurrentStepNumber = (): number => {
-    if (typeof currentStep === 'number') return currentStep + 1;
-    if (currentStep === 'contact') return totalSections + 1;
-    if (currentStep === 'review') return totalSteps;
-    return 1;
   };
 
   const handleSubmit = async () => {
@@ -239,7 +324,7 @@ const QuoteForm: FC = () => {
         })),
       });
 
-      setCurrentStep('success');
+      setCurrentStep('success' as any);
       window.scrollTo(0, 0);
     } catch (err: any) {
       console.error('Error submitting form:', err);
@@ -298,9 +383,9 @@ const QuoteForm: FC = () => {
 
         <section className="quote-hero">
           <div className="container">
-            <h1>{t('quoteForm.selectService.title') || 'Select a Service'}</h1>
+            <h1>{t('quoteForm.selectService.title')}</h1>
             <p className="quote-subtitle">
-              {t('quoteForm.selectService.subtitle') || 'Choose the certification or service you are interested in:'}
+              {t('quoteForm.selectService.subtitle')}
             </p>
           </div>
         </section>
@@ -341,7 +426,7 @@ const QuoteForm: FC = () => {
     );
   }
 
-  const currentSection = typeof currentStep === 'number' ? form.sections[currentStep] : null;
+  const currentSection = typeof currentStepTyped === 'number' ? form.sections[currentStepTyped] : null;
 
   return (
     <div className="quote-form-page">
@@ -360,25 +445,37 @@ const QuoteForm: FC = () => {
         </div>
       </section>
 
-      {/* Progress Bar */}
-      {currentStep !== 'success' && (
+      {/* Step Indicators */}
+      {currentStepTyped !== 'success' && (
         <section className="progress-section">
           <div className="container">
-            <div className="progress-bar-container">
-              <div className="progress-info">
-                <span>{t('quoteForm.step')} {getCurrentStepNumber()} {t('quoteForm.of')} {totalSteps}</span>
-              </div>
-              <div className="progress-bar">
-                <div
-                  className="progress-bar-fill"
-                  style={{ width: `${(getCurrentStepNumber() / totalSteps) * 100}%` }}
-                ></div>
-              </div>
-              <div className="progress-label">
-                {typeof currentStep === 'number' && getLocalizedText(currentSection?.title || '', currentSection?.title_sq || '', currentSection?.title_it || '')}
-                {currentStep === 'contact' && t('quoteForm.steps.contact')}
-                {currentStep === 'review' && t('quoteForm.steps.review')}
-              </div>
+            <div className="step-indicators">
+              {Array.from({ length: totalSteps }).map((_, index) => {
+                const stepNum = getCurrentStepNumber();
+                const isActive = index === stepNum - 1;
+                const isCompleted = index < stepNum - 1;
+                const isClickable = canNavigateToStep(index);
+                return (
+                  <div
+                    key={index}
+                    className={`step-indicator ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''} ${isClickable ? 'clickable' : ''}`}
+                    onClick={() => isClickable ? navigateToStep(index) : undefined}
+                    role={isClickable ? 'button' : undefined}
+                    tabIndex={isClickable ? 0 : undefined}
+                  >
+                    <div className="step-circle">
+                      {isCompleted ? (
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      ) : (
+                        index + 1
+                      )}
+                    </div>
+                    <span className="step-label">{getStepLabel(index)}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -387,8 +484,80 @@ const QuoteForm: FC = () => {
       {/* Form Content */}
       <section className="form-section">
         <div className="container">
-          {/* Section Steps (Questions first) */}
-          {typeof currentStep === 'number' && currentSection && (
+          {/* Contact Information Step (FIRST) */}
+          {currentStepTyped === 'contact' && (
+            <div className="form-step contact-step">
+              <h2>{t('quoteForm.contactInfo.title')}</h2>
+              <p className="step-description">{t('quoteForm.contactInfo.description')}</p>
+
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="company_name">{t('quoteForm.contactInfo.companyName')} *</label>
+                  <input
+                    type="text"
+                    id="company_name"
+                    value={contactInfo.company_name}
+                    onChange={(e) => handleContactChange('company_name', e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="contact_person">{t('quoteForm.contactInfo.contactPerson')} *</label>
+                  <input
+                    type="text"
+                    id="contact_person"
+                    value={contactInfo.contact_person}
+                    onChange={(e) => handleContactChange('contact_person', e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="email">{t('quoteForm.contactInfo.email')} *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    value={contactInfo.email}
+                    onChange={(e) => handleContactChange('email', e.target.value)}
+                    className={emailError ? 'input-error' : ''}
+                    required
+                  />
+                  {emailError && <span className="field-error">{emailError}</span>}
+                </div>
+                <div className="form-group">
+                  <label htmlFor="phone">{t('quoteForm.contactInfo.phone')} *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    value={contactInfo.phone}
+                    onChange={(e) => handleContactChange('phone', e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group full-width">
+                  <label htmlFor="address">{t('quoteForm.contactInfo.address')}</label>
+                  <input
+                    type="text"
+                    id="address"
+                    value={contactInfo.address}
+                    onChange={(e) => handleContactChange('address', e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="form-actions">
+                <button
+                  className="btn btn-primary"
+                  onClick={goToNextStep}
+                  disabled={!validateContact()}
+                >
+                  {t('common.next')}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Section Steps (Questions) */}
+          {typeof currentStepTyped === 'number' && currentSection && (
             <div className="form-step section-step">
               <h2>{getLocalizedText(currentSection.title, currentSection.title_sq, currentSection.title_it)}</h2>
               {currentSection.description && (
@@ -426,14 +595,12 @@ const QuoteForm: FC = () => {
               </div>
 
               <div className="form-actions">
-                {currentStep > 0 && (
-                  <button
-                    className="btn btn-secondary"
-                    onClick={goToPreviousStep}
-                  >
-                    {t('common.back')}
-                  </button>
-                )}
+                <button
+                  className="btn btn-secondary"
+                  onClick={goToPreviousStep}
+                >
+                  {t('common.back')}
+                </button>
                 <button
                   className="btn btn-primary"
                   onClick={goToNextStep}
@@ -445,90 +612,19 @@ const QuoteForm: FC = () => {
             </div>
           )}
 
-          {/* Contact Information Step (after questions) */}
-          {currentStep === 'contact' && (
-            <div className="form-step contact-step">
-              <h2>{t('quoteForm.contactInfo.title')}</h2>
-              <p className="step-description">{t('quoteForm.contactInfo.description')}</p>
-
-              <div className="form-grid">
-                <div className="form-group">
-                  <label htmlFor="company_name">{t('quoteForm.contactInfo.companyName')} *</label>
-                  <input
-                    type="text"
-                    id="company_name"
-                    value={contactInfo.company_name}
-                    onChange={(e) => handleContactChange('company_name', e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="contact_person">{t('quoteForm.contactInfo.contactPerson')} *</label>
-                  <input
-                    type="text"
-                    id="contact_person"
-                    value={contactInfo.contact_person}
-                    onChange={(e) => handleContactChange('contact_person', e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">{t('quoteForm.contactInfo.email')} *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={contactInfo.email}
-                    onChange={(e) => handleContactChange('email', e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="phone">{t('quoteForm.contactInfo.phone')} *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    value={contactInfo.phone}
-                    onChange={(e) => handleContactChange('phone', e.target.value)}
-                    required
-                  />
-                </div>
-                <div className="form-group full-width">
-                  <label htmlFor="address">{t('quoteForm.contactInfo.address')}</label>
-                  <input
-                    type="text"
-                    id="address"
-                    value={contactInfo.address}
-                    onChange={(e) => handleContactChange('address', e.target.value)}
-                  />
-                </div>
-              </div>
-
-              <div className="form-actions">
-                <button
-                  className="btn btn-secondary"
-                  onClick={goToPreviousStep}
-                >
-                  {t('common.back')}
-                </button>
-                <button
-                  className="btn btn-primary"
-                  onClick={goToNextStep}
-                  disabled={!validateContact()}
-                >
-                  {t('common.next')}
-                </button>
-              </div>
-            </div>
-          )}
-
           {/* Review Step */}
-          {currentStep === 'review' && (
+          {currentStepTyped === 'review' && (
             <div className="form-step review-step">
               <h2>{t('quoteForm.review.title')}</h2>
               <p className="step-description">{t('quoteForm.review.description')}</p>
 
               <div className="review-section">
-                <h3>{t('quoteForm.contactInfo.title')}</h3>
+                <div className="review-section-header">
+                  <h3>{t('quoteForm.contactInfo.title')}</h3>
+                  <button className="edit-step-btn" onClick={() => navigateToStep(0)}>
+                    {t('common.edit')}
+                  </button>
+                </div>
                 <div className="review-grid">
                   <div className="review-item">
                     <span className="label">{t('quoteForm.contactInfo.companyName')}:</span>
@@ -578,6 +674,20 @@ const QuoteForm: FC = () => {
                 />
               </div>
 
+              <p className="expert-note">{t('quoteForm.review.expertNote')}</p>
+
+              <div className="form-group-checkbox">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={acceptTerms}
+                    onChange={(e) => setAcceptTerms(e.target.checked)}
+                    required
+                  />
+                  <span dangerouslySetInnerHTML={{ __html: t('quoteForm.review.acceptTerms') }} />
+                </label>
+              </div>
+
               {submitError && (
                 <div className="error-message">
                   {submitError}
@@ -595,7 +705,7 @@ const QuoteForm: FC = () => {
                 <button
                   className="btn btn-primary"
                   onClick={handleSubmit}
-                  disabled={submitting}
+                  disabled={submitting || !acceptTerms}
                 >
                   {submitting ? t('common.loading') : t('common.submit')}
                 </button>
@@ -604,7 +714,7 @@ const QuoteForm: FC = () => {
           )}
 
           {/* Success Step */}
-          {currentStep === 'success' && (
+          {currentStepTyped === 'success' && (
             <div className="form-step success-step">
               <div className="success-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -16,6 +16,7 @@
     "iso39001": "ISO 39001 – Road Traffic Safety",
     "iso45001": "ISO 45001 – Health & Safety at Work",
     "iso50001": "ISO 50001 – Energy Management",
+    "iso22000": "ISO 22000 – Food Safety Management",
     "haccp": "HACCP – Food Safety",
     "ourServices": "Our Services",
     "ceMarking": "CE Marking",
@@ -29,10 +30,11 @@
     "contactUs": "Contact Us",
     "onlineAssessment": "Online Assessment",
     "getQuote": "Start Assessment",
+    "searchCertificate": "Search Certificate",
     "language": "Language"
   },
   "footer": {
-    "companyDescription": "MSC Certifications is a leading certification body providing ISO certifications, CE marking, and other professional services across Europe and beyond.",
+    "companyDescription": "MSC Certifications is a certification body providing ISO certifications, CE marking, and other professional services across Europe and beyond.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "contact": "Contact",
@@ -58,7 +60,37 @@
     "viewAllServices": "View All Services",
     "requestQuote": "Get a Free Quote",
     "contactUs": "Contact Us",
-    "getIsoQuote": "Get a {{isoCode}} Quote"
+    "getIsoQuote": "Get a {{isoCode}} Quote",
+    "edit": "Edit",
+    "sending": "Sending..."
+  },
+  "cookieConsent": {
+    "message": "We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn More"
+  },
+  "whatsapp": {
+    "tooltip": "Chat with us",
+    "title": "Start a conversation",
+    "subtitle": "Fill in the details below to start a WhatsApp chat with our team.",
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "service": "Service Needed",
+    "servicePlaceholder": "Select a service",
+    "message": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "send": "Open WhatsApp",
+    "services": {
+      "iso9001": "ISO 9001 - Quality Management",
+      "iso14001": "ISO 14001 - Environmental Management",
+      "iso27001": "ISO 27001 - Information Security",
+      "iso45001": "ISO 45001 - Health & Safety",
+      "haccp": "HACCP - Food Safety",
+      "ceMarking": "CE Marking",
+      "training": "Staff Training",
+      "other": "Other"
+    }
   },
   "meta": {
     "home": {
@@ -273,10 +305,16 @@
         "answer": "Yes, in some cases and according to accreditation rules, part of the audit can be conducted remotely, especially for documentation review. Critical on-site activities require physical presence."
       }
     },
+    "applyOnline": {
+      "title": "Ready to Get Certified?",
+      "subtitle": "Submit your application online and our team will get back to you with a personalized quote.",
+      "button": "Apply Online"
+    },
     "cta": {
       "title": "Start Your Journey Towards Quality and Trust",
-      "description": "Join dozens of companies in the region that trust MSC Certifications to transform the way they operate. We offer a free, no-obligation assessment to identify the ISO systems that deliver the highest value and reduce the most risk for your business.",
-      "accreditedNote": "All our certificates are internationally accredited, ensuring global recognition."
+      "description": "Join hundreds of companies in the region that trust MSC Certifications to transform the way they operate. We offer a free, no-obligation assessment to identify the ISO systems that deliver the highest value and reduce the most risk for your business.",
+      "accreditedNote": "All our certificates are internationally accredited, ensuring global recognition.",
+      "button": "Get Offer"
     }
   },
   "missionVision": {
@@ -605,7 +643,7 @@
       "contact": {
         "title": "10. Contact",
         "content": "For any questions regarding these terms, please contact us:",
-        "email": "info@msc-certifications.com",
+        "email": "info@msc-cert.com",
         "address": "Ismail Qemali Street, Tirana, Albania"
       }
     },
@@ -1410,6 +1448,97 @@
       "footer": "Our certificates are internationally accredited and globally recognized."
     }
   },
+  "iso22000": {
+    "meta": {
+      "title": "ISO 22000 Certification | Food Safety Compliance Audits",
+      "description": "Ensure food safety and traceability with ISO 22000 certification. Access regulated markets and protect your brand reputation.",
+      "keywords": "ISO 22000 certification, food safety, FSMS, food audit, HACCP integration, product traceability, EU compliance, MSC CERTIFICATIONS"
+    },
+    "hero": {
+      "title": "ISO 22000: Ensure Food Safety Across the Supply Chain",
+      "subtitle": "Minimize contamination risks, ensure full traceability and meet international food safety regulations."
+    },
+    "whatIs": {
+      "title": "What Is ISO 22000? The Standard for Food Integrity",
+      "description": "ISO 22000 is the international standard for Food Safety Management Systems (FSMS). It combines HACCP principles with a management approach for continuous hazard control, effective communication and sustained improvement. This standard covers the entire food chain — from production and processing to packaging, storage and distribution.",
+      "roleBox": {
+        "title": "The Role of MSC CERTIFICATIONS as an Accredited Body",
+        "description": "MSC CERTIFICATIONS is your accredited and independent partner for ISO 22000 auditing. Our auditors analyze critical control points, documentation and technical processes to assess how effectively your system prevents food contamination. Certification is issued only on clear and objective evidence of compliance with ISO 22000:2018 requirements."
+      }
+    },
+    "benefits": {
+      "title": "Key Benefits: Safety, Market Access and Risk Management",
+      "benefit1": {
+        "title": "Product Safety & Traceability",
+        "description": "Guarantees safety and traceability at every stage of production. Significantly reduces the risk of contamination and product recalls."
+      },
+      "benefit2": {
+        "title": "Access to Regulated Markets",
+        "description": "Meets EU regulatory requirements and retail network standards. Builds trust with supermarkets and major distributors."
+      },
+      "benefit3": {
+        "title": "Effective Crisis Management",
+        "description": "Reduces operational losses and damages. Protects your brand reputation and integrity."
+      }
+    },
+    "industryFocus": {
+      "title": "Industries Where ISO 22000 Applies",
+      "foodProduction": {
+        "title": "Food Production & Processing",
+        "description": "Manufacturing and processing of food products."
+      },
+      "beverages": {
+        "title": "Beverages & Dairy",
+        "description": "Beverage and dairy product manufacturing."
+      },
+      "packaging": {
+        "title": "Packaging & Materials",
+        "description": "Food packaging and contact materials."
+      },
+      "distribution": {
+        "title": "Storage & Distribution",
+        "description": "Warehousing, cold chain and food distribution."
+      },
+      "horeca": {
+        "title": "Gastronomy & Hospitality (HORECA)",
+        "description": "Restaurants, catering and hospitality services."
+      },
+      "agriculture": {
+        "title": "Agriculture & Primary Supply",
+        "description": "Farming, aquaculture and raw material supply."
+      }
+    },
+    "mscAdvantage": {
+      "title": "Why Choose MSC CERTIFICATIONS",
+      "specializedAuditors": {
+        "title": "Food Safety Specialist Auditors",
+        "description": "With practical experience in the food industry."
+      },
+      "practicalAudit": {
+        "title": "Practical and Useful Auditing",
+        "description": "Makes your FSMS a real tool for improvement."
+      },
+      "objectiveCertification": {
+        "title": "Internationally Recognized Certification",
+        "description": "Accredited by official bodies and accepted in EU markets."
+      }
+    },
+    "process": {
+      "title": "Certification Process",
+      "step1": "Application & Contract",
+      "step2": "Stage I Audit – Document Review",
+      "step3": "Stage II Audit – On-site Verification",
+      "step4": "Certificate Issuance",
+      "step5": "Annual Surveillance Audits",
+      "step6": "Re-certification (Year 3)"
+    },
+    "cta": {
+      "title": "Ready to Secure Your Products and Brand?",
+      "description": "Protect consumers, ensure compliance and open doors to international markets.",
+      "button": "Start ISO 22000 Certification Process",
+      "footer": "All certificates issued by MSC CERTIFICATIONS are accredited and globally recognized."
+    }
+  },
   "haccp": {
     "meta": {
       "title": "HACCP Certification | MSC Certifications",
@@ -1604,7 +1733,7 @@
       "subtitle": "We're here to help. Get in touch with our team for certification inquiries, quotes or any questions about our services."
     },
     "form": {
-      "title": "Send Us a Message",
+      "title": "Contact Us",
       "name": "Full Name",
       "namePlaceholder": "Enter your full name",
       "email": "Email Address",
@@ -1616,28 +1745,37 @@
       "subject": "Subject",
       "subjectPlaceholder": "Select or enter subject",
       "subjects": {
-        "certification": "ISO Certification Inquiry",
-        "ceMarking": "CE Marking Services",
+        "iso9001": "ISO 9001 – Quality Management",
+        "iso14001": "ISO 14001 – Environmental Management",
+        "iso22000": "ISO 22000 – Food Safety",
+        "iso22301": "ISO 22301 – Business Continuity",
+        "iso27001": "ISO 27001 – Information Security",
+        "iso37001": "ISO 37001 – Anti-Bribery Management",
+        "iso39001": "ISO 39001 – Road Traffic Safety",
+        "iso45001": "ISO 45001 – Health & Safety at Work",
+        "iso50001": "ISO 50001 – Energy Management",
+        "haccp": "HACCP – Food Safety",
+        "ceMarking": "CE Marking",
         "training": "Training Programs",
         "quote": "Request a Quote",
         "other": "Other"
       },
       "message": "Message",
       "messagePlaceholder": "How can we help you?",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
       "submit": "Send Message",
       "sending": "Sending...",
       "successTitle": "Message Sent Successfully!",
       "successMessage": "Thank you for contacting us. Our team will get back to you within 24-48 hours.",
       "errorTitle": "Failed to Send Message",
-      "errorMessage": "Please try again or contact us directly at info@msc-certifications.com"
+      "errorMessage": "Please try again or contact us directly at info@msc-cert.com"
     },
     "info": {
       "title": "Contact Information",
       "description": "Reach out to us through any of the following channels:",
       "address": {
         "title": "Address",
-        "line1": "Ismail Qemali Street",
-        "line2": "Tirana, Albania"
+        "line1": "Ismail Qemali Street, Tirana, Albania"
       },
       "phone": {
         "title": "Phone",
@@ -1645,12 +1783,15 @@
       },
       "email": {
         "title": "Email",
-        "address": "info@msc-certifications.com"
+        "address": "info@msc-cert.com"
       },
       "hours": {
         "title": "Working Hours",
         "weekdays": "Monday - Friday: 09:00 - 18:00",
         "weekend": "Saturday - Sunday: Closed"
+      },
+      "social": {
+        "title": "Follow Us"
       }
     },
     "faq": {
@@ -1673,7 +1814,7 @@
     "title": "Quote Request",
     "selectService": {
       "title": "Select a Service",
-      "subtitle": "Choose the certification or service you are interested in:"
+      "subtitle": "Choose the certification or service you need:"
     },
     "step": "Step",
     "of": "of",
@@ -1707,7 +1848,9 @@
       "summaryNote": "Your responses will be reviewed by our experts.",
       "questionsAnswered": "questions answered",
       "noAnswers": "No questions answered yet",
-      "responses": "Your Responses"
+      "responses": "Your Responses",
+      "expertNote": "Our experts will review your answers and you will receive a detailed report on compliance with the required standard.",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations."
     },
     "success": {
       "title": "Thank You!",
@@ -1721,7 +1864,8 @@
     "submit": "Submit Request",
     "errors": {
       "loadFailed": "Failed to load the form. Please try again.",
-      "submitFailed": "Failed to submit your request. Please try again."
+      "submitFailed": "Failed to submit your request. Please try again.",
+      "invalidEmail": "Please enter a valid email address"
     }
   },
   "generalQuote": {
@@ -2391,6 +2535,11 @@
         "description": "Optimize energy use, reduce costs, and minimize environmental impact through systematic energy management.",
         "benefits": ["Reduce Utility Bills", "Measurable Savings", "Environmental Performance"]
       },
+      "iso22000": {
+        "title": "ISO 22000 - Food Safety Management",
+        "description": "Comprehensive food safety management system covering the entire food chain from farm to fork.",
+        "benefits": ["Full Supply Chain Control", "International Compliance", "Consumer Confidence"]
+      },
       "haccp": {
         "title": "HACCP - Food Safety",
         "description": "Critical food safety management system focused on preventing hazards in food production.",
@@ -2521,6 +2670,83 @@
       "title": "Ensure Your Products Meet Legal Entry Requirements",
       "description": "Build trust across the EU market with proper CE Marking certification. Start your compliance journey with MSC Certifications today.",
       "button": "Contact Us Today"
+    }
+  },
+  "applyOnline": {
+    "meta": {
+      "title": "Apply Online | MSC Certifications",
+      "description": "Submit your certification application online. Request a quote for ISO certification, CE Marking, and more."
+    },
+    "hero": {
+      "title": "Apply Online",
+      "subtitle": "Complete the form below to request a certification quote. Our team will review your application and get back to you within 24-48 hours."
+    },
+    "form": {
+      "sections": {
+        "certification": "Certification Standard",
+        "companyData": "Company Data",
+        "address": "Address",
+        "contact": "Contact Information",
+        "business": "Business Information"
+      },
+      "certificationStandard": "Certification Standard",
+      "selectStandard": "Select a certification standard",
+      "standards": {
+        "other": "Other"
+      },
+      "otherStandard": "Specify the certification you are requesting",
+      "otherStandardPlaceholder": "Enter the certification standard",
+      "requestType": "Request Type",
+      "requestTypes": {
+        "initial": "Initial Certification",
+        "renovation": "Renovation",
+        "transfer": "Transfer"
+      },
+      "companyName": "Company Name",
+      "vatNumber": "VAT Number",
+      "streetAddress": "Street Address",
+      "city": "City",
+      "stateProvince": "State / Province",
+      "zipCode": "ZIP / Postal Code",
+      "country": "Country",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "sector": "Sector for Certification",
+      "sectorPlaceholder": "e.g. Construction, Food Processing, IT Services",
+      "personnel": "Number of Personnel",
+      "ownersManagers": "Owners & Managers",
+      "officeWorkers": "Office Workers",
+      "workers": "Workers",
+      "seasonalWorkers": "Seasonal Workers",
+      "temporaryWorkers": "Temporary Workers",
+      "externalActivities": "External Activities",
+      "externalActivitiesPlaceholder": "Describe any external activities or outsourced processes",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "successMessage": "Your application has been submitted successfully. Our team will contact you within 24-48 hours.",
+      "errorMessage": "Failed to submit your application. Please try again or contact us directly at info@msc-cert.com."
+    }
+  },
+  "searchCertificate": {
+    "hero": {
+      "title": "Search Certificate",
+      "subtitle": "Verify the validity of a certificate you own"
+    },
+    "form": {
+      "title": "Certificate Verification",
+      "description": "Fill in the details below to verify if a certificate is valid.",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "certificateNumber": "Certificate Number",
+      "certificateNumberPlaceholder": "e.g. MSC-2024-001",
+      "companyName": "Company Name",
+      "submit": "Send",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
+      "expertNote": "Our team will verify the certificate details and you will receive a verification response via email.",
+      "success": "Your request has been submitted successfully. You will receive a verification response via email.",
+      "error": "Failed to submit your request. Please try again or contact us directly at info@msc-cert.com."
     }
   }
 }

@@ -16,6 +16,7 @@
     "iso39001": "ISO 39001 – Siguria e Trafikut Rrugor",
     "iso45001": "ISO 45001 – Shëndeti & Siguria në Punë",
     "iso50001": "ISO 50001 – Menaxhimi i Energjisë",
+    "iso22000": "ISO 22000 – Siguria Ushqimore",
     "haccp": "HACCP – Siguria Ushqimore",
     "ourServices": "Shërbimet Tona",
     "ceMarking": "Markimi CE",
@@ -29,10 +30,11 @@
     "contactUs": "Na Kontaktoni",
     "onlineAssessment": "Vlerësimi Online",
     "getQuote": "Fillo Vlerësimin",
+    "searchCertificate": "Kërko Çertifikatë",
     "language": "Gjuha"
   },
   "footer": {
-    "companyDescription": "MSC Certifications është një organ certifikues udhëheqës që ofron certifikime ISO, markim CE dhe shërbime të tjera profesionale në Evropë dhe më gjerë.",
+    "companyDescription": "MSC Certifications është një organ certifikues që ofron certifikime ISO, markim CE dhe shërbime të tjera profesionale në Evropë dhe më gjerë.",
     "quickLinks": "Lidhje të Shpejta",
     "services": "Shërbimet",
     "contact": "Kontakti",
@@ -58,7 +60,37 @@
     "viewAllServices": "Shih të Gjitha Shërbimet",
     "requestQuote": "Merr Ofertë Falas",
     "contactUs": "Na Kontaktoni",
-    "getIsoQuote": "Kërkoni Ofertë {{isoCode}}"
+    "getIsoQuote": "Kërkoni Ofertë {{isoCode}}",
+    "edit": "Ndrysho",
+    "sending": "Duke dërguar..."
+  },
+  "cookieConsent": {
+    "message": "Ne përdorim cookies për të përmirësuar përvojën tuaj në faqen tonë. Duke vazhduar shfletimin, ju pranoni përdorimin e cookies.",
+    "accept": "Prano",
+    "decline": "Refuzo",
+    "learnMore": "Mëso Më Shumë"
+  },
+  "whatsapp": {
+    "tooltip": "Bisedo me ne",
+    "title": "Fillo një bisedë",
+    "subtitle": "Plotësoni të dhënat më poshtë për të filluar një bisedë WhatsApp me ekipin tonë.",
+    "name": "Emri Juaj",
+    "namePlaceholder": "Shkruani emrin tuaj",
+    "service": "Shërbimi i Nevojshëm",
+    "servicePlaceholder": "Zgjidhni një shërbim",
+    "message": "Mesazhi",
+    "messagePlaceholder": "Si mund t'ju ndihmojmë?",
+    "send": "Hap WhatsApp",
+    "services": {
+      "iso9001": "ISO 9001 - Menaxhimi i Cilësisë",
+      "iso14001": "ISO 14001 - Menaxhimi Mjedisor",
+      "iso27001": "ISO 27001 - Siguria e Informacionit",
+      "iso45001": "ISO 45001 - Shëndet & Siguri",
+      "haccp": "HACCP - Siguria Ushqimore",
+      "ceMarking": "Markimi CE",
+      "training": "Trajnimi i Stafit",
+      "other": "Tjetër"
+    }
   },
   "meta": {
     "home": {
@@ -129,7 +161,7 @@
       }
     },
     "certificationPortfolio": {
-      "title": "Portofoli Ynë Kryesor i Certifikimeve - Standart dhe Sukses Global",
+      "title": "Portofoli Ynë Kryesor i Certifikimeve - Standard dhe Sukses Global",
       "subtitle": "Ne certifikojmë sistemet që ndërtojnë besim dhe qëndrueshmëri, duke siguruar që ju të përmbushni praktikat më të mira ndërkombëtare dhe të mbeteni konkurrues në tregun vendas.",
       "qualitySafetyEnvironment": "Cilësia, Siguria dhe Mjedisi",
       "informationResilienceIntegrity": "Informacioni, Qëndrueshmëria dhe Integriteti",
@@ -273,10 +305,16 @@
         "answer": "Po, në disa raste dhe sipas rregullave të akreditimit, një pjesë e auditit mund të kryhet remote, veçanërisht për shqyrtim dokumentacioni. Aktivitetet kritike në terren kërkojnë prezencë fizike."
       }
     },
+    "applyOnline": {
+      "title": "Gati për t'u Certifikuar?",
+      "subtitle": "Dorëzoni aplikimin tuaj online dhe ekipi ynë do t'ju kthehet me një ofertë të personalizuar.",
+      "button": "Apliko Online"
+    },
     "cta": {
       "title": "Filloni Udhëtimin Tuaj Drejt Cilësisë dhe Besimit",
-      "description": "Bashkohuni me dhjetëra kompani në rajon që i besojnë MSC Certifications për të transformuar mënyrën si funksionojnë. Ofronim një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.",
-      "accreditedNote": "Të gjitha certifikatat tona janë të akredituara ndërkombëtarisht, duke garantuar njohje globale."
+      "description": "Bashkohuni me qindra kompani në rajon që i besojnë MSC Certifications për të transformuar mënyrën si funksionojnë. Ofronim një vlerësim falas dhe pa detyrim, për të identifikuar sistemet ISO që sjellin vlerën më të lartë dhe reduktojnë më shumë riskun për biznesin tuaj.",
+      "accreditedNote": "Të gjitha certifikatat tona janë të akredituara ndërkombëtarisht, duke garantuar njohje globale.",
+      "button": "Merr Ofertë"
     }
   },
   "about": {
@@ -617,7 +655,7 @@
       "contact": {
         "title": "10. Kontakt",
         "content": "Për çdo pyetje lidhur me këto kushte, ju lutemi na kontaktoni:",
-        "email": "info@msc-certifications.com",
+        "email": "info@msc-cert.com",
         "address": "Rruga Ismail Qemali, Tiranë, Shqipëri"
       }
     },
@@ -1422,6 +1460,97 @@
       "footer": "Certifikatat tona janë të akredituara ndërkombëtarisht dhe të njohura globalisht."
     }
   },
+  "iso22000": {
+    "meta": {
+      "title": "Certifikim ISO 22000 | Audite të Përputhshmërisë Ushqimore",
+      "description": "Siguroni sigurinë ushqimore dhe gjurmueshmërinë me certifikimin ISO 22000. Hyni në tregje të rregulluara dhe mbroni reputacionin e markës suaj.",
+      "keywords": "certifikim ISO 22000, siguri ushqimore, FSMS, audit ushqimor, HACCP integrim, gjurmueshmëri produktesh, përputhje me BE, MSC CERTIFICATIONS, ISO 22000 Shqipëri"
+    },
+    "hero": {
+      "title": "ISO 22000: Siguroni Sigurinë Ushqimore në Gjithë Zinxhirin e Furnizimit",
+      "subtitle": "Minimizoni rreziqet e ndotjes, siguroni gjurmueshmëri të plotë dhe përmbushni rregulloret ushqimore ndërkombëtare."
+    },
+    "whatIs": {
+      "title": "Çfarë Është ISO 22000? Sistemi për Integritetin Ushqimor",
+      "description": "ISO 22000 është standardi ndërkombëtar për Sistemet e Menaxhimit të Sigurisë Ushqimore (FSMS). Ai kombinon parimet e HACCP me një qasje menaxheriale për kontroll të vazhdueshëm të rreziqeve, komunikim efektiv dhe përmirësim të qëndrueshëm. Ky standard mbulon të gjithë zinxhirin ushqimor — nga prodhimi e përpunimi deri te paketimi, ruajtja dhe shpërndarja.",
+      "roleBox": {
+        "title": "Roli i MSC CERTIFICATIONS si Trup i Akredituar",
+        "description": "MSC CERTIFICATIONS është partneri juaj i akredituar dhe i pavarur për auditimin ISO 22000. Auditorët tanë analizojnë pikat kritike të kontrollit, dokumentacionin dhe proceset teknike, për të vlerësuar sa efektivisht sistemi juaj parandalon ndotjen ushqimore. Certifikimi lëshohet vetëm mbi prova të qarta dhe objektive që tregojnë përputhshmëri me kërkesat e ISO 22000:2018."
+      }
+    },
+    "benefits": {
+      "title": "Përfitimet Kryesore: Siguri, Akses në Treg dhe Menaxhim Rreziku",
+      "benefit1": {
+        "title": "Siguri dhe Gjurmueshmëri e Produktit",
+        "description": "Garanton sigurinë dhe gjurmueshmërinë në çdo fazë të prodhimit. Ul ndjeshëm rrezikun e ndotjes dhe tërheqjeve të produkteve."
+      },
+      "benefit2": {
+        "title": "Akses në Tregje të Rregulluara",
+        "description": "Përmbush kërkesat e rregulloreve të BE-së dhe rrjeteve tregtare. Krijon besim te supermarketet dhe shpërndarësit kryesorë."
+      },
+      "benefit3": {
+        "title": "Menaxhim Efektiv i Krizave",
+        "description": "Zvogëlon humbjet dhe dëmet operacionale. Mbron reputacionin dhe integritetin e markës suaj."
+      }
+    },
+    "industryFocus": {
+      "title": "Industritë ku Zbatohet ISO 22000",
+      "foodProduction": {
+        "title": "Prodhim & Përpunim Ushqimor",
+        "description": "Prodhimi dhe përpunimi i produkteve ushqimore."
+      },
+      "beverages": {
+        "title": "Pije & Qumësht",
+        "description": "Prodhimi i pijeve dhe produkteve të qumështit."
+      },
+      "packaging": {
+        "title": "Paketim & Materiale Ambalazhi",
+        "description": "Paketimi i ushqimit dhe materialet e kontaktit."
+      },
+      "distribution": {
+        "title": "Ruajtje & Distribuim",
+        "description": "Magazinimi, zinxhiri i ftohtë dhe shpërndarja e ushqimit."
+      },
+      "horeca": {
+        "title": "Gastronomi & Mikpritje (HORECA)",
+        "description": "Restorante, katering dhe shërbime mikpritjeje."
+      },
+      "agriculture": {
+        "title": "Bujqësi dhe Furnizim Primar",
+        "description": "Bujqësia, akuakultura dhe furnizimi me lëndë të parë."
+      }
+    },
+    "mscAdvantage": {
+      "title": "Pse të Zgjidhni MSC CERTIFICATIONS",
+      "specializedAuditors": {
+        "title": "Auditorë Specialistë në Sigurinë Ushqimore",
+        "description": "Me përvojë praktike në industrinë ushqimore."
+      },
+      "practicalAudit": {
+        "title": "Auditim Praktik dhe i Dobishëm",
+        "description": "E bën sistemin tuaj FSMS një mjet real për përmirësim."
+      },
+      "objectiveCertification": {
+        "title": "Certifikim i Njohur Ndërkombëtarisht",
+        "description": "I akredituar nga organet zyrtare dhe i pranuar në tregjet e BE-së."
+      }
+    },
+    "process": {
+      "title": "Procesi i Certifikimit",
+      "step1": "Aplikimi & Kontrata",
+      "step2": "Auditi Faza I – Rishikimi Dokumentar",
+      "step3": "Auditi Faza II – Verifikimi në Terren",
+      "step4": "Lëshimi i Certifikatës",
+      "step5": "Auditet Vjetore të Mbikëqyrjes",
+      "step6": "Rikualifikimi (Viti i 3-të)"
+    },
+    "cta": {
+      "title": "Gati të Siguroni Produktet dhe Markën Tuaj?",
+      "description": "Mbroni konsumatorët, garantoni përputhje dhe hapni dyert për tregjet ndërkombëtare.",
+      "button": "Filloni Procesin e Certifikimit ISO 22000",
+      "footer": "Të gjitha certifikatat e lëshuara nga MSC CERTIFICATIONS janë të akredituara dhe të njohura botërisht."
+    }
+  },
   "haccp": {
     "meta": {
       "title": "Certifikimi HACCP | MSC Certifications",
@@ -1609,7 +1738,7 @@
       "subtitle": "Jemi këtu për t'ju ndihmuar. Lidhuni me ekipin tonë për pyetje rreth certifikimit, oferta ose çdo pyetje rreth shërbimeve tona."
     },
     "form": {
-      "title": "Na Dërgoni një Mesazh",
+      "title": "Na Kontaktoni",
       "name": "Emri i Plotë",
       "namePlaceholder": "Shkruani emrin tuaj të plotë",
       "email": "Adresa Email",
@@ -1621,28 +1750,37 @@
       "subject": "Subjekti",
       "subjectPlaceholder": "Zgjidhni ose shkruani subjektin",
       "subjects": {
-        "certification": "Pyetje për Certifikim ISO",
-        "ceMarking": "Shërbime të Markimit CE",
+        "iso9001": "ISO 9001 – Menaxhimi i Cilësisë",
+        "iso14001": "ISO 14001 – Menaxhimi Mjedisor",
+        "iso22000": "ISO 22000 – Siguria Ushqimore",
+        "iso22301": "ISO 22301 – Vazhdimësia e Biznesit",
+        "iso27001": "ISO 27001 – Siguria e Informacionit",
+        "iso37001": "ISO 37001 – Menaxhimi Kundër Korrupsionit",
+        "iso39001": "ISO 39001 – Siguria Rrugore",
+        "iso45001": "ISO 45001 – Shëndeti & Siguria në Punë",
+        "iso50001": "ISO 50001 – Menaxhimi i Energjisë",
+        "haccp": "HACCP – Siguria Ushqimore",
+        "ceMarking": "Markimi CE",
         "training": "Programe Trajnimi",
         "quote": "Kërkesë për Ofertë",
         "other": "Tjetër"
       },
       "message": "Mesazhi",
       "messagePlaceholder": "Si mund t'ju ndihmojmë?",
+      "acceptTerms": "Pranoj dhe bie dakord me <a href='/sq/termat-dhe-kushtet' target='_blank'>Termat dhe Kushtet</a> dhe jap pëlqimin për përpunimin e të dhënave të mia personale në përputhje me <a href='/sq/politika-e-privatesise' target='_blank'>Politikën e Privatësisë</a> dhe rregulloret GDPR.",
       "submit": "Dërgo Mesazhin",
       "sending": "Duke dërguar...",
       "successTitle": "Mesazhi u Dërgua me Sukses!",
       "successMessage": "Faleminderit që na kontaktuat. Ekipi ynë do t'ju kthehet brenda 24-48 orëve.",
       "errorTitle": "Dërgimi i Mesazhit Dështoi",
-      "errorMessage": "Ju lutem provoni përsëri ose na kontaktoni drejtpërdrejt në info@msc-certifications.com"
+      "errorMessage": "Ju lutem provoni përsëri ose na kontaktoni drejtpërdrejt në info@msc-cert.com"
     },
     "info": {
       "title": "Informacioni i Kontaktit",
       "description": "Na kontaktoni përmes ndonjërit prej kanaleve të mëposhtme:",
       "address": {
         "title": "Adresa",
-        "line1": "Rruga Ismail Qemali",
-        "line2": "Tiranë, Shqipëri"
+        "line1": "Rruga Ismail Qemali, Tiranë, Shqipëri"
       },
       "phone": {
         "title": "Telefon",
@@ -1650,12 +1788,15 @@
       },
       "email": {
         "title": "Email",
-        "address": "info@msc-certifications.com"
+        "address": "info@msc-cert.com"
       },
       "hours": {
         "title": "Orari i Punës",
         "weekdays": "E Hënë - E Premte: 09:00 - 18:00",
         "weekend": "E Shtunë - E Diel: Mbyllur"
+      },
+      "social": {
+        "title": "Na Ndiqni"
       }
     },
     "faq": {
@@ -1676,6 +1817,10 @@
   },
   "quoteForm": {
     "title": "Kërkesë Oferte",
+    "selectService": {
+      "title": "Zgjidhni një Shërbim",
+      "subtitle": "Zgjidhni certifikimin ose shërbimin që ju nevojitet:"
+    },
     "step": "Hapi",
     "of": "nga",
     "progress": {
@@ -1708,7 +1853,9 @@
       "summaryNote": "Përgjigjet tuaja do të rishikohen nga ekspertët tanë.",
       "questionsAnswered": "pyetje të përgjigura",
       "noAnswers": "Nuk ka pyetje të përgjigura ende",
-      "responses": "Përgjigjet Tuaja"
+      "responses": "Përgjigjet Tuaja",
+      "expertNote": "Ekspertët tanë do të shqyrtojnë përgjigjet tuaja dhe ju do të merrni një raport të detajuar mbi përputhshmërinë me standardin e kërkuar.",
+      "acceptTerms": "Pranoj dhe bie dakord me <a href='/sq/termat-dhe-kushtet' target='_blank'>Termat dhe Kushtet</a> dhe jap pëlqimin për përpunimin e të dhënave të mia personale në përputhje me <a href='/sq/politika-e-privatesise' target='_blank'>Politikën e Privatësisë</a> dhe rregulloret GDPR."
     },
     "success": {
       "title": "Faleminderit!",
@@ -1722,7 +1869,8 @@
     "submit": "Dërgo Kërkesën",
     "errors": {
       "loadFailed": "Nuk u arrit të ngarkohej formulari. Provo përsëri.",
-      "submitFailed": "Nuk u arrit të dërgohej kërkesa. Provo përsëri."
+      "submitFailed": "Nuk u arrit të dërgohej kërkesa. Provo përsëri.",
+      "invalidEmail": "Ju lutem shkruani një adresë email të vlefshme"
     }
   },
   "generalQuote": {
@@ -2052,7 +2200,7 @@
         "description": "Vlerësojmë me profesionalizëm dhe sigurojmë saktësi në çdo kartë të lëshuar."
       },
       "templates": {
-        "title": "Format Profesional dhe i Standartizuar",
+        "title": "Format Profesional dhe i Standardizuar",
         "description": "Karta është në përputhje me praktikat ndërkombëtare dhe kërkesat e tregut lokal."
       },
       "verification": {
@@ -2482,6 +2630,11 @@
         "description": "Optimizoni përdorimin e energjisë, reduktoni kostot dhe minimizoni ndikimin mjedisor përmes menaxhimit sistematik të energjisë.",
         "benefits": ["Reduktoni Faturat e Energjisë", "Kursime të Matshme", "Performancë Mjedisore"]
       },
+      "iso22000": {
+        "title": "ISO 22000 - Menaxhimi i Sigurisë Ushqimore",
+        "description": "Sistem gjithëpërfshirës i menaxhimit të sigurisë ushqimore që mbulon të gjithë zinxhirin ushqimor nga ferma deri te konsumatori.",
+        "benefits": ["Kontroll i Plotë i Zinxhirit", "Përputhshmëri Ndërkombëtare", "Besim i Konsumatorëve"]
+      },
       "haccp": {
         "title": "HACCP - Siguria Ushqimore",
         "description": "Sistem kritik i menaxhimit të sigurisë ushqimore i fokusuar në parandalimin e rreziqeve në prodhimin e ushqimit.",
@@ -2612,6 +2765,83 @@
       "title": "Sigurohuni që Produktet Tuaja Përmbushin Kërkesat Ligjore",
       "description": "Ndërtoni besim në tregun e BE-së me certifikim të duhur të Markimit CE. Filloni sot udhëtimin tuaj të përputhshmërisë me MSC Certifications.",
       "button": "Na Kontaktoni Sot"
+    }
+  },
+  "applyOnline": {
+    "meta": {
+      "title": "Apliko Online | MSC Certifications",
+      "description": "Dorëzoni aplikimin tuaj për certifikim online. Kërkoni ofertë për certifikim ISO, Markim CE dhe më shumë."
+    },
+    "hero": {
+      "title": "Apliko Online",
+      "subtitle": "Plotësoni formularin më poshtë për të kërkuar një ofertë certifikimi. Ekipi ynë do të shqyrtojë aplikimin tuaj dhe do t'ju kthehet brenda 24-48 orëve."
+    },
+    "form": {
+      "sections": {
+        "certification": "Standardi i Certifikimit",
+        "companyData": "Të Dhënat e Kompanisë",
+        "address": "Adresa",
+        "contact": "Informacioni i Kontaktit",
+        "business": "Informacioni i Biznesit"
+      },
+      "certificationStandard": "Standardi i Certifikimit",
+      "selectStandard": "Zgjidhni një standard certifikimi",
+      "standards": {
+        "other": "Tjetër"
+      },
+      "otherStandard": "Specifikoni certifikimin që kërkoni",
+      "otherStandardPlaceholder": "Shkruani standardin e certifikimit",
+      "requestType": "Lloji i Kërkesës",
+      "requestTypes": {
+        "initial": "Certifikim Fillestar",
+        "renovation": "Rinovim",
+        "transfer": "Transferim"
+      },
+      "companyName": "Emri i Kompanisë",
+      "vatNumber": "Numri i TVSH-së",
+      "streetAddress": "Adresa e Rrugës",
+      "city": "Qyteti",
+      "stateProvince": "Shteti / Provinca",
+      "zipCode": "Kodi Postar",
+      "country": "Vendi",
+      "phone": "Numri i Telefonit",
+      "email": "Adresa Email",
+      "sector": "Sektori për Certifikim",
+      "sectorPlaceholder": "p.sh. Ndërtim, Përpunim Ushqimor, Shërbime IT",
+      "personnel": "Numri i Personelit",
+      "ownersManagers": "Pronarë & Menaxherë",
+      "officeWorkers": "Punonjës Zyre",
+      "workers": "Punëtorë",
+      "seasonalWorkers": "Punëtorë Sezonal",
+      "temporaryWorkers": "Punëtorë të Përkohshëm",
+      "externalActivities": "Aktivitete të Jashtme",
+      "externalActivitiesPlaceholder": "Përshkruani aktivitetet e jashtme ose proçeset e nënkontraktuara",
+      "acceptTerms": "Pranoj dhe bie dakord me <a href='/sq/termat-dhe-kushtet' target='_blank'>Termat dhe Kushtet</a> dhe jap pëlqimin për përpunimin e të dhënave të mia personale në përputhje me <a href='/sq/politika-e-privatesise' target='_blank'>Politikën e Privatësisë</a> dhe rregulloret GDPR.",
+      "submit": "Dorëzo Aplikimin",
+      "submitting": "Duke dërguar...",
+      "successMessage": "Aplikimi juaj u dorëzua me sukses. Ekipi ynë do t'ju kontaktojë brenda 24-48 orëve.",
+      "errorMessage": "Dërgimi i aplikimit dështoi. Ju lutem provoni përsëri ose na kontaktoni drejtpërdrejt në info@msc-cert.com."
+    }
+  },
+  "searchCertificate": {
+    "hero": {
+      "title": "Kërko Çertifikatë",
+      "subtitle": "Verifiko vlefshmërinë e një çertifikate që zotëroni"
+    },
+    "form": {
+      "title": "Verifikimi i Çertifikatës",
+      "description": "Plotësoni të dhënat më poshtë për të verifikuar nëse një çertifikatë është e vlefshme.",
+      "firstName": "Emri",
+      "lastName": "Mbiemri",
+      "email": "Email",
+      "certificateNumber": "Numri i Çertifikatës",
+      "certificateNumberPlaceholder": "p.sh. MSC-2024-001",
+      "companyName": "Emri i Kompanisë",
+      "submit": "Dërgo",
+      "acceptTerms": "Pranoj dhe bie dakord me <a href='/sq/termat-dhe-kushtet' target='_blank'>Termat dhe Kushtet</a> dhe jap pëlqimin për përpunimin e të dhënave të mia personale në përputhje me <a href='/sq/politika-e-privatesise' target='_blank'>Politikën e Privatësisë</a> dhe rregulloret GDPR.",
+      "expertNote": "Ekipi ynë do të verifikojë detajet e çertifikatës dhe ju do të merrni një përgjigje verifikimi përmes email-it.",
+      "success": "Kërkesa juaj u dërgua me sukses. Do të merrni një përgjigje verifikimi përmes email-it.",
+      "error": "Dërgimi i kërkesës dështoi. Ju lutem provoni përsëri ose na kontaktoni drejtpërdrejt në info@msc-cert.com."
     }
   }
 }

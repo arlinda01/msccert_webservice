@@ -18,6 +18,7 @@ export type RouteKey =
   | 'iso39001'
   | 'iso45001'
   | 'iso50001'
+  | 'iso22000'
   | 'haccp'
   | 'ceMarking'
   | 'services'
@@ -33,6 +34,8 @@ export type RouteKey =
   | 'certificateVerify'
   | 'quoteForm'
   | 'generalQuote'
+  | 'applyOnline'
+  | 'searchCertificate'
   | 'blog'
   | 'blogPost';
 
@@ -119,6 +122,11 @@ export const routes: Record<RouteKey, Record<SupportedLanguage, string>> = {
     sq: '/sq/sherbimet/iso/iso-50001',
     it: '/it/servizi/iso/iso-50001'
   },
+  iso22000: {
+    en: '/services/iso/iso-22000',
+    sq: '/sq/sherbimet/iso/iso-22000',
+    it: '/it/servizi/iso/iso-22000'
+  },
   haccp: {
     en: '/services/iso/haccp',
     sq: '/sq/sherbimet/iso/haccp',
@@ -193,6 +201,16 @@ export const routes: Record<RouteKey, Record<SupportedLanguage, string>> = {
     en: '/get-quote',
     sq: '/sq/merr-oferte',
     it: '/it/richiedi-preventivo'
+  },
+  applyOnline: {
+    en: '/apply-online',
+    sq: '/sq/apliko-online',
+    it: '/it/richiesta-online'
+  },
+  searchCertificate: {
+    en: '/search-certificate',
+    sq: '/sq/kerko-certifikate',
+    it: '/it/cerca-certificato'
   },
   blog: {
     en: '/blog',

@@ -100,6 +100,17 @@ const ISOCertifications: FC = () => {
       ]
     },
     {
+      to: routes.iso22000[currentLang],
+      icon: "FaUtensils" as const,
+      title: t('isoCertifications.cards.iso22000.title'),
+      description: t('isoCertifications.cards.iso22000.description'),
+      benefits: [
+        t('isoCertifications.cards.iso22000.benefits.0'),
+        t('isoCertifications.cards.iso22000.benefits.1'),
+        t('isoCertifications.cards.iso22000.benefits.2')
+      ]
+    },
+    {
       to: routes.haccp[currentLang],
       icon: "FaUtensils" as const,
       title: t('isoCertifications.cards.haccp.title'),

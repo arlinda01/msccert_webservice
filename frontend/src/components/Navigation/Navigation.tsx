@@ -121,6 +121,7 @@ const Navigation: FC = () => {
               <li><Link to={getPath('iso39001')} onClick={closeMenu}>{t('nav.iso39001')}</Link></li>
               <li><Link to={getPath('iso45001')} onClick={closeMenu}>{t('nav.iso45001')}</Link></li>
               <li><Link to={getPath('iso50001')} onClick={closeMenu}>{t('nav.iso50001')}</Link></li>
+              <li><Link to={getPath('iso22000')} onClick={closeMenu}>{t('nav.iso22000')}</Link></li>
               <li><Link to={getPath('haccp')} onClick={closeMenu}>{t('nav.haccp')}</Link></li>
             </ul>
           </li>
@@ -153,8 +154,8 @@ const Navigation: FC = () => {
           <li><Link to={getPath('contact')} onClick={closeMenu}>{t('nav.contactUs')}</Link></li>
 
           <li className="mobile-only nav-actions-mobile">
-            <Link to={getPath('generalQuote')} className="nav-btn nav-btn-primary" onClick={closeMenu}>
-              {t('nav.getQuote')}
+            <Link to={getPath('searchCertificate')} className="nav-btn nav-btn-primary" onClick={closeMenu}>
+              {t('nav.searchCertificate')}
             </Link>
           </li>
           <li className="mobile-only nav-actions-mobile">
@@ -195,8 +196,8 @@ const Navigation: FC = () => {
         </ul>
 
         <div className="nav-actions desktop-only">
-          <Link to={getPath('generalQuote')} className="nav-btn nav-btn-primary" onClick={closeMenu}>
-            {t('nav.getQuote')}
+          <Link to={getPath('searchCertificate')} className="nav-btn nav-btn-primary" onClick={closeMenu}>
+            {t('nav.searchCertificate')}
           </Link>
 
           <div className="language-switcher">

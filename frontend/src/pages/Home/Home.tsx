@@ -60,7 +60,7 @@ const Home: FC = () => {
       benefits: [t('home.certificationPortfolio.iso37001.benefit1'), t('home.certificationPortfolio.iso37001.benefit2'), t('home.certificationPortfolio.iso37001.benefit3')]
     },
     {
-      to: routes.haccp[currentLang],
+      to: routes.iso22000[currentLang],
       icon: "FaUtensils" as const,
       title: t('home.certificationPortfolio.iso22000.title'),
       description: t('home.certificationPortfolio.iso22000.description'),
@@ -166,6 +166,17 @@ const Home: FC = () => {
 
           {/* ISO Certifications Slider */}
           <ISOSlider cards={isoCards} />
+
+          {/* Apply Online Banner */}
+          <div className="apply-online-banner">
+            <div className="apply-online-content">
+              <h3>{t('home.applyOnline.title')}</h3>
+              <p>{t('home.applyOnline.subtitle')}</p>
+            </div>
+            <Link to={routes.applyOnline[currentLang]} className="btn btn-primary-large">
+              {t('home.applyOnline.button')}
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -352,7 +363,7 @@ const Home: FC = () => {
             {t('home.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary-large">{t('common.contactUs')}</Link>
+            <Link to={routes.generalQuote[currentLang]} className="btn btn-primary-large">{t('home.cta.button')}</Link>
           </div>
           <p className="cta-footer">
             {t('home.cta.accreditedNote')}

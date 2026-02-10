@@ -44,11 +44,13 @@ class CertificateAdmin(admin.ModelAdmin):
                 'status',
                 'standard',
                 'company_name',
+                'address',
             )
         }),
         ('Dates', {
             'fields': (
                 'first_issue_date',
+                'modification_date',
                 'expiry_date',
                 'next_maintenance_date',
                 'last_maintenance_date',
