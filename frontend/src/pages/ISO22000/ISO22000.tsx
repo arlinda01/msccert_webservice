@@ -124,7 +124,7 @@ const ISO22000: FC = () => {
       <section className="section section-white">
         <div className="container">
           <h2 className="section-title">{t('iso22000.process.title')}</h2>
-          <div className="process-timeline">
+          <div className="process-timeline steps-6">
             <div className="process-step">
               <div className="process-step-number">1</div>
               <h3>{t('iso22000.process.step1')}</h3>

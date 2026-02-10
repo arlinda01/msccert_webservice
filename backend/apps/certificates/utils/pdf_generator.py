@@ -15,21 +15,80 @@ from io import BytesIO
 import os
 
 
+# ISO standard to Albanian management system description mapping
+# 'management_system' is used in both the cert body and footer disclaimer
+STANDARD_DESCRIPTIONS = {
+    'ISO_9001_2015': {
+        'code': 'Q',
+        'management_system': 'Sistemeve të Menaxhimit të Cilësisë',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË CILËSISË I KOMPANISË',
+    },
+    'ISO_14001_2015': {
+        'code': 'E',
+        'management_system': 'Sistemeve të Menaxhimit të Mjedisit',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË MJEDISIT I KOMPANISË',
+    },
+    'ISO_45001_2023': {
+        'code': 'OHS',
+        'management_system': 'Sistemeve të Menaxhimit të Sigurisë dhe Shëndetit në Punë',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË DHE SHËNDETIT NË PUNË I KOMPANISË',
+    },
+    'ISO_22000_2018': {
+        'code': 'FS',
+        'management_system': 'Sistemeve të Menaxhimit të Sigurisë Ushqimore',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË USHQIMORE I KOMPANISË',
+    },
+    'ISO_27001_2022': {
+        'code': 'IS',
+        'management_system': 'Sistemeve të Menaxhimit të Sigurisë së Informacionit',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË SË INFORMACIONIT I KOMPANISË',
+    },
+    'ISO_50001_2018': {
+        'code': 'En',
+        'management_system': 'Sistemeve të Menaxhimit të Energjisë',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË ENERGJISË I KOMPANISË',
+    },
+    'ISO_37001_2025': {
+        'code': 'AB',
+        'management_system': 'Sistemeve të Menaxhimit Kundër Ryshfetit',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT KUNDËR RYSHFETIT I KOMPANISË',
+    },
+    'ISO_39001_2012': {
+        'code': 'RT',
+        'management_system': 'Sistemeve të Menaxhimit të Sigurisë në Trafikun Rrugor',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË NË TRAFIKUN RRUGOR I KOMPANISË',
+    },
+    'ISO_22301_2019': {
+        'code': 'BC',
+        'management_system': 'Sistemeve të Menaxhimit të Vazhdimësisë së Biznesit',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË VAZHDIMËSISË SË BIZNESIT I KOMPANISË',
+    },
+    'HACCP': {
+        'code': 'FS',
+        'management_system': 'Sistemeve HACCP',
+        'cert_text': 'CERTIFIKOHET SE SISTEMI HACCP I KOMPANISË',
+    },
+}
+
+
 class CertificatePDFGenerator:
     """
     Service class for generating certificate PDFs matching the MSC template.
     Uses ReportLab canvas API for precise layout control.
     """
 
-    # Page dimensions (A4)
     PAGE_WIDTH, PAGE_HEIGHT = A4  # 595.27 x 841.89 points
 
-    # Colors
+    # Colors - text is black everywhere, decorative elements use brand colors
+    BLACK = colors.HexColor('#000000')
     BRAND_TEAL = colors.HexColor('#01434f')
     ACCENT_CYAN = colors.HexColor('#2abad4')
-    TEXT_DARK = colors.HexColor('#1a1a1a')
-    TEXT_GRAY = colors.HexColor('#666666')
     WHITE = colors.white
+
+    # Margins
+    CONTENT_LEFT = 50
+    CONTENT_RIGHT = 545  # PAGE_WIDTH - 50
+    CONTENT_WIDTH = 495  # CONTENT_RIGHT - CONTENT_LEFT
 
     # Asset directory
     ASSETS_DIR = os.path.join(
@@ -59,285 +118,221 @@ class CertificatePDFGenerator:
         response.write(pdf)
         return response
 
+    def _get_standard_info(self):
+        """Get ISO-specific info for the current certificate standard."""
+        return STANDARD_DESCRIPTIONS.get(self.certificate.standard, {
+            'code': '',
+            'management_system': 'Sistemeve të Menaxhimit',
+            'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT I KOMPANISË',
+        })
+
     def _draw_page(self):
         """Draw the complete certificate page."""
         self._draw_decorative_stripe()
         self._draw_header()
         self._draw_title()
         self._draw_body()
-        self._draw_dates()
         self._draw_signature()
+        self._draw_dates()
         self._draw_footer()
 
-    # ── Decorative elements ──────────────────────────────────────────
+    # ── Decorative stripe ─────────────────────────────────────────────
 
     def _draw_decorative_stripe(self):
-        """Draw the teal diagonal stripe on the left edge."""
+        """Draw the teal stripe and cyan accent on the left edge."""
         c = self.c
         c.saveState()
         c.setFillColor(self.BRAND_TEAL)
-        # Left edge decorative stripe - diagonal parallelogram
-        path = c.beginPath()
-        path.moveTo(0, self.PAGE_HEIGHT)
-        path.lineTo(28, self.PAGE_HEIGHT)
-        path.lineTo(28, 0)
-        path.lineTo(0, 0)
-        path.close()
-        c.drawPath(path, fill=1, stroke=0)
-
-        # Accent cyan thin stripe
+        c.rect(0, 0, 28, self.PAGE_HEIGHT, fill=1, stroke=0)
         c.setFillColor(self.ACCENT_CYAN)
-        path2 = c.beginPath()
-        path2.moveTo(28, self.PAGE_HEIGHT)
-        path2.lineTo(32, self.PAGE_HEIGHT)
-        path2.lineTo(32, 0)
-        path2.lineTo(28, 0)
-        path2.close()
-        c.drawPath(path2, fill=1, stroke=0)
+        c.rect(28, 0, 4, self.PAGE_HEIGHT, fill=1, stroke=0)
         c.restoreState()
 
-    # ── Header section (logos) ───────────────────────────────────────
+    # ── Header (all logos in one line) ────────────────────────────────
 
     def _draw_header(self):
-        """Draw the header with MSC logo on left and accreditation badges on right."""
+        """Draw header with all logos in a single horizontal line, same height."""
         c = self.c
-        y_top = self.PAGE_HEIGHT - 55
+        y_top = self.PAGE_HEIGHT - 60
+        logo_height = 38
 
-        # MSC Logo (left side) - draw as text since SVG conversion not available
-        self._draw_msc_logo(50, y_top)
+        # MSC Logo (left)
+        self._draw_msc_logo(self.CONTENT_LEFT, y_top, logo_height)
 
-        # Right side: DA badge + IAF logo + accreditation text
-        self._draw_accreditation_badges(y_top)
+        # DA badge (right, next to IAF)
+        da_path = os.path.join(self.ASSETS_DIR, 'da_badge.png')
+        if os.path.exists(da_path):
+            try:
+                c.drawImage(da_path, self.CONTENT_RIGHT - 120, y_top - logo_height,
+                            width=55, height=logo_height,
+                            preserveAspectRatio=True, mask='auto')
+            except Exception:
+                pass
 
-    def _draw_msc_logo(self, x, y):
-        """Draw the MSC logo. Uses image if available, otherwise draws text."""
+        # IAF logo (far right)
+        iaf_path = os.path.join(self.ASSETS_DIR, 'iaf_logo.png')
+        if os.path.exists(iaf_path):
+            try:
+                c.drawImage(iaf_path, self.CONTENT_RIGHT - 55, y_top - logo_height,
+                            width=55, height=logo_height,
+                            preserveAspectRatio=True, mask='auto')
+            except Exception:
+                pass
+
+    def _draw_msc_logo(self, x, y, height):
+        """Draw MSC logo from file or as styled text fallback."""
         c = self.c
         logo_path = os.path.join(self.ASSETS_DIR, 'msc_logo.png')
 
         if os.path.exists(logo_path):
             try:
-                c.drawImage(logo_path, x, y - 35, width=120, height=40,
+                c.drawImage(logo_path, x, y - height, width=120, height=height,
                             preserveAspectRatio=True, mask='auto')
                 return
             except Exception:
                 pass
 
-        # Fallback: Draw MSC logo as styled text
+        # Fallback text logo
         c.saveState()
-        # "MSC" in accent cyan
         c.setFillColor(self.ACCENT_CYAN)
-        c.setFont('Helvetica-Bold', 28)
-        c.drawString(x, y - 25, 'MSC')
-
-        # "CERTIFICATIONS" in brand teal
+        c.setFont('Helvetica-Bold', 26)
+        c.drawString(x, y - 24, 'MSC')
         c.setFillColor(self.BRAND_TEAL)
-        c.setFont('Helvetica', 8)
-        c.drawString(x, y - 37, 'CERTIFICATIONS')
+        c.setFont('Helvetica', 7.5)
+        c.drawString(x, y - 35, 'CERTIFICATIONS')
         c.restoreState()
 
-    def _draw_accreditation_badges(self, y_top):
-        """Draw DA badge and IAF logo on the right side of the header."""
-        c = self.c
-        right_x = self.PAGE_WIDTH - 60
-
-        # DA badge
-        da_path = os.path.join(self.ASSETS_DIR, 'da_badge.png')
-        if os.path.exists(da_path):
-            try:
-                c.drawImage(da_path, right_x - 120, y_top - 40, width=55, height=32,
-                            preserveAspectRatio=True, mask='auto')
-            except Exception:
-                pass
-
-        # IAF logo
-        iaf_path = os.path.join(self.ASSETS_DIR, 'iaf_logo.png')
-        if os.path.exists(iaf_path):
-            try:
-                c.drawImage(iaf_path, right_x - 55, y_top - 40, width=55, height=32,
-                            preserveAspectRatio=True, mask='auto')
-            except Exception:
-                pass
-
-        # Accreditation number text
-        c.saveState()
-        c.setFillColor(self.TEXT_GRAY)
-        c.setFont('Helvetica', 7)
-        c.drawRightString(right_x, y_top - 50, 'CS 017 18.11.24')
-        c.restoreState()
-
-    # ── Title section ────────────────────────────────────────────────
+    # ── Title section (no decorative lines) ───────────────────────────
 
     def _draw_title(self):
-        """Draw the CERTIFIKATË title and certificate number."""
+        """Draw CERTIFIKATË title and certificate number. No cutting lines."""
         c = self.c
         center_x = self.PAGE_WIDTH / 2
-        y = self.PAGE_HEIGHT - 130
+        y = self.PAGE_HEIGHT - 160
 
-        # Decorative line above title
+        # "CERTIFIKATË" - large, letter-spaced, BLACK
         c.saveState()
-        c.setStrokeColor(self.ACCENT_CYAN)
-        c.setLineWidth(1.5)
-        c.line(center_x - 120, y + 25, center_x + 120, y + 25)
+        c.setFillColor(self.BLACK)
+        c.setFont('Helvetica-Bold', 34)
+        self._draw_spaced_text(center_x, y, 'CERTIFIKATË', spacing=5, centered=True)
         c.restoreState()
 
-        # "CERTIFIKATË" - large, letter-spaced
+        # Certificate number - BLACK
         c.saveState()
-        c.setFillColor(self.BRAND_TEAL)
-        title = 'CERTIFIKATË'
-        # Draw with letter spacing
-        c.setFont('Helvetica-Bold', 36)
-        self._draw_spaced_text(center_x, y, title, spacing=6, centered=True)
+        c.setFillColor(self.BLACK)
+        c.setFont('Helvetica-Oblique', 12)
+        c.drawCentredString(center_x, y - 28, f'No. {self.certificate.certificate_number}')
         c.restoreState()
 
-        # Certificate number - italic style
-        c.saveState()
-        c.setFillColor(self.TEXT_GRAY)
-        c.setFont('Helvetica-Oblique', 13)
-        cert_num = f'No. {self.certificate.certificate_number}'
-        c.drawCentredString(center_x, y - 30, cert_num)
-        c.restoreState()
-
-        # Decorative line below cert number
-        c.saveState()
-        c.setStrokeColor(self.ACCENT_CYAN)
-        c.setLineWidth(1.5)
-        c.line(center_x - 120, y - 45, center_x + 120, y - 45)
-        c.restoreState()
-
-    # ── Body section ─────────────────────────────────────────────────
+    # ── Body section ──────────────────────────────────────────────────
 
     def _draw_body(self):
-        """Draw the main certificate body text."""
+        """Draw the main certificate body with adaptive text sizing. All text BLACK."""
         c = self.c
         center_x = self.PAGE_WIDTH / 2
-        y = self.PAGE_HEIGHT - 230
+        std_info = self._get_standard_info()
 
-        # "CERTIFIKOHET SE SISTEMI I MANAXHIMIT TË CILËSISË I KOMPANISË"
+        # Starting Y position after title (lowered to match title shift)
+        y = self.PAGE_HEIGHT - 235
+
+        # ISO-specific certification text (adapts per standard)
+        cert_text = std_info['cert_text']
         c.saveState()
-        c.setFillColor(self.TEXT_DARK)
-        c.setFont('Helvetica', 10)
-        c.drawCentredString(center_x, y,
-                            'CERTIFIKOHET SE SISTEMI I MANAXHIMIT TË CILËSISË I KOMPANISË')
+        c.setFillColor(self.BLACK)
+        cert_font_size = 10
+        while c.stringWidth(cert_text, 'Helvetica', cert_font_size) > self.CONTENT_WIDTH and cert_font_size > 7:
+            cert_font_size -= 0.5
+        c.setFont('Helvetica', cert_font_size)
+        c.drawCentredString(center_x, y, cert_text)
         c.restoreState()
 
-        # Company name - large bold
-        y -= 40
+        # Company name - BIG, UPPERCASE, BLACK
+        y -= 45
         c.saveState()
-        c.setFillColor(self.BRAND_TEAL)
-        c.setFont('Helvetica-Bold', 26)
+        c.setFillColor(self.BLACK)
         company = self.certificate.company_name.upper()
-        # Handle long company names by reducing font size
-        font_size = 26
-        while c.stringWidth(company, 'Helvetica-Bold', font_size) > 450 and font_size > 14:
+        font_size = 28
+        while c.stringWidth(company, 'Helvetica-Bold', font_size) > self.CONTENT_WIDTH and font_size > 14:
             font_size -= 1
         c.setFont('Helvetica-Bold', font_size)
         c.drawCentredString(center_x, y, company)
         c.restoreState()
 
-        # Address
-        y -= 30
+        # Address (if available)
+        y -= 28
         address = getattr(self.certificate, 'address', '') or ''
         if address:
             c.saveState()
-            c.setFillColor(self.TEXT_DARK)
-            c.setFont('Helvetica', 11)
-            c.drawCentredString(center_x, y, f'Adresa: {address}')
+            c.setFillColor(self.BLACK)
+            addr_font = 10
+            addr_text = f'Adresa: {address}'
+            while c.stringWidth(addr_text, 'Helvetica', addr_font) > self.CONTENT_WIDTH and addr_font > 7:
+                addr_font -= 0.5
+            c.setFont('Helvetica', addr_font)
+            c.drawCentredString(center_x, y, addr_text)
             c.restoreState()
 
         # "Është në përputhje me standardin"
-        y -= 35
+        y -= 32
         c.saveState()
-        c.setFillColor(self.TEXT_DARK)
-        c.setFont('Helvetica', 11)
+        c.setFillColor(self.BLACK)
+        c.setFont('Helvetica', 10)
         c.drawCentredString(center_x, y, 'Është në përputhje me standardin')
         c.restoreState()
 
-        # Standard name - large bold teal
-        y -= 35
+        # Standard name - large, bold, BLACK
+        y -= 32
         c.saveState()
-        c.setFillColor(self.ACCENT_CYAN)
-        c.setFont('Helvetica-Bold', 24)
+        c.setFillColor(self.BLACK)
         standard_display = self.certificate.get_standard_display()
+        std_font = 22
+        while c.stringWidth(standard_display, 'Helvetica-Bold', std_font) > self.CONTENT_WIDTH and std_font > 14:
+            std_font -= 1
+        c.setFont('Helvetica-Bold', std_font)
         c.drawCentredString(center_x, y, standard_display)
         c.restoreState()
 
         # "Për aktivitetet e mëposhtme:"
-        y -= 35
+        y -= 30
         c.saveState()
-        c.setFillColor(self.TEXT_DARK)
-        c.setFont('Helvetica', 10)
+        c.setFillColor(self.BLACK)
+        c.setFont('Helvetica', 9.5)
         c.drawCentredString(center_x, y, 'Për aktivitetet e mëposhtme:')
         c.restoreState()
 
         # IAF Code
-        y -= 22
+        y -= 18
         c.saveState()
-        c.setFillColor(self.TEXT_DARK)
-        c.setFont('Helvetica', 10)
+        c.setFillColor(self.BLACK)
+        c.setFont('Helvetica', 9)
         c.drawCentredString(center_x, y, f'Kodi EA/IAF: {self.certificate.iaf_code}')
         c.restoreState()
 
-        # Scope activity - CAPS bold
-        y -= 30
+        # Scope activity - bold, adaptive wrapping, BLACK
+        y -= 28
         c.saveState()
-        c.setFillColor(self.BRAND_TEAL)
-        c.setFont('Helvetica-Bold', 11)
+        c.setFillColor(self.BLACK)
         scope = self.certificate.scope_activity.upper()
-        # Wrap long text
-        self._draw_wrapped_text(center_x, y, scope, 'Helvetica-Bold', 11, 440, centered=True)
+        scope_font = 11
+        scope_max_width = self.CONTENT_WIDTH - 20
+        words = scope.split()
+        test_line = ' '.join(words)
+        if c.stringWidth(test_line, 'Helvetica-Bold', scope_font) > scope_max_width * 3:
+            scope_font = 9.5
+        elif c.stringWidth(test_line, 'Helvetica-Bold', scope_font) > scope_max_width * 2:
+            scope_font = 10
+        c.setFont('Helvetica-Bold', scope_font)
+        self._draw_wrapped_text(center_x, y, scope, 'Helvetica-Bold', scope_font,
+                                scope_max_width, centered=True)
         c.restoreState()
 
-    # ── Dates section ────────────────────────────────────────────────
-
-    def _draw_dates(self):
-        """Draw the three-column date section."""
-        c = self.c
-        y_label = self.PAGE_HEIGHT - 580
-        y_value = y_label - 20
-
-        # Horizontal line above dates
-        c.saveState()
-        c.setStrokeColor(self.ACCENT_CYAN)
-        c.setLineWidth(0.5)
-        c.line(70, y_label + 20, self.PAGE_WIDTH - 70, y_label + 20)
-        c.restoreState()
-
-        # Three columns
-        col_positions = [
-            (self.PAGE_WIDTH * 0.22, 'Emetimi i Parë', self._format_date(self.certificate.first_issue_date)),
-            (self.PAGE_WIDTH * 0.50, 'Data e Modifikimit', self._format_date(getattr(self.certificate, 'modification_date', None))),
-            (self.PAGE_WIDTH * 0.78, 'Data e Skadencës', self._format_date(self.certificate.expiry_date)),
-        ]
-
-        for col_x, label, value in col_positions:
-            # Label
-            c.saveState()
-            c.setFillColor(self.TEXT_GRAY)
-            c.setFont('Helvetica', 9)
-            c.drawCentredString(col_x, y_label, label)
-            c.restoreState()
-
-            # Value
-            c.saveState()
-            c.setFillColor(self.BRAND_TEAL)
-            c.setFont('Helvetica-Bold', 11)
-            c.drawCentredString(col_x, y_value, value)
-            c.restoreState()
-
-        # Horizontal line below dates
-        c.saveState()
-        c.setStrokeColor(self.ACCENT_CYAN)
-        c.setLineWidth(0.5)
-        c.line(70, y_value - 15, self.PAGE_WIDTH - 70, y_value - 15)
-        c.restoreState()
-
-    # ── Signature section ────────────────────────────────────────────
+    # ── Signature section ─────────────────────────────────────────────
 
     def _draw_signature(self):
-        """Draw the signature area."""
+        """Draw the signature area above dates."""
         c = self.c
         center_x = self.PAGE_WIDTH / 2
-        y = self.PAGE_HEIGHT - 650
+        y = self.PAGE_HEIGHT - 600
 
         # Signature image
         sig_path = os.path.join(self.ASSETS_DIR, 'signature.png')
@@ -348,75 +343,124 @@ class CertificatePDFGenerator:
             except Exception:
                 pass
 
-        # Line under signature
+        # Thin line under signature
         c.saveState()
-        c.setStrokeColor(self.TEXT_GRAY)
+        c.setStrokeColor(self.BLACK)
         c.setLineWidth(0.5)
-        c.line(center_x - 60, y - 5, center_x + 60, y - 5)
+        c.line(center_x - 55, y - 3, center_x + 55, y - 3)
         c.restoreState()
 
         # "Drejtues Ekzekutiv"
         c.saveState()
-        c.setFillColor(self.BRAND_TEAL)
+        c.setFillColor(self.BLACK)
         c.setFont('Helvetica-Bold', 9)
-        c.drawCentredString(center_x, y - 18, 'Drejtues Ekzekutiv')
+        c.drawCentredString(center_x, y - 16, 'Drejtues Ekzekutiv')
         c.restoreState()
 
         # "MSC CERTIFICATIONS"
         c.saveState()
-        c.setFillColor(self.TEXT_GRAY)
-        c.setFont('Helvetica', 8)
-        c.drawCentredString(center_x, y - 30, 'MSC CERTIFICATIONS')
+        c.setFillColor(self.BLACK)
+        c.setFont('Helvetica', 7.5)
+        c.drawCentredString(center_x, y - 28, 'MSC CERTIFICATIONS')
         c.restoreState()
 
-    # ── Footer section ───────────────────────────────────────────────
+    # ── Dates section (single line at bottom) ─────────────────────────
+
+    def _draw_dates(self):
+        """Draw dates in a single compact line. All text BLACK."""
+        c = self.c
+        y = self.PAGE_HEIGHT - 665
+
+        col_positions = [
+            (self.PAGE_WIDTH * 0.22, 'Emetimi i Parë',
+             self._format_date(self.certificate.first_issue_date)),
+            (self.PAGE_WIDTH * 0.50, 'Data e Modifikimit',
+             self._format_date(getattr(self.certificate, 'modification_date', None))),
+            (self.PAGE_WIDTH * 0.78, 'Data e Skadencës',
+             self._format_date(self.certificate.expiry_date)),
+        ]
+
+        for col_x, label, value in col_positions:
+            c.saveState()
+            c.setFillColor(self.BLACK)
+            c.setFont('Helvetica', 8)
+            c.drawCentredString(col_x, y, label)
+            c.restoreState()
+
+            c.saveState()
+            c.setFillColor(self.BLACK)
+            c.setFont('Helvetica-Bold', 10)
+            c.drawCentredString(col_x, y - 14, value)
+            c.restoreState()
+
+    # ── Footer section ────────────────────────────────────────────────
+    # Layout: QR code (left) | disclaimer text (center) | Approved badge (right)
 
     def _draw_footer(self):
-        """Draw the footer with disclaimer, QR code, and approved badge."""
+        """Draw footer with QR code left, text center, approved badge right - all on same line."""
         c = self.c
-        y = 120
+        std_info = self._get_standard_info()
+        management_system = std_info['management_system']
 
-        # Horizontal separator
+        # All three elements (QR, text, badge) sit on the same baseline
+        qr_size = 65
+        badge_size = 70
+        elements_bottom = 20  # Bottom Y for QR code and badge
+
+        # Thin separator line above footer elements
         c.saveState()
         c.setStrokeColor(self.ACCENT_CYAN)
-        c.setLineWidth(1)
-        c.line(40, y + 10, self.PAGE_WIDTH - 40, y + 10)
-        c.restoreState()
-
-        # Disclaimer text
-        c.saveState()
-        c.setFillColor(self.TEXT_GRAY)
-        c.setFont('Helvetica', 6.5)
-        disclaimer_lines = [
-            'Ky certifikatë mbetet pronë e MSC CERTIFICATIONS dhe duhet të kthehet me kërkesë. Përdorimi i kësaj',
-            'certifikate i nënshtrohet rregullave dhe kushteve të MSC CERTIFICATIONS. Vlefshmëria e kësaj',
-            'certifikate mund të verifikohet përmes skanimit të kodit QR ose duke kontaktuar MSC CERTIFICATIONS.',
-        ]
-        text_y = y - 5
-        for line in disclaimer_lines:
-            c.drawCentredString(self.PAGE_WIDTH / 2, text_y, line)
-            text_y -= 9
-        c.restoreState()
-
-        # Company info
-        c.saveState()
-        c.setFillColor(self.BRAND_TEAL)
-        c.setFont('Helvetica-Bold', 7.5)
-        c.drawCentredString(self.PAGE_WIDTH / 2, text_y - 5,
-                            'MSC CERTIFICATIONS Assessment & Certification')
-        c.setFont('Helvetica', 7)
-        c.setFillColor(self.TEXT_GRAY)
-        c.drawCentredString(self.PAGE_WIDTH / 2, text_y - 16,
-                            'Rr Ismail Qemali, Tiranë, Shqipëri')
-        c.drawCentredString(self.PAGE_WIDTH / 2, text_y - 27,
-                            'info@msc-cert.com    www.msc-cert.com')
+        c.setLineWidth(0.8)
+        c.line(self.CONTENT_LEFT, elements_bottom + qr_size + 12,
+               self.CONTENT_RIGHT, elements_bottom + qr_size + 12)
         c.restoreState()
 
         # QR Code (bottom left)
-        self._draw_qr_code(55, 20)
+        self._draw_qr_code(self.CONTENT_LEFT + 5, elements_bottom)
 
         # Approved badge (bottom right)
-        self._draw_approved_badge(self.PAGE_WIDTH - 130, 18)
+        self._draw_approved_badge(self.CONTENT_RIGHT - badge_size - 5, elements_bottom)
+
+        # Footer text BETWEEN QR and badge - aligned to same vertical zone
+        text_left = self.CONTENT_LEFT + qr_size + 18
+        text_right = self.CONTENT_RIGHT - badge_size - 12
+        text_center_x = (text_left + text_right) / 2
+        text_max_width = text_right - text_left
+
+        c.saveState()
+        c.setFillColor(self.BLACK)
+
+        # Disclaimer text (ISO-specific management system name inserted)
+        disclaimer_text = (
+            f'Vlefshmëria e kësaj certifikate është subjekt i mbikëqyrjeve vjetore dhe rishikimi të plotë të '
+            f'{management_system} çdo tre vjet. Vlefshmëria e kësaj certifikate është në përputhje '
+            f'me respektimin e rregullave të përcaktuara nga sistemet e MSC CERTIFICATIONS.'
+        )
+
+        # Start text from top of QR/badge zone
+        text_y = elements_bottom + qr_size - 2
+        c.setFont('Helvetica', 5.5)
+        text_y = self._draw_wrapped_text(
+            text_center_x, text_y, disclaimer_text,
+            'Helvetica', 5.5, text_max_width, centered=True
+        )
+
+        # Company info
+        text_y -= 3
+        c.setFont('Helvetica-Bold', 6)
+        c.drawCentredString(text_center_x, text_y,
+                            'MSC CERTIFICATIONS Assessment & Certification')
+
+        text_y -= 8
+        c.setFont('Helvetica', 5.5)
+        c.drawCentredString(text_center_x, text_y,
+                            'Rr Ismail Qemali, Tiranë, Shqipëri')
+
+        text_y -= 8
+        c.drawCentredString(text_center_x, text_y,
+                            'info@msc-cert.com    www.msc-cert.com')
+
+        c.restoreState()
 
     def _draw_qr_code(self, x, y):
         """Draw QR code with CHECK CERT label."""
@@ -430,15 +474,14 @@ class CertificatePDFGenerator:
             return
 
         try:
-            qr_size = 70
+            qr_size = 65
             c.drawImage(qr_path, x, y, width=qr_size, height=qr_size,
                         preserveAspectRatio=True, mask='auto')
 
-            # "CHECK CERT" label below QR code
             c.saveState()
-            c.setFillColor(self.BRAND_TEAL)
-            c.setFont('Helvetica-Bold', 7)
-            c.drawCentredString(x + qr_size / 2, y - 10, 'CHECK CERT')
+            c.setFillColor(self.BLACK)
+            c.setFont('Helvetica-Bold', 6.5)
+            c.drawCentredString(x + qr_size / 2, y - 9, 'CHECK CERT')
             c.restoreState()
         except Exception:
             pass
@@ -450,30 +493,30 @@ class CertificatePDFGenerator:
 
         if os.path.exists(badge_path):
             try:
-                c.drawImage(badge_path, x, y, width=75, height=75,
+                c.drawImage(badge_path, x, y, width=70, height=70,
                             preserveAspectRatio=True, mask='auto')
                 return
             except Exception:
                 pass
 
-        # Fallback: draw a simple accreditation text badge
+        # Fallback: draw a circular accreditation badge
         c.saveState()
-        c.setStrokeColor(self.BRAND_TEAL)
-        c.setLineWidth(1)
-        badge_cx = x + 37
-        badge_cy = y + 37
-        c.circle(badge_cx, badge_cy, 30, stroke=1, fill=0)
-        c.setFillColor(self.BRAND_TEAL)
+        badge_cx = x + 35
+        badge_cy = y + 35
+        c.setStrokeColor(self.BLACK)
+        c.setLineWidth(1.2)
+        c.circle(badge_cx, badge_cy, 28, stroke=1, fill=0)
+        c.setFillColor(self.BLACK)
         c.setFont('Helvetica-Bold', 6)
         c.drawCentredString(badge_cx, badge_cy + 8, 'APPROVED')
-        c.setFont('Helvetica', 5.5)
+        c.setFont('Helvetica', 5)
         standard_short = self.certificate.get_standard_display()
         c.drawCentredString(badge_cx, badge_cy - 2, standard_short)
-        c.setFont('Helvetica', 5)
-        c.drawCentredString(badge_cx, badge_cy - 12, 'MSC CERT')
+        c.setFont('Helvetica', 4.5)
+        c.drawCentredString(badge_cx, badge_cy - 11, 'MSC CERT')
         c.restoreState()
 
-    # ── Utility methods ──────────────────────────────────────────────
+    # ── Utility methods ───────────────────────────────────────────────
 
     def _draw_spaced_text(self, x, y, text, spacing=4, centered=False):
         """Draw text with custom letter spacing."""
@@ -482,10 +525,9 @@ class CertificatePDFGenerator:
         font_size = c._fontsize
 
         if centered:
-            total_width = 0
-            for char in text:
-                total_width += c.stringWidth(char, font_name, font_size) + spacing
-            total_width -= spacing  # Remove last spacing
+            total_width = sum(
+                c.stringWidth(ch, font_name, font_size) + spacing for ch in text
+            ) - spacing
             x = x - total_width / 2
 
         for char in text:
@@ -493,7 +535,7 @@ class CertificatePDFGenerator:
             x += c.stringWidth(char, font_name, font_size) + spacing
 
     def _draw_wrapped_text(self, x, y, text, font_name, font_size, max_width, centered=False):
-        """Draw text that wraps within max_width."""
+        """Draw text that wraps within max_width. Returns the Y position after the last line."""
         c = self.c
         words = text.split()
         lines = []
@@ -510,12 +552,15 @@ class CertificatePDFGenerator:
         if current_line:
             lines.append(current_line)
 
+        line_height = font_size + 3
         for i, line in enumerate(lines):
-            line_y = y - (i * (font_size + 4))
+            line_y = y - (i * line_height)
             if centered:
                 c.drawCentredString(x, line_y, line)
             else:
                 c.drawString(x, line_y, line)
+
+        return y - (len(lines) * line_height)
 
     @staticmethod
     def _format_date(date_val):
