@@ -23,4 +23,7 @@ urlpatterns = [
 
     # Contact form endpoint: /api/forms/contact/
     path('contact/', views.ContactFormView.as_view(), name='contact-form'),
+
+    # Apply online form endpoint: /api/forms/apply-online/
+    path('apply-online/', views.ApplyOnlineView.as_view(), name='apply-online'),
 ]

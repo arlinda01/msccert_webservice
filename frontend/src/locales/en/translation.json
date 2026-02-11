@@ -61,6 +61,7 @@
     "requestQuote": "Get a Free Quote",
     "contactUs": "Contact Us",
     "getIsoQuote": "Get a {{isoCode}} Quote",
+    "applyOnline": "Request a Quote",
     "edit": "Edit",
     "sending": "Sending..."
   },
@@ -2689,13 +2690,8 @@
         "contact": "Contact Information",
         "business": "Business Information"
       },
-      "certificationStandard": "Certification Standard",
-      "selectStandard": "Select a certification standard",
-      "standards": {
-        "other": "Other"
-      },
-      "otherStandard": "Specify the certification you are requesting",
-      "otherStandardPlaceholder": "Enter the certification standard",
+      "certificationStandard": "Certification Standard(s) of Interest",
+      "certificationStandardPlaceholder": "e.g. ISO 9001, ISO 14001, HACCP, CE Marking, etc.",
       "requestType": "Request Type",
       "requestTypes": {
         "initial": "Initial Certification",

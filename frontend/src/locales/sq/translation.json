@@ -61,6 +61,7 @@
     "requestQuote": "Merr Ofertë Falas",
     "contactUs": "Na Kontaktoni",
     "getIsoQuote": "Kërkoni Ofertë {{isoCode}}",
+    "applyOnline": "Kërko Ofertë",
     "edit": "Ndrysho",
     "sending": "Duke dërguar..."
   },
@@ -2784,13 +2785,8 @@
         "contact": "Informacioni i Kontaktit",
         "business": "Informacioni i Biznesit"
       },
-      "certificationStandard": "Standardi i Certifikimit",
-      "selectStandard": "Zgjidhni një standard certifikimi",
-      "standards": {
-        "other": "Tjetër"
-      },
-      "otherStandard": "Specifikoni certifikimin që kërkoni",
-      "otherStandardPlaceholder": "Shkruani standardin e certifikimit",
+      "certificationStandard": "Standardi(et) e Certifikimit të Interesit",
+      "certificationStandardPlaceholder": "p.sh. ISO 9001, ISO 14001, HACCP, Markim CE, etj.",
       "requestType": "Lloji i Kërkesës",
       "requestTypes": {
         "initial": "Certifikim Fillestar",

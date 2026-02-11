@@ -24,10 +24,10 @@ const ISO9001: FC = () => {
             {t('iso9001.hero.subtitle')}
           </p>
           <Link
-            to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-9001')}
+            to={routes.applyOnline[currentLang]}
             className="btn btn-primary btn-quote"
           >
-            {t('common.getIsoQuote', { isoCode: 'ISO 9001' })}
+            {t('common.applyOnline')}
           </Link>
         </div>
       </section>
@@ -173,7 +173,7 @@ const ISO9001: FC = () => {
             {t('iso9001.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso9001.cta.button')}</Link>
+            <Link to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-9001')} className="btn btn-primary">{t('common.getIsoQuote', { isoCode: 'ISO 9001' })}</Link>
           </div>
           <p className="cta-footer">
             {t('iso9001.cta.footer')}

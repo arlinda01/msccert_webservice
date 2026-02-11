@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 
 interface ApplyFormData {
   certificationStandard: string;
-  otherStandard: string;
   requestType: string;
   companyName: string;
   vatNumber: string;
@@ -37,7 +36,6 @@ const ApplyOnline: FC = () => {
 
   const [formData, setFormData] = useState<ApplyFormData>({
     certificationStandard: '',
-    otherStandard: '',
     requestType: '',
     companyName: '',
     vatNumber: '',
@@ -96,7 +94,6 @@ const ApplyOnline: FC = () => {
         });
         setFormData({
           certificationStandard: '',
-          otherStandard: '',
           requestType: '',
           companyName: '',
           vatNumber: '',
@@ -134,20 +131,6 @@ const ApplyOnline: FC = () => {
     }
   };
 
-  const isoOptions = [
-    { value: 'iso-9001', label: 'ISO 9001:2015' },
-    { value: 'iso-14001', label: 'ISO 14001:2015' },
-    { value: 'iso-22000', label: 'ISO 22000:2018' },
-    { value: 'iso-22301', label: 'ISO 22301:2019' },
-    { value: 'iso-27001', label: 'ISO 27001:2022' },
-    { value: 'iso-37001', label: 'ISO 37001:2016' },
-    { value: 'iso-39001', label: 'ISO 39001:2012' },
-    { value: 'iso-45001', label: 'ISO 45001:2018' },
-    { value: 'iso-50001', label: 'ISO 50001:2018' },
-    { value: 'haccp', label: 'HACCP – Codex Alimentarius' },
-    { value: 'other', label: t('applyOnline.form.standards.other') }
-  ];
-
   return (
     <div className="apply-online-page">
       <Helmet>
@@ -182,36 +165,17 @@ const ApplyOnline: FC = () => {
                 <div className="form-grid">
                   <div className="form-group form-group-full">
                     <label htmlFor="certificationStandard">{t('applyOnline.form.certificationStandard')} *</label>
-                    <select
+                    <textarea
                       id="certificationStandard"
                       name="certificationStandard"
+                      rows={3}
                       value={formData.certificationStandard}
                       onChange={handleChange}
+                      placeholder={t('applyOnline.form.certificationStandardPlaceholder')}
                       required
                       disabled={status.submitting}
-                    >
-                      <option value="">{t('applyOnline.form.selectStandard')}</option>
-                      {isoOptions.map(opt => (
-                        <option key={opt.value} value={opt.value}>{opt.label}</option>
-                      ))}
-                    </select>
+                    ></textarea>
                   </div>
-
-                  {formData.certificationStandard === 'other' && (
-                    <div className="form-group form-group-full">
-                      <label htmlFor="otherStandard">{t('applyOnline.form.otherStandard')} *</label>
-                      <input
-                        type="text"
-                        id="otherStandard"
-                        name="otherStandard"
-                        value={formData.otherStandard}
-                        onChange={handleChange}
-                        placeholder={t('applyOnline.form.otherStandardPlaceholder')}
-                        required
-                        disabled={status.submitting}
-                      />
-                    </div>
-                  )}
 
                   <div className="form-group form-group-full">
                     <label>{t('applyOnline.form.requestType')} *</label>
@@ -291,57 +255,62 @@ const ApplyOnline: FC = () => {
                 <h2>{t('applyOnline.form.sections.address')}</h2>
                 <div className="form-grid">
                   <div className="form-group form-group-full">
-                    <label htmlFor="streetAddress">{t('applyOnline.form.streetAddress')}</label>
+                    <label htmlFor="streetAddress">{t('applyOnline.form.streetAddress')} *</label>
                     <input
                       type="text"
                       id="streetAddress"
                       name="streetAddress"
                       value={formData.streetAddress}
                       onChange={handleChange}
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="city">{t('applyOnline.form.city')}</label>
+                    <label htmlFor="city">{t('applyOnline.form.city')} *</label>
                     <input
                       type="text"
                       id="city"
                       name="city"
                       value={formData.city}
                       onChange={handleChange}
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="stateProvince">{t('applyOnline.form.stateProvince')}</label>
+                    <label htmlFor="stateProvince">{t('applyOnline.form.stateProvince')} *</label>
                     <input
                       type="text"
                       id="stateProvince"
                       name="stateProvince"
                       value={formData.stateProvince}
                       onChange={handleChange}
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="zipCode">{t('applyOnline.form.zipCode')}</label>
+                    <label htmlFor="zipCode">{t('applyOnline.form.zipCode')} *</label>
                     <input
                       type="text"
                       id="zipCode"
                       name="zipCode"
                       value={formData.zipCode}
                       onChange={handleChange}
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="country">{t('applyOnline.form.country')}</label>
+                    <label htmlFor="country">{t('applyOnline.form.country')} *</label>
                     <input
                       type="text"
                       id="country"
                       name="country"
                       value={formData.country}
                       onChange={handleChange}
+                      required
                       disabled={status.submitting}
                     />
                   </div>
@@ -402,7 +371,7 @@ const ApplyOnline: FC = () => {
                   </div>
 
                   <div className="form-group">
-                    <label htmlFor="ownersManagers">{t('applyOnline.form.ownersManagers')}</label>
+                    <label htmlFor="ownersManagers">{t('applyOnline.form.ownersManagers')} *</label>
                     <input
                       type="number"
                       id="ownersManagers"
@@ -410,11 +379,12 @@ const ApplyOnline: FC = () => {
                       value={formData.ownersManagers}
                       onChange={handleChange}
                       min="0"
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="officeWorkers">{t('applyOnline.form.officeWorkers')}</label>
+                    <label htmlFor="officeWorkers">{t('applyOnline.form.officeWorkers')} *</label>
                     <input
                       type="number"
                       id="officeWorkers"
@@ -422,11 +392,12 @@ const ApplyOnline: FC = () => {
                       value={formData.officeWorkers}
                       onChange={handleChange}
                       min="0"
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="workers">{t('applyOnline.form.workers')}</label>
+                    <label htmlFor="workers">{t('applyOnline.form.workers')} *</label>
                     <input
                       type="number"
                       id="workers"
@@ -434,11 +405,12 @@ const ApplyOnline: FC = () => {
                       value={formData.workers}
                       onChange={handleChange}
                       min="0"
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="seasonalWorkers">{t('applyOnline.form.seasonalWorkers')}</label>
+                    <label htmlFor="seasonalWorkers">{t('applyOnline.form.seasonalWorkers')} *</label>
                     <input
                       type="number"
                       id="seasonalWorkers"
@@ -446,11 +418,12 @@ const ApplyOnline: FC = () => {
                       value={formData.seasonalWorkers}
                       onChange={handleChange}
                       min="0"
+                      required
                       disabled={status.submitting}
                     />
                   </div>
                   <div className="form-group form-group-full">
-                    <label htmlFor="temporaryWorkers">{t('applyOnline.form.temporaryWorkers')}</label>
+                    <label htmlFor="temporaryWorkers">{t('applyOnline.form.temporaryWorkers')} *</label>
                     <input
                       type="number"
                       id="temporaryWorkers"
@@ -458,6 +431,7 @@ const ApplyOnline: FC = () => {
                       value={formData.temporaryWorkers}
                       onChange={handleChange}
                       min="0"
+                      required
                       disabled={status.submitting}
                     />
                   </div>

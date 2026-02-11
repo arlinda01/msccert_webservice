@@ -24,10 +24,10 @@ const ISO27001: FC = () => {
             {t('iso27001.hero.subtitle')}
           </p>
           <Link
-            to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-27001')}
+            to={routes.applyOnline[currentLang]}
             className="btn btn-primary btn-quote"
           >
-            {t('common.getIsoQuote', { isoCode: 'ISO 27001' })}
+            {t('common.applyOnline')}
           </Link>
         </div>
       </section>
@@ -169,7 +169,7 @@ const ISO27001: FC = () => {
             {t('iso27001.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso27001.cta.button')}</Link>
+            <Link to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-27001')} className="btn btn-primary">{t('common.getIsoQuote', { isoCode: 'ISO 27001' })}</Link>
           </div>
           <p className="cta-footer">
             {t('iso27001.cta.footer')}

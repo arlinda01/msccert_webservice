@@ -61,6 +61,7 @@
     "requestQuote": "Richiedi Preventivo",
     "contactUs": "Contattaci",
     "getIsoQuote": "Richiedi Preventivo {{isoCode}}",
+    "applyOnline": "Richiedi Preventivo",
     "edit": "Modifica",
     "sending": "Invio in corso..."
   },
@@ -2979,13 +2980,8 @@
         "contact": "Informazioni di Contatto",
         "business": "Informazioni Aziendali"
       },
-      "certificationStandard": "Standard di Certificazione",
-      "selectStandard": "Seleziona uno standard di certificazione",
-      "standards": {
-        "other": "Altro"
-      },
-      "otherStandard": "Specifica la certificazione richiesta",
-      "otherStandardPlaceholder": "Inserisci lo standard di certificazione",
+      "certificationStandard": "Standard di Certificazione di Interesse",
+      "certificationStandardPlaceholder": "es. ISO 9001, ISO 14001, HACCP, Marcatura CE, ecc.",
       "requestType": "Tipo di Richiesta",
       "requestTypes": {
         "initial": "Certificazione Iniziale",

@@ -463,6 +463,150 @@ Please log in to the admin panel to review this submission.
             logger.error(f"Failed to send admin notification: {str(e)}")
 
 
+class ApplyOnlineView(APIView):
+    """
+    Apply Online form submission endpoint.
+    Sends application data to info@msc-cert.com.
+    """
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        data = request.data
+
+        # Required fields
+        required_fields = {
+            'certificationStandard': 'Certification Standard is required',
+            'requestType': 'Request Type is required',
+            'companyName': 'Company Name is required',
+            'vatNumber': 'VAT Number is required',
+            'streetAddress': 'Street Address is required',
+            'city': 'City is required',
+            'stateProvince': 'State/Province is required',
+            'zipCode': 'ZIP Code is required',
+            'country': 'Country is required',
+            'phone': 'Phone is required',
+            'email': 'Email is required',
+            'sector': 'Sector is required',
+            'ownersManagers': 'Owners & Managers count is required',
+            'officeWorkers': 'Office Workers count is required',
+            'workers': 'Workers count is required',
+            'seasonalWorkers': 'Seasonal Workers count is required',
+            'temporaryWorkers': 'Temporary Workers count is required',
+        }
+
+        errors = {}
+        for field, message in required_fields.items():
+            value = data.get(field, '')
+            if value is None or str(value).strip() == '':
+                errors[field] = message
+
+        if errors:
+            return Response({
+                'success': False,
+                'errors': errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        request_type_labels = {
+            'initial': 'Initial Certification',
+            'renovation': 'Renovation',
+            'transfer': 'Transfer',
+        }
+        request_type_label = request_type_labels.get(
+            data.get('requestType', ''), data.get('requestType', '')
+        )
+
+        try:
+            admin_subject = f"New Online Application - {data.get('companyName', '')}"
+            admin_message = f"""
+New online certification application received:
+
+Certification Standard(s): {data.get('certificationStandard', '')}
+Request Type: {request_type_label}
+
+Company Data:
+- Company Name: {data.get('companyName', '')}
+- VAT Number: {data.get('vatNumber', '')}
+
+Address:
+- Street: {data.get('streetAddress', '')}
+- City: {data.get('city', '')}
+- State/Province: {data.get('stateProvince', '')}
+- ZIP Code: {data.get('zipCode', '')}
+- Country: {data.get('country', '')}
+
+Contact:
+- Phone: {data.get('phone', '')}
+- Email: {data.get('email', '')}
+
+Business Information:
+- Sector: {data.get('sector', '')}
+- Owners & Managers: {data.get('ownersManagers', '')}
+- Office Workers: {data.get('officeWorkers', '')}
+- Workers: {data.get('workers', '')}
+- Seasonal Workers: {data.get('seasonalWorkers', '')}
+- Temporary Workers: {data.get('temporaryWorkers', '')}
+- External Activities: {data.get('externalActivities', 'N/A')}
+
+---
+This application was submitted from the MSC Certifications website.
+            """
+
+            send_mail(
+                subject=admin_subject,
+                message=admin_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=['info@msc-cert.com'],
+                fail_silently=False
+            )
+
+            # Send confirmation to applicant
+            applicant_email = data.get('email', '').strip()
+            if applicant_email:
+                user_subject = "Application Received - MSC Certifications"
+                user_message = f"""
+Dear {data.get('companyName', '')},
+
+Thank you for submitting your certification application to MSC Certifications.
+
+We have received your application for: {data.get('certificationStandard', '')}
+Request Type: {request_type_label}
+
+Our team will review your application and get back to you within 24-48 hours with a personalized quote.
+
+If you have any questions, please contact us at info@msc-cert.com.
+
+Best regards,
+MSC Certifications Team
+
+---
+MSC Certifications
+Email: info@msc-cert.com
+Phone: +355 67 206 3632
+                """
+
+                send_mail(
+                    subject=user_subject,
+                    message=user_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[applicant_email],
+                    fail_silently=True
+                )
+
+            logger.info(f"Apply online form submitted by {applicant_email}")
+
+            return Response({
+                'success': True,
+                'message': 'Your application has been submitted successfully. We will get back to you within 24-48 hours.'
+            }, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            logger.error(f"Failed to send apply online form email: {str(e)}")
+            return Response({
+                'success': False,
+                'message': 'Failed to submit application. Please try again or contact us directly at info@msc-cert.com'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
 class ContactFormView(APIView):
     """
     Simple contact form submission endpoint.

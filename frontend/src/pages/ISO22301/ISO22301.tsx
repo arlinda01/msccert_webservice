@@ -24,10 +24,10 @@ const ISO22301: FC = () => {
             {t('iso22301.hero.subtitle')}
           </p>
           <Link
-            to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-22301')}
+            to={routes.applyOnline[currentLang]}
             className="btn btn-primary btn-quote"
           >
-            {t('common.getIsoQuote', { isoCode: 'ISO 22301' })}
+            {t('common.applyOnline')}
           </Link>
         </div>
       </section>
@@ -169,7 +169,7 @@ const ISO22301: FC = () => {
             {t('iso22301.cta.description')}
           </p>
           <div className="cta-buttons">
-            <Link to={routes.contact[currentLang]} className="btn btn-primary">{t('iso22301.cta.button')}</Link>
+            <Link to={routes.quoteForm[currentLang].replace(':isoCode', 'iso-22301')} className="btn btn-primary">{t('common.getIsoQuote', { isoCode: 'ISO 22301' })}</Link>
           </div>
           <p className="cta-footer">
             {t('iso22301.cta.footer')}
