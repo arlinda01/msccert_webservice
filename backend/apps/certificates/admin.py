@@ -62,8 +62,8 @@ class CertificateAdmin(admin.ModelAdmin):
                 'iaf_code',
             )
         }),
-        ('QR Code & PDF', {
-            'fields': ('qr_code_preview', 'download_pdf_button',)
+        ('Signature & PDF', {
+            'fields': ('signature', 'qr_code_preview', 'download_pdf_button',)
         }),
         ('Status Information', {
             'fields': (

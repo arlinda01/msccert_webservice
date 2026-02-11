@@ -52,6 +52,7 @@ class CertificateSerializer(serializers.ModelSerializer):
             'next_maintenance_date',
             'last_maintenance_date',
             'qr_code',
+            'signature',
             'is_maintenance_due',
             'days_until_expiry',
             'sites',

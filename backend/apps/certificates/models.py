@@ -111,6 +111,14 @@ class Certificate(models.Model):
         null=True
     )
 
+    # Signature
+    signature = models.ImageField(
+        upload_to='certificate_signatures/',
+        blank=True,
+        null=True,
+        help_text="Upload signature image (PNG with transparent background recommended)"
+    )
+
     # Metadata
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
