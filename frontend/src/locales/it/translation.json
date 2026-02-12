@@ -2981,7 +2981,7 @@
         "business": "Informazioni Aziendali"
       },
       "certificationStandard": "Standard di Certificazione di Interesse",
-      "certificationStandardPlaceholder": "es. ISO 9001, ISO 14001, HACCP, Marcatura CE, ecc.",
+      "ceMarking": "Marcatura CE",
       "requestType": "Tipo di Richiesta",
       "requestTypes": {
         "initial": "Certificazione Iniziale",

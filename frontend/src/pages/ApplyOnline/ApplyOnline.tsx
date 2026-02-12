@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 
 interface ApplyFormData {
-  certificationStandard: string;
+  certificationStandards: string[];
   requestType: string;
   companyName: string;
   vatNumber: string;
@@ -34,8 +34,22 @@ interface FormStatus {
 const ApplyOnline: FC = () => {
   const { t } = useTranslation();
 
+  const isoOptions = [
+    { value: 'ISO 9001:2015', label: 'ISO 9001:2015' },
+    { value: 'ISO 14001:2015', label: 'ISO 14001:2015' },
+    { value: 'ISO 22000:2018', label: 'ISO 22000:2018' },
+    { value: 'ISO 22301:2019', label: 'ISO 22301:2019' },
+    { value: 'ISO 27001:2022', label: 'ISO 27001:2022' },
+    { value: 'ISO 37001:2016', label: 'ISO 37001:2016' },
+    { value: 'ISO 39001:2012', label: 'ISO 39001:2012' },
+    { value: 'ISO 45001:2018', label: 'ISO 45001:2018' },
+    { value: 'ISO 50001:2018', label: 'ISO 50001:2018' },
+    { value: 'HACCP', label: 'HACCP – Codex Alimentarius' },
+    { value: 'CE Marking', label: t('applyOnline.form.ceMarking') },
+  ];
+
   const [formData, setFormData] = useState<ApplyFormData>({
-    certificationStandard: '',
+    certificationStandards: [],
     requestType: '',
     companyName: '',
     vatNumber: '',
@@ -69,6 +83,15 @@ const ApplyOnline: FC = () => {
     setFormData(prev => ({ ...prev, [name]: newValue }));
   };
 
+  const handleStandardChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      certificationStandards: prev.certificationStandards.includes(value)
+        ? prev.certificationStandards.filter(s => s !== value)
+        : [...prev.certificationStandards, value]
+    }));
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus({ submitting: true, submitted: false, success: false, message: '' });
@@ -80,7 +103,10 @@ const ApplyOnline: FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          certificationStandard: formData.certificationStandards.join(', '),
+        }),
       });
 
       const data = await response.json();
@@ -93,7 +119,7 @@ const ApplyOnline: FC = () => {
           message: t('applyOnline.form.successMessage')
         });
         setFormData({
-          certificationStandard: '',
+          certificationStandards: [],
           requestType: '',
           companyName: '',
           vatNumber: '',
@@ -164,17 +190,20 @@ const ApplyOnline: FC = () => {
                 <h2>{t('applyOnline.form.sections.certification')}</h2>
                 <div className="form-grid">
                   <div className="form-group form-group-full">
-                    <label htmlFor="certificationStandard">{t('applyOnline.form.certificationStandard')} *</label>
-                    <textarea
-                      id="certificationStandard"
-                      name="certificationStandard"
-                      rows={3}
-                      value={formData.certificationStandard}
-                      onChange={handleChange}
-                      placeholder={t('applyOnline.form.certificationStandardPlaceholder')}
-                      required
-                      disabled={status.submitting}
-                    ></textarea>
+                    <label>{t('applyOnline.form.certificationStandard')} *</label>
+                    <div className="checkbox-group">
+                      {isoOptions.map(opt => (
+                        <label key={opt.value} className="checkbox-label">
+                          <input
+                            type="checkbox"
+                            checked={formData.certificationStandards.includes(opt.value)}
+                            onChange={() => handleStandardChange(opt.value)}
+                            disabled={status.submitting}
+                          />
+                          <span>{opt.label}</span>
+                        </label>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="form-group form-group-full">

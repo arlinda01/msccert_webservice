@@ -1539,6 +1539,16 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 2rem;
+}
+
+.checkbox-group .checkbox-label {
+  margin-bottom: 0;
+}
+
 .radio-label {
   display: flex;
   align-items: center;
@@ -3242,6 +3252,10 @@ h1, h2, h3, h4, h5, h6 {
   .radio-group {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
   }
 
   /* About Page */

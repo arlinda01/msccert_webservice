@@ -2786,7 +2786,7 @@
         "business": "Informacioni i Biznesit"
       },
       "certificationStandard": "Standardi(et) e Certifikimit të Interesit",
-      "certificationStandardPlaceholder": "p.sh. ISO 9001, ISO 14001, HACCP, Markim CE, etj.",
+      "ceMarking": "Markim CE",
       "requestType": "Lloji i Kërkesës",
       "requestTypes": {
         "initial": "Certifikim Fillestar",
