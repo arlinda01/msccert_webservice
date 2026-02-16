@@ -68,7 +68,7 @@
   "cookieConsent": {
     "message": "Utilizziamo i cookie per migliorare la tua esperienza sul nostro sito. Continuando a navigare, accetti l'utilizzo dei cookie.",
     "accept": "Accetta",
-    "decline": "Rifiuta",
+    "decline": "Ignora",
     "learnMore": "Scopri di Più"
   },
   "whatsapp": {
@@ -1958,7 +1958,8 @@
       },
       "message": "Messaggio",
       "messagePlaceholder": "Come possiamo aiutarti?",
-      "acceptTerms": "Accetto e acconsento ai <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a> e al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR.",
+      "acceptTerms": "Accetto i <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a>.",
+      "acceptPrivacy": "Acconsento al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR.",
       "submit": "Invia Messaggio",
       "sending": "Invio in corso...",
       "successTitle": "Messaggio Inviato con Successo!",
@@ -2046,7 +2047,8 @@
       "noAnswers": "Nessuna risposta fornita",
       "responses": "Le Tue Risposte",
       "expertNote": "I nostri esperti esamineranno le tue risposte e riceverai un rapporto dettagliato sulla conformità con lo standard richiesto.",
-      "acceptTerms": "Accetto e acconsento ai <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a> e al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR."
+      "acceptTerms": "Accetto i <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a>.",
+      "acceptPrivacy": "Acconsento al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR."
     },
     "success": {
       "title": "Grazie!",
@@ -3007,7 +3009,8 @@
       "temporaryWorkers": "Lavoratori Temporanei",
       "externalActivities": "Attività Esterne",
       "externalActivitiesPlaceholder": "Descrivi eventuali attività esterne o processi in outsourcing",
-      "acceptTerms": "Accetto e acconsento ai <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a> e al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR.",
+      "acceptTerms": "Accetto i <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a>.",
+      "acceptPrivacy": "Acconsento al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR.",
       "submit": "Invia Richiesta",
       "submitting": "Invio in corso...",
       "successMessage": "La tua richiesta è stata inviata con successo. Il nostro team ti contatterà entro 24-48 ore.",
@@ -3029,7 +3032,8 @@
       "certificateNumberPlaceholder": "es. MSC-2024-001",
       "companyName": "Nome dell'Azienda",
       "submit": "Invia",
-      "acceptTerms": "Accetto e acconsento ai <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a> e al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR.",
+      "acceptTerms": "Accetto i <a href='/it/termini-e-condizioni' target='_blank'>Termini e Condizioni</a>.",
+      "acceptPrivacy": "Acconsento al trattamento dei miei dati personali in conformità con la <a href='/it/politica-sulla-privacy' target='_blank'>Politica sulla Privacy</a> e le normative GDPR.",
       "expertNote": "Il nostro team verificherà i dettagli del certificato e riceverai una risposta di verifica via email.",
       "success": "La tua richiesta è stata inviata con successo. Riceverai una risposta di verifica via email.",
       "error": "Invio della richiesta fallito. Riprova o contattaci direttamente a info@msc-cert.com."

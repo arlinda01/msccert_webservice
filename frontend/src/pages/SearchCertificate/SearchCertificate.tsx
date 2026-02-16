@@ -23,6 +23,7 @@ const SearchCertificate: FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
 
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -152,8 +153,18 @@ const SearchCertificate: FC = () => {
                   <span dangerouslySetInnerHTML={{ __html: t('searchCertificate.form.acceptTerms') }} />
                 </label>
               </div>
+              <div className="form-group checkbox-group">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={acceptPrivacy}
+                    onChange={(e) => setAcceptPrivacy(e.target.checked)}
+                  />
+                  <span dangerouslySetInnerHTML={{ __html: t('searchCertificate.form.acceptPrivacy') }} />
+                </label>
+              </div>
 
-              <button type="submit" className="btn btn-primary submit-btn" disabled={submitting || !acceptTerms}>
+              <button type="submit" className="btn btn-primary submit-btn" disabled={submitting || !acceptTerms || !acceptPrivacy}>
                 {submitting ? t('common.sending') : t('searchCertificate.form.submit')}
               </button>
             </form>

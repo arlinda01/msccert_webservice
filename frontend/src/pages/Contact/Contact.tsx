@@ -10,6 +10,7 @@ interface FormData {
   subject: string;
   message: string;
   acceptTerms: boolean;
+  acceptPrivacy: boolean;
 }
 
 interface FormStatus {
@@ -29,7 +30,8 @@ const Contact: FC = () => {
     company: '',
     subject: '',
     message: '',
-    acceptTerms: false
+    acceptTerms: false,
+    acceptPrivacy: false
   });
 
   const [status, setStatus] = useState<FormStatus>({
@@ -76,7 +78,8 @@ const Contact: FC = () => {
           company: '',
           subject: '',
           message: '',
-          acceptTerms: false
+          acceptTerms: false,
+          acceptPrivacy: false
         });
       } else {
         setStatus({
@@ -322,6 +325,19 @@ const Contact: FC = () => {
                       disabled={status.submitting}
                     />
                     <span dangerouslySetInnerHTML={{ __html: t('contact.form.acceptTerms') }} />
+                  </label>
+                </div>
+                <div className="form-group form-group-checkbox">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="acceptPrivacy"
+                      checked={formData.acceptPrivacy}
+                      onChange={handleChange}
+                      required
+                      disabled={status.submitting}
+                    />
+                    <span dangerouslySetInnerHTML={{ __html: t('contact.form.acceptPrivacy') }} />
                   </label>
                 </div>
 

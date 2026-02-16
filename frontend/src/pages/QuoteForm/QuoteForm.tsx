@@ -108,6 +108,7 @@ const QuoteForm: FC = () => {
   });
   const [emailError, setEmailError] = useState<string | null>(null);
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
 
   // Flow: contact (step 0) -> sections (step 1..N) -> review (last step)
   const [currentStep, setCurrentStep] = useState<number | 'review' | 'success'>('contact' as any);
@@ -687,6 +688,17 @@ const QuoteForm: FC = () => {
                   <span dangerouslySetInnerHTML={{ __html: t('quoteForm.review.acceptTerms') }} />
                 </label>
               </div>
+              <div className="form-group-checkbox">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={acceptPrivacy}
+                    onChange={(e) => setAcceptPrivacy(e.target.checked)}
+                    required
+                  />
+                  <span dangerouslySetInnerHTML={{ __html: t('quoteForm.review.acceptPrivacy') }} />
+                </label>
+              </div>
 
               {submitError && (
                 <div className="error-message">
@@ -705,7 +717,7 @@ const QuoteForm: FC = () => {
                 <button
                   className="btn btn-primary"
                   onClick={handleSubmit}
-                  disabled={submitting || !acceptTerms}
+                  disabled={submitting || !acceptTerms || !acceptPrivacy}
                 >
                   {submitting ? t('common.loading') : t('common.submit')}
                 </button>

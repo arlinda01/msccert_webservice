@@ -68,7 +68,7 @@
   "cookieConsent": {
     "message": "We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.",
     "accept": "Accept",
-    "decline": "Decline",
+    "decline": "Ignore",
     "learnMore": "Learn More"
   },
   "whatsapp": {
@@ -1763,7 +1763,8 @@
       },
       "message": "Message",
       "messagePlaceholder": "How can we help you?",
-      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a>.",
+      "acceptPrivacy": "I consent to the processing of my personal data in accordance with the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
       "submit": "Send Message",
       "sending": "Sending...",
       "successTitle": "Message Sent Successfully!",
@@ -1851,7 +1852,8 @@
       "noAnswers": "No questions answered yet",
       "responses": "Your Responses",
       "expertNote": "Our experts will review your answers and you will receive a detailed report on compliance with the required standard.",
-      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations."
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a>.",
+      "acceptPrivacy": "I consent to the processing of my personal data in accordance with the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations."
     },
     "success": {
       "title": "Thank You!",
@@ -2717,7 +2719,8 @@
       "temporaryWorkers": "Temporary Workers",
       "externalActivities": "External Activities",
       "externalActivitiesPlaceholder": "Describe any external activities or outsourced processes",
-      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a>.",
+      "acceptPrivacy": "I consent to the processing of my personal data in accordance with the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
       "submit": "Submit Application",
       "submitting": "Submitting...",
       "successMessage": "Your application has been submitted successfully. Our team will contact you within 24-48 hours.",
@@ -2739,7 +2742,8 @@
       "certificateNumberPlaceholder": "e.g. MSC-2024-001",
       "companyName": "Company Name",
       "submit": "Send",
-      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a> and consent to the processing of my personal data in accordance with <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
+      "acceptTerms": "I agree and accept the <a href='/terms-and-conditions' target='_blank'>Terms and Conditions</a>.",
+      "acceptPrivacy": "I consent to the processing of my personal data in accordance with the <a href='/privacy-policy' target='_blank'>Privacy Policy</a> and GDPR regulations.",
       "expertNote": "Our team will verify the certificate details and you will receive a verification response via email.",
       "success": "Your request has been submitted successfully. You will receive a verification response via email.",
       "error": "Failed to submit your request. Please try again or contact us directly at info@msc-cert.com."

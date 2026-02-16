@@ -22,6 +22,7 @@ interface ApplyFormData {
   temporaryWorkers: string;
   externalActivities: string;
   acceptTerms: boolean;
+  acceptPrivacy: boolean;
 }
 
 interface FormStatus {
@@ -67,7 +68,8 @@ const ApplyOnline: FC = () => {
     seasonalWorkers: '',
     temporaryWorkers: '',
     externalActivities: '',
-    acceptTerms: false
+    acceptTerms: false,
+    acceptPrivacy: false
   });
 
   const [status, setStatus] = useState<FormStatus>({
@@ -137,7 +139,8 @@ const ApplyOnline: FC = () => {
           seasonalWorkers: '',
           temporaryWorkers: '',
           externalActivities: '',
-          acceptTerms: false
+          acceptTerms: false,
+          acceptPrivacy: false
         });
       } else {
         setStatus({
@@ -480,19 +483,34 @@ const ApplyOnline: FC = () => {
                 </div>
               </div>
 
-              {/* Terms & Submit */}
-              <div className="form-group form-group-checkbox">
-                <label className="checkbox-label">
-                  <input
-                    type="checkbox"
-                    name="acceptTerms"
-                    checked={formData.acceptTerms}
-                    onChange={handleChange}
-                    required
-                    disabled={status.submitting}
-                  />
-                  <span dangerouslySetInnerHTML={{ __html: t('applyOnline.form.acceptTerms') }} />
-                </label>
+              {/* Terms & Privacy Consent */}
+              <div className="form-section">
+                <div className="form-group form-group-checkbox">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="acceptTerms"
+                      checked={formData.acceptTerms}
+                      onChange={handleChange}
+                      required
+                      disabled={status.submitting}
+                    />
+                    <span dangerouslySetInnerHTML={{ __html: t('applyOnline.form.acceptTerms') }} />
+                  </label>
+                </div>
+                <div className="form-group form-group-checkbox">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="acceptPrivacy"
+                      checked={formData.acceptPrivacy}
+                      onChange={handleChange}
+                      required
+                      disabled={status.submitting}
+                    />
+                    <span dangerouslySetInnerHTML={{ __html: t('applyOnline.form.acceptPrivacy') }} />
+                  </label>
+                </div>
               </div>
 
               <button
