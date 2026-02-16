@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { faqSchema, breadcrumbSchema } from '../../utils/schemas';
 import './FAQ.css';
 
 const FAQ: FC = () => {
@@ -119,12 +120,23 @@ const FAQ: FC = () => {
     }
   ];
 
+  const allFaqItems = faqSections.flatMap(s => s.items);
+
   return (
     <div className="faq-page">
       <Helmet>
         <title>{t('meta.faq.title')}</title>
         <meta name="description" content={t('meta.faq.description')} />
         <meta name="keywords" content={t('meta.faq.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema(allFaqItems))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'FAQ', path: '/faq' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

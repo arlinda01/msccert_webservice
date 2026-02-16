@@ -10,6 +10,7 @@ import {
     FaChartLine
 } from 'react-icons/fa';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { breadcrumbSchema } from '../../utils/schemas';
 
 const QualityPolicy: FC = () => {
     const { t, i18n } = useTranslation();
@@ -21,6 +22,7 @@ const QualityPolicy: FC = () => {
                 <title>{t('meta.qualityPolicy.title')}</title>
                 <meta name="description" content={t('meta.qualityPolicy.description')} />
                 <meta name="keywords" content={t('meta.qualityPolicy.keywords')} />
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema([{name: 'Home', path: '/'}, {name: 'About Us', path: '/about-us'}, {name: 'Quality Policy', path: '/about-us/quality-policy'}]))}</script>
             </Helmet>
 
             {/* Hero Section */}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { webPageSchema, breadcrumbSchema } from '../../utils/schemas';
 import './TermsConditions.css';
 
 const TermsConditions: FC = () => {
@@ -14,6 +15,15 @@ const TermsConditions: FC = () => {
       <Helmet>
         <title>{t('meta.termsConditions.title')}</title>
         <meta name="description" content={t('meta.termsConditions.description')} />
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema('Terms and Conditions', 'Terms and conditions for MSC Certifications services.', '/terms-and-conditions'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Terms and Conditions', path: '/terms-and-conditions' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

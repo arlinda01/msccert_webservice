@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { blogPostingSchema } from '../../utils/schemas';
 import api from '../../services/api';
 import './Blog.css';
 
@@ -276,6 +277,19 @@ const BlogPost: FC = () => {
       <Helmet>
         <title>{post.meta_title || title} | MSC Certifications</title>
         <meta name="description" content={post.meta_description || getLocalizedText(post.excerpt, post.excerpt_sq, post.excerpt_it)} />
+        {post && (
+          <script type="application/ld+json">
+            {JSON.stringify(blogPostingSchema({
+              title: post.meta_title || title,
+              description: post.meta_description || getLocalizedText(post.excerpt, post.excerpt_sq, post.excerpt_it),
+              url: `/blog/${post.slug}`,
+              image: post.featured_image_url,
+              author: post.author,
+              publishedAt: post.published_at,
+              updatedAt: post.updated_at,
+            }))}
+          </script>
+        )}
       </Helmet>
 
       {/* Post Header */}

@@ -9,6 +9,7 @@ import {
     FaChartLine
 } from 'react-icons/fa';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { organizationSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const Accreditation: FC = () => {
     const { t, i18n } = useTranslation();
@@ -20,6 +21,8 @@ const Accreditation: FC = () => {
                 <title>{t('meta.accreditation.title')}</title>
                 <meta name="description" content={t('meta.accreditation.description')} />
                 <meta name="keywords" content={t('meta.accreditation.keywords')} />
+                <script type="application/ld+json">{JSON.stringify(organizationSchema())}</script>
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema([{name: 'Home', path: '/'}, {name: 'About Us', path: '/about-us'}, {name: 'Accreditation', path: '/about-us/accreditation'}]))}</script>
             </Helmet>
 
             {/* Hero Section */}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const ISO22000: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,17 @@ const ISO22000: FC = () => {
         <title>{t('iso22000.meta.title')}</title>
         <meta name="description" content={t('iso22000.meta.description')} />
         <meta name="keywords" content={t('iso22000.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('ISO 22000 Certification - Food Safety', 'ISO 22000 Food Safety Management System certification.', '/services/iso/iso-22000'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'ISO Certifications', path: '/services/iso' },
+            { name: 'ISO 22000', path: '/services/iso/iso-22000' }
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { breadcrumbSchema } from '../../utils/schemas';
 
 const MissionVision: FC = () => {
     const { t } = useTranslation();
@@ -11,6 +12,7 @@ const MissionVision: FC = () => {
             <Helmet>
                 <title>{t('meta.missionVision.title')}</title>
                 <meta name="description" content={t('meta.missionVision.description')} />
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema([{name: 'Home', path: '/'}, {name: 'About Us', path: '/about-us'}, {name: 'Mission & Vision', path: '/about-us/mission-vision'}]))}</script>
             </Helmet>
 
             {/* Hero Section */}

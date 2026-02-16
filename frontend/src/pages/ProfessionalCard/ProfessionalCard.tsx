@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const ProfessionalCard: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,16 @@ const ProfessionalCard: FC = () => {
         <title>{t('professionalCard.meta.title')}</title>
         <meta name="description" content={t('professionalCard.meta.description')} />
         <meta name="keywords" content={t('professionalCard.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('Professional Card', 'Professional card certification services.', '/services/additional/professional-card'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'Professional Card', path: '/services/additional/professional-card' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

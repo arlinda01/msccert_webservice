@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { breadcrumbSchema } from '../../utils/schemas';
 import api from '../../services/api';
 import './Blog.css';
 
@@ -121,6 +122,12 @@ const Blog: FC = () => {
       <Helmet>
         <title>{t('blog.title')} | MSC Certifications</title>
         <meta name="description" content={t('blog.subtitle')} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

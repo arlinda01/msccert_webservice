@@ -1,6 +1,7 @@
 import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { localBusinessSchema, breadcrumbSchema } from '../../utils/schemas';
 
 interface FormData {
   name: string;
@@ -105,6 +106,15 @@ const Contact: FC = () => {
         <title>{t('contact.meta.title')}</title>
         <meta name="description" content={t('contact.meta.description')} />
         <meta name="keywords" content={t('contact.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Contact', path: '/contact' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

@@ -6,6 +6,7 @@ import * as FaIcons from 'react-icons/fa';
 import type { FAQ } from '../../types';
 import ISOSlider from '../../components/ISOSlider/ISOSlider';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { organizationSchema, localBusinessSchema, faqSchema } from '../../utils/schemas';
 
 const Home: FC = () => {
   const { t, i18n } = useTranslation();
@@ -115,6 +116,9 @@ const Home: FC = () => {
         <title>{t('meta.home.title')}</title>
         <meta name="description" content={t('meta.home.description')} />
         <meta name="keywords" content={t('meta.home.keywords')} />
+        <script type="application/ld+json">{JSON.stringify(organizationSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify(localBusinessSchema())}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema(faqs))}</script>
       </Helmet>
 
       {/* Hero Section */}

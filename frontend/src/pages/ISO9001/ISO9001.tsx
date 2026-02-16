@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const ISO9001: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,17 @@ const ISO9001: FC = () => {
         <title>{t('iso9001.meta.title')}</title>
         <meta name="description" content={t('iso9001.meta.description')} />
         <meta name="keywords" content={t('iso9001.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('ISO 9001 Certification - Quality Management', 'ISO 9001 Quality Management System certification services by MSC Certifications.', '/services/iso/iso-9001'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'ISO Certifications', path: '/services/iso' },
+            { name: 'ISO 9001', path: '/services/iso/iso-9001' }
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

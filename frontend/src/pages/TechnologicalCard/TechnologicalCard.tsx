@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const TechnologicalCard: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,16 @@ const TechnologicalCard: FC = () => {
         <title>{t('technologicalCard.meta.title')}</title>
         <meta name="description" content={t('technologicalCard.meta.description')} />
         <meta name="keywords" content={t('technologicalCard.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('Technological Card', 'Technological card certification services.', '/services/additional/technological-card'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'Technological Card', path: '/services/additional/technological-card' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

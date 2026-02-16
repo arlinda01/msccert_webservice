@@ -1,5 +1,7 @@
 import { FC, useState, FormEvent } from 'react';
+import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { breadcrumbSchema } from '../../utils/schemas';
 import api from '../../services/api';
 import './SearchCertificate.css';
 
@@ -58,6 +60,15 @@ const SearchCertificate: FC = () => {
 
   return (
     <div className="search-certificate-page">
+      <Helmet>
+        <title>{t('searchCertificate.hero.title')}</title>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Search Certificate', path: '/search-certificate' },
+          ]))}
+        </script>
+      </Helmet>
       <section className="search-certificate-hero">
         <div className="container">
           <h1>{t('searchCertificate.hero.title')}</h1>

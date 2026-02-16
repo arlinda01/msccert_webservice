@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const ISO45001: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,17 @@ const ISO45001: FC = () => {
         <title>{t('iso45001.meta.title')}</title>
         <meta name="description" content={t('iso45001.meta.description')} />
         <meta name="keywords" content={t('iso45001.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('ISO 45001 Certification - Health & Safety', 'ISO 45001 Occupational Health and Safety Management System certification.', '/services/iso/iso-45001'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'ISO Certifications', path: '/services/iso' },
+            { name: 'ISO 45001', path: '/services/iso/iso-45001' }
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

@@ -1,6 +1,7 @@
 import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
+import { breadcrumbSchema } from '../../utils/schemas';
 
 interface ApplyFormData {
   certificationStandards: string[];
@@ -165,6 +166,12 @@ const ApplyOnline: FC = () => {
       <Helmet>
         <title>{t('applyOnline.meta.title')}</title>
         <meta name="description" content={t('applyOnline.meta.description')} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Apply Online', path: '/apply-online' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

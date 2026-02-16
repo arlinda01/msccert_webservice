@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { breadcrumbSchema } from '../../utils/schemas';
 import api from '../../services/api';
 import './QuoteForm.css';
 
@@ -380,6 +381,12 @@ const QuoteForm: FC = () => {
       <div className="quote-form-page">
         <Helmet>
           <title>{t('quoteForm.title')} | MSC Certifications</title>
+          <script type="application/ld+json">
+            {JSON.stringify(breadcrumbSchema([
+              { name: 'Home', path: '/' },
+              { name: 'Get a Quote', path: '/get-quote' },
+            ]))}
+          </script>
         </Helmet>
 
         <section className="quote-hero">
@@ -434,6 +441,12 @@ const QuoteForm: FC = () => {
       <Helmet>
         <title>{displayName} {t('quoteForm.title')} | MSC Certifications</title>
         <meta name="description" content={getLocalizedText(form.description, form.description_sq, form.description_it)} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Get a Quote', path: '/get-quote' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

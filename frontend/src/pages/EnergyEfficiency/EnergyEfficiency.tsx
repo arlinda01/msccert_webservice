@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const EnergyEfficiency: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,16 @@ const EnergyEfficiency: FC = () => {
         <title>{t('energyEfficiency.meta.title')}</title>
         <meta name="description" content={t('energyEfficiency.meta.description')} />
         <meta name="keywords" content={t('energyEfficiency.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('Energy Efficiency Certification', 'Energy efficiency audit and certification services.', '/services/additional/energy-efficiency'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'Energy Efficiency', path: '/services/additional/energy-efficiency' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const HACCP: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,17 @@ const HACCP: FC = () => {
         <title>{t('haccp.meta.title')}</title>
         <meta name="description" content={t('haccp.meta.description')} />
         <meta name="keywords" content={t('haccp.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('HACCP Certification - Food Safety', 'HACCP Hazard Analysis Critical Control Points certification.', '/services/iso/haccp'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'ISO Certifications', path: '/services/iso' },
+            { name: 'HACCP', path: '/services/iso/haccp' }
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

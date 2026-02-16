@@ -10,6 +10,7 @@ import {
     FaGavel
 } from 'react-icons/fa';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { breadcrumbSchema } from '../../utils/schemas';
 
 const CodeOfEthics: FC = () => {
     const { t, i18n } = useTranslation();
@@ -21,6 +22,7 @@ const CodeOfEthics: FC = () => {
                 <title>{t('meta.codeOfEthics.title')}</title>
                 <meta name="description" content={t('meta.codeOfEthics.description')} />
                 <meta name="keywords" content={t('meta.codeOfEthics.keywords')} />
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema([{name: 'Home', path: '/'}, {name: 'About Us', path: '/about-us'}, {name: 'Code of Ethics', path: '/about-us/code-of-ethics'}]))}</script>
             </Helmet>
 
             {/* Hero Section */}

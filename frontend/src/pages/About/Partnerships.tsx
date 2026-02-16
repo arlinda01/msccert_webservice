@@ -9,6 +9,7 @@ import {
     FaMicroscope,
     FaCheckCircle
 } from 'react-icons/fa';
+import { breadcrumbSchema } from '../../utils/schemas';
 
 const Partnerships: FC = () => {
     const { t } = useTranslation();
@@ -17,6 +18,7 @@ const Partnerships: FC = () => {
             <Helmet>
                 <title>Partnerships - MSC Certifications</title>
                 <meta name="description" content="Discover MSC Certifications' strategic partnerships. We collaborate with industry associations, training providers, and regulatory bodies for global compliance." />
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema([{name: 'Home', path: '/'}, {name: 'About Us', path: '/about-us'}, {name: 'Partnerships', path: '/about-us/partnerships'}]))}</script>
             </Helmet>
 
             {/* Hero Section */}

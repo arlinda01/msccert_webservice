@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const ISO14001: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,17 @@ const ISO14001: FC = () => {
         <title>{t('iso14001.meta.title')}</title>
         <meta name="description" content={t('iso14001.meta.description')} />
         <meta name="keywords" content={t('iso14001.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('ISO 14001 Certification - Environmental Management', 'ISO 14001 Environmental Management System certification services.', '/services/iso/iso-14001'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'ISO Certifications', path: '/services/iso' },
+            { name: 'ISO 14001', path: '/services/iso/iso-14001' }
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

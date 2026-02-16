@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import ISOSlider from '../../components/ISOSlider/ISOSlider';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { breadcrumbSchema } from '../../utils/schemas';
 
 const AdditionalServices: FC = () => {
   const { t, i18n } = useTranslation();
@@ -129,6 +130,12 @@ const AdditionalServices: FC = () => {
         <title>{t('services.meta.title')}</title>
         <meta name="description" content={t('services.meta.description')} />
         <meta name="keywords" content={t('services.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

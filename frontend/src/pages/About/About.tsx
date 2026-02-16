@@ -9,6 +9,7 @@ import {
     FaGlobeAmericas
 } from 'react-icons/fa';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { organizationSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const About: FC = () => {
     const { t, i18n } = useTranslation();
@@ -19,6 +20,8 @@ const About: FC = () => {
             <Helmet>
                 <title>{t('meta.about.title')}</title>
                 <meta name="description" content={t('meta.about.description')} />
+                <script type="application/ld+json">{JSON.stringify(organizationSchema())}</script>
+                <script type="application/ld+json">{JSON.stringify(breadcrumbSchema([{name: 'Home', path: '/'}, {name: 'About Us', path: '/about-us'}]))}</script>
             </Helmet>
 
             {/* Hero Section */}

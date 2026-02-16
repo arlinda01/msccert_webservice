@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
+import { serviceSchema, breadcrumbSchema } from '../../utils/schemas';
 
 const CEMarking: FC = () => {
   const { t, i18n } = useTranslation();
@@ -14,6 +15,16 @@ const CEMarking: FC = () => {
         <title>{t('ceMarking.meta.title')}</title>
         <meta name="description" content={t('ceMarking.meta.description')} />
         <meta name="keywords" content={t('ceMarking.meta.keywords')} />
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema('CE Marking', 'CE Marking compliance and certification services.', '/services/ce-marking'))}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'CE Marking', path: '/services/ce-marking' },
+          ]))}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
