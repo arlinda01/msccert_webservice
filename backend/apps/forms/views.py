@@ -550,7 +550,7 @@ This application was submitted from the MSC Certifications website.
                 message=admin_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=['info@msc-cert.com'],
-                fail_silently=True
+                fail_silently=False
             )
 
             # Send confirmation to applicant
@@ -596,9 +596,9 @@ Phone: +355 67 206 3632
         except Exception as e:
             logger.error(f"Failed to process apply online form: {str(e)}")
             return Response({
-                'success': True,
-                'message': 'Your application has been received. We will get back to you within 24-48 hours.'
-            }, status=status.HTTP_201_CREATED)
+                'success': False,
+                'message': 'Failed to submit your application. Please try again or contact us directly at info@msc-cert.com'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class ContactFormView(APIView):
@@ -677,7 +677,7 @@ This message was sent from the MSC Certifications website contact form.
                 message=admin_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=admin_emails,
-                fail_silently=True
+                fail_silently=False
             )
 
             # Send confirmation to user
@@ -719,6 +719,6 @@ Phone: +355 67 206 3632
         except Exception as e:
             logger.error(f"Failed to process contact form: {str(e)}")
             return Response({
-                'success': True,
-                'message': 'Your message has been received. We will get back to you soon.'
-            }, status=status.HTTP_201_CREATED)
+                'success': False,
+                'message': 'Failed to send your message. Please try again or contact us directly at info@msc-cert.com'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
