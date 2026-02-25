@@ -78,7 +78,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - REACT_APP_API_URL=${REACT_APP_API_URL:-http://localhost:8000}
+        - REACT_APP_API_BASE_URL=${REACT_APP_API_BASE_URL:-/api}
     container_name: msccert_frontend
     restart: unless-stopped
     ports:

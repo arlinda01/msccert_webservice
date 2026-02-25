@@ -2796,7 +2796,7 @@
         "transfer": "Transferim"
       },
       "companyName": "Emri i Kompanisë",
-      "vatNumber": "Numri i TVSH-së",
+      "vatNumber": "NIPT",
       "streetAddress": "Adresa e Rrugës",
       "city": "Qyteti",
       "stateProvince": "Shteti / Provinca",
@@ -2808,6 +2808,7 @@
       "sectorPlaceholder": "p.sh. Ndërtim, Përpunim Ushqimor, Shërbime IT",
       "personnel": "Numri i Personelit",
       "ownersManagers": "Pronarë & Menaxherë",
+      "totalPersonnel": "Numri total i personelit",
       "officeWorkers": "Punonjës Zyre",
       "workers": "Punëtorë",
       "seasonalWorkers": "Punëtorë Sezonal",

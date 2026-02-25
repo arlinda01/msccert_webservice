@@ -53,8 +53,8 @@ const Contact: FC = () => {
     setStatus({ submitting: true, submitted: false, success: false, message: '' });
 
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-      const response = await fetch(`${apiUrl}/api/forms/contact/`, {
+      const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || '/api';
+      const response = await fetch(`${apiBaseUrl}/forms/contact/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

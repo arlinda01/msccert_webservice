@@ -3,6 +3,8 @@ PDF Generation Service for Certificates
 
 Generates professionally designed A4 certificate PDFs using ReportLab's
 canvas API for pixel-precise positioning matching the MSC certificate template.
+
+Supports Albanian (sq), Italian (it), and English (en) languages.
 """
 
 from django.http import HttpResponse
@@ -15,57 +17,214 @@ from io import BytesIO
 import os
 
 
-# ISO standard to Albanian management system description mapping
+# ── Multilingual text definitions ──────────────────────────────────────────
+
+LANGUAGES = {
+    'sq': {
+        'title': 'CERTIFIKATË',
+        'cert_prefix': 'CERTIFIKOHET SE',
+        'address_label': 'Adresa',
+        'compliance_text': 'Është në përputhje me standardin',
+        'activities_text': 'Për aktivitetet e mëposhtme:',
+        'iaf_label': 'Kodi EA/IAF',
+        'first_issue': 'Emetimi i Parë',
+        'modification_date': 'Data e Modifikimit',
+        'expiry_date': 'Data e Skadencës',
+        'executive_director': 'Drejtues Ekzekutiv',
+        'disclaimer': (
+            'Vlefshmëria e kësaj certifikate është subjekt i mbikëqyrjeve vjetore dhe rishikimi të plotë të '
+            '{management_system} çdo tre vjet. Vlefshmëria e kësaj certifikate është në përputhje '
+            'me respektimin e rregullave të përcaktuara nga sistemet e MSC CERTIFICATIONS.'
+        ),
+    },
+    'en': {
+        'title': 'CERTIFICATE',
+        'cert_prefix': 'IT IS CERTIFIED THAT THE',
+        'address_label': 'Address',
+        'compliance_text': 'Is in compliance with the standard',
+        'activities_text': 'For the following activities:',
+        'iaf_label': 'EA/IAF Code',
+        'first_issue': 'First Issue',
+        'modification_date': 'Modification Date',
+        'expiry_date': 'Expiry Date',
+        'executive_director': 'Executive Director',
+        'disclaimer': (
+            'The validity of this certificate is subject to annual surveillance and a full review of the '
+            '{management_system} every three years. The validity of this certificate is in compliance '
+            'with the rules established by MSC CERTIFICATIONS systems.'
+        ),
+    },
+    'it': {
+        'title': 'CERTIFICATO',
+        'cert_prefix': 'SI CERTIFICA CHE IL',
+        'address_label': 'Indirizzo',
+        'compliance_text': 'È conforme allo standard',
+        'activities_text': 'Per le seguenti attività:',
+        'iaf_label': 'Codice EA/IAF',
+        'first_issue': 'Prima Emissione',
+        'modification_date': 'Data di Modifica',
+        'expiry_date': 'Data di Scadenza',
+        'executive_director': 'Direttore Esecutivo',
+        'disclaimer': (
+            'La validità di questo certificato è soggetta a sorveglianza annuale e a una revisione completa del '
+            '{management_system} ogni tre anni. La validità di questo certificato è conforme '
+            'alle regole stabilite dai sistemi MSC CERTIFICATIONS.'
+        ),
+    },
+}
+
+
+# ISO standard descriptions per language
 STANDARD_DESCRIPTIONS = {
     'ISO_9001_2015': {
         'code': 'Q',
-        'management_system': 'Sistemeve të Menaxhimit të Cilësisë',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË CILËSISË I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Cilësisë',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË CILËSISË I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Quality Management Systems',
+            'cert_text': 'QUALITY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione della Qualità',
+            'cert_text': 'SISTEMA DI GESTIONE DELLA QUALITÀ DELL\'AZIENDA',
+        },
     },
     'ISO_14001_2015': {
         'code': 'E',
-        'management_system': 'Sistemeve të Menaxhimit të Mjedisit',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË MJEDISIT I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Mjedisit',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË MJEDISIT I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Environmental Management Systems',
+            'cert_text': 'ENVIRONMENTAL MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione Ambientale',
+            'cert_text': 'SISTEMA DI GESTIONE AMBIENTALE DELL\'AZIENDA',
+        },
     },
     'ISO_45001_2023': {
         'code': 'OHS',
-        'management_system': 'Sistemeve të Menaxhimit të Sigurisë dhe Shëndetit në Punë',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË DHE SHËNDETIT NË PUNË I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Sigurisë dhe Shëndetit në Punë',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË SIGURISË DHE SHËNDETIT NË PUNË I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Occupational Health and Safety Management Systems',
+            'cert_text': 'OCCUPATIONAL HEALTH AND SAFETY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione della Salute e Sicurezza sul Lavoro',
+            'cert_text': 'SISTEMA DI GESTIONE DELLA SALUTE E SICUREZZA SUL LAVORO DELL\'AZIENDA',
+        },
     },
     'ISO_22000_2018': {
         'code': 'FS',
-        'management_system': 'Sistemeve të Menaxhimit të Sigurisë Ushqimore',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË USHQIMORE I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Sigurisë Ushqimore',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË SIGURISË USHQIMORE I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Food Safety Management Systems',
+            'cert_text': 'FOOD SAFETY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione della Sicurezza Alimentare',
+            'cert_text': 'SISTEMA DI GESTIONE DELLA SICUREZZA ALIMENTARE DELL\'AZIENDA',
+        },
     },
     'ISO_27001_2022': {
         'code': 'IS',
-        'management_system': 'Sistemeve të Menaxhimit të Sigurisë së Informacionit',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË SË INFORMACIONIT I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Sigurisë së Informacionit',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË SIGURISË SË INFORMACIONIT I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Information Security Management Systems',
+            'cert_text': 'INFORMATION SECURITY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione della Sicurezza delle Informazioni',
+            'cert_text': 'SISTEMA DI GESTIONE DELLA SICUREZZA DELLE INFORMAZIONI DELL\'AZIENDA',
+        },
     },
     'ISO_50001_2018': {
         'code': 'En',
-        'management_system': 'Sistemeve të Menaxhimit të Energjisë',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË ENERGJISË I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Energjisë',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË ENERGJISË I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Energy Management Systems',
+            'cert_text': 'ENERGY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione dell\'Energia',
+            'cert_text': 'SISTEMA DI GESTIONE DELL\'ENERGIA DELL\'AZIENDA',
+        },
     },
     'ISO_37001_2025': {
         'code': 'AB',
-        'management_system': 'Sistemeve të Menaxhimit Kundër Ryshfetit',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT KUNDËR RYSHFETIT I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit Kundër Ryshfetit',
+            'cert_text': 'SISTEMI I MENAXHIMIT KUNDËR RYSHFETIT I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Anti-Bribery Management Systems',
+            'cert_text': 'ANTI-BRIBERY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione Anticorruzione',
+            'cert_text': 'SISTEMA DI GESTIONE ANTICORRUZIONE DELL\'AZIENDA',
+        },
     },
     'ISO_39001_2012': {
         'code': 'RT',
-        'management_system': 'Sistemeve të Menaxhimit të Sigurisë në Trafikun Rrugor',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË SIGURISË NË TRAFIKUN RRUGOR I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Sigurisë në Trafikun Rrugor',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË SIGURISË NË TRAFIKUN RRUGOR I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Road Traffic Safety Management Systems',
+            'cert_text': 'ROAD TRAFFIC SAFETY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione della Sicurezza Stradale',
+            'cert_text': 'SISTEMA DI GESTIONE DELLA SICUREZZA STRADALE DELL\'AZIENDA',
+        },
     },
     'ISO_22301_2019': {
         'code': 'BC',
-        'management_system': 'Sistemeve të Menaxhimit të Vazhdimësisë së Biznesit',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT TË VAZHDIMËSISË SË BIZNESIT I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve të Menaxhimit të Vazhdimësisë së Biznesit',
+            'cert_text': 'SISTEMI I MENAXHIMIT TË VAZHDIMËSISË SË BIZNESIT I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'Business Continuity Management Systems',
+            'cert_text': 'BUSINESS CONTINUITY MANAGEMENT SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi di Gestione della Continuità Operativa',
+            'cert_text': 'SISTEMA DI GESTIONE DELLA CONTINUITÀ OPERATIVA DELL\'AZIENDA',
+        },
     },
     'HACCP': {
         'code': 'FS',
-        'management_system': 'Sistemeve HACCP',
-        'cert_text': 'CERTIFIKOHET SE SISTEMI HACCP I KOMPANISË',
+        'sq': {
+            'management_system': 'Sistemeve HACCP',
+            'cert_text': 'SISTEMI HACCP I KOMPANISË',
+        },
+        'en': {
+            'management_system': 'HACCP Systems',
+            'cert_text': 'HACCP SYSTEM OF THE COMPANY',
+        },
+        'it': {
+            'management_system': 'Sistemi HACCP',
+            'cert_text': 'SISTEMA HACCP DELL\'AZIENDA',
+        },
     },
 }
 
@@ -95,14 +254,16 @@ class CertificatePDFGenerator:
         'static', 'certificates', 'img'
     )
 
-    def __init__(self, certificate):
+    def __init__(self, certificate, lang='sq'):
         self.certificate = certificate
+        self.lang = lang if lang in LANGUAGES else 'sq'
+        self.texts = LANGUAGES[self.lang]
         self.c = None
 
     def generate(self):
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = (
-            f'attachment; filename="certificate_{self.certificate.certificate_number}.pdf"'
+            f'attachment; filename="certificate_{self.certificate.certificate_number}_{self.lang}.pdf"'
         )
 
         buffer = BytesIO()
@@ -118,11 +279,19 @@ class CertificatePDFGenerator:
         return response
 
     def _get_standard_info(self):
-        return STANDARD_DESCRIPTIONS.get(self.certificate.standard, {
-            'code': '',
-            'management_system': 'Sistemeve të Menaxhimit',
-            'cert_text': 'CERTIFIKOHET SE SISTEMI I MENAXHIMIT I KOMPANISË',
-        })
+        std_data = STANDARD_DESCRIPTIONS.get(self.certificate.standard, None)
+        if not std_data:
+            return {
+                'code': '',
+                'management_system': 'Management Systems',
+                'cert_text': self.texts['cert_prefix'] + ' MANAGEMENT SYSTEM OF THE COMPANY',
+            }
+        lang_data = std_data.get(self.lang, std_data.get('sq', {}))
+        return {
+            'code': std_data.get('code', ''),
+            'management_system': lang_data.get('management_system', ''),
+            'cert_text': self.texts['cert_prefix'] + ' ' + lang_data.get('cert_text', ''),
+        }
 
     def _draw_page(self):
         self._draw_decorative_stripe()
@@ -201,12 +370,13 @@ class CertificatePDFGenerator:
     def _draw_title(self):
         c = self.c
         center_x = self.PAGE_WIDTH / 2
-        y = self.PAGE_HEIGHT - 180
+        # Shifted down from 180 to 200 for better vertical centering
+        y = self.PAGE_HEIGHT - 200
 
         c.saveState()
         c.setFillColor(self.BLACK)
         c.setFont('Helvetica-Bold', 36)
-        self._draw_spaced_text(center_x, y, 'CERTIFIKATË', spacing=5, centered=True)
+        self._draw_spaced_text(center_x, y, self.texts['title'], spacing=5, centered=True)
         c.restoreState()
 
         c.saveState()
@@ -222,7 +392,8 @@ class CertificatePDFGenerator:
         center_x = self.PAGE_WIDTH / 2
         std_info = self._get_standard_info()
 
-        y = self.PAGE_HEIGHT - 260
+        # Shifted down from 260 to 290 for better vertical centering
+        y = self.PAGE_HEIGHT - 290
 
         # ISO-specific certification text
         cert_text = std_info['cert_text']
@@ -236,12 +407,12 @@ class CertificatePDFGenerator:
         c.restoreState()
 
         # Company name - BIG UPPERCASE
-        y -= 48
+        y -= 52
         c.saveState()
         c.setFillColor(self.BLACK)
         company = self.certificate.company_name.upper()
-        font_size = 30
-        while c.stringWidth(company, 'Helvetica-Bold', font_size) > self.CONTENT_WIDTH and font_size > 14:
+        font_size = 36
+        while c.stringWidth(company, 'Helvetica-Bold', font_size) > self.CONTENT_WIDTH and font_size > 16:
             font_size -= 1
         c.setFont('Helvetica-Bold', font_size)
         c.drawCentredString(center_x, y, company)
@@ -254,7 +425,7 @@ class CertificatePDFGenerator:
             c.saveState()
             c.setFillColor(self.BLACK)
             addr_font = 11
-            addr_text = f'Adresa: {address}'
+            addr_text = f'{self.texts["address_label"]}: {address}'
             while c.stringWidth(addr_text, 'Helvetica', addr_font) > self.CONTENT_WIDTH and addr_font > 7:
                 addr_font -= 0.5
             c.setFont('Helvetica', addr_font)
@@ -266,16 +437,16 @@ class CertificatePDFGenerator:
         c.saveState()
         c.setFillColor(self.BLACK)
         c.setFont('Helvetica', 11)
-        c.drawCentredString(center_x, y, 'Është në përputhje me standardin')
+        c.drawCentredString(center_x, y, self.texts['compliance_text'])
         c.restoreState()
 
         # Standard name - large bold
-        y -= 35
+        y -= 38
         c.saveState()
         c.setFillColor(self.BLACK)
         standard_display = self.certificate.get_standard_display()
-        std_font = 24
-        while c.stringWidth(standard_display, 'Helvetica-Bold', std_font) > self.CONTENT_WIDTH and std_font > 14:
+        std_font = 30
+        while c.stringWidth(standard_display, 'Helvetica-Bold', std_font) > self.CONTENT_WIDTH and std_font > 16:
             std_font -= 1
         c.setFont('Helvetica-Bold', std_font)
         c.drawCentredString(center_x, y, standard_display)
@@ -286,7 +457,7 @@ class CertificatePDFGenerator:
         c.saveState()
         c.setFillColor(self.BLACK)
         c.setFont('Helvetica', 10.5)
-        c.drawCentredString(center_x, y, 'Për aktivitetet e mëposhtme:')
+        c.drawCentredString(center_x, y, self.texts['activities_text'])
         c.restoreState()
 
         # IAF Code
@@ -294,7 +465,7 @@ class CertificatePDFGenerator:
         c.saveState()
         c.setFillColor(self.BLACK)
         c.setFont('Helvetica', 10)
-        c.drawCentredString(center_x, y, f'Kodi EA/IAF: {self.certificate.iaf_code}')
+        c.drawCentredString(center_x, y, f'{self.texts["iaf_label"]}: {self.certificate.iaf_code}')
         c.restoreState()
 
         # Scope activity - bold, adaptive
@@ -318,14 +489,14 @@ class CertificatePDFGenerator:
 
     def _draw_dates(self):
         c = self.c
-        y = self.PAGE_HEIGHT - 620
+        y = self.PAGE_HEIGHT - 640
 
         col_positions = [
-            (self.PAGE_WIDTH * 0.22, 'Emetimi i Parë',
+            (self.PAGE_WIDTH * 0.22, self.texts['first_issue'],
              self._format_date(self.certificate.first_issue_date)),
-            (self.PAGE_WIDTH * 0.50, 'Data e Modifikimit',
+            (self.PAGE_WIDTH * 0.50, self.texts['modification_date'],
              self._format_date(getattr(self.certificate, 'modification_date', None))),
-            (self.PAGE_WIDTH * 0.78, 'Data e Skadencës',
+            (self.PAGE_WIDTH * 0.78, self.texts['expiry_date'],
              self._format_date(self.certificate.expiry_date)),
         ]
 
@@ -347,15 +518,19 @@ class CertificatePDFGenerator:
     def _draw_signature(self):
         c = self.c
         center_x = self.PAGE_WIDTH / 2
-        y = self.PAGE_HEIGHT - 680
+        line_y = self.PAGE_HEIGHT - 730
 
-        # Try model signature first, then fall back to static file
+        # Signature image above the line
+        sig_width = 130
+        sig_height = 55
         sig_drawn = False
+
         if self.certificate.signature:
             try:
                 sig_path = self.certificate.signature.path
                 if os.path.exists(sig_path):
-                    c.drawImage(sig_path, center_x - 50, y, width=100, height=40,
+                    c.drawImage(sig_path, center_x - sig_width / 2, line_y + 5,
+                                width=sig_width, height=sig_height,
                                 preserveAspectRatio=True, mask='auto')
                     sig_drawn = True
             except Exception:
@@ -365,7 +540,8 @@ class CertificatePDFGenerator:
             sig_path = os.path.join(self.ASSETS_DIR, 'signature.png')
             if os.path.exists(sig_path):
                 try:
-                    c.drawImage(sig_path, center_x - 50, y, width=100, height=40,
+                    c.drawImage(sig_path, center_x - sig_width / 2, line_y + 5,
+                                width=sig_width, height=sig_height,
                                 preserveAspectRatio=True, mask='auto')
                 except Exception:
                     pass
@@ -374,21 +550,21 @@ class CertificatePDFGenerator:
         c.saveState()
         c.setStrokeColor(self.BLACK)
         c.setLineWidth(0.5)
-        c.line(center_x - 55, y - 3, center_x + 55, y - 3)
+        c.line(center_x - 70, line_y, center_x + 70, line_y)
         c.restoreState()
 
         # "Drejtues Ekzekutiv"
         c.saveState()
         c.setFillColor(self.BLACK)
         c.setFont('Helvetica-Bold', 9)
-        c.drawCentredString(center_x, y - 16, 'Drejtues Ekzekutiv')
+        c.drawCentredString(center_x, line_y - 14, self.texts['executive_director'])
         c.restoreState()
 
         # "MSC CERTIFICATIONS"
         c.saveState()
         c.setFillColor(self.BLACK)
         c.setFont('Helvetica', 8)
-        c.drawCentredString(center_x, y - 28, 'MSC CERTIFICATIONS')
+        c.drawCentredString(center_x, line_y - 26, 'MSC CERTIFICATIONS')
         c.restoreState()
 
     # ── Footer ────────────────────────────────────────────────────────
@@ -425,11 +601,7 @@ class CertificatePDFGenerator:
         c.saveState()
         c.setFillColor(self.BLACK)
 
-        disclaimer_text = (
-            f'Vlefshmëria e kësaj certifikate është subjekt i mbikëqyrjeve vjetore dhe rishikimi të plotë të '
-            f'{management_system} çdo tre vjet. Vlefshmëria e kësaj certifikate është në përputhje '
-            f'me respektimin e rregullave të përcaktuara nga sistemet e MSC CERTIFICATIONS.'
-        )
+        disclaimer_text = self.texts['disclaimer'].format(management_system=management_system)
 
         # Start text at same vertical level as QR top / badge top
         text_y = bottom + qr_size - 8

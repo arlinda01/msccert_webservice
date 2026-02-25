@@ -481,17 +481,13 @@ class ApplyOnlineView(APIView):
             'vatNumber': 'VAT Number is required',
             'streetAddress': 'Street Address is required',
             'city': 'City is required',
-            'stateProvince': 'State/Province is required',
+            # stateProvince is optional (not used in Albanian version)
             'zipCode': 'ZIP Code is required',
             'country': 'Country is required',
             'phone': 'Phone is required',
             'email': 'Email is required',
             'sector': 'Sector is required',
-            'ownersManagers': 'Owners & Managers count is required',
-            'officeWorkers': 'Office Workers count is required',
-            'workers': 'Workers count is required',
-            'seasonalWorkers': 'Seasonal Workers count is required',
-            'temporaryWorkers': 'Temporary Workers count is required',
+            'totalPersonnel': 'Total number of personnel is required',
         }
 
         errors = {}
@@ -540,11 +536,7 @@ Contact:
 
 Business Information:
 - Sector: {data.get('sector', '')}
-- Owners & Managers: {data.get('ownersManagers', '')}
-- Office Workers: {data.get('officeWorkers', '')}
-- Workers: {data.get('workers', '')}
-- Seasonal Workers: {data.get('seasonalWorkers', '')}
-- Temporary Workers: {data.get('temporaryWorkers', '')}
+- Total Personnel: {data.get('totalPersonnel', '')}
 - External Activities: {data.get('externalActivities', 'N/A')}
 
 ---

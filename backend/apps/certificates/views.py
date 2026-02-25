@@ -1,3 +1,6 @@
+import logging
+from django.conf import settings
+from django.core.mail import send_mail
 from django.utils import timezone
 from datetime import timedelta
 from rest_framework import viewsets, status
@@ -15,6 +18,8 @@ from .serializers import (
     CertificateMaintenanceSerializer
 )
 from .utils.pdf_generator import CertificatePDFGenerator
+
+logger = logging.getLogger(__name__)
 
 
 class CertificateViewSet(viewsets.ModelViewSet):
@@ -146,6 +151,105 @@ class CertificateViewSet(viewsets.ModelViewSet):
                 'error': 'Certificate not found or invalid UUID'
             }, status=status.HTTP_404_NOT_FOUND)
 
+    @action(detail=False, methods=['post'], permission_classes=[AllowAny])
+    def search(self, request):
+        """
+        Public endpoint for certificate search requests.
+        Sends an email to admin with the search details.
+
+        POST /api/certificates/search/
+        No authentication required.
+        """
+        data = request.data
+        first_name = data.get('first_name', '').strip()
+        last_name = data.get('last_name', '').strip()
+        email = data.get('email', '').strip()
+        certificate_number = data.get('certificate_number', '').strip()
+        company_name = data.get('company_name', '').strip()
+
+        errors = {}
+        if not first_name:
+            errors['first_name'] = 'First name is required'
+        if not last_name:
+            errors['last_name'] = 'Last name is required'
+        if not email:
+            errors['email'] = 'Email is required'
+        if not certificate_number:
+            errors['certificate_number'] = 'Certificate number is required'
+        if not company_name:
+            errors['company_name'] = 'Company name is required'
+
+        if errors:
+            return Response({
+                'success': False,
+                'errors': errors
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            admin_subject = f"Certificate Search Request - {certificate_number}"
+            admin_message = f"""
+New certificate search request received:
+
+Requester Details:
+- Name: {first_name} {last_name}
+- Email: {email}
+
+Certificate Details:
+- Certificate Number: {certificate_number}
+- Company Name: {company_name}
+
+---
+This request was submitted from the MSC Certifications website.
+            """
+
+            send_mail(
+                subject=admin_subject,
+                message=admin_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=['info@msc-cert.com'],
+                fail_silently=False
+            )
+
+            # Send confirmation to requester
+            user_subject = "Certificate Search Request Received - MSC Certifications"
+            user_message = f"""
+Dear {first_name} {last_name},
+
+Thank you for your certificate search request. We have received your inquiry for certificate number: {certificate_number}.
+
+Our team will verify the certificate and get back to you within 1-2 business days.
+
+Best regards,
+MSC Certifications Team
+
+---
+MSC Certifications
+Email: info@msc-cert.com
+Phone: +355 67 206 3632
+            """
+
+            send_mail(
+                subject=user_subject,
+                message=user_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[email],
+                fail_silently=True
+            )
+
+            logger.info(f"Certificate search request submitted by {email} for {certificate_number}")
+
+            return Response({
+                'success': True,
+                'message': 'Your certificate search request has been submitted. We will get back to you within 1-2 business days.'
+            }, status=status.HTTP_200_OK)
+
+        except Exception as e:
+            logger.error(f"Failed to send certificate search email: {str(e)}")
+            return Response({
+                'success': False,
+                'message': 'Failed to submit request. Please try again or contact us directly at info@msc-cert.com'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     @action(detail=False, methods=['get'])
     def expiring_soon(self, request):
         """
@@ -185,13 +289,14 @@ class CertificateViewSet(viewsets.ModelViewSet):
         """
         Download certificate as PDF with QR code
 
-        GET /api/certificates/{id}/download_pdf/
+        GET /api/certificates/{id}/download_pdf/?lang=sq|en|it
         Headers: Authorization: Token <admin_token>
         """
         certificate = self.get_object()
+        lang = request.query_params.get('lang', 'sq')
 
         # Use PDF generator service
-        pdf_generator = CertificatePDFGenerator(certificate)
+        pdf_generator = CertificatePDFGenerator(certificate, lang=lang)
         return pdf_generator.generate()
 
 

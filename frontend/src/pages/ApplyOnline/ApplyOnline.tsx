@@ -16,11 +16,7 @@ interface ApplyFormData {
   phone: string;
   email: string;
   sector: string;
-  ownersManagers: string;
-  officeWorkers: string;
-  workers: string;
-  seasonalWorkers: string;
-  temporaryWorkers: string;
+  totalPersonnel: string;
   externalActivities: string;
   acceptTerms: boolean;
   acceptPrivacy: boolean;
@@ -34,7 +30,8 @@ interface FormStatus {
 }
 
 const ApplyOnline: FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isAlbanian = i18n.language?.startsWith('sq');
 
   const isoOptions = [
     { value: 'ISO 9001:2015', label: 'ISO 9001:2015' },
@@ -63,11 +60,7 @@ const ApplyOnline: FC = () => {
     phone: '',
     email: '',
     sector: '',
-    ownersManagers: '',
-    officeWorkers: '',
-    workers: '',
-    seasonalWorkers: '',
-    temporaryWorkers: '',
+    totalPersonnel: '',
     externalActivities: '',
     acceptTerms: false,
     acceptPrivacy: false
@@ -100,8 +93,8 @@ const ApplyOnline: FC = () => {
     setStatus({ submitting: true, submitted: false, success: false, message: '' });
 
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
-      const response = await fetch(`${apiUrl}/api/forms/apply-online/`, {
+      const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || '/api';
+      const response = await fetch(`${apiBaseUrl}/forms/apply-online/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -134,11 +127,7 @@ const ApplyOnline: FC = () => {
           phone: '',
           email: '',
           sector: '',
-          ownersManagers: '',
-          officeWorkers: '',
-          workers: '',
-          seasonalWorkers: '',
-          temporaryWorkers: '',
+          totalPersonnel: '',
           externalActivities: '',
           acceptTerms: false,
           acceptPrivacy: false
@@ -317,6 +306,7 @@ const ApplyOnline: FC = () => {
                       disabled={status.submitting}
                     />
                   </div>
+                  {!isAlbanian && (
                   <div className="form-group">
                     <label htmlFor="stateProvince">{t('applyOnline.form.stateProvince')} *</label>
                     <input
@@ -329,6 +319,7 @@ const ApplyOnline: FC = () => {
                       disabled={status.submitting}
                     />
                   </div>
+                  )}
                   <div className="form-group">
                     <label htmlFor="zipCode">{t('applyOnline.form.zipCode')} *</label>
                     <input
@@ -405,69 +396,13 @@ const ApplyOnline: FC = () => {
                     />
                   </div>
 
-                  <div className="form-group-label form-group-full">
-                    <label>{t('applyOnline.form.personnel')}</label>
-                  </div>
-
                   <div className="form-group">
-                    <label htmlFor="ownersManagers">{t('applyOnline.form.ownersManagers')} *</label>
+                    <label htmlFor="totalPersonnel">{t('applyOnline.form.ownersManagers')} * – {t('applyOnline.form.totalPersonnel')}</label>
                     <input
                       type="number"
-                      id="ownersManagers"
-                      name="ownersManagers"
-                      value={formData.ownersManagers}
-                      onChange={handleChange}
-                      min="0"
-                      required
-                      disabled={status.submitting}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="officeWorkers">{t('applyOnline.form.officeWorkers')} *</label>
-                    <input
-                      type="number"
-                      id="officeWorkers"
-                      name="officeWorkers"
-                      value={formData.officeWorkers}
-                      onChange={handleChange}
-                      min="0"
-                      required
-                      disabled={status.submitting}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="workers">{t('applyOnline.form.workers')} *</label>
-                    <input
-                      type="number"
-                      id="workers"
-                      name="workers"
-                      value={formData.workers}
-                      onChange={handleChange}
-                      min="0"
-                      required
-                      disabled={status.submitting}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="seasonalWorkers">{t('applyOnline.form.seasonalWorkers')} *</label>
-                    <input
-                      type="number"
-                      id="seasonalWorkers"
-                      name="seasonalWorkers"
-                      value={formData.seasonalWorkers}
-                      onChange={handleChange}
-                      min="0"
-                      required
-                      disabled={status.submitting}
-                    />
-                  </div>
-                  <div className="form-group form-group-full">
-                    <label htmlFor="temporaryWorkers">{t('applyOnline.form.temporaryWorkers')} *</label>
-                    <input
-                      type="number"
-                      id="temporaryWorkers"
-                      name="temporaryWorkers"
-                      value={formData.temporaryWorkers}
+                      id="totalPersonnel"
+                      name="totalPersonnel"
+                      value={formData.totalPersonnel}
                       onChange={handleChange}
                       min="0"
                       required

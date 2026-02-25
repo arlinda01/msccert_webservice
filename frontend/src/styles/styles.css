@@ -2865,13 +2865,13 @@ h1, h2, h3, h4, h5, h6 {
   .nav-menu {
     position: fixed;
     top: 76px;
-    left: -100%;
+    right: -100%;
     flex-direction: column;
     width: 100%;
     max-width: 400px;
     background-color: #01434f;
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
-    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: calc(100vh - 76px);
     overflow-y: auto;
     gap: 0;
@@ -2879,7 +2879,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav-menu.active {
-    left: 0;
+    right: 0;
   }
 
   .nav-menu > li {
@@ -3049,15 +3049,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav-actions-mobile .nav-btn-primary {
-    background: #ffffff;
-    color: #01434f !important;
-    border: 2px solid #01434f;
+    background: #2abad4;
+    color: #ffffff !important;
+    border: 2px solid #2abad4;
   }
 
   .nav-actions-mobile .nav-btn-primary:hover {
-    background: #01434f;
+    background: #1a9ab4;
     color: #ffffff !important;
-    border-color: #01434f;
+    border-color: #1a9ab4;
   }
 
   /* Mobile Language Switcher */
