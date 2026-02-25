@@ -73,6 +73,7 @@
   },
   "whatsapp": {
     "tooltip": "Chat with us",
+    "greeting": "Hello from MSC Certifications! I would like to know more about your services.",
     "title": "Start a conversation",
     "subtitle": "Fill in the details below to start a WhatsApp chat with our team.",
     "name": "Your Name",

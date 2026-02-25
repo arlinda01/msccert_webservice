@@ -73,6 +73,7 @@
   },
   "whatsapp": {
     "tooltip": "Bisedo me ne",
+    "greeting": "Përshëndetje nga MSC Certifications! Doja të dija më shumë rreth shërbimeve tuaja.",
     "title": "Fillo një bisedë",
     "subtitle": "Plotësoni të dhënat më poshtë për të filluar një bisedë WhatsApp me ekipin tonë.",
     "name": "Emri Juaj",
