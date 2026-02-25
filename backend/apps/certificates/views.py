@@ -151,7 +151,7 @@ class CertificateViewSet(viewsets.ModelViewSet):
                 'error': 'Certificate not found or invalid UUID'
             }, status=status.HTTP_404_NOT_FOUND)
 
-    @action(detail=False, methods=['post'], permission_classes=[AllowAny])
+    @action(detail=False, methods=['post'], permission_classes=[AllowAny], authentication_classes=[])
     def search(self, request):
         """
         Public endpoint for certificate search requests.

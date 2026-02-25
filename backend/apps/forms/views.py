@@ -330,6 +330,7 @@ class PublicFormSubmissionView(viewsets.GenericViewSet):
     No authentication required (unless form requires it).
     """
     permission_classes = [AllowAny]
+    authentication_classes = []
     parser_classes = [JSONParser, MultiPartParser, FormParser]
     serializer_class = PublicFormSubmissionSerializer
 
@@ -469,6 +470,7 @@ class ApplyOnlineView(APIView):
     Sends application data to info@msc-cert.com.
     """
     permission_classes = [AllowAny]
+    authentication_classes = []
 
     def post(self, request):
         data = request.data
@@ -605,6 +607,7 @@ class ContactFormView(APIView):
     No authentication required.
     """
     permission_classes = [AllowAny]
+    authentication_classes = []
 
     def post(self, request):
         """
