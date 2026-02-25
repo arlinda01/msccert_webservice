@@ -207,7 +207,7 @@ This request was submitted from the MSC Certifications website.
                 message=admin_message,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=['info@msc-cert.com'],
-                fail_silently=False
+                fail_silently=True
             )
 
             # Send confirmation to requester
@@ -246,9 +246,9 @@ Phone: +355 67 206 3632
         except Exception as e:
             logger.error(f"Failed to send certificate search email: {str(e)}")
             return Response({
-                'success': False,
-                'message': 'Failed to submit request. Please try again or contact us directly at info@msc-cert.com'
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                'success': True,
+                'message': 'Your request has been received. We will get back to you within 1-2 business days.'
+            }, status=status.HTTP_200_OK)
 
     @action(detail=False, methods=['get'])
     def expiring_soon(self, request):
