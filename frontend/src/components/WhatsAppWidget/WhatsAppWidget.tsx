@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { pushGtmEvent, gtmEvents } from '../../utils/gtm';
 import './WhatsAppWidget.css';
 
 const WHATSAPP_NUMBER = '355672063632';
@@ -8,6 +9,7 @@ const WhatsAppWidget: FC = () => {
   const { t } = useTranslation();
 
   const handleClick = () => {
+    pushGtmEvent(gtmEvents.whatsappClick, { location: 'floating_widget', phone: WHATSAPP_NUMBER });
     const greeting = encodeURIComponent(t('whatsapp.greeting'));
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${greeting}`, '_blank');
   };

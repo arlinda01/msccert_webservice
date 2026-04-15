@@ -2,6 +2,7 @@ import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { localBusinessSchema, breadcrumbSchema } from '../../utils/schemas';
+import { pushGtmEvent, gtmEvents } from '../../utils/gtm';
 
 interface FormData {
   name: string;
@@ -65,6 +66,10 @@ const Contact: FC = () => {
       const data = await response.json();
 
       if (response.ok && data.success) {
+        pushGtmEvent(gtmEvents.contactFormSubmission, {
+          form_name: 'contact',
+          subject: formData.subject,
+        });
         setStatus({
           submitting: false,
           submitted: true,
@@ -160,7 +165,7 @@ const Contact: FC = () => {
                   </div>
                   <div>
                     <h3>{t('contact.info.email.title')}</h3>
-                    <p><a href={`mailto:${t('contact.info.email.address')}`}>{t('contact.info.email.address')}</a></p>
+                    <p><a href={`mailto:${t('contact.info.email.address')}`} onClick={() => pushGtmEvent(gtmEvents.emailClick, { location: 'contact_page', email: t('contact.info.email.address') })}>{t('contact.info.email.address')}</a></p>
                   </div>
                 </div>
 
@@ -172,7 +177,7 @@ const Contact: FC = () => {
                   </div>
                   <div>
                     <h3>{t('contact.info.phone.title')}</h3>
-                    <p><a href="tel:+355672063632">{t('contact.info.phone.number')}</a></p>
+                    <p><a href="tel:+355672063632" onClick={() => pushGtmEvent(gtmEvents.phoneClick, { location: 'contact_page', phone: '+355672063632' })}>{t('contact.info.phone.number')}</a></p>
                   </div>
                 </div>
 

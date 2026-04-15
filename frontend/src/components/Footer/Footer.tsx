@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { pushGtmEvent, gtmEvents } from '../../utils/gtm';
 
 const Footer: FC = () => {
   const { t } = useTranslation();
@@ -53,11 +54,11 @@ const Footer: FC = () => {
             <ul className="footer-contact">
               <li>
                 <span className="contact-label">Email:</span>
-                <a href="mailto:info@msc-cert.com">info@msc-cert.com</a>
+                <a href="mailto:info@msc-cert.com" onClick={() => pushGtmEvent(gtmEvents.emailClick, { location: 'footer', email: 'info@msc-cert.com' })}>info@msc-cert.com</a>
               </li>
               <li>
                 <span className="contact-label">{t('footer.phone')}:</span>
-                <a href="tel:+355672063632">+355 67 206 3632</a>
+                <a href="tel:+355672063632" onClick={() => pushGtmEvent(gtmEvents.phoneClick, { location: 'footer', phone: '+355672063632' })}>+355 67 206 3632</a>
               </li>
               <li>
                 <span className="contact-label">{t('footer.address')}:</span>
