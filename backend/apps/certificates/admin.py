@@ -126,35 +126,55 @@ class CertificateAdmin(admin.ModelAdmin):
     regenerate_qr_code_action.short_description = 'Regenerate QR Code for selected certificates'
 
     def download_pdf_link(self, obj):
-        """Display download link in list view"""
-        # Use the DRF router generated URL name (api/certificates/{pk}/download_pdf/)
-        url = f'/api/certificates/{obj.pk}/download_pdf/'
-        return format_html('<a href="{}" target="_blank" class="button">Download PDF</a>', url)
-    download_pdf_link.short_description = 'PDF'
+        """Display language-specific download links in list view"""
+        base_url = f'/api/certificates/{obj.pk}/download_pdf/'
+        btn_style = (
+            'padding: 4px 8px; color: white; text-decoration: none; '
+            'border-radius: 3px; font-size: 11px; display: inline-block; margin-right: 3px;'
+        )
+        return format_html(
+            '<a href="{}?lang=sq" target="_blank" style="background-color:#417690; {}">SQ</a>'
+            '<a href="{}?lang=en" target="_blank" style="background-color:#28a745; {}">EN</a>'
+            '<a href="{}?lang=it" target="_blank" style="background-color:#dc3545; {}">IT</a>',
+            base_url, btn_style,
+            base_url, btn_style,
+            base_url, btn_style,
+        )
+    download_pdf_link.short_description = 'Download PDF'
 
     def download_pdf_button(self, obj):
-        """Display download button in detail view"""
+        """Display language-specific download buttons in detail view"""
         if obj.pk:
-            url = f'/api/certificates/{obj.pk}/download_pdf/'
+            base_url = f'/api/certificates/{obj.pk}/download_pdf/'
+            btn_style = (
+                'padding: 10px 15px; color: white; text-decoration: none; '
+                'border-radius: 4px; display: inline-block; margin-right: 8px;'
+            )
             return format_html(
-                '<a href="{}" target="_blank" class="button" '
-                'style="padding: 10px 15px; background-color: #417690; color: white; '
-                'text-decoration: none; border-radius: 4px; display: inline-block;">'
-                'Download Certificate PDF</a>',
-                url
+                '<div style="display: flex; gap: 8px; align-items: center;">'
+                '<a href="{}?lang=sq" target="_blank" style="background-color:#417690; {}">'
+                'Shqip (SQ)</a>'
+                '<a href="{}?lang=en" target="_blank" style="background-color:#28a745; {}">'
+                'English (EN)</a>'
+                '<a href="{}?lang=it" target="_blank" style="background-color:#dc3545; {}">'
+                'Italiano (IT)</a>'
+                '</div>',
+                base_url, btn_style,
+                base_url, btn_style,
+                base_url, btn_style,
             )
         return '-'
     download_pdf_button.short_description = 'Download PDF'
 
     def download_pdf_action(self, request, queryset):
-        """Admin action to download PDFs (downloads first selected)"""
+        """Admin action to download PDFs (downloads first selected in Albanian)"""
         if queryset.count() > 1:
             self.message_user(request, 'Please select only one certificate to download', level='warning')
             return
 
         certificate = queryset.first()
         from django.shortcuts import redirect
-        return redirect(f'/api/certificates/{certificate.pk}/download_pdf/')
+        return redirect(f'/api/certificates/{certificate.pk}/download_pdf/?lang=sq')
     download_pdf_action.short_description = 'Download PDF for selected certificate'
 
     def perform_maintenance_action(self, request, queryset):
