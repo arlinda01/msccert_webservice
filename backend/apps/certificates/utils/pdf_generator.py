@@ -333,6 +333,33 @@ class CertificatePDFGenerator:
         """Convert spec Y (mm from top of page) to ReportLab Y (points from bottom)."""
         return self.PAGE_HEIGHT - (mm_from_top * mm)
 
+    def _build_address_lines(self):
+        """One line per address. If sites exist, list each (name + address);
+        otherwise return the single main address line."""
+        label = self.texts['address_label'].upper()
+        sites = []
+        try:
+            sites = list(self.certificate.sites.all().order_by('site_number'))
+        except Exception:
+            sites = []
+
+        if sites:
+            lines = []
+            main = (getattr(self.certificate, 'address', '') or '').strip()
+            if main:
+                lines.append(f'{label}: {main}')
+            for s in sites:
+                name = (getattr(s, 'name', '') or '').strip()
+                addr = (getattr(s, 'address', '') or '').strip()
+                if not addr:
+                    continue
+                prefix = f'{label} ({name})' if name else label
+                lines.append(f'{prefix}: {addr}')
+            return lines
+
+        address = (getattr(self.certificate, 'address', '') or '').strip()
+        return [f'{label}: {address}'] if address else []
+
     def _get_standard_info(self):
         std_data = STANDARD_DESCRIPTIONS.get(self.certificate.standard, None)
         if not std_data:
@@ -427,21 +454,26 @@ class CertificatePDFGenerator:
         c.restoreState()
 
         # 3f/3g: Address - Regular 10 - baseline Y 127.3mm (wraps naturally)
-        address = getattr(self.certificate, 'address', '') or ''
-        if address:
+        # When the cert has multiple sites, list each one; otherwise use the main address.
+        addr_lines = self._build_address_lines()
+        if addr_lines:
             c.saveState()
             c.setFillColor(self.BLACK)
-            addr_text = f'{self.texts["address_label"].upper()}: {address}'
             addr_font = 10
-            while c.stringWidth(addr_text, self.F_REGULAR, addr_font) > self.CONTENT_WIDTH and addr_font > 7:
+            longest = max(addr_lines, key=lambda s: c.stringWidth(s, self.F_REGULAR, addr_font))
+            while c.stringWidth(longest, self.F_REGULAR, addr_font) > self.CONTENT_WIDTH and addr_font > 7:
                 addr_font -= 0.5
             c.setFont(self.F_REGULAR, addr_font)
-            if c.stringWidth(addr_text, self.F_REGULAR, addr_font) > self.CONTENT_WIDTH:
-                self._draw_wrapped_text(center_x, self._y_from_top(127.3), addr_text,
-                                        self.F_REGULAR, addr_font,
-                                        self.CONTENT_WIDTH, centered=True)
-            else:
-                c.drawCentredString(center_x, self._y_from_top(127.3), addr_text)
+            line_y = self._y_from_top(127.3)
+            line_height = addr_font + 3
+            for line in addr_lines:
+                if c.stringWidth(line, self.F_REGULAR, addr_font) > self.CONTENT_WIDTH:
+                    line_y = self._draw_wrapped_text(center_x, line_y, line,
+                                                    self.F_REGULAR, addr_font,
+                                                    self.CONTENT_WIDTH, centered=True)
+                else:
+                    c.drawCentredString(center_x, line_y, line)
+                    line_y -= line_height
             c.restoreState()
 
         # 3h: È conforme... - Light 11 - baseline Y 143.3mm

@@ -186,16 +186,12 @@ class Certificate(models.Model):
 
     def update_status(self):
         """
-        Automatically update certificate status based on maintenance and expiry dates
+        Auto-flip status to EXPIRED only when the actual expiry date has passed.
+        Maintenance-overdue is surfaced separately via is_maintenance_due.
         """
         today = timezone.now().date()
-
-        # Check if certificate has expired
         if self.expiry_date and today > self.expiry_date:
             self.status = 'EXPIRED'
-        # Check if maintenance is overdue (and not already suspended/withdrawn/expired)
-        elif self.next_maintenance_date and today > self.next_maintenance_date and self.status == 'VALID':
-            self.status = 'EXPIRED'  # or could be 'SUSPENDED' based on business rules
 
     def generate_qr_code(self):
         """
