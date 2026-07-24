@@ -186,12 +186,16 @@ class Certificate(models.Model):
 
     def update_status(self):
         """
-        Auto-flip status to EXPIRED only when the actual expiry date has passed.
+        Auto-flip status to EXPIRED only when the actual expiry date has passed,
+        and auto-revert a stale EXPIRED back to VALID once the expiry date is
+        renewed into the future. Manually-set SUSPENDED/WITHDRAWN are left alone.
         Maintenance-overdue is surfaced separately via is_maintenance_due.
         """
         today = timezone.now().date()
         if self.expiry_date and today > self.expiry_date:
             self.status = 'EXPIRED'
+        elif self.status == 'EXPIRED' and self.expiry_date and today <= self.expiry_date:
+            self.status = 'VALID'
 
     def generate_qr_code(self):
         """

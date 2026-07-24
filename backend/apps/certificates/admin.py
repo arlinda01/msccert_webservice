@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.db.models import DateField
+from django.forms import DateInput
 from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.html import format_html
@@ -10,6 +12,12 @@ class CertificateSiteInline(admin.TabularInline):
     model = CertificateSite
     extra = 1
     fields = ['site_number', 'name', 'scope_activity', 'address']
+    verbose_name = 'Additional Site'
+    verbose_name_plural = (
+        "Additional Certificate Sites — Site 1 is this certificate's own "
+        "Company Name / Scope of Activity / Address above; only add rows "
+        "here for further locations, numbered from 2"
+    )
 
 
 @admin.register(Certificate)
@@ -27,6 +35,9 @@ class CertificateAdmin(admin.ModelAdmin):
     ]
     list_filter = ['status', 'standard', 'created_at']
     search_fields = ['certificate_number', 'company_name', 'scope_activity']
+    formfield_overrides = {
+        DateField: {'widget': DateInput(attrs={'type': 'date'})},
+    }
     readonly_fields = [
         'secure_id',
         'qr_code_preview',
