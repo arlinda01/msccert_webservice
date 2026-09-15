@@ -24,6 +24,8 @@ from .serializers import (
     PublicFormTemplateSerializer, PublicFormSubmissionSerializer,
     FormSubmissionStatusUpdateSerializer, FormAnswerSerializer
 )
+from .spam_protection import get_client_ip, is_honeypot_triggered, verify_turnstile
+from .throttling import ContactFormRateThrottle, QuoteFormRateThrottle, ApplyOnlineRateThrottle
 
 logger = logging.getLogger(__name__)
 
@@ -333,6 +335,7 @@ class PublicFormSubmissionView(viewsets.GenericViewSet):
     authentication_classes = []
     parser_classes = [JSONParser, MultiPartParser, FormParser]
     serializer_class = PublicFormSubmissionSerializer
+    throttle_classes = [QuoteFormRateThrottle]
 
     @action(detail=False, methods=['post'])
     def submit(self, request):
@@ -340,6 +343,23 @@ class PublicFormSubmissionView(viewsets.GenericViewSet):
         Submit a form.
         Expects JSON with form_template_id, submitter info, and answers array.
         """
+        if is_honeypot_triggered(request.data):
+            logger.warning(f"Blocked honeypot-triggered quote form submission from {get_client_ip(request)}")
+            return Response({
+                'success': True,
+                'submission_number': 'N/A',
+                'message': 'Form submitted successfully. You will receive a confirmation email shortly.'
+            }, status=status.HTTP_201_CREATED)
+
+        turnstile_ok, turnstile_error = verify_turnstile(
+            request.data.get('turnstile_token'), get_client_ip(request)
+        )
+        if not turnstile_ok:
+            return Response({
+                'success': False,
+                'errors': {'turnstile_token': turnstile_error}
+            }, status=status.HTTP_400_BAD_REQUEST)
+
         serializer = PublicFormSubmissionSerializer(
             data=request.data,
             context={'request': request}
@@ -471,9 +491,26 @@ class ApplyOnlineView(APIView):
     """
     permission_classes = [AllowAny]
     authentication_classes = []
+    throttle_classes = [ApplyOnlineRateThrottle]
 
     def post(self, request):
         data = request.data
+
+        if is_honeypot_triggered(data):
+            logger.warning(f"Blocked honeypot-triggered apply-online submission from {get_client_ip(request)}")
+            return Response({
+                'success': True,
+                'message': 'Your application has been submitted successfully. We will get back to you within 24-48 hours.'
+            }, status=status.HTTP_201_CREATED)
+
+        turnstile_ok, turnstile_error = verify_turnstile(
+            data.get('turnstile_token'), get_client_ip(request)
+        )
+        if not turnstile_ok:
+            return Response({
+                'success': False,
+                'errors': {'turnstile_token': turnstile_error}
+            }, status=status.HTTP_400_BAD_REQUEST)
 
         # Required fields
         required_fields = {
@@ -608,11 +645,28 @@ class ContactFormView(APIView):
     """
     permission_classes = [AllowAny]
     authentication_classes = []
+    throttle_classes = [ContactFormRateThrottle]
 
     def post(self, request):
         """
         Submit a contact form message.
         """
+        if is_honeypot_triggered(request.data):
+            logger.warning(f"Blocked honeypot-triggered contact form submission from {get_client_ip(request)}")
+            return Response({
+                'success': True,
+                'message': 'Your message has been sent successfully. We will get back to you soon.'
+            }, status=status.HTTP_201_CREATED)
+
+        turnstile_ok, turnstile_error = verify_turnstile(
+            request.data.get('turnstile_token'), get_client_ip(request)
+        )
+        if not turnstile_ok:
+            return Response({
+                'success': False,
+                'errors': {'turnstile_token': turnstile_error}
+            }, status=status.HTTP_400_BAD_REQUEST)
+
         name = request.data.get('name', '').strip()
         email = request.data.get('email', '').strip()
         phone = request.data.get('phone', '').strip()

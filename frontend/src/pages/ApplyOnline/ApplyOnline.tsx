@@ -2,6 +2,9 @@ import { FC, useState, FormEvent, ChangeEvent } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { breadcrumbSchema } from '../../utils/schemas';
+import Turnstile from '../../components/Turnstile/Turnstile';
+
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY || '';
 
 interface ApplyFormData {
   certificationStandards: string[];
@@ -18,6 +21,7 @@ interface ApplyFormData {
   sector: string;
   totalPersonnel: string;
   externalActivities: string;
+  website: string; // honeypot - left blank by real users
   acceptTerms: boolean;
   acceptPrivacy: boolean;
 }
@@ -62,6 +66,7 @@ const ApplyOnline: FC = () => {
     sector: '',
     totalPersonnel: '',
     externalActivities: '',
+    website: '',
     acceptTerms: false,
     acceptPrivacy: false
   });
@@ -72,6 +77,8 @@ const ApplyOnline: FC = () => {
     success: false,
     message: ''
   });
+
+  const [turnstileToken, setTurnstileToken] = useState('');
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -102,6 +109,7 @@ const ApplyOnline: FC = () => {
         body: JSON.stringify({
           ...formData,
           certificationStandard: formData.certificationStandards.join(', '),
+          turnstile_token: turnstileToken,
         }),
       });
 
@@ -129,9 +137,11 @@ const ApplyOnline: FC = () => {
           sector: '',
           totalPersonnel: '',
           externalActivities: '',
+          website: '',
           acceptTerms: false,
           acceptPrivacy: false
         });
+        setTurnstileToken('');
       } else {
         setStatus({
           submitting: false,
@@ -183,6 +193,18 @@ const ApplyOnline: FC = () => {
             )}
 
             <form className="apply-form" onSubmit={handleSubmit}>
+              <div className="hp-field" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
 
               {/* Section 1: Certification Standard */}
               <div className="form-section">
@@ -455,10 +477,16 @@ const ApplyOnline: FC = () => {
                 </div>
               </div>
 
+              {TURNSTILE_SITE_KEY && (
+                <div className="form-section">
+                  <Turnstile siteKey={TURNSTILE_SITE_KEY} onVerify={setTurnstileToken} onExpire={() => setTurnstileToken('')} />
+                </div>
+              )}
+
               <button
                 type="submit"
                 className="btn btn-primary-large apply-submit-btn"
-                disabled={status.submitting}
+                disabled={status.submitting || (!!TURNSTILE_SITE_KEY && !turnstileToken)}
               >
                 {status.submitting ? t('applyOnline.form.submitting') : t('applyOnline.form.submit')}
               </button>

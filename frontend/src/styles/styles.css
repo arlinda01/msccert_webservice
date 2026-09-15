@@ -46,6 +46,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem;
 }
 
+/* Honeypot trap field - hidden from everyone (bots included), unlike
+   .visually-hidden which stays reachable by screen readers */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Visually hidden but accessible to screen readers */
 .visually-hidden {
   position: absolute;

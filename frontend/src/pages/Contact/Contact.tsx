@@ -3,6 +3,9 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { localBusinessSchema, breadcrumbSchema } from '../../utils/schemas';
 import { pushGtmEvent, gtmEvents } from '../../utils/gtm';
+import Turnstile from '../../components/Turnstile/Turnstile';
+
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY || '';
 
 interface FormData {
   name: string;
@@ -11,6 +14,7 @@ interface FormData {
   company: string;
   subject: string;
   message: string;
+  website: string; // honeypot - left blank by real users
   acceptTerms: boolean;
   acceptPrivacy: boolean;
 }
@@ -32,6 +36,7 @@ const Contact: FC = () => {
     company: '',
     subject: '',
     message: '',
+    website: '',
     acceptTerms: false,
     acceptPrivacy: false
   });
@@ -42,6 +47,8 @@ const Contact: FC = () => {
     success: false,
     message: ''
   });
+
+  const [turnstileToken, setTurnstileToken] = useState('');
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -60,7 +67,7 @@ const Contact: FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstile_token: turnstileToken }),
       });
 
       const data = await response.json();
@@ -84,9 +91,11 @@ const Contact: FC = () => {
           company: '',
           subject: '',
           message: '',
+          website: '',
           acceptTerms: false,
           acceptPrivacy: false
         });
+        setTurnstileToken('');
       } else {
         setStatus({
           submitting: false,
@@ -233,6 +242,19 @@ const Contact: FC = () => {
               )}
 
               <form className="contact-form" onSubmit={handleSubmit}>
+                <div className="hp-field" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="form-group">
                   <label htmlFor="name">{t('contact.form.name')} *</label>
                   <input
@@ -356,10 +378,16 @@ const Contact: FC = () => {
                   </label>
                 </div>
 
+                {TURNSTILE_SITE_KEY && (
+                  <div className="form-group">
+                    <Turnstile siteKey={TURNSTILE_SITE_KEY} onVerify={setTurnstileToken} onExpire={() => setTurnstileToken('')} />
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   className="btn btn-primary-large"
-                  disabled={status.submitting}
+                  disabled={status.submitting || (!!TURNSTILE_SITE_KEY && !turnstileToken)}
                 >
                   {status.submitting ? t('contact.form.submitting') || 'Sending...' : t('contact.form.submit')}
                 </button>

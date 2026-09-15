@@ -207,6 +207,17 @@ DEFAULT_FROM_EMAIL=noreply@msc-cert.com
 
 # Security Settings
 SECURE_SSL_REDIRECT=True
+
+# Spam Protection
+# Cloudflare Turnstile: create a widget at https://dash.cloudflare.com/?to=/:account/turnstile
+# Backend secret key goes here; the matching site key goes in the frontend's
+# REACT_APP_TURNSTILE_SITE_KEY build-time env var.
+TURNSTILE_SECRET_KEY=<your-turnstile-secret-key>
+
+# Per-IP rate limits for public form endpoints (DRF throttle rate format, e.g. "5/hour")
+CONTACT_FORM_RATE_LIMIT=5/hour
+QUOTE_FORM_RATE_LIMIT=5/hour
+APPLY_ONLINE_FORM_RATE_LIMIT=5/hour
 ```
 
 **Important:** Save the `.env` file securely. Never commit it to git!

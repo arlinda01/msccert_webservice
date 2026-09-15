@@ -5,7 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { routes, SupportedLanguage } from '../../config/routes';
 import { breadcrumbSchema } from '../../utils/schemas';
 import api from '../../services/api';
+import Turnstile from '../../components/Turnstile/Turnstile';
 import './QuoteForm.css';
+
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY || '';
 
 interface FormQuestion {
   id: string;
@@ -54,6 +57,7 @@ interface ContactInfo {
   phone: string;
   address?: string;
   additional_notes?: string;
+  website?: string; // honeypot - left blank by real users
 }
 
 // Map URL isoCode to backend ISO standard code
@@ -106,10 +110,12 @@ const QuoteForm: FC = () => {
     phone: '',
     address: '',
     additional_notes: '',
+    website: '',
   });
   const [emailError, setEmailError] = useState<string | null>(null);
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
 
   // Flow: contact (step 0) -> sections (step 1..N) -> review (last step)
   const [currentStep, setCurrentStep] = useState<number | 'review' | 'success'>('contact' as any);
@@ -320,6 +326,8 @@ const QuoteForm: FC = () => {
         phone: contactInfo.phone,
         address: contactInfo.address,
         additional_notes: contactInfo.additional_notes,
+        website: contactInfo.website,
+        turnstile_token: turnstileToken,
         answers: Object.entries(answers).map(([questionId, value]) => ({
           question: questionId,
           answer_value: value,
@@ -503,6 +511,18 @@ const QuoteForm: FC = () => {
             <div className="form-step contact-step">
               <h2>{t('quoteForm.contactInfo.title')}</h2>
               <p className="step-description">{t('quoteForm.contactInfo.description')}</p>
+
+              <div className="hp-field" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  type="text"
+                  id="website"
+                  value={contactInfo.website}
+                  onChange={(e) => handleContactChange('website', e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
 
               <div className="form-grid">
                 <div className="form-group">
@@ -719,6 +739,12 @@ const QuoteForm: FC = () => {
                 </div>
               )}
 
+              {TURNSTILE_SITE_KEY && (
+                <div className="form-group">
+                  <Turnstile siteKey={TURNSTILE_SITE_KEY} onVerify={setTurnstileToken} onExpire={() => setTurnstileToken('')} />
+                </div>
+              )}
+
               <div className="form-actions">
                 <button
                   className="btn btn-secondary"
@@ -730,7 +756,7 @@ const QuoteForm: FC = () => {
                 <button
                   className="btn btn-primary"
                   onClick={handleSubmit}
-                  disabled={submitting || !acceptTerms || !acceptPrivacy}
+                  disabled={submitting || !acceptTerms || !acceptPrivacy || (!!TURNSTILE_SITE_KEY && !turnstileToken)}
                 >
                   {submitting ? t('common.loading') : t('common.submit')}
                 </button>

@@ -187,7 +187,17 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAdminUser',  # Only admin users can access
     ],
+    # Per-IP rate limits for the public, unauthenticated form endpoints
+    'DEFAULT_THROTTLE_RATES': {
+        'contact_form': os.environ.get('CONTACT_FORM_RATE_LIMIT', '5/hour'),
+        'quote_form': os.environ.get('QUOTE_FORM_RATE_LIMIT', '5/hour'),
+        'apply_online_form': os.environ.get('APPLY_ONLINE_FORM_RATE_LIMIT', '5/hour'),
+    },
 }
+
+# Cloudflare Turnstile (spam/bot protection on public forms)
+# Leave TURNSTILE_SECRET_KEY unset to skip verification (e.g. local dev).
+TURNSTILE_SECRET_KEY = os.environ.get('TURNSTILE_SECRET_KEY', '')
 
 # Frontend URL (used for QR code generation)
 FRONTEND_URL = os.environ.get('FRONTEND_URL', 'http://localhost:3000')
