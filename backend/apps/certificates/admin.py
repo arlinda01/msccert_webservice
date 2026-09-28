@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.db.models import DateField
-from django.forms import DateInput
 from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.html import format_html
 from .models import Certificate, CertificateSite
+from .widgets import YearMonthDayDateWidget
 import os
 
 
@@ -36,7 +36,7 @@ class CertificateAdmin(admin.ModelAdmin):
     list_filter = ['status', 'standard', 'created_at']
     search_fields = ['certificate_number', 'company_name', 'scope_activity']
     formfield_overrides = {
-        DateField: {'widget': DateInput(attrs={'type': 'date'})},
+        DateField: {'widget': YearMonthDayDateWidget},
     }
     readonly_fields = [
         'secure_id',
