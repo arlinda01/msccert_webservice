@@ -45,7 +45,6 @@ class CertificateAdmin(admin.ModelAdmin):
     ]
     list_filter = ['status', 'standard', 'created_at']
     search_fields = ['certificate_number', 'company_name', 'scope_activity']
-    autocomplete_fields = ['company']
     formfield_overrides = {
         DateField: {'widget': YearMonthDayDateWidget},
     }
@@ -69,7 +68,6 @@ class CertificateAdmin(admin.ModelAdmin):
                 'secure_id',
                 'status',
                 'standard',
-                'company',
                 'company_name',
                 'address',
             )
@@ -106,41 +104,75 @@ class CertificateAdmin(admin.ModelAdmin):
     inlines = [CertificateSiteInline]
     actions = ['perform_maintenance_action', 'download_pdf_action', 'regenerate_qr_code_action']
 
-    def formfield_for_foreignkey(self, db_field, request, **kwargs):
-        formfield = super().formfield_for_foreignkey(db_field, request, **kwargs)
-        if db_field.name == 'company' and formfield is not None:
-            # Sentinel id (0) that the JS swaps for the real company id.
-            formfield.widget.attrs['data-autofill-url'] = reverse(
-                'admin:certificates_certificate_company_autofill',
-                kwargs={'company_id': 0},
-            )
-        return formfield
-
     def get_urls(self):
         custom_urls = [
             path(
-                'company-autofill/<int:company_id>/',
+                'company-names/',
+                self.admin_site.admin_view(self.company_names_view),
+                name='certificates_certificate_company_names',
+            ),
+            path(
+                'company-autofill/',
                 self.admin_site.admin_view(self.company_autofill_view),
                 name='certificates_certificate_company_autofill',
             ),
         ]
         return custom_urls + super().get_urls()
 
-    def company_autofill_view(self, request, company_id):
+    def formfield_for_dbfield(self, db_field, request, **kwargs):
+        formfield = super().formfield_for_dbfield(db_field, request, **kwargs)
+        if db_field.name == 'company_name' and formfield is not None:
+            # The JS reads these to offer existing company names and to
+            # suggest the other fields once a known company is typed/picked.
+            formfield.widget.attrs.update({
+                'list': 'company-names-list',
+                'autocomplete': 'off',
+                'data-names-url': reverse(
+                    'admin:certificates_certificate_company_names'),
+                'data-autofill-url': reverse(
+                    'admin:certificates_certificate_company_autofill'),
+            })
+        return formfield
+
+    def company_names_view(self, request):
+        """Distinct company names already on certificates (case-insensitive)."""
+        seen = {}
+        for name in (
+            Certificate.objects.exclude(company_name='')
+            .order_by('company_name')
+            .values_list('company_name', flat=True)
+        ):
+            seen.setdefault(name.strip().casefold(), name.strip())
+        return JsonResponse({'names': sorted(seen.values(), key=str.casefold)})
+
+    def company_autofill_view(self, request):
         """
-        Latest (by first_issue_date) certificate for this company, so the
-        admin add form can pre-fill company_name/address/scope_activity/
-        iaf_code. Read-only; never writes anything, never touches other
-        certificates' data.
+        Fields of the most recent certificate (by first_issue_date) for the
+        given company name, matched case-insensitively. Read-only; never
+        writes anything.
         """
-        latest = (
-            Certificate.objects
-            .filter(company_id=company_id)
-            .order_by('-first_issue_date')
-            .values('company_name', 'address', 'scope_activity', 'iaf_code')
-            .first()
-        )
+        name = request.GET.get('name', '').strip()
+        latest = None
+        if name:
+            latest = (
+                Certificate.objects
+                .filter(company_name__iexact=name)
+                .order_by('-first_issue_date', '-id')
+                .values('company_name', 'address', 'scope_activity')
+                .first()
+            )
         return JsonResponse(latest or {})
+
+    def save_model(self, request, obj, form, change):
+        # Keep the company directory in sync with the single "Company name"
+        # field: link to an existing company (case-insensitive) or create it.
+        name = (obj.company_name or '').strip()
+        if name:
+            company = Company.objects.filter(name__iexact=name).first()
+            if company is None:
+                company = Company.objects.create(name=name[:255])
+            obj.company = company
+        super().save_model(request, obj, form, change)
 
     def qr_code_preview(self, obj):
         """Safely display QR code preview with download link"""
