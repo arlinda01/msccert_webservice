@@ -1,11 +1,21 @@
 from django.contrib import admin
 from django.db.models import DateField
-from django.http import HttpResponse
-from django.urls import reverse
+from django.http import HttpResponse, JsonResponse
+from django.urls import path, reverse
 from django.utils.html import format_html
-from .models import Certificate, CertificateSite
+from .models import Certificate, CertificateSite, Company
 from .widgets import YearMonthDayDateWidget
 import os
+
+
+@admin.register(Company)
+class CompanyAdmin(admin.ModelAdmin):
+    list_display = ['name', 'certificate_count', 'created_at']
+    search_fields = ['name']
+
+    def certificate_count(self, obj):
+        return obj.certificates.count()
+    certificate_count.short_description = 'Certificates'
 
 
 class CertificateSiteInline(admin.TabularInline):
@@ -35,9 +45,14 @@ class CertificateAdmin(admin.ModelAdmin):
     ]
     list_filter = ['status', 'standard', 'created_at']
     search_fields = ['certificate_number', 'company_name', 'scope_activity']
+    autocomplete_fields = ['company']
     formfield_overrides = {
         DateField: {'widget': YearMonthDayDateWidget},
     }
+
+    class Media:
+        js = ('certificates/admin/company_autofill.js',)
+
     readonly_fields = [
         'secure_id',
         'qr_code_preview',
@@ -54,6 +69,7 @@ class CertificateAdmin(admin.ModelAdmin):
                 'secure_id',
                 'status',
                 'standard',
+                'company',
                 'company_name',
                 'address',
             )
@@ -89,6 +105,42 @@ class CertificateAdmin(admin.ModelAdmin):
     )
     inlines = [CertificateSiteInline]
     actions = ['perform_maintenance_action', 'download_pdf_action', 'regenerate_qr_code_action']
+
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        formfield = super().formfield_for_foreignkey(db_field, request, **kwargs)
+        if db_field.name == 'company' and formfield is not None:
+            # Sentinel id (0) that the JS swaps for the real company id.
+            formfield.widget.attrs['data-autofill-url'] = reverse(
+                'admin:certificates_certificate_company_autofill',
+                kwargs={'company_id': 0},
+            )
+        return formfield
+
+    def get_urls(self):
+        custom_urls = [
+            path(
+                'company-autofill/<int:company_id>/',
+                self.admin_site.admin_view(self.company_autofill_view),
+                name='certificates_certificate_company_autofill',
+            ),
+        ]
+        return custom_urls + super().get_urls()
+
+    def company_autofill_view(self, request, company_id):
+        """
+        Latest (by first_issue_date) certificate for this company, so the
+        admin add form can pre-fill company_name/address/scope_activity/
+        iaf_code. Read-only; never writes anything, never touches other
+        certificates' data.
+        """
+        latest = (
+            Certificate.objects
+            .filter(company_id=company_id)
+            .order_by('-first_issue_date')
+            .values('company_name', 'address', 'scope_activity', 'iaf_code')
+            .first()
+        )
+        return JsonResponse(latest or {})
 
     def qr_code_preview(self, obj):
         """Safely display QR code preview with download link"""

@@ -16,6 +16,29 @@ EXPIRING_SOON_DAYS = 90
 MAINTENANCE_INTERVAL_YEARS = 1
 
 
+class Company(models.Model):
+    """
+    Lightweight company directory. Purely an index used to group a company's
+    certificates and power the "select company" autocomplete/autofill when
+    adding a new certificate in admin -- it is never the source of truth for
+    what's on a certificate. Certificate keeps its own company_name/address/
+    etc. untouched, so linking (or not linking) a certificate here can never
+    change what that certificate displays or what its QR code points to.
+    """
+
+    name = models.CharField(max_length=255, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['name']
+        verbose_name = 'Company'
+        verbose_name_plural = 'Companies'
+
+    def __str__(self):
+        return self.name
+
+
 class Certificate(models.Model):
     """
     Model representing an ISO Certificate
@@ -68,6 +91,16 @@ class Certificate(models.Model):
     company_name = models.CharField(
         max_length=255,
         help_text="Name of the certified company"
+    )
+    company = models.ForeignKey(
+        Company,
+        on_delete=models.PROTECT,
+        null=True,
+        blank=True,
+        related_name='certificates',
+        help_text="Optional link to the company directory (powers the admin "
+                   "autocomplete). Leave blank for existing certificates -- "
+                   "it has no effect on what's displayed or on the QR code."
     )
     first_issue_date = models.DateField(
         help_text="Date when certificate was first issued"
