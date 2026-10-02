@@ -2,10 +2,48 @@ from django.contrib import admin
 from django.db.models import DateField
 from django.http import HttpResponse, JsonResponse
 from django.urls import path, reverse
+from django.utils import timezone
 from django.utils.html import format_html
 from .models import Certificate, CertificateSite, Company
 from .widgets import YearMonthDayDateWidget
+import datetime
 import os
+import re
+
+
+CERTIFICATE_VALID_YEARS = 3
+
+
+def default_expiry_date(issue_date):
+    """Three years after issue_date, less one day (e.g. 2026-10-02 -> 2029-10-01)."""
+    try:
+        same_day = issue_date.replace(year=issue_date.year + CERTIFICATE_VALID_YEARS)
+    except ValueError:  # 29 Feb -> no such day; 1 Mar minus a day lands on 28 Feb
+        same_day = datetime.date(issue_date.year + CERTIFICATE_VALID_YEARS, 3, 1)
+    return same_day - datetime.timedelta(days=1)
+
+
+def suggest_next_certificate_number():
+    """
+    Latest certificate's number with its trailing digit run incremented
+    (zero padding kept), e.g. MSC/ISO9001/2024/009 -> MSC/ISO9001/2024/010.
+    Only ever shown as a Tab-to-accept placeholder; numbers aren't always
+    sequential. Falls back to the latest number itself if it has no digits.
+    """
+    latest = (
+        Certificate.objects.exclude(certificate_number='')
+        .order_by('-created_at', '-id')
+        .values_list('certificate_number', flat=True)
+        .first()
+    )
+    if not latest:
+        return ''
+    match = re.search(r'(\d+)(\D*)$', latest)
+    if not match:
+        return latest
+    digits = match.group(1)
+    bumped = str(int(digits) + 1).zfill(len(digits))
+    return latest[:match.start(1)] + bumped + match.group(2)
 
 
 @admin.register(Company)
@@ -119,8 +157,24 @@ class CertificateAdmin(admin.ModelAdmin):
         ]
         return custom_urls + super().get_urls()
 
+    def get_changeform_initial_data(self, request):
+        # Pre-select today as the issue date and the matching expiry on the
+        # add form (admin initial data, so it never touches saved rows).
+        initial = super().get_changeform_initial_data(request)
+        today = timezone.localdate()
+        initial.setdefault('first_issue_date', today)
+        initial.setdefault('expiry_date', default_expiry_date(today))
+        return initial
+
     def formfield_for_dbfield(self, db_field, request, **kwargs):
         formfield = super().formfield_for_dbfield(db_field, request, **kwargs)
+        if db_field.name == 'certificate_number' and formfield is not None:
+            suggestion = suggest_next_certificate_number()
+            if suggestion:
+                formfield.widget.attrs.update({
+                    'placeholder': suggestion,
+                    'data-suggestion': suggestion,
+                })
         if db_field.name == 'company_name' and formfield is not None:
             # The JS reads these to offer existing company names and to
             # suggest the other fields once a known company is typed/picked.

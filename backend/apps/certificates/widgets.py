@@ -24,3 +24,11 @@ class YearMonthDayDateWidget(SelectDateWidget):
         if empty_label is None:
             empty_label = ('Year', 'Month', 'Day')
         super().__init__(attrs=attrs, years=years, months=months, empty_label=empty_label)
+
+    def get_context(self, name, value, attrs):
+        # Django drops the blank Year/Month/Day option when the field is
+        # required, so an empty date silently showed as the first choice
+        # (January 1 of the oldest year). Always keep the blank option; the
+        # form field still enforces "required" on submit.
+        self.is_required = False
+        return super().get_context(name, value, attrs)
