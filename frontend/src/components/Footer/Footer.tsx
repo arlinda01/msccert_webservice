@@ -86,6 +86,9 @@ const Footer: FC = () => {
           <div className="footer-bottom-links">
             <Link to="/privacy-policy">{t('footer.privacyPolicy')}</Link>
             <Link to="/terms-and-conditions">{t('footer.termsConditions')}</Link>
+            <a href="https://www.bytriad.com/" target="_blank" rel="noopener noreferrer">
+              {t('footer.builtBy')} Triad
+            </a>
           </div>
         </div>
       </div>
